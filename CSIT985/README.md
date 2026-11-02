@@ -1,6 +1,6 @@
 # CSIT985 · 131题复习题库
 
-[返回仓库首页](../README.md)
+[打开在线题库](https://cp0330.github.io/Lecture--Review/) · [返回仓库首页](../README.md)
 
 当前阅读编号为 **T001–T131**。原Q/C/E码保留为稳定检索码；新增图题为G01。普通简答约123–155词，长答约965–1055词；计算与图题保留完整步骤、单位和假设。
 
@@ -34,7 +34,8 @@
 - [完整列举清单与术语](quick-lists.md)
 - [勘误](errata.md)
 - [本轮缺口补齐记录](gap-review.md)
-- [HTML离线阅读版](review-bank.html)：下载文件后用浏览器打开。
+- [HTML在线阅读版](https://cp0330.github.io/Lecture--Review/)：直接打开，支持搜索、筛选和隐藏答案。
+- [下载HTML离线阅读版](review-bank.html)：下载文件后用浏览器打开。
 
 先用中文理解，再分段背英文，遮住答案后独立复述/手打。Define给定义，compare给区别和条件，why给因果，calculate写步骤和单位，图题明确端点及假设。
 

@@ -12,6 +12,8 @@
 - [Moodle资料定位](CSIT985/sources.md)
 - [新旧题号对照](CSIT985/question-map.md)
 
-GitHub中直接阅读请使用Markdown分册。[HTML离线阅读版](CSIT985/review-bank.html)需下载后用浏览器打开，支持搜索、课件/题型筛选和隐藏答案自测。也可通过仓库的 **Code → Download ZIP** 下载整套资料。
+**[打开在线题库](https://cp0330.github.io/Lecture--Review/)**：直接在浏览器中使用，支持搜索、课件/题型筛选和隐藏答案自测。
+
+GitHub中可阅读Markdown分册。需要离线使用时，可下载[HTML阅读版](CSIT985/review-bank.html)，或通过仓库的 **Code → Download ZIP** 下载整套资料。
 
 题目及参考答案用于考前学习。老师样题有标记，其余为按现有课程范围整理的练习；参考答案由AI辅助整理，不是官方评分细则。原课件通过Moodle链接定位，访问可能需要学校账号。仓库不包含原始课件PDF、个人学习背景或反馈记录。
