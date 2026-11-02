@@ -17,6 +17,35 @@
 
 **中文题意：**性能目标怎样决定QoS部署？
 
+<!-- answer-guidance:T085:start -->
+### 组织方式与答题思路
+
+**任务类型：**目标到部署。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 先从requirements、flowspec与map明确性能问题。
+2. 解释single-tier与multi-tier处理。
+3. 只在所需位置引入足够机制。
+4. 用教学优先级例子说明能力和端到端限制。
+
+**现有参考答案的组织方式：**
+
+- 第1段：性能目标来源及必要/充分检查。
+- 第2段：单层/多层与QoS用途。
+- 第3段：小规模起步、维护、校园例子和验证。
+
+**回Moodle核对：**
+
+- [Week 8 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625920) → PDF物理页 **4–18**；课件主题：Developing Goals for Performance。
+
+搜索词：`performance goals`；`QoS`；`single-tier`；`multi-tier`。
+
+查到后确认：核对机制要解决的具体capacity/delay/RMA目标。
+
+**换问法时：**若给拥塞场景，解释QoS分配有限资源，不能凭配置创造带宽。
+<!-- answer-guidance:T085:end -->
+
 ### 中文思路
 
 必要且充分；需求/flowspec为输入；single/multitier；少而可维护。
@@ -51,6 +80,35 @@ QoS分配已有资源，不凭空创造capacity。
 **Question:** Compare IntServ and DiffServ, including the role of RSVP.
 
 **中文题意：**比较逐流预留与分类服务。
+
+<!-- answer-guidance:T086:start -->
+### 组织方式与答题思路
+
+**任务类型：**比较＋机制角色。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. IntServ说明逐flow资源与状态。
+2. RSVP说明预留信令而非用户数据。
+3. DiffServ说明按class标记和逐跳处理。
+4. 比较精细控制、规模与端到端实施条件。
+
+**现有参考答案的组织方式：**
+
+- 第1段：IntServ及RSVP。
+- 第2段：DiffServ、类与扩展性。
+- 第3段：控制粒度取舍及标记不等于保证。
+
+**回Moodle核对：**
+
+- [Week 8 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625920) → PDF物理页 **22–34**；课件主题：IntServ。
+
+搜索词：`IntServ`；`RSVP`；`DiffServ`；`EF`。
+
+查到后确认：核对per-flow/per-class和RSVP作用。
+
+**换问法时：**若要求选型，把flow数量、精细保证与管理规模连到机制选择。
+<!-- answer-guidance:T086:end -->
 
 ### 中文思路
 
@@ -87,6 +145,35 @@ RSVP是信令；DiffServ标记本身不等于端到端保证。
 
 **中文题意：**描述MPLS及与性能架构的关系。
 
+<!-- answer-guidance:T087:start -->
+### 组织方式与答题思路
+
+**任务类型：**机制＋应用＋条件。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 定义MPLS按label转发。
+2. 区分edge router与内部LSR。
+3. 解释管理路径与traffic engineering用途。
+4. 补资源、政策、监测和成本条件。
+
+**现有参考答案的组织方式：**
+
+- 第1段：MPLS与边缘/内部设备。
+- 第2段：traffic engineering和差异服务用途。
+- 第3段：完整性能设计及限制。
+
+**回Moodle核对：**
+
+- [Week 8 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625920) → PDF物理页 **24–26、35–37**；课件主题：MultiProtocol Label Switching。
+
+搜索词：`MPLS`；`label`；`LSR`；`traffic engineering`。
+
+查到后确认：看label路径和边缘角色，避免把标签说成所有性能保证。
+
+**换问法时：**若问supports performance，要解释机制怎样匹配flow/SLA并如何验证。
+<!-- answer-guidance:T087:end -->
+
 ### 中文思路
 
 LER入口加标签；LSR按标签处理；路径工程支持QoS但非自动无限保证。
@@ -121,6 +208,35 @@ MPLS should still be part of a complete performance design. Labels alone do not 
 **Question:** Explain prioritization, admission control and traffic conditioning.
 
 **中文题意：**解释资源控制和流量调节。
+
+<!-- answer-guidance:T088:start -->
+### 组织方式与答题思路
+
+**任务类型：**机制区分＋后果。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 区分prioritization与admission control。
+2. 按classification、metering、shaping、dropping说明动作。
+3. 比较延迟、buffer与丢失影响。
+4. 依据应用容忍度和policy选择。
+
+**现有参考答案的组织方式：**
+
+- 第1段：资源控制、优先级与准入。
+- 第2段：traffic conditioning四动作。
+- 第3段：shaping/dropping代价及应用例子。
+
+**回Moodle核对：**
+
+- [Week 8 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625920) → PDF物理页 **39–45**；课件主题：Resource Control。
+
+搜索词：`admission`；`classification`；`metering`；`shaping`。
+
+查到后确认：核对每种动作是识别、测量、延迟还是丢弃。
+
+**换问法时：**若问shaping数值，另需调度与输出节奏，不能只凭固定等待时间推速率。
+<!-- answer-guidance:T088:end -->
 
 ### 中文思路
 
@@ -157,6 +273,35 @@ metering只测量，不自动等于限速；shaping与dropping不同。
 
 **中文题意：**复算流量速率，并区分整体输出调度与每包固定延迟。
 
+<!-- answer-guidance:T089:start -->
+### 组织方式与答题思路
+
+**任务类型：**速率＋调度条件。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 输入packet rate×bytes×8求bit rate。
+2. 与profile上限比较。
+3. 按明确配置输出100packet/s求输出速率。
+4. 由profile反求理想包率。
+5. 区分固定延时与包释放间隔。
+
+**现有参考答案的组织方式：**
+
+- 条件、计算步骤及必要表格。
+- 英文作答：结果与条件解释。
+
+**回Moodle核对：**
+
+- [Week 8 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625920) → PDF物理页 **41–44**；课件主题：Resource Control。
+
+搜索词：`metering`；`shaping`；`packets`。
+
+查到后确认：核对课件shaping例子并保留调度假设和题库勘误。
+
+**换问法时：**只给每包等待10ms不能推出100packet/s，需知道是否限制每10ms释放一个包。
+<!-- answer-guidance:T089:end -->
+
 ### 计算步骤
 
 输入200×1500×8=2,400,000bit/s=2.4Mb/s，超过1.5Mb/s。
@@ -188,6 +333,35 @@ The input payload rate is 2.4 Mb/s and exceeds the 1.5 Mb/s profile. The explici
 **Question:** Compare FIFO, priority, round robin and weighted fair queuing.
 
 **中文题意：**比较排队与调度方法。
+
+<!-- answer-guidance:T090:start -->
+### 组织方式与答题思路
+
+**任务类型：**按机制比较。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 先区分queuing存包与scheduling选包。
+2. 按FIFO、priority、RR、WFQ说明服务顺序。
+3. 比较延迟、公平性与starvation风险。
+4. 另说明RED/WRED属于queue management并补buffer取舍。
+
+**现有参考答案的组织方式：**
+
+- 第1段：queuing与scheduling定义。
+- 第2段：四种调度机制及取舍。
+- 第3段：RED/WRED、buffer与混合流量验证。
+
+**回Moodle核对：**
+
+- [Week 8 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625920) → PDF物理页 **45–49**；课件主题：Scheduling Policies。
+
+搜索词：`FIFO`；`priority`；`round robin`；`WFQ`。
+
+查到后确认：核对调度规则与RED/WRED不同层面的功能。
+
+**换问法时：**若给到达/服务过程，按具体规则判断谁先服务，不把队列大小当调度策略。
+<!-- answer-guidance:T090:end -->
 
 ### 中文思路
 
@@ -223,6 +397,35 @@ queue management、scheduling是相关但不同层面的机制。
 **Question:** Explain how SLAs, policies and QoS work together.
 
 **中文题意：**解释承诺、规则、执行和验证的联系。
+
+<!-- answer-guidance:T091:start -->
+### 组织方式与答题思路
+
+**任务类型：**闭环关系。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. SLA明确目标、责任和测量条件。
+2. policy把组织目标转成规则。
+3. QoS在设备落实处理。
+4. monitoring对照承诺并反馈调整。
+
+**现有参考答案的组织方式：**
+
+- 第1段：SLA内容与测量条件。
+- 第2段：policy、QoS与monitoring连接。
+- 第3段：教学例子、文档和机制各自边界。
+
+**回Moodle核对：**
+
+- [Week 8 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625920) → PDF物理页 **50–62**；课件主题：Service Level Agreements。
+
+搜索词：`SLA`；`policy`；`QoS`；`monitoring`。
+
+查到后确认：找SLA参数和政策到设备的关系，不只查缩写定义。
+
+**换问法时：**若问how work together，用同一服务贯穿目标→规则→执行→验证。
+<!-- answer-guidance:T091:end -->
 
 ### 中文思路
 

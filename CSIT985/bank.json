@@ -35,7 +35,29 @@
           "pages": "39–40",
           "keyword": "Network Design Methodology"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "比较",
+        "answer_plan": [
+          "先对比起点：业务需求或技术产品",
+          "说明需求怎样引导架构与设备选择",
+          "比较需求匹配的好处与先买设备的风险",
+          "用校园例子说明，并保留现有设备约束与反馈"
+        ],
+        "current_organization": [
+          "第1段：top-down的起点、顺序与目的",
+          "第2段：bottom-up的起点、便利与风险",
+          "第3段：校园反例、反馈与选择依据"
+        ],
+        "lookup_keywords": [
+          "top-down",
+          "bottom-up",
+          "requirements"
+        ],
+        "lookup_check": "核对两种方法从哪里开始，以及技术选择与需求的关系",
+        "adapt_to_question": "若改问why，重点写需求先行怎样减少选错方案，不平均介绍两者",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q83",
@@ -64,7 +86,29 @@
           "pages": "45–46",
           "keyword": "PPDIOO"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "过程＋原因",
+        "answer_plan": [
+          "完整列出Prepare→Plan→Design→Implement→Operate→Optimize",
+          "每阶段写一个主要任务",
+          "解释运行证据如何反馈到规划和设计",
+          "用新应用带来容量问题说明循环"
+        ],
+        "current_organization": [
+          "第1段：前三阶段及作用",
+          "第2段：后三阶段及作用",
+          "第3段：生命周期的原因与反馈例子"
+        ],
+        "lookup_keywords": [
+          "PPDIOO",
+          "Prepare",
+          "Optimize"
+        ],
+        "lookup_check": "核对六阶段名称、次序和反馈关系",
+        "adapt_to_question": "若只问life cycle，把反馈与持续变化放在前面，阶段说明适当缩短",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q84",
@@ -93,7 +137,30 @@
           "pages": "47–55",
           "keyword": "Eight-step Design Methodology"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "过程＋产物",
+        "answer_plan": [
+          "按课件顺序列出八步",
+          "说明需求、现网、方案、实施计划与原型的关系",
+          "列出设计文档主要内容",
+          "最后说明实施后的验证、监测与修改"
+        ],
+        "current_organization": [
+          "第1段：八步完整顺序",
+          "第2段：前期分析、方案与原型的作用",
+          "第3段：文档内容与实施后验证"
+        ],
+        "lookup_keywords": [
+          "eight",
+          "methodology",
+          "prototype",
+          "documentation"
+        ],
+        "lookup_check": "核对八步是否齐全，以及文档章节清单",
+        "adapt_to_question": "若只问documentation，围绕记录什么、支持谁和怎样验证展开",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q08",
@@ -122,7 +189,30 @@
           "pages": "57–64",
           "keyword": "Information flows"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "关系解释",
+        "answer_plan": [
+          "analysis找出需求与约束",
+          "architecture据此组织功能和机制",
+          "design落实设备、服务与位置",
+          "用同一案例串联三者，并说明不满足条件时要反馈"
+        ],
+        "current_organization": [
+          "第1段：analysis的输入与输出",
+          "第2段：architecture与design怎样承接",
+          "第3段：在线教学案例与反馈关系"
+        ],
+        "lookup_keywords": [
+          "analysis",
+          "architecture",
+          "design",
+          "information"
+        ],
+        "lookup_check": "核对三阶段之间传递的信息，不只查三个定义",
+        "adapt_to_question": "若问why connected，要写后一步依赖前一步、验证失败需要回看前面",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q10",
@@ -151,7 +241,29 @@
           "pages": "5–19",
           "keyword": "Network elements"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "列举＋功能",
+        "answer_plan": [
+          "先列end devices、intermediate devices、media",
+          "分别写产生/接收、转发/连接、传信号的作用",
+          "给switch、router、AP等对应例子",
+          "说明端到端服务仍可能受某一环节限制"
+        ],
+        "current_organization": [
+          "第1段：端设备定义与例子",
+          "第2段：中间设备及各自作用",
+          "第3段：介质、协议地址与瓶颈例子"
+        ],
+        "lookup_keywords": [
+          "end devices",
+          "intermediate",
+          "media"
+        ],
+        "lookup_check": "核对三类要素和switch/router/AP各自处理的对象",
+        "adapt_to_question": "若问某设备，只展开其功能与相邻概念，不罗列整章设备",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q11",
@@ -180,7 +292,31 @@
           "pages": "9–19",
           "keyword": "Network categories"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "分类解释",
+        "answer_plan": [
+          "按范围解释LAN、CAN、MAN、WAN",
+          "解释WLAN的无线接入属性",
+          "解释SAN的存储目的和VPN的逻辑私有连接",
+          "指出分类维度不同，同一网络可同时属于多类"
+        ],
+        "current_organization": [
+          "第1段：地理范围类别，附PAN背景",
+          "第2段：WLAN、SAN与VPN",
+          "第3段：分类维度及校园组合例子"
+        ],
+        "lookup_keywords": [
+          "LAN",
+          "WAN",
+          "WLAN",
+          "SAN",
+          "VPN"
+        ],
+        "lookup_check": "核对缩写全称及按范围、技术、用途、逻辑访问分类的区别",
+        "adapt_to_question": "按实际题干列齐要求的类别；题未要求PAN时可不展开",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q12",
@@ -209,7 +345,30 @@
           "pages": "21–26",
           "keyword": "Network Architecture"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "多项比较",
+        "answer_plan": [
+          "完整识别六种组织模式",
+          "按控制/处理位置和资源角色比较",
+          "补管理、依赖、故障与成本的取舍",
+          "说明模式可以组合，用需求选型"
+        ],
+        "current_organization": [
+          "第1段：集中式、client-server及集中服务取舍",
+          "第2段：distributed、peer-to-peer及协调问题",
+          "第3段：cloud、hybrid、选型条件与重叠关系"
+        ],
+        "lookup_keywords": [
+          "centralized",
+          "client-server",
+          "distributed",
+          "hybrid"
+        ],
+        "lookup_check": "核对六类名称，并找每类控制和服务放在哪里",
+        "adapt_to_question": "若给具体场景，用同一组维度比较候选，不只背六个定义",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q13",
@@ -238,7 +397,31 @@
           "pages": "28–34",
           "keyword": "Network Topology"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "多项比较",
+        "answer_plan": [
+          "先说明五种连接结构",
+          "逐类解释链路/中心设备故障影响",
+          "比较冗余、成本与扩展性",
+          "补physical与logical的区别和保护条件"
+        ],
+        "current_organization": [
+          "第1段：star的结构与故障",
+          "第2段：mesh、tree、bus、ring及取舍",
+          "第3段：物理/逻辑拓扑与选型依据"
+        ],
+        "lookup_keywords": [
+          "mesh",
+          "tree",
+          "bus",
+          "star",
+          "ring"
+        ],
+        "lookup_check": "看拓扑图确认连接关系及故障传播范围",
+        "adapt_to_question": "若题目给故障，沿实际连接判断受影响范围，不直接套拓扑名称",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q14",
@@ -267,7 +450,29 @@
           "pages": "36–46",
           "keyword": "Network Protocol"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "定义＋原因",
+        "answer_plan": [
+          "定义protocol是通信规则",
+          "说明格式、含义、顺序和事件动作",
+          "解释双方一致才能识别、响应与处理消息",
+          "用超时或共享介质说明规则的作用"
+        ],
+        "current_organization": [
+          "第1段：protocol的正式定义",
+          "第2段：共同规则、时间规则与例子",
+          "第3段：实现方式、分工与没有规则的后果"
+        ],
+        "lookup_keywords": [
+          "protocol",
+          "timing",
+          "encapsulation"
+        ],
+        "lookup_check": "核对协议规定哪些规则，尤其timing和message format",
+        "adapt_to_question": "若只问why，先写无法正确理解或处理消息的后果，再用规则支持",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q15",
@@ -296,7 +501,29 @@
           "pages": "47–57、85–89",
           "keyword": "Network Protocol Models"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "列举＋过程",
+        "answer_plan": [
+          "按顺序列OSI七层与本课TCP/IP四层",
+          "说明上层和network access的对应",
+          "沿发送方向说明封装",
+          "沿接收方向说明解封装及分层用途"
+        ],
+        "current_organization": [
+          "第1段：OSI七层和服务关系",
+          "第2段：TCP/IP四层及与OSI的对应",
+          "第3段：封装、接收端处理及分层边界"
+        ],
+        "lookup_keywords": [
+          "OSI",
+          "TCP/IP",
+          "encapsulation"
+        ],
+        "lookup_check": "核对本课四层模型，不混用其他教材的五层模型",
+        "adapt_to_question": "若重点是encapsulation，缩短层名清单，突出各层增加和移除什么信息",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q17",
@@ -325,7 +552,30 @@
           "pages": "58–60、66–67",
           "keyword": "Application Layer"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "关系解释",
+        "answer_plan": [
+          "说明应用协议规定消息交互",
+          "区分IP地址、port和socket的定位作用",
+          "解释multiplexing与demultiplexing",
+          "用浏览器和HTTP说明应用不是协议"
+        ],
+        "current_organization": [
+          "第1段：应用协议与常见例子",
+          "第2段：IP、port、socket的作用",
+          "第3段：复用/分用和应用与协议的区别"
+        ],
+        "lookup_keywords": [
+          "port",
+          "socket",
+          "multiplexing",
+          "HTTP"
+        ],
+        "lookup_check": "核对进程端点定位方式和应用协议示例",
+        "adapt_to_question": "若只问ports/sockets，围绕同一主机多应用的数据交付展开",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q16",
@@ -354,7 +604,30 @@
           "pages": "61–68",
           "keyword": "Transport Layer"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "比较＋场景",
+        "answer_plan": [
+          "按连接、可靠性、顺序、控制机制对照TCP与UDP",
+          "说明机制产生的开销和服务差别",
+          "各给合适应用",
+          "补UDP不自动低延迟、应用可自行实现机制"
+        ],
+        "current_organization": [
+          "第1段：TCP服务与可靠传输机制",
+          "第2段：UDP服务边界及应用责任",
+          "第3段：应用选择与延迟、丢失和开销条件"
+        ],
+        "lookup_keywords": [
+          "TCP",
+          "UDP",
+          "retransmission",
+          "congestion"
+        ],
+        "lookup_check": "核对两者内建保证及flow/congestion control的区别",
+        "adapt_to_question": "若要求推荐协议，先说明应用更看重完整有序还是及时性，再解释取舍",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q18",
@@ -383,7 +656,30 @@
           "pages": "69–89",
           "keyword": "Network Layer"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "区分＋路径解释",
+        "answer_plan": [
+          "routing学习可达性并选路径",
+          "forwarding按已有信息进行本地转发",
+          "区分IP跨网络与MAC逐链路交付",
+          "沿下一跳说明frame重建与IP目的地址通常保持"
+        ],
+        "current_organization": [
+          "第1段：routing与forwarding的分工",
+          "第2段：IP、MAC和物理层的交付范围",
+          "第3段：路由器逐跳换frame及NAT例外"
+        ],
+        "lookup_keywords": [
+          "forwarding",
+          "routing",
+          "MAC",
+          "frame"
+        ],
+        "lookup_check": "看逐跳图确认地址和封装在哪一层变化",
+        "adapt_to_question": "若给报文路径，逐跳说下一跳及frame地址，不把最终IP目的写成网关",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q85",
@@ -412,7 +708,29 @@
           "pages": "71–76",
           "keyword": "Network Layer - Router"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "列举＋功能",
+        "answer_plan": [
+          "列input ports、switching fabric、output ports、routing processor",
+          "沿包的接收、内部交换、排队、发送说明前三项",
+          "解释routing processor的control-plane工作",
+          "区分决策与执行，补性能限制"
+        ],
+        "current_organization": [
+          "第1段：四部件总览与input ports",
+          "第2段：switching fabric、output ports和排队",
+          "第3段：routing processor、SDN对照及资源限制"
+        ],
+        "lookup_keywords": [
+          "input ports",
+          "switching fabric",
+          "routing processor"
+        ],
+        "lookup_check": "看路由器结构图核对四部件及control/data plane关系",
+        "adapt_to_question": "若问性能瓶颈，把限制具体落到端口、交换结构、排队或处理资源",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q86",
@@ -441,7 +759,29 @@
           "pages": "77–83",
           "keyword": "Routing algorithm"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "按维度比较",
+        "answer_plan": [
+          "明确这是三条独立分类轴",
+          "比较centralized与decentralized的信息来源",
+          "比较static与dynamic的变化方式",
+          "比较load-sensitive与load-insensitive的成本输入，并说明类别可交叉"
+        ],
+        "current_organization": [
+          "第1段：全局/分布信息及link-state、distance-vector",
+          "第2段：静态与动态变化",
+          "第3段：负载敏感性与分类不能混同"
+        ],
+        "lookup_keywords": [
+          "centralized",
+          "decentralized",
+          "load-sensitive"
+        ],
+        "lookup_check": "核对每组分类所比较的属性，而非把所有左项当成一类",
+        "adapt_to_question": "若给算法例子，对三条轴分别判断并写理由",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q87",
@@ -470,7 +810,29 @@
           "pages": "86–89",
           "keyword": "Network service model"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "功能＋范围区分",
+        "answer_plan": [
+          "说明data-link逐链路frame服务",
+          "说明physical传送bits和信号",
+          "说明end-to-end service model承诺哪些交付特征",
+          "强调单链路可靠不等于全路径保证"
+        ],
+        "current_organization": [
+          "第1段：data-link功能与接口",
+          "第2段：physical层介质和信号",
+          "第3段：端到端服务与逐链路保证的区别"
+        ],
+        "lookup_keywords": [
+          "link layer",
+          "physical",
+          "service model"
+        ],
+        "lookup_check": "核对每层服务范围和best-effort不承诺的内容",
+        "adapt_to_question": "若问可靠性，明确是local link还是end-to-end，并写端点和其他链路条件",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q19",
@@ -499,7 +861,30 @@
           "pages": "5–20",
           "keyword": "The Crouch Diagram"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "目的＋关系解释",
+        "answer_plan": [
+          "用Crouch问题串起使命、现状、目标、路径与验证",
+          "解释gap analysis",
+          "区分strategy与tactics",
+          "用多校园目标连接预算、人员和里程碑"
+        ],
+        "current_organization": [
+          "第1段：战略规划定义与Crouch问题",
+          "第2段：问题之间的联系及gap/strategy/tactics",
+          "第3段：多校园例子与实施复查"
+        ],
+        "lookup_keywords": [
+          "Crouch",
+          "strategic",
+          "gap",
+          "mission"
+        ],
+        "lookup_check": "核对Crouch问题完整顺序及战略与战术区别",
+        "adapt_to_question": "若问purpose，先回答组织目标怎样转为资源与行动，问题清单作支持",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q20",
@@ -528,7 +913,29 @@
           "pages": "21–26",
           "keyword": "Six Tips for Strategic Planning"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "做法＋陷阱",
+        "answer_plan": [
+          "先说明规划是持续过程",
+          "列实用做法：简洁、领导参与、创新与实施可行",
+          "列常见陷阱并说明后果",
+          "用能否筹资、运行和维护检验计划"
+        ],
+        "current_organization": [
+          "第1段：持续规划与良好做法",
+          "第2段：常见陷阱及短长期冲突",
+          "第3段：网络实施例子与结果导向"
+        ],
+        "lookup_keywords": [
+          "planning",
+          "pitfalls",
+          "implementation"
+        ],
+        "lookup_check": "找tips与pitfalls两组清单，避免只回答其中一组",
+        "adapt_to_question": "若限定数量，选出指定数量并各写影响；不要只堆关键词",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q21",
@@ -557,7 +964,30 @@
           "pages": "27–30",
           "keyword": "Four Basic Strategies"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "列举＋选型",
+        "answer_plan": [
+          "列四种change strategy及各自作用机制",
+          "按阻力、人数、利害、时间、能力、依赖选择",
+          "说明可能混合",
+          "给迁移例子并保留沟通和支持条件"
+        ],
+        "current_organization": [
+          "第1段：四种策略的定义",
+          "第2段：选择因素与混合",
+          "第3段：迁移案例、时间压力与支持条件"
+        ],
+        "lookup_keywords": [
+          "rational",
+          "normative",
+          "coercive",
+          "adaptive"
+        ],
+        "lookup_check": "核对四种策略名称、假定和选型因素",
+        "adapt_to_question": "若给组织阻力场景，用场景条件说明选哪一种或怎样组合",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q22",
@@ -586,7 +1016,29 @@
           "pages": "31–40",
           "keyword": "Who Should Be Involved in Planning"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "人员＋原因",
+        "answer_plan": [
+          "先说明规划同时需要权力与实务知识",
+          "列领导、开发实施、供信息、审核授权角色",
+          "解释跨组织参与和coordinator的作用",
+          "说明团队素质与阶段变化"
+        ],
+        "current_organization": [
+          "第1段：领导参与及决策权",
+          "第2段：团队角色、用户参与和协调员",
+          "第3段：团队素质、成员变化与目的"
+        ],
+        "lookup_keywords": [
+          "planning team",
+          "stakeholders",
+          "coordinator"
+        ],
+        "lookup_check": "核对谁做决策、谁供信息、谁执行和谁协调",
+        "adapt_to_question": "若问why involved，每种人员都跟一句其贡献，不只列职位",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q89",
@@ -615,7 +1067,30 @@
           "pages": "48–49",
           "keyword": "Categorizing requirements"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "分类解释",
+        "answer_plan": [
+          "列core、feature、future、rejected、informational",
+          "每类给判定依据",
+          "给一个核心、可选和未来例子",
+          "区分类别与来源Type，可同时记录"
+        ],
+        "current_organization": [
+          "第1段：core、feature、future",
+          "第2段：rejected、informational及拒绝理由",
+          "第3段：分类用途、例子与来源维度区别"
+        ],
+        "lookup_keywords": [
+          "core",
+          "feature",
+          "future",
+          "informational"
+        ],
+        "lookup_check": "核对五类原定义及feature与future的时间区别",
+        "adapt_to_question": "若要求分类具体语句，先判其性质，再说明理由和不确定处",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q90",
@@ -645,7 +1120,30 @@
           "pages": "50",
           "keyword": "RFC 2119 keywords"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "术语强度＋映射",
+        "answer_plan": [
+          "区分必须、禁止、强烈建议与可选",
+          "保留SHOULD允许有理由的例外",
+          "说明课件与项目类别的联系",
+          "用正反要求举例，不把MAY解释为必须拒绝"
+        ],
+        "current_organization": [
+          "第1段：MUST/SHOULD/MAY等强度与例外",
+          "第2段：课件项目分类的映射及边界",
+          "第3段：要求实例及禁止性core要求"
+        ],
+        "lookup_keywords": [
+          "MUST",
+          "SHOULD",
+          "MAY",
+          "core"
+        ],
+        "lookup_check": "核对原词强度及课件映射，不把外部定义当考试新增资料",
+        "adapt_to_question": "若给否定语句，先判断MUST NOT还是SHOULD NOT，不能只看是否有NOT",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q91",
@@ -674,7 +1172,30 @@
           "pages": "48–52",
           "keyword": "Requirement Status and Priority"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "案例分类＋区分",
+        "answer_plan": [
+          "对五个案例逐一给类别和理由",
+          "区分Type、Status、Priority各描述什么",
+          "说明同一要求可同时具备多个字段",
+          "资料不足时记录待确认"
+        ],
+        "current_organization": [
+          "第1段：五例分类与拒绝理由",
+          "第2段：Type、Status、Priority的定义",
+          "第3段：维度组合和不确定性处理"
+        ],
+        "lookup_keywords": [
+          "type",
+          "status",
+          "priority",
+          "requirements"
+        ],
+        "lookup_check": "看规格表字段与五类要求，不把高优先级直接等同core",
+        "adapt_to_question": "若题干改动时间或必备性，按新条件重分类，不背案例固定配对",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q24",
@@ -703,7 +1224,29 @@
           "pages": "44–60",
           "keyword": "Network Services"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "比较＋适用条件",
+        "answer_plan": [
+          "按服务承诺强度比较三等级",
+          "说明best-effort、predictable、guaranteed各提供什么",
+          "按应用需要选服务",
+          "补端到端资源、测量与验证条件"
+        ],
+        "current_organization": [
+          "第1段：best-effort承诺边界及应用",
+          "第2段：predictable/guaranteed与实施条件",
+          "第3段：校园例子、成本、验证及端到端条件"
+        ],
+        "lookup_keywords": [
+          "best effort",
+          "predictable",
+          "guaranteed"
+        ],
+        "lookup_check": "核对服务等级承诺对象及capacity/delay/RMA要求",
+        "adapt_to_question": "若要求保证，不只写提高优先级，要说明全路径资源与验证",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q23",
@@ -732,7 +1275,30 @@
           "pages": "43–55、62–78",
           "keyword": "Network Services"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "列举＋衔接",
+        "answer_plan": [
+          "列user、application、device、network四类",
+          "分别说明关注对象和典型要求",
+          "用同一视频教学案例串联四类",
+          "补人数、位置与增长"
+        ],
+        "current_organization": [
+          "第1段：user需求特点",
+          "第2段：application、device、network要求",
+          "第3段：四类衔接的教学案例"
+        ],
+        "lookup_keywords": [
+          "user requirements",
+          "application",
+          "device",
+          "network"
+        ],
+        "lookup_check": "核对四类来源及每类典型指标",
+        "adapt_to_question": "若给需求语句，按它描述的对象分类，必要时说明如何派生技术要求",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q25",
@@ -761,7 +1327,30 @@
           "pages": "63–78",
           "keyword": "Application Requirements"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "区分＋指标",
+        "answer_plan": [
+          "按关键性、速率和时间区分四类应用",
+          "解释mission-critical与rate-critical",
+          "解释real-time与interactive",
+          "说明可重叠并转成可测量指标"
+        ],
+        "current_organization": [
+          "第1段：mission-critical与rate-critical",
+          "第2段：real-time与interactive及共同要求",
+          "第3段：重叠案例与可测量需求"
+        ],
+        "lookup_keywords": [
+          "mission-critical",
+          "rate-critical",
+          "real-time",
+          "interactive"
+        ],
+        "lookup_check": "核对每类的判据，不把critical都解释成高速",
+        "adapt_to_question": "若给应用案例，可以判多个类别，但要分别提供证据",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q26",
@@ -790,7 +1379,29 @@
           "pages": "5–28、67–69",
           "keyword": "Requirement Analysis Process"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "过程＋输出",
+        "answer_plan": [
+          "收集列出需求",
+          "建立service metrics并分析用户/应用行为",
+          "把需求发展为capacity、delay、RMA并映射位置",
+          "说明requirements specification持续更新"
+        ],
+        "current_organization": [
+          "第1段：收集信息与建立指标",
+          "第2段：行为刻画、发展需求和位置映射",
+          "第3段：规格产物、反馈与例子"
+        ],
+        "lookup_keywords": [
+          "requirements analysis",
+          "metrics",
+          "mapping"
+        ],
+        "lookup_check": "核对五步次序与最终产物，不漏map与持续维护",
+        "adapt_to_question": "若只问outputs，先回答规格、测量和地图，再解释由哪些活动产生",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q27",
@@ -819,7 +1430,29 @@
           "pages": "8–21",
           "keyword": "Red-Flag User Requirements"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "检查清单＋澄清",
+        "answer_plan": [
+          "列项目类型、范围、目标、现网及外部条件",
+          "列预算、人员、设备约束",
+          "识别无量化或互相矛盾的红旗",
+          "通过讨论与测量把模糊表述改成可验证需求"
+        ],
+        "current_organization": [
+          "第1段：初始条件与约束",
+          "第2段：模糊、不现实或冲突的警告信号",
+          "第3段：99.9%例子与澄清方法"
+        ],
+        "lookup_keywords": [
+          "initial conditions",
+          "constraints",
+          "warning"
+        ],
+        "lookup_check": "找红旗示例，特别是real-time与availability缺少的条件",
+        "adapt_to_question": "若给一句模糊需求，指出缺什么并提出具体澄清问题",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q28",
@@ -848,7 +1481,30 @@
           "pages": "16–26、34–37",
           "keyword": "Tracking and Managing Requirements"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "方法＋记录维护",
+        "answer_plan": [
+          "用调查、访谈、观察和测量收集证据",
+          "记录规格字段及来源",
+          "区分gathered与derived要求",
+          "维护变更历史并记录测量时间、负载、方法和单位"
+        ],
+        "current_organization": [
+          "第1段：采集与验证方法",
+          "第2段：requirements specification的字段",
+          "第3段：持续维护、审计轨迹与测量上下文"
+        ],
+        "lookup_keywords": [
+          "specification",
+          "measurement",
+          "status",
+          "priority"
+        ],
+        "lookup_check": "核对字段清单及测量时需保留的条件",
+        "adapt_to_question": "若问如何保持有效，重点写变更记录、可访问性与峰值代表性",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q30",
@@ -877,7 +1533,30 @@
           "pages": "29、32–33、53–56",
           "keyword": "Service Metrics"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "指标区分",
+        "answer_plan": [
+          "区分capacity潜力与throughput实得",
+          "区分delay、jitter与整任务完成时间",
+          "用数据量/时间说明平均速率",
+          "补峰值、开销、竞争与端系统条件"
+        ],
+        "current_organization": [
+          "第1段：capacity与throughput",
+          "第2段：delay、jitter和task completion time",
+          "第3段：平均速率、规划条件及duration边界"
+        ],
+        "lookup_keywords": [
+          "capacity",
+          "throughput",
+          "jitter",
+          "completion"
+        ],
+        "lookup_check": "核对各指标单位、测量范围和duration与delay区别",
+        "adapt_to_question": "若题目换成实时业务，重点解释delay/jitter为何不能由带宽数字替代",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q01",
@@ -906,7 +1585,29 @@
           "pages": "38–40",
           "keyword": "Application Behaviour"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "原因解释",
+        "answer_plan": [
+          "先回答两者帮助估计流量发生时间与并发",
+          "解释frequency和duration",
+          "写事务重叠→共享负载→容量和延迟影响",
+          "给高峰备份例子，保留duration不等于速率的条件"
+        ],
+        "current_organization": [
+          "第1段：两个定义与并发估计目的",
+          "第2段：事务重叠的例子及容量、延迟影响",
+          "第3段：结合其他变量、速率边界与调度用途"
+        ],
+        "lookup_keywords": [
+          "frequency",
+          "duration",
+          "application behaviour"
+        ],
+        "lookup_check": "核对事务发生频率、持续时间和会话重叠；寻找用户数与数据大小条件",
+        "adapt_to_question": "若只问why，把因果链前置；若给相同数据量，不声称持续越久速率越高",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q29",
@@ -935,7 +1636,30 @@
           "pages": "30–31、42–52",
           "keyword": "RMA Requirements"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "定义＋关系",
+        "answer_plan": [
+          "分别定义reliability、maintainability、availability",
+          "对应MTBF/MTBCF与MTTR",
+          "解释可用性如何联系故障间隔和恢复时间",
+          "补观察窗口、计入规则与停机分布"
+        ],
+        "current_organization": [
+          "第1段：reliability及MTBF/MTBCF",
+          "第2段：maintainability、MTTR与availability公式",
+          "第3段：改善方向、不同停机模式和测量边界"
+        ],
+        "lookup_keywords": [
+          "RMA",
+          "MTBF",
+          "MTTR",
+          "availability"
+        ],
+        "lookup_check": "核对公式分母、MTTR包含的阶段与测量口径",
+        "adapt_to_question": "若要求比较服务，不只比较一个百分比，还解释停机模式和任务关键性",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "C13",
@@ -963,7 +1687,28 @@
           "pages": "42–52",
           "keyword": "RMA"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "计算＋解释",
+        "answer_plan": [
+          "统一MTBF与MTTR单位",
+          "写A=MTBF/(MTBF+MTTR)并代入",
+          "转为百分比",
+          "分别解释减少故障和缩短恢复，再检查改进值"
+        ],
+        "current_organization": [
+          "条件、计算步骤及必要表格",
+          "英文作答：结果与条件解释"
+        ],
+        "lookup_keywords": [
+          "MTBF",
+          "MTTR",
+          "availability"
+        ],
+        "lookup_check": "核对分母包含uptime和downtime，百分数与小数转换",
+        "adapt_to_question": "换数字重新代入；减少5小时MTTR不等于可用性直接提高5%",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "C14",
@@ -991,7 +1736,28 @@
           "pages": "44–50",
           "keyword": "RMA"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "停机预算计算",
+        "answer_plan": [
+          "先求观察窗口总时间",
+          "把availability转成不可用比例",
+          "总时间乘不可用比例",
+          "换算分钟/秒，写计入维护的假设"
+        ],
+        "current_organization": [
+          "条件、计算步骤及必要表格",
+          "英文作答：结果与条件解释"
+        ],
+        "lookup_keywords": [
+          "availability",
+          "downtime",
+          "measurement period"
+        ],
+        "lookup_check": "核对观察窗口、分母和是否排除计划维护",
+        "adapt_to_question": "窗口或合同计入规则变化后必须重算；相同停机总量不代表相同体验",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "C23",
@@ -1019,7 +1785,28 @@
           "pages": "33、53–54",
           "keyword": "Delay Metrics"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "时延计算＋反例",
+        "answer_plan": [
+          "前向四项求和",
+          "按本题测量定义加turnaround与return得到RTT",
+          "检查单位",
+          "用不对称路径反例判断RTT能否限制每向时延"
+        ],
+        "current_organization": [
+          "条件、计算步骤及必要表格",
+          "英文作答：结果与条件解释"
+        ],
+        "lookup_keywords": [
+          "one-way",
+          "round-trip",
+          "delay"
+        ],
+        "lookup_check": "核对传输、传播、处理、排队与端点周转是否已包含",
+        "adapt_to_question": "只有题目明确对称并说明端点处理口径时才能使用RTT/2近似",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "C15",
@@ -1047,7 +1834,28 @@
           "pages": "32–33、55–56",
           "keyword": "Capacity and delay"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "速率＋并发",
+        "answer_plan": [
+          "说明MB/Mb及十进制口径",
+          "数据量×8÷时间求payload rate",
+          "确认同向、同瓶颈、同时后乘并发数",
+          "补协议开销、余量与端系统约束"
+        ],
+        "current_organization": [
+          "条件、计算步骤及必要表格",
+          "英文作答：结果与条件解释"
+        ],
+        "lookup_keywords": [
+          "data size",
+          "duration",
+          "capacity"
+        ],
+        "lookup_check": "核对bytes/bits和并发条件，不把payload当链路总需求",
+        "adapt_to_question": "若用MiB或分批完成，按新单位与时间关系重算",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q31",
@@ -1076,7 +1884,29 @@
           "pages": "57–66",
           "keyword": "Supplemental Performance Requirements"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "列举＋适用边界",
+        "answer_plan": [
+          "operational suitability判断客户能否运行",
+          "supportability说明持续维护所需资源",
+          "confidence按本课说明按所需速率且无不可接受错丢的交付能力",
+          "给人员培训和备件例子"
+        ],
+        "current_organization": [
+          "第1段：operational suitability的定义",
+          "第2段：supportability清单与持续运行",
+          "第3段：本课confidence含义和应用条件"
+        ],
+        "lookup_keywords": [
+          "operational suitability",
+          "supportability",
+          "confidence"
+        ],
+        "lookup_check": "核对supportability完整清单与本课confidence的特定含义",
+        "adapt_to_question": "若给产品选择案例，说明技术能力与人员支持条件如何共同约束选择",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q32",
@@ -1105,7 +1935,30 @@
           "pages": "6–29",
           "keyword": "Flows"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "定义＋建立过程",
+        "answer_plan": [
+          "定义flow的共同属性和端到端范围",
+          "从应用需求与位置找到source/sink",
+          "应用flow model并形成flowspec",
+          "区分individual、composite、critical与flow map用途"
+        ],
+        "current_organization": [
+          "第1段：flow定义与关联实体",
+          "第2段：从需求建立flow的步骤",
+          "第3段：flow分类与map的设计价值"
+        ],
+        "lookup_keywords": [
+          "traffic flow",
+          "source",
+          "sink",
+          "flowspec"
+        ],
+        "lookup_check": "看flow属性、源汇与建立步骤，图上位置不是自动的物理布线",
+        "adapt_to_question": "若给业务，先明确谁产生什么数据、发给谁及方向，再选模型",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "G01",
@@ -1141,7 +1994,32 @@
           "pages": "1 Ex1",
           "keyword": "Exercise 1"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "图题＋假设",
+        "answer_plan": [
+          "先列四类业务及明确的端点",
+          "逐类列source、sink、方向和性能要求",
+          "未唯一指定端点先写假设再画逻辑箭头",
+          "分别画四图并合并，共享路径保留标签",
+          "检查不把地理位置当已知布线"
+        ],
+        "current_organization": [
+          "原题条件和底图定位",
+          "条件、步骤与source/sink表",
+          "四类独立Flow图与合并图（含显式假设）",
+          "英文参考答案"
+        ],
+        "lookup_keywords": [
+          "Exercise 1",
+          "flow map",
+          "source",
+          "sink"
+        ],
+        "lookup_check": "回到Workshop原底图确认业务和端点；参考图中的假设不能当成题目已知",
+        "adapt_to_question": "端点或应用变化时重建source/sink表；合理替代图要有一致假设和需求依据",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q88",
@@ -1170,7 +2048,31 @@
           "pages": "2 Ex2",
           "keyword": "Exercise 2"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "逐项标注",
+        "answer_plan": [
+          "按四个应用分别写source→sink方向",
+          "双向需求各自保留速率",
+          "标明one-way或round-trip的时延口径",
+          "检查单位与未指定的控制流假设"
+        ],
+        "current_organization": [
+          "第1段：client-server双向速率",
+          "第2段：UDP video单向媒体及one-way delay",
+          "第3段：web与POS双向数据及delay口径",
+          "第4段：单向与往返的最终核对"
+        ],
+        "lookup_keywords": [
+          "Exercise 2",
+          "client-server",
+          "UDP",
+          "round-trip"
+        ],
+        "lookup_check": "直接核对Workshop Ex2各箭头、数值和时延定义",
+        "adapt_to_question": "若数字或方向变化，重画方向表；不把上下行速率相加后替代两条要求",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q33",
@@ -1199,7 +2101,29 @@
           "pages": "30–44",
           "keyword": "Flow Models"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "模型列举＋关系",
+        "answer_plan": [
+          "列四种flow model",
+          "按谁请求、谁服务、谁协作解释差别",
+          "说明hierarchical client-server的层间流量",
+          "给共享服务或计算集群例子，并区分逻辑flow与布线"
+        ],
+        "current_organization": [
+          "第1段：peer-to-peer和client-server",
+          "第2段：hierarchical与distributed computing",
+          "第3段：模型用途、混合场景和物理边界"
+        ],
+        "lookup_keywords": [
+          "peer-to-peer",
+          "hierarchical",
+          "distributed computing"
+        ],
+        "lookup_check": "看四类通信关系图，核对server是否也作为上层client",
+        "adapt_to_question": "若给校园场景，可组合模型，但必须指出实际源汇和交互关系",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q34",
@@ -1228,7 +2152,29 @@
           "pages": "19–22、45–49",
           "keyword": "Flow Prioritization"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "方法＋优先级",
+        "answer_plan": [
+          "先选择分析的应用或profile",
+          "说明不能忽略被排除流量的服务",
+          "按组织重要性、失败影响、性能安全与用户数排序",
+          "用数据量大但优先级不一定高的例子说明"
+        ],
+        "current_organization": [
+          "第1段：分析对象与选择方式",
+          "第2段：优先级因素及不同排名",
+          "第3段：校园例子、明确标准与资源取舍"
+        ],
+        "lookup_keywords": [
+          "top applications",
+          "priority",
+          "flow analysis"
+        ],
+        "lookup_check": "核对选择分析对象与决定优先级是两个任务",
+        "adapt_to_question": "若给两项冲突业务，用约定标准解释取舍，不仅按Mb/s排序",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q35",
@@ -1257,7 +2203,30 @@
           "pages": "50–56",
           "keyword": "Flowspec Algorithm"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "分类＋聚合规则",
+        "answer_plan": [
+          "说明one-part只合best-effort容量",
+          "说明two-part中predictable容量相加而delay/RMA保留最严格值",
+          "说明multipart逐条保留guaranteed要求",
+          "写共享链路、方向和同时发生的假设"
+        ],
+        "current_organization": [
+          "第1段：flowspec及one/two-part",
+          "第2段：predictable的容量、delay和RMA聚合",
+          "第3段：guaranteed独立承诺与路径、时间条件"
+        ],
+        "lookup_keywords": [
+          "one-part",
+          "two-part",
+          "multipart",
+          "flowspec"
+        ],
+        "lookup_check": "核对各服务等级的聚合规则，availability不是百分比相加",
+        "adapt_to_question": "若给数值，先按服务等级与方向分组，再选sum/min/max，勿机械取平均",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "C16",
@@ -1285,7 +2254,29 @@
           "pages": "51–56",
           "keyword": "Flow specification"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "分类聚合计算",
+        "answer_plan": [
+          "按BE、predictable、guaranteed分组",
+          "BE和predictable分别合容量",
+          "predictable取最严格delay/RMA",
+          "guaranteed逐条保留tuple",
+          "仅在同向同路径同时假设下另求总payload"
+        ],
+        "current_organization": [
+          "条件、计算步骤及必要表格",
+          "英文作答：结果与条件解释"
+        ],
+        "lookup_keywords": [
+          "flowspec",
+          "predictable",
+          "guaranteed"
+        ],
+        "lookup_check": "核对sum/min/max各适用于哪个指标及逐flow保证",
+        "adapt_to_question": "方向、路径、同时性变化后重新分组，不机械相加或平均availability",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q05",
@@ -1314,7 +2305,32 @@
           "pages": "14–20",
           "keyword": "Component Architectures"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "关系解释＋分类",
+        "answer_plan": [
+          "定义同一component内部的mechanism关系",
+          "逐项解释trade-off、dependency、constraint",
+          "每项给同一组件内部例子",
+          "最后区分跨组件的external关系"
+        ],
+        "current_organization": [
+          "第1段：内部关系定义与三类清单",
+          "第2段：trade-off及管理例子",
+          "第3段：dependency及SLA/QoS例子",
+          "第4段：constraint及路由例子",
+          "第5段：判断内部/外部的范围边界"
+        ],
+        "lookup_keywords": [
+          "internal interactions",
+          "trade-offs",
+          "dependencies",
+          "constraints"
+        ],
+        "lookup_check": "核对三类关系及例子属于同一component还是跨component",
+        "adapt_to_question": "若换例子，先说关系两端属于哪个组件，再解释是取舍、依赖还是限制",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q36",
@@ -1343,7 +2359,29 @@
           "pages": "14–36",
           "keyword": "Component Architectures"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "区分＋例子",
+        "answer_plan": [
+          "按是否属于同一component区分internal/external",
+          "各给明确机制例子",
+          "说明不是按建筑物位置分类",
+          "解释reference architecture需要平衡整体需求"
+        ],
+        "current_organization": [
+          "第1段：internal关系及performance例子",
+          "第2段：external关系的跨组件例子",
+          "第3段：分类依据、整体平衡与delay例子"
+        ],
+        "lookup_keywords": [
+          "internal",
+          "external",
+          "component"
+        ],
+        "lookup_check": "看组件之间连线及每个机制所属功能",
+        "adapt_to_question": "若给security影响delay，明确是security与performance之间的external关系",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q37",
@@ -1372,7 +2410,30 @@
           "pages": "29–47",
           "keyword": "Reference Architectures"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "组合过程",
+        "answer_plan": [
+          "先定义reference architecture是完整架构视图",
+          "用topological作结构基础",
+          "叠加flow-based与functional视角",
+          "组合组件及内部外部关系，并按需求平衡"
+        ],
+        "current_organization": [
+          "第1段：reference architecture定义",
+          "第2段：三组模型组合顺序",
+          "第3段：校园组合例子及组件平衡"
+        ],
+        "lookup_keywords": [
+          "reference architecture",
+          "topological",
+          "flow-based",
+          "functional"
+        ],
+        "lookup_check": "核对模型如何叠加，而非只找拓扑图",
+        "adapt_to_question": "若问how combined，要写每种视角补充了什么信息及如何检验相互作用",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q06",
@@ -1401,7 +2462,31 @@
           "pages": "39–47",
           "keyword": "Architectural Models"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "完整列举",
+        "answer_plan": [
+          "先说三组模型",
+          "topological列两类",
+          "flow-based列四类",
+          "functional列三类",
+          "每个模型简述用途，再说明可组合"
+        ],
+        "current_organization": [
+          "第1段：topological两类及用途",
+          "第2段：flow-based四类及用途",
+          "第3段：functional三类及用途",
+          "第4段：互补与组合关系"
+        ],
+        "lookup_keywords": [
+          "architectural models",
+          "topological",
+          "functional"
+        ],
+        "lookup_check": "逐项核对2＋4＋3个模型，不只记三组标题",
+        "adapt_to_question": "题干有all时必须完整；不要用OSI、TCP/IP、SDN替代本课这组清单",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q38",
@@ -1430,7 +2515,30 @@
           "pages": "5–14",
           "keyword": "Three Classic Security Considerations"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "定义＋重要性",
+        "answer_plan": [
+          "逐项定义CIA",
+          "说明privacy关注个人信息的适当处理",
+          "分别写失效后果",
+          "连接资产、威胁、控制和架构早期取舍"
+        ],
+        "current_organization": [
+          "第1段：confidentiality、integrity、availability",
+          "第2段：privacy及与security的关系",
+          "第3段：失效后果与需求驱动保护"
+        ],
+        "lookup_keywords": [
+          "confidentiality",
+          "integrity",
+          "availability",
+          "privacy"
+        ],
+        "lookup_check": "核对CIA三目标和privacy，不把保密性当全部安全",
+        "adapt_to_question": "若问importance，把组织后果提前，定义缩短为支持句",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q39",
@@ -1459,7 +2567,30 @@
           "pages": "14–21",
           "keyword": "Threat analysis"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "原因＋考虑因素",
+        "answer_plan": [
+          "先回答威胁分析指导优先级和控制选择",
+          "识别具体asset与threat",
+          "评估likelihood和impact并联系组织目标",
+          "说明参与、假设和定期复查"
+        ],
+        "current_organization": [
+          "第1段：分析对象、资产与威胁类别",
+          "第2段：可能性、损害及风险处理",
+          "第3段：优先级用途、例子与复查条件"
+        ],
+        "lookup_keywords": [
+          "threat analysis",
+          "likelihood",
+          "impact",
+          "assets"
+        ],
+        "lookup_check": "核对分析表的资产、威胁、概率/损害和应对字段",
+        "adapt_to_question": "若问why，说明没有分析会怎样误配资源；若问consider，列齐因素",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q96",
@@ -1488,7 +2619,29 @@
           "pages": "16–21",
           "keyword": "Security and Privacy Administration"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "案例表格＋解释",
+        "answer_plan": [
+          "按学生记录、在线教学、研究存储逐项列资产",
+          "每项配threat→consequence→control",
+          "likelihood没有证据时标待评估",
+          "最后按发生可能性与后果解释优先级"
+        ],
+        "current_organization": [
+          "第1段：worksheet结构与学生记录案例",
+          "第2段：教学与研究存储案例",
+          "第3段：示例性质、评估证据与优先级"
+        ],
+        "lookup_keywords": [
+          "threat analysis",
+          "worksheet",
+          "likelihood"
+        ],
+        "lookup_check": "看原worksheet列名并核对本题三个资产",
+        "adapt_to_question": "若要求complete worksheet，正式答案宜按列逐项写清，不虚构测量概率",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q40",
@@ -1517,7 +2670,29 @@
           "pages": "22–28",
           "keyword": "Policies and Procedures"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "政策内容＋实施",
+        "answer_plan": [
+          "区分policy定规则与procedure定落实方法",
+          "按访问、隐私、问责、认证、报告等组织清单",
+          "补运维、备份和应急责任",
+          "给记录访问例子，并说明可行性和复查"
+        ],
+        "current_organization": [
+          "第1段：policy与procedure的分工",
+          "第2段：课程列出的政策与运维事项",
+          "第3段：批准访问例子、成本比例与定期维护"
+        ],
+        "lookup_keywords": [
+          "security policy",
+          "procedures",
+          "accountability"
+        ],
+        "lookup_check": "核对隐私、认证、审计、报告、运维和应急内容",
+        "adapt_to_question": "若给单一policy，写谁可做什么、怎么执行、由谁复核，不只列安全产品",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q97",
@@ -1546,7 +2721,29 @@
           "pages": "24–26",
           "keyword": "Policies and Procedures"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "对称比较",
+        "answer_plan": [
+          "先按规则匹配与默认动作对比两种哲学",
+          "说明开放式便利与未列流量风险",
+          "说明封闭式限制与漏配合法流风险",
+          "用所需业务和威胁解释选型及测试"
+        ],
+        "current_organization": [
+          "第1段：deny specifics/accept others",
+          "第2段：accept specifics/deny others",
+          "第3段：风险与可用工作平衡、选型与维护"
+        ],
+        "lookup_keywords": [
+          "deny",
+          "accept",
+          "security philosophy"
+        ],
+        "lookup_check": "核对两句话中的specifics与everything else，避免默认动作反写",
+        "adapt_to_question": "若给新流量，先判断是否命中明确规则，再应用默认动作",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q41",
@@ -1575,7 +2772,29 @@
           "pages": "29–35",
           "keyword": "Physical Security"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "两种机制＋限制",
+        "answer_plan": [
+          "物理安全写保护设备与设施的方法",
+          "packet filtering写按哪些字段permit/deny",
+          "说明两者针对不同风险",
+          "各写不能解决的问题和部署条件"
+        ],
+        "current_organization": [
+          "第1段：物理安全、措施与意义",
+          "第2段：packet filtering规则与用途",
+          "第3段：互补关系、各自限制及放置依据"
+        ],
+        "lookup_keywords": [
+          "physical security",
+          "packet filtering",
+          "ports"
+        ],
+        "lookup_check": "核对物理措施与过滤字段，不把允许包当成可信内容",
+        "adapt_to_question": "若要求比较，按保护对象、依据、效果与限制对照两者",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q42",
@@ -1604,7 +2823,30 @@
           "pages": "32–37",
           "keyword": "Protocol & Application Security"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "机制解释＋条件",
+        "answer_plan": [
+          "IPsec写IP层保护及transport/tunnel",
+          "SNMPv3写管理消息的保护",
+          "encryption写保密性与密钥",
+          "说明控制选择需要兼顾端点、开销与管理"
+        ],
+        "current_organization": [
+          "第1段：IPsec功能与两模式",
+          "第2段：SNMPv3的保护能力及配置条件",
+          "第3段：加密作用、密钥与总体取舍"
+        ],
+        "lookup_keywords": [
+          "IPsec",
+          "transport",
+          "tunnel",
+          "SNMPv3"
+        ],
+        "lookup_check": "核对安全功能和配置条件，区分保护层次与管理协议",
+        "adapt_to_question": "若问某机制，不说它自动提供全部安全目标，明确启用的功能",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q02",
@@ -1633,7 +2875,29 @@
           "pages": "29–50",
           "keyword": "Security and Privacy Mechanisms"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "指定数量＋机制",
+        "answer_plan": [
+          "先明确选择encryption与authentication两种",
+          "加密：怎样保护confidentiality＋例子＋密钥条件",
+          "认证：怎样检查身份＋例子＋authorization边界",
+          "说明两者互补并由威胁分析决定"
+        ],
+        "current_organization": [
+          "第1段：加密定义、目标、案例和密钥",
+          "第2段：认证定义、案例与授权边界",
+          "第3段：两者互补、限制与需求依据"
+        ],
+        "lookup_keywords": [
+          "encryption",
+          "authentication",
+          "authorization"
+        ],
+        "lookup_check": "核对各机制保护的目标及authentication/authorization区别",
+        "adapt_to_question": "题干说two时把这两种解释充分，不临时堆更多名称稀释答案",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q43",
@@ -1662,7 +2926,30 @@
           "pages": "38–50",
           "keyword": "Network Perimeter Security"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "机制组合＋布局",
+        "answer_plan": [
+          "区分NAT转换地址、firewall控制访问、DMZ隔离服务",
+          "说明各自解决的问题",
+          "用公网web与内部记录的允许路径举例",
+          "补管理访问、分区成本和威胁依据"
+        ],
+        "current_organization": [
+          "第1段：NAT作用与安全边界",
+          "第2段：firewall、DMZ与隔离区",
+          "第3段：服务放置例子与复杂度取舍"
+        ],
+        "lookup_keywords": [
+          "NAT",
+          "firewall",
+          "DMZ",
+          "perimeter"
+        ],
+        "lookup_check": "看周界/DMZ图的区域与允许路径，不把NAT当完整安全政策",
+        "adapt_to_question": "若给服务器布局，先按对外访问和资产敏感性分区，再解释允许哪些flow",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q98",
@@ -1691,7 +2978,29 @@
           "pages": "43–50",
           "keyword": "Evaluation of Security Mechanisms"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "比较＋论证",
+        "answer_plan": [
+          "比较nested与较扁平分区的边界结构",
+          "说明层层隔离带来的处理与管理代价",
+          "按资产、允许流量和恢复管理路径论证放置",
+          "说明分区视图与物理拓扑的关系"
+        ],
+        "current_organization": [
+          "第1段：nested结构及代价",
+          "第2段：较扁平分区与非万能选型",
+          "第3段：威胁/flow依据、例子和验证"
+        ],
+        "lookup_keywords": [
+          "nested",
+          "security zones",
+          "placement"
+        ],
+        "lookup_check": "看分区图确认哪些区域嵌套，哪些独立连接",
+        "adapt_to_question": "若要求justify，不只描述图形，要把每个边界连到具体风险与业务",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q44",
@@ -1720,7 +3029,29 @@
           "pages": "42–50",
           "keyword": "External Relationship"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "内部外部关系＋取舍",
+        "answer_plan": [
+          "先写安全机制内部依赖与限制",
+          "再写与performance、management、addressing的外部影响",
+          "把收益、代价连到业务优先级",
+          "说明测量、剩余风险和复查"
+        ],
+        "current_organization": [
+          "第1段：内部机制依赖与约束",
+          "第2段：与性能、管理、地址的关系",
+          "第3段：优先级、放置、测量与剩余风险"
+        ],
+        "lookup_keywords": [
+          "security architecture",
+          "dependencies",
+          "trade-offs"
+        ],
+        "lookup_check": "核对关系两端的组件归属及影响机制",
+        "adapt_to_question": "若问trade-off，必须同时写保护收益与性能/运维成本",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q45",
@@ -1749,7 +3080,30 @@
           "pages": "7–12",
           "keyword": "Addressing Fundamentals"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "双重比较",
+        "answer_plan": [
+          "按层次与交付范围区分MAC与IP",
+          "按位数和写法比较IPv4与IPv6",
+          "用远程目的地与本地gateway解释逐跳交付",
+          "补地址规划对聚合、管理和安全的影响"
+        ],
+        "current_organization": [
+          "第1段：MAC与IP的用途",
+          "第2段：IPv4/IPv6长度与表示",
+          "第3段：规划意义和网关逐链路例子"
+        ],
+        "lookup_keywords": [
+          "MAC",
+          "IPv4",
+          "IPv6",
+          "gateway"
+        ],
+        "lookup_check": "看地址层次和路径图，核对32/128位",
+        "adapt_to_question": "若给通信路径，分清frame送网关与packet最终IP目的",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q99",
@@ -1778,7 +3132,30 @@
           "pages": "8–9",
           "keyword": "Addressing Fundamentals"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "分工解释",
+        "answer_plan": [
+          "IANA写顶层号码资源协调",
+          "RIR写区域分配登记",
+          "AS写共同路由策略域与AS number",
+          "区分资源分配、行政归属和运行路由"
+        ],
+        "current_organization": [
+          "第1段：IANA与RIR及APNIC例子",
+          "第2段：AS及其不是单一subnet",
+          "第3段：协调分配与逐包路由的区别"
+        ],
+        "lookup_keywords": [
+          "IANA",
+          "RIR",
+          "APNIC",
+          "autonomous system"
+        ],
+        "lookup_check": "核对三个实体的职责和AS定义",
+        "adapt_to_question": "若问packet路径，不用地址分配机构替代实际routing/forwarding解释",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q46",
@@ -1807,7 +3184,30 @@
           "pages": "13–19",
           "keyword": "Classless Addressing"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "历史对比＋位结构",
+        "answer_plan": [
+          "classful说明固定A/B/C边界的限制",
+          "CIDR说明显式/p",
+          "用prefix bits与host bits解释mask",
+          "用/26核对并强调不能只看首octet"
+        ],
+        "current_organization": [
+          "第1段：classful固定边界与问题",
+          "第2段：CIDR及prefix含义",
+          "第3段：mask构造、/26例子与现代判断规则"
+        ],
+        "lookup_keywords": [
+          "classful",
+          "classless",
+          "CIDR",
+          "prefix"
+        ],
+        "lookup_check": "核对/p、mask连续1与host位，区分历史类别和实际子网",
+        "adapt_to_question": "若给地址而未给前缀，指出无法唯一确定现代子网",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q47",
@@ -1836,7 +3236,30 @@
           "pages": "20–21",
           "keyword": "Private Addressing"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "多概念区分",
+        "answer_plan": [
+          "private/public按公网路由与分配范围区分",
+          "列三个private blocks",
+          "DHCP说明租用机制，不等同私有地址",
+          "NAT说明转换和PAT，并补管理、安全限制"
+        ],
+        "current_organization": [
+          "第1段：private地址及三块范围",
+          "第2段：public与临时/持久分配的独立维度",
+          "第3段：NAT/PAT、非加密与规划条件"
+        ],
+        "lookup_keywords": [
+          "private",
+          "DHCP",
+          "NAT",
+          "172.16"
+        ],
+        "lookup_check": "核对172.16/12结束于172.31，不是全部172网段",
+        "adapt_to_question": "若给地址分类，按范围判public/private，再单独讨论动态/静态",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q48",
@@ -1865,7 +3288,30 @@
           "pages": "22–32",
           "keyword": "Other IPv4 Addressing Types"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "类别＋范围",
+        "answer_plan": [
+          "loopback说明本机通信",
+          "link-local说明本地链路范围",
+          "按接收对象区分unicast/multicast/broadcast",
+          "列对应IPv4范围并说明路由转发边界"
+        ],
+        "current_organization": [
+          "第1段：loopback与link-local",
+          "第2段：三种交付方式及地址例子",
+          "第3段：机制用途、scope与路由规则"
+        ],
+        "lookup_keywords": [
+          "loopback",
+          "link-local",
+          "multicast",
+          "broadcast"
+        ],
+        "lookup_check": "核对特殊地址范围与broadcast的作用域",
+        "adapt_to_question": "若问谁收到数据，要结合group membership和broadcast domain，不说所有Internet设备",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q94",
@@ -1895,7 +3341,30 @@
           "pages": "22–23",
           "keyword": "Other IPv4 Addressing Types"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "表格解释＋纠错",
+        "answer_plan": [
+          "区分loopback、link-local、TEST-NET与实验保留空间",
+          "说明用途而不是仅背前缀",
+          "单独解释0.0.0.0/0默认路由",
+          "指出默认路由匹配规则不是分配主机块"
+        ],
+        "current_organization": [
+          "第1段：loopback和link-local用途",
+          "第2段：文档地址与历史实验/保留分类",
+          "第3段：default route及原表误写的辨析"
+        ],
+        "lookup_keywords": [
+          "TEST-NET",
+          "192.0.2",
+          "default",
+          "0.0.0.0"
+        ],
+        "lookup_check": "看原特殊地址表并对照题库勘误，不照搬表中的默认路由错误",
+        "adapt_to_question": "若给地址选址，不能把文档/保留块当真实普通public分配",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q49",
@@ -1924,7 +3393,29 @@
           "pages": "33–48",
           "keyword": "Subnetting"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "步骤＋验证",
+        "answer_plan": [
+          "先确定原block、子网数和主机需求",
+          "按需求借位得到新prefix与mask",
+          "计算数量、host bits与普通可用主机",
+          "列边界和地址范围，检查不重叠且不越界"
+        ],
+        "current_organization": [
+          "第1段：输入需求、borrow bits与新prefix",
+          "第2段：host bits及地址/普通可用数",
+          "第3段：范围列举、验证和特殊假设"
+        ],
+        "lookup_keywords": [
+          "subnetting",
+          "subnet mask",
+          "host bits"
+        ],
+        "lookup_check": "核对等长子网借位与范围例题，/31等特殊情形不能盲减2",
+        "adapt_to_question": "若改为VLSM，改用按需求从大到小分配，不沿用统一借位方法",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "C01",
@@ -1952,7 +3443,28 @@
           "pages": "10–12、33–37",
           "keyword": "Subnetting"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "二进制与按位AND",
+        "answer_plan": [
+          "按octet写IP二进制",
+          "把/27写连续27个1的mask",
+          "逐位AND得到network",
+          "换回十进制并检查32地址边界"
+        ],
+        "current_organization": [
+          "条件、计算步骤及必要表格",
+          "英文作答：结果与条件解释"
+        ],
+        "lookup_keywords": [
+          "binary",
+          "AND",
+          "subnet mask"
+        ],
+        "lookup_check": "核对AND规则、mask位数和最后octet步长",
+        "adapt_to_question": "前缀变化时重新定位分界octet，不能只改最后一段数字",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "C03",
@@ -1980,7 +3492,28 @@
           "pages": "38–45",
           "keyword": "Subnetting"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "等长子网",
+        "answer_plan": [
+          "由两块确定借1位",
+          "得到/25、mask、host bits和普通可用数",
+          "按步长列两个network",
+          "填first/last/broadcast并检查刚好覆盖原/24"
+        ],
+        "current_organization": [
+          "条件、计算步骤及必要表格",
+          "英文作答：结果与条件解释"
+        ],
+        "lookup_keywords": [
+          "subnetting",
+          "/25",
+          "192.35.40"
+        ],
+        "lookup_check": "核对原/24分两块例图和地址表各列含义",
+        "adapt_to_question": "分块数改变先算borrow bits，地址起点变化时还要检查原块对齐",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "C02",
@@ -2008,7 +3541,28 @@
           "pages": "33–48",
           "keyword": "Subnetting"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "前缀表推导",
+        "answer_plan": [
+          "逐项求h=32-prefix",
+          "求总地址2^h与普通可用2^h−2",
+          "写连续1构成的mask",
+          "核对/25到/30步长依次减半"
+        ],
+        "current_organization": [
+          "条件、计算步骤及必要表格",
+          "英文作答：结果与条件解释"
+        ],
+        "lookup_keywords": [
+          "prefix",
+          "subnet mask",
+          "host bits"
+        ],
+        "lookup_check": "核对前缀与掩码表，不只记可用主机数字",
+        "adapt_to_question": "限定为普通子网；不要把减2规则无条件套到/31或/32",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "C04",
@@ -2036,7 +3590,28 @@
           "pages": "33–48",
           "keyword": "Subnetting"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "双约束子网",
+        "answer_plan": [
+          "子网需求确定最少borrow bits",
+          "得到/27并核对30可用满足25",
+          "按32步长列network和broadcast",
+          "检查至少6块且全部位于原/24"
+        ],
+        "current_organization": [
+          "条件、计算步骤及必要表格",
+          "英文作答：结果与条件解释"
+        ],
+        "lookup_keywords": [
+          "subnets",
+          "hosts",
+          "/27"
+        ],
+        "lookup_check": "同时核对子网数量和每块主机容量",
+        "adapt_to_question": "若两条件冲突，必须报告不可行或调整分配，不能只满足其中一项",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "C05",
@@ -2064,7 +3639,28 @@
           "pages": "33–48",
           "keyword": "Subnetting"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "主机需求反推",
+        "answer_plan": [
+          "由2^h−2≥50找最小h",
+          "prefix=32−h得到最长可用前缀",
+          "写mask和每块总地址",
+          "用新旧prefix差计算/24容纳块数"
+        ],
+        "current_organization": [
+          "条件、计算步骤及必要表格",
+          "英文作答：结果与条件解释"
+        ],
+        "lookup_keywords": [
+          "usable hosts",
+          "prefix",
+          "/26"
+        ],
+        "lookup_check": "核对longest prefix表示最小足够块，而不是最大地址空间",
+        "adapt_to_question": "主机需求改动后先找h；别按十进制向下凑主机数",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "C06",
@@ -2092,7 +3688,28 @@
           "pages": "33–48",
           "keyword": "Subnetting"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "主机所属块",
+        "answer_plan": [
+          "由/27确定mask和32步长",
+          "定位77所在64–95区间",
+          "列network、broadcast、first、last与可用数",
+          "用同mask判断.96属于下一块"
+        ],
+        "current_organization": [
+          "条件、计算步骤及必要表格",
+          "英文作答：结果与条件解释"
+        ],
+        "lookup_keywords": [
+          "AND",
+          "network address",
+          "broadcast"
+        ],
+        "lookup_check": "核对一个地址怎样落在子网范围，并区别network与host",
+        "adapt_to_question": "若改IP或prefix，重新按AND/步长定位，不只比较前三个octet",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "C07",
@@ -2120,7 +3737,28 @@
           "pages": "17–19、33–48",
           "keyword": "Subnetting"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "跨octet范围",
+        "answer_plan": [
+          "把/20换成255.255.240.0",
+          "第三octet用16步长定位37在32–47",
+          "host位全0/全1得到network/broadcast",
+          "求first、last、总量与可用量"
+        ],
+        "current_organization": [
+          "条件、计算步骤及必要表格",
+          "英文作答：结果与条件解释"
+        ],
+        "lookup_keywords": [
+          "subnetting",
+          "/20",
+          "octet"
+        ],
+        "lookup_check": "看跨octet边界，确认低位octet全范围变化",
+        "adapt_to_question": "prefix跨过新的octet时重定位步长段，不沿用最后octet算法",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "C08",
@@ -2148,7 +3786,28 @@
           "pages": "33–48",
           "keyword": "Subnetting"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "等长子网＋勘误",
+        "answer_plan": [
+          "四块确定借2位并得到/18",
+          "第三octet用64步长列四块",
+          "每块填network、first、last、broadcast",
+          "用host bits复核/17和/18普通可用数"
+        ],
+        "current_organization": [
+          "条件、计算步骤及必要表格",
+          "英文作答：结果与条件解释"
+        ],
+        "lookup_keywords": [
+          "Exercise 3",
+          "/17",
+          "/18"
+        ],
+        "lookup_check": "同时看Workshop题和题库勘误，/17应为32766可用",
+        "adapt_to_question": "重算2^h−2，不记错印值；/18总地址16384与可用16382要分开",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "C09",
@@ -2176,7 +3835,29 @@
           "pages": "33–48",
           "keyword": "Subnetting"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "跨原块边界的分割",
+        "answer_plan": [
+          "原/23先确定512地址覆盖范围",
+          "至少10块需借4位到/27",
+          "核对每块30可用满足25",
+          "按第三/第四octet依次列16块",
+          "明确题号从1起数再定位第10块"
+        ],
+        "current_organization": [
+          "条件、计算步骤及必要表格",
+          "英文作答：结果与条件解释"
+        ],
+        "lookup_keywords": [
+          "Exercise 5",
+          "/23",
+          "/27"
+        ],
+        "lookup_check": "核对/23跨两个/24范围及Workshop原地址勘误",
+        "adapt_to_question": "本题自拟200.100.10.0与Workshop原172.16.0.0分开，不混写题中地址",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "C10",
@@ -2204,7 +3885,28 @@
           "pages": "33–48",
           "keyword": "Subnetting"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "前缀差与范围",
+        "answer_plan": [
+          "由/16−/8求借8位和256块",
+          "求每/16的16个host bits",
+          "对10.7.0.0/16列first、last、broadcast",
+          "检查第二octet变化范围"
+        ],
+        "current_organization": [
+          "条件、计算步骤及必要表格",
+          "英文作答：结果与条件解释"
+        ],
+        "lookup_keywords": [
+          "/8",
+          "/16",
+          "10.0.0.0"
+        ],
+        "lookup_check": "核对借位差与block内部可用主机数是不同计算",
+        "adapt_to_question": "原块/新前缀变化后分别算子网数和每块主机数",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "C11",
@@ -2232,7 +3934,28 @@
           "pages": "33–48",
           "keyword": "Subnetting"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "VLSM分配",
+        "answer_plan": [
+          "按主机需求从大到小排序",
+          "逐个求最小足够prefix",
+          "在剩余空间中按prefix边界对齐分配",
+          "列每块可用范围与broadcast",
+          "检查无重叠、未越界并标剩余空间"
+        ],
+        "current_organization": [
+          "条件、计算步骤及必要表格",
+          "英文作答：结果与条件解释"
+        ],
+        "lookup_keywords": [
+          "VLSM",
+          "host requirements"
+        ],
+        "lookup_check": "核对VLSM按不同需求用不同prefix，/24原边界仍约束全部分配",
+        "adapt_to_question": "地址顺序可有多种合理方案；评价是否满足容量、对齐、不重叠和原块约束",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "C12",
@@ -2260,7 +3983,27 @@
           "pages": "33–48",
           "keyword": "Subnetting"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "可行性证明",
+        "answer_plan": [
+          "按8块求/27并发现30可用不足40",
+          "反向由40求至少/26",
+          "核对/24只放4个/26",
+          "提出至少512地址且对齐的/23或修改需求"
+        ],
+        "current_organization": [
+          "条件、计算步骤及必要表格",
+          "英文作答：结果与条件解释"
+        ],
+        "lookup_keywords": [
+          "subnet requirement",
+          "usable hosts"
+        ],
+        "lookup_check": "核对子网数和主机数的两个独立下界",
+        "adapt_to_question": "要求不可行时展示冲突证据，不能通过使用network/broadcast地址凑主机",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q50",
@@ -2289,7 +4032,30 @@
           "pages": "49–58",
           "keyword": "Routing Mechanism"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "定义＋范围",
+        "answer_plan": [
+          "定义AS、IGP与跨AS的BGP作用",
+          "给RIP/OSPF和BGP对应例子",
+          "区分physical/logical及hard/soft boundaries",
+          "按requirements与flows解释边界放置"
+        ],
+        "current_organization": [
+          "第1段：AS与IGP/BGP范围",
+          "第2段：physical与logical边界例子",
+          "第3段：hard/soft、FA/WG及放置依据"
+        ],
+        "lookup_keywords": [
+          "AS",
+          "IGP",
+          "EGP",
+          "boundaries"
+        ],
+        "lookup_check": "核对AS行政策略范围和hard/soft边界，而非只看地理距离",
+        "adapt_to_question": "若问BGP内部形式，可连接iBGP，但别把iBGP等同OSPF这类IGP",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q51",
@@ -2318,7 +4084,30 @@
           "pages": "59–61",
           "keyword": "Manipulating Flows"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "机制列举＋作用",
+        "answer_plan": [
+          "default route写无更具体匹配时的出口",
+          "aggregation写合适前缀的汇总",
+          "区分route filtering与packet filtering",
+          "policy写组织偏好并核对可达性"
+        ],
+        "current_organization": [
+          "第1段：default与aggregation",
+          "第2段：route filtering与ACL/packet filtering",
+          "第3段：policy及汇总、过滤的路径风险"
+        ],
+        "lookup_keywords": [
+          "default route",
+          "aggregation",
+          "filtering",
+          "policy"
+        ],
+        "lookup_check": "核对过滤的是路由信息还是数据包，汇总需满足前缀条件",
+        "adapt_to_question": "若给路由表，按最长前缀匹配解释default何时才用",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q52",
@@ -2347,7 +4136,29 @@
           "pages": "62–68、77–79",
           "keyword": "Routing Strategies"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "对称比较＋选型",
+        "answer_plan": [
+          "按配置方式和适应拓扑变化比较",
+          "比较协议开销、维护工作与规模",
+          "给稳定stub和多路径网络适用场景",
+          "依恢复、增长与技能要求选择"
+        ],
+        "current_organization": [
+          "第1段：static的配置、低协议开销与场景",
+          "第2段：dynamic的交换、适应性与资源代价",
+          "第3段：双方限制及需求驱动选型"
+        ],
+        "lookup_keywords": [
+          "static routing",
+          "dynamic",
+          "convergence"
+        ],
+        "lookup_check": "核对动态更新资源和静态人工维护代价",
+        "adapt_to_question": "若问哪种更好，先陈述网络规模和故障恢复要求，不给无条件排名",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q53",
@@ -2376,7 +4187,30 @@
           "pages": "62–79",
           "keyword": "Evaluating Routing Protocols"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "多协议比较＋评价",
+        "answer_plan": [
+          "分别说明RIP、OSPF、BGP的角色与基本机制",
+          "按规模、收敛、层级与政策比较",
+          "列带宽、CPU、内存、稳定与运维评价标准",
+          "区分内部路由和跨域需求"
+        ],
+        "current_organization": [
+          "第1段：RIP特征及限制",
+          "第2段：OSPF与BGP的角色",
+          "第3段：评价维度和需求匹配"
+        ],
+        "lookup_keywords": [
+          "RIP",
+          "OSPF",
+          "BGP",
+          "scalability"
+        ],
+        "lookup_check": "核对IGP/跨域范围、RIP hop 15和OSPF areas",
+        "adapt_to_question": "若给企业场景，可同时选内部协议与边界BGP，不把三者强行互相替代",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q54",
@@ -2405,7 +4239,30 @@
           "pages": "69–76",
           "keyword": "RIPv2"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "版本比较＋语境",
+        "answer_plan": [
+          "按classful/classless和mask信息比较RIPv1/v2",
+          "说明RIPv2改进不消除RIP限制",
+          "识别课件旧建议与后续dated提示",
+          "回到规模、收敛、资源与技能评价"
+        ],
+        "current_organization": [
+          "第1段：RIPv1/v2与VLSM",
+          "第2段：RIPv2仍有hop与扩展限制",
+          "第3段：历史建议、语境与可保留原则"
+        ],
+        "lookup_keywords": [
+          "RIPv1",
+          "RIPv2",
+          "VLSM",
+          "dated"
+        ],
+        "lookup_check": "同时查看旧建议及dated提示页，避免只读前页",
+        "adapt_to_question": "若题干明确要求lecture recommendations，应说明其历史语境及适用条件",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q92",
@@ -2435,7 +4292,29 @@
           "pages": "72–73",
           "keyword": "Evaluating Routing Protocols"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "比较＋读图",
+        "answer_plan": [
+          "按peers是否同AS定义iBGP/eBGP",
+          "在图中指出AS100内外关系",
+          "解释iBGP传递外部目的地信息",
+          "区分iBGP与IGP，并强调按AS而非距离分类"
+        ],
+        "current_organization": [
+          "第1段：eBGP与iBGP定义",
+          "第2段：课件AS100图对应关系",
+          "第3段：与IGP的区别及地理距离例子"
+        ],
+        "lookup_keywords": [
+          "iBGP",
+          "eBGP",
+          "AS100"
+        ],
+        "lookup_check": "看AS边界和peers归属，核对AS100到其他AS的连线",
+        "adapt_to_question": "若AS编号变化，按新归属重新判断，不背固定编号关系",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q55",
@@ -2464,7 +4343,30 @@
           "pages": "4–18",
           "keyword": "Developing Goals for Performance"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "目标到部署",
+        "answer_plan": [
+          "先从requirements、flowspec与map明确性能问题",
+          "解释single-tier与multi-tier处理",
+          "只在所需位置引入足够机制",
+          "用教学优先级例子说明能力和端到端限制"
+        ],
+        "current_organization": [
+          "第1段：性能目标来源及必要/充分检查",
+          "第2段：单层/多层与QoS用途",
+          "第3段：小规模起步、维护、校园例子和验证"
+        ],
+        "lookup_keywords": [
+          "performance goals",
+          "QoS",
+          "single-tier",
+          "multi-tier"
+        ],
+        "lookup_check": "核对机制要解决的具体capacity/delay/RMA目标",
+        "adapt_to_question": "若给拥塞场景，解释QoS分配有限资源，不能凭配置创造带宽",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q56",
@@ -2493,7 +4395,30 @@
           "pages": "22–34",
           "keyword": "IntServ"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "比较＋机制角色",
+        "answer_plan": [
+          "IntServ说明逐flow资源与状态",
+          "RSVP说明预留信令而非用户数据",
+          "DiffServ说明按class标记和逐跳处理",
+          "比较精细控制、规模与端到端实施条件"
+        ],
+        "current_organization": [
+          "第1段：IntServ及RSVP",
+          "第2段：DiffServ、类与扩展性",
+          "第3段：控制粒度取舍及标记不等于保证"
+        ],
+        "lookup_keywords": [
+          "IntServ",
+          "RSVP",
+          "DiffServ",
+          "EF"
+        ],
+        "lookup_check": "核对per-flow/per-class和RSVP作用",
+        "adapt_to_question": "若要求选型，把flow数量、精细保证与管理规模连到机制选择",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q57",
@@ -2522,7 +4447,30 @@
           "pages": "24–26、35–37",
           "keyword": "MultiProtocol Label Switching"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "机制＋应用＋条件",
+        "answer_plan": [
+          "定义MPLS按label转发",
+          "区分edge router与内部LSR",
+          "解释管理路径与traffic engineering用途",
+          "补资源、政策、监测和成本条件"
+        ],
+        "current_organization": [
+          "第1段：MPLS与边缘/内部设备",
+          "第2段：traffic engineering和差异服务用途",
+          "第3段：完整性能设计及限制"
+        ],
+        "lookup_keywords": [
+          "MPLS",
+          "label",
+          "LSR",
+          "traffic engineering"
+        ],
+        "lookup_check": "看label路径和边缘角色，避免把标签说成所有性能保证",
+        "adapt_to_question": "若问supports performance，要解释机制怎样匹配flow/SLA并如何验证",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q58",
@@ -2551,7 +4499,30 @@
           "pages": "39–45",
           "keyword": "Resource Control"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "机制区分＋后果",
+        "answer_plan": [
+          "区分prioritization与admission control",
+          "按classification、metering、shaping、dropping说明动作",
+          "比较延迟、buffer与丢失影响",
+          "依据应用容忍度和policy选择"
+        ],
+        "current_organization": [
+          "第1段：资源控制、优先级与准入",
+          "第2段：traffic conditioning四动作",
+          "第3段：shaping/dropping代价及应用例子"
+        ],
+        "lookup_keywords": [
+          "admission",
+          "classification",
+          "metering",
+          "shaping"
+        ],
+        "lookup_check": "核对每种动作是识别、测量、延迟还是丢弃",
+        "adapt_to_question": "若问shaping数值，另需调度与输出节奏，不能只凭固定等待时间推速率",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "C22",
@@ -2579,7 +4550,29 @@
           "pages": "41–44",
           "keyword": "Resource Control"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "速率＋调度条件",
+        "answer_plan": [
+          "输入packet rate×bytes×8求bit rate",
+          "与profile上限比较",
+          "按明确配置输出100packet/s求输出速率",
+          "由profile反求理想包率",
+          "区分固定延时与包释放间隔"
+        ],
+        "current_organization": [
+          "条件、计算步骤及必要表格",
+          "英文作答：结果与条件解释"
+        ],
+        "lookup_keywords": [
+          "metering",
+          "shaping",
+          "packets"
+        ],
+        "lookup_check": "核对课件shaping例子并保留调度假设和题库勘误",
+        "adapt_to_question": "只给每包等待10ms不能推出100packet/s，需知道是否限制每10ms释放一个包",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q59",
@@ -2608,7 +4601,30 @@
           "pages": "45–49",
           "keyword": "Scheduling Policies"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "按机制比较",
+        "answer_plan": [
+          "先区分queuing存包与scheduling选包",
+          "按FIFO、priority、RR、WFQ说明服务顺序",
+          "比较延迟、公平性与starvation风险",
+          "另说明RED/WRED属于queue management并补buffer取舍"
+        ],
+        "current_organization": [
+          "第1段：queuing与scheduling定义",
+          "第2段：四种调度机制及取舍",
+          "第3段：RED/WRED、buffer与混合流量验证"
+        ],
+        "lookup_keywords": [
+          "FIFO",
+          "priority",
+          "round robin",
+          "WFQ"
+        ],
+        "lookup_check": "核对调度规则与RED/WRED不同层面的功能",
+        "adapt_to_question": "若给到达/服务过程，按具体规则判断谁先服务，不把队列大小当调度策略",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q60",
@@ -2637,7 +4653,30 @@
           "pages": "50–62",
           "keyword": "Service Level Agreements"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "闭环关系",
+        "answer_plan": [
+          "SLA明确目标、责任和测量条件",
+          "policy把组织目标转成规则",
+          "QoS在设备落实处理",
+          "monitoring对照承诺并反馈调整"
+        ],
+        "current_organization": [
+          "第1段：SLA内容与测量条件",
+          "第2段：policy、QoS与monitoring连接",
+          "第3段：教学例子、文档和机制各自边界"
+        ],
+        "lookup_keywords": [
+          "SLA",
+          "policy",
+          "QoS",
+          "monitoring"
+        ],
+        "lookup_check": "找SLA参数和政策到设备的关系，不只查缩写定义",
+        "adapt_to_question": "若问how work together，用同一服务贯穿目标→规则→执行→验证",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q61",
@@ -2666,7 +4705,29 @@
           "pages": "5–16",
           "keyword": "Network Management Architectures"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "两套分类＋联系",
+        "answer_plan": [
+          "按business→service→network→element→network-element列层级",
+          "解释FCAPS五功能",
+          "说明层级与功能是不同观察维度",
+          "用服务目标落到设备动作的例子连接"
+        ],
+        "current_organization": [
+          "第1段：管理层级及各层范围",
+          "第2段：FCAPS五域",
+          "第3段：从业务到设备的例子与管理基础设施"
+        ],
+        "lookup_keywords": [
+          "FCAPS",
+          "business management",
+          "element"
+        ],
+        "lookup_check": "核对五层名称和FCAPS五域，避免互相替代",
+        "adapt_to_question": "题干同时问hierarchy和FCAPS时，两套清单都要完整",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q93",
@@ -2695,7 +4756,29 @@
           "pages": "18–24",
           "keyword": "Network Management Mechanisms"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "比较＋课程语境",
+        "answer_plan": [
+          "说明SNMP的manager/agent/MIB及poll/trap",
+          "说明CMIP的OSI背景和功能复杂度",
+          "解释CMOT全称",
+          "比较能力与复杂度，并标明本课重点和历史背景"
+        ],
+        "current_organization": [
+          "第1段：SNMP功能及课程重点",
+          "第2段：CMIP/CMOT背景与复杂度",
+          "第3段：能力/复杂度取舍及MIB边界"
+        ],
+        "lookup_keywords": [
+          "SNMP",
+          "CMIP",
+          "CMOT"
+        ],
+        "lookup_check": "核对本课protocol emphasis，不将历史背景扩成配置考点",
+        "adapt_to_question": "若只问compare，按任务、复杂度、设备支持与运维对照",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q62",
@@ -2724,7 +4807,31 @@
           "pages": "18–25",
           "keyword": "MIB"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "对象关系＋数据解释",
+        "answer_plan": [
+          "manager通过SNMP与device agent通信",
+          "MIB定义对象及含义",
+          "说明poll与trap及counter怎样得到rate",
+          "补SNMPv3和按任务选对象的条件"
+        ],
+        "current_organization": [
+          "第1段：SNMP、manager和agent关系",
+          "第2段：MIB对象定义及counter例子",
+          "第3段：poll/trap、差分rate和安全条件"
+        ],
+        "lookup_keywords": [
+          "SNMP",
+          "agent",
+          "manager",
+          "MIB",
+          "counter"
+        ],
+        "lookup_check": "核对MIB不是历史数据库，counter是累计量而非当前速率",
+        "adapt_to_question": "若题给两个counter，先检查时间、重置/回卷，再用差值求速率",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q63",
@@ -2753,7 +4860,29 @@
           "pages": "26–46",
           "keyword": "Monitoring Mechanisms"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "区分＋闭环",
+        "answer_plan": [
+          "monitoring说明采集处理显示归档",
+          "instrumentation说明工具与访问能力",
+          "configuration说明修改参数",
+          "用检测拥塞→改queue policy说明配合与测量边界"
+        ],
+        "current_organization": [
+          "第1段：monitoring的任务与范围",
+          "第2段：instrumentation工具与准确性",
+          "第3段：configuration及三者闭环例子"
+        ],
+        "lookup_keywords": [
+          "monitoring",
+          "instrumentation",
+          "configuration"
+        ],
+        "lookup_check": "核对三类机制各做什么，找同一事件的完整处理链",
+        "adapt_to_question": "若问why distinguish，说明看到问题、获得数据和改变系统不是同一个动作",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q64",
@@ -2782,7 +4911,30 @@
           "pages": "30–39",
           "keyword": "Monitoring for Trend Analysis"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "比较＋轮询取舍",
+        "answer_plan": [
+          "按时间尺度和目的比较event与trend",
+          "event用来及时发现变化，trend建立baseline和看增长",
+          "比较短/长poll interval的分辨率与开销",
+          "说明组合使用和时间单位上下文"
+        ],
+        "current_organization": [
+          "第1段：event notification的对象与及时性",
+          "第2段：trend analysis的长期作用",
+          "第3段：时间尺度、polling成本与组合"
+        ],
+        "lookup_keywords": [
+          "event",
+          "trend",
+          "polling",
+          "baseline"
+        ],
+        "lookup_check": "核对事件和趋势的测量周期及poll间隔影响",
+        "adapt_to_question": "若题给短暂故障，说明长间隔可能漏掉；不给未测量的精确漏检概率",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "C17",
@@ -2810,7 +4962,29 @@
           "pages": "35–39、59",
           "keyword": "Management architecture and scaling"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "轮询带宽",
+        "answer_plan": [
+          "设备×接口×参数求每轮测量数",
+          "value+wire overhead求每项bytes",
+          "乘8并除poll interval得平均bit/s",
+          "若问日量再乘日轮次",
+          "区分平均与同步突发"
+        ],
+        "current_organization": [
+          "条件、计算步骤及必要表格",
+          "英文作答：结果与条件解释"
+        ],
+        "lookup_keywords": [
+          "polling",
+          "overhead",
+          "management traffic"
+        ],
+        "lookup_check": "核对每参数消息是否有给定overhead及interval单位",
+        "adapt_to_question": "不能用平均值声称瞬时峰值；若消息打包方式变了要重算overhead",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "C18",
@@ -2838,7 +5012,28 @@
           "pages": "35–39、62–65",
           "keyword": "Management architecture and scaling"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "存储＋counter速率",
+        "answer_plan": [
+          "存储只用实际保留的value bytes",
+          "乘每轮数量和86400/interval",
+          "另题以counter差×8/时间求bit rate",
+          "核对metadata、复制和counter重置/回卷"
+        ],
+        "current_organization": [
+          "条件、计算步骤及必要表格",
+          "英文作答：结果与条件解释"
+        ],
+        "lookup_keywords": [
+          "storage",
+          "counter",
+          "polling interval"
+        ],
+        "lookup_check": "核对wire与stored bytes区别、hour/day轮次和累计counter含义",
+        "adapt_to_question": "若新counter小于旧值，先查重置/回卷，不直接给负流量",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q03",
@@ -2867,7 +5062,29 @@
           "pages": "51–54",
           "keyword": "In-band and Out-of-band Management"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "按维度比较＋选型",
+        "answer_plan": [
+          "先按路径是否与用户共享比较",
+          "再按业务网故障时的访问能力比较",
+          "再写成本、复杂度与安全条件",
+          "说明带外仍有供电等限制，可按需求混合"
+        ],
+        "current_organization": [
+          "第1段：in-band路径、低独立成本与共享故障",
+          "第2段：out-of-band替代路径、恢复能力和代价",
+          "第3段：供电边界、混合方案与选择依据"
+        ],
+        "lookup_keywords": [
+          "in-band",
+          "out-of-band",
+          "management"
+        ],
+        "lookup_check": "核对management traffic路径、故障依赖和成本",
+        "adapt_to_question": "若给故障，先判断故障是否也影响替代路径与设备供电，再谈带外可用性",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q67",
@@ -2896,7 +5113,29 @@
           "pages": "55–60、67–74",
           "keyword": "Centralized, Distributed and Hierarchical Management"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "多方案比较＋选型",
+        "answer_plan": [
+          "按信息/控制放置比较集中、分布、层级",
+          "逐项写管理便利、汇聚故障、扩展和协调代价",
+          "给多校园组织方式",
+          "说明冗余与通信可达性条件"
+        ],
+        "current_organization": [
+          "第1段：centralized特征与风险",
+          "第2段：distributed和hierarchical特征与协调",
+          "第3段：选型因素、校园例子及恢复边界"
+        ],
+        "lookup_keywords": [
+          "centralized",
+          "distributed",
+          "hierarchical management"
+        ],
+        "lookup_check": "看管理系统在哪里收集、存储和行动，而不只看网络拓扑",
+        "adapt_to_question": "若给恢复要求，说明管理系统和管理路径怎样继续可达",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q65",
@@ -2925,7 +5164,29 @@
           "pages": "35–39、59–60",
           "keyword": "Scaling of Network Management Traffic"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "估算方法＋控制",
+        "answer_plan": [
+          "用device×interfaces×parameters得到每轮测量数",
+          "乘每项wire bytes并除interval求速率",
+          "存储按保留内容和retention另算",
+          "用减少无用采集、分布和聚合控制负载并保留时效"
+        ],
+        "current_organization": [
+          "第1段：带宽估算输入与公式思路",
+          "第2段：storage、metadata、retention与突发",
+          "第3段：课件经验值及降低开销的办法"
+        ],
+        "lookup_keywords": [
+          "management traffic",
+          "polling",
+          "storage"
+        ],
+        "lookup_check": "核对2–5%与10%为课件规划guidelines，不是协议硬限制",
+        "adapt_to_question": "若数字变化，先区分wire overhead是否计入存储，再重新计算",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q95",
@@ -2954,7 +5215,29 @@
           "pages": "59–60",
           "keyword": "Scaling of Network Management Traffic"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "位置＋原因",
+        "answer_plan": [
+          "LAN先按每subnet一监测点的课件建议",
+          "WAN在WAN–LAN接口增加适当监测",
+          "说明一个点可兼具多个观察角色",
+          "用定位delay/loss解释位置价值及实际条件"
+        ],
+        "current_organization": [
+          "第1段：LAN起点建议及负载估算",
+          "第2段：WAN接口建议与监测点复用",
+          "第3段：位置用途、例子、非硬规则与端到端验证"
+        ],
+        "lookup_keywords": [
+          "monitoring",
+          "LAN",
+          "WAN interface"
+        ],
+        "lookup_check": "看monitor placement图和LAN/WAN说明，区分角色与物理设备数",
+        "adapt_to_question": "若改拓扑，按可见流量与故障域放点，不机械按标签复制设备",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q66",
@@ -2983,7 +5266,30 @@
           "pages": "61–70",
           "keyword": "Checks and Balances"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "三任务解释",
+        "answer_plan": [
+          "checks/balances用独立或交叉测量验证数据",
+          "data handling按本地、长期、归档和metadata规划",
+          "MIB selection按任务、SLA和vendor支持选择",
+          "补OSS northbound要求及不盲采集"
+        ],
+        "current_organization": [
+          "第1段：交叉核对及可发现的数据问题",
+          "第2段：管理数据保存与metadata",
+          "第3段：MIB按需选择、OSS集成与采集成本"
+        ],
+        "lookup_keywords": [
+          "checks and balances",
+          "metadata",
+          "MIB",
+          "OSS"
+        ],
+        "lookup_check": "核对数据错误类别与MIB选择依据，区分对象定义和保存历史",
+        "adapt_to_question": "若给异常counter，先查重置/回卷/厂商语义，不先断言业务流量突变",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q68",
@@ -3012,7 +5318,29 @@
           "pages": "67–74",
           "keyword": "External Relationships"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "依赖＋跨组件影响",
+        "answer_plan": [
+          "先列管理依赖的路径、容量、存储与device support",
+          "再连addressing/routing、performance、security",
+          "写管理消耗资源与需要受控访问的双向关系",
+          "用恢复路径说明flow估计与优先级"
+        ],
+        "current_organization": [
+          "第1段：管理基础依赖与OSS要求",
+          "第2段：管理和其他组件的关系",
+          "第3段：恢复访问例子、开销与flow优先级"
+        ],
+        "lookup_keywords": [
+          "management dependencies",
+          "external",
+          "security"
+        ],
+        "lookup_check": "核对管理数据的流量路径及与其他组件的相互影响",
+        "adapt_to_question": "若问internal/external，明确关系双方归属，避免按机房位置判断",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q04",
@@ -3041,7 +5369,33 @@
           "pages": "7–10、74–88",
           "keyword": "Design Products"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "完整列举＋用途",
+        "answer_plan": [
+          "先完整点出五类产物",
+          "blueprints写物理建设安排",
+          "component plan写功能机制",
+          "selections写供应商设备服务选择",
+          "traceability写依据链，metrics写怎样验收成功"
+        ],
+        "current_organization": [
+          "第1段：network blueprints及建设用途",
+          "第2段：component plan及机制关系",
+          "第3段：vendor/equipment/service-provider selections",
+          "第4段：traceability连接需求、架构与决定",
+          "第5段：design metrics及可测量成功"
+        ],
+        "lookup_keywords": [
+          "design products",
+          "blueprints",
+          "traceability",
+          "metrics"
+        ],
+        "lookup_check": "核对五项原清单，别把文档或设备清单当全部设计成果",
+        "adapt_to_question": "若问describe，每项都要一句用途；若问success，重点展开metrics与traceability",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q69",
@@ -3070,7 +5424,30 @@
           "pages": "11–21",
           "keyword": "Evaluation"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "评价过程＋选择条件",
+        "answer_plan": [
+          "先由需求与架构确定评价目标、标准和规则",
+          "收集可比证据并固定评分方法与权重",
+          "独立比较成本、技术、性能、风险和扩展",
+          "必备要求先检查，保留选择理由与未达标处理"
+        ],
+        "current_organization": [
+          "第1段：目标、规则与证据收集",
+          "第2段：一致评分、权重与独立性",
+          "第3段：必备条件、总体成本、透明记录及不达标处理"
+        ],
+        "lookup_keywords": [
+          "evaluation",
+          "vendor",
+          "criteria",
+          "ranking"
+        ],
+        "lookup_check": "核对评价顺序、权重依据及是否有primary requirements",
+        "adapt_to_question": "若要求推荐，先筛必备条件再比较合格候选，不能只抄最高加权分",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "C19",
@@ -3098,7 +5475,29 @@
           "pages": "17–19",
           "keyword": "Evaluation"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "加权评分＋资格",
+        "answer_plan": [
+          "先明确所有原分越高越好",
+          "按各项weight×rating逐项求和",
+          "检查权重和为1并比较A/B总分",
+          "再检查mandatory security，失败者排除或整改重评"
+        ],
+        "current_organization": [
+          "条件、计算步骤及必要表格",
+          "英文作答：结果与条件解释"
+        ],
+        "lookup_keywords": [
+          "Evaluation",
+          "weight",
+          "rating",
+          "mandatory"
+        ],
+        "lookup_check": "核对五项权重和评分方向，必备条件不是可用高分抵消的弱项",
+        "adapt_to_question": "候选或权重变化需重算；不得为喜欢的候选临时改权重",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "C20",
@@ -3126,7 +5525,30 @@
           "pages": "20–21",
           "keyword": "Evaluation"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "原表重算＋排名",
+        "answer_plan": [
+          "从原表逐列抄相对权重和原始评分",
+          "明确x/y表示原分/加权分而非除法",
+          "求各候选加权合计，必要时除权重和5归一化",
+          "按高分排序",
+          "区分与前一名差及与第一名累计差"
+        ],
+        "current_organization": [
+          "条件、计算步骤及必要表格",
+          "英文作答：结果与条件解释"
+        ],
+        "lookup_keywords": [
+          "Evaluation",
+          "rating",
+          "ranking",
+          "delta"
+        ],
+        "lookup_check": "看Week11原九项表及下一页rank deltas，核对单位尺度",
+        "adapt_to_question": "若权重未归一化，原和与归一化值不能混比；差值本身不规定淘汰阈值",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q70",
@@ -3155,7 +5577,30 @@
           "pages": "22–38、61–72",
           "keyword": "Design Criteria"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "区分＋选型约束",
+        "answer_plan": [
+          "primary说明成功必需，secondary说明可让步",
+          "把目标转成明确可验证标准",
+          "按flowspec、预算、现网、设施和支持技能选技术",
+          "分区评价接口，并说明规划指导值有条件"
+        ],
+        "current_organization": [
+          "第1段：primary/secondary定义与优先级",
+          "第2段：具体标准、可比性与取舍",
+          "第3段：技术约束、分区与利用率条件"
+        ],
+        "lookup_keywords": [
+          "primary",
+          "secondary",
+          "design criteria",
+          "constraints"
+        ],
+        "lookup_check": "核对哪些标准不可牺牲及技术限制来源",
+        "adapt_to_question": "若候选不满足primary，不能用其他secondary高分弥补",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q71",
@@ -3184,7 +5629,30 @@
           "pages": "39–60",
           "keyword": "Concept Elements"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "两组要素列举",
+        "answer_plan": [
+          "先说明architectural design的高层作用",
+          "列concept elements并按目标和约束组织",
+          "列technology elements",
+          "用多校园例子区分架构指导与最终物料细节"
+        ],
+        "current_organization": [
+          "第1段：architectural design定位",
+          "第2段：concept elements清单及作用",
+          "第3段：technology elements清单、例子与详细设计边界"
+        ],
+        "lookup_keywords": [
+          "architectural design",
+          "concept",
+          "technology",
+          "traffic mapping"
+        ],
+        "lookup_check": "分别核对concept与technology清单，避免只写设备品牌",
+        "adapt_to_question": "若给设计描述，说明哪个是业务约束、哪个是技术构件与关系",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "C21",
@@ -3212,7 +5680,30 @@
           "pages": "66–68",
           "keyword": "Guidelines and Constraints"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "利用率约束",
+        "answer_plan": [
+          "写capacity≥load/utilization limit",
+          "分别计算纯BE与纯predictable",
+          "混合例按题目明确的两条约束各求下界",
+          "取更严格下界并检验候选",
+          "说明burst、overhead与端系统仍需验证"
+        ],
+        "current_organization": [
+          "条件、计算步骤及必要表格",
+          "英文作答：结果与条件解释"
+        ],
+        "lookup_keywords": [
+          "capacity",
+          "utilization",
+          "60%",
+          "80%"
+        ],
+        "lookup_check": "核对Week11指导值与burstiness条件，混合例按本题明确假设",
+        "adapt_to_question": "利用率上限变化就重算；这些是课程规划指导值，不能称为所有协议硬限制",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q72",
@@ -3241,7 +5732,29 @@
           "pages": "73–88",
           "keyword": "Design Traceability"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "三概念＋证据链",
+        "answer_plan": [
+          "layout区分logical关系与physical blueprints",
+          "traceability把问题/需求接到架构和详细决定",
+          "metrics说明怎样测量成功",
+          "用一个服务写需求→决定→测试完整链"
+        ],
+        "current_organization": [
+          "第1段：layout、两类图及component plan",
+          "第2段：traceability的依据与变更影响",
+          "第3段：metrics与教学案例、验证边界"
+        ],
+        "lookup_keywords": [
+          "layout",
+          "traceability",
+          "success metrics"
+        ],
+        "lookup_check": "找设计产物间的对应关系和可测量目标",
+        "adapt_to_question": "若给一张拓扑图，不把图存在本身当性能达标证据",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q07",
@@ -3270,7 +5783,31 @@
           "pages": "8–22",
           "keyword": "SDN Features"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "优点＋机制＋条件",
+        "answer_plan": [
+          "先点出自动化、政策一致、协调与灵活性收益",
+          "用control/data separation解释收益来源",
+          "用programmability和较完整视图解释怎样实现",
+          "补controller可用性、安全、扩展与兼容条件"
+        ],
+        "current_organization": [
+          "第1段：SDN分离与管理变更的机制",
+          "第2段：可编程、自动化、一致政策和全局协调收益",
+          "第3段：控制/转发独立演进与服务灵活性",
+          "第4段：收益成立的设计条件及逻辑集中边界"
+        ],
+        "lookup_keywords": [
+          "SDN",
+          "advantages",
+          "programmability",
+          "control plane"
+        ],
+        "lookup_check": "核对每项收益对应的机制，别只找优点名词",
+        "adapt_to_question": "若问advantages，收益先写；若问how，改为先讲三平面和接口过程",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q73",
@@ -3299,7 +5836,29 @@
           "pages": "8–20",
           "keyword": "SDN Architecture"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "组成＋交互",
+        "answer_plan": [
+          "列application、control、data三平面",
+          "分别说明意图、控制决定、转发执行",
+          "用应用请求→controller规则→switch动作串联",
+          "补逻辑集中与控制器保护条件"
+        ],
+        "current_organization": [
+          "第1段：三平面总览与application职责",
+          "第2段：control与data职责",
+          "第3段：交互例子、可编程收益及控制器条件"
+        ],
+        "lookup_keywords": [
+          "application plane",
+          "control plane",
+          "data plane"
+        ],
+        "lookup_check": "看三平面箭头方向和controller与设备的交互",
+        "adapt_to_question": "若题给policy变更，沿意图到规则到包动作说明，不只背三层名称",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q74",
@@ -3328,7 +5887,30 @@
           "pages": "12–20",
           "keyword": "Interfaces of an SDN controller"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "接口关系＋例子",
+        "answer_plan": [
+          "按连接对象定义northbound与southbound",
+          "说明east–west连接controllers",
+          "把OpenFlow放在southbound例子的位置",
+          "用flow table匹配动作解释实施并补兼容/扩展条件"
+        ],
+        "current_organization": [
+          "第1段：northbound和southbound的连接对象",
+          "第2段：east–west及OpenFlow的范围",
+          "第3段：flow-table操作、实现条件与接口可移植性"
+        ],
+        "lookup_keywords": [
+          "northbound",
+          "southbound",
+          "east-west",
+          "OpenFlow"
+        ],
+        "lookup_check": "看接口图连接哪两类对象，确认OpenFlow不是SDN全部",
+        "adapt_to_question": "若给未命名接口，先看它连接application、controller还是forwarder再分类",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q75",
@@ -3357,7 +5939,30 @@
           "pages": "5–22",
           "keyword": "SDN – Challenging issues"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "挑战＋评价",
+        "answer_plan": [
+          "先承认可编程收益并指出controller/接口的重要性",
+          "按failure/security、scale、portability、QoS列挑战",
+          "说明distributed controllers的收益与协调成本",
+          "用测试与需求比较判断是否适合部署"
+        ],
+        "current_organization": [
+          "第1段：收益背景及控制器可用性/安全",
+          "第2段：扩展、接口、QoS和多样环境挑战",
+          "第3段：成本收益判断、验证与非自动保证"
+        ],
+        "lookup_keywords": [
+          "SDN",
+          "challenges",
+          "scalability",
+          "controller"
+        ],
+        "lookup_check": "核对挑战清单及distributed control的依赖",
+        "adapt_to_question": "若要求evaluate，每项挑战跟一个设计或验证考虑，不只写风险名词",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q76",
@@ -3386,7 +5991,29 @@
           "pages": "23–25",
           "keyword": "SD-WAN"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "定义＋收益＋条件",
+        "answer_plan": [
+          "定义SD-WAN面向广域网的软件管理",
+          "列应用体验、安全管理、云连接和简化收益",
+          "说明底层capacity/delay/loss/availability仍约束",
+          "用教学政策例子连接需求与成本"
+        ],
+        "current_organization": [
+          "第1段：SD-WAN和WAN范围",
+          "第2段：课程列出的潜在收益",
+          "第3段：底层链路、恢复、安全条件与选型"
+        ],
+        "lookup_keywords": [
+          "SD-WAN",
+          "WAN",
+          "cloud connectivity"
+        ],
+        "lookup_check": "核对课程收益原词及底层链路条件",
+        "adapt_to_question": "若给链路中断，必须说明替代路径，软件政策本身不能恢复断开的物理连接",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q77",
@@ -3415,7 +6042,30 @@
           "pages": "26–30",
           "keyword": "Big data"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "双向关系",
+        "answer_plan": [
+          "先简述Big Data的5V",
+          "写SDN通过全局视图与可编程支持数据业务",
+          "反向写数据分析怎样帮助SDN决策",
+          "补data quality、control overhead、scale和及时性"
+        ],
+        "current_organization": [
+          "第1段：Big Data五特征",
+          "第2段：SDN支持Big Data的机制",
+          "第3段：Big Data支持SDN及实际瓶颈"
+        ],
+        "lookup_keywords": [
+          "big data",
+          "5V",
+          "SDN",
+          "traffic engineering"
+        ],
+        "lookup_check": "核对两个方向分别有哪些机制/应用，不只回答一个方向",
+        "adapt_to_question": "若改问benefits，仍要交代信息从哪里来、怎样改变控制以及什么条件下有效",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q78",
@@ -3444,7 +6094,30 @@
           "pages": "31–34",
           "keyword": "Network Automation"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "定义＋收益风险",
+        "answer_plan": [
+          "定义automation覆盖的网络生命周期任务",
+          "说明减少重复、错误和不一致怎样产生收益",
+          "解释错误自动传播的风险",
+          "补访问控制、验证、分批、回退并区分automation与SDN"
+        ],
+        "current_organization": [
+          "第1段：automation定义、任务与工具例子",
+          "第2段：效率、一致性和工程师工作收益",
+          "第3段：批量错误风险、实施补充及与SDN区别"
+        ],
+        "lookup_keywords": [
+          "automation",
+          "configuration",
+          "Ansible",
+          "Python"
+        ],
+        "lookup_check": "核对课程任务与工具；testing/staged rollout/rollback是实施建议",
+        "adapt_to_question": "若要求风险，说明同一错误怎样扩散及如何控制，不能只说软件也会错",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q79",
@@ -3473,7 +6146,30 @@
           "pages": "35–38",
           "keyword": "NFV Architecture"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "定义＋三组成",
+        "answer_plan": [
+          "定义NFV把网络功能软件化并脱离专用设备",
+          "NFVI写资源与虚拟化基础",
+          "VNF写功能，MANO写管理编排",
+          "补共享资源、隔离、性能和故障条件"
+        ],
+        "current_organization": [
+          "第1段：NFV定义与软件功能例子",
+          "第2段：NFVI、VNF、MANO三要素",
+          "第3段：灵活性收益与共享基础设施约束"
+        ],
+        "lookup_keywords": [
+          "NFV",
+          "NFVI",
+          "VNF",
+          "MANO"
+        ],
+        "lookup_check": "看NFV组成图核对资源层、功能层和管理角色",
+        "adapt_to_question": "若给虚拟防火墙，区分运行功能、承载资源和负责生命周期的部分",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q80",
@@ -3502,7 +6198,30 @@
           "pages": "36–39",
           "keyword": "Relation of SDN and NFV"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "比较＋组合",
+        "answer_plan": [
+          "按分离对象比较SDN和NFV",
+          "说明SDN控制连通/转发，NFV部署服务功能",
+          "用SDN引流经过VNF举例",
+          "明确MANO与controller分工及组合条件"
+        ],
+        "current_organization": [
+          "第1段：两者定义与分离对象",
+          "第2段：各自灵活性及不互相必需",
+          "第3段：虚拟防火墙组合例子和性能/协调限制"
+        ],
+        "lookup_keywords": [
+          "SDN",
+          "NFV",
+          "MANO",
+          "service"
+        ],
+        "lookup_check": "核对control/forwarding与function/appliance两种分离",
+        "adapt_to_question": "若问work together，写实际traffic路径与管理责任，不只说两者都用软件",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q81",
@@ -3531,7 +6250,31 @@
           "pages": "40–44",
           "keyword": "ML model categories"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "层级＋学习类型比较",
+        "answer_plan": [
+          "AI包含ML，ML包含DL",
+          "按训练信息区分supervised、unsupervised、reinforcement",
+          "supervised再区分classification与regression",
+          "用网络任务解释匹配并补数据和运维条件"
+        ],
+        "current_organization": [
+          "第1段：AI/ML/DL包含关系",
+          "第2段：三学习类型及分类/回归",
+          "第3段：网络任务例子与方法适用条件"
+        ],
+        "lookup_keywords": [
+          "AI",
+          "ML",
+          "DL",
+          "supervised",
+          "reinforcement"
+        ],
+        "lookup_check": "核对包含关系、label与reward的区别",
+        "adapt_to_question": "若给数据任务，按可用标签、目标和交互反馈选类型，不凭是否复杂判断DL",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "Q82",
@@ -3560,7 +6303,30 @@
           "pages": "43–50",
           "keyword": "ML – Basic workflow"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "流程＋应用＋限制",
+        "answer_plan": [
+          "从历史数据到建模、评价、优化再预测",
+          "列网络应用并说明支持的决策",
+          "解释算力/准确性、数据可得性、隐私、不平衡与真实性挑战",
+          "用稀有攻击例子说明验证与错误后果"
+        ],
+        "current_organization": [
+          "第1段：ML迭代流程与新条件监测补充",
+          "第2段：网络应用与运维控制",
+          "第3段：课程限制、不平衡例子和任务相关验证"
+        ],
+        "lookup_keywords": [
+          "ML workflow",
+          "imbalanced",
+          "accuracy",
+          "networking"
+        ],
+        "lookup_check": "核对流程图循环和挑战清单，不把预测输出直接等于正确操作",
+        "adapt_to_question": "若问应用，挑与题干相符的任务并说明输入、输出和验证方式",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "E01",
@@ -3686,7 +6452,38 @@
           "pages": "42–50",
           "keyword": "External Relationship"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "多任务论述",
+        "answer_plan": [
+          "拆出重要性、why threat analysis、考虑因素、三个威胁例子",
+          "用CIA/privacy说明组织后果",
+          "从asset→threat→likelihood/impact推到控制与优先级",
+          "三个案例各写资产、威胁、后果、回应和限制",
+          "结尾说明取舍与复查"
+        ],
+        "current_organization": [
+          "第1节：Introduction",
+          "第2节：Importance of security and privacy",
+          "第3节：Why threat analysis supports the plan",
+          "第4节：From analysis to action",
+          "第5节：What to consider: assets and threats",
+          "第6节：What to consider: likelihood, impact and review",
+          "第7节：Example 1: unauthorized access",
+          "第8节：Example 2: denial of service",
+          "第9节：Example 3: malicious software",
+          "第10节：Conclusion"
+        ],
+        "lookup_keywords": [
+          "security",
+          "privacy",
+          "threat analysis",
+          "likelihood"
+        ],
+        "lookup_check": "按各来源分别找CIA、threat worksheet和policy/mechanism，不期待单页提供整篇答案",
+        "adapt_to_question": "若换成其他安全主题，先重拆子问；不能把三个例子写成无资产和后果的攻击名词",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "E02",
@@ -3794,7 +6591,37 @@
           "pages": "73–88",
           "keyword": "Design Traceability"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "跨阶段论述",
+        "answer_plan": [
+          "围绕同一个多校园需求建立全文主线",
+          "依次写战略→需求→flow→architecture→评价与实施",
+          "各阶段说明输入、输出及下一步怎样使用",
+          "用traceability连接选择与测试",
+          "结尾保留预算和变更反馈"
+        ],
+        "current_organization": [
+          "第1节：Introduction",
+          "第2节：Strategic planning 与 Crouch",
+          "第3节：需求分析五步",
+          "第4节：Flow 的定义与建立",
+          "第5节：内部关系与外部关系",
+          "第6节：供应商、设备和服务评价",
+          "第7节：布局、traceability 与成功指标",
+          "第8节：Applied example",
+          "第9节：Evaluation and conclusion"
+        ],
+        "lookup_keywords": [
+          "strategic planning",
+          "requirements",
+          "flow",
+          "traceability"
+        ],
+        "lookup_check": "沿不同来源核对各阶段产物与交接关系",
+        "adapt_to_question": "场景变化时替换需求与约束，保持证据链；不把每章定义拼成无联系清单",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "E03",
@@ -3902,7 +6729,38 @@
           "pages": "50–62",
           "keyword": "Service Level Agreements"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "场景方案＋评价",
+        "answer_plan": [
+          "先区分互动教学、关键交易、备份的服务需求",
+          "建立指标和flowspec",
+          "选逐flow/逐class及资源控制和调度",
+          "写SLA→policy→QoS→measurement闭环",
+          "用拥塞和故障测试验证并说明取舍"
+        ],
+        "current_organization": [
+          "第1节：Introduction",
+          "第2节：Capacity、throughput、delay 与 jitter",
+          "第3节：Flowspec 与聚合规则",
+          "第4节：IntServ、RSVP 与 DiffServ",
+          "第5节：Resource control 与 traffic conditioning",
+          "第6节：Queue 与 scheduling",
+          "第7节：SLA、policy 与 QoS 的闭环",
+          "第8节：Applied example",
+          "第9节：Evaluation and conclusion"
+        ],
+        "lookup_keywords": [
+          "flowspec",
+          "IntServ",
+          "DiffServ",
+          "SLA",
+          "QoS"
+        ],
+        "lookup_check": "分别查指标、聚合规则、机制和SLA，保留端到端条件",
+        "adapt_to_question": "若需求变化，先调整flow与指标，再重新选机制，不能固定推荐同一种queue",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "E04",
@@ -4010,7 +6868,38 @@
           "pages": "62–79",
           "keyword": "Evaluating Routing Protocols"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "架构方案＋取舍",
+        "answer_plan": [
+          "从站点、增长、可达性和故障目标出发",
+          "写地址规划、CIDR和subnetting验证",
+          "划AS/内部边界",
+          "选内部与跨域路由并比较收敛和开销",
+          "用增长和故障场景检验"
+        ],
+        "current_organization": [
+          "第1节：Introduction",
+          "第2节：MAC、IP、IPv4 与 IPv6",
+          "第3节：Classful、CIDR 与 prefix",
+          "第4节：Subnetting 通用步骤",
+          "第5节：Routing boundaries 与 AS",
+          "第6节：Static 与 dynamic routing",
+          "第7节：RIP、OSPF 与 BGP 选择",
+          "第8节：Applied example",
+          "第9节：Evaluation and conclusion"
+        ],
+        "lookup_keywords": [
+          "CIDR",
+          "subnetting",
+          "AS",
+          "OSPF",
+          "BGP"
+        ],
+        "lookup_check": "跨来源核对地址规则、边界与protocol选型标准",
+        "adapt_to_question": "场景需要的实际数字未给时写假设，不把示范地址当题目要求",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "E05",
@@ -4118,7 +7007,38 @@
           "pages": "55–60、67–74",
           "keyword": "Centralized, Distributed and Hierarchical Management"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "管理方案＋恢复",
+        "answer_plan": [
+          "先写服务目标与FCAPS职责",
+          "设计manager/agent/MIB及数据流",
+          "组合event与trend，估算polling和storage",
+          "选择集中/分布/层级并说明通信路径",
+          "补恢复访问、安全和管理服务验证"
+        ],
+        "current_organization": [
+          "第1节：Introduction",
+          "第2节：管理层级与 FCAPS",
+          "第3节：SNMP、agent 与 MIB",
+          "第4节：Monitoring、instrumentation、configuration",
+          "第5节：Event notification 与 trend analysis",
+          "第6节：Management traffic scaling",
+          "第7节：Centralized、distributed、hierarchical management",
+          "第8节：Applied example",
+          "第9节：Evaluation and conclusion"
+        ],
+        "lookup_keywords": [
+          "FCAPS",
+          "SNMP",
+          "polling",
+          "in-band",
+          "out-of-band"
+        ],
+        "lookup_check": "查管理功能、数据定义、负载和恢复路径，避免漏掉管理系统自身依赖",
+        "adapt_to_question": "若题目强调恢复，展开替代访问路径及供电等共同故障条件",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "E06",
@@ -4226,7 +7146,37 @@
           "pages": "73–88",
           "keyword": "Design Traceability"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "完整模型＋组合评价",
+        "answer_plan": [
+          "列齐topological两类、flow-based四类、functional三类",
+          "说明这些视角怎样组合reference architecture",
+          "区分并解释组件内部和外部关系",
+          "用校园流量把安全、管理、性能、路由联系起来",
+          "以需求、traceability和metrics评价平衡"
+        ],
+        "current_organization": [
+          "第1节：Introduction",
+          "第2节：课堂讨论的全部架构模型",
+          "第3节：Reference architecture 的形成",
+          "第4节：内部关系与外部关系",
+          "第5节：安全架构的 trade-offs",
+          "第6节：SLA、policy 与 QoS 的闭环",
+          "第7节：布局、traceability 与成功指标",
+          "第8节：Applied example",
+          "第9节：Evaluation and conclusion"
+        ],
+        "lookup_keywords": [
+          "architectural models",
+          "reference",
+          "internal",
+          "external"
+        ],
+        "lookup_check": "先在模型页核对2＋4＋3清单，再查组件关系与验证资料",
+        "adapt_to_question": "若题干强调all，先保证完整清单，再分配篇幅给组合案例和取舍",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "E07",
@@ -4334,7 +7284,38 @@
           "pages": "43–50",
           "keyword": "ML – Basic workflow"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "多技术评价",
+        "answer_plan": [
+          "先按角色区分SDN、SD-WAN、NFV、automation、ML",
+          "每项写机制→收益→依赖/风险",
+          "用一个校园场景说明怎样配合",
+          "比较数据、controller、资源、兼容和运维条件",
+          "以可验证需求评价而非只追求新技术"
+        ],
+        "current_organization": [
+          "第1节：Introduction",
+          "第2节：SDN 三平面",
+          "第3节：SD-WAN",
+          "第4节：SDN 与 Big Data 的双向关系",
+          "第5节：Network automation",
+          "第6节：NFV 与三要素",
+          "第7节：ML workflow、应用与挑战",
+          "第8节：Applied example",
+          "第9节：Evaluation and conclusion"
+        ],
+        "lookup_keywords": [
+          "SDN",
+          "SD-WAN",
+          "NFV",
+          "automation",
+          "ML"
+        ],
+        "lookup_check": "在Week12各技术页分别核对职责，别把相近术语当同义词",
+        "adapt_to_question": "若只要求其中两种技术，集中比较角色、配合与限制，不照搬全部技术段落",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     },
     {
       "id": "E08",
@@ -4442,7 +7423,38 @@
           "pages": "57–66",
           "keyword": "Supplemental Performance Requirements"
         }
-      ]
+      ],
+      "guidance": {
+        "task_type": "选择论证＋验收",
+        "answer_plan": [
+          "先区分primary/secondary并列实际约束",
+          "固定评价规则和权重后比较合格候选",
+          "解释supportability与架构要素",
+          "列五类design products",
+          "用需求→架构→选择→metric/test证明成功"
+        ],
+        "current_organization": [
+          "第1节：Introduction",
+          "第2节：供应商、设备和服务评价",
+          "第3节：Primary/secondary criteria 与约束",
+          "第4节：Architectural design 的要素",
+          "第5节：设计过程的五类产物",
+          "第6节：布局、traceability 与成功指标",
+          "第7节：补充性能需求",
+          "第8节：Applied example",
+          "第9节：Evaluation and conclusion"
+        ],
+        "lookup_keywords": [
+          "evaluation",
+          "primary criteria",
+          "design products",
+          "traceability"
+        ],
+        "lookup_check": "跨Week11评价与产物、Week4支持要求核对证据链",
+        "adapt_to_question": "若候选分高却不满足必备条件，应排除或整改；交付清单也不能替代验收结果",
+        "label": "AI整理的组织与检索建议，非官方评分细则"
+      }
     }
-  ]
+  ],
+  "guidance_version": "2026-11-02 · 131题组织方式、答题路线与Moodle查阅"
 }

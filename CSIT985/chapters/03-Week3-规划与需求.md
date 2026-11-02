@@ -17,6 +17,35 @@
 
 **中文题意：**用 Crouch 的问题说明战略规划。
 
+<!-- answer-guidance:T017:start -->
+### 组织方式与答题思路
+
+**任务类型：**目的＋关系解释。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 用Crouch问题串起使命、现状、目标、路径与验证。
+2. 解释gap analysis。
+3. 区分strategy与tactics。
+4. 用多校园目标连接预算、人员和里程碑。
+
+**现有参考答案的组织方式：**
+
+- 第1段：战略规划定义与Crouch问题。
+- 第2段：问题之间的联系及gap/strategy/tactics。
+- 第3段：多校园例子与实施复查。
+
+**回Moodle核对：**
+
+- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → PDF物理页 **5–20**；课件主题：The Crouch Diagram。
+
+搜索词：`Crouch`；`strategic`；`gap`；`mission`。
+
+查到后确认：核对Crouch问题完整顺序及战略与战术区别。
+
+**换问法时：**若问purpose，先回答组织目标怎样转为资源与行动，问题清单作支持。
+<!-- answer-guidance:T017:end -->
+
 ### 中文思路
 
 使命/做事方式→现状→目标→路径→成功验证；gap、strategy/tactics。
@@ -51,6 +80,35 @@ For example, a university may aim to support teaching across several campuses. I
 **Question:** Describe good strategic planning practices and common pitfalls.
 
 **中文题意：**说明有效规划方法及常见陷阱。
+
+<!-- answer-guidance:T018:start -->
+### 组织方式与答题思路
+
+**任务类型：**做法＋陷阱。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 先说明规划是持续过程。
+2. 列实用做法：简洁、领导参与、创新与实施可行。
+3. 列常见陷阱并说明后果。
+4. 用能否筹资、运行和维护检验计划。
+
+**现有参考答案的组织方式：**
+
+- 第1段：持续规划与良好做法。
+- 第2段：常见陷阱及短长期冲突。
+- 第3段：网络实施例子与结果导向。
+
+**回Moodle核对：**
+
+- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → PDF物理页 **21–26**；课件主题：Six Tips for Strategic Planning。
+
+搜索词：`planning`；`pitfalls`；`implementation`。
+
+查到后确认：找tips与pitfalls两组清单，避免只回答其中一组。
+
+**换问法时：**若限定数量，选出指定数量并各写影响；不要只堆关键词。
+<!-- answer-guidance:T018:end -->
 
 ### 中文思路
 
@@ -87,6 +145,35 @@ For a network project, a technically attractive plan may still fail if no one ca
 
 **中文题意：**解释四种变革策略与选择因素。
 
+<!-- answer-guidance:T019:start -->
+### 组织方式与答题思路
+
+**任务类型：**列举＋选型。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 列四种change strategy及各自作用机制。
+2. 按阻力、人数、利害、时间、能力、依赖选择。
+3. 说明可能混合。
+4. 给迁移例子并保留沟通和支持条件。
+
+**现有参考答案的组织方式：**
+
+- 第1段：四种策略的定义。
+- 第2段：选择因素与混合。
+- 第3段：迁移案例、时间压力与支持条件。
+
+**回Moodle核对：**
+
+- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → PDF物理页 **27–30**；课件主题：Four Basic Strategies。
+
+搜索词：`rational`；`normative`；`coercive`；`adaptive`。
+
+查到后确认：核对四种策略名称、假定和选型因素。
+
+**换问法时：**若给组织阻力场景，用场景条件说明选哪一种或怎样组合。
+<!-- answer-guidance:T019:end -->
+
 ### 中文思路
 
 Rational-Empirical利益；Normative-Re-educative规范；Power-Coercive权力；Environmental-Adaptive新环境。
@@ -121,6 +208,35 @@ For example, a network migration may combine explanations and training with clea
 **Question:** Who should be involved in strategic planning, and why?
 
 **中文题意：**谁应参与规划，为什么？
+
+<!-- answer-guidance:T020:start -->
+### 组织方式与答题思路
+
+**任务类型：**人员＋原因。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 先说明规划同时需要权力与实务知识。
+2. 列领导、开发实施、供信息、审核授权角色。
+3. 解释跨组织参与和coordinator的作用。
+4. 说明团队素质与阶段变化。
+
+**现有参考答案的组织方式：**
+
+- 第1段：领导参与及决策权。
+- 第2段：团队角色、用户参与和协调员。
+- 第3段：团队素质、成员变化与目的。
+
+**回Moodle核对：**
+
+- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → PDF物理页 **31–40**；课件主题：Who Should Be Involved in Planning。
+
+搜索词：`planning team`；`stakeholders`；`coordinator`。
+
+查到后确认：核对谁做决策、谁供信息、谁执行和谁协调。
+
+**换问法时：**若问why involved，每种人员都跟一句其贡献，不只列职位。
+<!-- answer-guidance:T020:end -->
 
 ### 中文思路
 
@@ -157,6 +273,35 @@ Team members should work well together, be committed and be respected by others.
 
 **中文题意：**解释需求分析中的五类归属。
 
+<!-- answer-guidance:T021:start -->
+### 组织方式与答题思路
+
+**任务类型：**分类解释。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 列core、feature、future、rejected、informational。
+2. 每类给判定依据。
+3. 给一个核心、可选和未来例子。
+4. 区分类别与来源Type，可同时记录。
+
+**现有参考答案的组织方式：**
+
+- 第1段：core、feature、future。
+- 第2段：rejected、informational及拒绝理由。
+- 第3段：分类用途、例子与来源维度区别。
+
+**回Moodle核对：**
+
+- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → PDF物理页 **48–49**；课件主题：Categorizing requirements。
+
+搜索词：`core`；`feature`；`future`；`informational`。
+
+查到后确认：核对五类原定义及feature与future的时间区别。
+
+**换问法时：**若要求分类具体语句，先判其性质，再说明理由和不确定处。
+<!-- answer-guidance:T021:end -->
+
 ### 中文思路
 
 Core＝当前成功必需；feature＝希望有、可延后；future＝后续版本/升级；rejected＝已决定不纳入；informational＝背景信息。它们不同于user/application/device/network来源分类。
@@ -191,6 +336,35 @@ These categories help control scope, resources and expectations. For example, ac
 **Question:** Explain MUST, MUST NOT, SHOULD, SHOULD NOT and MAY. How does the course relate these words to requirement categories?
 
 **中文题意：**解释要求强度，并区别RFC词义与课件分类提示。
+
+<!-- answer-guidance:T022:start -->
+### 组织方式与答题思路
+
+**任务类型：**术语强度＋映射。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 区分必须、禁止、强烈建议与可选。
+2. 保留SHOULD允许有理由的例外。
+3. 说明课件与项目类别的联系。
+4. 用正反要求举例，不把MAY解释为必须拒绝。
+
+**现有参考答案的组织方式：**
+
+- 第1段：MUST/SHOULD/MAY等强度与例外。
+- 第2段：课件项目分类的映射及边界。
+- 第3段：要求实例及禁止性core要求。
+
+**回Moodle核对：**
+
+- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → PDF物理页 **50**；课件主题：RFC 2119 keywords。
+
+搜索词：`MUST`；`SHOULD`；`MAY`；`core`。
+
+查到后确认：核对原词强度及课件映射，不把外部定义当考试新增资料。
+
+**换问法时：**若给否定语句，先判断MUST NOT还是SHOULD NOT，不能只看是否有NOT。
+<!-- answer-guidance:T022:end -->
 
 ### 中文思路
 
@@ -229,6 +403,35 @@ RFC词义核对：[RFC2119](https://www.rfc-editor.org/rfc/rfc2119.html)，§1�
 
 **中文题意：**给五项陈述分类，再解释规格表三个字段。
 
+<!-- answer-guidance:T023:start -->
+### 组织方式与答题思路
+
+**任务类型：**案例分类＋区分。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 对五个案例逐一给类别和理由。
+2. 区分Type、Status、Priority各描述什么。
+3. 说明同一要求可同时具备多个字段。
+4. 资料不足时记录待确认。
+
+**现有参考答案的组织方式：**
+
+- 第1段：五例分类与拒绝理由。
+- 第2段：Type、Status、Priority的定义。
+- 第3段：维度组合和不确定性处理。
+
+**回Moodle核对：**
+
+- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → PDF物理页 **48–52**；课件主题：Requirement Status and Priority。
+
+搜索词：`type`；`status`；`priority`；`requirements`。
+
+查到后确认：看规格表字段与五类要求，不把高优先级直接等同core。
+
+**换问法时：**若题干改动时间或必备性，按新条件重分类，不背案例固定配对。
+<!-- answer-guidance:T023:end -->
+
 ### 中文思路
 
 必需访问控制→core；可选dashboard→feature；明年校区→future；分析后决定不做→rejected；用户人数→informational。Type标来源，Status标当前处理状态，Priority标先后/重要性。
@@ -263,6 +466,35 @@ Unsupported/unclear并不自动rejected，题目明确“分析后决定不做�
 **Question:** Compare best-effort, predictable and guaranteed network services.
 
 **中文题意：**比较 best-effort、predictable、guaranteed。
+
+<!-- answer-guidance:T024:start -->
+### 组织方式与答题思路
+
+**任务类型：**比较＋适用条件。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 按服务承诺强度比较三等级。
+2. 说明best-effort、predictable、guaranteed各提供什么。
+3. 按应用需要选服务。
+4. 补端到端资源、测量与验证条件。
+
+**现有参考答案的组织方式：**
+
+- 第1段：best-effort承诺边界及应用。
+- 第2段：predictable/guaranteed与实施条件。
+- 第3段：校园例子、成本、验证及端到端条件。
+
+**回Moodle核对：**
+
+- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → PDF物理页 **44–60**；课件主题：Network Services。
+
+搜索词：`best effort`；`predictable`；`guaranteed`。
+
+查到后确认：核对服务等级承诺对象及capacity/delay/RMA要求。
+
+**换问法时：**若要求保证，不只写提高优先级，要说明全路径资源与验证。
+<!-- answer-guidance:T024:end -->
 
 ### 中文思路
 
@@ -299,6 +531,35 @@ guaranteed 不等于无条件永远不会出故障。
 
 **中文题意：**描述四类需求并说明联系。
 
+<!-- answer-guidance:T025:start -->
+### 组织方式与答题思路
+
+**任务类型：**列举＋衔接。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 列user、application、device、network四类。
+2. 分别说明关注对象和典型要求。
+3. 用同一视频教学案例串联四类。
+4. 补人数、位置与增长。
+
+**现有参考答案的组织方式：**
+
+- 第1段：user需求特点。
+- 第2段：application、device、network要求。
+- 第3段：四类衔接的教学案例。
+
+**回Moodle核对：**
+
+- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → PDF物理页 **43–55、62–78**；课件主题：Network Services。
+
+搜索词：`user requirements`；`application`；`device`；`network`。
+
+查到后确认：核对四类来源及每类典型指标。
+
+**换问法时：**若给需求语句，按它描述的对象分类，必要时说明如何派生技术要求。
+<!-- answer-guidance:T025:end -->
+
 ### 中文思路
 
 主观用户需要转技术指标；应用端到端；设备限制；既有网络约束。
@@ -333,6 +594,35 @@ host/device 是需求层级之一，不要漏掉终端瓶颈。
 **Question:** Distinguish mission-critical, rate-critical, real-time and interactive applications.
 
 **中文题意：**区分应用类型及主导性能需求。
+
+<!-- answer-guidance:T026:start -->
+### 组织方式与答题思路
+
+**任务类型：**区分＋指标。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 按关键性、速率和时间区分四类应用。
+2. 解释mission-critical与rate-critical。
+3. 解释real-time与interactive。
+4. 说明可重叠并转成可测量指标。
+
+**现有参考答案的组织方式：**
+
+- 第1段：mission-critical与rate-critical。
+- 第2段：real-time与interactive及共同要求。
+- 第3段：重叠案例与可测量需求。
+
+**回Moodle核对：**
+
+- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → PDF物理页 **63–78**；课件主题：Application Requirements。
+
+搜索词：`mission-critical`；`rate-critical`；`real-time`；`interactive`。
+
+查到后确认：核对每类的判据，不把critical都解释成高速。
+
+**换问法时：**若给应用案例，可以判多个类别，但要分别提供证据。
+<!-- answer-guidance:T026:end -->
 
 ### 中文思路
 

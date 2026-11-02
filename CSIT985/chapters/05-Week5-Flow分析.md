@@ -17,6 +17,35 @@
 
 **中文题意：**定义 flow 并说明建立步骤。
 
+<!-- answer-guidance:T038:start -->
+### 组织方式与答题思路
+
+**任务类型：**定义＋建立过程。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 定义flow的共同属性和端到端范围。
+2. 从应用需求与位置找到source/sink。
+3. 应用flow model并形成flowspec。
+4. 区分individual、composite、critical与flow map用途。
+
+**现有参考答案的组织方式：**
+
+- 第1段：flow定义与关联实体。
+- 第2段：从需求建立flow的步骤。
+- 第3段：flow分类与map的设计价值。
+
+**回Moodle核对：**
+
+- [Week 5 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607048) → PDF物理页 **6–29**；课件主题：Flows。
+
+搜索词：`traffic flow`；`source`；`sink`；`flowspec`。
+
+查到后确认：看flow属性、源汇与建立步骤，图上位置不是自动的物理布线。
+
+**换问法时：**若给业务，先明确谁产生什么数据、发给谁及方向，再选模型。
+<!-- answer-guidance:T038:end -->
+
 ### 中文思路
 
 共同属性的端到端流量；源汇/方向/位置/服务；individual/composite/critical。
@@ -51,6 +80,37 @@ An individual flow represents a single application session. A composite flow com
 **Question:** Using Workshop Week7a Exercise 1, identify sources and sinks for all four flow types, draw each type, and combine them into one logical flow map. State assumptions where endpoints are not uniquely specified.
 
 **中文题意：**按原图完成四类source/sink、各类型flow map与合并图；题目没唯一指定的端点要写假设。
+
+<!-- answer-guidance:T039:start -->
+### 组织方式与答题思路
+
+**任务类型：**图题＋假设。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 先列四类业务及明确的端点。
+2. 逐类列source、sink、方向和性能要求。
+3. 未唯一指定端点先写假设再画逻辑箭头。
+4. 分别画四图并合并，共享路径保留标签。
+5. 检查不把地理位置当已知布线。
+
+**现有参考答案的组织方式：**
+
+- 原题条件和底图定位。
+- 条件、步骤与source/sink表。
+- 四类独立Flow图与合并图（含显式假设）。
+- 英文参考答案。
+
+**回Moodle核对：**
+
+- [Week 7a - Flow Analysis](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607864) → PDF物理页 **1 Ex1**；课件主题：Exercise 1。
+
+搜索词：`Exercise 1`；`flow map`；`source`；`sink`。
+
+查到后确认：回到Workshop原底图确认业务和端点；参考图中的假设不能当成题目已知。
+
+**换问法时：**端点或应用变化时重建source/sink表；合理替代图要有一致假设和需求依据。
+<!-- answer-guidance:T039:end -->
 
 ### 原题定位
 
@@ -124,6 +184,36 @@ External Access Server不因external一词而移到校园框外；Type3目的、
 
 **中文题意：**按原练习区分上下行、单向/双向与one-way/RTT。
 
+<!-- answer-guidance:T040:start -->
+### 组织方式与答题思路
+
+**任务类型：**逐项标注。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 按四个应用分别写source→sink方向。
+2. 双向需求各自保留速率。
+3. 标明one-way或round-trip的时延口径。
+4. 检查单位与未指定的控制流假设。
+
+**现有参考答案的组织方式：**
+
+- 第1段：client-server双向速率。
+- 第2段：UDP video单向媒体及one-way delay。
+- 第3段：web与POS双向数据及delay口径。
+- 第4段：单向与往返的最终核对。
+
+**回Moodle核对：**
+
+- [Week 7a - Flow Analysis](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607864) → PDF物理页 **2 Ex2**；课件主题：Exercise 2。
+
+搜索词：`Exercise 2`；`client-server`；`UDP`；`round-trip`。
+
+查到后确认：直接核对Workshop Ex2各箭头、数值和时延定义。
+
+**换问法时：**若数字或方向变化，重画方向表；不把上下行速率相加后替代两条要求。
+<!-- answer-guidance:T040:end -->
+
 ### 中文思路
 
 client-server双向1.2Mb/s下15kb/s上；video业务单向300kb/s40ms单程；Web双向250/100kb/s给5s；PoS双向30上50下100msRTT。
@@ -161,6 +251,35 @@ Workshops周号不同于lecture；RTT不能直接当每一方向100ms。
 
 **中文题意：**解释四种流量模型。
 
+<!-- answer-guidance:T041:start -->
+### 组织方式与答题思路
+
+**任务类型：**模型列举＋关系。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 列四种flow model。
+2. 按谁请求、谁服务、谁协作解释差别。
+3. 说明hierarchical client-server的层间流量。
+4. 给共享服务或计算集群例子，并区分逻辑flow与布线。
+
+**现有参考答案的组织方式：**
+
+- 第1段：peer-to-peer和client-server。
+- 第2段：hierarchical与distributed computing。
+- 第3段：模型用途、混合场景和物理边界。
+
+**回Moodle核对：**
+
+- [Week 5 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607048) → PDF物理页 **30–44**；课件主题：Flow Models。
+
+搜索词：`peer-to-peer`；`hierarchical`；`distributed computing`。
+
+查到后确认：看四类通信关系图，核对server是否也作为上层client。
+
+**换问法时：**若给校园场景，可组合模型，但必须指出实际源汇和交互关系。
+<!-- answer-guidance:T041:end -->
+
 ### 中文思路
 
 谁和谁通信，不等于物理拓扑；层级聚合、协作计算。
@@ -195,6 +314,35 @@ The models help predict communication relationships and service locations. They 
 **Question:** How should flows be selected for analysis and prioritized?
 
 **中文题意：**如何选择分析对象并给流排序？
+
+<!-- answer-guidance:T042:start -->
+### 组织方式与答题思路
+
+**任务类型：**方法＋优先级。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 先选择分析的应用或profile。
+2. 说明不能忽略被排除流量的服务。
+3. 按组织重要性、失败影响、性能安全与用户数排序。
+4. 用数据量大但优先级不一定高的例子说明。
+
+**现有参考答案的组织方式：**
+
+- 第1段：分析对象与选择方式。
+- 第2段：优先级因素及不同排名。
+- 第3段：校园例子、明确标准与资源取舍。
+
+**回Moodle核对：**
+
+- [Week 5 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607048) → PDF物理页 **19–22、45–49**；课件主题：Flow Prioritization。
+
+搜索词：`top applications`；`priority`；`flow analysis`。
+
+查到后确认：核对选择分析对象与决定优先级是两个任务。
+
+**换问法时：**若给两项冲突业务，用约定标准解释取舍，不仅按Mb/s排序。
+<!-- answer-guidance:T042:end -->
 
 ### 中文思路
 
@@ -231,6 +379,35 @@ Top N 不是忽略所有其他应用；带宽大不自动最重要。
 
 **中文题意：**解释三种 flowspec 及组合规则。
 
+<!-- answer-guidance:T043:start -->
+### 组织方式与答题思路
+
+**任务类型：**分类＋聚合规则。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 说明one-part只合best-effort容量。
+2. 说明two-part中predictable容量相加而delay/RMA保留最严格值。
+3. 说明multipart逐条保留guaranteed要求。
+4. 写共享链路、方向和同时发生的假设。
+
+**现有参考答案的组织方式：**
+
+- 第1段：flowspec及one/two-part。
+- 第2段：predictable的容量、delay和RMA聚合。
+- 第3段：guaranteed独立承诺与路径、时间条件。
+
+**回Moodle核对：**
+
+- [Week 5 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607048) → PDF物理页 **50–56**；课件主题：Flowspec Algorithm。
+
+搜索词：`one-part`；`two-part`；`multipart`；`flowspec`。
+
+查到后确认：核对各服务等级的聚合规则，availability不是百分比相加。
+
+**换问法时：**若给数值，先按服务等级与方向分组，再选sum/min/max，勿机械取平均。
+<!-- answer-guidance:T043:end -->
+
 ### 中文思路
 
 BE合容量；predictable合容量取最严格delay/RMA；guaranteed逐流保留。
@@ -265,6 +442,35 @@ A multipart flowspec also includes guaranteed flows. Each guaranteed flow keeps 
 **Question:** Combine best-effort flows of 2 and 3 Mb/s, predictable flows of 4 and 6 Mb/s with delays 40 and 20 ms and availability targets 99.9% and 99.99%, plus a guaranteed flow of 5 Mb/s, 10 ms and 99.999%.
 
 **中文题意：**按课件规则给multipart flowspec。
+
+<!-- answer-guidance:T044:start -->
+### 组织方式与答题思路
+
+**任务类型：**分类聚合计算。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 按BE、predictable、guaranteed分组。
+2. BE和predictable分别合容量。
+3. predictable取最严格delay/RMA。
+4. guaranteed逐条保留tuple。
+5. 仅在同向同路径同时假设下另求总payload。
+
+**现有参考答案的组织方式：**
+
+- 条件、计算步骤及必要表格。
+- 英文作答：结果与条件解释。
+
+**回Moodle核对：**
+
+- [Week 5 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607048) → PDF物理页 **51–56**；课件主题：Flow specification。
+
+搜索词：`flowspec`；`predictable`；`guaranteed`。
+
+查到后确认：核对sum/min/max各适用于哪个指标及逐flow保证。
+
+**换问法时：**方向、路径、同时性变化后重新分组，不机械相加或平均availability。
+<!-- answer-guidance:T044:end -->
 
 ### 计算步骤
 

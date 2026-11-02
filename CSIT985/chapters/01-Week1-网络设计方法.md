@@ -17,6 +17,35 @@
 
 **中文题意：**比较两种设计方法。
 
+<!-- answer-guidance:T001:start -->
+### 组织方式与答题思路
+
+**任务类型：**比较。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 先对比起点：业务需求或技术产品。
+2. 说明需求怎样引导架构与设备选择。
+3. 比较需求匹配的好处与先买设备的风险。
+4. 用校园例子说明，并保留现有设备约束与反馈。
+
+**现有参考答案的组织方式：**
+
+- 第1段：top-down的起点、顺序与目的。
+- 第2段：bottom-up的起点、便利与风险。
+- 第3段：校园反例、反馈与选择依据。
+
+**回Moodle核对：**
+
+- [Week 1 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4587655) → PDF物理页 **39–40**；课件主题：Network Design Methodology。
+
+搜索词：`top-down`；`bottom-up`；`requirements`。
+
+查到后确认：核对两种方法从哪里开始，以及技术选择与需求的关系。
+
+**换问法时：**若改问why，重点写需求先行怎样减少选错方案，不平均介绍两者。
+<!-- answer-guidance:T001:end -->
+
 ### 中文思路
 
 先业务目标还是先技术；需求匹配、既有约束与反馈。
@@ -51,6 +80,35 @@ top-down 不表示完全忽略现有设备。
 **Question:** Describe the six phases of PPDIOO and explain why network design is a life-cycle process.
 
 **中文题意：**说明六阶段及持续循环。
+
+<!-- answer-guidance:T002:start -->
+### 组织方式与答题思路
+
+**任务类型：**过程＋原因。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 完整列出Prepare→Plan→Design→Implement→Operate→Optimize。
+2. 每阶段写一个主要任务。
+3. 解释运行证据如何反馈到规划和设计。
+4. 用新应用带来容量问题说明循环。
+
+**现有参考答案的组织方式：**
+
+- 第1段：前三阶段及作用。
+- 第2段：后三阶段及作用。
+- 第3段：生命周期的原因与反馈例子。
+
+**回Moodle核对：**
+
+- [Week 1 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4587655) → PDF物理页 **45–46**；课件主题：PPDIOO。
+
+搜索词：`PPDIOO`；`Prepare`；`Optimize`。
+
+查到后确认：核对六阶段名称、次序和反馈关系。
+
+**换问法时：**若只问life cycle，把反馈与持续变化放在前面，阶段说明适当缩短。
+<!-- answer-guidance:T002:end -->
 
 ### 中文思路
 
@@ -87,6 +145,35 @@ PPDIOO有两个O：Operate和Optimize；不要漏Prepare或把Plan/Design混同�
 
 **中文题意：**说明八步方法与文档用途。
 
+<!-- answer-guidance:T003:start -->
+### 组织方式与答题思路
+
+**任务类型：**过程＋产物。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 按课件顺序列出八步。
+2. 说明需求、现网、方案、实施计划与原型的关系。
+3. 列出设计文档主要内容。
+4. 最后说明实施后的验证、监测与修改。
+
+**现有参考答案的组织方式：**
+
+- 第1段：八步完整顺序。
+- 第2段：前期分析、方案与原型的作用。
+- 第3段：文档内容与实施后验证。
+
+**回Moodle核对：**
+
+- [Week 1 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4587655) → PDF物理页 **47–55**；课件主题：Eight-step Design Methodology。
+
+搜索词：`eight`；`methodology`；`prototype`；`documentation`。
+
+查到后确认：核对八步是否齐全，以及文档章节清单。
+
+**换问法时：**若只问documentation，围绕记录什么、支持谁和怎样验证展开。
+<!-- answer-guidance:T003:end -->
+
 ### 中文思路
 
 需求→现网→拓扑方案→实施计划→原型→完整文档→实施→验证监测修改。
@@ -121,6 +208,35 @@ Documentation preserves decisions and supports future operation and improvement.
 **Question:** Explain how network analysis, architecture and design are connected.
 
 **中文题意：**解释三阶段怎样相互连接。
+
+<!-- answer-guidance:T004:start -->
+### 组织方式与答题思路
+
+**任务类型：**关系解释。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. analysis找出需求与约束。
+2. architecture据此组织功能和机制。
+3. design落实设备、服务与位置。
+4. 用同一案例串联三者，并说明不满足条件时要反馈。
+
+**现有参考答案的组织方式：**
+
+- 第1段：analysis的输入与输出。
+- 第2段：architecture与design怎样承接。
+- 第3段：在线教学案例与反馈关系。
+
+**回Moodle核对：**
+
+- [Week 1 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4587655) → PDF物理页 **57–64**；课件主题：Information flows。
+
+搜索词：`analysis`；`architecture`；`design`；`information`。
+
+查到后确认：核对三阶段之间传递的信息，不只查三个定义。
+
+**换问法时：**若问why connected，要写后一步依赖前一步、验证失败需要回看前面。
+<!-- answer-guidance:T004:end -->
 
 ### 中文思路
 

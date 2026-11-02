@@ -6,13 +6,14 @@
 
 **131题：99道简答、23道计算、1道校园Flow图题、8组完整长答。**
 
+- [怎样参考Moodle组织答案](CSIT985/answer-method.md)：六步流程、题型模板、例子与限时练法。
 - [开始复习：课程入口](CSIT985/README.md)
 - [按课件顺序浏览全部题目](CSIT985/contents.md)
 - [纯题目自测](CSIT985/self-test.md)
 - [Moodle资料定位](CSIT985/sources.md)
 - [新旧题号对照](CSIT985/question-map.md)
 
-**[打开在线题库](https://cp0330.github.io/Lecture--Review/)**：直接在浏览器中使用，支持搜索、课件/题型筛选和隐藏答案自测。
+**[打开在线题库](https://cp0330.github.io/Lecture--Review/)**：直接在浏览器中使用，支持搜索、课件/题型筛选、逐题答题思路、Moodle查阅提示和隐藏答案自测。
 
 GitHub中可阅读Markdown分册。需要离线使用时，可下载[HTML阅读版](CSIT985/review-bank.html)，或通过仓库的 **Code → Download ZIP** 下载整套资料。
 

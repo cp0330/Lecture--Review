@@ -17,6 +17,37 @@
 
 **中文题意：**解释组件架构的内部相互作用。
 
+<!-- answer-guidance:T045:start -->
+### 组织方式与答题思路
+
+**任务类型：**关系解释＋分类。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 定义同一component内部的mechanism关系。
+2. 逐项解释trade-off、dependency、constraint。
+3. 每项给同一组件内部例子。
+4. 最后区分跨组件的external关系。
+
+**现有参考答案的组织方式：**
+
+- 第1段：内部关系定义与三类清单。
+- 第2段：trade-off及管理例子。
+- 第3段：dependency及SLA/QoS例子。
+- 第4段：constraint及路由例子。
+- 第5段：判断内部/外部的范围边界。
+
+**回Moodle核对：**
+
+- [Week 6 - Lecture Slides (a)](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4615522) → PDF物理页 **14–20**；课件主题：Component Architectures。
+
+搜索词：`internal interactions`；`trade-offs`；`dependencies`；`constraints`。
+
+查到后确认：核对三类关系及例子属于同一component还是跨component。
+
+**换问法时：**若换例子，先说关系两端属于哪个组件，再解释是取舍、依赖还是限制。
+<!-- answer-guidance:T045:end -->
+
 ### 中文思路
 
 组件架构包含功能、机制和内部关系。内部相互作用描述同一组件内的机制怎样彼此影响，包括取舍、依赖和限制。
@@ -64,6 +95,35 @@ The answer should identify the component and explain the relationship. Effects b
 
 **中文题意：**区分组件内部与组件之间的关系。
 
+<!-- answer-guidance:T046:start -->
+### 组织方式与答题思路
+
+**任务类型：**区分＋例子。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 按是否属于同一component区分internal/external。
+2. 各给明确机制例子。
+3. 说明不是按建筑物位置分类。
+4. 解释reference architecture需要平衡整体需求。
+
+**现有参考答案的组织方式：**
+
+- 第1段：internal关系及performance例子。
+- 第2段：external关系的跨组件例子。
+- 第3段：分类依据、整体平衡与delay例子。
+
+**回Moodle核对：**
+
+- [Week 6 - Lecture Slides (a)](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4615522) → PDF物理页 **14–36**；课件主题：Component Architectures。
+
+搜索词：`internal`；`external`；`component`。
+
+查到后确认：看组件之间连线及每个机制所属功能。
+
+**换问法时：**若给security影响delay，明确是security与performance之间的external关系。
+<!-- answer-guidance:T046:end -->
+
 ### 中文思路
 
 同一功能内部 vs 不同功能之间；trade-off/dependency/constraint。
@@ -99,6 +159,35 @@ internal/external 不等于机构内网/公网。
 
 **中文题意：**如何把组件架构和模型合成参考架构？
 
+<!-- answer-guidance:T047:start -->
+### 组织方式与答题思路
+
+**任务类型：**组合过程。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 先定义reference architecture是完整架构视图。
+2. 用topological作结构基础。
+3. 叠加flow-based与functional视角。
+4. 组合组件及内部外部关系，并按需求平衡。
+
+**现有参考答案的组织方式：**
+
+- 第1段：reference architecture定义。
+- 第2段：三组模型组合顺序。
+- 第3段：校园组合例子及组件平衡。
+
+**回Moodle核对：**
+
+- [Week 6 - Lecture Slides (a)](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4615522) → PDF物理页 **29–47**；课件主题：Reference Architectures。
+
+搜索词：`reference architecture`；`topological`；`flow-based`；`functional`。
+
+查到后确认：核对模型如何叠加，而非只找拓扑图。
+
+**换问法时：**若问how combined，要写每种视角补充了什么信息及如何检验相互作用。
+<!-- answer-guidance:T047:end -->
+
 ### 中文思路
 
 完整功能/内部外部关系；topological打底，再叠加flow/functional。
@@ -133,6 +222,37 @@ These models are complementary views. For example, a campus can use an access/di
 **Question:** Briefly describe all architectural model as discussed in the lectures.
 
 **中文题意：**简要描述课堂讨论过的所有架构模型。
+
+<!-- answer-guidance:T048:start -->
+### 组织方式与答题思路
+
+**任务类型：**完整列举。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 先说三组模型。
+2. topological列两类。
+3. flow-based列四类。
+4. functional列三类。
+5. 每个模型简述用途，再说明可组合。
+
+**现有参考答案的组织方式：**
+
+- 第1段：topological两类及用途。
+- 第2段：flow-based四类及用途。
+- 第3段：functional三类及用途。
+- 第4段：互补与组合关系。
+
+**回Moodle核对：**
+
+- [Week 6 - Lecture Slides (a)](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4615522) → PDF物理页 **39–47**；课件主题：Architectural Models。
+
+搜索词：`architectural models`；`topological`；`functional`。
+
+查到后确认：逐项核对2＋4＋3个模型，不只记三组标题。
+
+**换问法时：**题干有all时必须完整；不要用OSI、TCP/IP、SDN替代本课这组清单。
+<!-- answer-guidance:T048:end -->
 
 ### 中文思路
 

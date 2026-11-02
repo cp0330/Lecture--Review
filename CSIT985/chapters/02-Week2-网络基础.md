@@ -17,6 +17,35 @@
 
 **中文题意：**说明终端、中间设备和介质的作用。
 
+<!-- answer-guidance:T005:start -->
+### 组织方式与答题思路
+
+**任务类型：**列举＋功能。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 先列end devices、intermediate devices、media。
+2. 分别写产生/接收、转发/连接、传信号的作用。
+3. 给switch、router、AP等对应例子。
+4. 说明端到端服务仍可能受某一环节限制。
+
+**现有参考答案的组织方式：**
+
+- 第1段：端设备定义与例子。
+- 第2段：中间设备及各自作用。
+- 第3段：介质、协议地址与瓶颈例子。
+
+**回Moodle核对：**
+
+- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → PDF物理页 **5–19**；课件主题：Network elements。
+
+搜索词：`end devices`；`intermediate`；`media`。
+
+查到后确认：核对三类要素和switch/router/AP各自处理的对象。
+
+**换问法时：**若问某设备，只展开其功能与相邻概念，不罗列整章设备。
+<!-- answer-guidance:T005:end -->
+
 ### 中文思路
 
 host 起止；switch 局域网转发；router 跨网络；AP无线接入；介质传信号。
@@ -51,6 +80,35 @@ The media carry signals and may include copper cables, optical fibre or wireless
 **Question:** Explain LAN, WAN, WLAN, CAN, MAN, SAN and VPN.
 
 **中文题意：**解释常见网络类别，并区分分类维度。
+
+<!-- answer-guidance:T006:start -->
+### 组织方式与答题思路
+
+**任务类型：**分类解释。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 按范围解释LAN、CAN、MAN、WAN。
+2. 解释WLAN的无线接入属性。
+3. 解释SAN的存储目的和VPN的逻辑私有连接。
+4. 指出分类维度不同，同一网络可同时属于多类。
+
+**现有参考答案的组织方式：**
+
+- 第1段：地理范围类别，附PAN背景。
+- 第2段：WLAN、SAN与VPN。
+- 第3段：分类维度及校园组合例子。
+
+**回Moodle核对：**
+
+- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → PDF物理页 **9–19**；课件主题：Network categories。
+
+搜索词：`LAN`；`WAN`；`WLAN`；`SAN`；`VPN`。
+
+查到后确认：核对缩写全称及按范围、技术、用途、逻辑访问分类的区别。
+
+**换问法时：**按实际题干列齐要求的类别；题未要求PAN时可不展开。
+<!-- answer-guidance:T006:end -->
 
 ### 中文思路
 
@@ -87,6 +145,35 @@ CAN 在这里是 Campus Area Network；不要混用地理范围与用途。
 
 **中文题意：**比较六种组织模式。
 
+<!-- answer-guidance:T007:start -->
+### 组织方式与答题思路
+
+**任务类型：**多项比较。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 完整识别六种组织模式。
+2. 按控制/处理位置和资源角色比较。
+3. 补管理、依赖、故障与成本的取舍。
+4. 说明模式可以组合，用需求选型。
+
+**现有参考答案的组织方式：**
+
+- 第1段：集中式、client-server及集中服务取舍。
+- 第2段：distributed、peer-to-peer及协调问题。
+- 第3段：cloud、hybrid、选型条件与重叠关系。
+
+**回Moodle核对：**
+
+- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → PDF物理页 **21–26**；课件主题：Network Architecture。
+
+搜索词：`centralized`；`client-server`；`distributed`；`hybrid`。
+
+查到后确认：核对六类名称，并找每类控制和服务放在哪里。
+
+**换问法时：**若给具体场景，用同一组维度比较候选，不只背六个定义。
+<!-- answer-guidance:T007:end -->
+
 ### 中文思路
 
 角色、资源位置、管理及故障依赖。
@@ -121,6 +208,35 @@ A cloud-based network uses resources hosted on remote cloud servers and depends 
 **Question:** Compare mesh, tree, bus, star and ring topologies.
 
 **中文题意：**比较五种拓扑及成本、故障影响。
+
+<!-- answer-guidance:T008:start -->
+### 组织方式与答题思路
+
+**任务类型：**多项比较。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 先说明五种连接结构。
+2. 逐类解释链路/中心设备故障影响。
+3. 比较冗余、成本与扩展性。
+4. 补physical与logical的区别和保护条件。
+
+**现有参考答案的组织方式：**
+
+- 第1段：star的结构与故障。
+- 第2段：mesh、tree、bus、ring及取舍。
+- 第3段：物理/逻辑拓扑与选型依据。
+
+**回Moodle核对：**
+
+- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → PDF物理页 **28–34**；课件主题：Network Topology。
+
+搜索词：`mesh`；`tree`；`bus`；`star`；`ring`。
+
+查到后确认：看拓扑图确认连接关系及故障传播范围。
+
+**换问法时：**若题目给故障，沿实际连接判断受影响范围，不直接套拓扑名称。
+<!-- answer-guidance:T008:end -->
 
 ### 中文思路
 
@@ -157,6 +273,35 @@ Physical topology describes actual connections. Logical topology describes commu
 
 **中文题意：**什么是协议，为什么必须遵循共同规则？
 
+<!-- answer-guidance:T009:start -->
+### 组织方式与答题思路
+
+**任务类型：**定义＋原因。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 定义protocol是通信规则。
+2. 说明格式、含义、顺序和事件动作。
+3. 解释双方一致才能识别、响应与处理消息。
+4. 用超时或共享介质说明规则的作用。
+
+**现有参考答案的组织方式：**
+
+- 第1段：protocol的正式定义。
+- 第2段：共同规则、时间规则与例子。
+- 第3段：实现方式、分工与没有规则的后果。
+
+**回Moodle核对：**
+
+- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → PDF物理页 **36–46**；课件主题：Network Protocol。
+
+搜索词：`protocol`；`timing`；`encapsulation`。
+
+查到后确认：核对协议规定哪些规则，尤其timing和message format。
+
+**换问法时：**若只问why，先写无法正确理解或处理消息的后果，再用规则支持。
+<!-- answer-guidance:T009:end -->
+
 ### 中文思路
 
 格式、含义、顺序、时序、发送接收动作。
@@ -191,6 +336,35 @@ protocol 不只是设备之间的一根线或一种语言名称。
 **Question:** Describe the OSI and TCP/IP models and explain encapsulation.
 
 **中文题意：**描述分层模型与封装过程。
+
+<!-- answer-guidance:T010:start -->
+### 组织方式与答题思路
+
+**任务类型：**列举＋过程。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 按顺序列OSI七层与本课TCP/IP四层。
+2. 说明上层和network access的对应。
+3. 沿发送方向说明封装。
+4. 沿接收方向说明解封装及分层用途。
+
+**现有参考答案的组织方式：**
+
+- 第1段：OSI七层和服务关系。
+- 第2段：TCP/IP四层及与OSI的对应。
+- 第3段：封装、接收端处理及分层边界。
+
+**回Moodle核对：**
+
+- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → PDF物理页 **47–57、85–89**；课件主题：Network Protocol Models。
+
+搜索词：`OSI`；`TCP/IP`；`encapsulation`。
+
+查到后确认：核对本课四层模型，不混用其他教材的五层模型。
+
+**换问法时：**若重点是encapsulation，缩短层名清单，突出各层增加和移除什么信息。
+<!-- answer-guidance:T010:end -->
 
 ### 中文思路
 
@@ -227,6 +401,35 @@ During encapsulation, application data passes down the stack. Transport and Inte
 
 **中文题意：**解释应用层协议与进程定位。
 
+<!-- answer-guidance:T011:start -->
+### 组织方式与答题思路
+
+**任务类型：**关系解释。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 说明应用协议规定消息交互。
+2. 区分IP地址、port和socket的定位作用。
+3. 解释multiplexing与demultiplexing。
+4. 用浏览器和HTTP说明应用不是协议。
+
+**现有参考答案的组织方式：**
+
+- 第1段：应用协议与常见例子。
+- 第2段：IP、port、socket的作用。
+- 第3段：复用/分用和应用与协议的区别。
+
+**回Moodle核对：**
+
+- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → PDF物理页 **58–60、66–67**；课件主题：Application Layer。
+
+搜索词：`port`；`socket`；`multiplexing`；`HTTP`。
+
+查到后确认：核对进程端点定位方式和应用协议示例。
+
+**换问法时：**若只问ports/sockets，围绕同一主机多应用的数据交付展开。
+<!-- answer-guidance:T011:end -->
+
 ### 中文思路
 
 应用协议规定业务消息；IP到host；port到应用端点；socket 接口。
@@ -261,6 +464,35 @@ DNS 不等于 DHCP；应用与应用层协议不同。
 **Question:** Compare TCP and UDP and explain when each may be useful.
 
 **中文题意：**比较传输层两种协议。
+
+<!-- answer-guidance:T012:start -->
+### 组织方式与答题思路
+
+**任务类型：**比较＋场景。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 按连接、可靠性、顺序、控制机制对照TCP与UDP。
+2. 说明机制产生的开销和服务差别。
+3. 各给合适应用。
+4. 补UDP不自动低延迟、应用可自行实现机制。
+
+**现有参考答案的组织方式：**
+
+- 第1段：TCP服务与可靠传输机制。
+- 第2段：UDP服务边界及应用责任。
+- 第3段：应用选择与延迟、丢失和开销条件。
+
+**回Moodle核对：**
+
+- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → PDF物理页 **61–68**；课件主题：Transport Layer。
+
+搜索词：`TCP`；`UDP`；`retransmission`；`congestion`。
+
+查到后确认：核对两者内建保证及flow/congestion control的区别。
+
+**换问法时：**若要求推荐协议，先说明应用更看重完整有序还是及时性，再解释取舍。
+<!-- answer-guidance:T012:end -->
 
 ### 中文思路
 
@@ -297,6 +529,35 @@ TCP is useful when complete and ordered delivery matters, such as transferring a
 
 **中文题意：**区分转发与路由，以及链路层和网络层。
 
+<!-- answer-guidance:T013:start -->
+### 组织方式与答题思路
+
+**任务类型：**区分＋路径解释。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. routing学习可达性并选路径。
+2. forwarding按已有信息进行本地转发。
+3. 区分IP跨网络与MAC逐链路交付。
+4. 沿下一跳说明frame重建与IP目的地址通常保持。
+
+**现有参考答案的组织方式：**
+
+- 第1段：routing与forwarding的分工。
+- 第2段：IP、MAC和物理层的交付范围。
+- 第3段：路由器逐跳换frame及NAT例外。
+
+**回Moodle核对：**
+
+- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → PDF物理页 **69–89**；课件主题：Network Layer。
+
+搜索词：`forwarding`；`routing`；`MAC`；`frame`。
+
+查到后确认：看逐跳图确认地址和封装在哪一层变化。
+
+**换问法时：**若给报文路径，逐跳说下一跳及frame地址，不把最终IP目的写成网关。
+<!-- answer-guidance:T013:end -->
+
 ### 中文思路
 
 routing算路径/学习可达；forwarding查表送下一跳；MAC逐链路、IP跨网络。
@@ -331,6 +592,35 @@ When a router forwards a packet onto another link, it usually creates a new link
 **Question:** Describe the four main components of a router and their roles.
 
 **中文题意：**解释路由器内部四个主要组成。
+
+<!-- answer-guidance:T014:start -->
+### 组织方式与答题思路
+
+**任务类型：**列举＋功能。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 列input ports、switching fabric、output ports、routing processor。
+2. 沿包的接收、内部交换、排队、发送说明前三项。
+3. 解释routing processor的control-plane工作。
+4. 区分决策与执行，补性能限制。
+
+**现有参考答案的组织方式：**
+
+- 第1段：四部件总览与input ports。
+- 第2段：switching fabric、output ports和排队。
+- 第3段：routing processor、SDN对照及资源限制。
+
+**回Moodle核对：**
+
+- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → PDF物理页 **71–76**；课件主题：Network Layer - Router。
+
+搜索词：`input ports`；`switching fabric`；`routing processor`。
+
+查到后确认：看路由器结构图核对四部件及control/data plane关系。
+
+**换问法时：**若问性能瓶颈，把限制具体落到端口、交换结构、排队或处理资源。
+<!-- answer-guidance:T014:end -->
 
 ### 中文思路
 
@@ -367,6 +657,35 @@ switching fabric是路由器内部连接结构，不是独立外置交换机的�
 
 **中文题意：**解释三种独立分类维度。
 
+<!-- answer-guidance:T015:start -->
+### 组织方式与答题思路
+
+**任务类型：**按维度比较。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 明确这是三条独立分类轴。
+2. 比较centralized与decentralized的信息来源。
+3. 比较static与dynamic的变化方式。
+4. 比较load-sensitive与load-insensitive的成本输入，并说明类别可交叉。
+
+**现有参考答案的组织方式：**
+
+- 第1段：全局/分布信息及link-state、distance-vector。
+- 第2段：静态与动态变化。
+- 第3段：负载敏感性与分类不能混同。
+
+**回Moodle核对：**
+
+- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → PDF物理页 **77–83**；课件主题：Routing algorithm。
+
+搜索词：`centralized`；`decentralized`；`load-sensitive`。
+
+查到后确认：核对每组分类所比较的属性，而非把所有左项当成一类。
+
+**换问法时：**若给算法例子，对三条轴分别判断并写理由。
+<!-- answer-guidance:T015:end -->
+
 ### 中文思路
 
 全局知识/邻居迭代；变化方式；cost是否反映当前拥塞；别把LS同物理单中心。
@@ -401,6 +720,35 @@ centralized knowledge不表示一定只有一台中心机器；dynamic不等于l
 **Question:** Describe link-layer and physical-layer services and distinguish them from an end-to-end network service model.
 
 **中文题意：**区分逐链路、物理传输与端到端服务承诺。
+
+<!-- answer-guidance:T016:start -->
+### 组织方式与答题思路
+
+**任务类型：**功能＋范围区分。以下为教学建议。
+
+**建议答题路线（按实际题干调整）：**
+
+1. 说明data-link逐链路frame服务。
+2. 说明physical传送bits和信号。
+3. 说明end-to-end service model承诺哪些交付特征。
+4. 强调单链路可靠不等于全路径保证。
+
+**现有参考答案的组织方式：**
+
+- 第1段：data-link功能与接口。
+- 第2段：physical层介质和信号。
+- 第3段：端到端服务与逐链路保证的区别。
+
+**回Moodle核对：**
+
+- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → PDF物理页 **86–89**；课件主题：Network service model。
+
+搜索词：`link layer`；`physical`；`service model`。
+
+查到后确认：核对每层服务范围和best-effort不承诺的内容。
+
+**换问法时：**若问可靠性，明确是local link还是end-to-end，并写端点和其他链路条件。
+<!-- answer-guidance:T016:end -->
 
 ### 中文思路
 
