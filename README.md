@@ -6,6 +6,7 @@
 
 **131题：99道简答、23道计算、1道校园Flow图题、8组完整长答。**
 
+- [三色参考答案记忆法](CSIT985/answer-colors.md)：蓝色知识、紫色表达、橙色自行组织。
 - [怎样参考Moodle组织答案](CSIT985/answer-method.md)：六步流程、题型模板、例子与限时练法。
 - [开始复习：课程入口](CSIT985/README.md)
 - [按课件顺序浏览全部题目](CSIT985/contents.md)
