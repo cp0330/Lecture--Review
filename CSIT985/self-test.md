@@ -1,1052 +1,869 @@
-# 按当前题序自测
+# 遮答案自测
 
-与阅读版顺序完全一致。答案按同一T题号查各周分册。
+> 2026-11-04更新：当前144题（111短答、24计算、1绘图、8长答）。T编号稳定，显示顺序按课件位置。
 
-## T001 Top-down 与 bottom-up
+按题干要求手动组织；答案与解析见对应题目。
+
+## T001 · Top-down 与 bottom-up
 
 Compare top-down and bottom-up approaches to network design.
 
-中文：比较两种设计方法。
+[回看解析](review-bank.html#T001)
 
-我的答案：
+## T132 · Access、distribution、core 的职责
 
-## T002 PPDIOO 生命周期
+Explain the roles of the access, distribution and core layers in a hierarchical network. How does this structure help design?
+
+[回看解析](review-bank.html#T132)
+
+## T002 · PPDIOO 生命周期
 
 Describe the six phases of PPDIOO and explain why network design is a life-cycle process.
 
-中文：说明六阶段及持续循环。
+[回看解析](review-bank.html#T002)
 
-我的答案：
-
-## T003 Eight-step design methodology
+## T003 · Eight-step design methodology
 
 Describe the eight-step network design methodology and its documentation.
 
-中文：说明八步方法与文档用途。
+[回看解析](review-bank.html#T003)
 
-我的答案：
-
-## T004 分析、架构、设计的联系
+## T004 · 分析、架构、设计的联系
 
 Explain how network analysis, architecture and design are connected.
 
-中文：解释三阶段怎样相互连接。
+[回看解析](review-bank.html#T004)
 
-我的答案：
+## T133 · System view 与可辩护的设计
 
-## T005 网络要素与设备
+Why should network analysis use a system view and maintain an audit trail? Explain technical, budgetary, schedule and resource defensibility.
+
+[回看解析](review-bank.html#T133)
+
+## T005 · 网络要素与设备
 
 Describe the main elements of a computer network and their roles.
 
-中文：说明终端、中间设备和介质的作用。
+[回看解析](review-bank.html#T005)
 
-我的答案：
-
-## T006 网络类别
+## T006 · 网络类别
 
 Explain LAN, WAN, WLAN, CAN, MAN, SAN and VPN.
 
-中文：解释常见网络类别，并区分分类维度。
+[回看解析](review-bank.html#T006)
 
-我的答案：
+## T134 · 传输介质与无线范围
 
-## T007 网络组织模式
+Compare copper, optical fibre and wireless media. What should a designer check when selecting a medium and describing wireless coverage?
+
+[回看解析](review-bank.html#T134)
+
+## T007 · 网络组织模式
 
 Compare centralized, client-server, distributed, peer-to-peer, cloud-based and hybrid networks.
 
-中文：比较六种组织模式。
+[回看解析](review-bank.html#T007)
 
-我的答案：
-
-## T008 拓扑与故障
+## T008 · 拓扑与故障
 
 Compare mesh, tree, bus, star and ring topologies.
 
-中文：比较五种拓扑及成本、故障影响。
+[回看解析](review-bank.html#T008)
 
-我的答案：
-
-## T009 Protocol 的规则
+## T009 · Protocol 的规则
 
 What is a network protocol, and why must communicating devices follow common rules?
 
-中文：什么是协议，为什么必须遵循共同规则？
+[回看解析](review-bank.html#T009)
 
-我的答案：
-
-## T010 OSI、TCP/IP 与封装
+## T010 · OSI、TCP/IP 与封装
 
 Describe the OSI and TCP/IP models and explain encapsulation.
 
-中文：描述分层模型与封装过程。
+[回看解析](review-bank.html#T010)
 
-我的答案：
-
-## T011 应用协议、端口与 socket
+## T011 · 应用协议、端口与 socket
 
 Explain the roles of application protocols, ports and sockets.
 
-中文：解释应用层协议与进程定位。
+[回看解析](review-bank.html#T011)
 
-我的答案：
+## T135 · PDU、process 与 socket 的完整路径
 
-## T012 TCP 与 UDP
+Trace a message from an application process through encapsulation to the medium. Name the PDUs and explain the role of a socket.
+
+[回看解析](review-bank.html#T135)
+
+## T012 · TCP 与 UDP
 
 Compare TCP and UDP and explain when each may be useful.
 
-中文：比较传输层两种协议。
+[回看解析](review-bank.html#T012)
 
-我的答案：
-
-## T013 Forwarding、routing 与各层地址
+## T013 · Forwarding、routing 与各层地址
 
 Distinguish forwarding from routing and explain link-layer and network-layer delivery.
 
-中文：区分转发与路由，以及链路层和网络层。
+[回看解析](review-bank.html#T013)
 
-我的答案：
-
-## T014 Router 四部件
+## T014 · Router 四部件
 
 Describe the four main components of a router and their roles.
 
-中文：解释路由器内部四个主要组成。
+[回看解析](review-bank.html#T014)
 
-我的答案：
-
-## T015 Routing algorithm 三组分类
+## T015 · Routing algorithm 三组分类
 
 Compare centralized/decentralized, static/dynamic and load-sensitive/load-insensitive routing algorithms.
 
-中文：解释三种独立分类维度。
+[回看解析](review-bank.html#T015)
 
-我的答案：
-
-## T016 Link、physical 与 service model
+## T016 · Link、physical 与 service model
 
 Describe link-layer and physical-layer services and distinguish them from an end-to-end network service model.
 
-中文：区分逐链路、物理传输与端到端服务承诺。
+[回看解析](review-bank.html#T016)
 
-我的答案：
-
-## T017 Strategic planning 与 Crouch
+## T017 · Strategic planning 与 Crouch
 
 Explain the purpose of a strategic network plan using the Crouch questions.
 
-中文：用 Crouch 的问题说明战略规划。
+[回看解析](review-bank.html#T017)
 
-我的答案：
-
-## T018 规划建议与陷阱
+## T018 · 规划建议与陷阱
 
 Describe good strategic planning practices and common pitfalls.
 
-中文：说明有效规划方法及常见陷阱。
+[回看解析](review-bank.html#T018)
 
-我的答案：
-
-## T019 四种变革策略
+## T019 · 四种变革策略
 
 Describe the four change strategies and the factors used to select them.
 
-中文：解释四种变革策略与选择因素。
+[回看解析](review-bank.html#T019)
 
-我的答案：
-
-## T020 规划团队与利益相关者
+## T020 · 规划团队与利益相关者
 
 Who should be involved in strategic planning, and why?
 
-中文：谁应参与规划，为什么？
+[回看解析](review-bank.html#T020)
 
-我的答案：
-
-## T021 Core、feature、future、rejected、informational
+## T021 · Core、feature、future、rejected、informational
 
 Explain the five requirement categories used during analysis.
 
-中文：解释需求分析中的五类归属。
+[回看解析](review-bank.html#T021)
 
-我的答案：
-
-## T022 MUST、SHOULD、MAY 与禁止性要求
+## T022 · MUST、SHOULD、MAY 与禁止性要求
 
 Explain MUST, MUST NOT, SHOULD, SHOULD NOT and MAY. How does the course relate these words to requirement categories?
 
-中文：解释要求强度，并区别RFC词义与课件分类提示。
+[回看解析](review-bank.html#T022)
 
-我的答案：
-
-## T023 分类、Type、Status 与 Priority 的案例
+## T023 · 分类、Type、Status 与 Priority 的案例
 
 Classify a mandatory access-control requirement, an optional dashboard, a next-year campus expansion, an unsupported request and a user-count statement. Distinguish type, status and priority.
 
-中文：给五项陈述分类，再解释规格表三个字段。
+[回看解析](review-bank.html#T023)
 
-我的答案：
-
-## T024 三种服务等级
+## T024 · 三种服务等级
 
 Compare best-effort, predictable and guaranteed network services.
 
-中文：比较 best-effort、predictable、guaranteed。
+[回看解析](review-bank.html#T024)
 
-我的答案：
+## T136 · Service hierarchy 与端到端瓶颈
 
-## T025 四类需求
+Explain service hierarchy and why service requirements should be configurable, measurable and verifiable across an end-to-end path.
+
+[回看解析](review-bank.html#T136)
+
+## T025 · 四类需求
 
 Describe user, application, device and network requirements.
 
-中文：描述四类需求并说明联系。
+[回看解析](review-bank.html#T025)
 
-我的答案：
-
-## T026 应用分类与需求
+## T026 · 应用分类与需求
 
 Distinguish mission-critical, rate-critical, real-time and interactive applications.
 
-中文：区分应用类型及主导性能需求。
+[回看解析](review-bank.html#T026)
 
-我的答案：
-
-## T027 需求分析五步
+## T027 · 需求分析五步
 
 Describe the requirements analysis process and its outputs.
 
-中文：说明需求分析步骤与产物。
+[回看解析](review-bank.html#T027)
 
-我的答案：
-
-## T028 初始条件、约束与红旗
+## T028 · 初始条件、约束与红旗
 
 What initial conditions and warning signs should a designer examine when gathering requirements?
 
-中文：收集需求时应检查哪些条件和警讯？
+[回看解析](review-bank.html#T028)
 
-我的答案：
-
-## T029 规格、测量与跟踪
+## T029 · 规格、测量与跟踪
 
 How should requirements be measured, recorded and kept up to date?
 
-中文：如何测量、记录、维护需求？
+[回看解析](review-bank.html#T029)
 
-我的答案：
-
-## T030 Capacity、throughput、delay 与 jitter
+## T030 · Capacity、throughput、delay 与 jitter
 
 Distinguish capacity, throughput, delay, jitter and task completion time.
 
-中文：区分五项性能概念。
+[回看解析](review-bank.html#T030)
 
-我的答案：
+## T137 · Peak、sustained、minimum 与 burst
 
-## T031 应用事务的频率与持续时间
+Distinguish peak, sustained and minimum rates, burst size and burst duration. Why is an average rate alone insufficient for planning?
+
+[回看解析](review-bank.html#T137)
+
+## T031 · 应用事务的频率与持续时间
 
 Why is it important to consider frequency and time duration for application transactions when characterizing application behavior?
 
-中文：描述应用行为特征时，为什么考虑应用事务的发生频率和持续时间很重要？
+[回看解析](review-bank.html#T031)
 
-我的答案：
-
-## T032 RMA 指标与边界
+## T032 · RMA 指标与边界
 
 Explain reliability, maintainability and availability and their relationship.
 
-中文：解释 RMA 及其关系。
+[回看解析](review-bank.html#T032)
 
-我的答案：
+## T139 · 串联系统故障率与平均首次故障时间
 
-## T033 Availability
+Two critical components are in series: either component’s first failure stops the service. Assume independent, constant failure rates and component mean times to failure (MTTFs) of 1,000 h and 2,000 h. Estimate the system failure rate and mean time to its first failure.
+
+[回看解析](review-bank.html#T139)
+
+## T033 · Availability
 
 A service has MTBF of 990 hours and MTTR of 10 hours. Find availability and two ways to improve it.
 
-中文：计算可用性并提出两类改进。
+[回看解析](review-bank.html#T033)
 
-我的答案：
-
-## T034 可用性到停机预算
+## T034 · 可用性到停机预算
 
 If measured availability is 99.9% over a 30-day period, how much downtime is allowed?
 
-中文：30天、99.9%的停机预算。
+[回看解析](review-bank.html#T034)
 
-我的答案：
-
-## T035 One-way delay 与 RTT 的计算和条件
+## T035 · One-way delay 与 RTT 的计算和条件
 
 A forward path has 12 ms propagation, 8 ms transmission, 5 ms processing and 15 ms queuing delay. The complete return path takes 30 ms. Endpoint turnaround is 10 ms. Find forward one-way delay and RTT. Can an RTT limit of 100 ms alone guarantee at most 50 ms in each direction?
 
-中文：使用互不重复的已给延迟项求单程和往返；检查“除二”假设。
+[回看解析](review-bank.html#T035)
 
-我的答案：
+## T138 · INTD、HRT 与传播时延的边界
 
-## T036 数据速率、并发与单位
+Explain INTD, HRT and distance-related propagation delay in the lecture. How should the lecture’s example thresholds be used?
+
+[回看解析](review-bank.html#T138)
+
+## T036 · 数据速率、并发与单位
 
 A 60 MB file must transfer in 20 seconds. Estimate the payload rate and the total for five simultaneous transfers.
 
-中文：数据量/时间与并发计算，MB采用十进制。
+[回看解析](review-bank.html#T036)
 
-我的答案：
-
-## T037 补充性能需求
+## T037 · 补充性能需求
 
 Explain operational suitability, supportability and confidence.
 
-中文：解释三项补充性能需求。
+[回看解析](review-bank.html#T037)
 
-我的答案：
-
-## T038 Flow 的定义与建立
+## T038 · Flow 的定义与建立
 
 What is a traffic flow, and how is it developed from requirements?
 
-中文：定义 flow 并说明建立步骤。
+[回看解析](review-bank.html#T038)
 
-我的答案：
-
-## T039 校园四类Flow：逐类图与合并图
+## T039 · 校园四类Flow：逐类图与合并图
 
 Using Workshop Week7a Exercise 1, identify sources and sinks for all four flow types, draw each type, and combine them into one logical flow map. State assumptions where endpoints are not uniquely specified.
 
-中文：按原图完成四类source/sink、各类型flow map与合并图；题目没唯一指定的端点要写假设。
+[回看解析](review-bank.html#T039)
 
-我的答案：
-
-## T040 Workshop Flow 的方向与时延
+## T040 · Workshop Flow 的方向与时延
 
 Label the directions and requirements of the four flows in Workshop Week7a Exercise 2.
 
-中文：按原练习区分上下行、单向/双向与one-way/RTT。
+[回看解析](review-bank.html#T040)
 
-我的答案：
-
-## T041 四种 Flow model
+## T041 · 四种 Flow model
 
 Describe peer-to-peer, client-server, hierarchical client-server and distributed-computing flow models.
 
-中文：解释四种流量模型。
+[回看解析](review-bank.html#T041)
 
-我的答案：
-
-## T042 选择应用与 Flow 优先级
+## T042 · 选择应用与 Flow 优先级
 
 How should flows be selected for analysis and prioritized?
 
-中文：如何选择分析对象并给流排序？
+[回看解析](review-bank.html#T042)
 
-我的答案：
-
-## T043 Flowspec 与聚合规则
+## T043 · Flowspec 与聚合规则
 
 Explain one-part, two-part and multipart flow specifications.
 
-中文：解释三种 flowspec 及组合规则。
+[回看解析](review-bank.html#T043)
 
-我的答案：
-
-## T044 Flowspec 数值组合
+## T044 · Flowspec 数值组合
 
 Combine best-effort flows of 2 and 3 Mb/s, predictable flows of 4 and 6 Mb/s with delays 40 and 20 ms and availability targets 99.9% and 99.99%, plus a guaranteed flow of 5 Mb/s, 10 ms and 99.999%.
 
-中文：按课件规则给multipart flowspec。
+[回看解析](review-bank.html#T044)
 
-我的答案：
-
-## T045 组件架构内部的相互作用
+## T045 · 组件架构内部的相互作用
 
 Explain internal interactions of a component architecture.
 
-中文：解释组件架构的内部相互作用。
+[回看解析](review-bank.html#T045)
 
-我的答案：
-
-## T046 内部关系与外部关系
+## T046 · 内部关系与外部关系
 
 Distinguish internal and external relationships in network architecture.
 
-中文：区分组件内部与组件之间的关系。
+[回看解析](review-bank.html#T046)
 
-我的答案：
-
-## T047 Reference architecture 的形成
+## T047 · Reference architecture 的形成
 
 How are component architectures and architectural models combined into a reference architecture?
 
-中文：如何把组件架构和模型合成参考架构？
+[回看解析](review-bank.html#T047)
 
-我的答案：
-
-## T048 课堂讨论的全部架构模型
+## T048 · 课堂讨论的全部架构模型
 
 Briefly describe all architectural model as discussed in the lectures.
 
-中文：简要描述课堂讨论过的所有架构模型。
+[回看解析](review-bank.html#T048)
 
-我的答案：
-
-## T049 CIA 与 privacy
+## T049 · CIA 与 privacy
 
 Explain confidentiality, integrity, availability and privacy in strategic network design.
 
-中文：解释安全目标与隐私。
+[回看解析](review-bank.html#T049)
 
-我的答案：
-
-## T050 Threat analysis 与风险排序
+## T050 · Threat analysis 与风险排序
 
 Why is threat analysis important, and what should it consider?
 
-中文：为什么做威胁分析，应考虑什么？
+[回看解析](review-bank.html#T050)
 
-我的答案：
-
-## T051 填写 Threat analysis worksheet
+## T051 · 填写 Threat analysis worksheet
 
 Complete a threat-analysis worksheet for student records, online teaching and stored research data. Explain how the results guide priorities.
 
-中文：对三个资产给出威胁、可能性、损害和措施。
+[回看解析](review-bank.html#T051)
 
-我的答案：
-
-## T052 Security policies 与 procedures
+## T052 · Security policies 与 procedures
 
 What should security policies and procedures contain?
 
-中文：安全政策与流程应包含什么？
+[回看解析](review-bank.html#T052)
 
-我的答案：
-
-## T053 默认允许与默认拒绝的安全哲学
+## T053 · 默认允许与默认拒绝的安全哲学
 
 Compare the two security philosophies shown in the lecture: deny specifics/accept everything else and accept specifics/deny everything else.
 
-中文：按原图比较默认放行与默认拒绝。
+[回看解析](review-bank.html#T053)
 
-我的答案：
-
-## T054 物理安全与 packet filtering
+## T054 · 物理安全与 packet filtering
 
 Describe physical security and packet filtering, including their limits.
 
-中文：描述物理安全和包过滤，并说明局限。
+[回看解析](review-bank.html#T054)
 
-我的答案：
-
-## T055 IPsec、SNMPv3 与 encryption
+## T055 · IPsec、SNMPv3 与 encryption
 
 Explain IPsec, SNMPv3 and encryption as security mechanisms.
 
-中文：解释三种协议/机制怎样保护通信。
+[回看解析](review-bank.html#T055)
 
-我的答案：
-
-## T056 两种安全与隐私机制
+## T056 · 两种安全与隐私机制
 
 Describe two security and privacy mechanisms.
 
-中文：描述两种安全与隐私机制。
+[回看解析](review-bank.html#T056)
 
-我的答案：
-
-## T057 NAT、firewall、DMZ 与分区
+## T057 · NAT、firewall、DMZ 与分区
 
 Explain how NAT, firewalls and DMZs contribute to network perimeter design.
 
-中文：说明边界安全与分区。
+[回看解析](review-bank.html#T057)
 
-我的答案：
-
-## T058 嵌套安全区与较扁平安全区
+## T058 · 嵌套安全区与较扁平安全区
 
 Compare nested security zones with a less hierarchical security-zone design. How should their placement be justified?
 
-中文：比较嵌套/较扁平安全区及布置理由。
+[回看解析](review-bank.html#T058)
 
-我的答案：
-
-## T059 安全架构的 trade-offs
+## T059 · 安全架构的 trade-offs
 
 Discuss internal and external relationships of security architecture.
 
-中文：讨论安全机制相互影响及与其他组件的关系。
+[回看解析](review-bank.html#T059)
 
-我的答案：
-
-## T060 MAC、IP、IPv4 与 IPv6
+## T060 · MAC、IP、IPv4 与 IPv6
 
 Distinguish MAC and IP addresses and compare IPv4 with IPv6.
 
-中文：区分地址层次与两个IP版本。
+[回看解析](review-bank.html#T060)
 
-我的答案：
-
-## T061 IANA、RIR 与 AS 的分工
+## T061 · IANA、RIR 与 AS 的分工
 
 Explain the roles of IANA, Regional Internet Registries and autonomous systems in the addressing context of this course.
 
-中文：解释地址和AS号体系中的角色，避免把管理层级当路由协议。
+[回看解析](review-bank.html#T061)
 
-我的答案：
-
-## T062 Classful、CIDR 与 prefix
+## T062 · Classful、CIDR 与 prefix
 
 Explain classful and classless addressing and the meaning of a prefix length.
 
-中文：解释classful/CIDR及前缀。
+[回看解析](review-bank.html#T062)
 
-我的答案：
-
-## T063 Private/public、DHCP 与 NAT
+## T063 · Private/public、DHCP 与 NAT
 
 Explain private and public addresses, DHCP and NAT.
 
-中文：解释地址可路由性、租期和转换机制。
+[回看解析](review-bank.html#T063)
 
-我的答案：
-
-## T064 特殊地址与交付方式
+## T064 · 特殊地址与交付方式
 
 Explain loopback, link-local, unicast, multicast and broadcast addressing.
 
-中文：解释特殊地址及单播组播广播。
+[回看解析](review-bank.html#T064)
 
-我的答案：
-
-## T065 TEST-NET、loopback、link-local 与实验地址
+## T065 · TEST-NET、loopback、link-local 与实验地址
 
 Explain the special IPv4 address categories in the lecture table, including TEST-NET and the default route.
 
-中文：补齐特殊地址表，区分默认路由和主机地址块。
+[回看解析](review-bank.html#T065)
 
-我的答案：
-
-## T066 Subnetting 通用步骤
+## T066 · Subnetting 通用步骤
 
 Explain how to subnet an IPv4 block and verify the result.
 
-中文：解释完整子网计算步骤。
+[回看解析](review-bank.html#T066)
 
-我的答案：
-
-## T067 二进制与 AND
+## T067 · 二进制与 AND
 
 Convert 192.168.10.77 and /27 to binary, then find the network address.
 
-中文：把IP和掩码转二进制，用AND求network。
+[回看解析](review-bank.html#T067)
 
-我的答案：
-
-## T068 /24 平分两块
+## T068 · /24 平分两块
 
 Split 192.35.40.0/24 into two equal-sized subnets.
 
-中文：按课件同一地址块分两个子网。
+[回看解析](review-bank.html#T068)
 
-我的答案：
-
-## T069 前缀与掩码表
+## T069 · 前缀与掩码表
 
 Give masks and ordinary usable hosts for /25, /26, /27, /28, /29 and /30.
 
-中文：写常见前缀、掩码、块大小和可用主机。
+[回看解析](review-bank.html#T069)
 
-我的答案：
-
-## T070 至少6子网
+## T070 · 至少6子网
 
 Split 192.168.8.0/24 into at least six equal subnets, each supporting at least 25 hosts.
 
-中文：至少6个等长子网，每个25主机。
+[回看解析](review-bank.html#T070)
 
-我的答案：
-
-## T071 由主机数决定前缀
+## T071 · 由主机数决定前缀
 
 What is the longest ordinary subnet prefix that supports 50 usable hosts? How many such subnets fit in a /24?
 
-中文：50主机时选最长前缀，算/24能容纳多少块。
+[回看解析](review-bank.html#T071)
 
-我的答案：
-
-## T072 给定host求范围
+## T072 · 给定host求范围
 
 Find all subnet details for 192.168.10.77/27. Is 192.168.10.96 in the same subnet?
 
-中文：求host所在子网并判断另一地址。
+[回看解析](review-bank.html#T072)
 
-我的答案：
-
-## T073 跨octet /20
+## T073 · 跨octet /20
 
 Find the network, broadcast and usable range for 172.20.37.140/20.
 
-中文：计算第三octet发生边界的子网。
+[回看解析](review-bank.html#T073)
 
-我的答案：
-
-## T074 /16 分4块与原答案勘误
+## T074 · /16 分4块与原答案勘误
 
 Split 172.16.0.0/16 into four equal subnets. Give usable hosts for /17 and /18.
 
-中文：分4块，并校正workshop主机数。
+[回看解析](review-bank.html#T074)
 
-我的答案：
-
-## T075 /23 至少10子网
+## T075 · /23 至少10子网
 
 Subnet 200.100.10.0/23 into at least ten equal subnets with at least 25 hosts each.
 
-中文：把/23分成至少10块并保留每块25主机。
+[回看解析](review-bank.html#T075)
 
-我的答案：
-
-## T076 /8 改为 /16
+## T076 · /8 改为 /16
 
 How many /16 subnets can be created from 10.0.0.0/8, and what is the range of 10.7.0.0/16?
 
-中文：计算/8到/16与指定子网范围。
+[回看解析](review-bank.html#T076)
 
-我的答案：
-
-## T077 VLSM 变式
+## T077 · VLSM 变式
 
 Allocate subnets for 100, 50, 20 and 10 hosts from 192.168.50.0/24 using VLSM.
 
-中文：按不同大小分配子网。材料有VLSM概念，本综合分配为AI扩展。
+[回看解析](review-bank.html#T077)
 
-我的答案：
-
-## T078 不可行需求判断
+## T078 · 不可行需求判断
 
 Can a /24 support eight equal ordinary subnets with at least 40 usable hosts each?
 
-中文：判断需求是否可同时满足。
+[回看解析](review-bank.html#T078)
 
-我的答案：
-
-## T079 Routing boundaries 与 AS
+## T079 · Routing boundaries 与 AS
 
 Explain autonomous systems, IGPs, EGPs and routing boundaries.
 
-中文：解释自治系统与路由边界。
+[回看解析](review-bank.html#T079)
 
-我的答案：
-
-## T080 Default、filter、aggregation 与 policy
+## T080 · Default、filter、aggregation 与 policy
 
 Describe mechanisms for manipulating routing flows.
 
-中文：描述默认路由、过滤、聚合与策略。
+[回看解析](review-bank.html#T080)
 
-我的答案：
-
-## T081 Static 与 dynamic routing
+## T081 · Static 与 dynamic routing
 
 Compare static and dynamic routing and their architectural trade-offs.
 
-中文：比较静态/动态路由。
+[回看解析](review-bank.html#T081)
 
-我的答案：
-
-## T082 RIP、OSPF 与 BGP 选择
+## T082 · RIP、OSPF 与 BGP 选择
 
 Compare RIP, OSPF and BGP and explain how routing protocols should be evaluated.
 
-中文：比较三种协议与评价标准。
+[回看解析](review-bank.html#T082)
 
-我的答案：
-
-## T083 RIPv1、RIPv2 与旧建议
+## T083 · RIPv1、RIPv2 与旧建议
 
 Compare RIPv1 and RIPv2. Why must routing recommendations be read in context?
 
-中文：比较RIP版本，解释旧经验规则的边界。
+[回看解析](review-bank.html#T083)
 
-我的答案：
-
-## T084 iBGP 与 eBGP
+## T084 · iBGP 与 eBGP
 
 Compare iBGP and eBGP using the autonomous systems in the lecture diagram.
 
-中文：按图说明AS100内部及AS之间的BGP。
+[回看解析](review-bank.html#T084)
 
-我的答案：
+## T140 · 地址路由架构的内外关系
 
-## T085 Performance goals 与 QoS
+Explain internal and external relationships of the addressing and routing architecture, using management, performance and security examples.
+
+[回看解析](review-bank.html#T140)
+
+## T085 · Performance goals 与 QoS
 
 How should performance goals guide QoS deployment?
 
-中文：性能目标怎样决定QoS部署？
+[回看解析](review-bank.html#T085)
 
-我的答案：
-
-## T086 IntServ、RSVP 与 DiffServ
+## T086 · IntServ、RSVP 与 DiffServ
 
 Compare IntServ and DiffServ, including the role of RSVP.
 
-中文：比较逐流预留与分类服务。
+[回看解析](review-bank.html#T086)
 
-我的答案：
-
-## T087 MPLS
+## T087 · MPLS
 
 Describe MPLS and explain how it can support performance architecture.
 
-中文：描述MPLS及与性能架构的关系。
+[回看解析](review-bank.html#T087)
 
-我的答案：
+## T141 · DiffServ 的标记、域与服务类
 
-## T088 Resource control 与 traffic conditioning
+Explain how DiffServ uses packet classification, DSCP markings and per-hop behaviour. Distinguish best effort, assured forwarding and expedited forwarding.
+
+[回看解析](review-bank.html#T141)
+
+## T088 · Resource control 与 traffic conditioning
 
 Explain prioritization, admission control and traffic conditioning.
 
-中文：解释资源控制和流量调节。
+[回看解析](review-bank.html#T088)
 
-我的答案：
-
-## T089 Metering、shaping 与逐包等待
+## T089 · Metering、shaping 与逐包等待
 
 A meter observes 200 packets/s at 1500 bytes/packet. A traffic profile allows 1.5 Mb/s. A shaper is explicitly configured to release 100 packets/s. Calculate the rates and discuss whether adding a fixed 10 ms delay to every packet necessarily produces the same output rate.
 
-中文：复算流量速率，并区分整体输出调度与每包固定延迟。
+[回看解析](review-bank.html#T089)
 
-我的答案：
-
-## T090 Queue 与 scheduling
+## T090 · Queue 与 scheduling
 
 Compare FIFO, priority, round robin and weighted fair queuing.
 
-中文：比较排队与调度方法。
+[回看解析](review-bank.html#T090)
 
-我的答案：
-
-## T091 SLA、policy 与 QoS 的闭环
+## T091 · SLA、policy 与 QoS 的闭环
 
 Explain how SLAs, policies and QoS work together.
 
-中文：解释承诺、规则、执行和验证的联系。
+[回看解析](review-bank.html#T091)
 
-我的答案：
+## T142 · 性能机制放置与组件之间的取舍
 
-## T092 管理层级与 FCAPS
+How should performance mechanisms be placed, and how do performance architecture, management and security interact?
+
+[回看解析](review-bank.html#T142)
+
+## T092 · 管理层级与 FCAPS
 
 Describe the network management hierarchy and the FCAPS model.
 
-中文：说明管理层级与FCAPS功能。
+[回看解析](review-bank.html#T092)
 
-我的答案：
-
-## T093 SNMP、CMIP 与 CMOT
+## T093 · SNMP、CMIP 与 CMOT
 
 Compare SNMP with CMIP/CMOT and explain their emphasis in this course.
 
-中文：比较管理协议，并保留课程的主次。
+[回看解析](review-bank.html#T093)
 
-我的答案：
-
-## T094 SNMP、agent 与 MIB
+## T094 · SNMP、agent 与 MIB
 
 Explain the relationship between SNMP, agents, managers and MIBs.
 
-中文：解释管理协议、代理、管理者与对象定义。
+[回看解析](review-bank.html#T094)
 
-我的答案：
+## T143 · MIB-II 的计数器选择与解释
 
-## T095 Monitoring、instrumentation、configuration
+Choose MIB-II interface counters for traffic volume, packet counts and errors. Explain how to derive a rate and why counters need careful interpretation.
+
+[回看解析](review-bank.html#T143)
+
+## T095 · Monitoring、instrumentation、configuration
 
 Distinguish monitoring, instrumentation and configuration mechanisms.
 
-中文：区分观察、采集手段与改变设置。
+[回看解析](review-bank.html#T095)
 
-我的答案：
-
-## T096 Event notification 与 trend analysis
+## T096 · Event notification 与 trend analysis
 
 Compare event notification with trend analysis and explain polling trade-offs.
 
-中文：比较事件通知和趋势分析。
+[回看解析](review-bank.html#T096)
 
-我的答案：
-
-## T097 Polling 带宽
+## T097 · Polling 带宽
 
 For 100 devices, 4 interfaces each and 8 parameters per interface, each value is 8 bytes with 60 bytes of overhead. Poll every 5 seconds. Find average traffic.
 
-中文：复算课件管理流量例子。
+[回看解析](review-bank.html#T097)
 
-我的答案：
-
-## T098 存储量与counter速率
+## T098 · 存储量与counter速率
 
 Using C17, store only the 8-byte values. Find daily storage. Separately, a byte counter rises from 1,000,000 to 1,750,000 in 10 s; find the rate.
 
-中文：区分线上流量、存储和累计计数器。
+[回看解析](review-bank.html#T098)
 
-我的答案：
-
-## T099 带内与带外网络管理
+## T099 · 带内与带外网络管理
 
 What are differences between in-band and out-of-band approaches in network management?
 
-中文：网络管理中的带内与带外方法有什么区别？
+[回看解析](review-bank.html#T099)
 
-我的答案：
-
-## T100 Centralized、distributed、hierarchical management
+## T100 · Centralized、distributed、hierarchical management
 
 Compare centralized, distributed and hierarchical network management.
 
-中文：比较三种管理架构。
+[回看解析](review-bank.html#T100)
 
-我的答案：
-
-## T101 Management traffic scaling
+## T101 · Management traffic scaling
 
 How should management traffic and storage be estimated and controlled?
 
-中文：如何估计与控制管理开销？
+[回看解析](review-bank.html#T101)
 
-我的答案：
-
-## T102 LAN/WAN 管理监测点的放置
+## T102 · LAN/WAN 管理监测点的放置
 
 Where does the lecture suggest placing monitoring devices in LANs and WANs, and why?
 
-中文：解释课件LAN/WAN采集点建议。
+[回看解析](review-bank.html#T102)
 
-我的答案：
-
-## T103 Checks、数据与 MIB 选择
+## T103 · Checks、数据与 MIB 选择
 
 Explain checks and balances, management-data handling and MIB selection.
 
-中文：解释测量验证、存储和对象选择。
+[回看解析](review-bank.html#T103)
 
-我的答案：
-
-## T104 管理与其他组件的关系
+## T104 · 管理与其他组件的关系
 
 Explain the dependencies and external relationships of network management.
 
-中文：解释管理组件依赖及与其他组件互动。
+[回看解析](review-bank.html#T104)
 
-我的答案：
-
-## T105 设计过程的五类产物
+## T105 · 设计过程的五类产物
 
 What are expected outcomes of the design process? Describe them.
 
-中文：设计过程的预期产物是什么？描述它们。
+[回看解析](review-bank.html#T105)
 
-我的答案：
-
-## T106 供应商、设备和服务评价
+## T106 · 供应商、设备和服务评价
 
 Describe a defensible process for evaluating vendors, equipment and service providers.
 
-中文：说明客观、可追溯的评价过程。
+[回看解析](review-bank.html#T106)
 
-我的答案：
-
-## T107 五项加权评分与必备条件
+## T107 · 五项加权评分与必备条件
 
 Use weights 20%, 30%, 30%, 10% and 10% for cost, technology, performance, risk and scalability. Higher scores are better on a 1–5 scale. A scores 5,3,4,2,4 and B scores 3,4,5,4,3. Rank them, then reconsider if B fails a mandatory security condition.
 
-中文：使用课件p.18权重、自拟候选分数，计算并检查必备条件。
+[回看解析](review-bank.html#T107)
 
-我的答案：
-
-## T108 原课件九项评价表与候选排序
+## T108 · 原课件九项评价表与候选排序
 
 Recalculate the weighted totals of the five candidates in Week11 PDF p.20. Explain the x/y cells and the rank deltas on p.21.
 
-中文：完整复算原图九项表，不把相对权重强当百分数。
+[回看解析](review-bank.html#T108)
 
-我的答案：
-
-## T109 Primary/secondary criteria 与约束
+## T109 · Primary/secondary criteria 与约束
 
 Distinguish primary and secondary design criteria and explain technology selection.
 
-中文：区分主次标准并说明技术选择。
+[回看解析](review-bank.html#T109)
 
-我的答案：
-
-## T110 Architectural design 的要素
+## T110 · Architectural design 的要素
 
 What concept and technology elements should an architectural design cover?
 
-中文：架构设计应包含哪些概念及技术要素？
+[回看解析](review-bank.html#T110)
 
-我的答案：
-
-## T111 60%与80%容量规划指导值
+## T111 · 60%与80%容量规划指导值
 
 Using the lecture guidelines, estimate candidate capacity for (a) 60 Mb/s of only best-effort traffic and (b) 80 Mb/s of only predictable traffic. For a separate mixed case, assume the specification explicitly requires at most 80% utilization for its predictable component and 60% for the total aggregate: predictable 40 Mb/s and best effort 20 Mb/s.
 
-中文：分别计算纯BE、纯predictable；混合题明确给出口径后再比较。
+[回看解析](review-bank.html#T111)
 
-我的答案：
-
-## T112 布局、traceability 与成功指标
+## T112 · 布局、traceability 与成功指标
 
 Explain network layout, design traceability and success metrics.
 
-中文：解释布局、决策追溯和成功验证。
+[回看解析](review-bank.html#T112)
 
-我的答案：
-
-## T113 SDN的优点
+## T113 · SDN的优点
 
 What are advantages of SDN?
 
-中文：SDN有哪些优点？
+[回看解析](review-bank.html#T113)
 
-我的答案：
-
-## T114 SDN 三平面
+## T114 · SDN 三平面
 
 Describe the three planes of SDN and how they interact.
 
-中文：描述SDN三个平面的分工。
+[回看解析](review-bank.html#T114)
 
-我的答案：
-
-## T115 SDN interfaces 与 OpenFlow
+## T115 · SDN interfaces 与 OpenFlow
 
 Explain northbound, southbound and east–west interfaces in SDN.
 
-中文：解释三类接口及OpenFlow的角色。
+[回看解析](review-bank.html#T115)
 
-我的答案：
+## T144 · OpenFlow flow table 与逐包操作
 
-## T116 SDN 的限制与部署条件
+Explain the header fields, counters and actions in the lecture’s OpenFlow switch diagram. What may happen when a packet arrives?
+
+[回看解析](review-bank.html#T144)
+
+## T116 · SDN 的限制与部署条件
 
 Discuss the challenges and trade-offs of deploying SDN.
 
-中文：讨论SDN挑战及收益条件。
+[回看解析](review-bank.html#T116)
 
-我的答案：
-
-## T117 SD-WAN
+## T117 · SD-WAN
 
 What is SD-WAN, and what benefits and conditions should be considered?
 
-中文：解释SD-WAN及其收益条件。
+[回看解析](review-bank.html#T117)
 
-我的答案：
-
-## T118 SDN 与 Big Data 的双向关系
+## T118 · SDN 与 Big Data 的双向关系
 
 Explain how SDN supports big data and how big data can improve SDN.
 
-中文：解释双向促进及五个V。
+[回看解析](review-bank.html#T118)
 
-我的答案：
-
-## T119 Network automation
+## T119 · Network automation
 
 Define network automation and discuss its benefits and risks.
 
-中文：定义网络自动化并讨论收益及控制。
+[回看解析](review-bank.html#T119)
 
-我的答案：
-
-## T120 NFV 与三要素
+## T120 · NFV 与三要素
 
 Define NFV and describe NFVI, VNFs and MANO.
 
-中文：定义NFV及三项架构元素。
+[回看解析](review-bank.html#T120)
 
-我的答案：
-
-## T121 SDN 与 NFV 的区别和组合
+## T121 · SDN 与 NFV 的区别和组合
 
 Compare SDN and NFV and explain how they can work together.
 
-中文：比较SDN/NFV并说明组合方式。
+[回看解析](review-bank.html#T121)
 
-我的答案：
-
-## T122 AI、ML、DL 与学习类型
+## T122 · AI、ML、DL 与学习类型
 
 Explain AI, ML and DL and compare supervised, unsupervised and reinforcement learning.
 
-中文：解释包含关系及三类学习。
+[回看解析](review-bank.html#T122)
 
-我的答案：
-
-## T123 ML workflow、应用与挑战
+## T123 · ML workflow、应用与挑战
 
 Describe an ML workflow for networking, its applications and limitations.
 
-中文：说明ML流程、网络用途和局限。
+[回看解析](review-bank.html#T123)
 
-我的答案：
-
-## T124 安全、隐私与 Threat analysis
+## T124 · 安全、隐私与 Threat analysis
 
 Discuss the importance of security and privacy in strategic network design. Why is threat analysis important in developing a security and privacy plan? What should threat analysis consider? Give three examples of threats.
 
-中文：讨论重要性、威胁分析的作用、考虑因素，并给三个威胁例子。
+[回看解析](review-bank.html#T124)
 
-我的答案：
-
-## T125 从战略目标到可交付网络设计
+## T125 · 从战略目标到可交付网络设计
 
 Explain how strategic planning, requirements analysis, flow analysis, architecture and design evaluation work together. Use a multi-campus university as an example.
 
-中文：解释完整设计链，并用多校区大学案例说明。
+[回看解析](review-bank.html#T125)
 
-我的答案：
-
-## T126 Flow、QoS 与性能保障
+## T126 · Flow、QoS 与性能保障
 
 Design a performance approach for a network carrying interactive teaching, critical transactions and backups. Discuss metrics, flowspecs, QoS, resource control, SLAs and verification.
 
-中文：为混合流量设计性能方案，解释指标、聚合、机制、承诺和验证。
+[回看解析](review-bank.html#T126)
 
-我的答案：
-
-## T127 Addressing 与 Routing 的架构选择
+## T127 · Addressing 与 Routing 的架构选择
 
 Discuss how an addressing and routing architecture should support a growing multi-site network. Explain addressing, subnetting, boundaries, routing choices and trade-offs.
 
-中文：讨论多站点地址与路由方案，包含子网、边界、协议及取舍。
+[回看解析](review-bank.html#T127)
 
-我的答案：
-
-## T128 可扩展且可恢复的 Network management
+## T128 · 可扩展且可恢复的 Network management
 
 Propose a network management architecture for a multi-campus network. Discuss management functions, information, monitoring, traffic load, organization and recovery access.
 
-中文：为多校区网络提出管理架构，讨论采集、流量、组织和故障访问。
+[回看解析](review-bank.html#T128)
 
-我的答案：
-
-## T129 Reference architecture 与模型组合
+## T129 · Reference architecture 与模型组合
 
 Explain the architectural models discussed in class and how component interactions should be balanced in a reference architecture. Illustrate with a campus network.
 
-中文：说明全部模型、参考架构的组合方式与组件取舍。
+[回看解析](review-bank.html#T129)
 
-我的答案：
-
-## T130 SDN、SD-WAN、NFV、Automation 与 ML
+## T130 · SDN、SD-WAN、NFV、Automation 与 ML
 
 Evaluate how SDN, SD-WAN, NFV, automation and machine learning can support strategic network design. Explain their different roles, benefits, dependencies and limits.
 
-中文：评价新技术的不同职责、组合价值、条件与限制。
+[回看解析](review-bank.html#T130)
 
-我的答案：
-
-## T131 设计评价、产物、可追溯性与验收
+## T131 · 设计评价、产物、可追溯性与验收
 
 Explain how a designer should select a practical network solution and demonstrate its success. Discuss evaluation criteria, constraints, supportability, deliverables and traceability.
 
-中文：说明怎样选择可实施方案并证明成功。
-
-我的答案：
-
+[回看解析](review-bank.html#T131)

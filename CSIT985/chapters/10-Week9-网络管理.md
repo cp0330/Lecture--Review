@@ -1,56 +1,16 @@
 # 10-Week9-网络管理
 
-返回：[期末题库总入口](../README.md)；[旧题号与当前题号对照](../question-map.md)。
+[在线逐题学习](../review-bank.html) · [审校说明](../audit-2026-11-04.md)
 
-本册按对应课件的可见页序排列。计算与补题放到其知识点附近；Workshop Flow题接在Week5 Flow主线，原资源仍明确标为Workshop Week7a。综合长答统一放最后。
+> 参考答案与教学解析由AI依据课程资料整理，不是官方rubric。考前练习不扩大考试可用资料。
 
-来源页码按PDF文件从第1页起计，包含封面。英文答案为教学参考，不是官方评分答案。老师样题保留标记。使用条件与假设属于答案的一部分。
+## T092 · 管理层级与 FCAPS
 
-## T092
+Describe the network management hierarchy and the FCAPS model.
 
-**管理层级与 FCAPS**
+说明管理层级与FCAPS功能。
 
-- 题型：简答；检索码：Q61；依据：范围扩展题。
-- 知识点：Network management mechanisms（网络管理机制）。
-
-**Question:** Describe the network management hierarchy and the FCAPS model.
-
-**中文题意：**说明管理层级与FCAPS功能。
-
-<!-- answer-guidance:T092:start -->
-### 组织方式与答题思路
-
-**任务类型：**两套分类＋联系。以下为教学建议。
-
-**建议答题路线（按实际题干调整）：**
-
-1. 按business→service→network→element→network-element列层级。
-2. 解释FCAPS五功能。
-3. 说明层级与功能是不同观察维度。
-4. 用服务目标落到设备动作的例子连接。
-
-**现有参考答案的组织方式：**
-
-- 第1段：管理层级及各层范围。
-- 第2段：FCAPS五域。
-- 第3段：从业务到设备的例子与管理基础设施。
-
-**回Moodle核对：**
-
-- [Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) → PDF物理页 **5–16**；课件主题：Network Management Architectures。
-
-搜索词：`FCAPS`；`business management`；`element`。
-
-查到后确认：核对五层名称和FCAPS五域，避免互相替代。
-
-**换问法时：**题干同时问hierarchy和FCAPS时，两套清单都要完整。
-<!-- answer-guidance:T092:end -->
-
-### 中文思路
-
-业务→服务→网络→同类元素集合→单设备；FCAPS五域。
-
-### 英文参考答案（129词）
+### 精简参考答案
 
 The course views network management as several levels. Business management handles budgets, resources and planning. Service management concerns delivered services, such as access bandwidth and application delivery. Network management covers the network as a whole. Element management handles groups of similar devices, while network-element management concerns an individual device.
 
@@ -58,63 +18,42 @@ FCAPS describes five management areas: fault, configuration, accounting, perform
 
 The levels and functions connect high-level goals with concrete device parameters. For example, a business commitment to reliable teaching leads to a service target, network monitoring and configuration, and specific interface or device actions. Management must also transport and store the information needed to make those decisions, so its own traffic and infrastructure need planning.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-层级是管理范围，FCAPS是管理功能，不是同一分类。
+**先懂概念**：网络管理通过监测取得并解释状态，通过 instrumentation 提供采集工具和接口，再通过配置机制改变设备参数；SNMP 传递管理信息，MIB 定义可管理对象。
 
-变式：Explain the two basic management functions and four task categories.
+1. hierarchy按管理范围分五层，FCAPS按管理任务分五域，是两条观察轴。一个service-level问题可涉及performance和fault。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 从业务承诺逐层落到接口动作，才能看到管理为何需要基础设施与流量。不要用FCAPS替代层级清单。
 
-### 来源
+**英文关键句**：The two models use different dimensions.
 
-- [Moodle：Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) → **PDF物理页5–16**，关键词`Network Management Architectures`。
+两套模型采用不同维度。 dimension意为“维度”；给跨层performance例子比只背定义更容易理解。
 
-## T093
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
 
-**SNMP、CMIP 与 CMOT**
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
 
-- 题型：简答；检索码：Q93；依据：缺口补题；依据课件的AI参考答案。
-- 知识点：Network management mechanisms（网络管理机制）。
+**变式练习**：Is performance management restricted to one management level?
 
-**Question:** Compare SNMP with CMIP/CMOT and explain their emphasis in this course.
+**变式参考**：No. Performance concerns can appear at service, network and device levels. FCAPS functions and management hierarchy describe different dimensions.
 
-**中文题意：**比较管理协议，并保留课程的主次。
+**自查**：层级是管理范围，FCAPS是管理功能，不是同一分类。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T093:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**比较＋课程语境。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) · PDF 5–16 · 搜索 Network Management Architectures
 
-1. 说明SNMP的manager/agent/MIB及poll/trap。
-2. 说明CMIP的OSI背景和功能复杂度。
-3. 解释CMOT全称。
-4. 比较能力与复杂度，并标明本课重点和历史背景。
 
-**现有参考答案的组织方式：**
+## T093 · SNMP、CMIP 与 CMOT
 
-- 第1段：SNMP功能及课程重点。
-- 第2段：CMIP/CMOT背景与复杂度。
-- 第3段：能力/复杂度取舍及MIB边界。
+Compare SNMP with CMIP/CMOT and explain their emphasis in this course.
 
-**回Moodle核对：**
+比较管理协议，并保留课程的主次。
 
-- [Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) → PDF物理页 **18–24**；课件主题：Network Management Mechanisms。
-
-搜索词：`SNMP`；`CMIP`；`CMOT`。
-
-查到后确认：核对本课protocol emphasis，不将历史背景扩成配置考点。
-
-**换问法时：**若只问compare，按任务、复杂度、设备支持与运维对照。
-<!-- answer-guidance:T093:end -->
-
-### 中文思路
-
-SNMP主线：读/设参数、trap、MIB；CMIP历史OSI管理协议，更复杂/更多操作；CMOT＝CMIP Over TCP/IP。MIB定义对象，不是历史数据库。
-
-### 英文参考答案（135词）
+### 精简参考答案
 
 SNMP provides mechanisms for collecting and configuring information from managed network devices. Managers use defined objects, grouped in MIBs, and agents can send unsolicited event notifications through traps. The course identifies SNMP as the main protocol to study.
 
@@ -122,63 +61,42 @@ CMIP, the Common Management Information Protocol, is associated with the OSI man
 
 The comparison explains a trade-off between capability and complexity. More operation types do not automatically make a management system more suitable. The required tasks, device support and operating effort still matter. Also distinguish a MIB, which defines managed objects, from the storage system that keeps the actual history of collected measurements.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-低优先级历史内容不标必考；CMOT不是SNMP的新版本。
+**先懂概念**：网络管理通过监测取得并解释状态，通过 instrumentation 提供采集工具和接口，再通过配置机制改变设备参数；SNMP 传递管理信息，MIB 定义可管理对象。
 
-变式：先遮住答案复述；再换一个场景说明分类、机制或条件。
+1. SNMP是本课重点，CMIP/CMOT作为历史比较用于理解能力与复杂度权衡，不需凭空扩展成配置考试。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. MIB定义对象，manager收集值，历史系统保存数据，三者别混。更多操作类型不自动意味更适合本项目。
 
-### 来源
+**英文关键句**：More capability can also mean more complexity.
 
-- [Moodle：Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) → **PDF物理页18–24**，关键词`Network Management Mechanisms`。
+更多能力也可能意味着更多复杂度。 more A can mean more B用于写取舍，之后应说明项目条件。
 
-## T094
+**可复用句式**：X provides ____, whereas Y provides ____. The choice depends on ____.
 
-**SNMP、agent 与 MIB**
+X提供……，而Y提供……；选择取决于……。 whereas用同一维度做对比；空白要填机制或条件，不填无依据的best。
 
-- 题型：简答；检索码：Q62；依据：范围扩展题。
-- 知识点：Network management mechanisms（网络管理机制）。
+**变式练习**：Does a richer protocol always make management better?
 
-**Question:** Explain the relationship between SNMP, agents, managers and MIBs.
+**变式参考**：No. Device support, task needs and operating complexity matter. Select a protocol and tools that meet the required functions reliably.
 
-**中文题意：**解释管理协议、代理、管理者与对象定义。
+**自查**：低优先级历史内容不标必考；CMOT不是SNMP的新版本。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T094:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**对象关系＋数据解释。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) · PDF 18–24 · 搜索 Network Management Mechanisms
 
-1. manager通过SNMP与device agent通信。
-2. MIB定义对象及含义。
-3. 说明poll与trap及counter怎样得到rate。
-4. 补SNMPv3和按任务选对象的条件。
 
-**现有参考答案的组织方式：**
+## T094 · SNMP、agent 与 MIB
 
-- 第1段：SNMP、manager和agent关系。
-- 第2段：MIB对象定义及counter例子。
-- 第3段：poll/trap、差分rate和安全条件。
+Explain the relationship between SNMP, agents, managers and MIBs.
 
-**回Moodle核对：**
+解释管理协议、代理、管理者与对象定义。
 
-- [Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) → PDF物理页 **18–25**；课件主题：MIB。
-
-搜索词：`SNMP`；`agent`；`manager`；`MIB`；`counter`。
-
-查到后确认：核对MIB不是历史数据库，counter是累计量而非当前速率。
-
-**换问法时：**若题给两个counter，先检查时间、重置/回卷，再用差值求速率。
-<!-- answer-guidance:T094:end -->
-
-### 中文思路
-
-manager读/设；agent暴露对象；MIB定义；poll/trap；counter差值。
-
-### 英文参考答案（135词）
+### 精简参考答案
 
 SNMP supports the collection and configuration of management information from network devices. A management system communicates with an agent on a managed device. The agent provides access to managed objects and may send event notifications.
 
@@ -186,63 +104,85 @@ A Management Information Base, or MIB, defines the managed objects and their mea
 
 Managers can poll for values, while traps provide unsolicited event notification. Counter values often need processing: a rate normally comes from the change in a counter over a known interval, not from the total counter alone. SNMPv3 adds security capabilities, but settings and access restrictions still need to be planned. Choose objects that support actual service and operational needs.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-counter累计字节不是瞬时bps；MIB不是性能历史数据库本身。
+**先懂概念**：网络管理通过监测取得并解释状态，通过 instrumentation 提供采集工具和接口，再通过配置机制改变设备参数；SNMP 传递管理信息，MIB 定义可管理对象。
 
-变式：Define polling and traps; explain ifInOctets and ifOutErrors.
+1. manager通过SNMP访问agent暴露的对象；MIB给对象含义与结构，不是装满每一天历史值的仓库。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. counter是累计量，求速率需两次同口径读数与时间差；trap是主动事件通知。SNMPv3安全需要合适配置，不是读到对象就默认安全。
 
-### 来源
+**英文关键句**：A cumulative counter is not a rate.
 
-- [Moodle：Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) → **PDF物理页18–25**，关键词`MIB`。
+累计计数器不是速率。 cumulative意为“累计的”；完整表达帮助区分量与每秒变化量。
 
-## T095
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
 
-**Monitoring、instrumentation、configuration**
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
 
-- 题型：简答；检索码：Q63；依据：范围扩展题。
-- 知识点：Network management mechanisms（网络管理机制）。
+**变式练习**：A counter reads 5,000,000 octets. What is its current bit rate?
 
-**Question:** Distinguish monitoring, instrumentation and configuration mechanisms.
+**变式参考**：A single cumulative reading is insufficient. Obtain another reading and the elapsed time, check reset or wrap, then compute the change in octets times eight divided by seconds.
 
-**中文题意：**区分观察、采集手段与改变设置。
+**自查**：counter累计字节不是瞬时bps；MIB不是性能历史数据库本身。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T095:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**区分＋闭环。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) · PDF 18–25 · 搜索 MIB
 
-1. monitoring说明采集处理显示归档。
-2. instrumentation说明工具与访问能力。
-3. configuration说明修改参数。
-4. 用检测拥塞→改queue policy说明配合与测量边界。
 
-**现有参考答案的组织方式：**
+## T143 · MIB-II 的计数器选择与解释
 
-- 第1段：monitoring的任务与范围。
-- 第2段：instrumentation工具与准确性。
-- 第3段：configuration及三者闭环例子。
+Choose MIB-II interface counters for traffic volume, packet counts and errors. Explain how to derive a rate and why counters need careful interpretation.
 
-**回Moodle核对：**
+按问题选对象，区分累计值、速率、octet和packet。
 
-- [Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) → PDF物理页 **26–46**；课件主题：Monitoring Mechanisms。
+### 精简参考答案
 
-搜索词：`monitoring`；`instrumentation`；`configuration`。
+MIB-II interface objects describe different aspects of a device interface. ifInOctets and ifOutOctets count received and transmitted octets. An octet is eight bits. Unicast and non-unicast packet counters describe packet numbers, while ifInErrors and ifOutErrors record relevant interface errors. These counters answer different questions.
 
-查到后确认：核对三类机制各做什么，找同一事件的完整处理链。
+A cumulative value is not a rate. For example, subtracting two octet readings gives the transferred amount during the interval; multiplying by eight and dividing by elapsed seconds gives bits per second. State the interface, direction, timestamps and units.
 
-**换问法时：**若问why distinguish，说明看到问题、获得数据和改变系统不是同一个动作。
-<!-- answer-guidance:T095:end -->
+Before trusting the result, check for device reset, counter wrap and changes in what is being measured. A packet-error ratio also needs a compatible packet-count denominator and a defined interpretation. Bulk retrieval belongs to SNMPv2 protocol operations; it should not be memorized as a feature introduced only by SNMPv3. SNMPv3’s security capabilities are a separate issue. Collect the objects needed for the management goal rather than every available counter.
 
-### 中文思路
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-monitor取/处理/展示/归档；instrument工具接入；configuration修改。
+**先懂概念**：网络管理通过监测取得并解释状态，通过 instrumentation 提供采集工具和接口，再通过配置机制改变设备参数；SNMP 传递管理信息，MIB 定义可管理对象。
 
-### 英文参考答案（129词）
+1. 对象名称按In/Out、Octets/Packets/Errors拆读，分别判断方向与量；累计值要差分除时间才成速率。
+
+2. 两次同对象counter需检查reset/wrap，error ratio需兼容packet分母。GETBULK在SNMPv2已有，SNMPv3重点安全，避免按课件误记版本。
+
+**英文关键句**：Subtract the readings before dividing by elapsed time.
+
+先减两次读数，再除经过时间。 before + 动词-ing；elapsed time是“经过时间”，不是时间戳本身。
+
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
+
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
+
+**变式练习**：Octets rise by 500,000 in 5 seconds. What is the payload bit rate under a valid counter interval?
+
+**变式参考**：500,000 × 8 / 5 = 800,000 bit/s, or 800 kb/s. This assumes compatible readings with no unhandled reset or wrap and does not add unspecified wire overhead.
+
+**自查**：两次同对象counter需检查reset/wrap，error ratio需兼容packet分母。GETBULK在SNMPv2已有，SNMPv3重点安全，避免按课件误记版本。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+
+</details>
+
+### Moodle定位
+
+- [Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) · PDF 19、21–24 · 搜索 MIB II
+
+
+## T095 · Monitoring、instrumentation、configuration
+
+Distinguish monitoring, instrumentation and configuration mechanisms.
+
+区分观察、采集手段与改变设置。
+
+### 精简参考答案
 
 Monitoring obtains and processes information about network behaviour. It includes collection, event or trend analysis, display and archiving. Measurements may concern an element, link, network or end-to-end path.
 
@@ -250,63 +190,42 @@ Instrumentation provides the tools and access needed to obtain that information.
 
 Configuration changes operational parameters through direct access, remote access or configuration files. It can implement a response to information found by monitoring. For example, instrumentation supplies interface data, monitoring detects sustained congestion, and configuration changes an appropriate queue policy. These mechanisms form a practical management loop. Observing a problem does not itself fix it, and a successful connectivity probe does not establish every aspect of service quality.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-ping成功不证明吞吐、全部应用、所有路径都正常。
+**先懂概念**：网络管理通过监测取得并解释状态，通过 instrumentation 提供采集工具和接口，再通过配置机制改变设备参数；SNMP 传递管理信息，MIB 定义可管理对象。
 
-变式：Classify a counter, an alarm and a settings change; explain per-link vs end-to-end measures.
+1. instrumentation提供可观察手段，monitoring处理观察结果，configuration改变系统。三者形成从证据到行动的闭环。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. ping可说明某种连通与往返响应，不能证明应用容量和每个链路指标；traceroute显示路径线索也不直接测出所有链路容量。
 
-### 来源
+**英文关键句**：A connectivity test does not verify every service property.
 
-- [Moodle：Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) → **PDF物理页26–46**，关键词`Monitoring Mechanisms`。
+连通性测试不能验证所有服务属性。 verify是“核实是否符合”；every property提醒测量必须对应目标。
 
-## T096
+**可复用句式**：X provides ____, whereas Y provides ____. The choice depends on ____.
 
-**Event notification 与 trend analysis**
+X提供……，而Y提供……；选择取决于……。 whereas用同一维度做对比；空白要填机制或条件，不填无依据的best。
 
-- 题型：简答；检索码：Q64；依据：范围扩展题。
-- 知识点：Network management mechanisms（网络管理机制）。
+**变式练习**：A successful ping is observed. Does it verify the full SLA?
 
-**Question:** Compare event notification with trend analysis and explain polling trade-offs.
+**变式参考**：No. It provides limited reachability and timing evidence. The SLA may also require throughput, loss, availability and application-level tests.
 
-**中文题意：**比较事件通知和趋势分析。
+**自查**：ping成功不证明吞吐、全部应用、所有路径都正常。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T096:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**比较＋轮询取舍。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) · PDF 26–46 · 搜索 Monitoring Mechanisms
 
-1. 按时间尺度和目的比较event与trend。
-2. event用来及时发现变化，trend建立baseline和看增长。
-3. 比较短/长poll interval的分辨率与开销。
-4. 说明组合使用和时间单位上下文。
 
-**现有参考答案的组织方式：**
+## T096 · Event notification 与 trend analysis
 
-- 第1段：event notification的对象与及时性。
-- 第2段：trend analysis的长期作用。
-- 第3段：时间尺度、polling成本与组合。
+Compare event notification with trend analysis and explain polling trade-offs.
 
-**回Moodle核对：**
+比较事件通知和趋势分析。
 
-- [Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) → PDF物理页 **30–39**；课件主题：Monitoring for Trend Analysis。
-
-搜索词：`event`；`trend`；`polling`；`baseline`。
-
-查到后确认：核对事件和趋势的测量周期及poll间隔影响。
-
-**换问法时：**若题给短暂故障，说明长间隔可能漏掉；不给未测量的精确漏检概率。
-<!-- answer-guidance:T096:end -->
-
-### 中文思路
-
-短期阈值快速响应；长期baseline容量规划；短poll更多开销，平均可能藏事件。
-
-### 英文参考答案（124词）
+### 精简参考答案
 
 Event notification identifies changes that need attention, such as failures, threshold crossings or important informational events. Short-lived problems may require frequent collection and prompt alarms, logs or displays.
 
@@ -314,59 +233,46 @@ Trend analysis studies longer-term behaviour. Continuous and consistent measurem
 
 The methods use different time scales. A daily average may hide a brief outage, while a stream of isolated alarms may not show gradual growth. Shorter polling intervals improve time resolution but create more traffic, processing and stored data. Longer intervals reduce overhead but may miss short events. A useful design combines event and trend information and records timestamps, units and context so that measurements can be interpreted correctly.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-实时分析与长期平均不能互相代替；poll越频繁并非无成本。
+**先懂概念**：网络管理通过监测取得并解释状态，通过 instrumentation 提供采集工具和接口，再通过配置机制改变设备参数；SNMP 传递管理信息，MIB 定义可管理对象。
 
-变式：Explain baselines; choose collection intervals for outages versus capacity planning.
+1. event及时发现变化，trend持续观察长期方向，两者时间尺度不同。短采样更细但有流量、处理和存储成本。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 5秒故障可能发生在两个60秒poll之间；不能没数据就给漏检精确概率。baseline需一致口径，平均值可隐藏尖峰。
 
-### 来源
+**英文关键句**：A shorter interval improves time resolution but increases overhead.
 
-- [Moodle：Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) → **PDF物理页30–39**，关键词`Monitoring for Trend Analysis`。
+更短间隔改善时间分辨率但增加开销。 comparative + but组织取舍；otherwise unchanged可说明其他条件不变。
 
-## T097
+**可复用句式**：X provides ____, whereas Y provides ____. The choice depends on ____.
 
-**Polling 带宽**
+X提供……，而Y提供……；选择取决于……。 whereas用同一维度做对比；空白要填机制或条件，不填无依据的best。
 
-- 题型：计算；检索码：C17；依据：AI计算变式；题值并非真实试题。
-- 知识点：Management architecture and scaling（管理架构、扩展与数据校验）。
+**变式练习**：What happens if the polling interval is halved?
 
-**Question:** For 100 devices, 4 interfaces each and 8 parameters per interface, each value is 8 bytes with 60 bytes of overhead. Poll every 5 seconds. Find average traffic.
+**变式参考**：Average polling traffic and value storage roughly double under otherwise unchanged assumptions. Time resolution improves, but short events can still be missed.
 
-**中文题意：**复算课件管理流量例子。
+**自查**：实时分析与长期平均不能互相代替；poll越频繁并非无成本。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T097:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**轮询带宽。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) · PDF 30–39 · 搜索 Monitoring for Trend Analysis
 
-1. 设备×接口×参数求每轮测量数。
-2. value+wire overhead求每项bytes。
-3. 乘8并除poll interval得平均bit/s。
-4. 若问日量再乘日轮次。
-5. 区分平均与同步突发。
 
-**现有参考答案的组织方式：**
+## T097 · Polling 带宽
 
-- 条件、计算步骤及必要表格。
-- 英文作答：结果与条件解释。
+For 100 devices, 4 interfaces each and 8 parameters per interface, each value is 8 bytes with 60 bytes of overhead. Poll every 5 seconds. Find average traffic.
 
-**回Moodle核对：**
+复算课件管理流量例子。
 
-- [Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) → PDF物理页 **35–39、59**；课件主题：Management architecture and scaling。
+### 精简参考答案
 
-搜索词：`polling`；`overhead`；`management traffic`。
+Each polling cycle generates 1,740,800 bits. With a five-second interval, average management traffic is 348,160 bit/s, or 348.16 kb/s. The average is not the peak rate; synchronized polling can create a much larger short-term burst.
 
-查到后确认：核对每参数消息是否有给定overhead及interval单位。
-
-**换问法时：**不能用平均值声称瞬时峰值；若消息打包方式变了要重算overhead。
-<!-- answer-guidance:T097:end -->
-
-### 计算步骤
+### 逐步解法
 
 测量数100×4×8=3200/cycle。
 每项wire数据8+60=68bytes；每轮3200×68=217600bytes=1740800bits。
@@ -374,129 +280,88 @@ The methods use different time scales. A daily average may hide a brief outage, 
 日轮次86400/5=17280；日wire traffic=30081024000bits≈30.081Gb。
 轮询同步突发可能显著高于平均；精确瞬时速率还需发送持续时间。
 
-### 英文作答
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-Each polling cycle generates 1,740,800 bits. With a five-second interval, average management traffic is 348,160 bit/s, or 348.16 kb/s. The average is not the peak rate; synchronized polling can create a much larger short-term burst.
+**先懂概念**：管理系统的分布方式决定管理流量的汇聚与依赖；扩展规划需要估算采集负载和存储，并通过重复测量、元数据及归档策略维护数据可信度。
 
-### 易错、变式与反馈
+1. 每轮测量数3200，每项线上68bytes，先算bytes再×8；除5秒得平均bit/s。
 
-不能把1.7408Mb/cycle直接写1.7408Mb/s，除非说明1秒发完。
+2. poll同步时平均不代表峰值，峰值还要发送时间。一天86400秒，5秒一轮是17280轮；不要沿用课件720/day笔误。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+**英文关键句**：Divide the bits per cycle by the interval in seconds.
 
-### 来源
+每轮比特数除以以秒计的间隔。 per cycle与per second必须区分；divide A by B明确谁除谁。
 
-- [Moodle：Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) → **PDF物理页35–39、59**，关键词`Management architecture and scaling`。
+**可复用句式**：Using ____, the result is ____ [unit]. This assumes ____.
 
-## T098
+根据……，结果为……单位；这里假设……。 结果句必须包含单位与模型条件；英语简单不影响数学严谨。
 
-**存储量与counter速率**
+**变式练习**：With the same devices and per-value sizes, poll every 10 seconds. Find average wire traffic.
 
-- 题型：计算；检索码：C18；依据：AI计算变式；题值并非真实试题。
-- 知识点：Management architecture and scaling（管理架构、扩展与数据校验）。
+**变式参考**：3200×68×8/10 = 174080 bit/s = 174.08 kb/s. Doubling the interval halves the average rate under unchanged assumptions.
 
-**Question:** Using C17, store only the 8-byte values. Find daily storage. Separately, a byte counter rises from 1,000,000 to 1,750,000 in 10 s; find the rate.
+**自查**：不能把1.7408Mb/cycle直接写1.7408Mb/s，除非说明1秒发完。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-**中文题意：**区分线上流量、存储和累计计数器。
+</details>
 
-<!-- answer-guidance:T098:start -->
-### 组织方式与答题思路
+### Moodle定位
 
-**任务类型：**存储＋counter速率。以下为教学建议。
+- [Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) · PDF 35–39、59 · 搜索 Management architecture and scaling
 
-**建议答题路线（按实际题干调整）：**
 
-1. 存储只用实际保留的value bytes。
-2. 乘每轮数量和86400/interval。
-3. 另题以counter差×8/时间求bit rate。
-4. 核对metadata、复制和counter重置/回卷。
+## T098 · 存储量与counter速率
 
-**现有参考答案的组织方式：**
+Using C17, store only the 8-byte values. Find daily storage. Separately, a byte counter rises from 1,000,000 to 1,750,000 in 10 s; find the rate.
 
-- 条件、计算步骤及必要表格。
-- 英文作答：结果与条件解释。
+区分线上流量、存储和累计计数器。
 
-**回Moodle核对：**
+### 精简参考答案
 
-- [Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) → PDF物理页 **35–39、62–65**；课件主题：Management architecture and scaling。
+Raw daily value storage is 442.368 MB, before metadata or database overhead. Counter-based rate uses the difference between samples: (1,750,000−1,000,000)×8/10 = 600 kb/s. Validate the counter and interval before trusting the result.
 
-搜索词：`storage`；`counter`；`polling interval`。
-
-查到后确认：核对wire与stored bytes区别、hour/day轮次和累计counter含义。
-
-**换问法时：**若新counter小于旧值，先查重置/回卷，不直接给负流量。
-<!-- answer-guidance:T098:end -->
-
-### 计算步骤
+### 逐步解法
 
 日storage=3200×8×17280=442368000bytes=442.368MB（不含metadata/index/复制）。
 年按365天≈161.46432GB。课件“720轮/day”应为每hour；日轮次为17280。
 Counter delta=750000bytes；速率750000×8/10=600000bit/s=600kb/s。
 先检查counter重置/回卷，确认采样点与时间一致。
 
-### 英文作答
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-Raw daily value storage is 442.368 MB, before metadata or database overhead. Counter-based rate uses the difference between samples: (1,750,000−1,000,000)×8/10 = 600 kb/s. Validate the counter and interval before trusting the result.
+**先懂概念**：管理系统的分布方式决定管理流量的汇聚与依赖；扩展规划需要估算采集负载和存储，并通过重复测量、元数据及归档策略维护数据可信度。
 
-### 易错、变式与反馈
+1. wire traffic含协议开销，storage本题只保留8byte值，所以每轮25600byte；乘17280轮得到每日442.368MB。
 
-不要把wire的60byte overhead计入“只存8byte值”的问题。
+2. counter速率单独用delta×8/秒；如果重置/回卷未处理，简单相减会错。365天年值是明确假设而非每年必定天数。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+**英文关键句**：Store only the bytes that are actually retained.
 
-### 来源
+只计算实际保留的字节。 actually retained明确storage范围；不要把network overhead自动复制进来。
 
-- [Moodle：Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) → **PDF物理页35–39、62–65**，关键词`Management architecture and scaling`。
+**可复用句式**：Using ____, the result is ____ [unit]. This assumes ____.
 
-## T099
+根据……，结果为……单位；这里假设……。 结果句必须包含单位与模型条件；英语简单不影响数学严谨。
 
-**带内与带外网络管理**
+**变式练习**：Poll every 10 s and store only the same values. Also, an octet counter rises by 250000 over 4 s. Find both results.
 
-- 题型：简答；检索码：Q03；依据：老师样题（Week13 PDF p.16）。
-- 知识点：In-band and out-of-band management（带内与带外网络管理）。
+**变式参考**：Daily storage = 3200×8×8640 = 221184000 bytes = 221.184 MB. Rate = 250000×8/4 = 500000 bit/s = 500 kb/s, after counter validity checks.
 
-**Question:** What are differences between in-band and out-of-band approaches in network management?
+**自查**：不要把wire的60byte overhead计入“只存8byte值”的问题。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-**中文题意：**网络管理中的带内与带外方法有什么区别？
+</details>
 
-<!-- answer-guidance:T099:start -->
-### 组织方式与答题思路
+### Moodle定位
 
-**任务类型：**按维度比较＋选型。以下为教学建议。
+- [Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) · PDF 35–39、62–65 · 搜索 Management architecture and scaling
 
-**建议答题路线（按实际题干调整）：**
 
-1. 先按路径是否与用户共享比较。
-2. 再按业务网故障时的访问能力比较。
-3. 再写成本、复杂度与安全条件。
-4. 说明带外仍有供电等限制，可按需求混合。
+## T099 · 带内与带外网络管理
 
-**现有参考答案的组织方式：**
+What are differences between in-band and out-of-band approaches in network management?
 
-- 第1段：in-band路径、低独立成本与共享故障。
-- 第2段：out-of-band替代路径、恢复能力和代价。
-- 第3段：供电边界、混合方案与选择依据。
+网络管理中的带内与带外方法有什么区别？
 
-**回Moodle核对：**
-
-- [Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) → PDF物理页 **51–54**；课件主题：In-band and Out-of-band Management。
-
-搜索词：`in-band`；`out-of-band`；`management`。
-
-查到后确认：核对management traffic路径、故障依赖和成本。
-
-**换问法时：**若给故障，先判断故障是否也影响替代路径与设备供电，再谈带外可用性。
-<!-- answer-guidance:T099:end -->
-
-### 中文思路
-
-带内管理通过与用户及其应用相同的网络路径发送管理流量，通常避免另建管理网络的费用。但它竞争共享资源，也可能受到同样的拥塞或故障影响。管理员可能在最需要排查时失去访问。
-
-带外管理为管理流量提供替代路径，通常使用单独管理网络。在许多用户网络故障中，它仍能支持监测和恢复，同时增加设备、成本和运行复杂度。两种方法都需要适当的访问保护。
-
-带外访问并非在所有故障中都有保证，例如设备完全断电时。混合方案可以用带内进行日常管理，用替代路径支持恢复。应根据可用性需要、风险和预算选择，不能假定某一种永远最好。
-
-### 英文参考答案（151词）
+### 精简参考答案
 
 In-band management sends management traffic through the same network paths used by users and their applications. It normally avoids the cost of a separate management network. However, management traffic competes for shared resources and may be affected by the same congestion or failures as user traffic. Administrators may lose access when they most need to investigate a problem.
 
@@ -504,63 +369,42 @@ Out-of-band management provides an alternative path for management traffic, ofte
 
 Out-of-band access is not guaranteed during every failure, for example if a device loses all power. A hybrid design can use in-band access for routine management and an alternative path for recovery. The choice should follow availability needs, risk and budget, rather than assuming that one approach is always best.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-比较维度不对齐；把带外说成永不失效；把in-band/out-of-band等同于centralized/distributed。
+**先懂概念**：带内管理与用户业务共享网络路径；带外管理提供替代管理路径，减少对业务路径的依赖，但会增加费用和复杂度，也不能保证在所有故障中可用。
 
-变式：为什么带外路径在业务链路故障时有帮助，却不能保证设备断电后仍能管理？
+1. in-band共享用户路径，成本较低但共享拥塞与故障；out-of-band提供替代访问但有独立成本和管理安全要求。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 带外能否救援要看替代链路和设备仍否供电，不等于任何事故都能登录。比较必须同时写路径、恢复、成本与条件。
 
-### 来源
+**英文关键句**：The alternative path must survive the relevant failure.
 
-- [Moodle：Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) → **PDF物理页51–54**，关键词`In-band and Out-of-band Management`。
+替代路径必须能承受所讨论故障。 relevant failure限定故障范围，不能写survive all failures。
 
-## T100
+**可复用句式**：X provides ____, whereas Y provides ____. The choice depends on ____.
 
-**Centralized、distributed、hierarchical management**
+X提供……，而Y提供……；选择取决于……。 whereas用同一维度做对比；空白要填机制或条件，不填无依据的best。
 
-- 题型：简答；检索码：Q67；依据：范围扩展题。
-- 知识点：Management architecture and scaling（管理架构、扩展与数据校验）。
+**变式练习**：The production link fails but the device and separate management path work. What can help?
 
-**Question:** Compare centralized, distributed and hierarchical network management.
+**变式参考**：Out-of-band access may support diagnosis and recovery. It must be reachable, protected and independent of the failed production path.
 
-**中文题意：**比较三种管理架构。
+**自查**：比较维度不对齐；把带外说成永不失效；把in-band/out-of-band等同于centralized/distributed。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T100:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**多方案比较＋选型。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) · PDF 51–54 · 搜索 In-band and Out-of-band Management
 
-1. 按信息/控制放置比较集中、分布、层级。
-2. 逐项写管理便利、汇聚故障、扩展和协调代价。
-3. 给多校园组织方式。
-4. 说明冗余与通信可达性条件。
 
-**现有参考答案的组织方式：**
+## T100 · Centralized、distributed、hierarchical management
 
-- 第1段：centralized特征与风险。
-- 第2段：distributed和hierarchical特征与协调。
-- 第3段：选型因素、校园例子及恢复边界。
+Compare centralized, distributed and hierarchical network management.
 
-**回Moodle核对：**
+比较三种管理架构。
 
-- [Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) → PDF物理页 **55–60、67–74**；课件主题：Centralized, Distributed and Hierarchical Management。
-
-搜索词：`centralized`；`distributed`；`hierarchical management`。
-
-查到后确认：看管理系统在哪里收集、存储和行动，而不只看网络拓扑。
-
-**换问法时：**若给恢复要求，说明管理系统和管理路径怎样继续可达。
-<!-- answer-guidance:T100:end -->
-
-### 中文思路
-
-集中简易但聚合/故障风险；分布本地处理复杂协调；层级分工汇总。
-
-### 英文参考答案（132词）
+### 精简参考答案
 
 Centralized management collects control and information at a main management system. It can simplify administration and provide a common view, but it can concentrate traffic and create a significant failure point unless protected.
 
@@ -568,63 +412,42 @@ Distributed management places systems across different domains or locations. Loc
 
 Choose the architecture according to network size, geography, reliability, staffing and cost. For example, a multi-campus network may benefit from local collection with a central service view. Distribution does not automatically remove every failure risk, and centralization does not forbid redundancy. State where information is collected, stored and acted on, and how those management systems remain reachable.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-centralized≠必然一台物理主机；logical集中可有冗余。
+**先懂概念**：管理系统的分布方式决定管理流量的汇聚与依赖；扩展规划需要估算采集负载和存储，并通过重复测量、元数据及归档策略维护数据可信度。
 
-变式：Choose a management model for a multi-site network and justify the trade-off.
+1. 集中便于统一视图但汇聚负载与故障；分布本地处理更易扩展但需协调；层级让本地采集与上层汇总分工。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 集中可以冗余，分布也会失败，因此不要仅凭名称推断韧性。标出数据在哪里收、存、分析和控制，方案才具体。
 
-### 来源
+**英文关键句**：A centralized view can still use redundancy.
 
-- [Moodle：Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) → **PDF物理页55–60、67–74**，关键词`Centralized, Distributed and Hierarchical Management`。
+集中视图仍可采用冗余。 still强调概念兼容；redundancy是“冗余/备用能力”，不是多装就必然独立。
 
-## T101
+**可复用句式**：X provides ____, whereas Y provides ____. The choice depends on ____.
 
-**Management traffic scaling**
+X提供……，而Y提供……；选择取决于……。 whereas用同一维度做对比；空白要填机制或条件，不填无依据的best。
 
-- 题型：简答；检索码：Q65；依据：范围扩展题。
-- 知识点：Management architecture and scaling（管理架构、扩展与数据校验）。
+**变式练习**：Must centralized management use only one unprotected server?
 
-**Question:** How should management traffic and storage be estimated and controlled?
+**变式参考**：No. A centralized logical view can use redundant systems. Evaluate availability and communication paths separately from the organizational model.
 
-**中文题意：**如何估计与控制管理开销？
+**自查**：centralized≠必然一台物理主机；logical集中可有冗余。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T101:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**估算方法＋控制。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) · PDF 55–60、67–74 · 搜索 Centralized, Distributed and Hierarchical Management
 
-1. 用device×interfaces×parameters得到每轮测量数。
-2. 乘每项wire bytes并除interval求速率。
-3. 存储按保留内容和retention另算。
-4. 用减少无用采集、分布和聚合控制负载并保留时效。
 
-**现有参考答案的组织方式：**
+## T101 · Management traffic scaling
 
-- 第1段：带宽估算输入与公式思路。
-- 第2段：storage、metadata、retention与突发。
-- 第3段：课件经验值及降低开销的办法。
+How should management traffic and storage be estimated and controlled?
 
-**回Moodle核对：**
+如何估计与控制管理开销？
 
-- [Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) → PDF物理页 **35–39、59–60**；课件主题：Scaling of Network Management Traffic。
-
-搜索词：`management traffic`；`polling`；`storage`。
-
-查到后确认：核对2–5%与10%为课件规划guidelines，不是协议硬限制。
-
-**换问法时：**若数字变化，先区分wire overhead是否计入存储，再重新计算。
-<!-- answer-guidance:T101:end -->
-
-### 中文思路
-
-D×I×P×(value+overhead)×8/T；存储未必含wire overhead；峰值另算。
-
-### 英文参考答案（133词）
+### 精简参考答案
 
 Estimate the number of devices, interfaces per device, parameters per interface and polling frequency. Multiply the number of measurements by the bytes generated per measurement, including relevant protocol overhead, to estimate traffic per polling cycle. Divide by the interval to obtain an average rate.
 
@@ -632,63 +455,42 @@ Storage is a separate calculation. It depends on which values and metadata are k
 
 The lecture gives LAN planning guidelines of roughly 2–5% management load and suggests review when it exceeds 10%. These are course heuristics, not universal limits. Reduce unnecessary parameters or polling frequency, distribute collection and use suitable aggregation. Critical management information still needs sufficient resources and timely delivery.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-2–5%、10%是课件经验参考；不是协议硬上限。
+**先懂概念**：管理系统的分布方式决定管理流量的汇聚与依赖；扩展规划需要估算采集负载和存储，并通过重复测量、元数据及归档策略维护数据可信度。
 
-变式：Calculate polling bandwidth or daily storage; distinguish average load from a burst.
+1. 每轮设备×接口×参数，再乘每项线上字节，除间隔得平均流量；存储只算实际保留内容与时间。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. wire overhead不自动写入历史库；同步poll会有峰值。2–5%与10%是课件经验指导，不是协议硬阈值。
 
-### 来源
+**英文关键句**：Traffic size and stored size may differ.
 
-- [Moodle：Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) → **PDF物理页35–39、59–60**，关键词`Scaling of Network Management Traffic`。
+线上流量大小与存储大小可能不同。 may differ表示“可能不同”；单位都为bytes也不能混用内容范围。
 
-## T102
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
 
-**LAN/WAN 管理监测点的放置**
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
 
-- 题型：简答；检索码：Q95；依据：缺口补题；依据课件的AI参考答案。
-- 知识点：Management architecture and scaling（管理架构、扩展与数据校验）。
+**变式练习**：If each value is stored without protocol headers, should wire overhead enter storage?
 
-**Question:** Where does the lecture suggest placing monitoring devices in LANs and WANs, and why?
+**变式参考**：No, unless those headers are actually retained. Traffic and storage use different per-measurement sizes and must be calculated separately.
 
-**中文题意：**解释课件LAN/WAN采集点建议。
+**自查**：2–5%、10%是课件经验参考；不是协议硬上限。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T102:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**位置＋原因。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) · PDF 35–39、59–60 · 搜索 Scaling of Network Management Traffic
 
-1. LAN先按每subnet一监测点的课件建议。
-2. WAN在WAN–LAN接口增加适当监测。
-3. 说明一个点可兼具多个观察角色。
-4. 用定位delay/loss解释位置价值及实际条件。
 
-**现有参考答案的组织方式：**
+## T102 · LAN/WAN 管理监测点的放置
 
-- 第1段：LAN起点建议及负载估算。
-- 第2段：WAN接口建议与监测点复用。
-- 第3段：位置用途、例子、非硬规则与端到端验证。
+Where does the lecture suggest placing monitoring devices in LANs and WANs, and why?
 
-**回Moodle核对：**
+解释课件LAN/WAN采集点建议。
 
-- [Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) → PDF物理页 **59–60**；课件主题：Scaling of Network Management Traffic。
-
-搜索词：`monitoring`；`LAN`；`WAN interface`。
-
-查到后确认：看monitor placement图和LAN/WAN说明，区分角色与物理设备数。
-
-**换问法时：**若改拓扑，按可见流量与故障域放点，不机械按标签复制设备。
-<!-- answer-guidance:T102:end -->
-
-### 中文思路
-
-LAN起点每subnet一个monitor；WAN再看每WAN–LAN接口；同一monitor可兼任。目的是本地与跨站点测量/SLA验证，仍评估负载和成本。
-
-### 英文参考答案（139词）
+### 精简参考答案
 
 For a LAN, the lecture suggests starting with one monitoring device per subnet. Estimate device numbers, interfaces, measured parameters and polling frequency to check the resulting management traffic.
 
@@ -696,63 +498,42 @@ For a WAN, it suggests monitoring at each WAN–LAN interface in addition to rel
 
 This placement helps observe conditions at each location and verify service across the wider network. For example, local measurements can be compared with WAN-boundary measurements to investigate where delay or loss occurs. These are starting guidelines rather than fixed universal rules. The final placement depends on traffic visibility, failure domains, security, cost and measurement needs. End-to-end service still requires suitable measurements across the complete relevant path.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-per-subnet与per-interface是规划起点；别机械重复部署同一位置，也别把一条链路测量当全路径保证。
+**先懂概念**：管理系统的分布方式决定管理流量的汇聚与依赖；扩展规划需要估算采集负载和存储，并通过重复测量、元数据及归档策略维护数据可信度。
 
-变式：先遮住答案复述；再换一个场景说明分类、机制或条件。
+1. 监测位置决定能看见什么；LAN每subnet一点、WAN–LAN接口一点是起点建议，不是标签越多设备越多。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 一个位置可兼任角色；要结合故障域、可见流、成本和安全。端到端服务还需跨相关路径的对照测量。
 
-### 来源
+**英文关键句**：One monitor may serve more than one role.
 
-- [Moodle：Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) → **PDF物理页59–60**，关键词`Scaling of Network Management Traffic`。
+一个监测点可承担多个角色。 more than one后用单数role；需要具体说明可见性条件。
 
-## T103
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
 
-**Checks、数据与 MIB 选择**
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
 
-- 题型：简答；检索码：Q66；依据：范围扩展题。
-- 知识点：Management architecture and scaling（管理架构、扩展与数据校验）。
+**变式练习**：A monitor already covers the WAN–LAN interface and its LAN. Must a duplicate be installed?
 
-**Question:** Explain checks and balances, management-data handling and MIB selection.
+**变式参考**：Not automatically. One collection point may serve both roles if it has the required visibility, capacity and failure coverage.
 
-**中文题意：**解释测量验证、存储和对象选择。
+**自查**：per-subnet与per-interface是规划起点；别机械重复部署同一位置，也别把一条链路测量当全路径保证。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T103:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**三任务解释。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) · PDF 59–60 · 搜索 Scaling of Network Management Traffic
 
-1. checks/balances用独立或交叉测量验证数据。
-2. data handling按本地、长期、归档和metadata规划。
-3. MIB selection按任务、SLA和vendor支持选择。
-4. 补OSS northbound要求及不盲采集。
 
-**现有参考答案的组织方式：**
+## T103 · Checks、数据与 MIB 选择
 
-- 第1段：交叉核对及可发现的数据问题。
-- 第2段：管理数据保存与metadata。
-- 第3段：MIB按需选择、OSS集成与采集成本。
+Explain checks and balances, management-data handling and MIB selection.
 
-**回Moodle核对：**
+解释测量验证、存储和对象选择。
 
-- [Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) → PDF物理页 **61–70**；课件主题：Checks and Balances。
-
-搜索词：`checks and balances`；`metadata`；`MIB`；`OSS`。
-
-查到后确认：核对数据错误类别与MIB选择依据，区分对象定义和保存历史。
-
-**换问法时：**若给异常counter，先查重置/回卷/厂商语义，不先断言业务流量突变。
-<!-- answer-guidance:T103:end -->
-
-### 中文思路
-
-重复测量查错/回卷/厂商差；短期本地长期归档；metadata；按目标选MIB/OSS。
-
-### 英文参考答案（131词）
+### 精简参考答案
 
 Checks and balances validate management information by comparing measurements or using independent collection points. They help detect recording errors, counter rollover, stuck values, changed variables and differences between vendors.
 
@@ -760,63 +541,42 @@ Management data needs a storage plan. Keep suitable information locally for even
 
 Choose MIBs according to the required tasks. Basic network health may need standard objects, while supported services, SLAs or vendor features may need additional objects. If management integrates with an operations support system, its northbound interface and data requirements must also be considered. Collecting everything without a purpose increases cost and can make useful information harder to find.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-计数器回卷可能造成错误负数速率；不要直接当真实流量下降。
+**先懂概念**：管理系统的分布方式决定管理流量的汇聚与依赖；扩展规划需要估算采集负载和存储，并通过重复测量、元数据及归档策略维护数据可信度。
 
-变式：Why are metadata and independent measurements necessary? Explain OSS integration.
+1. checks and balances验证“读数可信否”，metadata解释“这是什么、何时测、怎么算”，MIB selection回答“需要测什么”。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. counter跳变先查重置/回卷/语义再判业务异常；盲采一切会加成本且掩盖重点。OSS集成还需北向数据与接口要求。
 
-### 来源
+**英文关键句**：Validate the data before interpreting the result.
 
-- [Moodle：Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) → **PDF物理页61–70**，关键词`Checks and Balances`。
+解释结果前先验证数据。 before + 动词-ing；validate是“检查是否可信/有效”，不等于修改成想要的值。
 
-## T104
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
 
-**管理与其他组件的关系**
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
 
-- 题型：简答；检索码：Q68；依据：范围扩展题。
-- 知识点：Management architecture and scaling（管理架构、扩展与数据校验）。
+**变式练习**：A counter suddenly falls. Must traffic have become negative?
 
-**Question:** Explain the dependencies and external relationships of network management.
+**变式参考**：No. A reset or wrap may explain the change. Validate the counter semantics and timestamps before calculating a rate or declaring a traffic event.
 
-**中文题意：**解释管理组件依赖及与其他组件互动。
+**自查**：计数器回卷可能造成错误负数速率；不要直接当真实流量下降。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T104:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**依赖＋跨组件影响。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) · PDF 61–70 · 搜索 Checks and Balances
 
-1. 先列管理依赖的路径、容量、存储与device support。
-2. 再连addressing/routing、performance、security。
-3. 写管理消耗资源与需要受控访问的双向关系。
-4. 用恢复路径说明flow估计与优先级。
 
-**现有参考答案的组织方式：**
+## T104 · 管理与其他组件的关系
 
-- 第1段：管理基础依赖与OSS要求。
-- 第2段：管理和其他组件的关系。
-- 第3段：恢复访问例子、开销与flow优先级。
+Explain the dependencies and external relationships of network management.
 
-**回Moodle核对：**
+解释管理组件依赖及与其他组件互动。
 
-- [Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) → PDF物理页 **67–74**；课件主题：External Relationships。
-
-搜索词：`management dependencies`；`external`；`security`。
-
-查到后确认：核对管理数据的流量路径及与其他组件的相互影响。
-
-**换问法时：**若问internal/external，明确关系双方归属，避免按机房位置判断。
-<!-- answer-guidance:T104:end -->
-
-### 中文思路
-
-依赖通信/存储/OSS；routing可达、performance双向影响、security控制路径。
-
-### 英文参考答案（137词）
+### 精简参考答案
 
 Management depends on reliable communication paths, sufficient capacity, storage and suitable device support. Integration with an operations support system adds interface and information requirements. These are important dependencies within the management solution.
 
@@ -824,15 +584,31 @@ Management also interacts with other architectures. Addressing and routing deter
 
 The design must support important management flows without creating unnecessary exposure or overhead. For example, a separate management path can provide a fallback when the production path fails, but it must also be secured and maintained. Include management traffic in flow estimates and explain which information receives priority. A network is not fully manageable simply because its user traffic can be forwarded.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-S3/Q03讲带内带外；本题重跨组件因果。
+**先懂概念**：管理系统的分布方式决定管理流量的汇聚与依赖；扩展规划需要估算采集负载和存储，并通过重复测量、元数据及归档策略维护数据可信度。
 
-变式：Explain why management can both improve and reduce user performance.
+1. 管理本身是需要可靠路径、容量、存储和受控权限的服务，不能假设业务能转发就必然可管理。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 路由决定可达，QoS保障管理时效但采集占资源，安全限制访问但管理又需可视与配置。写双向影响才能形成可操作取舍。
 
-### 来源
+**英文关键句**：Management needs controlled visibility and access.
 
-- [Moodle：Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) → **PDF物理页67–74**，关键词`External Relationships`。
+管理需要受控的可视能力和访问。 controlled修饰访问方式；不是无条件开放管理权限。
+
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
+
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
+
+**变式练习**：A firewall blocks all management traffic. Is strong isolation enough?
+
+**变式参考**：No. Required monitoring and recovery access must remain available through authorized paths. Balance protection with the management dependencies of the service.
+
+**自查**：S3/Q03讲带内带外；本题重跨组件因果。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+
+</details>
+
+### Moodle定位
+
+- [Week 9 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4625921) · PDF 67–74 · 搜索 External Relationships
 

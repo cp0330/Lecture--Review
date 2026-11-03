@@ -1,56 +1,16 @@
 # 02-Week2-网络基础
 
-返回：[期末题库总入口](../README.md)；[旧题号与当前题号对照](../question-map.md)。
+[在线逐题学习](../review-bank.html) · [审校说明](../audit-2026-11-04.md)
 
-本册按对应课件的可见页序排列。计算与补题放到其知识点附近；Workshop Flow题接在Week5 Flow主线，原资源仍明确标为Workshop Week7a。综合长答统一放最后。
+> 参考答案与教学解析由AI依据课程资料整理，不是官方rubric。考前练习不扩大考试可用资料。
 
-来源页码按PDF文件从第1页起计，包含封面。英文答案为教学参考，不是官方评分答案。老师样题保留标记。使用条件与假设属于答案的一部分。
+## T005 · 网络要素与设备
 
-## T005
+Describe the main elements of a computer network and their roles.
 
-**网络要素与设备**
+说明终端、中间设备和介质的作用。
 
-- 题型：简答；检索码：Q10；依据：范围扩展题。
-- 知识点：Network elements and categories（网络要素与网络类别）。
-
-**Question:** Describe the main elements of a computer network and their roles.
-
-**中文题意：**说明终端、中间设备和介质的作用。
-
-<!-- answer-guidance:T005:start -->
-### 组织方式与答题思路
-
-**任务类型：**列举＋功能。以下为教学建议。
-
-**建议答题路线（按实际题干调整）：**
-
-1. 先列end devices、intermediate devices、media。
-2. 分别写产生/接收、转发/连接、传信号的作用。
-3. 给switch、router、AP等对应例子。
-4. 说明端到端服务仍可能受某一环节限制。
-
-**现有参考答案的组织方式：**
-
-- 第1段：端设备定义与例子。
-- 第2段：中间设备及各自作用。
-- 第3段：介质、协议地址与瓶颈例子。
-
-**回Moodle核对：**
-
-- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → PDF物理页 **5–19**；课件主题：Network elements。
-
-搜索词：`end devices`；`intermediate`；`media`。
-
-查到后确认：核对三类要素和switch/router/AP各自处理的对象。
-
-**换问法时：**若问某设备，只展开其功能与相邻概念，不罗列整章设备。
-<!-- answer-guidance:T005:end -->
-
-### 中文思路
-
-host 起止；switch 局域网转发；router 跨网络；AP无线接入；介质传信号。
-
-### 英文参考答案（129词）
+### 精简参考答案
 
 A computer network connects end devices through communication media and intermediate devices. End devices, also called hosts, create or receive messages. Examples include computers, servers and printers.
 
@@ -58,63 +18,42 @@ Intermediate devices help messages reach their destinations. A switch usually fo
 
 The media carry signals and may include copper cables, optical fibre or wireless links. Protocols and addresses make communication possible across these elements. A design must consider how the elements work together. For example, a fast backbone does not remove a slow wireless access link or a server bottleneck at the end of a path.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-不要把 switch 与 router 的典型作用写反。
+**先懂概念**：计算机网络通过传输介质连接终端，并由中间设备支持通信；网络可按地理范围、所有权和用途分类，不同分类维度不能直接混为一谈。
 
-变式：Identify hosts, links, switches, routers and access points in a diagram.
+1. 先区分端点、转发设备和介质：谁产生数据，谁帮它到达，什么承载信号。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 端到端性能由整条链决定。服务器慢属于系统限制，不能因为网络标称速率高就排除它。switch通常处理frame，router按IP转发packet。
 
-### 来源
+**英文关键句**：The service depends on all parts of the path.
 
-- [Moodle：Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → **PDF物理页5–19**，关键词`Network elements`。
+服务依赖路径上的所有部分。 depend on + 名词；all parts提醒你不要把“网络”只理解成交换机。
 
-## T006
+**可复用句式**：First, ____. This provides ____ for the next stage. Finally, verify ____.
 
-**网络类别**
+先……，这为下阶段提供……；最后验证……。 This必须指向前一阶段产出；不要只用first/next堆清单。
 
-- 题型：简答；检索码：Q11；依据：范围扩展题。
-- 知识点：Network elements and categories（网络要素与网络类别）。
+**变式练习**：A fast backbone serves an overloaded server. Will the backbone alone solve the problem?
 
-**Question:** Explain LAN, WAN, WLAN, CAN, MAN, SAN and VPN.
+**变式参考**：No. The server may remain the bottleneck. Check processing, storage and interface limits as well as the network path.
 
-**中文题意：**解释常见网络类别，并区分分类维度。
+**自查**：不要把 switch 与 router 的典型作用写反。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T006:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**分类解释。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) · PDF 5–19 · 搜索 Network elements
 
-1. 按范围解释LAN、CAN、MAN、WAN。
-2. 解释WLAN的无线接入属性。
-3. 解释SAN的存储目的和VPN的逻辑私有连接。
-4. 指出分类维度不同，同一网络可同时属于多类。
 
-**现有参考答案的组织方式：**
+## T006 · 网络类别
 
-- 第1段：地理范围类别，附PAN背景。
-- 第2段：WLAN、SAN与VPN。
-- 第3段：分类维度及校园组合例子。
+Explain LAN, WAN, WLAN, CAN, MAN, SAN and VPN.
 
-**回Moodle核对：**
+解释常见网络类别，并区分分类维度。
 
-- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → PDF物理页 **9–19**；课件主题：Network categories。
-
-搜索词：`LAN`；`WAN`；`WLAN`；`SAN`；`VPN`。
-
-查到后确认：核对缩写全称及按范围、技术、用途、逻辑访问分类的区别。
-
-**换问法时：**按实际题干列齐要求的类别；题未要求PAN时可不展开。
-<!-- answer-guidance:T006:end -->
-
-### 中文思路
-
-地理范围、无线技术、存储用途、逻辑私网是不同维度。
-
-### 英文参考答案（134词）
+### 精简参考答案
 
 A LAN connects devices within a limited local area, such as an office. A WAN connects networks across larger distances. A MAN covers a metropolitan area, while a CAN links networks across a campus. A PAN serves a person’s nearby devices.
 
@@ -122,63 +61,85 @@ A WLAN is a wireless local area network. Wireless describes how devices connect,
 
 These labels use different ways of classifying networks: geographical scope, connection technology, purpose and logical access. Therefore, one network can fit several labels. A university can have campus LANs, wireless access and VPN access through a WAN.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-CAN 在这里是 Campus Area Network；不要混用地理范围与用途。
+**先懂概念**：计算机网络通过传输介质连接终端，并由中间设备支持通信；网络可按地理范围、所有权和用途分类，不同分类维度不能直接混为一谈。
 
-变式：Choose a network category for a campus, storage system or remote worker.
+1. 每个名称先找分类维度：LAN/WAN等按范围；WLAN按接入方式；SAN按用途；VPN按逻辑访问。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 不同维度可以重叠；一个校园里的存储网络可以使用局域技术，不能把这些缩写排成单一大小顺序。
 
-### 来源
+**英文关键句**：These terms describe different properties.
 
-- [Moodle：Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → **PDF物理页9–19**，关键词`Network categories`。
+这些术语描述不同属性。 property在这里是“属性”；different后用复数properties。
 
-## T007
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
 
-**网络组织模式**
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
 
-- 题型：简答；检索码：Q12；依据：范围扩展题。
-- 知识点：Network organization models（网络组织模式）。
+**变式练习**：Can a campus network include both a WLAN and a VPN?
 
-**Question:** Compare centralized, client-server, distributed, peer-to-peer, cloud-based and hybrid networks.
+**变式参考**：Yes. WLAN describes wireless local access. VPN describes a logical private connection. They describe different properties and can coexist.
 
-**中文题意：**比较六种组织模式。
+**自查**：CAN 在这里是 Campus Area Network；不要混用地理范围与用途。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T007:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**多项比较。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) · PDF 9–19 · 搜索 Network categories
 
-1. 完整识别六种组织模式。
-2. 按控制/处理位置和资源角色比较。
-3. 补管理、依赖、故障与成本的取舍。
-4. 说明模式可以组合，用需求选型。
 
-**现有参考答案的组织方式：**
+## T134 · 传输介质与无线范围
 
-- 第1段：集中式、client-server及集中服务取舍。
-- 第2段：distributed、peer-to-peer及协调问题。
-- 第3段：cloud、hybrid、选型条件与重叠关系。
+Compare copper, optical fibre and wireless media. What should a designer check when selecting a medium and describing wireless coverage?
 
-**回Moodle核对：**
+按容量、距离、环境和部署条件比较介质。
 
-- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → PDF物理页 **21–26**；课件主题：Network Architecture。
+### 精简参考答案
 
-搜索词：`centralized`；`client-server`；`distributed`；`hybrid`。
+Copper carries electrical signals and can be practical for local connections, subject to its distance and interference limits. Optical fibre carries light and can support high-capacity links over suitable distances. It requires appropriate interfaces, installation and maintenance.
 
-查到后确认：核对六类名称，并找每类控制和服务放在哪里。
+Wireless communication avoids a cable to each mobile endpoint, but its performance depends on coverage, shared demand, obstacles, interference and the radio technology. The lecture distinguishes nearby, extended local and mobile communication contexts. Infrared, radio, microwave and laser links also have different propagation and alignment requirements. These names alone do not specify an application’s delivered rate.
 
-**换问法时：**若给具体场景，用同一组维度比较候选，不只背六个定义。
-<!-- answer-guidance:T007:end -->
+A designer should compare the required capacity, delay, reach, environment, mobility, installation cost and support skills. For example, fibre may suit a building backbone while wireless access supports moving users. A complete path can combine media. The choice must be verified under expected conditions rather than based only on a nominal link speed or a medium’s name.
 
-### 中文思路
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-角色、资源位置、管理及故障依赖。
+**先懂概念**：计算机网络通过传输介质连接终端，并由中间设备支持通信；网络可按地理范围、所有权和用途分类，不同分类维度不能直接混为一谈。
 
-### 英文参考答案（129词）
+1. 介质选择要问距离、移动性、干扰、容量、安装与支持；名称不能代替实测。光纤适合某些骨干，无线适合移动接入，但都有具体设备和环境限制。
+
+2. 课件列出的红外、射频、微波、激光有不同传播/对准条件；不要把某个示意链路写成整个技术永远单向。
+
+**英文关键句**：The medium should fit the distance and environment.
+
+介质应适合距离与环境。 medium单数、media复数；fit后直接接条件。
+
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
+
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
+
+**变式练习**：A mobile class needs local access. Should a fibre backbone alone satisfy mobility?
+
+**变式参考**：No. Fibre may serve the backbone, while a suitable wireless access system serves moving endpoints. Check coverage, interference, shared load and support.
+
+**自查**：课件列出的红外、射频、微波、激光有不同传播/对准条件；不要把某个示意链路写成整个技术永远单向。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+
+</details>
+
+### Moodle定位
+
+- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) · PDF 9–12 · 搜索 Transmission media
+
+
+## T007 · 网络组织模式
+
+Compare centralized, client-server, distributed, peer-to-peer, cloud-based and hybrid networks.
+
+比较六种组织模式。
+
+### 精简参考答案
 
 A centralized network places major control or processing at a central computer. A client-server network gives clients and servers different roles: clients request services and servers provide them. Central services can simplify management but may create important points of failure.
 
@@ -186,63 +147,42 @@ In a distributed network, resources and work are spread across computers. In a p
 
 A cloud-based network uses resources hosted on remote cloud servers and depends on access to those services. A hybrid network combines models, such as central authentication with direct sharing between peers. The choice should follow application flows, management needs, reliability and cost. These models can overlap; a cloud service may also use a client-server model.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-不要声称 distributed 绝对没有中心；模式可以组合。
+**先懂概念**：网络组织模式描述资源、处理或服务如何分布在参与设备之间，以及设备承担的角色；它与线路连接的拓扑视角不同。
 
-变式：Compare client-server and peer-to-peer; discuss cloud dependence.
+1. 组织模式看角色与资源分布，不是线画成什么形状。client-server强调请求/提供服务，centralized强调控制或处理集中，两者有关但不等同。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. cloud说明资源托管位置与服务依赖，也可能采用client-server；hybrid应明确组合哪些角色，不能仅写“混合所以最好”。
 
-### 来源
+**英文关键句**：A network can combine several models.
 
-- [Moodle：Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → **PDF物理页21–26**，关键词`Network Architecture`。
+一个网络可以组合多种模式。 can + 动词原形；combine强调组合，随后应写具体组合什么。
 
-## T008
+**可复用句式**：X provides ____, whereas Y provides ____. The choice depends on ____.
 
-**拓扑与故障**
+X提供……，而Y提供……；选择取决于……。 whereas用同一维度做对比；空白要填机制或条件，不填无依据的best。
 
-- 题型：简答；检索码：Q13；依据：范围扩展题。
-- 知识点：Network topology（网络拓扑）。
+**变式练习**：A cloud application has clients and remote servers. Which model applies?
 
-**Question:** Compare mesh, tree, bus, star and ring topologies.
+**变式参考**：It is cloud-based in hosting and client-server in application roles. The categories can overlap; the design still depends on connectivity and service resilience.
 
-**中文题意：**比较五种拓扑及成本、故障影响。
+**自查**：不要声称 distributed 绝对没有中心；模式可以组合。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T008:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**多项比较。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) · PDF 21–26 · 搜索 Network Architecture
 
-1. 先说明五种连接结构。
-2. 逐类解释链路/中心设备故障影响。
-3. 比较冗余、成本与扩展性。
-4. 补physical与logical的区别和保护条件。
 
-**现有参考答案的组织方式：**
+## T008 · 拓扑与故障
 
-- 第1段：star的结构与故障。
-- 第2段：mesh、tree、bus、ring及取舍。
-- 第3段：物理/逻辑拓扑与选型依据。
+Compare mesh, tree, bus, star and ring topologies.
 
-**回Moodle核对：**
+比较五种拓扑及成本、故障影响。
 
-- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → PDF物理页 **28–34**；课件主题：Network Topology。
-
-搜索词：`mesh`；`tree`；`bus`；`star`；`ring`。
-
-查到后确认：看拓扑图确认连接关系及故障传播范围。
-
-**换问法时：**若题目给故障，沿实际连接判断受影响范围，不直接套拓扑名称。
-<!-- answer-guidance:T008:end -->
-
-### 中文思路
-
-连接结构 → 备用路径与故障范围；物理/逻辑区分。
-
-### 英文参考答案（131词）
+### 精简参考答案
 
 A star connects devices to a central device. It is easy to extend, but failure of the central device may affect many users. Failure of one edge link usually affects only its attached device.
 
@@ -250,63 +190,42 @@ A mesh provides multiple connections and alternative paths. It can improve resil
 
 Physical topology describes actual connections. Logical topology describes communication relationships. A suitable choice balances cost, scale, traffic and failure requirements.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-不能说任何 ring 断一条链路都必然全网停机。
+**先懂概念**：网络拓扑描述节点和链路的连接结构；比较拓扑时需要结合冗余、故障影响、布线成本和扩展需求，不能仅凭图形名称判断好坏。
 
-变式：Compare star and mesh; identify a single point of failure.
+1. 故障影响要沿连接关系判断：star的边缘线断与中心设备坏影响不同；tree越靠近根的故障可能影响越多分支。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. mesh的备用路径需可用且被正确控制才有帮助；ring有无保护决定断点后果。不要把形状名称当无条件可靠性保证。
 
-### 来源
+**英文关键句**：The effect depends on where the failure occurs.
 
-- [Moodle：Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → **PDF物理页28–34**，关键词`Network Topology`。
+影响取决于故障发生在哪里。 where从句表示位置；depends on后可以接这个完整从句。
 
-## T009
+**可复用句式**：X provides ____, whereas Y provides ____. The choice depends on ____.
 
-**Protocol 的规则**
+X提供……，而Y提供……；选择取决于……。 whereas用同一维度做对比；空白要填机制或条件，不填无依据的best。
 
-- 题型：简答；检索码：Q14；依据：范围扩展题。
-- 知识点：Network protocols and layers（网络协议与分层模型）。
+**变式练习**：A star network loses one host link. Is the whole network necessarily down?
 
-**Question:** What is a network protocol, and why must communicating devices follow common rules?
+**变式参考**：No. Usually only that host loses its connection. A central-device failure can affect many hosts, so the failure location matters.
 
-**中文题意：**什么是协议，为什么必须遵循共同规则？
+**自查**：不能说任何 ring 断一条链路都必然全网停机。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T009:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**定义＋原因。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) · PDF 28–34 · 搜索 Network Topology
 
-1. 定义protocol是通信规则。
-2. 说明格式、含义、顺序和事件动作。
-3. 解释双方一致才能识别、响应与处理消息。
-4. 用超时或共享介质说明规则的作用。
 
-**现有参考答案的组织方式：**
+## T009 · Protocol 的规则
 
-- 第1段：protocol的正式定义。
-- 第2段：共同规则、时间规则与例子。
-- 第3段：实现方式、分工与没有规则的后果。
+What is a network protocol, and why must communicating devices follow common rules?
 
-**回Moodle核对：**
+什么是协议，为什么必须遵循共同规则？
 
-- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → PDF物理页 **36–46**；课件主题：Network Protocol。
-
-搜索词：`protocol`；`timing`；`encapsulation`。
-
-查到后确认：核对协议规定哪些规则，尤其timing和message format。
-
-**换问法时：**若只问why，先写无法正确理解或处理消息的后果，再用规则支持。
-<!-- answer-guidance:T009:end -->
-
-### 中文思路
-
-格式、含义、顺序、时序、发送接收动作。
-
-### 英文参考答案（132词）
+### 精简参考答案
 
 A network protocol defines rules for exchanging messages between communicating entities. It specifies message formats, the meaning of fields, the order of exchanges and the actions taken when a message or event occurs.
 
@@ -314,63 +233,42 @@ Common rules are needed for encoding, message size, encapsulation, timing and de
 
 Protocols can be implemented in software, hardware or both. Different protocols perform different tasks, such as application communication, routing and security. They must work together along a communication path. Without agreed rules, two devices might be physically connected but still be unable to understand or correctly process each other’s messages.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-protocol 不只是设备之间的一根线或一种语言名称。
+**先懂概念**：协议规定通信消息的格式、顺序和相应动作；分层把通信功能分开，上层使用下层服务，封装使各层的信息能够随数据传递。
 
-变式：Explain encoding, encapsulation, timing and delivery rules.
+1. 协议必须同时规定格式和含义；收到同样比特但解释不同，仍无法协作。还需规定何时发送、何时超时、收到消息后做什么。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 可以用请求/响应说明：不仅知道请求长什么样，还要知道何时回、等待多久以及出错后的动作。
 
-### 来源
+**英文关键句**：A physical connection alone is not enough.
 
-- [Moodle：Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → **PDF物理页36–46**，关键词`Network Protocol`。
+仅有物理连接不够。 alone放在名词后突出“仅有”；后面应补具体缺少的规则。
 
-## T010
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
 
-**OSI、TCP/IP 与封装**
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
 
-- 题型：简答；检索码：Q15；依据：范围扩展题。
-- 知识点：Network protocols and layers（网络协议与分层模型）。
+**变式练习**：Two devices use the same cable but interpret fields differently. Can they communicate correctly?
 
-**Question:** Describe the OSI and TCP/IP models and explain encapsulation.
+**变式参考**：Physical connection alone is insufficient. They need common message formats, meanings and exchange rules to process messages correctly.
 
-**中文题意：**描述分层模型与封装过程。
+**自查**：protocol 不只是设备之间的一根线或一种语言名称。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T010:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**列举＋过程。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) · PDF 36–46 · 搜索 Network Protocol
 
-1. 按顺序列OSI七层与本课TCP/IP四层。
-2. 说明上层和network access的对应。
-3. 沿发送方向说明封装。
-4. 沿接收方向说明解封装及分层用途。
 
-**现有参考答案的组织方式：**
+## T010 · OSI、TCP/IP 与封装
 
-- 第1段：OSI七层和服务关系。
-- 第2段：TCP/IP四层及与OSI的对应。
-- 第3段：封装、接收端处理及分层边界。
+Describe the OSI and TCP/IP models and explain encapsulation.
 
-**回Moodle核对：**
+描述分层模型与封装过程。
 
-- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → PDF物理页 **47–57、85–89**；课件主题：Network Protocol Models。
-
-搜索词：`OSI`；`TCP/IP`；`encapsulation`。
-
-查到后确认：核对本课四层模型，不混用其他教材的五层模型。
-
-**换问法时：**若重点是encapsulation，缩短层名清单，突出各层增加和移除什么信息。
-<!-- answer-guidance:T010:end -->
-
-### 中文思路
-
-OSI 七层；TCP/IP 四层；发端加头、收端逐层解释移除。
-
-### 英文参考答案（128词）
+### 精简参考答案
 
 The OSI model has seven layers: application, presentation, session, transport, network, data link and physical. Each layer has a particular communication role and uses services from the layer below.
 
@@ -378,63 +276,42 @@ The TCP/IP model in this course has four layers: application, transport, Interne
 
 During encapsulation, application data passes down the stack. Transport and Internet protocols add information needed for process delivery and routing. The link layer places the packet in a frame, and the physical layer sends signals. At the receiver, corresponding layers interpret and remove the relevant information. Layering separates responsibilities and helps troubleshooting. It does not mean that each model layer always corresponds to one separate physical device.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-区分 packet、frame 和 signal；TCP/IP 本课用四层。
+**先懂概念**：协议规定通信消息的格式、顺序和相应动作；分层把通信功能分开，上层使用下层服务，封装使各层的信息能够随数据传递。
 
-变式：Name seven OSI layers; map them to TCP/IP; explain a web request.
+1. 发送端从上到下封装，接收端按对应层解释并移除控制信息；分层是职责划分，不是每层一台设备。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 本课程TCP/IP采用四层；其他教材的五层教学模型可帮助理解，但答本题时要说明使用的是哪一个模型，避免数量前后矛盾。
 
-### 来源
+**英文关键句**：Each layer uses services from the layer below.
 
-- [Moodle：Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → **PDF物理页47–57、85–89**，关键词`Network Protocol Models`。
+每层使用下一层提供的服务。 the layer below是“下面那一层”；from说明服务来源。
 
-## T011
+**可复用句式**：First, ____. This provides ____ for the next stage. Finally, verify ____.
 
-**应用协议、端口与 socket**
+先……，这为下阶段提供……；最后验证……。 This必须指向前一阶段产出；不要只用first/next堆清单。
 
-- 题型：简答；检索码：Q17；依据：范围扩展题。
-- 知识点：Network protocols and layers（网络协议与分层模型）。
+**变式练习**：Why can one computer implement several layers?
 
-**Question:** Explain the roles of application protocols, ports and sockets.
+**变式参考**：Layers separate communication functions, not physical boxes. A host can implement application, transport, Internet and network-access functions together.
 
-**中文题意：**解释应用层协议与进程定位。
+**自查**：区分 packet、frame 和 signal；TCP/IP 本课用四层。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T011:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**关系解释。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) · PDF 47–57、85–89 · 搜索 Network Protocol Models
 
-1. 说明应用协议规定消息交互。
-2. 区分IP地址、port和socket的定位作用。
-3. 解释multiplexing与demultiplexing。
-4. 用浏览器和HTTP说明应用不是协议。
 
-**现有参考答案的组织方式：**
+## T011 · 应用协议、端口与 socket
 
-- 第1段：应用协议与常见例子。
-- 第2段：IP、port、socket的作用。
-- 第3段：复用/分用和应用与协议的区别。
+Explain the roles of application protocols, ports and sockets.
 
-**回Moodle核对：**
+解释应用层协议与进程定位。
 
-- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → PDF物理页 **58–60、66–67**；课件主题：Application Layer。
-
-搜索词：`port`；`socket`；`multiplexing`；`HTTP`。
-
-查到后确认：核对进程端点定位方式和应用协议示例。
-
-**换问法时：**若只问ports/sockets，围绕同一主机多应用的数据交付展开。
-<!-- answer-guidance:T011:end -->
-
-### 中文思路
-
-应用协议规定业务消息；IP到host；port到应用端点；socket 接口。
-
-### 英文参考答案（135词）
+### 精简参考答案
 
 Application protocols define how applications exchange meaningful messages. HTTP supports web requests and responses, DNS translates names into network information, and SMTP supports sending email. FTP supports file transfer, while POP and IMAP support email access.
 
@@ -442,63 +319,85 @@ An IP address identifies a network interface for packet delivery. A transport po
 
 Multiplexing collects data from different sockets for transmission. Demultiplexing delivers received data to the correct socket using transport information. This allows several applications to share the network at the same time. A web browser is an application; HTTP is a protocol that the browser and server use. They are related but are not the same thing.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-DNS 不等于 DHCP；应用与应用层协议不同。
+**先懂概念**：协议规定通信消息的格式、顺序和相应动作；分层把通信功能分开，上层使用下层服务，封装使各层的信息能够随数据传递。
 
-变式：Distinguish a browser from HTTP; explain multiplexing and demultiplexing.
+1. IP把包送到主机接口，transport信息帮助交给对应应用端点，socket是应用使用通信服务的接口/端点。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 浏览器不是HTTP，正如一个程序不等于它使用的消息规则。DNS标准全称为Domain Name System；不要沿用课件偶见的Service写法。
 
-### 来源
+**英文关键句**：A port helps identify an application endpoint.
 
-- [Moodle：Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → **PDF物理页58–60、66–67**，关键词`Application Layer`。
+端口帮助识别应用端点。 help + 动词原形；endpoint是“端点”，不是整个应用程序的所有状态。
 
-## T012
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
 
-**TCP 与 UDP**
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
 
-- 题型：简答；检索码：Q16；依据：范围扩展题。
-- 知识点：Network protocols and layers（网络协议与分层模型）。
+**变式练习**：Two applications share one host IP address. How is received data delivered correctly?
 
-**Question:** Compare TCP and UDP and explain when each may be useful.
+**变式参考**：Transport information supports demultiplexing to the appropriate socket. The IP address alone does not identify every application endpoint.
 
-**中文题意：**比较传输层两种协议。
+**自查**：DNS 不等于 DHCP；应用与应用层协议不同。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T012:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**比较＋场景。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) · PDF 58–60、66–67 · 搜索 Application Layer
 
-1. 按连接、可靠性、顺序、控制机制对照TCP与UDP。
-2. 说明机制产生的开销和服务差别。
-3. 各给合适应用。
-4. 补UDP不自动低延迟、应用可自行实现机制。
 
-**现有参考答案的组织方式：**
+## T135 · PDU、process 与 socket 的完整路径
 
-- 第1段：TCP服务与可靠传输机制。
-- 第2段：UDP服务边界及应用责任。
-- 第3段：应用选择与延迟、丢失和开销条件。
+Trace a message from an application process through encapsulation to the medium. Name the PDUs and explain the role of a socket.
 
-**回Moodle核对：**
+把进程、socket、各层PDU及封装连成一条完整链。
 
-- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → PDF物理页 **61–68**；课件主题：Transport Layer。
+### 精简参考答案
 
-搜索词：`TCP`；`UDP`；`retransmission`；`congestion`。
+An application process is a running program. It uses a socket, an application communication endpoint, to exchange messages through the network stack. An application protocol defines message types, syntax, meaning and exchange rules. The application itself is broader than that protocol.
 
-查到后确认：核对两者内建保证及flow/congestion control的区别。
+In the course model, the upper OSI layers handle data. At the transport layer, TCP carries segments and UDP carries datagrams. The network layer carries packets, the data-link layer carries frames, and the physical layer sends bits through signals or symbols. During encapsulation, layers add the control information needed for their roles; the link layer may add a trailer as well as a header.
 
-**换问法时：**若要求推荐协议，先说明应用更看重完整有序还是及时性，再解释取舍。
-<!-- answer-guidance:T012:end -->
+At the destination, the stack processes the received information and delivers application data through the appropriate socket. For example, a web browser uses HTTP messages, transport delivery and IP packet delivery together. A socket is not a physical cable, and one application message need not equal one network packet.
 
-### 中文思路
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-TCP可靠有序、连接、流控拥塞控；UDP无这些内建保证，应用取舍。
+**先懂概念**：协议规定通信消息的格式、顺序和相应动作；分层把通信功能分开，上层使用下层服务，封装使各层的信息能够随数据传递。
 
-### 英文参考答案（129词）
+1. 从程序到信号分两条线记：process通过socket使用服务；数据经过各层变成segment/datagram、packet、frame和bits。
+
+2. 封装增加本层控制信息，解封装解释并移除。一个message可分成多个segment/packet，所以不要强行一对一；frame也可有trailer。
+
+**英文关键句**：A socket gives a process access to network services.
+
+socket让进程使用网络服务。 give A access to B是完整表达“让A有使用B的入口”。
+
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
+
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
+
+**变式练习**：Must one application message equal one Ethernet frame?
+
+**变式参考**：No. Transport segmentation and link constraints can produce several packets or frames. PDU names identify layer roles, not a fixed one-to-one message mapping.
+
+**自查**：封装增加本层控制信息，解封装解释并移除。一个message可分成多个segment/packet，所以不要强行一对一；frame也可有trailer。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+
+</details>
+
+### Moodle定位
+
+- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) · PDF 52–60 · 搜索 Protocol Data Units
+
+
+## T012 · TCP 与 UDP
+
+Compare TCP and UDP and explain when each may be useful.
+
+比较传输层两种协议。
+
+### 精简参考答案
 
 TCP provides connection-oriented communication and a reliable, ordered byte stream. It uses sequence numbers, acknowledgements and retransmission to handle missing data. It also includes flow control and congestion control.
 
@@ -506,63 +405,42 @@ UDP sends datagrams without setting up a TCP-style connection. It does not itsel
 
 TCP is useful when complete and ordered delivery matters, such as transferring a file. UDP can suit applications that prefer timely delivery or use their own communication mechanisms. However, UDP is not automatically fast enough for every real-time application, and TCP does not guarantee low delay. The designer must consider application tolerance for loss, delay, overhead and the behaviour of the complete path.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-不要写 UDP 保证实时、TCP保证固定延迟。
+**先懂概念**：协议规定通信消息的格式、顺序和相应动作；分层把通信功能分开，上层使用下层服务，封装使各层的信息能够随数据传递。
 
-变式：Explain reliable vs unreliable service and connection-oriented vs connectionless.
+1. TCP的可靠、有序由编号、确认与重传等机制实现，代价可能是等待和额外控制。UDP没有这些内建保证，但应用可以另建机制。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 因此“及时”与“完整”要看任务取舍；不要写所有视频必用UDP，现代应用可能有不同传输实现。
 
-### 来源
+**英文关键句**：Reliable delivery does not guarantee low delay.
 
-- [Moodle：Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → **PDF物理页61–68**，关键词`Transport Layer`。
+可靠交付不保证低时延。 does not + 动词原形；用一句边界避免把一个优点扩展成所有保证。
 
-## T013
+**可复用句式**：X provides ____, whereas Y provides ____. The choice depends on ____.
 
-**Forwarding、routing 与各层地址**
+X提供……，而Y提供……；选择取决于……。 whereas用同一维度做对比；空白要填机制或条件，不填无依据的best。
 
-- 题型：简答；检索码：Q18；依据：范围扩展题。
-- 知识点：Network protocols and layers（网络协议与分层模型）。
+**变式练习**：A file must arrive complete and in order. What is a reasonable starting choice?
 
-**Question:** Distinguish forwarding from routing and explain link-layer and network-layer delivery.
+**变式参考**：TCP is a reasonable choice because it provides a reliable, ordered byte stream. Check the actual application and path; reliability does not imply a fixed delay bound.
 
-**中文题意：**区分转发与路由，以及链路层和网络层。
+**自查**：不要写 UDP 保证实时、TCP保证固定延迟。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T013:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**区分＋路径解释。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) · PDF 61–68 · 搜索 Transport Layer
 
-1. routing学习可达性并选路径。
-2. forwarding按已有信息进行本地转发。
-3. 区分IP跨网络与MAC逐链路交付。
-4. 沿下一跳说明frame重建与IP目的地址通常保持。
 
-**现有参考答案的组织方式：**
+## T013 · Forwarding、routing 与各层地址
 
-- 第1段：routing与forwarding的分工。
-- 第2段：IP、MAC和物理层的交付范围。
-- 第3段：路由器逐跳换frame及NAT例外。
+Distinguish forwarding from routing and explain link-layer and network-layer delivery.
 
-**回Moodle核对：**
+区分转发与路由，以及链路层和网络层。
 
-- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → PDF物理页 **69–89**；课件主题：Network Layer。
-
-搜索词：`forwarding`；`routing`；`MAC`；`frame`。
-
-查到后确认：看逐跳图确认地址和封装在哪一层变化。
-
-**换问法时：**若给报文路径，逐跳说下一跳及frame地址，不把最终IP目的写成网关。
-<!-- answer-guidance:T013:end -->
-
-### 中文思路
-
-routing算路径/学习可达；forwarding查表送下一跳；MAC逐链路、IP跨网络。
-
-### 英文参考答案（130词）
+### 精简参考答案
 
 Routing learns network reachability and selects paths. Routing information is used to build forwarding information. Forwarding is the local action of moving an arriving packet to the correct outgoing interface or next hop.
 
@@ -570,63 +448,42 @@ At the network layer, IP addresses identify source and destination interfaces ac
 
 When a router forwards a packet onto another link, it usually creates a new link-layer frame for that next link. The final IP destination normally remains the same unless a mechanism such as NAT changes it. This distinction helps explain why routers need both network-layer forwarding information and suitable link-layer information for their next-hop communication.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-不要把 forwarding 的逐包动作与 routing 的路径计算互换。
+**先懂概念**：协议规定通信消息的格式、顺序和相应动作；分层把通信功能分开，上层使用下层服务，封装使各层的信息能够随数据传递。
 
-变式：Explain control plane and data plane; trace a packet through a router.
+1. routing决定或学习可达路径，forwarding是设备收到包后按已有信息执行下一跳。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 跨路由器时frame通常逐跳重建，MAC针对下一条链路；最终IP目的通常不变。网关是本地下一跳，不因此成为应用的最终目的。
 
-### 来源
+**英文关键句**：The frame changes at each routed link.
 
-- [Moodle：Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → **PDF物理页69–89**，关键词`Network Layer`。
+经过路由的各链路上，帧会改变。 at each强调逐处；不能把这句扩大成“每个交换机都改IP”。
 
-## T014
+**可复用句式**：X provides ____, whereas Y provides ____. The choice depends on ____.
 
-**Router 四部件**
+X提供……，而Y提供……；选择取决于……。 whereas用同一维度做对比；空白要填机制或条件，不填无依据的best。
 
-- 题型：简答；检索码：Q85；依据：范围扩展题。
-- 知识点：Network protocols and layers（网络协议与分层模型）。
+**变式练习**：A host sends to a remote server. Is the gateway the final IP destination?
 
-**Question:** Describe the four main components of a router and their roles.
+**变式参考**：Normally no. The local frame is sent to the gateway, while the IP packet keeps the remote server as its destination, unless a translation mechanism changes it.
 
-**中文题意：**解释路由器内部四个主要组成。
+**自查**：不要把 forwarding 的逐包动作与 routing 的路径计算互换。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T014:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**列举＋功能。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) · PDF 69–89 · 搜索 Network Layer
 
-1. 列input ports、switching fabric、output ports、routing processor。
-2. 沿包的接收、内部交换、排队、发送说明前三项。
-3. 解释routing processor的control-plane工作。
-4. 区分决策与执行，补性能限制。
 
-**现有参考答案的组织方式：**
+## T014 · Router 四部件
 
-- 第1段：四部件总览与input ports。
-- 第2段：switching fabric、output ports和排队。
-- 第3段：routing processor、SDN对照及资源限制。
+Describe the four main components of a router and their roles.
 
-**回Moodle核对：**
+解释路由器内部四个主要组成。
 
-- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → PDF物理页 **71–76**；课件主题：Network Layer - Router。
-
-搜索词：`input ports`；`switching fabric`；`routing processor`。
-
-查到后确认：看路由器结构图核对四部件及control/data plane关系。
-
-**换问法时：**若问性能瓶颈，把限制具体落到端口、交换结构、排队或处理资源。
-<!-- answer-guidance:T014:end -->
-
-### 中文思路
-
-input ports接收；fabric内部搬运；output ports缓冲/发出；processor控制。
-
-### 英文参考答案（137词）
+### 精简参考答案
 
 A router has input ports, output ports, a switching fabric and a routing processor. Input ports receive traffic and perform the relevant physical- and link-layer functions. They also participate in forwarding operations.
 
@@ -634,63 +491,42 @@ The switching fabric connects input ports to the appropriate output ports inside
 
 The routing processor performs control-plane work. In a traditional router, it runs routing protocols, maintains routing information and helps compute forwarding tables. In an SDN design, the device can receive forwarding information through communication with a controller. These roles explain the distinction between deciding forwarding behaviour and carrying out local packet forwarding. Processing, fabric and interface limits can each affect performance.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-switching fabric是路由器内部连接结构，不是独立外置交换机的必然名称。
+**先懂概念**：协议规定通信消息的格式、顺序和相应动作；分层把通信功能分开，上层使用下层服务，封装使各层的信息能够随数据传递。
 
-变式：Relate router components to control/data planes and possible bottlenecks.
+1. 按一次包的旅程理解四部件：input接收，fabric内部转移，output排队发送，processor维护控制信息。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 排队可能发生在不同位置；端口速率、交换结构或处理能力都可限制性能。控制与转发的职责区别是后续SDN的基础。
 
-### 来源
+**英文关键句**：Packets wait when arrivals exceed service capacity.
 
-- [Moodle：Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → **PDF物理页71–76**，关键词`Network Layer - Router`。
+到达需求超过服务能力时，包会等待。 when引出条件；exceed意为“超过”，比写too much更精确。
 
-## T015
+**可复用句式**：First, ____. This provides ____ for the next stage. Finally, verify ____.
 
-**Routing algorithm 三组分类**
+先……，这为下阶段提供……；最后验证……。 This必须指向前一阶段产出；不要只用first/next堆清单。
 
-- 题型：简答；检索码：Q86；依据：范围扩展题。
-- 知识点：Network protocols and layers（网络协议与分层模型）。
+**变式练习**：Why can an output queue grow even when routing is correct?
 
-**Question:** Compare centralized/decentralized, static/dynamic and load-sensitive/load-insensitive routing algorithms.
+**变式参考**：Packets may arrive faster than the output link can transmit. Correct path selection does not remove capacity limits or queuing delay.
 
-**中文题意：**解释三种独立分类维度。
+**自查**：switching fabric是路由器内部连接结构，不是独立外置交换机的必然名称。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T015:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**按维度比较。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) · PDF 71–76 · 搜索 Network Layer - Router
 
-1. 明确这是三条独立分类轴。
-2. 比较centralized与decentralized的信息来源。
-3. 比较static与dynamic的变化方式。
-4. 比较load-sensitive与load-insensitive的成本输入，并说明类别可交叉。
 
-**现有参考答案的组织方式：**
+## T015 · Routing algorithm 三组分类
 
-- 第1段：全局/分布信息及link-state、distance-vector。
-- 第2段：静态与动态变化。
-- 第3段：负载敏感性与分类不能混同。
+Compare centralized/decentralized, static/dynamic and load-sensitive/load-insensitive routing algorithms.
 
-**回Moodle核对：**
+解释三种独立分类维度。
 
-- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → PDF物理页 **77–83**；课件主题：Routing algorithm。
-
-搜索词：`centralized`；`decentralized`；`load-sensitive`。
-
-查到后确认：核对每组分类所比较的属性，而非把所有左项当成一类。
-
-**换问法时：**若给算法例子，对三条轴分别判断并写理由。
-<!-- answer-guidance:T015:end -->
-
-### 中文思路
-
-全局知识/邻居迭代；变化方式；cost是否反映当前拥塞；别把LS同物理单中心。
-
-### 英文参考答案（136词）
+### 精简参考答案
 
 The course classifies routing algorithms along three separate dimensions. A centralized algorithm uses complete network information to calculate paths. Link-state routing uses this global-information approach, even though calculations can be performed at individual routers. A decentralized algorithm develops routes through interactions between nodes; distance-vector routing is an example.
 
@@ -698,63 +534,42 @@ A static approach changes routes slowly or through manual intervention. A dynami
 
 A load-sensitive algorithm changes link costs to reflect current congestion. A load-insensitive algorithm does not explicitly use current congestion as its link-cost input. These categories should not be treated as identical. For example, a dynamic protocol can react to a failed link without being load-sensitive. Explain which property is being compared before claiming that one algorithm is more responsive or suitable for a particular network.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-centralized knowledge不表示一定只有一台中心机器；dynamic不等于load-sensitive。
+**先懂概念**：协议规定通信消息的格式、顺序和相应动作；分层把通信功能分开，上层使用下层服务，封装使各层的信息能够随数据传递。
 
-变式：Classify RIP/OSPF by knowledge and cost sensitivity; explain independent dimensions.
+1. 三组分类分别问：用多少网络信息、何时更新、成本是否反映负载。它们不是同一分类的三个别名。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. link-state可以在每台路由器本地计算但使用全局拓扑，因此课程称其centralized-information方法；不要误解成一定只有一台中央机器计算。
 
-### 来源
+**英文关键句**：Dynamic does not necessarily mean load-sensitive.
 
-- [Moodle：Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → **PDF物理页77–83**，关键词`Routing algorithm`。
+动态不一定表示负载敏感。 not necessarily表示“不一定”，保留可能性而不做过强断言。
 
-## T016
+**可复用句式**：X provides ____, whereas Y provides ____. The choice depends on ____.
 
-**Link、physical 与 service model**
+X提供……，而Y提供……；选择取决于……。 whereas用同一维度做对比；空白要填机制或条件，不填无依据的best。
 
-- 题型：简答；检索码：Q87；依据：范围扩展题。
-- 知识点：Network protocols and layers（网络协议与分层模型）。
+**变式练习**：A protocol changes routes after a link failure but ignores current congestion. Is it load-sensitive?
 
-**Question:** Describe link-layer and physical-layer services and distinguish them from an end-to-end network service model.
+**变式参考**：Not necessarily. It is dynamic in adapting to topology changes, but can remain load-insensitive if congestion does not affect its link costs.
 
-**中文题意：**区分逐链路、物理传输与端到端服务承诺。
+**自查**：centralized knowledge不表示一定只有一台中心机器；dynamic不等于load-sensitive。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T016:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**功能＋范围区分。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) · PDF 77–83 · 搜索 Routing algorithm
 
-1. 说明data-link逐链路frame服务。
-2. 说明physical传送bits和信号。
-3. 说明end-to-end service model承诺哪些交付特征。
-4. 强调单链路可靠不等于全路径保证。
 
-**现有参考答案的组织方式：**
+## T016 · Link、physical 与 service model
 
-- 第1段：data-link功能与接口。
-- 第2段：physical层介质和信号。
-- 第3段：端到端服务与逐链路保证的区别。
+Describe link-layer and physical-layer services and distinguish them from an end-to-end network service model.
 
-**回Moodle核对：**
+区分逐链路、物理传输与端到端服务承诺。
 
-- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → PDF物理页 **86–89**；课件主题：Network service model。
-
-搜索词：`link layer`；`physical`；`service model`。
-
-查到后确认：核对每层服务范围和best-effort不承诺的内容。
-
-**换问法时：**若问可靠性，明确是local link还是end-to-end，并写端点和其他链路条件。
-<!-- answer-guidance:T016:end -->
-
-### 中文思路
-
-frame相邻节点；bits介质信号；可靠性视协议；endtoend不由一个hop保证。
-
-### 英文参考答案（131词）
+### 精简参考答案
 
 The data-link layer transfers frames between adjacent nodes on a link. Its functions can include framing, access to the medium, error detection and correction, and, for some link protocols, reliable local delivery. A device uses a network interface to connect to a link.
 
@@ -762,15 +577,31 @@ The physical layer transmits bits through a medium, such as copper, optical fibr
 
 An end-to-end network service model describes the delivery characteristics offered between sender and receiver. Possible characteristics include delivery, bounded delay, ordering, minimum bandwidth or security. Best effort does not promise all these properties. A reliable local link is therefore different from guaranteed end-to-end delivery. Every relevant part of the path, and possibly the endpoints, must support the application’s actual service needs.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-不是所有link protocol都提供可靠交付；某一跳可靠不代表端到端保证。
+**先懂概念**：协议规定通信消息的格式、顺序和相应动作；分层把通信功能分开，上层使用下层服务，封装使各层的信息能够随数据传递。
 
-变式：Explain frames versus bits and why a reliable link is not a complete service guarantee.
+1. local link服务只覆盖相邻节点，end-to-end服务覆盖整个发送接收路径；两者测量边界不同。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 一个链路层协议即使能恢复本链路错误，也不能保证其他链路、路由器或终端满足应用需要。必须指出保证覆盖范围。
 
-### 来源
+**英文关键句**：A local guarantee is not an end-to-end guarantee.
 
-- [Moodle：Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) → **PDF物理页86–89**，关键词`Network service model`。
+局部保证不等于端到端保证。 用A is not B做范围区分，再用because解释原因，避免只下结论。
+
+**可复用句式**：X provides ____, whereas Y provides ____. The choice depends on ____.
+
+X提供……，而Y提供……；选择取决于……。 whereas用同一维度做对比；空白要填机制或条件，不填无依据的best。
+
+**变式练习**：Does a reliable wireless link guarantee reliable application delivery?
+
+**变式参考**：No. Other links and endpoints may still fail. End-to-end delivery depends on the whole path and the relevant transport or application mechanisms.
+
+**自查**：不是所有link protocol都提供可靠交付；某一跳可靠不代表端到端保证。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+
+</details>
+
+### Moodle定位
+
+- [Week 2 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4591842) · PDF 86–89 · 搜索 Network service model
 

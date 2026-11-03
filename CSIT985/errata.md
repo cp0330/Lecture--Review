@@ -32,3 +32,24 @@
 3. 全部Q题计英文词数，长答计正文词数，不把中文计入。
 4. 子网前缀、边界、范围和VLSM用独立地址计算核验；RMA、速率、polling和存储分别复算。
 5. 检查题号唯一、每题有答案、有来源、每个主题有映射；保留用户既有掌握证据，不按资料生成自动记为掌握。
+
+
+
+
+
+
+## 2026-11-04新增核对
+
+
+
+| 原位置 | 问题 | 本版处理与核对依据 |
+|---|---|---|
+| Week8 PDF p33 | DiffServ标作RFC2745 | 正确架构为[RFC2475](https://www.rfc-editor.org/rfc/rfc2475)；[RFC2745](https://www.rfc-editor.org/rfc/rfc2745)是RSVP诊断消息。T141明确区分。 |
+| Week9 PDF p19 | 批量读取被归为v3新增能力 | GETBULK属于SNMPv2操作体系，见[RFC3416 §4.2.3](https://www.rfc-editor.org/rfc/rfc3416.html#section-4.2.3)。T143与T094区分操作和v3安全。 |
+| Week4 PDF p53 | INTD约10–30秒、HRT约100ms旁列INTD<HRT | 与所列数值不一致。T138解释交互任务容忍与感知阈值是不同上下文，不能当统一应用时延标准或背矛盾不等式。 |
+| Week2 PDF p59 | DNS写为Domain Name Service | 标准全称Domain Name System；T011解析纠正。见[RFC1034](https://www.rfc-editor.org/rfc/rfc1034)。 |
+| Week12 PDF p42（印刷43） | DL图写无需人干预 | 过度概括；DL仍需任务设计、数据准备与评估。T122解析保留AI⊃ML⊃DL，拒绝用该短语定义DL。 |
+| Reading metadata与课件References | McCabe第3版年份2007/课件2010不一致 | 按作者、书名和版次识别；[出版社第三版元数据](https://www.sciencedirect.com/book/9780123704801/network-analysis-architecture-and-design)标2007，不捏造未核实书版。 |
+
+原有private地址终点、默认路由、NAT/NAPT、/17与/18主机数、/27mask、management storage轮次、shaping间隔、MPLS/RSVP等边界均保留，见[完整勘误](errata.md)。本轮没有发现原23道计算数值需要更改；新增公式仅在独立、恒定故障率、无冗余的串联模型下使用，另以[NIST series model](https://www.itl.nist.gov/div898/handbook/apr/section1/apr182.htm)核对。
+

@@ -1,56 +1,16 @@
 # 03-Week3-规划与需求
 
-返回：[期末题库总入口](../README.md)；[旧题号与当前题号对照](../question-map.md)。
+[在线逐题学习](../review-bank.html) · [审校说明](../audit-2026-11-04.md)
 
-本册按对应课件的可见页序排列。计算与补题放到其知识点附近；Workshop Flow题接在Week5 Flow主线，原资源仍明确标为Workshop Week7a。综合长答统一放最后。
+> 参考答案与教学解析由AI依据课程资料整理，不是官方rubric。考前练习不扩大考试可用资料。
 
-来源页码按PDF文件从第1页起计，包含封面。英文答案为教学参考，不是官方评分答案。老师样题保留标记。使用条件与假设属于答案的一部分。
+## T017 · Strategic planning 与 Crouch
 
-## T017
+Explain the purpose of a strategic network plan using the Crouch questions.
 
-**Strategic planning 与 Crouch**
+用 Crouch 的问题说明战略规划。
 
-- 题型：简答；检索码：Q19；依据：范围扩展题。
-- 知识点：Strategic network planning（战略网络规划）。
-
-**Question:** Explain the purpose of a strategic network plan using the Crouch questions.
-
-**中文题意：**用 Crouch 的问题说明战略规划。
-
-<!-- answer-guidance:T017:start -->
-### 组织方式与答题思路
-
-**任务类型：**目的＋关系解释。以下为教学建议。
-
-**建议答题路线（按实际题干调整）：**
-
-1. 用Crouch问题串起使命、现状、目标、路径与验证。
-2. 解释gap analysis。
-3. 区分strategy与tactics。
-4. 用多校园目标连接预算、人员和里程碑。
-
-**现有参考答案的组织方式：**
-
-- 第1段：战略规划定义与Crouch问题。
-- 第2段：问题之间的联系及gap/strategy/tactics。
-- 第3段：多校园例子与实施复查。
-
-**回Moodle核对：**
-
-- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → PDF物理页 **5–20**；课件主题：The Crouch Diagram。
-
-搜索词：`Crouch`；`strategic`；`gap`；`mission`。
-
-查到后确认：核对Crouch问题完整顺序及战略与战术区别。
-
-**换问法时：**若问purpose，先回答组织目标怎样转为资源与行动，问题清单作支持。
-<!-- answer-guidance:T017:end -->
-
-### 中文思路
-
-使命/做事方式→现状→目标→路径→成功验证；gap、strategy/tactics。
-
-### 英文参考答案（136词）
+### 精简参考答案
 
 A strategic network plan connects long-term organizational goals with actions and resources. It asks why the organization exists, how it operates, where it is now, where it wants to be, how it will get there and how it will know that it has arrived.
 
@@ -58,63 +18,42 @@ These questions connect mission and values with the current situation, future di
 
 For example, a university may aim to support teaching across several campuses. Its plan must connect that aim to network reach, service quality, budgets, staff and milestones. A plan is useful only if people can implement it, monitor progress and revise it when conditions change.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-不要把 strategy 写成某条具体设备配置命令。
+**先懂概念**：战略网络规划把组织长期目标与网络资源和行动相连接；先界定项目范围、现状、目标和限制，再组织参与者与实施步骤，并用证据检查结果。
 
-变式：Distinguish strategy and tactics; explain gap analysis and milestones.
+1. 六问可记成“使命与方式—现状—目标—路径—验收”；每问都应得到下一阶段可用的输入。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. strategy决定总体方向和资源，tactics安排具体行动。没有验收指标，无法判断“已经到达”；只有设备采购也没有回答组织为什么需要它。
 
-### 来源
+**英文关键句**：The plan connects goals with actions and resources.
 
-- [Moodle：Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → **PDF物理页5–20**，关键词`The Crouch Diagram`。
+计划把目标与行动、资源连接起来。 connect A with B；并列actions and resources要同时对应计划的实施条件。
 
-## T018
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
 
-**规划建议与陷阱**
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
 
-- 题型：简答；检索码：Q20；依据：范围扩展题。
-- 知识点：Strategic network planning（战略网络规划）。
+**变式练习**：A plan says only “buy ten switches”. What is missing?
 
-**Question:** Describe good strategic planning practices and common pitfalls.
+**变式参考**：The plan lacks a clear business goal, current-state analysis, priorities and measures of success. Equipment should be justified by the required outcome.
 
-**中文题意：**说明有效规划方法及常见陷阱。
+**自查**：不要把 strategy 写成某条具体设备配置命令。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T018:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**做法＋陷阱。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) · PDF 5–20 · 搜索 The Crouch Diagram
 
-1. 先说明规划是持续过程。
-2. 列实用做法：简洁、领导参与、创新与实施可行。
-3. 列常见陷阱并说明后果。
-4. 用能否筹资、运行和维护检验计划。
 
-**现有参考答案的组织方式：**
+## T018 · 规划建议与陷阱
 
-- 第1段：持续规划与良好做法。
-- 第2段：常见陷阱及短长期冲突。
-- 第3段：网络实施例子与结果导向。
+Describe good strategic planning practices and common pitfalls.
 
-**回Moodle核对：**
+说明有效规划方法及常见陷阱。
 
-- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → PDF物理页 **21–26**；课件主题：Six Tips for Strategic Planning。
-
-搜索词：`planning`；`pitfalls`；`implementation`。
-
-查到后确认：找tips与pitfalls两组清单，避免只回答其中一组。
-
-**换问法时：**若限定数量，选出指定数量并各写影响；不要只堆关键词。
-<!-- answer-guidance:T018:end -->
-
-### 中文思路
-
-持续、简单、领导参与、创新、能实施、服务使命；资源/激励/照抄等失败。
-
-### 英文参考答案（136词）
+### 精简参考答案
 
 Strategic planning should be an ongoing way of thinking. The plan is never completely finished. Keep the process simple and manageable, involve leaders, encourage creative thinking and consider implementation before accepting a strategy. Planning should help the organization achieve its mission.
 
@@ -122,63 +61,42 @@ Common pitfalls include relying only on financial forecasts, collecting forms wi
 
 For a network project, a technically attractive plan may still fail if no one can fund, operate or maintain it. A useful plan therefore links goals to resources, responsibilities and review. Success means improved organizational outcomes rather than simply producing a large planning document.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-六条建议、十条陷阱的完整清单见同题变式清单。
+**先懂概念**：战略网络规划把组织长期目标与网络资源和行动相连接；先界定项目范围、现状、目标和限制，再组织参与者与实施步骤，并用证据检查结果。
 
-变式：List the six tips or ten pitfalls; apply two pitfalls to a network upgrade.
+1. 良好规划不是文档越厚越好，而是有讨论、有人负责、有资源、可实施并持续复查。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 陷阱要写“做法→后果”：只奖励短期成绩可能使长期目标无人投入；复制别人的技术可能不适合本组织的需求与能力。
 
-### 来源
+**英文关键句**：Support must include time and resources.
 
-- [Moodle：Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → **PDF物理页21–26**，关键词`Six Tips for Strategic Planning`。
+支持必须包含时间和资源。 must表达必要条件；include后直接接对象，不需include of。
 
-## T019
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
 
-**四种变革策略**
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
 
-- 题型：简答；检索码：Q21；依据：范围扩展题。
-- 知识点：Strategic network planning（战略网络规划）。
+**变式练习**：Why can a plan fail despite senior staff saying they support it?
 
-**Question:** Describe the four change strategies and the factors used to select them.
+**变式参考**：Verbal support may not provide time, funding or responsibility. Without implementation resources and aligned incentives, agreed actions may not happen.
 
-**中文题意：**解释四种变革策略与选择因素。
+**自查**：六条建议、十条陷阱的完整清单见同题变式清单。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T019:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**列举＋选型。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) · PDF 21–26 · 搜索 Six Tips for Strategic Planning
 
-1. 列四种change strategy及各自作用机制。
-2. 按阻力、人数、利害、时间、能力、依赖选择。
-3. 说明可能混合。
-4. 给迁移例子并保留沟通和支持条件。
 
-**现有参考答案的组织方式：**
+## T019 · 四种变革策略
 
-- 第1段：四种策略的定义。
-- 第2段：选择因素与混合。
-- 第3段：迁移案例、时间压力与支持条件。
+Describe the four change strategies and the factors used to select them.
 
-**回Moodle核对：**
+解释四种变革策略与选择因素。
 
-- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → PDF物理页 **27–30**；课件主题：Four Basic Strategies。
-
-搜索词：`rational`；`normative`；`coercive`；`adaptive`。
-
-查到后确认：核对四种策略名称、假定和选型因素。
-
-**换问法时：**若给组织阻力场景，用场景条件说明选哪一种或怎样组合。
-<!-- answer-guidance:T019:end -->
-
-### 中文思路
-
-Rational-Empirical利益；Normative-Re-educative规范；Power-Coercive权力；Environmental-Adaptive新环境。
-
-### 英文参考答案（128词）
+### 精简参考答案
 
 Rational-empirical change uses information and incentives, assuming people respond to their interests. Normative-re-educative change builds commitment by changing shared values and social norms. Power-coercive change uses authority and sanctions. Environmental-adaptive change creates a new environment and gradually moves people into it.
 
@@ -186,63 +104,42 @@ No single strategy fits every situation. Selection depends on resistance, the nu
 
 For example, a network migration may combine explanations and training with clear deadlines and a gradual move to the new service. The course associates short time frames with greater use of authority, but this does not mean authority removes the need for communication or implementation support.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-四种是组织变革策略，不是四种 routing protocol。
+**先懂概念**：战略网络规划把组织长期目标与网络资源和行动相连接；先界定项目范围、现状、目标和限制，再组织参与者与实施步骤，并用证据检查结果。
 
-变式：Choose a strategy for strong resistance, limited time or mutual dependency.
+1. 四策略改变人的机制不同：讲证据利益、改共同价值、用权力要求、建新环境渐迁。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 选型要从阻力、时间、人数、利害与依赖判断。短期有权推动不代表长期能稳定采用；培训和迁移支持仍重要。
 
-### 来源
+**英文关键句**：The strategy should fit the situation.
 
-- [Moodle：Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → **PDF物理页27–30**，关键词`Four Basic Strategies`。
+策略应适合具体情境。 fit + 对象；先给场景条件再推荐，不能把某策略说成普遍最好。
 
-## T020
+**可复用句式**：First, ____. This provides ____ for the next stage. Finally, verify ____.
 
-**规划团队与利益相关者**
+先……，这为下阶段提供……；最后验证……。 This必须指向前一阶段产出；不要只用first/next堆清单。
 
-- 题型：简答；检索码：Q22；依据：范围扩展题。
-- 知识点：Strategic network planning（战略网络规划）。
+**变式练习**：A migration has strong resistance but enough time for training. What could help?
 
-**Question:** Who should be involved in strategic planning, and why?
+**变式参考**：Rational explanations and normative re-education can build understanding and commitment. A staged environmental move may also help; the final mix depends on stakes and authority.
 
-**中文题意：**谁应参与规划，为什么？
+**自查**：四种是组织变革策略，不是四种 routing protocol。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T020:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**人员＋原因。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) · PDF 27–30 · 搜索 Four Basic Strategies
 
-1. 先说明规划同时需要权力与实务知识。
-2. 列领导、开发实施、供信息、审核授权角色。
-3. 解释跨组织参与和coordinator的作用。
-4. 说明团队素质与阶段变化。
 
-**现有参考答案的组织方式：**
+## T020 · 规划团队与利益相关者
 
-- 第1段：领导参与及决策权。
-- 第2段：团队角色、用户参与和协调员。
-- 第3段：团队素质、成员变化与目的。
+Who should be involved in strategic planning, and why?
 
-**回Moodle核对：**
+谁应参与规划，为什么？
 
-- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → PDF物理页 **31–40**；课件主题：Who Should Be Involved in Planning。
-
-搜索词：`planning team`；`stakeholders`；`coordinator`。
-
-查到后确认：核对谁做决策、谁供信息、谁执行和谁协调。
-
-**换问法时：**若问why involved，每种人员都跟一句其贡献，不只列职位。
-<!-- answer-guidance:T020:end -->
-
-### 中文思路
-
-领导授权；实施者实践；使用者需求；信息/审核/记录角色。
-
-### 英文参考答案（134词）
+### 精简参考答案
 
 Strategic planning needs both authority and practical knowledge. Leaders, including the chief executive and board representatives, should guide strategic direction and support implementation. At least one participant should have authority to make strategic decisions.
 
@@ -250,63 +147,42 @@ The team should include people who develop and implement the plan, people who pr
 
 Team members should work well together, be committed and be respected by others. Membership can change as the work moves from mission and direction to analysis and detailed actions. For a network plan, this helps connect business goals with users’ needs and the realities of operating the network.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-让顾问独自决定并不能替代组织领导的参与。
+**先懂概念**：战略网络规划把组织长期目标与网络资源和行动相连接；先界定项目范围、现状、目标和限制，再组织参与者与实施步骤，并用证据检查结果。
 
-变式：Explain planning-team membership and changing roles across planning stages.
+1. 规划需要决策权、事实来源和落地能力三者同时存在；只有领导可能缺实务，只有技术人员可能无法分配预算。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. coordinator负责流程、记录与跟进，不自动等于最终批准者。团队随阶段变化，用户输入仍要保留。
 
-### 来源
+**英文关键句**：Different participants provide different knowledge.
 
-- [Moodle：Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → **PDF物理页31–40**，关键词`Who Should Be Involved in Planning`。
+不同参与者提供不同知识。 participant意为“参与者”；knowledge不可数，不写knowledges。
 
-## T021
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
 
-**Core、feature、future、rejected、informational**
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
 
-- 题型：简答；检索码：Q89；依据：缺口补题；依据课件的AI参考答案。
-- 知识点：Requirements and service types（需求分类与网络服务类型）。
+**变式练习**：Why include users when engineers understand the equipment?
 
-**Question:** Explain the five requirement categories used during analysis.
+**变式参考**：Users provide application needs and practical constraints that equipment knowledge alone may miss. Their involvement also supports adoption and useful success measures.
 
-**中文题意：**解释需求分析中的五类归属。
+**自查**：让顾问独自决定并不能替代组织领导的参与。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T021:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**分类解释。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) · PDF 31–40 · 搜索 Who Should Be Involved in Planning
 
-1. 列core、feature、future、rejected、informational。
-2. 每类给判定依据。
-3. 给一个核心、可选和未来例子。
-4. 区分类别与来源Type，可同时记录。
 
-**现有参考答案的组织方式：**
+## T021 · Core、feature、future、rejected、informational
 
-- 第1段：core、feature、future。
-- 第2段：rejected、informational及拒绝理由。
-- 第3段：分类用途、例子与来源维度区别。
+Explain the five requirement categories used during analysis.
 
-**回Moodle核对：**
+解释需求分析中的五类归属。
 
-- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → PDF物理页 **48–49**；课件主题：Categorizing requirements。
-
-搜索词：`core`；`feature`；`future`；`informational`。
-
-查到后确认：核对五类原定义及feature与future的时间区别。
-
-**换问法时：**若要求分类具体语句，先判其性质，再说明理由和不确定处。
-<!-- answer-guidance:T021:end -->
-
-### 中文思路
-
-Core＝当前成功必需；feature＝希望有、可延后；future＝后续版本/升级；rejected＝已决定不纳入；informational＝背景信息。它们不同于user/application/device/network来源分类。
-
-### 英文参考答案（138词）
+### 精简参考答案
 
 Core requirements are necessary for the network to achieve its agreed purpose. Features are desirable capabilities that may be delivered later if they are not essential now. Future requirements describe needs planned for later revisions or upgrades.
 
@@ -314,63 +190,42 @@ Rejected requirements are considered unnecessary or undesirable for the agreed s
 
 These categories help control scope, resources and expectations. For example, access to a critical service may be core, an optional report may be a feature, and a planned new campus may create a future requirement. Classification should follow analysis and stakeholder agreement. It differs from classifying a requirement by its source, such as user, application, device or network. A useful specification can record both dimensions.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-不要把future当rejected；informational背景也可能用于推导真正需求。
+**先懂概念**：需求描述用户、应用、设备及网络应获得或提供的功能与性能；分析后按必要性、优先级和状态组织，再形成可以配置、测量、验证的端到端服务要求。
 
-变式：先遮住答案复述；再换一个场景说明分类、机制或条件。
+1. category解决“这个要求如何纳入项目”，Type解决“源自哪类实体”，两者可同时记录。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. feature是可取但非当前必需，future强调后期需求；rejected必须保留拒绝依据，informational可以引出后续推导的容量要求。
 
-### 来源
+**英文关键句**：Background information can support a derived requirement.
 
-- [Moodle：Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → **PDF物理页48–49**，关键词`Categorizing requirements`。
+背景信息能支持推导出的需求。 derived意为“推导得到的”；support不等于直接证明所有数值。
 
-## T022
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
 
-**MUST、SHOULD、MAY 与禁止性要求**
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
 
-- 题型：简答；检索码：Q90；依据：缺口补题；依据课件的AI参考答案。
-- 知识点：Requirements and service types（需求分类与网络服务类型）。
+**变式练习**：Is a statement of current user numbers itself a capacity requirement?
 
-**Question:** Explain MUST, MUST NOT, SHOULD, SHOULD NOT and MAY. How does the course relate these words to requirement categories?
+**变式参考**：It is informational background. Combined with application rates and concurrency, it can support a derived capacity requirement.
 
-**中文题意：**解释要求强度，并区别RFC词义与课件分类提示。
+**自查**：不要把future当rejected；informational背景也可能用于推导真正需求。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T022:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**术语强度＋映射。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) · PDF 48–49 · 搜索 Categorizing requirements
 
-1. 区分必须、禁止、强烈建议与可选。
-2. 保留SHOULD允许有理由的例外。
-3. 说明课件与项目类别的联系。
-4. 用正反要求举例，不把MAY解释为必须拒绝。
 
-**现有参考答案的组织方式：**
+## T022 · MUST、SHOULD、MAY 与禁止性要求
 
-- 第1段：MUST/SHOULD/MAY等强度与例外。
-- 第2段：课件项目分类的映射及边界。
-- 第3段：要求实例及禁止性core要求。
+Explain MUST, MUST NOT, SHOULD, SHOULD NOT and MAY. How does the course relate these words to requirement categories?
 
-**回Moodle核对：**
+解释要求强度，并区别RFC词义与课件分类提示。
 
-- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → PDF物理页 **50**；课件主题：RFC 2119 keywords。
-
-搜索词：`MUST`；`SHOULD`；`MAY`；`core`。
-
-查到后确认：核对原词强度及课件映射，不把外部定义当考试新增资料。
-
-**换问法时：**若给否定语句，先判断MUST NOT还是SHOULD NOT，不能只看是否有NOT。
-<!-- answer-guidance:T022:end -->
-
-### 中文思路
-
-MUST/SHALL/REQUIRED＝必须；MUST NOT/SHALL NOT＝禁止；SHOULD/RECOMMENDED＝建议、偏离须有充分理由；SHOULD NOT＝原则上不建议；MAY/OPTIONAL＝可选。
-
-### 英文参考答案（142词）
+### 精简参考答案
 
 MUST, SHALL and REQUIRED express a mandatory requirement. MUST NOT and SHALL NOT express an absolute prohibition. SHOULD and RECOMMENDED express a strong recommendation: an exception may be reasonable, but its consequences must be understood. SHOULD NOT and NOT RECOMMENDED similarly allow justified exceptions. MAY and OPTIONAL mean that a feature is genuinely optional.
 
@@ -378,65 +233,42 @@ The lecture links mandatory wording with core requirements, recommended wording 
 
 For example, a system MUST protect an essential record, SHOULD provide a useful report and MAY offer an optional display. State the required behaviour clearly. A mandatory prohibition, such as preventing unauthorized access, is still a core requirement even though it describes something that must not happen.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-普通英文may不是自动在使用RFC关键词；MAY不等于rejected。RFC2119解释与课程管理分类要分清。
+**先懂概念**：需求描述用户、应用、设备及网络应获得或提供的功能与性能；分析后按必要性、优先级和状态组织，再形成可以配置、测量、验证的端到端服务要求。
 
-变式：先遮住答案复述；再换一个场景说明分类、机制或条件。
+1. MUST/MUST NOT是强制与绝对禁止；SHOULD允许充分理解后果后的合理例外；MAY是真正可选。
 
-RFC词义核对：[RFC2119](https://www.rfc-editor.org/rfc/rfc2119.html)，§1–5。课件把这些词用于项目分类，不能把“MAY可选”说成RFC要求“必须拒绝”。
+2. 语气词与项目分类有关但不机械等同。否定表达也可是一项core要求，例如必须禁止未授权访问，不能因为是禁止就归为rejected。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+**英文关键句**：A prohibition can still be a core requirement.
 
-### 来源
+禁止性规定仍然可以是核心要求。 still表示“仍然”；prohibition是“禁止性规定”，重点记完整表达mandatory prohibition。
 
-- [Moodle：Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → **PDF物理页50**，关键词`RFC 2119 keywords`。
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
 
-## T023
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
 
-**分类、Type、Status 与 Priority 的案例**
+**变式练习**：A requirement says “MUST NOT disclose student records”. Is it rejected?
 
-- 题型：简答；检索码：Q91；依据：缺口补题；依据课件的AI参考答案。
-- 知识点：Requirements analysis process（需求分析过程）。
+**变式参考**：No. It is a mandatory prohibition and can be a core requirement. Rejected describes a proposal’s project status, not the presence of a negative word.
 
-**Question:** Classify a mandatory access-control requirement, an optional dashboard, a next-year campus expansion, an unsupported request and a user-count statement. Distinguish type, status and priority.
+**自查**：普通英文may不是自动在使用RFC关键词；MAY不等于rejected。RFC2119解释与课程管理分类要分清。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-**中文题意：**给五项陈述分类，再解释规格表三个字段。
+</details>
 
-<!-- answer-guidance:T023:start -->
-### 组织方式与答题思路
+### Moodle定位
 
-**任务类型：**案例分类＋区分。以下为教学建议。
+- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) · PDF 50 · 搜索 RFC 2119 keywords
 
-**建议答题路线（按实际题干调整）：**
 
-1. 对五个案例逐一给类别和理由。
-2. 区分Type、Status、Priority各描述什么。
-3. 说明同一要求可同时具备多个字段。
-4. 资料不足时记录待确认。
+## T023 · 分类、Type、Status 与 Priority 的案例
 
-**现有参考答案的组织方式：**
+Classify a mandatory access-control requirement, an optional dashboard, a next-year campus expansion, an unsupported request and a user-count statement. Distinguish type, status and priority.
 
-- 第1段：五例分类与拒绝理由。
-- 第2段：Type、Status、Priority的定义。
-- 第3段：维度组合和不确定性处理。
+给五项陈述分类，再解释规格表三个字段。
 
-**回Moodle核对：**
-
-- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → PDF物理页 **48–52**；课件主题：Requirement Status and Priority。
-
-搜索词：`type`；`status`；`priority`；`requirements`。
-
-查到后确认：看规格表字段与五类要求，不把高优先级直接等同core。
-
-**换问法时：**若题干改动时间或必备性，按新条件重分类，不背案例固定配对。
-<!-- answer-guidance:T023:end -->
-
-### 中文思路
-
-必需访问控制→core；可选dashboard→feature；明年校区→future；分析后决定不做→rejected；用户人数→informational。Type标来源，Status标当前处理状态，Priority标先后/重要性。
-
-### 英文参考答案（139词）
+### 精简参考答案
 
 A mandatory access-control capability is a core requirement. An optional dashboard can be a feature. A campus expansion planned for next year creates a future requirement. A request rejected after analysis belongs in the rejected category, with its reason recorded. A statement of current user numbers is informational, although it can support derived capacity requirements.
 
@@ -444,63 +276,42 @@ The specification also records other dimensions. Type identifies the source or e
 
 These fields should not be confused. An application requirement may be core and high priority, while a network requirement may be optional and deferred. If an item is still unclear, record the uncertainty rather than silently treating it as approved or rejected.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-Unsupported/unclear并不自动rejected，题目明确“分析后决定不做”才归rejected；TBD就是待确定。
+**先懂概念**：需求分析通过收集、整理、细化、度量和映射需求，把各方期望转成可追踪的 specification 和地理位置 map，并处理冲突与初始约束。
 
-变式：先遮住答案复述；再换一个场景说明分类、机制或条件。
+1. 逐条分类前，先确定是否已达成决策：unsupported request只有在评审拒绝后才算rejected，不清楚的要求应记未决。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. Type、Status、Priority分别回答来源/涉及实体、处理状态、重要次序；同一应用要求可以core、高优先级、尚待验证。
 
-### 来源
+**英文关键句**：Priority and status answer different questions.
 
-- [Moodle：Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → **PDF物理页48–52**，关键词`Requirement Status and Priority`。
+优先级和状态回答不同问题。 并列主语用answer；解释时给一个同时具有两种属性的例子更清楚。
 
-## T024
+**可复用句式**：X provides ____, whereas Y provides ____. The choice depends on ____.
 
-**三种服务等级**
+X提供……，而Y提供……；选择取决于……。 whereas用同一维度做对比；空白要填机制或条件，不填无依据的best。
 
-- 题型：简答；检索码：Q24；依据：范围扩展题。
-- 知识点：Requirements and service types（需求分类与网络服务类型）。
+**变式练习**：Can a high-priority requirement still be unresolved?
 
-**Question:** Compare best-effort, predictable and guaranteed network services.
+**变式参考**：Yes. Priority expresses importance, while status records its handling state. High priority does not by itself mean approved or verified.
 
-**中文题意：**比较 best-effort、predictable、guaranteed。
+**自查**：Unsupported/unclear并不自动rejected，题目明确“分析后决定不做”才归rejected；TBD就是待确定。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T024:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**比较＋适用条件。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) · PDF 48–52 · 搜索 Requirement Status and Priority
 
-1. 按服务承诺强度比较三等级。
-2. 说明best-effort、predictable、guaranteed各提供什么。
-3. 按应用需要选服务。
-4. 补端到端资源、测量与验证条件。
 
-**现有参考答案的组织方式：**
+## T024 · 三种服务等级
 
-- 第1段：best-effort承诺边界及应用。
-- 第2段：predictable/guaranteed与实施条件。
-- 第3段：校园例子、成本、验证及端到端条件。
+Compare best-effort, predictable and guaranteed network services.
 
-**回Moodle核对：**
+比较 best-effort、predictable、guaranteed。
 
-- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → PDF物理页 **44–60**；课件主题：Network Services。
-
-搜索词：`best effort`；`predictable`；`guaranteed`。
-
-查到后确认：核对服务等级承诺对象及capacity/delay/RMA要求。
-
-**换问法时：**若要求保证，不只写提高优先级，要说明全路径资源与验证。
-<!-- answer-guidance:T024:end -->
-
-### 中文思路
-
-无确定保证；可预测有受控表现；保证明确界限且需端到端机制。
-
-### 英文参考答案（134词）
+### 精简参考答案
 
 Best-effort service attempts to deliver traffic without promising a particular level of performance. It may be suitable for traffic that can tolerate variable delay or completion time.
 
@@ -508,63 +319,85 @@ Predictable service aims for a more controlled and consistent level of performan
 
 For example, a flexible download may accept best effort, while a critical interactive service may need stronger support. The choice must follow application needs rather than giving every flow the most expensive service. Services should be configurable, measurable and verifiable. A guarantee at one router alone cannot establish an end-to-end guarantee if another part of the path cannot support it.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-guaranteed 不等于无条件永远不会出故障。
+**先懂概念**：需求描述用户、应用、设备及网络应获得或提供的功能与性能；分析后按必要性、优先级和状态组织，再形成可以配置、测量、验证的端到端服务要求。
 
-变式：Why must a service be provisioned and measured end-to-end?
+1. best-effort没有特定性能承诺；predictable要求较可控一致；guaranteed在明确条件下承诺具体要求。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 保证成立需要全路径资源、控制和测量支持。不要把三个等级理解成仅仅三档标称带宽，也不要给所有业务无条件最高等级。
 
-### 来源
+**英文关键句**：The guarantee applies only under stated conditions.
 
-- [Moodle：Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → **PDF物理页44–60**，关键词`Network Services`。
+保证只在已说明的条件下适用。 apply under + 条件；stated conditions是保证题常用边界表达。
 
-## T025
+**可复用句式**：X provides ____, whereas Y provides ____. The choice depends on ____.
 
-**四类需求**
+X提供……，而Y提供……；选择取决于……。 whereas用同一维度做对比；空白要填机制或条件，不填无依据的best。
 
-- 题型：简答；检索码：Q23；依据：范围扩展题。
-- 知识点：Requirements and service types（需求分类与网络服务类型）。
+**变式练习**：Can one router’s priority queue guarantee an entire lesson’s delay?
 
-**Question:** Describe user, application, device and network requirements.
+**变式参考**：No. The remaining path and endpoints must also support the requirement. Local priority is only one part of an end-to-end service design.
 
-**中文题意：**描述四类需求并说明联系。
+**自查**：guaranteed 不等于无条件永远不会出故障。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T025:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**列举＋衔接。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) · PDF 44–60 · 搜索 Network Services
 
-1. 列user、application、device、network四类。
-2. 分别说明关注对象和典型要求。
-3. 用同一视频教学案例串联四类。
-4. 补人数、位置与增长。
 
-**现有参考答案的组织方式：**
+## T136 · Service hierarchy 与端到端瓶颈
 
-- 第1段：user需求特点。
-- 第2段：application、device、network要求。
-- 第3段：四类衔接的教学案例。
+Explain service hierarchy and why service requirements should be configurable, measurable and verifiable across an end-to-end path.
 
-**回Moodle核对：**
+说明通用与专用服务如何组织，为什么必须配置、测量和验证。
 
-- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → PDF物理页 **43–55、62–78**；课件主题：Network Services。
+### 精简参考答案
 
-搜索词：`user requirements`；`application`；`device`；`network`。
+Network services support user, application and device requirements. A useful service must be configurable so that the required behaviour can be applied, measurable so that its performance can be observed, and verifiable so that evidence can be compared with the requirement.
 
-查到后确认：核对四类来源及每类典型指标。
+A service hierarchy can place more general support in the backbone and more specific support near particular users or applications. This is a design approach, not a rule that every function belongs at exactly one layer. Requirements accumulate as services depend on devices and network resources along their paths.
 
-**换问法时：**若给需求语句，按它描述的对象分类，必要时说明如何派生技术要求。
-<!-- answer-guidance:T025:end -->
+For example, an interactive lesson needs suitable access, backbone and endpoint performance. A well-configured core cannot compensate for an overloaded server or an access link that cannot carry the traffic. The designer should trace the complete path, identify bottlenecks and verify the application’s service. A local configuration or a successful connectivity test alone does not prove that the end-to-end requirement has been met.
 
-### 中文思路
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-主观用户需要转技术指标；应用端到端；设备限制；既有网络约束。
+**先懂概念**：需求描述用户、应用、设备及网络应获得或提供的功能与性能；分析后按必要性、优先级和状态组织，再形成可以配置、测量、验证的端到端服务要求。
 
-### 英文参考答案（133词）
+1. configurable表示能落实所需行为，measurable表示能获取对应指标，verifiable表示能把指标对照目标判断；三者缺一都会使承诺空泛。
+
+2. service hierarchy帮助把通用功能放骨干、专用支持靠近用户，但路径仍累积设备和服务要求；最弱环节可成瓶颈。
+
+**英文关键句**：Configuration alone is not verification.
+
+仅有配置不等于验证。 两个名词并列区分；后面补measurement条件才是完整解释。
+
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
+
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
+
+**变式练习**：A service is configured but no measurement exists. Has the target been verified?
+
+**变式参考**：No. Configuration states intended behaviour. Verification needs valid observations under the defined endpoints, load and time conditions.
+
+**自查**：service hierarchy帮助把通用功能放骨干、专用支持靠近用户，但路径仍累积设备和服务要求；最弱环节可成瓶颈。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+
+</details>
+
+### Moodle定位
+
+- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) · PDF 57–61 · 搜索 Service Characteristics
+
+
+## T025 · 四类需求
+
+Describe user, application, device and network requirements.
+
+描述四类需求并说明联系。
+
+### 精简参考答案
 
 User requirements describe what people need, such as timely responses, reliability, security, affordability and future growth. They are often less technical and need clarification.
 
@@ -572,63 +405,42 @@ Application requirements translate those needs into communication behaviour and 
 
 These requirements build on each other. For example, users may want a smooth video lesson. The application needs suitable delay, loss and capacity, devices must process the media, and the network must support the complete path. Gathering only link speed would miss important parts of that requirement. Record user numbers, locations and expected growth as well.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-host/device 是需求层级之一，不要漏掉终端瓶颈。
+**先懂概念**：需求描述用户、应用、设备及网络应获得或提供的功能与性能；分析后按必要性、优先级和状态组织，再形成可以配置、测量、验证的端到端服务要求。
 
-变式：Turn a subjective user request into technical requirements.
+1. 从用户愿望到技术指标要逐层追问：谁、什么应用、什么设备、什么网络条件。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. “视频顺畅”可能涉及帧处理、容量、时延、丢失和服务可用性；不能把用户语言直接等同一条带宽数值。位置、人数和增长决定服务在哪里、为多少人提供。
 
-### 来源
+**英文关键句**：User needs must be translated into measurable requirements.
 
-- [Moodle：Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → **PDF物理页43–55、62–78**，关键词`Network Services`。
+用户需要必须转成可测量需求。 be translated into在此意为“转化为”，不是翻译语言。
 
-## T026
+**可复用句式**：First, ____. This provides ____ for the next stage. Finally, verify ____.
 
-**应用分类与需求**
+先……，这为下阶段提供……；最后验证……。 This必须指向前一阶段产出；不要只用first/next堆清单。
 
-- 题型：简答；检索码：Q25；依据：范围扩展题。
-- 知识点：Requirements and service types（需求分类与网络服务类型）。
+**变式练习**：Users report poor video despite low link utilization. What else should be checked?
 
-**Question:** Distinguish mission-critical, rate-critical, real-time and interactive applications.
+**变式参考**：Check application behaviour, endpoint processing, loss, delay and the full path. Low utilization on one measured link does not prove the whole service is adequate.
 
-**中文题意：**区分应用类型及主导性能需求。
+**自查**：host/device 是需求层级之一，不要漏掉终端瓶颈。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T026:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**区分＋指标。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) · PDF 43–55、62–78 · 搜索 Network Services
 
-1. 按关键性、速率和时间区分四类应用。
-2. 解释mission-critical与rate-critical。
-3. 解释real-time与interactive。
-4. 说明可重叠并转成可测量指标。
 
-**现有参考答案的组织方式：**
+## T026 · 应用分类与需求
 
-- 第1段：mission-critical与rate-critical。
-- 第2段：real-time与interactive及共同要求。
-- 第3段：重叠案例与可测量需求。
+Distinguish mission-critical, rate-critical, real-time and interactive applications.
 
-**回Moodle核对：**
+区分应用类型及主导性能需求。
 
-- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → PDF物理页 **63–78**；课件主题：Application Requirements。
-
-搜索词：`mission-critical`；`rate-critical`；`real-time`；`interactive`。
-
-查到后确认：核对每类的判据，不把critical都解释成高速。
-
-**换问法时：**若给应用案例，可以判多个类别，但要分别提供证据。
-<!-- answer-guidance:T026:end -->
-
-### 中文思路
-
-mission→RMA；rate→capacity；real-time/interactive→delay；可兼多类。
-
-### 英文参考答案（128词）
+### 精简参考答案
 
 A mission-critical application is essential to the organization’s work. It needs suitable reliability, maintainability and availability because failure has serious consequences. A rate-critical application needs a particular data rate or capacity to operate properly.
 
@@ -636,15 +448,31 @@ Real-time and interactive applications have important timing requirements. Real-
 
 The categories can overlap. A live teaching service may be interactive, rate-sensitive and important to the university’s mission. Categorization helps identify where predictable, guaranteed or high-performance services may be needed. The designer should still define measurable requirements and application locations. Calling an application “critical” or “real-time” alone does not state the required availability, data rate or delay.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-不要把 mission-critical 直接等同于带宽最大。
+**先懂概念**：需求描述用户、应用、设备及网络应获得或提供的功能与性能；分析后按必要性、优先级和状态组织，再形成可以配置、测量、验证的端到端服务要求。
 
-变式：Classify payroll, video, file transfer and interactive transactions.
+1. mission-critical问业务后果，rate-critical问速率，real-time问数据是否来得及，interactive问人与系统的响应。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 同一应用可同时属于几类；名称是发现指标的线索，不替代量化要求。“critical”后还要说明停机、速率或时限的具体边界。
 
-### 来源
+**英文关键句**：These categories can overlap.
 
-- [Moodle：Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) → **PDF物理页63–78**，关键词`Application Requirements`。
+这些类别可以重叠。 overlap意为“重叠”；随后应写哪些指标同时需要，而不是只记新词。
+
+**可复用句式**：X provides ____, whereas Y provides ____. The choice depends on ____.
+
+X提供……，而Y提供……；选择取决于……。 whereas用同一维度做对比；空白要填机制或条件，不填无依据的best。
+
+**变式练习**：Can an interactive service also be mission-critical?
+
+**变式参考**：Yes. The labels describe different properties. Specify both its response-time requirement and the business impact of failure.
+
+**自查**：不要把 mission-critical 直接等同于带宽最大。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+
+</details>
+
+### Moodle定位
+
+- [Week 3 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4597211) · PDF 63–78 · 搜索 Application Requirements
 

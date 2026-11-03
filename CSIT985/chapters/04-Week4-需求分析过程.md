@@ -1,56 +1,16 @@
 # 04-Week4-需求分析过程
 
-返回：[期末题库总入口](../README.md)；[旧题号与当前题号对照](../question-map.md)。
+[在线逐题学习](../review-bank.html) · [审校说明](../audit-2026-11-04.md)
 
-本册按对应课件的可见页序排列。计算与补题放到其知识点附近；Workshop Flow题接在Week5 Flow主线，原资源仍明确标为Workshop Week7a。综合长答统一放最后。
+> 参考答案与教学解析由AI依据课程资料整理，不是官方rubric。考前练习不扩大考试可用资料。
 
-来源页码按PDF文件从第1页起计，包含封面。英文答案为教学参考，不是官方评分答案。老师样题保留标记。使用条件与假设属于答案的一部分。
+## T027 · 需求分析五步
 
-## T027
+Describe the requirements analysis process and its outputs.
 
-**需求分析五步**
+说明需求分析步骤与产物。
 
-- 题型：简答；检索码：Q26；依据：范围扩展题。
-- 知识点：Requirements analysis process（需求分析过程）。
-
-**Question:** Describe the requirements analysis process and its outputs.
-
-**中文题意：**说明需求分析步骤与产物。
-
-<!-- answer-guidance:T027:start -->
-### 组织方式与答题思路
-
-**任务类型：**过程＋输出。以下为教学建议。
-
-**建议答题路线（按实际题干调整）：**
-
-1. 收集列出需求。
-2. 建立service metrics并分析用户/应用行为。
-3. 把需求发展为capacity、delay、RMA并映射位置。
-4. 说明requirements specification持续更新。
-
-**现有参考答案的组织方式：**
-
-- 第1段：收集信息与建立指标。
-- 第2段：行为刻画、发展需求和位置映射。
-- 第3段：规格产物、反馈与例子。
-
-**回Moodle核对：**
-
-- [Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) → PDF物理页 **5–28、67–69**；课件主题：Requirement Analysis Process。
-
-搜索词：`requirements analysis`；`metrics`；`mapping`。
-
-查到后确认：核对五步次序与最终产物，不漏map与持续维护。
-
-**换问法时：**若只问outputs，先回答规格、测量和地图，再解释由哪些活动产生。
-<!-- answer-guidance:T027:end -->
-
-### 中文思路
-
-收集列出→指标→行为→发展需求→地图；spec持续更新。
-
-### 英文参考答案（131词）
+### 精简参考答案
 
 The process begins by gathering and listing requirements from users, management, the current network and initial project conditions. The designer then develops service metrics so that needs can be measured and checked.
 
@@ -58,63 +18,42 @@ Next, user and application behaviour is characterized. This includes user number
 
 The main output is a maintained requirements specification, supported by measurements and maps. The activities may be revisited when new information appears. For example, measured peak use may show that the original capacity estimate was too low. A clear process helps later architecture and design choices remain connected to evidence rather than assumptions.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-流程允许反复修订，不能把收集到的原话直接当最终可测试需求。
+**先懂概念**：需求分析通过收集、整理、细化、度量和映射需求，把各方期望转成可追踪的 specification 和地理位置 map，并处理冲突与初始约束。
 
-变式：Explain a requirements map; describe inputs and outputs of each step.
+1. 五步的推理是把“想要”变成“可验证且有位置的要求”：收集、指标、行为、发展要求、映射。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 行为描述提供并发与负载依据；requirements map指出需求发生在哪里。specification需要随证据更新，流程不是做完一遍就冻结。
 
-### 来源
+**英文关键句**：New evidence may require earlier assumptions to change.
 
-- [Moodle：Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) → **PDF物理页5–28、67–69**，关键词`Requirement Analysis Process`。
+新证据可能要求修改先前假设。 may require + 对象 + to do；may保留需要评估的空间。
 
-## T028
+**可复用句式**：First, ____. This provides ____ for the next stage. Finally, verify ____.
 
-**初始条件、约束与红旗**
+先……，这为下阶段提供……；最后验证……。 This必须指向前一阶段产出；不要只用first/next堆清单。
 
-- 题型：简答；检索码：Q27；依据：范围扩展题。
-- 知识点：Requirements analysis process（需求分析过程）。
+**变式练习**：Peak measurements exceed the original estimate. Should the specification stay unchanged?
 
-**Question:** What initial conditions and warning signs should a designer examine when gathering requirements?
+**变式参考**：No. Review the behaviour assumptions and derived requirements, record the change and update affected maps and design decisions.
 
-**中文题意：**收集需求时应检查哪些条件和警讯？
+**自查**：流程允许反复修订，不能把收集到的原话直接当最终可测试需求。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T028:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**检查清单＋澄清。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) · PDF 5–28、67–69 · 搜索 Requirement Analysis Process
 
-1. 列项目类型、范围、目标、现网及外部条件。
-2. 列预算、人员、设备约束。
-3. 识别无量化或互相矛盾的红旗。
-4. 通过讨论与测量把模糊表述改成可验证需求。
 
-**现有参考答案的组织方式：**
+## T028 · 初始条件、约束与红旗
 
-- 第1段：初始条件与约束。
-- 第2段：模糊、不现实或冲突的警告信号。
-- 第3段：99.9%例子与澄清方法。
+What initial conditions and warning signs should a designer examine when gathering requirements?
 
-**回Moodle核对：**
+收集需求时应检查哪些条件和警讯？
 
-- [Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) → PDF物理页 **8–21**；课件主题：Red-Flag User Requirements。
-
-搜索词：`initial conditions`；`constraints`；`warning`。
-
-查到后确认：找红旗示例，特别是real-time与availability缺少的条件。
-
-**换问法时：**若给一句模糊需求，指出缺什么并提出具体澄清问题。
-<!-- answer-guidance:T028:end -->
-
-### 中文思路
-
-项目类型范围目标外力；预算/现网约束；real-time、百分比、high-performance需澄清。
-
-### 英文参考答案（129词）
+### 精简参考答案
 
 Initial conditions describe the starting point of the project. They include project type, scope, initial goals, the existing network and outside political, administrative or financial forces. Constraints may include budget, existing equipment, staff and organizational rules.
 
@@ -122,63 +61,42 @@ The designer should also look for unclear or unrealistic requirements. Warning s
 
 These statements should be clarified through discussion and measurements. For example, “99.9% availability” needs a defined observation period, acceptable outage pattern and rules about maintenance. Existing measurements or a testbed can help validate the problem. Setting realistic expectations early reduces the risk of choosing an expensive solution that does not address what users actually need.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-说明99.9%不是错误；仅有百分比缺少口径。
+**先懂概念**：需求分析通过收集、整理、细化、度量和映射需求，把各方期望转成可追踪的 specification 和地理位置 map，并处理冲突与初始约束。
 
-变式：Compare a greenfield project with an upgrade; clarify a red-flag requirement.
+1. red flag不是已证实错误，而是值得追问的模糊、冲突或不现实说法。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 例如99.9%必须定义时间窗口、服务边界、维护口径与中断模式；“实时”必须说明什么事件的时限。过早选设备会把未澄清的问题固化成成本。
 
-### 来源
+**英文关键句**：The requirement needs a clear measurement method.
 
-- [Moodle：Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) → **PDF物理页8–21**，关键词`Red-Flag User Requirements`。
+该需求需要明确的测量方法。 need + 名词；method比只写number更完整，包含端点、时间和口径。
 
-## T029
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
 
-**规格、测量与跟踪**
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
 
-- 题型：简答；检索码：Q28；依据：范围扩展题。
-- 知识点：Requirements analysis process（需求分析过程）。
+**变式练习**：A customer asks for “very fast and 99.99% available”. What must be clarified?
 
-**Question:** How should requirements be measured, recorded and kept up to date?
+**变式参考**：Define the application, load, rate or delay target, observation period, failure scope and maintenance rules. Then obtain evidence and agree on feasible metrics.
 
-**中文题意：**如何测量、记录、维护需求？
+**自查**：说明99.9%不是错误；仅有百分比缺少口径。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T029:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**方法＋记录维护。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) · PDF 8–21 · 搜索 Red-Flag User Requirements
 
-1. 用调查、访谈、观察和测量收集证据。
-2. 记录规格字段及来源。
-3. 区分gathered与derived要求。
-4. 维护变更历史并记录测量时间、负载、方法和单位。
 
-**现有参考答案的组织方式：**
+## T029 · 规格、测量与跟踪
 
-- 第1段：采集与验证方法。
-- 第2段：requirements specification的字段。
-- 第3段：持续维护、审计轨迹与测量上下文。
+How should requirements be measured, recorded and kept up to date?
 
-**回Moodle核对：**
+如何测量、记录、维护需求？
 
-- [Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) → PDF物理页 **16–26、34–37**；课件主题：Tracking and Managing Requirements。
-
-搜索词：`specification`；`measurement`；`status`；`priority`。
-
-查到后确认：核对字段清单及测量时需保留的条件。
-
-**换问法时：**若问如何保持有效，重点写变更记录、可访问性与峰值代表性。
-<!-- answer-guidance:T029:end -->
-
-### 中文思路
-
-survey/访谈/测试；ID来源日期类型位置状态优先；变更可追踪。
-
-### 英文参考答案（130词）
+### 精简参考答案
 
 Requirements should be gathered through surveys, follow-up interviews, group meetings and observation. Measurements on the existing network help verify reported problems and current behaviour. A testbed can show how proposed technologies interact with the organization’s applications.
 
@@ -186,63 +104,42 @@ A requirements specification should record each requirement clearly. Useful fiel
 
 Keep the specification current and accessible to the people involved. Record additions, changes and rejected proposals rather than silently replacing the history. This creates a useful audit trail. Measurements also need context, including time, load, method and units. A quiet-period measurement alone may not represent peak conditions. Good records make requirements easier to review, test and trace into later architecture and design decisions.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-不把瞬时测试或安静时段读数当所有时段的性能。
+**先懂概念**：需求分析通过收集、整理、细化、度量和映射需求，把各方期望转成可追踪的 specification 和地理位置 map，并处理冲突与初始约束。
 
-变式：Explain gathered versus derived requirements and why change history matters.
+1. 原始访谈是证据来源，但不等于已验证指标；要保留谁说的、何时、在哪里以及如何测。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 记录变化与拒绝依据形成audit trail，支持复查与追溯。安静时测量不能替代高峰条件；testbed用于检验交互，也需说明覆盖范围。
 
-### 来源
+**英文关键句**：Record the reason for each change.
 
-- [Moodle：Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) → **PDF物理页16–26、34–37**，关键词`Tracking and Managing Requirements`。
+记录每次变更的理由。 reason for + 名词；each后跟单数change，理由应能连到证据。
 
-## T030
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
 
-**Capacity、throughput、delay 与 jitter**
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
 
-- 题型：简答；检索码：Q30；依据：范围扩展题。
-- 知识点：Capacity and delay（容量与延迟指标）。
+**变式练习**：Why record a rejected requirement rather than delete it?
 
-**Question:** Distinguish capacity, throughput, delay, jitter and task completion time.
+**变式参考**：Its history explains scope and prevents repeated confusion. The record should preserve the proposal, decision, reason and effects on related requirements.
 
-**中文题意：**区分五项性能概念。
+**自查**：不把瞬时测试或安静时段读数当所有时段的性能。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T030:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**指标区分。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) · PDF 16–26、34–37 · 搜索 Tracking and Managing Requirements
 
-1. 区分capacity潜力与throughput实得。
-2. 区分delay、jitter与整任务完成时间。
-3. 用数据量/时间说明平均速率。
-4. 补峰值、开销、竞争与端系统条件。
 
-**现有参考答案的组织方式：**
+## T030 · Capacity、throughput、delay 与 jitter
 
-- 第1段：capacity与throughput。
-- 第2段：delay、jitter和task completion time。
-- 第3段：平均速率、规划条件及duration边界。
+Distinguish capacity, throughput, delay, jitter and task completion time.
 
-**回Moodle核对：**
+区分五项性能概念。
 
-- [Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) → PDF物理页 **29、32–33、53–56**；课件主题：Service Metrics。
-
-搜索词：`capacity`；`throughput`；`jitter`；`completion`。
-
-查到后确认：核对各指标单位、测量范围和duration与delay区别。
-
-**换问法时：**若题目换成实时业务，重点解释delay/jitter为何不能由带宽数字替代。
-<!-- answer-guidance:T030:end -->
-
-### 中文思路
-
-capacity潜力、throughput实得、delay单次传送、jitter变化、TCT整任务。
-
-### 英文参考答案（133词）
+### 精简参考答案
 
 Capacity is the data-carrying capability of a network resource. Throughput is the rate of useful transfer actually achieved under particular conditions. A high-capacity link does not mean an application always receives that rate.
 
@@ -250,67 +147,85 @@ Delay is the time taken for data or a response to travel through the system. One
 
 Data size divided by the allowed transfer time gives a basic average rate requirement after units are converted. Actual planning must also consider overhead, peaks, competing flows and end-system limits. Real-time applications may be sensitive to delay and jitter even when average throughput is adequate. Application duration should not be confused with packet delay.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-8bits=1byte；duration不等于delay；average不等于peak。
+**先懂概念**：容量需求说明单位时间内需要传送的数据量，延迟需求说明完成通信允许的时间；估计必须结合峰值、持续速率、突发、任务时限及端到端路径。
 
-变式：Compare peak, sustained and minimum data rate; calculate a rate requirement.
+1. capacity是资源能承载多少，throughput是特定条件下实际传成多少；两者不能只凭单位相同而等同。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. delay描述一次传送/响应，jitter是时延变化，TCT覆盖整项任务。平均速率=数据量/时间只是初步下界，还需开销、并发与突发。
 
-### 来源
+**英文关键句**：High capacity does not ensure low jitter.
 
-- [Moodle：Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) → **PDF物理页29、32–33、53–56**，关键词`Service Metrics`。
+高容量不确保低时延变化。 ensure意为“确保”；不要把“带宽高”写成一切性能的充分条件。
 
-## T031
+**可复用句式**：X provides ____, whereas Y provides ____. The choice depends on ____.
 
-**应用事务的频率与持续时间**
+X提供……，而Y提供……；选择取决于……。 whereas用同一维度做对比；空白要填机制或条件，不填无依据的best。
 
-- 题型：简答；检索码：Q01；依据：老师样题（Week13 PDF p.16）。
-- 知识点：Application behavior（应用行为特征）。
+**变式练习**：A high-capacity link has variable delay. Can a real-time application still suffer?
 
-**Question:** Why is it important to consider frequency and time duration for application transactions when characterizing application behavior?
+**变式参考**：Yes. Real-time traffic can be sensitive to delay and jitter even when average throughput is adequate. Check the full path and endpoint behaviour.
 
-**中文题意：**描述应用行为特征时，为什么考虑应用事务的发生频率和持续时间很重要？
+**自查**：8bits=1byte；duration不等于delay；average不等于peak。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T031:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**原因解释。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) · PDF 29、32–33、53–56 · 搜索 Service Metrics
 
-1. 先回答两者帮助估计流量发生时间与并发。
-2. 解释frequency和duration。
-3. 写事务重叠→共享负载→容量和延迟影响。
-4. 给高峰备份例子，保留duration不等于速率的条件。
 
-**现有参考答案的组织方式：**
+## T137 · Peak、sustained、minimum 与 burst
 
-- 第1段：两个定义与并发估计目的。
-- 第2段：事务重叠的例子及容量、延迟影响。
-- 第3段：结合其他变量、速率边界与调度用途。
+Distinguish peak, sustained and minimum rates, burst size and burst duration. Why is an average rate alone insufficient for planning?
 
-**回Moodle核对：**
+区分速率与突发的五个量，并说明平均值的限制。
 
-- [Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) → PDF物理页 **38–40**；课件主题：Application Behaviour。
+### 精简参考答案
 
-搜索词：`frequency`；`duration`；`application behaviour`。
+Peak rate describes a high short-term sending rate under a stated measurement interval. Sustained rate describes the rate maintained over a longer stated period. A minimum-rate requirement states the least service an application needs under specified conditions. The observation period and meaning of each value must be clear.
 
-查到后确认：核对事务发生频率、持续时间和会话重叠；寻找用户数与数据大小条件。
+Burst size is the amount of data in a burst, while burst duration is how long the burst lasts. A short burst can temporarily arrive faster than a link can transmit. A buffer may absorb some of it, but waiting increases delay and insufficient space can lead to loss.
 
-**换问法时：**若只问why，把因果链前置；若给相同数据量，不声称持续越久速率越高。
-<!-- answer-guidance:T031:end -->
+For example, a backup may average a modest rate over an hour while sending much faster for several seconds. Planning only from the hourly average can miss that competition with interactive traffic. Capacity planning should consider timing, concurrent flows, buffers, application tolerance and overhead. State whether a minimum rate is an observed value or a required service commitment.
 
-### 中文思路
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-频率描述应用事务多久发生一次，持续时间描述它保持活跃多久。两者帮助设计者估计流量何时发生，以及多少事务可能同时活跃。
+**先懂概念**：容量需求说明单位时间内需要传送的数据量，延迟需求说明完成通信允许的时间；估计必须结合峰值、持续速率、突发、任务时限及端到端路径。
 
-例如，频繁发生、每次持续几分钟的事务可能重叠。共享链路和服务器于是必须支持多个活跃事务，影响容量、延迟和用户得到的服务质量。只看每天总流量可能掩盖繁忙时段。
+1. peak/sustained/minimum都带时间与语义；burst size是量，duration是时间，rate是量/时间，单位不同。
 
-因此，要把频率、持续时间与用户数、数据大小、流量速率和服务要求一起考虑。同样数据发送得更慢时，持续更久不一定意味着更高数据速率。理解这些因素有助于容量估计、flowspec和调度，例如把时间灵活的备份移出教学高峰。
+2. 短时到达超过输出时先积累队列，队列有限再丢包。较低长时平均不排除突发损害时延敏感业务；minimum须说是观察值还是保证需求。
 
-### 英文参考答案（147词）
+**英文关键句**：A low average can hide a short burst.
+
+低平均值可能掩盖短时突发。 hide在性能题表示统计掩盖；short burst是完整搭配。
+
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
+
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
+
+**变式练习**：A 10 MB burst arrives over one second on a 40 Mb/s output. What is the basic concern?
+
+**变式参考**：The input payload averages 80 Mb/s over that second, above output capacity. Data must wait or be dropped, ignoring overhead; long-term average alone hides this burst.
+
+**自查**：短时到达超过输出时先积累队列，队列有限再丢包。较低长时平均不排除突发损害时延敏感业务；minimum须说是观察值还是保证需求。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+
+</details>
+
+### Moodle定位
+
+- [Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) · PDF 29、32、55–56 · 搜索 Capacity Metrics
+
+
+## T031 · 应用事务的频率与持续时间
+
+Why is it important to consider frequency and time duration for application transactions when characterizing application behavior?
+
+描述应用行为特征时，为什么考虑应用事务的发生频率和持续时间很重要？
+
+### 精简参考答案
 
 Frequency describes how often an application transaction occurs. Duration describes how long it remains active. Together, they help the designer estimate when traffic occurs and how many transactions may be active at the same time.
 
@@ -318,63 +233,42 @@ For example, frequent transactions that last several minutes may overlap. Shared
 
 The designer should therefore consider transaction frequency and duration together with the number of users, data sizes, traffic rates and service requirements. Longer duration does not always mean a higher data rate, especially if the same amount of data is sent more slowly. Understanding these factors supports better capacity estimates, flow specifications and scheduling decisions, such as moving a flexible backup task away from a busy teaching period.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-只写“能提高性能”；把duration等同于delay；声称持续更久就必然需要更大带宽；完全不解释并发与峰值。
+**先懂概念**：应用行为描述数据规模、事务发生频率、持续时间及流量模式；这些因素与用户同时使用情况共同决定随时间变化的需求和并发负载。
 
-变式：如果两个应用每天总流量相同，为什么仍可能需要不同的网络安排？
+1. frequency与duration一起决定事务何时重叠；频繁且持续长，活动事务数可能增加，进而争用共享链路与服务器。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 注意区分事务持续与包时延。若数据量固定，持续更长反而可能意味着平均速率更低，因此不能直接写“时间长所以流量速率高”。
 
-### 来源
+**英文关键句**：Frequency and duration together affect overlap.
 
-- [Moodle：Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) → **PDF物理页38–40**，关键词`Application Behaviour`。
+频率和持续时间共同影响重叠。 together连接两个原因；affect是“影响”，比无条件determine数值更稳妥。
 
-## T032
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
 
-**RMA 指标与边界**
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
 
-- 题型：简答；检索码：Q29；依据：范围扩展题。
-- 知识点：RMA（可靠性、可维护性与可用性）。
+**变式练习**：Transactions start twice as often but last half as long. Must concurrency double?
 
-**Question:** Explain reliability, maintainability and availability and their relationship.
+**变式参考**：No. Overlap depends on both arrival frequency and active duration, as well as timing. Doubling frequency alone does not establish the resulting concurrency.
 
-**中文题意：**解释 RMA 及其关系。
+**自查**：只写“能提高性能”；把duration等同于delay；声称持续更久就必然需要更大带宽；完全不解释并发与峰值。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T032:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**定义＋关系。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) · PDF 38–40 · 搜索 Application Behaviour
 
-1. 分别定义reliability、maintainability、availability。
-2. 对应MTBF/MTBCF与MTTR。
-3. 解释可用性如何联系故障间隔和恢复时间。
-4. 补观察窗口、计入规则与停机分布。
 
-**现有参考答案的组织方式：**
+## T032 · RMA 指标与边界
 
-- 第1段：reliability及MTBF/MTBCF。
-- 第2段：maintainability、MTTR与availability公式。
-- 第3段：改善方向、不同停机模式和测量边界。
+Explain reliability, maintainability and availability and their relationship.
 
-**回Moodle核对：**
+解释 RMA 及其关系。
 
-- [Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) → PDF物理页 **30–31、42–52**；课件主题：RMA Requirements。
-
-搜索词：`RMA`；`MTBF`；`MTTR`；`availability`。
-
-查到后确认：核对公式分母、MTTR包含的阶段与测量口径。
-
-**换问法时：**若要求比较服务，不只比较一个百分比，还解释停机模式和任务关键性。
-<!-- answer-guidance:T032:end -->
-
-### 中文思路
-
-R故障频率、M修复时间、A服务可用比例；统一故障/维修口径。
-
-### 英文参考答案（129词）
+### 精简参考答案
 
 Reliability describes how often failures occur. It can be represented by mean time between failures, or MTBF. For critical services, mean time between mission-critical failures, or MTBCF, may be more useful.
 
@@ -382,177 +276,184 @@ Maintainability describes how long restoration takes. MTTR includes the time nee
 
 Availability can improve by reducing failures or shortening restoration. Two systems may have the same availability but very different outage patterns. A frequent short interruption is not always equivalent to one long interruption for users. Define which failures count, the observation period and whether scheduled maintenance is included before comparing figures.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-MTBF、MTTR单位必须一致；课件公式通常排除计划维护。
+**先懂概念**：Reliability 描述故障发生的频度，可用平均故障间隔等度量；Maintainability 关注恢复时间；Availability 表示在规定范围内服务可用的程度，并受前两者共同影响。
 
-变式：Calculate availability; explain why an availability percentage is insufficient.
+1. 可靠性看故障发生，维护性看恢复过程，可用性合并可服务与恢复时间。MTTR可包括检测、隔离、备件、修复、测试，不只是拧螺丝。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 平均可用性相同不代表用户体验相同；短暂频发中断与一次长停机可能对不同任务造成不同后果。
 
-### 来源
+**英文关键句**：Shorter restoration time can improve availability.
 
-- [Moodle：Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) → **PDF物理页30–31、42–52**，关键词`RMA Requirements`。
+更短恢复时间能提高可用性。 comparative + 名词表达变化方向；can说明还需考虑其他条件。
 
-## T033
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
 
-**Availability**
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
 
-- 题型：计算；检索码：C13；依据：AI计算变式；题值并非真实试题。
-- 知识点：RMA（可靠性、可维护性与可用性）。
+**变式练习**：Two services have equal availability but different outage patterns. Are they equivalent?
 
-**Question:** A service has MTBF of 990 hours and MTTR of 10 hours. Find availability and two ways to improve it.
+**变式参考**：Not necessarily. Frequent short interruptions may disrupt sessions differently from one long outage. Compare failure frequency, restoration time and application needs.
 
-**中文题意：**计算可用性并提出两类改进。
+**自查**：MTBF、MTTR单位必须一致；课件公式通常排除计划维护。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T033:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**计算＋解释。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) · PDF 30–31、42–52 · 搜索 RMA Requirements
 
-1. 统一MTBF与MTTR单位。
-2. 写A=MTBF/(MTBF+MTTR)并代入。
-3. 转为百分比。
-4. 分别解释减少故障和缩短恢复，再检查改进值。
 
-**现有参考答案的组织方式：**
+## T139 · 串联系统故障率与平均首次故障时间
 
-- 条件、计算步骤及必要表格。
-- 英文作答：结果与条件解释。
+Two critical components are in series: either component’s first failure stops the service. Assume independent, constant failure rates and component mean times to failure (MTTFs) of 1,000 h and 2,000 h. Estimate the system failure rate and mean time to its first failure.
 
-**回Moodle核对：**
+在独立、恒定故障率串联模型下计算首次故障时间；区分MTTF与修复系统的MTBF。
 
-- [Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) → PDF物理页 **42–52**；课件主题：RMA。
+### 精简参考答案
 
-搜索词：`MTBF`；`MTTR`；`availability`。
+Under the stated independent, constant-rate series model, the system failure rate is 1/1000 + 1/2000 = 0.0015 per hour. Its mean time to first failure is approximately 666.67 hours. Add failure rates, not mean lifetimes. MTTF describes time to failure; MTBF for a repairable service needs a defined operating and restoration model. Availability cannot be inferred from these values alone.
 
-查到后确认：核对分母包含uptime和downtime，百分数与小数转换。
+### 逐步解法
 
-**换问法时：**换数字重新代入；减少5小时MTTR不等于可用性直接提高5%。
-<!-- answer-guidance:T033:end -->
+1. 题目给定：任一组件首次故障则服务停止；组件独立且恒定故障率，不考虑冗余和修复。
+2. λ₁=1/1000=0.001 h⁻¹；λ₂=1/2000=0.0005 h⁻¹。
+3. 串联系统 λsys=λ₁+λ₂=0.0015 h⁻¹。
+4. 本模型 MTTFsys=1/λsys≈666.67 h，比任一单组件MTTF短，符合直觉。
+5. MTTF是mean time to failure（首次故障）；课程MTBF/MTBCF用于故障间隔，涉及修复/重复运行时需定义恢复模型，不能无条件混称。没有MTTR与恢复定义，不能求availability。
 
-### 计算步骤
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
+
+**先懂概念**：Reliability 描述故障发生的频度，可用平均故障间隔等度量；Maintainability 关注恢复时间；Availability 表示在规定范围内服务可用的程度，并受前两者共同影响。
+
+1. MTTF是平均首次故障时间，λ是每小时故障率；恒定率模型下MTTF=1/λ。任一组件坏就停的series系统，故障机会增加，平均首次故障时间应短于任一组件。
+
+2. 独立、串联、恒定率是前提；这里看首次故障。课程MTBF/MTBCF用于重复故障间隔，需定义恢复模型，不能无条件与MTTF互换；没有恢复资料不能算availability。
+
+**英文关键句**：Add failure rates, then take the reciprocal.
+
+先加故障率，再取倒数。 reciprocal是“倒数”；求和对象是rates，首次故障用MTTF，修复后的故障间隔另定义MTBF。
+
+**可复用句式**：Using ____, the result is ____ [unit]. This assumes ____.
+
+根据……，结果为……单位；这里假设……。 结果句必须包含单位与模型条件；英语简单不影响数学严谨。
+
+**变式练习**：Two independent constant-rate components each have MTTF 2000 h. Either first failure stops the service. Find system MTTF.
+
+**变式参考**：λsys = 1/2000+1/2000 = 0.001 h⁻¹. System MTTF = 1000 h. This series model describes the first failure; availability requires a restoration model and more information.
+
+**自查**：求和的是failure rates，不是平均时间；首次故障MTTF与修复系统MTBF需区分，冗余/相关故障另建模型。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+
+</details>
+
+### Moodle定位
+
+- [Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) · PDF 42 · 搜索 Reliability
+
+
+## T033 · Availability
+
+A service has MTBF of 990 hours and MTTR of 10 hours. Find availability and two ways to improve it.
+
+计算可用性并提出两类改进。
+
+### 精简参考答案
+
+Availability is 990/(990+10) = 99%. It can be improved by increasing time between failures or reducing restoration time. The calculation requires consistent units and a clear definition of the failures and restoration periods being counted.
+
+### 逐步解法
 
 A=990/(990+10)=0.99=99%。两个时间均为小时。
 减少故障提高MTBF；缩短检测、备件等待、修复测试降低MTTR。
 若MTTR降至5，A=990/995≈99.4975%。这不是把可用性直接“提高5%”。
 
-### 英文作答
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-Availability is 990/(990+10) = 99%. It can be improved by increasing time between failures or reducing restoration time. The calculation requires consistent units and a clear definition of the failures and restoration periods being counted.
+**先懂概念**：Reliability 描述故障发生的频度，可用平均故障间隔等度量；Maintainability 关注恢复时间；Availability 表示在规定范围内服务可用的程度，并受前两者共同影响。
 
-### 易错、变式与反馈
+1. 分母是一个“正常运行＋恢复”的周期；990不是整个周期，故不能直接除以10。先统一时间单位，再求可用比例。
 
-不能用990/10；明确是否含计划维护。
+2. 改善MTBF减少发生故障，改善MTTR缩短每次恢复。只把MTTR从10变5不是把availability加5个百分点；要重算分式。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+**英文关键句**：Availability is the uptime portion of the full cycle.
 
-### 来源
+可用性是完整周期内正常运行的比例。 portion是“占比”；区分percent与percentage points。
 
-- [Moodle：Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) → **PDF物理页42–52**，关键词`RMA`。
+**可复用句式**：Using ____, the result is ____ [unit]. This assumes ____.
 
-## T034
+根据……，结果为……单位；这里假设……。 结果句必须包含单位与模型条件；英语简单不影响数学严谨。
 
-**可用性到停机预算**
+**变式练习**：MTBF is 198 h and MTTR is 2 h. Find availability. Then reduce MTTR to 1 h.
 
-- 题型：计算；检索码：C14；依据：AI计算变式；题值并非真实试题。
-- 知识点：RMA（可靠性、可维护性与可用性）。
+**变式参考**：A = 198/(198+2) = 99%. With MTTR = 1 h, A = 198/199 ≈ 99.4975%. The improvement is about 0.4975 percentage points.
 
-**Question:** If measured availability is 99.9% over a 30-day period, how much downtime is allowed?
+**自查**：不能用990/10；明确是否含计划维护。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-**中文题意：**30天、99.9%的停机预算。
+</details>
 
-<!-- answer-guidance:T034:start -->
-### 组织方式与答题思路
+### Moodle定位
 
-**任务类型：**停机预算计算。以下为教学建议。
+- [Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) · PDF 42–52 · 搜索 RMA
 
-**建议答题路线（按实际题干调整）：**
 
-1. 先求观察窗口总时间。
-2. 把availability转成不可用比例。
-3. 总时间乘不可用比例。
-4. 换算分钟/秒，写计入维护的假设。
+## T034 · 可用性到停机预算
 
-**现有参考答案的组织方式：**
+If measured availability is 99.9% over a 30-day period, how much downtime is allowed?
 
-- 条件、计算步骤及必要表格。
-- 英文作答：结果与条件解释。
+30天、99.9%的停机预算。
 
-**回Moodle核对：**
+### 精简参考答案
 
-- [Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) → PDF物理页 **44–50**；课件主题：RMA。
+For a 30-day measurement window, 99.9% availability permits 0.1% downtime. That is 0.72 hours or 43.2 minutes. The result assumes that the full period is included in the measurement and uses the stated maintenance rules.
 
-搜索词：`availability`；`downtime`；`measurement period`。
-
-查到后确认：核对观察窗口、分母和是否排除计划维护。
-
-**换问法时：**窗口或合同计入规则变化后必须重算；相同停机总量不代表相同体验。
-<!-- answer-guidance:T034:end -->
-
-### 计算步骤
+### 逐步解法
 
 观察窗口30×24=720小时；不可用比例1−0.999=0.001。
 停机720×0.001=0.72小时=43.2分钟=43分12秒。
 这个换算以该窗口所有计入时间为分母；若合同排除计划维护，应按合同另算。
 同样总停机可以集中一次或分散多次，业务体验不同。
 
-### 英文作答
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-For a 30-day measurement window, 99.9% availability permits 0.1% downtime. That is 0.72 hours or 43.2 minutes. The result assumes that the full period is included in the measurement and uses the stated maintenance rules.
+**先懂概念**：Reliability 描述故障发生的频度，可用平均故障间隔等度量；Maintainability 关注恢复时间；Availability 表示在规定范围内服务可用的程度，并受前两者共同影响。
 
-### 易错、变式与反馈
+1. 99.9%=0.999，允许停机是剩下0.001；先求完整窗口720小时再相乘，最后换单位。
 
-99.9%并不自动说明单次中断最大允许时长。
+2. 预算只限制总量，不规定单次最长中断。合同若排除计划维护，需使用合同定义的分母与停机范围。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+**英文关键句**：Downtime equals the observation period times the unavailable fraction.
 
-### 来源
+停机时间等于观察窗口乘不可用比例。 fraction是比例；times表达相乘，计算后仍要写单位。
 
-- [Moodle：Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) → **PDF物理页44–50**，关键词`RMA`。
+**可复用句式**：Using ____, the result is ____ [unit]. This assumes ____.
 
-## T035
+根据……，结果为……单位；这里假设……。 结果句必须包含单位与模型条件；英语简单不影响数学严谨。
 
-**One-way delay 与 RTT 的计算和条件**
+**变式练习**：How much downtime does 99.99% availability allow over 30 days?
 
-- 题型：计算；检索码：C23；依据：缺口数值补题；AI自拟值或原表复算，见题内说明。
-- 知识点：Capacity and delay（容量与延迟指标）。
+**变式参考**：30 × 24 × 60 × (1−0.9999) = 4.32 minutes, or 259.2 seconds, using the full 30-day window.
 
-**Question:** A forward path has 12 ms propagation, 8 ms transmission, 5 ms processing and 15 ms queuing delay. The complete return path takes 30 ms. Endpoint turnaround is 10 ms. Find forward one-way delay and RTT. Can an RTT limit of 100 ms alone guarantee at most 50 ms in each direction?
+**自查**：99.9%并不自动说明单次中断最大允许时长。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-**中文题意：**使用互不重复的已给延迟项求单程和往返；检查“除二”假设。
+</details>
 
-<!-- answer-guidance:T035:start -->
-### 组织方式与答题思路
+### Moodle定位
 
-**任务类型：**时延计算＋反例。以下为教学建议。
+- [Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) · PDF 44–50 · 搜索 RMA
 
-**建议答题路线（按实际题干调整）：**
 
-1. 前向四项求和。
-2. 按本题测量定义加turnaround与return得到RTT。
-3. 检查单位。
-4. 用不对称路径反例判断RTT能否限制每向时延。
+## T035 · One-way delay 与 RTT 的计算和条件
 
-**现有参考答案的组织方式：**
+A forward path has 12 ms propagation, 8 ms transmission, 5 ms processing and 15 ms queuing delay. The complete return path takes 30 ms. Endpoint turnaround is 10 ms. Find forward one-way delay and RTT. Can an RTT limit of 100 ms alone guarantee at most 50 ms in each direction?
 
-- 条件、计算步骤及必要表格。
-- 英文作答：结果与条件解释。
+使用互不重复的已给延迟项求单程和往返；检查“除二”假设。
 
-**回Moodle核对：**
+### 精简参考答案
 
-- [Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) → PDF物理页 **33、53–54**；课件主题：Delay Metrics。
+The forward one-way delay is 40 ms. Including the stated return path and endpoint turnaround, RTT is 80 ms. An RTT limit of 100 ms alone does not guarantee a 50 ms bound in each direction. The paths may be asymmetric and endpoint processing may also contribute.
 
-搜索词：`one-way`；`round-trip`；`delay`。
-
-查到后确认：核对传输、传播、处理、排队与端点周转是否已包含。
-
-**换问法时：**只有题目明确对称并说明端点处理口径时才能使用RTT/2近似。
-<!-- answer-guidance:T035:end -->
-
-### 计算步骤
+### 逐步解法
 
 题中四项已规定为前向路径各项总量，不再按router数重复相乘。
 前向one-way=12+8+5+15=40ms。
@@ -560,60 +461,89 @@ For a 30-day measurement window, 99.9% availability permits 0.1% downtime. That 
 单独知道RTT≤100ms不能推出每向≤50ms。例如前向70、回向20、turnaround10仍RTT100。
 仅在题中额外假定两向相等、端点处理可忽略，或明确分配预算时，才可用对称近似；它是额外假设，不是RTT定义。
 
-### 英文作答
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-The forward one-way delay is 40 ms. Including the stated return path and endpoint turnaround, RTT is 80 ms. An RTT limit of 100 ms alone does not guarantee a 50 ms bound in each direction. The paths may be asymmetric and endpoint processing may also contribute.
+**先懂概念**：容量需求说明单位时间内需要传送的数据量，延迟需求说明完成通信允许的时间；估计必须结合峰值、持续速率、突发、任务时限及端到端路径。
 
-### 易错、变式与反馈
+1. 题中给的是前向整路四项总量，所以相加一次；不要凭有几个router再重复乘。RTT还需回向和题定turnaround。
 
-duration是事务持续时间；不是这里的数据包路径delay。RTT与单程的测量端点须定义清楚。
+2. 知道总和上限不能推出每项各占一半。只有额外给对称路径且忽略端点处理，RTT/2才是合理近似。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+**英文关键句**：RTT includes the stated forward, return and turnaround times.
 
-### 来源
+RTT包含题定前向、回向与端点周转时间。 include列出测量口径；题目未包含的处理不能擅加或擅减。
 
-- [Moodle：Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) → **PDF物理页33、53–54**，关键词`Delay Metrics`。
+**可复用句式**：Using ____, the result is ____ [unit]. This assumes ____.
 
-## T036
+根据……，结果为……单位；这里假设……。 结果句必须包含单位与模型条件；英语简单不影响数学严谨。
 
-**数据速率、并发与单位**
+**变式练习**：Forward delay is 25 ms, return delay is 45 ms and turnaround is 5 ms. Find RTT. Can forward delay be inferred as RTT/2?
 
-- 题型：计算；检索码：C15；依据：AI计算变式；题值并非真实试题。
-- 知识点：Capacity and delay（容量与延迟指标）。
+**变式参考**：RTT = 25+45+5 = 75 ms. Forward delay is the given 25 ms, not 37.5 ms. The paths and turnaround are not symmetric.
 
-**Question:** A 60 MB file must transfer in 20 seconds. Estimate the payload rate and the total for five simultaneous transfers.
+**自查**：duration是事务持续时间；不是这里的数据包路径delay。RTT与单程的测量端点须定义清楚。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-**中文题意：**数据量/时间与并发计算，MB采用十进制。
+</details>
 
-<!-- answer-guidance:T036:start -->
-### 组织方式与答题思路
+### Moodle定位
 
-**任务类型：**速率＋并发。以下为教学建议。
+- [Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) · PDF 33、53–54 · 搜索 Delay Metrics
 
-**建议答题路线（按实际题干调整）：**
 
-1. 说明MB/Mb及十进制口径。
-2. 数据量×8÷时间求payload rate。
-3. 确认同向、同瓶颈、同时后乘并发数。
-4. 补协议开销、余量与端系统约束。
+## T138 · INTD、HRT 与传播时延的边界
 
-**现有参考答案的组织方式：**
+Explain INTD, HRT and distance-related propagation delay in the lecture. How should the lecture’s example thresholds be used?
 
-- 条件、计算步骤及必要表格。
-- 英文作答：结果与条件解释。
+理解课件中的任务与感知时限，避免把示例当统一网络时延标准。
 
-**回Moodle核对：**
+### 精简参考答案
 
-- [Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) → PDF物理页 **32–33、55–56**；课件主题：Capacity and delay。
+The lecture uses interactivity, human response and distance to discuss delay requirements. Interaction delay, INTD, concerns how long an interactive task can take before it becomes unsuitable for its purpose. The lecture gives a rough 10–30 second context. Human response time, HRT, concerns the point at which a user notices delay, with about 100 ms used as a guide.
 
-搜索词：`data size`；`duration`；`capacity`。
+These values refer to different task and perception contexts. They are not universal limits for every application, and the inconsistent inequality on the slide should not be memorized as a general rule. Propagation delay is different again: a signal needs time to travel through a medium, so distance creates a physical contribution to delay.
 
-查到后确认：核对bytes/bits和并发条件，不把payload当链路总需求。
+A designer should specify the application event, endpoints and permitted completion or response time. Real-time media may need much tighter limits than a longer interactive task. State whether a requirement is one-way, round-trip or whole-task time before choosing mechanisms or comparing measurements.
 
-**换问法时：**若用MiB或分批完成，按新单位与时间关系重算。
-<!-- answer-guidance:T036:end -->
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-### 计算步骤
+**先懂概念**：容量需求说明单位时间内需要传送的数据量，延迟需求说明完成通信允许的时间；估计必须结合峰值、持续速率、突发、任务时限及端到端路径。
+
+1. 任务完成能容忍几十秒与人能觉察100ms是不同问题；传播时延则是距离/传播速度的物理贡献。
+
+2. Week4 p53列INTD约10–30秒、HRT约100ms，却有反向不等式；不要背矛盾关系。实际要求需定义事件、端点、单程/往返/整任务。
+
+**英文关键句**：Different delay metrics describe different events.
+
+不同延迟指标描述不同事件。 metric是“度量指标”；不要在同一句中互换TCT与packet delay。
+
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
+
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
+
+**变式练习**：A file task allows 20 seconds. Does this mean every interactive packet may wait 20 seconds?
+
+**变式参考**：No. Whole-task tolerance and packet or response delay are different metrics. Define the event and application before assigning a limit.
+
+**自查**：Week4 p53列INTD约10–30秒、HRT约100ms，却有反向不等式；不要背矛盾关系。实际要求需定义事件、端点、单程/往返/整任务。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+
+</details>
+
+### Moodle定位
+
+- [Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) · PDF 53–54 · 搜索 Delay
+
+
+## T036 · 数据速率、并发与单位
+
+A 60 MB file must transfer in 20 seconds. Estimate the payload rate and the total for five simultaneous transfers.
+
+数据量/时间与并发计算，MB采用十进制。
+
+### 精简参考答案
+
+Each transfer needs an average payload rate of 24 Mb/s. Five simultaneous transfers need 120 Mb/s of aggregate payload capacity on the shared direction, before protocol overhead and planning margin. This assumes decimal MB and overlapping transfers.
+
+### 逐步解法
 
 本题规定1MB=10^6 bytes，1Mb/s=10^6 bits/s。
 60×10^6×8/20=24×10^6bits/s=24Mb/s。
@@ -621,65 +551,42 @@ duration是事务持续时间；不是这里的数据包路径delay。RTT与单�
 另需协议overhead与合理余量；不能把100Mb/s链路当够。
 若题中写MiB或规定1024制，要按该口径换算；不默默替换单位。
 
-### 英文作答
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-Each transfer needs an average payload rate of 24 Mb/s. Five simultaneous transfers need 120 Mb/s of aggregate payload capacity on the shared direction, before protocol overhead and planning margin. This assumes decimal MB and overlapping transfers.
+**先懂概念**：容量需求说明单位时间内需要传送的数据量，延迟需求说明完成通信允许的时间；估计必须结合峰值、持续速率、突发、任务时限及端到端路径。
 
-### 易错、变式与反馈
+1. MB是字节，Mb是比特，先×8再除秒。题目明确十进制，不能临时换1024。
 
-不要把60MB/20s=3MB/s误写成3Mb/s。
+2. 聚合乘5需要同方向、同瓶颈并发假设；payload下界不含协议开销与规划余量。平均值也未保证单个时段不突发。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+**英文关键句**：The estimate excludes overhead and planning margin.
 
-### 来源
+估计未包括开销与规划余量。 exclude表示“不含”；用明确范围说明为什么链路标称值不能直接照用。
 
-- [Moodle：Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) → **PDF物理页32–33、55–56**，关键词`Capacity and delay`。
+**可复用句式**：Using ____, the result is ____ [unit]. This assumes ____.
 
-## T037
+根据……，结果为……单位；这里假设……。 结果句必须包含单位与模型条件；英语简单不影响数学严谨。
 
-**补充性能需求**
+**变式练习**：A 30 MB file must transfer in 10 s. Three transfers overlap on one direction. Estimate payload demand.
 
-- 题型：简答；检索码：Q31；依据：范围扩展题。
-- 知识点：Capacity and delay（容量与延迟指标）。
+**变式参考**：Each needs 30×8/10 = 24 Mb/s. Three need 72 Mb/s on the shared direction, before overhead and planning margin, assuming decimal MB.
 
-**Question:** Explain operational suitability, supportability and confidence.
+**自查**：不要把60MB/20s=3MB/s误写成3Mb/s。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-**中文题意：**解释三项补充性能需求。
+</details>
 
-<!-- answer-guidance:T037:start -->
-### 组织方式与答题思路
+### Moodle定位
 
-**任务类型：**列举＋适用边界。以下为教学建议。
+- [Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) · PDF 32–33、55–56 · 搜索 Capacity and delay
 
-**建议答题路线（按实际题干调整）：**
 
-1. operational suitability判断客户能否运行。
-2. supportability说明持续维护所需资源。
-3. confidence按本课说明按所需速率且无不可接受错丢的交付能力。
-4. 给人员培训和备件例子。
+## T037 · 补充性能需求
 
-**现有参考答案的组织方式：**
+Explain operational suitability, supportability and confidence.
 
-- 第1段：operational suitability的定义。
-- 第2段：supportability清单与持续运行。
-- 第3段：本课confidence含义和应用条件。
+解释三项补充性能需求。
 
-**回Moodle核对：**
-
-- [Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) → PDF物理页 **57–66**；课件主题：Supplemental Performance Requirements。
-
-搜索词：`operational suitability`；`supportability`；`confidence`。
-
-查到后确认：核对supportability完整清单与本课confidence的特定含义。
-
-**换问法时：**若给产品选择案例，说明技术能力与人员支持条件如何共同约束选择。
-<!-- answer-guidance:T037:end -->
-
-### 中文思路
-
-能运行；能持续维护支持；按需要速率无错无丢可信交付（本课语境）。
-
-### 英文参考答案（130词）
+### 精简参考答案
 
 Operational suitability asks whether the customer can operate the planned network. It depends on both the design and the skills of the people who will use and run it.
 
@@ -687,15 +594,31 @@ Supportability asks what is needed to maintain effective operation after deliver
 
 Confidence, in this course, concerns the network’s ability to deliver data at the required rate without unacceptable error or loss. The acceptable level depends on the application. These requirements extend the design beyond nominal link speed. For example, a complex device may offer high performance but require training, maintenance procedures and spare parts that the organization cannot currently provide.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-confidence 在此不是统计置信区间，也不是用户自信。
+**先懂概念**：容量需求说明单位时间内需要传送的数据量，延迟需求说明完成通信允许的时间；估计必须结合峰值、持续速率、突发、任务时限及端到端路径。
 
-变式：List the five supportability factors and give a design example.
+1. operational suitability是客户是否能运行，supportability是长期需要怎样支持，confidence在本课程特指要求速率下的可接受错误/丢失表现。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 支持性五项：RMA、人员培训、流程文档、工具、备件。不要把confidence仅解释成主观信心或统计置信区间。
 
-### 来源
+**英文关键句**：The customer must be able to operate the solution.
 
-- [Moodle：Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) → **PDF物理页57–66**，关键词`Supplemental Performance Requirements`。
+客户必须有能力运行该方案。 be able to + 动词表达能力；能够买到设备不等于能够长期运行。
+
+**可复用句式**：First, ____. This provides ____ for the next stage. Finally, verify ____.
+
+先……，这为下阶段提供……；最后验证……。 This必须指向前一阶段产出；不要只用first/next堆清单。
+
+**变式练习**：A device meets the speed target but staff cannot maintain it. Is selection complete?
+
+**变式参考**：No. Operational suitability and supportability remain unmet. Assess training, procedures, tools, spare parts and restoration needs before accepting the option.
+
+**自查**：confidence 在此不是统计置信区间，也不是用户自信。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+
+</details>
+
+### Moodle定位
+
+- [Week 4 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4599639) · PDF 57–66 · 搜索 Supplemental Performance Requirements
 

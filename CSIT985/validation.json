@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "assertions": 3849,
+  "question_count": 144,
+  "original_calculations_checked": 23,
+  "all_calculation_variations_checked": 24,
+  "answer_colour_blocks_checked": 209,
+  "local_markdown_links_checked": 648,
+  "unchanged_original_nonessay_answers": 123,
+  "intentional_essay_change": "T124 privacy scope",
+  "numeric_policy": "independent ipaddress and arithmetic, not generated-answer snapshots"
+}

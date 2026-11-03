@@ -1,56 +1,16 @@
 # 01-Week1-网络设计方法
 
-返回：[期末题库总入口](../README.md)；[旧题号与当前题号对照](../question-map.md)。
+[在线逐题学习](../review-bank.html) · [审校说明](../audit-2026-11-04.md)
 
-本册按对应课件的可见页序排列。计算与补题放到其知识点附近；Workshop Flow题接在Week5 Flow主线，原资源仍明确标为Workshop Week7a。综合长答统一放最后。
+> 参考答案与教学解析由AI依据课程资料整理，不是官方rubric。考前练习不扩大考试可用资料。
 
-来源页码按PDF文件从第1页起计，包含封面。英文答案为教学参考，不是官方评分答案。老师样题保留标记。使用条件与假设属于答案的一部分。
+## T001 · Top-down 与 bottom-up
 
-## T001
+Compare top-down and bottom-up approaches to network design.
 
-**Top-down 与 bottom-up**
+比较两种设计方法。
 
-- 题型：简答；检索码：Q09；依据：范围扩展题。
-- 知识点：Network analysis, architecture and design（网络分析、网络架构与网络设计）。
-
-**Question:** Compare top-down and bottom-up approaches to network design.
-
-**中文题意：**比较两种设计方法。
-
-<!-- answer-guidance:T001:start -->
-### 组织方式与答题思路
-
-**任务类型：**比较。以下为教学建议。
-
-**建议答题路线（按实际题干调整）：**
-
-1. 先对比起点：业务需求或技术产品。
-2. 说明需求怎样引导架构与设备选择。
-3. 比较需求匹配的好处与先买设备的风险。
-4. 用校园例子说明，并保留现有设备约束与反馈。
-
-**现有参考答案的组织方式：**
-
-- 第1段：top-down的起点、顺序与目的。
-- 第2段：bottom-up的起点、便利与风险。
-- 第3段：校园反例、反馈与选择依据。
-
-**回Moodle核对：**
-
-- [Week 1 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4587655) → PDF物理页 **39–40**；课件主题：Network Design Methodology。
-
-搜索词：`top-down`；`bottom-up`；`requirements`。
-
-查到后确认：核对两种方法从哪里开始，以及技术选择与需求的关系。
-
-**换问法时：**若改问why，重点写需求先行怎样减少选错方案，不平均介绍两者。
-<!-- answer-guidance:T001:end -->
-
-### 中文思路
-
-先业务目标还是先技术；需求匹配、既有约束与反馈。
-
-### 英文参考答案（128词）
+### 精简参考答案
 
 A top-down approach starts with the organization’s goals and the needs of users and applications. The designer develops service requirements, traffic flows and architecture before selecting detailed technologies and equipment. This helps the network support the business.
 
@@ -58,63 +18,85 @@ A bottom-up approach begins with technologies, topologies or products. It can be
 
 For example, buying faster switches first will not solve every application problem. The actual problem may be delay on an external link or poor server performance. A top-down process investigates that need first. Existing equipment and technical limits still matter, so the process allows feedback. The key is to justify technology choices through requirements rather than personal preference.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-top-down 不表示完全忽略现有设备。
+**先懂概念**：以组织目标为起点，先通过分析确定需求、流量和风险，再用架构组织网络功能及关系，最后把架构落实为技术、设备、供应商和位置等可实施选择；三者相互依赖，并允许反馈修订。
 
-变式：Why is a business-driven design preferable?
+1. 先问“为何要建”，才能知道要保证什么服务；相同设备在不同目标下可能是不同选择。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. bottom-up的风险来自先限定产品，再勉强解释需求。现有预算、设备和标准仍可作为top-down的输入，所以两种起点不等于完全隔离的流程。
 
-### 来源
+**英文关键句**：The choice should follow the requirements.
 
-- [Moodle：Week 1 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4587655) → **PDF物理页39–40**，关键词`Network Design Methodology`。
+选择应以需求为依据。 should + 动词原形表达建议；follow这里是“以……为依据”，不是物理跟随。
 
-## T002
+**可复用句式**：X provides ____, whereas Y provides ____. The choice depends on ____.
 
-**PPDIOO 生命周期**
+X提供……，而Y提供……；选择取决于……。 whereas用同一维度做对比；空白要填机制或条件，不填无依据的best。
 
-- 题型：简答；检索码：Q83；依据：范围扩展题。
-- 知识点：Network analysis, architecture and design（网络分析、网络架构与网络设计）。
+**变式练习**：A campus buys faster switches, but online lessons still lag. What should be checked first?
 
-**Question:** Describe the six phases of PPDIOO and explain why network design is a life-cycle process.
+**变式参考**：Check application needs and the complete path. The bottleneck may be a server or an external link. Faster switches help only if switching capacity is the limiting factor.
 
-**中文题意：**说明六阶段及持续循环。
+**自查**：top-down 不表示完全忽略现有设备。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T002:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**过程＋原因。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 1 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4587655) · PDF 39–40 · 搜索 Network Design Methodology
 
-1. 完整列出Prepare→Plan→Design→Implement→Operate→Optimize。
-2. 每阶段写一个主要任务。
-3. 解释运行证据如何反馈到规划和设计。
-4. 用新应用带来容量问题说明循环。
 
-**现有参考答案的组织方式：**
+## T132 · Access、distribution、core 的职责
 
-- 第1段：前三阶段及作用。
-- 第2段：后三阶段及作用。
-- 第3段：生命周期的原因与反馈例子。
+Explain the roles of the access, distribution and core layers in a hierarchical network. How does this structure help design?
 
-**回Moodle核对：**
+解释三层职责，并说明层次结构的设计价值。
 
-- [Week 1 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4587655) → PDF物理页 **45–46**；课件主题：PPDIOO。
+### 精简参考答案
 
-搜索词：`PPDIOO`；`Prepare`；`Optimize`。
+The access layer connects users and end devices to the network. It can provide local switching, port access controls and initial traffic classification. Its design should support the availability and service needs of attached users.
 
-查到后确认：核对六阶段名称、次序和反馈关系。
+The distribution layer brings together traffic from access networks. It provides a place to organize connectivity and apply policies between access areas and the backbone. The core provides transport between major parts of the network. Important goals include reliability, availability, low delay and manageable operation.
 
-**换问法时：**若只问life cycle，把反馈与持续变化放在前面，阶段说明适当缩短。
-<!-- answer-guidance:T002:end -->
+Separating these roles can reduce complexity and make growth and fault isolation easier. For example, a university can connect teaching rooms at access, combine building traffic at distribution and carry inter-building traffic through the core. The layers describe functions; they do not require exactly three separate devices in every small network. Capacity, resilience, cost and required flows should justify the actual arrangement.
 
-### 中文思路
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-Prepare→Plan→Design→Implement→Operate→Optimize；优化反馈，不是装完结束。
+**先懂概念**：本课程的 reference architecture 综合各组件架构及其内部、外部关系；架构模型提供拓扑、流量或功能视角，可组合使用以满足优先需求。
 
-### 英文参考答案（134词）
+1. 三层首先是功能层：access接终端，distribution汇聚接入并组织策略，core承载主要区域间传输。
+
+2. 用同一包路径依次说明，才能把名称变成因果。小网可合并设备，但角色仍需完成；高可用核心不能弥补接入单点或过载。
+
+**英文关键句**：The layers describe functions rather than a fixed device count.
+
+这些层描述功能，而非固定设备数量。 rather than连接对比对象；count指数量，不等于层名数量决定机器数量。
+
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
+
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
+
+**变式练习**：A small campus combines distribution and core on one platform. Is the model necessarily violated?
+
+**变式参考**：No. The layers describe roles. A collapsed design may be suitable if capacity, resilience and policy requirements are still met.
+
+**自查**：用同一包路径依次说明，才能把名称变成因果。小网可合并设备，但角色仍需完成；高可用核心不能弥补接入单点或过载。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+
+</details>
+
+### Moodle定位
+
+- [Week 1 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4587655) · PDF 42–44 · 搜索 Three Layer Hierarchical Model
+
+
+## T002 · PPDIOO 生命周期
+
+Describe the six phases of PPDIOO and explain why network design is a life-cycle process.
+
+说明六阶段及持续循环。
+
+### 精简参考答案
 
 PPDIOO describes six phases: Prepare, Plan, Design, Implement, Operate and Optimize. Prepare establishes business goals and requirements. Plan gathers information, analyses needs and identifies an approach. Design develops the network topology and solution using requirements and knowledge of the existing network.
 
@@ -122,63 +104,42 @@ Implement puts the design into practice by installing and configuring the requir
 
 The phases form a life cycle rather than a process that ends after installation. For example, a new teaching application may expose a capacity problem during operation. Optimization may lead back to planning or design before further changes are implemented. This connects ongoing service quality with the organization’s changing goals and preserves the need for verification after deployment.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-PPDIOO有两个O：Operate和Optimize；不要漏Prepare或把Plan/Design混同。
+**先懂概念**：以组织目标为起点，先通过分析确定需求、流量和风险，再用架构组织网络功能及关系，最后把架构落实为技术、设备、供应商和位置等可实施选择；三者相互依赖，并允许反馈修订。
 
-变式：List the six phases; distinguish implementation, operation and optimization.
+1. 六阶段分别回答：为何做、现状与计划、如何构造、如何上线、如何运行、如何改善。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. Operate产生测量证据，Optimize把证据变成改进需求。若业务目标变了，可能回到Plan甚至Prepare；不是只在最后调一项设置。
 
-### 来源
+**英文关键句**：Operational evidence can lead to a revised design.
 
-- [Moodle：Week 1 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4587655) → **PDF物理页45–46**，关键词`PPDIOO`。
+运行证据可促成设计修订。 lead to + 名词表示“导致/促成”；revised是“已修订的”，不需要把句子写得很长。
 
-## T003
+**可复用句式**：First, ____. This provides ____ for the next stage. Finally, verify ____.
 
-**Eight-step design methodology**
+先……，这为下阶段提供……；最后验证……。 This必须指向前一阶段产出；不要只用first/next堆清单。
 
-- 题型：简答；检索码：Q84；依据：范围扩展题。
-- 知识点：Network analysis, architecture and design（网络分析、网络架构与网络设计）。
+**变式练习**：After deployment, a new application overloads a link. Which phases become relevant?
 
-**Question:** Describe the eight-step network design methodology and its documentation.
+**变式参考**：Operate detects the problem. Optimize reviews the evidence and may send the project back to Plan and Design before another implementation.
 
-**中文题意：**说明八步方法与文档用途。
+**自查**：PPDIOO有两个O：Operate和Optimize；不要漏Prepare或把Plan/Design混同。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T003:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**过程＋产物。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 1 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4587655) · PDF 45–46 · 搜索 PPDIOO
 
-1. 按课件顺序列出八步。
-2. 说明需求、现网、方案、实施计划与原型的关系。
-3. 列出设计文档主要内容。
-4. 最后说明实施后的验证、监测与修改。
 
-**现有参考答案的组织方式：**
+## T003 · Eight-step design methodology
 
-- 第1段：八步完整顺序。
-- 第2段：前期分析、方案与原型的作用。
-- 第3段：文档内容与实施后验证。
+Describe the eight-step network design methodology and its documentation.
 
-**回Moodle核对：**
+说明八步方法与文档用途。
 
-- [Week 1 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4587655) → PDF物理页 **47–55**；课件主题：Eight-step Design Methodology。
-
-搜索词：`eight`；`methodology`；`prototype`；`documentation`。
-
-查到后确认：核对八步是否齐全，以及文档章节清单。
-
-**换问法时：**若只问documentation，围绕记录什么、支持谁和怎样验证展开。
-<!-- answer-guidance:T003:end -->
-
-### 中文思路
-
-需求→现网→拓扑方案→实施计划→原型→完整文档→实施→验证监测修改。
-
-### 英文参考答案（134词）
+### 精简参考答案
 
 The eight steps are: identify customer requirements, describe the existing network, design the topology and solution, plan implementation, construct a prototype, fully document the design, implement it, and verify, monitor and modify it as needed.
 
@@ -186,63 +147,42 @@ Requirements include organizational and technical goals and constraints. The exi
 
 Documentation preserves decisions and supports future operation and improvement. The course suggests sections such as introduction, requirements, existing infrastructure, design, proof of concept, implementation plan and appendices. After implementation, measurements check the goals and guide changes. The method therefore connects planning and evidence with practical delivery rather than treating the final installation as sufficient proof of success.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-原型是验证方案的一环；不把课件文字中的prototype与全面安装混成一步。
+**先懂概念**：以组织目标为起点，先通过分析确定需求、流量和风险，再用架构组织网络功能及关系，最后把架构落实为技术、设备、供应商和位置等可实施选择；三者相互依赖，并允许反馈修订。
 
-变式：List eight steps; explain the value of an audit, prototype and documentation.
+1. 八步把方案的“提出”和“证实可行”分开：prototype是在全面部署前检验风险，不是最终大规模安装。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 文档既记录最终方案，也记录需求、现网、验证和实施安排；第八步继续监测修改，使交付后仍能追踪成败。
 
-### 来源
+**英文关键句**：A prototype provides evidence before full deployment.
 
-- [Moodle：Week 1 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4587655) → **PDF物理页47–55**，关键词`Eight-step Design Methodology`。
+原型在全面部署前提供证据。 before + 名词或动词-ing；provide evidence比只写“it is useful”更明确。
 
-## T004
+**可复用句式**：First, ____. This provides ____ for the next stage. Finally, verify ____.
 
-**分析、架构、设计的联系**
+先……，这为下阶段提供……；最后验证……。 This必须指向前一阶段产出；不要只用first/next堆清单。
 
-- 题型：简答；检索码：Q08；依据：范围扩展题。
-- 知识点：Network analysis, architecture and design（网络分析、网络架构与网络设计）。
+**变式练习**：Why build a prototype before full implementation?
 
-**Question:** Explain how network analysis, architecture and design are connected.
+**变式参考**：A prototype tests important assumptions and interactions on a smaller scale. It can reveal problems before they affect the full network, but does not prove every production condition.
 
-**中文题意：**解释三阶段怎样相互连接。
+**自查**：原型是验证方案的一环；不把课件文字中的prototype与全面安装混成一步。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T004:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**关系解释。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 1 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4587655) · PDF 47–55 · 搜索 Eight-step Design Methodology
 
-1. analysis找出需求与约束。
-2. architecture据此组织功能和机制。
-3. design落实设备、服务与位置。
-4. 用同一案例串联三者，并说明不满足条件时要反馈。
 
-**现有参考答案的组织方式：**
+## T004 · 分析、架构、设计的联系
 
-- 第1段：analysis的输入与输出。
-- 第2段：architecture与design怎样承接。
-- 第3段：在线教学案例与反馈关系。
+Explain how network analysis, architecture and design are connected.
 
-**回Moodle核对：**
+解释三阶段怎样相互连接。
 
-- [Week 1 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4587655) → PDF物理页 **57–64**；课件主题：Information flows。
-
-搜索词：`analysis`；`architecture`；`design`；`information`。
-
-查到后确认：核对三阶段之间传递的信息，不只查三个定义。
-
-**换问法时：**若问why connected，要写后一步依赖前一步、验证失败需要回看前面。
-<!-- answer-guidance:T004:end -->
-
-### 中文思路
-
-需求证据 → 功能与关系 → 可实施选择；允许反馈，不是买完设备再找需求。
-
-### 英文参考答案（127词）
+### 精简参考答案
 
 Network analysis identifies what users, applications and devices need. It studies the current network, traffic, service levels and constraints. Its results give reasons for later decisions.
 
@@ -250,15 +190,74 @@ Network architecture uses these results to organize major functions, such as rou
 
 For example, analysis may identify a need for reliable online teaching. Architecture may introduce redundant paths and traffic priorities. Design chooses suitable devices, links and their placement. The three activities depend on each other. If a design option is too expensive or cannot meet a requirement, earlier decisions must be reviewed. Keeping these links makes the final design easier to explain and defend.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-不要把 architecture 等同于设备型号清单。
+**先懂概念**：以组织目标为起点，先通过分析确定需求、流量和风险，再用架构组织网络功能及关系，最后把架构落实为技术、设备、供应商和位置等可实施选择；三者相互依赖，并允许反馈修订。
 
-变式：Define each stage; why are they interdependent; explain defensibility.
+1. 把同一目标逐步具体化：教学不中断是业务需要；分析写出可用性与流量；架构决定冗余和控制；设计落实设备和位置。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 反馈的原因是后阶段发现的新约束会使前阶段假设不成立。答案应讲信息怎样传递，不能只给三个孤立定义。
 
-### 来源
+**英文关键句**：Each stage provides input for the next.
 
-- [Moodle：Week 1 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4587655) → **PDF物理页57–64**，关键词`Information flows`。
+每阶段为下一阶段提供输入。 provide A for B表示“为B提供A”；each后用单数stage和provides。
+
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
+
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
+
+**变式练习**：A selected device cannot support the planned security function. What follows?
+
+**变式参考**：Review the device choice and its architectural dependency. If no feasible option meets the requirement, revisit constraints and requirements with evidence rather than silently dropping the goal.
+
+**自查**：不要把 architecture 等同于设备型号清单。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+
+</details>
+
+### Moodle定位
+
+- [Week 1 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4587655) · PDF 57–64 · 搜索 Information flows
+
+
+## T133 · System view 与可辩护的设计
+
+Why should network analysis use a system view and maintain an audit trail? Explain technical, budgetary, schedule and resource defensibility.
+
+解释整体系统视角、决策记录和四种设计理由。
+
+### 精简参考答案
+
+A system view considers the network together with its users, applications and devices. The delivered service depends on their combined behaviour. Improving one link may have little value if an application or end device remains the limiting part.
+
+Network analysis should therefore record requirements, measurements, assumptions and the reasons for decisions. This audit trail makes the design easier to review and revise. Technical defensibility explains how a choice meets service needs. Budgetary defensibility explains whether its costs fit the available funds. Schedule defensibility addresses whether the work can be completed in the required time. Resource defensibility considers people, skills, equipment and other resources.
+
+For example, a faster platform may meet a capacity target but require training that cannot be completed before deployment. A defensible choice acknowledges this constraint and compares alternatives. Defensibility means providing reasons and evidence, rather than claiming that any chosen product is always best.
+
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
+
+**先懂概念**：以组织目标为起点，先通过分析确定需求、流量和风险，再用架构组织网络功能及关系，最后把架构落实为技术、设备、供应商和位置等可实施选择；三者相互依赖，并允许反馈修订。
+
+1. system view把用户、应用、设备与网络一起看；局部指标好不等于整体任务达成。
+
+2. defensibility分四种理由：技术能达标、钱够、时间赶得上、人员设备资源足。audit trail保存依据与假设，方便说明为什么舍弃一个看似更强的选项。
+
+**英文关键句**：A technically strong option may still be infeasible.
+
+技术很强的选项仍可能不可实施。 infeasible意为“不可实施/不可行”；may still保留需根据约束判断的条件。
+
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
+
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
+
+**变式练习**：A device is technically ideal but staff cannot learn it before launch. Which concerns arise?
+
+**变式参考**：Schedule and resource defensibility are at risk, even if technical performance is suitable. Compare feasible training, timing and alternative platforms.
+
+**自查**：defensibility分四种理由：技术能达标、钱够、时间赶得上、人员设备资源足。audit trail保存依据与假设，方便说明为什么舍弃一个看似更强的选项。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+
+</details>
+
+### Moodle定位
+
+- [Week 1 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4587655) · PDF 61–64 · 搜索 Defensibility
 

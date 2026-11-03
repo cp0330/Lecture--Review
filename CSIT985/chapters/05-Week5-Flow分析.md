@@ -1,56 +1,16 @@
 # 05-Week5-Flow分析
 
-返回：[期末题库总入口](../README.md)；[旧题号与当前题号对照](../question-map.md)。
+[在线逐题学习](../review-bank.html) · [审校说明](../audit-2026-11-04.md)
 
-本册按对应课件的可见页序排列。计算与补题放到其知识点附近；Workshop Flow题接在Week5 Flow主线，原资源仍明确标为Workshop Week7a。综合长答统一放最后。
+> 参考答案与教学解析由AI依据课程资料整理，不是官方rubric。考前练习不扩大考试可用资料。
 
-来源页码按PDF文件从第1页起计，包含封面。英文答案为教学参考，不是官方评分答案。老师样题保留标记。使用条件与假设属于答案的一部分。
+## T038 · Flow 的定义与建立
 
-## T038
+What is a traffic flow, and how is it developed from requirements?
 
-**Flow 的定义与建立**
+定义 flow 并说明建立步骤。
 
-- 题型：简答；检索码：Q32；依据：范围扩展题。
-- 知识点：Traffic flows（网络流量及流量识别）。
-
-**Question:** What is a traffic flow, and how is it developed from requirements?
-
-**中文题意：**定义 flow 并说明建立步骤。
-
-<!-- answer-guidance:T038:start -->
-### 组织方式与答题思路
-
-**任务类型：**定义＋建立过程。以下为教学建议。
-
-**建议答题路线（按实际题干调整）：**
-
-1. 定义flow的共同属性和端到端范围。
-2. 从应用需求与位置找到source/sink。
-3. 应用flow model并形成flowspec。
-4. 区分individual、composite、critical与flow map用途。
-
-**现有参考答案的组织方式：**
-
-- 第1段：flow定义与关联实体。
-- 第2段：从需求建立flow的步骤。
-- 第3段：flow分类与map的设计价值。
-
-**回Moodle核对：**
-
-- [Week 5 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607048) → PDF物理页 **6–29**；课件主题：Flows。
-
-搜索词：`traffic flow`；`source`；`sink`；`flowspec`。
-
-查到后确认：看flow属性、源汇与建立步骤，图上位置不是自动的物理布线。
-
-**换问法时：**若给业务，先明确谁产生什么数据、发给谁及方向，再选模型。
-<!-- answer-guidance:T038:end -->
-
-### 中文思路
-
-共同属性的端到端流量；源汇/方向/位置/服务；individual/composite/critical。
-
-### 英文参考答案（126词）
+### 精简参考答案
 
 A traffic flow is a set of network traffic with common attributes, such as source, destination, information type and direction. It is an end-to-end entity that can be associated with an application, device or user.
 
@@ -58,65 +18,52 @@ To develop flows, identify application requirements and locations, locate data s
 
 An individual flow represents a single application session. A composite flow combines flows sharing a link, path or network. A critical flow has particular importance or strict requirements. A flow map connects requirements to places in the network. This helps reveal shared paths, bottlenecks and where service mechanisms must be applied.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-不要把 flow 当成任意一条物理线；同一设备可同时 source/sink。
+**先懂概念**：流量是具有共同属性的一组网络通信；把服务需求与源、目的地及位置结合，才能确定哪些路径需要相应容量、延迟和可靠性。
 
-变式：Explain individual, composite and critical flows; draw sources and sinks.
+1. flow把需求连接到实际源、汇、方向和路径；同一设备可在不同消息中既是source又是sink。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. individual、composite、critical分别强调粒度、聚合和重要性，不能互相替换。共享路径揭示争用，流图本身不自动给出速率或物理布线。
 
-### 来源
+**英文关键句**：The same device can be both source and sink.
 
-- [Moodle：Week 5 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607048) → **PDF物理页6–29**，关键词`Flows`。
+同一设备可以既是源又是汇。 both A and B表示同时具两种角色；要说清分别针对哪类数据。
 
-## T039
+**可复用句式**：First, ____. This provides ____ for the next stage. Finally, verify ____.
 
-**校园四类Flow：逐类图与合并图**
+先……，这为下阶段提供……；最后验证……。 This必须指向前一阶段产出；不要只用first/next堆清单。
 
-- 题型：图题；检索码：G01；依据：Workshop原题；AI参考图，含显式假设。
-- 知识点：Traffic flows（网络流量及流量识别）。
+**变式练习**：A server receives requests and sends replies. Is it only a source?
 
-**Question:** Using Workshop Week7a Exercise 1, identify sources and sinks for all four flow types, draw each type, and combine them into one logical flow map. State assumptions where endpoints are not uniquely specified.
+**变式参考**：No. It is a sink for requests and a source for responses. Label each direction and its requirements separately.
 
-**中文题意：**按原图完成四类source/sink、各类型flow map与合并图；题目没唯一指定的端点要写假设。
+**自查**：不要把 flow 当成任意一条物理线；同一设备可同时 source/sink。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T039:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**图题＋假设。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 5 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607048) · PDF 6–29 · 搜索 Flows
 
-1. 先列四类业务及明确的端点。
-2. 逐类列source、sink、方向和性能要求。
-3. 未唯一指定端点先写假设再画逻辑箭头。
-4. 分别画四图并合并，共享路径保留标签。
-5. 检查不把地理位置当已知布线。
 
-**现有参考答案的组织方式：**
+## T039 · 校园四类Flow：逐类图与合并图
 
-- 原题条件和底图定位。
-- 条件、步骤与source/sink表。
-- 四类独立Flow图与合并图（含显式假设）。
-- 英文参考答案。
+Using Workshop Week7a Exercise 1, identify sources and sinks for all four flow types, draw each type, and combine them into one logical flow map. State assumptions where endpoints are not uniquely specified.
 
-**回Moodle核对：**
+按原图完成四类source/sink、各类型flow map与合并图；题目没唯一指定的端点要写假设。
 
-- [Week 7a - Flow Analysis](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607864) → PDF物理页 **1 Ex1**；课件主题：Exercise 1。
+### 精简参考答案
 
-搜索词：`Exercise 1`；`flow map`；`source`；`sink`。
+I keep the original device locations: compute servers in Buildings A, B and C; five compute servers and two storage servers in Main Engineering; and the external-access server inside the campus. Off-site archive storage and external users remain outside.
 
-查到后确认：回到Workshop原底图确认业务和端点；参考图中的假设不能当成题目已知。
+Type 1 connects participating computing devices. I use possible bidirectional communication between the compute groups; the workload must confirm the actual communicating pairs. Type 2 sends data from Main Engineering compute servers to its storage servers.
 
-**换问法时：**端点或应用变化时重建source/sink表；合理替代图要有一致假设和需求依据。
-<!-- answer-guidance:T039:end -->
+For Type 3, I assume the labelled external-access server is the intended migration destination and show participating compute groups sending to it. The wording alone does not uniquely identify every source or destination.
 
-### 原题定位
+For Type 4, I assume Main Engineering storage supplies off-site archives. Internet access is shown separately, including campus communication with the Internet and external users accessing the campus server. The combined map preserves these flow types, directions and assumptions without inventing rates or physical links.
 
-原题底图见[Moodle：Week 7a - Flow Analysis](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607864)第1页Ex1。下方是带显式假设的AI参考图与解答。
-
-### 条件、步骤与source/sink表
+### 逐步解法
 
 ### 已给条件与记号
 
@@ -143,82 +90,42 @@ A、B、C为三栋楼的compute server；M为Main Engineering的5台compute；S�
 交叉线没有节点圆点时，不表示交换设备或汇合；图只描述业务流，不确定实际物理拓扑。
 
 
-![题库Flow-类型1](../assets/flow-type-1.svg)
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-![题库Flow-类型2](../assets/flow-type-2.svg)
+**先懂概念**：流量是具有共同属性的一组网络通信；把服务需求与源、目的地及位置结合，才能确定哪些路径需要相应容量、延迟和可靠性。
 
-![题库Flow-类型3](../assets/flow-type-3.svg)
+1. 先保留设备位置，再画业务箭头；logical flow map不是物理拓扑。X标有external-access但仍在校园框内，不能凭名字移到校外。
 
-![题库Flow-类型4](../assets/flow-type-4.svg)
+2. Type3和归档源原文不唯一，需在图旁写假设。箭头保留业务方向；ACK不等于等量反向业务。合并图保留类型，不能凭距离猜容量。
 
-![题库Flow-合并](../assets/flow-combined.svg)
+**英文关键句**：The arrows show application flows, not physical cables.
 
-### 英文参考答案
+箭头表示应用流，而非物理线缆。 show A, not B用于图例范围说明；假设写I assume that…并说明依据。
 
-I keep the original device locations: compute servers in Buildings A, B and C; five compute servers and two storage servers in Main Engineering; and the external-access server inside the campus. Off-site archive storage and external users remain outside.
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
 
-Type 1 connects participating computing devices. I use possible bidirectional communication between the compute groups; the workload must confirm the actual communicating pairs. Type 2 sends data from Main Engineering compute servers to its storage servers.
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
 
-For Type 3, I assume the labelled external-access server is the intended migration destination and show participating compute groups sending to it. The wording alone does not uniquely identify every source or destination.
+**变式练习**：The teacher later states that Type 3 targets a new off-campus server Y. What should change?
 
-For Type 4, I assume Main Engineering storage supplies off-site archives. Internet access is shown separately, including campus communication with the Internet and external users accessing the campus server. The combined map preserves these flow types, directions and assumptions without inventing rates or physical links.
+**变式参考**：Keep X in its original campus location. Add the specified Y outside and redirect Type 3 to Y. Update the assumption and flow requirements; do not relocate X or invent link rates.
 
-### 易错、变式与反馈
+**自查**：External Access Server不因external一词而移到校园框外；Type3目的、Type4归档源有歧义，图必须标假设，不能声称唯一官方答案。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-External Access Server不因external一词而移到校园框外；Type3目的、Type4归档源有歧义，图必须标假设，不能声称唯一官方答案。
+</details>
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+### Moodle定位
 
-### 来源
+- [Week 7a - Flow Analysis](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607864) · PDF 1 Ex1 · 搜索 Exercise 1
 
-- [Moodle：Week 7a - Flow Analysis](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607864) → **PDF物理页1 Ex1**，关键词`Exercise 1`。
 
-## T040
+## T040 · Workshop Flow 的方向与时延
 
-**Workshop Flow 的方向与时延**
+Label the directions and requirements of the four flows in Workshop Week7a Exercise 2.
 
-- 题型：简答；检索码：Q88；依据：范围扩展题。
-- 知识点：Traffic flows（网络流量及流量识别）。
+按原练习区分上下行、单向/双向与one-way/RTT。
 
-**Question:** Label the directions and requirements of the four flows in Workshop Week7a Exercise 2.
-
-**中文题意：**按原练习区分上下行、单向/双向与one-way/RTT。
-
-<!-- answer-guidance:T040:start -->
-### 组织方式与答题思路
-
-**任务类型：**逐项标注。以下为教学建议。
-
-**建议答题路线（按实际题干调整）：**
-
-1. 按四个应用分别写source→sink方向。
-2. 双向需求各自保留速率。
-3. 标明one-way或round-trip的时延口径。
-4. 检查单位与未指定的控制流假设。
-
-**现有参考答案的组织方式：**
-
-- 第1段：client-server双向速率。
-- 第2段：UDP video单向媒体及one-way delay。
-- 第3段：web与POS双向数据及delay口径。
-- 第4段：单向与往返的最终核对。
-
-**回Moodle核对：**
-
-- [Week 7a - Flow Analysis](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607864) → PDF物理页 **2 Ex2**；课件主题：Exercise 2。
-
-搜索词：`Exercise 2`；`client-server`；`UDP`；`round-trip`。
-
-查到后确认：直接核对Workshop Ex2各箭头、数值和时延定义。
-
-**换问法时：**若数字或方向变化，重画方向表；不把上下行速率相加后替代两条要求。
-<!-- answer-guidance:T040:end -->
-
-### 中文思路
-
-client-server双向1.2Mb/s下15kb/s上；video业务单向300kb/s40ms单程；Web双向250/100kb/s给5s；PoS双向30上50下100msRTT。
-
-### 英文参考答案（131词）
+### 精简参考答案
 
 The client-server application has bidirectional flows: 1.2 Mb/s from server to client and 15 kb/s from client to server. These directions should be labelled separately.
 
@@ -228,63 +135,42 @@ The web application has 250 kb/s downstream and 100 kb/s upstream, with a stated
 
 One-way delay and round-trip delay are different measures. Preserve the direction and measurement meaning in the flow map instead of replacing each application with one undirected capacity total.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-Workshops周号不同于lecture；RTT不能直接当每一方向100ms。
+**先懂概念**：流量是具有共同属性的一组网络通信；把服务需求与源、目的地及位置结合，才能确定哪些路径需要相应容量、延迟和可靠性。
 
-变式：原题来源另见Moodle资料定位表 → Week7a Flow Analysis p.2 Ex2；Ex1四类flow及原图见Workshop原页与勘误。
+1. 按每个方向保留量值：client-server两方向速率不等；UDP视频主媒体流与控制流分开；POS给的是RTT，视频给的是单程。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. web的five-second没有明确RTT不能擅改。画箭头时先定义端点与业务方向，再贴速率、时延和单位。
 
-### 来源
+**英文关键句**：The direction and delay definition must be preserved.
 
-- [Moodle：Week 7a - Flow Analysis](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607864) → **PDF物理页2 Ex2**，关键词`Exercise 2`。
+必须保留方向和时延定义。 be preserved是被动表达“被保留”；不要为了简化把上下行合并掉。
 
-## T041
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
 
-**四种 Flow model**
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
 
-- 题型：简答；检索码：Q33；依据：范围扩展题。
-- 知识点：Flow models（流量模型）。
+**变式练习**：An RTT limit is 100 ms. Does it prove each direction takes at most 50 ms?
 
-**Question:** Describe peer-to-peer, client-server, hierarchical client-server and distributed-computing flow models.
+**变式参考**：No. The directions can be asymmetric and endpoint turnaround may contribute. A 50 ms split needs an explicit additional assumption.
 
-**中文题意：**解释四种流量模型。
+**自查**：Workshops周号不同于lecture；RTT不能直接当每一方向100ms。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T041:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**模型列举＋关系。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 7a - Flow Analysis](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607864) · PDF 2 Ex2 · 搜索 Exercise 2
 
-1. 列四种flow model。
-2. 按谁请求、谁服务、谁协作解释差别。
-3. 说明hierarchical client-server的层间流量。
-4. 给共享服务或计算集群例子，并区分逻辑flow与布线。
 
-**现有参考答案的组织方式：**
+## T041 · 四种 Flow model
 
-- 第1段：peer-to-peer和client-server。
-- 第2段：hierarchical与distributed computing。
-- 第3段：模型用途、混合场景和物理边界。
+Describe peer-to-peer, client-server, hierarchical client-server and distributed-computing flow models.
 
-**回Moodle核对：**
+解释四种流量模型。
 
-- [Week 5 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607048) → PDF物理页 **30–44**；课件主题：Flow Models。
-
-搜索词：`peer-to-peer`；`hierarchical`；`distributed computing`。
-
-查到后确认：看四类通信关系图，核对server是否也作为上层client。
-
-**换问法时：**若给校园场景，可组合模型，但必须指出实际源汇和交互关系。
-<!-- answer-guidance:T041:end -->
-
-### 中文思路
-
-谁和谁通信，不等于物理拓扑；层级聚合、协作计算。
-
-### 英文参考答案（131词）
+### 精简参考答案
 
 A peer-to-peer flow model describes communication between peers that can both provide and request resources. A client-server model describes requests and responses between clients and service-providing servers.
 
@@ -292,63 +178,42 @@ In a hierarchical client-server model, servers can also act as clients of higher
 
 The models help predict communication relationships and service locations. They do not directly specify the physical cable layout. For example, clients using a shared campus service may need a client-server model, while a compute cluster may also need a distributed-computing model. A real network can contain several models at the same time.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-模型可以并存；不是把四种分别当四种互斥物理拓扑。
+**先懂概念**：流量模型用方向性、层级和互联关系概括一组流量的稳定模式；它帮助定位流量汇聚点和关键路径，而不要求每个请求和响应都完全同向。
 
-变式：Identify the model for email, tiered databases or a compute cluster.
+1. 流模型看谁与谁交换数据：peer对等、client-server请求服务、hierarchical存在服务器层级、distributed多计算资源协作。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 服务器也可作为上层服务的client，所以模型可组合。模型帮助定位服务与聚合点，但不直接指定哪根网线。
 
-### 来源
+**英文关键句**：A server can also act as a client.
 
-- [Moodle：Week 5 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607048) → **PDF物理页30–44**，关键词`Flow Models`。
+服务器也可充当客户端。 act as + 角色；这句解释角色变化，不是设备物理身份改变。
 
-## T042
+**可复用句式**：First, ____. This provides ____ for the next stage. Finally, verify ____.
 
-**选择应用与 Flow 优先级**
+先……，这为下阶段提供……；最后验证……。 This必须指向前一阶段产出；不要只用first/next堆清单。
 
-- 题型：简答；检索码：Q34；依据：范围扩展题。
-- 知识点：Traffic flows（网络流量及流量识别）。
+**变式练习**：A server requests data from a higher-level server. Is client-server still relevant?
 
-**Question:** How should flows be selected for analysis and prioritized?
+**变式参考**：Yes. The lower server acts as a client in that exchange, forming a hierarchical client-server relationship. Roles depend on the specific flow.
 
-**中文题意：**如何选择分析对象并给流排序？
+**自查**：模型可以并存；不是把四种分别当四种互斥物理拓扑。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T042:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**方法＋优先级。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 5 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607048) · PDF 30–44 · 搜索 Flow Models
 
-1. 先选择分析的应用或profile。
-2. 说明不能忽略被排除流量的服务。
-3. 按组织重要性、失败影响、性能安全与用户数排序。
-4. 用数据量大但优先级不一定高的例子说明。
 
-**现有参考答案的组织方式：**
+## T042 · 选择应用与 Flow 优先级
 
-- 第1段：分析对象与选择方式。
-- 第2段：优先级因素及不同排名。
-- 第3段：校园例子、明确标准与资源取舍。
+How should flows be selected for analysis and prioritized?
 
-**回Moodle核对：**
+如何选择分析对象并给流排序？
 
-- [Week 5 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607048) → PDF物理页 **19–22、45–49**；课件主题：Flow Prioritization。
-
-搜索词：`top applications`；`priority`；`flow analysis`。
-
-查到后确认：核对选择分析对象与决定优先级是两个任务。
-
-**换问法时：**若给两项冲突业务，用约定标准解释取舍，不仅按Mb/s排序。
-<!-- answer-guidance:T042:end -->
-
-### 中文思路
-
-top N需检查遗漏；业务/用户/安全/性能；排序依据变结果变。
-
-### 英文参考答案（130词）
+### 精简参考答案
 
 A designer may analyse individual applications, build profiles for similar flows or focus on the top applications driving the design. Selection can consider usage, user or device numbers and performance requirements. It is still necessary to check whether excluded applications will receive adequate service.
 
@@ -356,63 +221,42 @@ Flow priority should reflect organizational importance. Relevant factors include
 
 For example, a large student download flow may serve many people, while a smaller examination service may have stricter reliability requirements. The highest data rate is not automatically the highest priority. State the chosen criteria and explain how the ranking affects resource allocation. This makes later trade-offs transparent and connected to the organization’s goals.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-Top N 不是忽略所有其他应用；带宽大不自动最重要。
+**先懂概念**：流量是具有共同属性的一组网络通信；把服务需求与源、目的地及位置结合，才能确定哪些路径需要相应容量、延迟和可靠性。
 
-变式：Rank the same flows by user count and by reliability; explain the difference.
+1. 先选分析对象，再排序资源优先级；筛选可以按用量和人数，但关键小流不能因速率低被遗漏。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. priority是组织判断，需说明指标与后果。大型下载服务很多人，考试交易人少但失败代价高，二者排序需要公开依据。
 
-### 来源
+**英文关键句**：The highest rate is not always the highest priority.
 
-- [Moodle：Week 5 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607048) → **PDF物理页19–22、45–49**，关键词`Flow Prioritization`。
+最高速率不总是最高优先级。 not always防止绝对化；后接业务影响例子才完成理由。
 
-## T043
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
 
-**Flowspec 与聚合规则**
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
 
-- 题型：简答；检索码：Q35；依据：范围扩展题。
-- 知识点：Flow specification（流量规格与合成方法）。
+**变式练习**：A backup has the highest rate. Must it receive highest priority?
 
-**Question:** Explain one-part, two-part and multipart flow specifications.
+**变式参考**：No. Priority should reflect business consequences and service needs, not only traffic volume. A smaller critical transaction may require stronger protection.
 
-**中文题意：**解释三种 flowspec 及组合规则。
+**自查**：Top N 不是忽略所有其他应用；带宽大不自动最重要。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T043:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**分类＋聚合规则。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 5 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607048) · PDF 19–22、45–49 · 搜索 Flow Prioritization
 
-1. 说明one-part只合best-effort容量。
-2. 说明two-part中predictable容量相加而delay/RMA保留最严格值。
-3. 说明multipart逐条保留guaranteed要求。
-4. 写共享链路、方向和同时发生的假设。
 
-**现有参考答案的组织方式：**
+## T043 · Flowspec 与聚合规则
 
-- 第1段：flowspec及one/two-part。
-- 第2段：predictable的容量、delay和RMA聚合。
-- 第3段：guaranteed独立承诺与路径、时间条件。
+Explain one-part, two-part and multipart flow specifications.
 
-**回Moodle核对：**
+解释三种 flowspec 及组合规则。
 
-- [Week 5 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607048) → PDF物理页 **50–56**；课件主题：Flowspec Algorithm。
-
-搜索词：`one-part`；`two-part`；`multipart`；`flowspec`。
-
-查到后确认：核对各服务等级的聚合规则，availability不是百分比相加。
-
-**换问法时：**若给数值，先按服务等级与方向分组，再选sum/min/max，勿机械取平均。
-<!-- answer-guidance:T043:end -->
-
-### 中文思路
-
-BE合容量；predictable合容量取最严格delay/RMA；guaranteed逐流保留。
-
-### 英文参考答案（134词）
+### 精简参考答案
 
 A flow specification lists flows and their performance requirements. A one-part flowspec contains best-effort traffic and combines its capacity requirements. A two-part flowspec includes predictable traffic and may also include best effort.
 
@@ -420,59 +264,46 @@ For predictable traffic, capacity requirements are combined, while the most dema
 
 A multipart flowspec also includes guaranteed flows. Each guaranteed flow keeps its own requirements rather than losing them inside a single average. This is important because an acceptable aggregate may hide failure to meet one flow’s commitment. Aggregation must also respect shared paths, direction and timing. Opposite-direction or non-overlapping traffic should not be combined without stating the assumptions.
 
-### 易错、变式与反馈
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-不相加delay上限或availability百分比；guaranteed不被平均。
+**先懂概念**：Flowspec 汇总流量及其性能要求；不同服务等级采用不同合成方式，best-effort 主要合并容量，predictable 保留相关严格性能条件，guaranteed 的单流保证需要逐条保留。
 
-变式：Compute a flowspec; explain why guarantees remain individual.
+1. 聚合是制定共同目标，不是测得系统真实性能：BE加容量；predictable加容量并保留最严格时延/RMA；guaranteed保留各自tuple。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+2. 相反方向、不同时间或不同瓶颈需先分开。把availability目标取最大，不等于串联系统实际可用性取最大。
 
-### 来源
+**英文关键句**：The aggregate must preserve the stricter limit.
 
-- [Moodle：Week 5 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607048) → **PDF物理页50–56**，关键词`Flowspec Algorithm`。
+聚合必须保留更严格限制。 stricter是strict比较级；数值更小的时延上限通常更严格。
 
-## T044
+**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
 
-**Flowspec 数值组合**
+X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
 
-- 题型：计算；检索码：C16；依据：AI计算变式；题值并非真实试题。
-- 知识点：Flow specification（流量规格与合成方法）。
+**变式练习**：Two predictable flows need 30 ms and 10 ms delay limits. Which aggregate limit is safer?
 
-**Question:** Combine best-effort flows of 2 and 3 Mb/s, predictable flows of 4 and 6 Mb/s with delays 40 and 20 ms and availability targets 99.9% and 99.99%, plus a guaranteed flow of 5 Mb/s, 10 ms and 99.999%.
+**变式参考**：Use the stricter 10 ms target in the course aggregation method, while summing relevant capacities. This defines a target; actual delivery still needs verification.
 
-**中文题意：**按课件规则给multipart flowspec。
+**自查**：不相加delay上限或availability百分比；guaranteed不被平均。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
-<!-- answer-guidance:T044:start -->
-### 组织方式与答题思路
+</details>
 
-**任务类型：**分类聚合计算。以下为教学建议。
+### Moodle定位
 
-**建议答题路线（按实际题干调整）：**
+- [Week 5 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607048) · PDF 50–56 · 搜索 Flowspec Algorithm
 
-1. 按BE、predictable、guaranteed分组。
-2. BE和predictable分别合容量。
-3. predictable取最严格delay/RMA。
-4. guaranteed逐条保留tuple。
-5. 仅在同向同路径同时假设下另求总payload。
 
-**现有参考答案的组织方式：**
+## T044 · Flowspec 数值组合
 
-- 条件、计算步骤及必要表格。
-- 英文作答：结果与条件解释。
+Combine best-effort flows of 2 and 3 Mb/s, predictable flows of 4 and 6 Mb/s with delays 40 and 20 ms and availability targets 99.9% and 99.99%, plus a guaranteed flow of 5 Mb/s, 10 ms and 99.999%.
 
-**回Moodle核对：**
+按课件规则给multipart flowspec。
 
-- [Week 5 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607048) → PDF物理页 **51–56**；课件主题：Flow specification。
+### 精简参考答案
 
-搜索词：`flowspec`；`predictable`；`guaranteed`。
+The multipart specification contains 5 Mb/s best effort, a predictable aggregate of 10 Mb/s with a 20 ms delay limit and 99.99% availability target, and the guaranteed flow kept separately at 5 Mb/s, 10 ms and 99.999%.
 
-查到后确认：核对sum/min/max各适用于哪个指标及逐flow保证。
-
-**换问法时：**方向、路径、同时性变化后重新分组，不机械相加或平均availability。
-<!-- answer-guidance:T044:end -->
-
-### 计算步骤
+### 逐步解法
 
 BE capacity=2+3=5Mb/s。
 Predictable capacity=4+6=10Mb/s；delay上限min(40,20)=20ms；availability目标max(99.9%,99.99%)=99.99%。
@@ -480,17 +311,31 @@ Guaranteed保留独立tuple：(5Mb/s,10ms,99.999%)。
 若全在同方向、同链路同时发，初步payload需求5+10+5=20Mb/s。这个总和不抹掉独立保证，也不证明端到端availability已实现。
 这里availability用作课件RMA聚合指标示例；各参数单位/测量口径须一致。
 
-### 英文作答
+<details><summary>详细解析：理解 → 英文 → 变式</summary>
 
-The multipart specification contains 5 Mb/s best effort, a predictable aggregate of 10 Mb/s with a 20 ms delay limit and 99.99% availability target, and the guaranteed flow kept separately at 5 Mb/s, 10 ms and 99.999%.
+**先懂概念**：Flowspec 汇总流量及其性能要求；不同服务等级采用不同合成方式，best-effort 主要合并容量，predictable 保留相关严格性能条件，guaranteed 的单流保证需要逐条保留。
 
-### 易错、变式与反馈
+1. 本题先分服务类，再聚合；predictable delay取最小上限、availability取最高目标，因二者都是更严格要求。
 
-目标聚合不是串联系统实际可用性的概率计算。
+2. guaranteed各自保留tuple，不能被平均淹没；把所有容量加20只在题定同向同链路并发时成立。目标不是实际可靠性概率。
 
-概念：□不清楚 □能解释；英文：□看懂 □能复述 □独立写；Moodle：□能定位。具体卡点：____。
+**英文关键句**：Use the stricter target for the predictable aggregate.
 
-### 来源
+对可预测聚合使用更严格目标。 stricter不总等于更大数：delay更小而availability更大。
 
-- [Moodle：Week 5 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607048) → **PDF物理页51–56**，关键词`Flow specification`。
+**可复用句式**：Using ____, the result is ____ [unit]. This assumes ____.
+
+根据……，结果为……单位；这里假设……。 结果句必须包含单位与模型条件；英语简单不影响数学严谨。
+
+**变式练习**：Combine predictable flows of 3 and 7 Mb/s with delay limits 30 and 15 ms and availability targets 99.8% and 99.95%.
+
+**变式参考**：The target aggregate is 10 Mb/s, 15 ms and 99.95% availability under the course rule. This is a requirement, not proof that the system achieves it.
+
+**自查**：目标聚合不是串联系统实际可用性的概率计算。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+
+</details>
+
+### Moodle定位
+
+- [Week 5 - Lecture Slides](https://moodle.uowplatform.edu.au/mod/resource/view.php?id=4607048) · PDF 51–56 · 搜索 Flow specification
 
