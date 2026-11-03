@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JSON validator</title>
+<script>
+function storageSupported() { return typeof(Storage) != "undefined"; }
+function loadDraft() {
+  if (storageSupported()) {
+    try {
+      var draft = localStorage.getItem("csit884-json-draft");
+      if (draft != null) { document.getElementById("draft").value = draft; }
+    } catch (error) { /* Validation remains available when storage is blocked. */ }
+  }
+}
+function saveDraft() {
+  // Preserve raw text even when its JSON syntax is invalid.
+  if (storageSupported()) {
+    try {
+      localStorage.setItem("csit884-json-draft", document.getElementById("draft").value);
+    } catch (error) { /* Keep the current input usable without storage. */ }
+  }
+  document.getElementById("message").textContent = "";
+}
+function validateJSON() {
+  var message = document.getElementById("message");
+  try {
+    JSON.parse(document.getElementById("draft").value);
+    message.style.color = "green";
+    message.textContent = "JSON is valid";
+  } catch (error) {
+    message.style.color = "red";
+    // textContent displays an error as text rather than interpreting HTML.
+    message.textContent = "Error: " + error.message;
+  }
+}
+</script>
+</head>
+<body onload="loadDraft()">
+<p>Enter JSON to validate:</p><textarea id="draft" rows="12" cols="65" oninput="saveDraft()"></textarea><br>
+<button onclick="validateJSON()">Validate JSON</button><span id="message"></span>
+</body>
+</html>

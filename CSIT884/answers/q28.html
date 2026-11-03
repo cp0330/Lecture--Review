@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Stored task list</title>
+<script>
+var tasks = [];
+var lastId = 0;
+function loadTasks() {
+  var saved = localStorage.getItem("csit884-tasks");
+  if (saved !== null) { tasks = JSON.parse(saved); }
+  for (var i = 0; i < tasks.length; i++) { lastId = Math.max(lastId, tasks[i].id); }
+  displayTasks();
+}
+function saveTasks() { localStorage.setItem("csit884-tasks", JSON.stringify(tasks)); }
+function displayTasks() {
+  var list = document.getElementById("tasks");
+  list.innerHTML = "";
+  for (var i = 0; i < tasks.length; i++) {
+    var item = document.createElement("li");
+    item.appendChild(document.createTextNode(tasks[i].task + " / " + tasks[i].urgency + " "));
+    var button = document.createElement("button");
+    button.textContent = "Delete";
+    button.setAttribute("data-id", tasks[i].id);
+    button.onclick = function() { deleteTask(Number(this.getAttribute("data-id"))); };
+    item.appendChild(button);
+    list.appendChild(item);
+  }
+  document.getElementById("json").value = JSON.stringify(tasks, null, 2);
+}
+function addTask() {
+  // Keep IDs unique even when the clock returns the same millisecond.
+  lastId = Math.max(new Date().getTime(), lastId + 1);
+  tasks.push({id: lastId, task: document.getElementById("task").value, urgency: document.getElementById("urgency").value});
+  saveTasks();
+  displayTasks();
+}
+function deleteTask(id) {
+  for (var i = 0; i < tasks.length; i++) {
+    if (tasks[i].id === id) { tasks.splice(i, 1); break; }
+  }
+  saveTasks();
+  displayTasks();
+}
+function clearTasks() {
+  tasks = [];
+  localStorage.removeItem("csit884-tasks");
+  displayTasks();
+}
+</script>
+</head>
+<body onload="loadTasks()">
+<label>Task: <input id="task"></label>
+<label>Urgency: <select id="urgency"><option>High</option><option>Medium</option><option selected>Low</option></select></label>
+<button onclick="addTask()">Add task</button><button onclick="clearTasks()">Clear tasks</button>
+<ul id="tasks"></ul><textarea id="json" rows="10" cols="65" readonly></textarea>
+<p>localStorage normally keeps data across browser sessions. sessionStorage keeps data for the page session; reloading keeps it, but closing the tab ends that session.</p>
+</body>
+</html>

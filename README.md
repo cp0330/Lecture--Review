@@ -2,6 +2,18 @@
 
 课程复习题库，按课件顺序组织。
 
+## CSIT884 · Web Development
+
+**20 道重点题 + 9 道查漏题，附独立参考答案、记忆笔记与速记表。**
+
+- [打开 CSIT884 复习入口](https://cp0330.github.io/Lecture--Review/CSIT884/)
+- [英文题库](CSIT884/questions.md) · [参考答案](CSIT884/reference-answers.md)
+- [完整记忆笔记](CSIT884/notes.md) · [速记表](CSIT884/quick-notes.md)
+- [查缺补漏与勘误](CSIT884/audit.md) · [验证记录](CSIT884/validation.md)
+- [下载可运行练习包](CSIT884/practice-pack.zip) · [本地运行说明](CSIT884/setup.html)
+
+逐题练习支持搜索、主题/轮次/状态筛选、自动保存草稿、并排答案对照、导出和导入进度。草稿留在当前浏览器；不上传到服务器。
+
 ## CSIT985 · Strategic Network Design
 
 **131题：99道简答、23道计算、1道校园Flow图题、8组完整长答。**
@@ -14,7 +26,7 @@
 - [Moodle资料定位](CSIT985/sources.md)
 - [新旧题号对照](CSIT985/question-map.md)
 
-**[打开在线题库](https://cp0330.github.io/Lecture--Review/)**：直接在浏览器中使用，支持搜索、课件/题型筛选、逐题答题思路、Moodle查阅提示和隐藏答案自测。
+**[打开 CSIT985 在线题库](https://cp0330.github.io/Lecture--Review/CSIT985/review-bank.html)**：直接在浏览器中使用，支持搜索、课件/题型筛选、逐题答题思路、Moodle查阅提示和隐藏答案自测。
 
 GitHub中可阅读Markdown分册。需要离线使用时，可下载[HTML阅读版](CSIT985/review-bank.html)，或通过仓库的 **Code → Download ZIP** 下载整套资料。
 

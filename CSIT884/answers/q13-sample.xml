@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<resultBatch campus="Sydney">
+  <result ref="R001"><contestantId>00025142</contestantId><examId>WEB01</examId><score>156</score><band>C</band></result>
+  <result ref="R002"><contestantId>00025143</contestantId><examId>WEB01</examId><score>280</score><band>A</band></result>
+</resultBatch>

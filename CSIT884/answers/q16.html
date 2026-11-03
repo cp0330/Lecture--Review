@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Triangle</title>
+<script>
+function drawTriangle() {
+  var ax = Number(document.getElementById("ax").value), ay = Number(document.getElementById("ay").value);
+  var bx = Number(document.getElementById("bx").value), by = Number(document.getElementById("by").value);
+  var cx = Number(document.getElementById("cx").value), cy = Number(document.getElementById("cy").value);
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
+  // Clear the previous drawing, then create a fresh path.
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.beginPath(); ctx.moveTo(ax, ay); ctx.lineTo(bx, by); ctx.lineTo(cx, cy); ctx.closePath();
+  ctx.fillStyle = "plum"; ctx.fill();
+  ctx.strokeStyle = "purple"; ctx.lineWidth = 3; ctx.stroke();
+  // Each median ends at the midpoint of the opposite side.
+  ctx.strokeStyle = "white"; ctx.lineWidth = 2;
+  ctx.beginPath(); ctx.moveTo(ax, ay); ctx.lineTo((bx + cx) / 2, (by + cy) / 2); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(bx, by); ctx.lineTo((ax + cx) / 2, (ay + cy) / 2); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo((ax + bx) / 2, (ay + by) / 2); ctx.stroke();
+  ctx.fillStyle = "black"; ctx.font = "16px Arial";
+  ctx.fillText("A", ax + 4, ay - 4); ctx.fillText("B", bx + 4, by - 4); ctx.fillText("C", cx + 4, cy - 4);
+}
+</script>
+</head>
+<body>
+A: X <input id="ax" value="80" size="4"> Y <input id="ay" value="20" size="4"><br>
+B: X <input id="bx" value="20" size="4"> Y <input id="by" value="160" size="4"><br>
+C: X <input id="cx" value="260" size="4"> Y <input id="cy" value="160" size="4"><br>
+<canvas id="canvas" width="320" height="200" style="border:1px solid black;"></canvas><br>
+<button onclick="drawTriangle()">Draw triangle</button>
+</body>
+</html>

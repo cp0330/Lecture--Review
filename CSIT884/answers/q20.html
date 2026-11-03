@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Change styles</title>
+<style>
+#heading { color: black; text-align: center; font-size: 32px; transition: transform 0.3s; }
+#heading:hover { transform: scale(2); }
+</style>
+<script>
+function changeColor(color) {
+  // Change the existing element's style.
+  document.getElementById("heading").style.color = color;
+}
+function applySize() {
+  var size = Number(document.getElementById("fontSize").value);
+  document.getElementById("heading").style.fontSize = size + "px";
+}
+</script>
+</head>
+<body>
+<h1 id="heading">University of Wollongong</h1>
+<button onclick="changeColor('green')">Green</button><button onclick="changeColor('orange')">Orange</button><button onclick="changeColor('blue')">Blue</button>
+<br>Font size: <input id="fontSize" value="32"><button onclick="applySize()">Apply Size</button>
+</body>
+</html>

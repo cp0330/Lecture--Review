@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Weather AJAX</title>
+<style>
+.lee { color: orange; font-size: 50px; }
+#mayal { color: purple; font-size: 50px; }
+</style>
+<script>
+function getWeather() {
+  // Construct the query from the user's current input.
+  var latitude = document.getElementById("latitude").value;
+  var longitude = document.getElementById("longitude").value;
+  var url = "/weather?latitude=" + encodeURIComponent(latitude) + "&longitude=" + encodeURIComponent(longitude) + "&current=temperature_2m";
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4) {
+      if (xhttp.status == 200) {
+        var obj = JSON.parse(xhttp.responseText);
+        displayWeather(obj, latitude, longitude);
+      } else {
+        document.getElementById("weatherDisplay").innerHTML = "Request failed: " + xhttp.status;
+      }
+    }
+  };
+  xhttp.open("GET", url, true);
+  xhttp.send();
+}
+function displayWeather(obj, latitude, longitude) {
+  // Keep the query input separate from the server response data.
+  var html = "<p>User Query: Latitude " + latitude + ", Longitude " + longitude + "</p>";
+  html += "<h2 id='mayal'>Weather information</h2><table border='1'>";
+  html += "<tr><td>Elevation</td><td>" + obj.elevation + "</td></tr>";
+  html += "<tr><td>Time</td><td>" + obj.current.time + "</td></tr>";
+  html += "<tr><td>Interval</td><td>" + obj.current.interval + "</td></tr>";
+  html += "<tr><td>Temperature</td><td class='lee'>" + obj.current.temperature_2m + "</td></tr>";
+  html += "<tr><td>Generationtime(ms)</td><td>" + obj.generationtime_ms + "</td></tr></table>";
+  document.getElementById("weatherDisplay").innerHTML = html;
+}
+</script>
+</head>
+<body>
+<h1>Maya Lee, 2026001</h1>
+Latitude: <input id="latitude"><br>Longitude: <input id="longitude"><br>
+<button onclick="getWeather()">Get Weather JSON</button><div id="weatherDisplay"></div>
+</body>
+</html>

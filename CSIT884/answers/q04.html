@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Commands</title>
+<script>
+function showAnimal(name) {
+  // Text fields use value; images use src.
+  document.getElementById("status").value = name == "cat" ? "Cat selected" : "Dog selected";
+  document.getElementById("animal").src = "../assets/" + name + ".svg";
+}
+function runCommand(event) {
+  // Only the Enter key executes a command.
+  if (event.key != "Enter") { return; }
+  var command = document.getElementById("command").value;
+  if (command == "display cat") { showAnimal("cat"); }
+  else if (command == "display dog") { showAnimal("dog"); }
+  else { alert("Invalid command"); }
+}
+</script>
+</head>
+<body>
+<button onclick="showAnimal('cat')">Cat</button><button onclick="showAnimal('dog')">Dog</button>
+<input id="status" readonly><br><img id="animal" width="100" alt="Selected animal"><br>
+Enter command: <input id="command" onkeydown="runCommand(event)">
+</body>
+</html>

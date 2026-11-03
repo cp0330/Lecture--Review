@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DOM group selection</title>
+<script>
+function countParagraphs() {
+  document.getElementById("count").textContent = document.getElementsByTagName("p").length;
+}
+function colourTopics() {
+  var topics = document.getElementsByClassName("topic");
+  for (var i = 0; i < topics.length; i++) { topics[i].style.color = "orange"; }
+}
+function addTopic() {
+  // Create the element, set its class, then attach it to the document.
+  var paragraph = document.createElement("p");
+  paragraph.setAttribute("class", "topic");
+  paragraph.appendChild(document.createTextNode("JavaScript"));
+  document.getElementById("extra").appendChild(paragraph);
+}
+</script>
+</head>
+<body>
+<p class="topic">HTML</p><p class="topic">CSS</p><p>Notes</p>
+<button onclick="countParagraphs()">Count paragraphs</button><button onclick="colourTopics()">Colour topics</button><button onclick="addTopic()">Add topic</button>
+<span id="count"></span><div id="extra"></div>
+</body>
+</html>

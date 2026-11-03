@@ -1,0 +1,26 @@
+{
+  "searchQuery": "Australia",
+  "searchResult": [
+    {
+      "airportName": "Sydney Airport",
+      "ICAO": "YSSY",
+      "IATA": "SYD",
+      "city": "Sydney",
+      "country": "Australia"
+    },
+    {
+      "airportName": "Canberra Airport",
+      "ICAO": "YSCB",
+      "IATA": "CBR",
+      "city": "Canberra",
+      "country": "Australia"
+    },
+    {
+      "airportName": "Brisbane Airport",
+      "ICAO": "YBBN",
+      "IATA": "BNE",
+      "city": "Brisbane",
+      "country": "Australia"
+    }
+  ]
+}

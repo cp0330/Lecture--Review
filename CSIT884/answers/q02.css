@@ -1,0 +1,6 @@
+#heading { color: purple; background-color: lightgray; }
+.info { border: 2px dashed orange; padding: 10px; }
+#teamTable { border-collapse: collapse; }
+#teamTable th, #teamTable td { border: 1px solid black; padding: 12px; vertical-align: top; }
+#teamTable .rank { text-align: right; }
+.members > li { color: green; }

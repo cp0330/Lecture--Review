@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Math validation</title>
+<script>
+var first = 0;
+var second = 0;
+function newQuestion() {
+  // Generate once, then keep the displayed problem for validation.
+  first = Math.floor(Math.random() * 10) + 1;
+  second = Math.floor(Math.random() * 10) + 1;
+  document.getElementById("question").innerHTML = first + " + " + second;
+}
+function validateForm() {
+  var answer = document.getElementById("answer").value;
+  if (answer.trim() == "" || Number(answer) != first + second) {
+    document.getElementById("error").innerHTML = "Wrong!";
+    return false;
+  }
+  document.getElementById("error").innerHTML = "";
+  return true;
+}
+function resetQuestion() {
+  document.getElementById("error").innerHTML = "";
+  newQuestion();
+}
+</script>
+</head>
+<body onload="newQuestion()">
+<h1>Library book search</h1>
+<form id="searchForm" action="/search" method="get" onsubmit="return validateForm()" onreset="resetQuestion()">
+ Author: <input type="text" name="author" id="author"><br>
+ Year: <input type="text" name="year" id="year"><br>
+ Subject:<br>
+ <label><input type="checkbox" name="sub" value="mth">Mathematics</label>
+ <label><input type="checkbox" name="sub" value="cs">Computer Science</label>
+ <label><input type="checkbox" name="sub" value="bio">Biology</label><br>
+ Format:
+ <label><input type="radio" name="format" value="p" checked>Print</label>
+ <label><input type="radio" name="format" value="e">Electronic</label><br>
+ 
+ Prove you are not a robot: <span id="question"></span> = <input id="answer" type="text" size="4">
+ <span id="error" style="color:red;"></span><br>
+ <input type="submit" value="Search"><input type="reset" value="Clear">
+</form>
+</body>
+</html>

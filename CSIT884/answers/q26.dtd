@@ -1,0 +1,6 @@
+<!ELEMENT catalog (book+)>
+<!ELEMENT book (title,price)>
+<!ATTLIST book code CDATA #REQUIRED>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ATTLIST price currency CDATA #REQUIRED>

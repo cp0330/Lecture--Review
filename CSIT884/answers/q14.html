@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AJAX display</title>
+<script>
+function loadJSON(url, kind) {
+  // Use the XMLHttpRequest technique taught in the subject.
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4) {
+      if (xhttp.status == 200) {
+        var obj = JSON.parse(xhttp.responseText);
+        if (kind == "faculty") { displayFaculty(obj); }
+        else { displayAirports(obj); }
+      } else {
+        document.getElementById(kind + "Display").innerHTML = "Request failed: " + xhttp.status;
+      }
+    }
+  };
+  xhttp.open("GET", url, true);
+  xhttp.send();
+}
+function displayFaculty(obj) {
+  var html = "<p>Name: " + obj.name + "<br>Abbreviation: " + obj.abbreviation;
+  html += "<br>Email: " + obj.email + "<br>Website: " + obj.web + "</p>";
+  document.getElementById("facultyDisplay").innerHTML = html;
+}
+function displayAirports(obj) {
+  // Build rows from the response array, whatever its length is.
+  var html = "<p>Search Query: " + obj.searchQuery + "</p>";
+  html += "<table border='1'><tr><th>Airport</th><th>ICAO</th><th>IATA</th><th>Location</th></tr>";
+  for (var i = 0; i < obj.searchResult.length; i++) {
+    var airport = obj.searchResult[i];
+    html += "<tr><td>" + airport.airportName + "</td><td>" + airport.ICAO;
+    html += "</td><td>" + airport.IATA + "</td><td>" + airport.city + ", " + airport.country + "</td></tr>";
+  }
+  html += "</table>";
+  document.getElementById("airportsDisplay").innerHTML = html;
+}
+</script>
+</head>
+<body>
+<button onclick="loadJSON('../data/faculty.json','faculty')">Get Faculty Details</button><div id="facultyDisplay"></div>
+<button onclick="loadJSON('../data/airports.json','airports')">Search Airport</button><div id="airportsDisplay"></div>
+</body>
+</html>

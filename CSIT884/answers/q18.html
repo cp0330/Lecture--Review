@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Book order</title>
+<script>
+var total = 0;
+function makeItem() {
+  var title = document.getElementById("title").value;
+  var code = document.getElementById("code").value;
+  var quantity = Number(document.getElementById("quantity").value);
+  var li = document.createElement("li");
+  li.setAttribute("data-quantity", quantity);
+  li.appendChild(document.createTextNode(code + ": " + title + " x " + quantity));
+  return li;
+}
+function showTotal() { document.getElementById("total").innerHTML = total; }
+function addBook(atFirst) {
+  var list = document.getElementById("orders");
+  var li = makeItem();
+  if (atFirst) { list.insertBefore(li, list.firstElementChild); }
+  else { list.appendChild(li); }
+  total += Number(li.getAttribute("data-quantity"));
+  showTotal();
+}
+function replaceLast() {
+  var list = document.getElementById("orders");
+  var old = list.lastElementChild;
+  if (old == null) { return; }
+  var li = makeItem();
+  // Replace the old quantity instead of adding the new quantity twice.
+  total += Number(li.getAttribute("data-quantity")) - Number(old.getAttribute("data-quantity"));
+  list.replaceChild(li, old);
+  showTotal();
+}
+function removeLast() {
+  var list = document.getElementById("orders");
+  var old = list.lastElementChild;
+  if (old == null) { return; }
+  total -= Number(old.getAttribute("data-quantity"));
+  list.removeChild(old);
+  showTotal();
+}
+</script>
+</head>
+<body>
+Title: <input id="title"><br>Code: <input id="code"><br>Quantity: <input id="quantity"><br>
+<button onclick="addBook(false)">Add last</button><button onclick="addBook(true)">Add first</button>
+<button onclick="replaceLast()">Replace last</button><button onclick="removeLast()">Remove last</button>
+<ul id="orders"></ul><p>Total: <span id="total">0</span></p>
+</body>
+</html>

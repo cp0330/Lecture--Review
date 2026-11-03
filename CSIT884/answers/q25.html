@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Form validation drill</title>
+<style>
+#emailError, #emailError2 { color: red; }
+</style>
+<script>
+function clearErrors() {
+  document.getElementById("emailError").textContent = "";
+  document.getElementById("emailError2").textContent = "";
+}
+function validateEmails() {
+  clearErrors();
+  var first = document.getElementById("email");
+  var second = document.getElementById("email2");
+  var email = first.value.trim();
+  var confirmation = second.value.trim();
+  var valid = true;
+  // Check emptiness first, then compare the two non-empty values.
+  if (email === "") { document.getElementById("emailError").textContent = "Email is required"; valid = false; }
+  if (confirmation === "") { document.getElementById("emailError2").textContent = "Confirmation is required"; valid = false; }
+  if (valid && email !== confirmation) { document.getElementById("emailError2").textContent = "Emails do not match"; valid = false; }
+  if (valid) { first.value = email; second.value = confirmation; }
+  return valid;
+}
+</script>
+</head>
+<body>
+<h1>Part A</h1><form action="/search" method="get">
+ <label>Email: <input name="email" type="email" required></label>
+ <label>Quantity: <input name="quantity" type="number" min="1" max="5" step="1" required></label>
+ <label>Code: <input name="code" pattern="[A-Z]{3}" required></label>
+ <button type="submit">Submit A</button><button type="reset">Reset A</button>
+</form>
+<h1>Part B</h1><form action="/search" method="get" novalidate onsubmit="return validateEmails()" onreset="clearErrors()">
+ <label>Email: <input id="email" name="email" type="text"></label><span id="emailError"></span><br>
+ <label>Confirm: <input id="email2" name="email2" type="text"></label><span id="emailError2"></span><br>
+ <button type="submit">Submit B</button><button type="reset">Reset B</button>
+</form>
+</body>
+</html>

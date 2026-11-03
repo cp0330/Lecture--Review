@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript data drill</title>
+<script>
+var subjects = ["CSIT884", "CSIT882"];
+function codeValue() { return document.getElementById("subject").value.trim().toUpperCase(); }
+function addSubject() { subjects.push(codeValue()); }
+function removeSubject() {
+  var index = subjects.indexOf(codeValue());
+  // A missing value returns -1; do not pass that to splice.
+  if (index !== -1) { subjects.splice(index, 1); }
+}
+function showSubjects() {
+  var output = "";
+  for (var i = 0; i < subjects.length; i++) { output += subjects[i] + "\n"; }
+  var exam = new Date(2026, 10, 11, 9, 0, 0);
+  var next = new Date(exam.getTime());
+  next.setDate(next.getDate() + 1);
+  output += "Count: " + subjects.length + "\nPrefix: " + codeValue().slice(0, 4);
+  output += "\n" + exam.getFullYear() + "-" + (exam.getMonth() + 1) + "-" + exam.getDate();
+  output += " " + exam.getHours() + ":" + exam.getMinutes() + ":" + exam.getSeconds();
+  output += "\nWeekday: " + exam.getDay() + "\nNext date: " + next.getDate();
+  document.getElementById("result").textContent = output;
+}
+</script>
+</head>
+<body>
+<label>Subject code: <input id="subject"></label>
+<button onclick="addSubject()">Add</button><button onclick="removeSubject()">Remove</button><button onclick="showSubjects()">Show</button>
+<pre id="result"></pre><p>The month index starts at 0, so November uses 10.</p>
+</body>
+</html>

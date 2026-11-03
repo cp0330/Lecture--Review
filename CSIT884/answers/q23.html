@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Event coverage drill</title>
+<script>
+function swapImages() {
+  // Save the first values before replacing them.
+  var left = document.getElementById("left");
+  var right = document.getElementById("right");
+  var oldSource = left.src;
+  var oldAlt = left.alt;
+  left.src = right.src;
+  left.alt = right.alt;
+  right.src = oldSource;
+  right.alt = oldAlt;
+}
+function renameLabel() {
+  var label = prompt("Enter a label");
+  if (label !== null) { document.getElementById("heading").textContent = label; }
+}
+function clearLabel() {
+  if (confirm("Clear the label?")) { document.getElementById("heading").textContent = ""; }
+}
+</script>
+</head>
+<body>
+<h1 id="heading">Animal practice</h1>
+<img id="left" src="../assets/cat.svg" alt="cat" width="120" height="100" onmouseover="swapImages()">
+<img id="right" src="../assets/dog.svg" alt="dog" width="120" height="100" onmouseover="swapImages()">
+<p><label>Code: <input id="code" onfocus="this.style.backgroundColor='lightyellow'" onblur="this.style.backgroundColor='white'" onchange="this.value=this.value.toUpperCase()" onselect="document.getElementById('message').textContent='Text selected'"></label><span id="message"></span></p>
+<p><span id="press" onmousedown="this.textContent='Release me'" onmouseup="this.textContent='Thank you'" onmouseout="this.textContent='Press here'">Press here</span></p>
+<button onclick="renameLabel()">Rename</button><button onclick="clearLabel()">Clear label</button>
+</body>
+</html>

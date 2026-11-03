@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Subject JSON</title>
+<script>
+function viewJSON() {
+  // Construct the required data types, not four strings.
+  var subject = {};
+  subject.code = document.getElementById("code").value;
+  subject.title = document.getElementById("title").value;
+  subject.cp = Number(document.getElementById("cp").value);
+  subject.coreFlag = document.getElementById("core").checked;
+  document.getElementById("jsonText").value = JSON.stringify(subject, null, 2);
+}
+function readJSON() {
+  // Parse the text before accessing object properties.
+  var subject = JSON.parse(document.getElementById("jsonText").value);
+  document.getElementById("code").value = subject.code;
+  document.getElementById("title").value = subject.title;
+  document.getElementById("cp").value = subject.cp;
+  document.getElementById("core").checked = subject.coreFlag;
+}
+</script>
+</head>
+<body>
+Code: <input id="code"><br>Title: <input id="title"><br>Credit point: <input id="cp"><br>
+Core subject: <input type="checkbox" id="core"><br>
+<button onclick="viewJSON()">View JSON</button><button onclick="readJSON()">Read JSON</button><br>
+<textarea id="jsonText" rows="12" cols="60"></textarea>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Animal drop</title>
+<style>
+#dogZone, #catZone { border: 1px solid black; padding: 20px; min-height: 70px; margin: 10px; font-size: 32px; }
+</style>
+<script>
+var counts = {dog: 0, cat: 0};
+function startDrag(event) {
+  // Transfer the source identity, not the image itself.
+  event.dataTransfer.setData("animal", event.target.id);
+}
+function allowDrop(event) { event.preventDefault(); }
+function dropAnimal(event, targetAnimal) {
+  event.preventDefault();
+  var sourceAnimal = event.dataTransfer.getData("animal");
+  if (sourceAnimal != targetAnimal) { return; }
+  counts[targetAnimal] += 1;
+  document.getElementById(targetAnimal + "Count").innerHTML = counts[targetAnimal];
+  // Create a copy without moving or duplicating the source ID.
+  var image = document.createElement("img");
+  image.src = document.getElementById(sourceAnimal).src;
+  image.width = 60; image.alt = sourceAnimal; image.draggable = false;
+  document.getElementById(targetAnimal + "Copies").appendChild(image);
+}
+</script>
+</head>
+<body>
+<div id="dogZone" ondragover="allowDrop(event)" ondrop="dropAnimal(event,'dog')">DOG <span id="dogCount">0</span><span id="dogCopies"></span></div>
+<div id="catZone" ondragover="allowDrop(event)" ondrop="dropAnimal(event,'cat')">CAT <span id="catCount">0</span><span id="catCopies"></span></div>
+<img id="cat" src="../assets/cat.svg" width="100" draggable="true" ondragstart="startDrag(event)" alt="cat">
+<img id="dog" src="../assets/dog.svg" width="100" draggable="true" ondragstart="startDrag(event)" alt="dog">
+</body>
+</html>

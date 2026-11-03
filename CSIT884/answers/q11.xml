@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<student number="2026001">
+  <firstName>Maya</firstName>
+  <lastName>Lee</lastName>
+  <subjects>
+    <subject code="CSIT884"><creditPoint>6</creditPoint><mark>84</mark><grade>A</grade></subject>
+    <subject code="CSIT882"><creditPoint>6</creditPoint><mark>72</mark><grade>B</grade></subject>
+  </subjects>
+</student>

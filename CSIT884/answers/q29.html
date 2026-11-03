@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Check an arithmetic answer</title>
+<script>
+function checkAnswer() {
+  // Input values are strings until converted for arithmetic.
+  var first = Number(document.getElementById("first").value);
+  var second = Number(document.getElementById("second").value);
+  var answer = Number(document.getElementById("answer").value);
+  var operation = document.getElementById("operation").value;
+  var expected;
+  if (operation === "add") { expected = first + second; }
+  else if (operation === "subtract") { expected = first - second; }
+  else { expected = first * second; }
+  document.getElementById("result").textContent = answer === expected ? "Correct!" : "Incorrect, please try again.";
+}
+</script>
+</head>
+<body>
+<input id="first" aria-label="First number">
+<select id="operation" aria-label="Operation"><option value="add">+</option><option value="subtract">-</option><option value="multiply">x</option></select>
+<input id="second" aria-label="Second number"> = <input id="answer" aria-label="Your answer">
+<button onclick="checkAnswer()">Check</button><span id="result"></span>
+</body>
+</html>

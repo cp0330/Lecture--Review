@@ -1,0 +1,16 @@
+{
+  "firstName": "Maya",
+  "lastName": "Lee",
+  "subjectList": [
+    {
+      "code": "CSIT884",
+      "title": "Web Development"
+    },
+    {
+      "code": "CSIT882",
+      "title": "Systems"
+    }
+  ],
+  "age": 22,
+  "fullTime": true
+}

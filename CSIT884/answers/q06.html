@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Slideshow</title>
+<script>
+var images = ["../assets/team1.svg", "../assets/team2.svg", "../assets/team3.svg", "../assets/team4.svg", "../assets/team5.svg", "../assets/team6.svg"];
+var slideshowTimer = null;
+function showRandomImage() {
+  // Math.floor maps the result to a valid array index.
+  var index = Math.floor(Math.random() * images.length);
+  document.getElementById("slide").src = images[index];
+}
+function startSlideshow() {
+  if (slideshowTimer == null) { slideshowTimer = setInterval(showRandomImage, 1200); }
+}
+function stopSlideshow() {
+  clearInterval(slideshowTimer);
+  slideshowTimer = null;
+}
+</script>
+</head>
+<body>
+<button onclick="startSlideshow()">Start Slideshow</button><button onclick="stopSlideshow()">Stop Slideshow</button>
+<br><img id="slide" width="240" height="160" alt="Slideshow">
+</body>
+</html>

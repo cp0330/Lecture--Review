@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS coverage drill</title>
+<style>
+#demoTable { border-collapse: separate; border-spacing: 10px; }
+#demoTable td { border: 1px solid black; padding: 8px; }
+#topics { list-style-type: square; }
+.links a:link { color: blue; }
+.links a:visited { color: purple; }
+.links a:hover { color: orange; }
+.links a:active { color: red; }
+p { color: green; }
+.info { color: orange; }
+#note { color: purple; }
+.info { color: blue; }
+</style>
+</head>
+<body>
+<table id="demoTable"><tr><td>HTML</td><td>CSS</td></tr></table>
+<ul id="topics"><li>HTML</li><li>CSS</li></ul>
+<div class="links"><a href="https://example.com/">Example</a></div>
+<p id="note" class="info">Check the selector</p>
+<p>The ID rule makes the paragraph purple. In these ordinary rules, its specificity is higher than a class or type selector.</p>
+<p>With collapsed borders, border-spacing has no effect. Padding still adds space inside each cell.</p>
+</body>
+</html>
