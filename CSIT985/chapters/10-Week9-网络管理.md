@@ -38,7 +38,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：No. Performance concerns can appear at service, network and device levels. FCAPS functions and management hierarchy describe different dimensions.
 
-**自查**：层级是管理范围，FCAPS是管理功能，不是同一分类。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：层级是管理范围，FCAPS是管理功能，不是同一分类。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -81,7 +81,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：No. Device support, task needs and operating complexity matter. Select a protocol and tools that meet the required functions reliably.
 
-**自查**：低优先级历史内容不标必考；CMOT不是SNMP的新版本。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：低优先级历史内容不标必考；CMOT不是SNMP的新版本。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -124,7 +124,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：A single cumulative reading is insufficient. Obtain another reading and the elapsed time, check reset or wrap, then compute the change in octets times eight divided by seconds.
 
-**自查**：counter累计字节不是瞬时bps；MIB不是性能历史数据库本身。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：counter累计字节不是瞬时bps；MIB不是性能历史数据库本身。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -167,7 +167,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：500,000 × 8 / 5 = 800,000 bit/s, or 800 kb/s. This assumes compatible readings with no unhandled reset or wrap and does not add unspecified wire overhead.
 
-**自查**：两次同对象counter需检查reset/wrap，error ratio需兼容packet分母。GETBULK在SNMPv2已有，SNMPv3重点安全，避免按课件误记版本。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：两次同对象counter需检查reset/wrap，error ratio需兼容packet分母。GETBULK在SNMPv2已有，SNMPv3重点安全，避免按课件误记版本。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -210,7 +210,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：No. It provides limited reachability and timing evidence. The SLA may also require throughput, loss, availability and application-level tests.
 
-**自查**：ping成功不证明吞吐、全部应用、所有路径都正常。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：ping成功不证明吞吐、全部应用、所有路径都正常。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -253,7 +253,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：Average polling traffic and value storage roughly double under otherwise unchanged assumptions. Time resolution improves, but short events can still be missed.
 
-**自查**：实时分析与长期平均不能互相代替；poll越频繁并非无成本。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：实时分析与长期平均不能互相代替；poll越频繁并非无成本。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -300,7 +300,7 @@ Each polling cycle generates 1,740,800 bits. With a five-second interval, averag
 
 **变式参考**：3200×68×8/10 = 174080 bit/s = 174.08 kb/s. Doubling the interval halves the average rate under unchanged assumptions.
 
-**自查**：不能把1.7408Mb/cycle直接写1.7408Mb/s，除非说明1秒发完。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：不能把1.7408Mb/cycle直接写1.7408Mb/s，除非说明1秒发完。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -346,7 +346,7 @@ Counter delta=750000bytes；速率750000×8/10=600000bit/s=600kb/s。
 
 **变式参考**：Daily storage = 3200×8×8640 = 221184000 bytes = 221.184 MB. Rate = 250000×8/4 = 500000 bit/s = 500 kb/s, after counter validity checks.
 
-**自查**：不要把wire的60byte overhead计入“只存8byte值”的问题。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：不要把wire的60byte overhead计入“只存8byte值”的问题。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -389,7 +389,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：Out-of-band access may support diagnosis and recovery. It must be reachable, protected and independent of the failed production path.
 
-**自查**：比较维度不对齐；把带外说成永不失效；把in-band/out-of-band等同于centralized/distributed。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：比较维度不对齐；把带外说成永不失效；把in-band/out-of-band等同于centralized/distributed。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -432,7 +432,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：No. A centralized logical view can use redundant systems. Evaluate availability and communication paths separately from the organizational model.
 
-**自查**：centralized≠必然一台物理主机；logical集中可有冗余。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：centralized≠必然一台物理主机；logical集中可有冗余。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -475,7 +475,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：No, unless those headers are actually retained. Traffic and storage use different per-measurement sizes and must be calculated separately.
 
-**自查**：2–5%、10%是课件经验参考；不是协议硬上限。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：2–5%、10%是课件经验参考；不是协议硬上限。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -518,7 +518,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：Not automatically. One collection point may serve both roles if it has the required visibility, capacity and failure coverage.
 
-**自查**：per-subnet与per-interface是规划起点；别机械重复部署同一位置，也别把一条链路测量当全路径保证。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：per-subnet与per-interface是规划起点；别机械重复部署同一位置，也别把一条链路测量当全路径保证。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -561,7 +561,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：No. A reset or wrap may explain the change. Validate the counter semantics and timestamps before calculating a rate or declaring a traffic event.
 
-**自查**：计数器回卷可能造成错误负数速率；不要直接当真实流量下降。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：计数器回卷可能造成错误负数速率；不要直接当真实流量下降。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -604,7 +604,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：No. Required monitoring and recovery access must remain available through authorized paths. Balance protection with the management dependencies of the service.
 
-**自查**：S3/Q03讲带内带外；本题重跨组件因果。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：S3/Q03讲带内带外；本题重跨组件因果。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 

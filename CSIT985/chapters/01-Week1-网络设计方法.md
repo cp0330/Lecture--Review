@@ -38,7 +38,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：Check application needs and the complete path. The bottleneck may be a server or an external link. Faster switches help only if switching capacity is the limiting factor.
 
-**自查**：top-down 不表示完全忽略现有设备。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：top-down 不表示完全忽略现有设备。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -81,7 +81,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：No. The layers describe roles. A collapsed design may be suitable if capacity, resilience and policy requirements are still met.
 
-**自查**：用同一包路径依次说明，才能把名称变成因果。小网可合并设备，但角色仍需完成；高可用核心不能弥补接入单点或过载。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：用同一包路径依次说明，才能把名称变成因果。小网可合并设备，但角色仍需完成；高可用核心不能弥补接入单点或过载。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -124,7 +124,7 @@ The phases form a life cycle rather than a process that ends after installation.
 
 **变式参考**：Operate detects the problem. Optimize reviews the evidence and may send the project back to Plan and Design before another implementation.
 
-**自查**：PPDIOO有两个O：Operate和Optimize；不要漏Prepare或把Plan/Design混同。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：PPDIOO有两个O：Operate和Optimize；不要漏Prepare或把Plan/Design混同。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -167,7 +167,7 @@ Documentation preserves decisions and supports future operation and improvement.
 
 **变式参考**：A prototype tests important assumptions and interactions on a smaller scale. It can reveal problems before they affect the full network, but does not prove every production condition.
 
-**自查**：原型是验证方案的一环；不把课件文字中的prototype与全面安装混成一步。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：原型是验证方案的一环；不把课件文字中的prototype与全面安装混成一步。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -210,7 +210,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：Review the device choice and its architectural dependency. If no feasible option meets the requirement, revisit constraints and requirements with evidence rather than silently dropping the goal.
 
-**自查**：不要把 architecture 等同于设备型号清单。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：不要把 architecture 等同于设备型号清单。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -253,7 +253,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：Schedule and resource defensibility are at risk, even if technical performance is suitable. Compare feasible training, timing and alternative platforms.
 
-**自查**：defensibility分四种理由：技术能达标、钱够、时间赶得上、人员设备资源足。audit trail保存依据与假设，方便说明为什么舍弃一个看似更强的选项。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：defensibility分四种理由：技术能达标、钱够、时间赶得上、人员设备资源足。audit trail保存依据与假设，方便说明为什么舍弃一个看似更强的选项。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 

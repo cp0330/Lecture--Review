@@ -38,7 +38,7 @@ The main output is a maintained requirements specification, supported by measure
 
 **变式参考**：No. Review the behaviour assumptions and derived requirements, record the change and update affected maps and design decisions.
 
-**自查**：流程允许反复修订，不能把收集到的原话直接当最终可测试需求。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：流程允许反复修订，不能把收集到的原话直接当最终可测试需求。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -81,7 +81,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：Define the application, load, rate or delay target, observation period, failure scope and maintenance rules. Then obtain evidence and agree on feasible metrics.
 
-**自查**：说明99.9%不是错误；仅有百分比缺少口径。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：说明99.9%不是错误；仅有百分比缺少口径。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -124,7 +124,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：Its history explains scope and prevents repeated confusion. The record should preserve the proposal, decision, reason and effects on related requirements.
 
-**自查**：不把瞬时测试或安静时段读数当所有时段的性能。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：不把瞬时测试或安静时段读数当所有时段的性能。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -167,7 +167,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：Yes. Real-time traffic can be sensitive to delay and jitter even when average throughput is adequate. Check the full path and endpoint behaviour.
 
-**自查**：8bits=1byte；duration不等于delay；average不等于peak。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：8bits=1byte；duration不等于delay；average不等于peak。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -202,15 +202,15 @@ For example, a backup may average a modest rate over an hour while sending much 
 
 低平均值可能掩盖短时突发。 hide在性能题表示统计掩盖；short burst是完整搭配。
 
-**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
+**可复用句式**：X provides ____, whereas Y provides ____. The choice depends on ____.
 
-X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
+X提供……，而Y提供……；选择取决于……。 whereas用同一维度做对比；空白要填机制或条件，不填无依据的best。
 
 **变式练习**：A 10 MB burst arrives over one second on a 40 Mb/s output. What is the basic concern?
 
 **变式参考**：The input payload averages 80 Mb/s over that second, above output capacity. Data must wait or be dropped, ignoring overhead; long-term average alone hides this burst.
 
-**自查**：短时到达超过输出时先积累队列，队列有限再丢包。较低长时平均不排除突发损害时延敏感业务；minimum须说是观察值还是保证需求。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：短时到达超过输出时先积累队列，队列有限再丢包。较低长时平均不排除突发损害时延敏感业务；minimum须说是观察值还是保证需求。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -253,7 +253,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：No. Overlap depends on both arrival frequency and active duration, as well as timing. Doubling frequency alone does not establish the resulting concurrency.
 
-**自查**：只写“能提高性能”；把duration等同于delay；声称持续更久就必然需要更大带宽；完全不解释并发与峰值。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：只写“能提高性能”；把duration等同于delay；声称持续更久就必然需要更大带宽；完全不解释并发与峰值。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -296,7 +296,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：Not necessarily. Frequent short interruptions may disrupt sessions differently from one long outage. Compare failure frequency, restoration time and application needs.
 
-**自查**：MTBF、MTTR单位必须一致；课件公式通常排除计划维护。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：MTBF、MTTR单位必须一致；课件公式通常排除计划维护。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -343,7 +343,7 @@ Under the stated independent, constant-rate series model, the system failure rat
 
 **变式参考**：λsys = 1/2000+1/2000 = 0.001 h⁻¹. System MTTF = 1000 h. This series model describes the first failure; availability requires a restoration model and more information.
 
-**自查**：求和的是failure rates，不是平均时间；首次故障MTTF与修复系统MTBF需区分，冗余/相关故障另建模型。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：求和的是failure rates，不是平均时间；首次故障MTTF与修复系统MTBF需区分，冗余/相关故障另建模型。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -388,7 +388,7 @@ A=990/(990+10)=0.99=99%。两个时间均为小时。
 
 **变式参考**：A = 198/(198+2) = 99%. With MTTR = 1 h, A = 198/199 ≈ 99.4975%. The improvement is about 0.4975 percentage points.
 
-**自查**：不能用990/10；明确是否含计划维护。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：不能用990/10；明确是否含计划维护。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -434,7 +434,7 @@ For a 30-day measurement window, 99.9% availability permits 0.1% downtime. That 
 
 **变式参考**：30 × 24 × 60 × (1−0.9999) = 4.32 minutes, or 259.2 seconds, using the full 30-day window.
 
-**自查**：99.9%并不自动说明单次中断最大允许时长。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：99.9%并不自动说明单次中断最大允许时长。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -481,7 +481,7 @@ RTT包含题定前向、回向与端点周转时间。 include列出测量口径
 
 **变式参考**：RTT = 25+45+5 = 75 ms. Forward delay is the given 25 ms, not 37.5 ms. The paths and turnaround are not symmetric.
 
-**自查**：duration是事务持续时间；不是这里的数据包路径delay。RTT与单程的测量端点须定义清楚。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：duration是事务持续时间；不是这里的数据包路径delay。RTT与单程的测量端点须定义清楚。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -516,15 +516,15 @@ A designer should specify the application event, endpoints and permitted complet
 
 不同延迟指标描述不同事件。 metric是“度量指标”；不要在同一句中互换TCT与packet delay。
 
-**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
+**可复用句式**：X provides ____, whereas Y provides ____. The choice depends on ____.
 
-X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
+X提供……，而Y提供……；选择取决于……。 whereas用同一维度做对比；空白要填机制或条件，不填无依据的best。
 
 **变式练习**：A file task allows 20 seconds. Does this mean every interactive packet may wait 20 seconds?
 
 **变式参考**：No. Whole-task tolerance and packet or response delay are different metrics. Define the event and application before assigning a limit.
 
-**自查**：Week4 p53列INTD约10–30秒、HRT约100ms，却有反向不等式；不要背矛盾关系。实际要求需定义事件、端点、单程/往返/整任务。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：Week4 p53列INTD约10–30秒、HRT约100ms，却有反向不等式；不要背矛盾关系。实际要求需定义事件、端点、单程/往返/整任务。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -571,7 +571,7 @@ Each transfer needs an average payload rate of 24 Mb/s. Five simultaneous transf
 
 **变式参考**：Each needs 30×8/10 = 24 Mb/s. Three need 72 Mb/s on the shared direction, before overhead and planning margin, assuming decimal MB.
 
-**自查**：不要把60MB/20s=3MB/s误写成3Mb/s。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：不要把60MB/20s=3MB/s误写成3Mb/s。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -614,7 +614,7 @@ Confidence, in this course, concerns the network’s ability to deliver data at 
 
 **变式参考**：No. Operational suitability and supportability remain unmet. Assess training, procedures, tools, spare parts and restoration needs before accepting the option.
 
-**自查**：confidence 在此不是统计置信区间，也不是用户自信。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：confidence 在此不是统计置信区间，也不是用户自信。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 

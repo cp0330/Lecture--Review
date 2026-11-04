@@ -38,7 +38,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：The plan lacks a clear business goal, current-state analysis, priorities and measures of success. Equipment should be justified by the required outcome.
 
-**自查**：不要把 strategy 写成某条具体设备配置命令。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：不要把 strategy 写成某条具体设备配置命令。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -81,7 +81,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：Verbal support may not provide time, funding or responsibility. Without implementation resources and aligned incentives, agreed actions may not happen.
 
-**自查**：六条建议、十条陷阱的完整清单见同题变式清单。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：六条建议、十条陷阱的完整清单见同题变式清单。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -124,7 +124,7 @@ For example, a network migration may combine explanations and training with clea
 
 **变式参考**：Rational explanations and normative re-education can build understanding and commitment. A staged environmental move may also help; the final mix depends on stakes and authority.
 
-**自查**：四种是组织变革策略，不是四种 routing protocol。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：四种是组织变革策略，不是四种 routing protocol。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -167,7 +167,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：Users provide application needs and practical constraints that equipment knowledge alone may miss. Their involvement also supports adoption and useful success measures.
 
-**自查**：让顾问独自决定并不能替代组织领导的参与。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：让顾问独自决定并不能替代组织领导的参与。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -210,7 +210,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：It is informational background. Combined with application rates and concurrency, it can support a derived capacity requirement.
 
-**自查**：不要把future当rejected；informational背景也可能用于推导真正需求。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：不要把future当rejected；informational背景也可能用于推导真正需求。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -253,7 +253,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：No. It is a mandatory prohibition and can be a core requirement. Rejected describes a proposal’s project status, not the presence of a negative word.
 
-**自查**：普通英文may不是自动在使用RFC关键词；MAY不等于rejected。RFC2119解释与课程管理分类要分清。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：普通英文may不是自动在使用RFC关键词；MAY不等于rejected。RFC2119解释与课程管理分类要分清。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -296,7 +296,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：Yes. Priority expresses importance, while status records its handling state. High priority does not by itself mean approved or verified.
 
-**自查**：Unsupported/unclear并不自动rejected，题目明确“分析后决定不做”才归rejected；TBD就是待确定。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：Unsupported/unclear并不自动rejected，题目明确“分析后决定不做”才归rejected；TBD就是待确定。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -339,7 +339,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：No. The remaining path and endpoints must also support the requirement. Local priority is only one part of an end-to-end service design.
 
-**自查**：guaranteed 不等于无条件永远不会出故障。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：guaranteed 不等于无条件永远不会出故障。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -382,7 +382,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：No. Configuration states intended behaviour. Verification needs valid observations under the defined endpoints, load and time conditions.
 
-**自查**：service hierarchy帮助把通用功能放骨干、专用支持靠近用户，但路径仍累积设备和服务要求；最弱环节可成瓶颈。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：service hierarchy帮助把通用功能放骨干、专用支持靠近用户，但路径仍累积设备和服务要求；最弱环节可成瓶颈。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -425,7 +425,7 @@ These requirements build on each other. For example, users may want a smooth vid
 
 **变式参考**：Check application behaviour, endpoint processing, loss, delay and the full path. Low utilization on one measured link does not prove the whole service is adequate.
 
-**自查**：host/device 是需求层级之一，不要漏掉终端瓶颈。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：host/device 是需求层级之一，不要漏掉终端瓶颈。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -468,7 +468,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：Yes. The labels describe different properties. Specify both its response-time requirement and the business impact of failure.
 
-**自查**：不要把 mission-critical 直接等同于带宽最大。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：不要把 mission-critical 直接等同于带宽最大。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 

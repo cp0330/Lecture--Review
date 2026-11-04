@@ -42,7 +42,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：It is normally an external relationship between security and performance. Key management supporting encryption is an internal security dependency.
 
-**自查**：只列四个component名称；只写“互相影响”而无关系与例子；把external写成internal。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：只列四个component名称；只写“互相影响”而无关系与例子；把external写成internal。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -85,7 +85,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：This is an external security-management relationship. Revise controlled access so that monitoring works without allowing unnecessary access.
 
-**自查**：internal/external 不等于机构内网/公网。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：internal/external 不等于机构内网/公网。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -128,7 +128,7 @@ These models are complementary views. For example, a campus can use an access/di
 
 **变式参考**：No. The external interaction prevents the combined system from meeting its goal. Coordinate allowed flows and test the integrated architecture.
 
-**自查**：回答所有模型时请用Q06的完整清单；不要漏functional三类。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：回答所有模型时请用Q06的完整清单；不要漏functional三类。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -173,7 +173,7 @@ These views can be combined. A designer can start with a topological model and a
 
 **变式参考**：Yes. The first organizes functional layers; the second describes flows. A reference architecture can combine both with suitable functional views.
 
-**自查**：只写三类名称；漏functional三项；将模型误答为OSI、TCP/IP、SDN；只列清单不描述。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：只写三类名称；漏functional三项；将模型误答为OSI、TCP/IP、SDN；只列清单不描述。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 

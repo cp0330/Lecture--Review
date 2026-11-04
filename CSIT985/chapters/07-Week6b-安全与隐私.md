@@ -38,7 +38,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：No. Encryption supports confidentiality, but appropriate collection and use also matter. State the relevant privacy requirement and access rules.
 
-**自查**：加密主要保密，不能单独保证CIA全目标。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：加密主要保密，不能单独保证CIA全目标。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -81,7 +81,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：Assets differ in importance, threats and consequences. Limited resources should address the most serious assessed risks while maintaining required baseline protection.
 
-**自查**：风险不只看攻击概率，还要看业务损害。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：风险不只看攻击概率，还要看业务损害。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -124,7 +124,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：No. Record uncertainty and identify needed evidence. Use a justified qualitative assessment if appropriate, and review it with relevant staff.
 
-**自查**：没有数据就不要凭空写“80%攻击概率”；控制措施不能写成已保证零风险。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：没有数据就不要凭空写“80%攻击概率”；控制措施不能写成已保证零风险。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -167,7 +167,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：A procedure should define how access is approved, reviewed and removed, with responsible owners and records. The policy alone does not carry out the control.
 
-**自查**：policy是规则，procedure是执行步骤；不能只堆设备名。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：policy是规则，procedure是执行步骤；不能只堆设备名。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -210,7 +210,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：Validate the required flow and authorize a specific rule change. Test the service and related management access without opening unnecessary communication.
 
-**自查**：这是图中的策略逻辑，不能等同某设备ACL语法已配置好；默认拒绝也需正确允许合法业务。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：这是图中的策略逻辑，不能等同某设备ACL语法已配置好；默认拒绝也需正确允许合法业务。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -253,7 +253,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：No. Matching allowed addresses and ports does not prove content is safe. Additional controls may be needed for the assessed threat.
 
-**自查**：允许端口不代表该端口所有内容都安全。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：允许端口不代表该端口所有内容都安全。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -296,7 +296,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：No. Protection depends on the security level and configuration. Authentication, privacy settings and access restrictions must be selected appropriately.
 
-**自查**：不要把SNMPv3任意配置都说成必定加密；不死背旧加密算法为现今推荐。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：不要把SNMPv3任意配置都说成必定加密；不死背旧加密算法为现今推荐。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -339,7 +339,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：No. Authentication verifies the claimed identity. Authorization must still limit the resources and actions allowed to that identity.
 
-**自查**：只列名称不描述；把authentication和authorization混为一谈；把encryption说成自动满足全部CIA。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：只列名称不描述；把authentication和authorization混为一谈；把encryption说成自动满足全部CIA。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -382,7 +382,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：No. Permit only justified flows under policy. DMZ placement reduces exposure only when boundaries and management access are correctly controlled.
 
-**自查**：NAT不是encryption；DMZ不等于完全可信或无须保护。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：NAT不是encryption；DMZ不等于完全可信或无须保护。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -425,7 +425,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：No. Zone placement should follow asset risk and required communication. Unnecessary nesting may add cost and delay without a proportionate benefit.
 
-**自查**：扁平分区不等于没有security；多层也不能保证每个跨区flow都满足delay目标。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：扁平分区不等于没有security；多层也不能保证每个跨区flow都满足delay目标。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -468,7 +468,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：No. The bottleneck may be encryption processing. Measure the limiting resource and consider suitable implementation, placement or capacity changes.
 
-**自查**：课件15–85%是旧例子，不当普遍性能损失公式。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：课件15–85%是旧例子，不当普遍性能损失公式。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 

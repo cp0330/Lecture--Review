@@ -38,7 +38,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：Not necessarily. Establish the actual problem and test whether the mechanism helps. It may add complexity without addressing a limiting resource.
 
-**自查**：QoS分配已有资源，不凭空创造capacity。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：QoS分配已有资源，不凭空创造capacity。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -81,7 +81,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：No. RSVP signals resource reservations. The application data is carried separately, and the required path resources still need support.
 
-**自查**：RSVP是信令；DiffServ标记本身不等于端到端保证。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：RSVP是信令；DiffServ标记本身不等于端到端保证。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -124,7 +124,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：No. The path needs adequate resources, suitable policies and monitoring. Labels support forwarding and engineering but do not create capacity.
 
-**自查**：不要把MPLS限定为只能运行在Ethernet，或把标签直接等同加密。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：不要把MPLS限定为只能运行在Ethernet，或把标签直接等同加密。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -169,7 +169,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：No. Marking alone is insufficient. All relevant domains need suitable treatment, resources and compatible service agreements.
 
-**自查**：BE/AF/EF不能被理解成贴标签就承诺整路。AF涉及转发/丢弃差别，EF低延迟低丢失也需控制流量与足够资源，跨域还需协商一致。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：BE/AF/EF不能被理解成贴标签就承诺整路。AF涉及转发/丢弃差别，EF低延迟低丢失也需控制流量与足够资源，跨域还需协商一致。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -212,7 +212,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：No. Metering measures conformance. A configured action such as shaping or dropping must change how traffic is handled.
 
-**自查**：metering只测量，不自动等于限速；shaping与dropping不同。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：metering只测量，不自动等于限速；shaping与dropping不同。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -258,7 +258,7 @@ The input payload rate is 2.4 Mb/s and exceeds the 1.5 Mb/s profile. The explici
 
 **变式参考**：Rate = 80×1000×8 = 640000 bit/s = 0.64 Mb/s. A fixed delay alone does not define release spacing, so 200 packets/s cannot be inferred.
 
-**自查**：10ms＝0.01s，但1/0.01得到packet/s需要“一次服务一个包”等明确条件。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：10ms＝0.01s，但1/0.01得到packet/s需要“一次服务一个包”等明确条件。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -301,7 +301,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：No. It may reduce immediate drops but allow longer waiting. Evaluate buffer size and scheduling together under the application’s delay limit.
 
-**自查**：queue management、scheduling是相关但不同层面的机制。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：queue management、scheduling是相关但不同层面的机制。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -344,7 +344,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：No. The commitment requires resources, configuration and verification. Monitoring should compare delivered service with the stated measurement conditions.
 
-**自查**：承诺不能超出机制和资源；上/下行需分别定义。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：承诺不能超出机制和资源；上/下行需分别定义。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -389,7 +389,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：The bottleneck is processing rather than link transmission. Coordinate security implementation and performance requirements, then verify the full service under load.
 
-**自查**：management配置并验证QoS，也占资源；security处理影响delay/capacity。测试需包括混合负载、允许访问与恢复，不能只测一条空闲链路。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：management配置并验证QoS，也占资源；security处理影响delay/capacity。测试需包括混合负载、允许访问与恢复，不能只测一条空闲链路。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 

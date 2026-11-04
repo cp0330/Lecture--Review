@@ -38,7 +38,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：No. Speed depends on links, devices, protocols and load. IPv6 provides a larger addressing space; that property alone does not establish throughput.
 
-**自查**：IP通常分配给接口；不要把MAC绝对说成永远不可更改。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：IP通常分配给接口；不要把MAC绝对说成永远不可更改。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -81,7 +81,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：No. An AS number identifies a routing domain. The organization still needs an address plan, internal routing and boundary policies.
 
-**自查**：不背可能变化的费用或机构人员信息；AS不等于classful network或一个LAN。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：不背可能变化的费用或机构人员信息；AS不等于classful network或一个LAN。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -124,7 +124,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：Not uniquely. The prefix determines the network boundary. With /26 it lies in 192.168.1.64/26; another prefix can produce another block.
 
-**自查**：classful是历史语境；CIDR不能仅看首字节推前缀。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：classful是历史语境；CIDR不能仅看首字节推前缀。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -167,7 +167,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：Yes. Private describes address scope, while DHCP describes assignment. The address can be private and dynamically leased at the same time.
 
-**自查**：Week7 p.20把172.32写进private范围是笔误，正确终点31。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：Week7 p.20把172.32写进private范围是笔误，正确终点31。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -210,7 +210,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：No. A subnet-directed broadcast depends on the prefix and has all host bits set to one. Check the actual subnet boundary.
 
-**自查**：default route写0.0.0.0/0；不是课件特殊地址表里的/8。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：default route写0.0.0.0/0；不是课件特殊地址表里的/8。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -253,7 +253,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：It is documentation space, not an ordinary public allocation for deployment. Obtain suitable address resources and keep examples separate from production plans.
 
-**自查**：文档地址不是RFC1918私网；不要把地址数字0.0.0.0、0.0.0.0/8与默认路由/0混写。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：文档地址不是RFC1918私网；不要把地址数字0.0.0.0、0.0.0.0/8与默认路由/0混写。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -296,7 +296,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：Borrowing bits reduces host bits. A prefix can meet the subnet-count requirement but leave too few usable hosts in each subnet.
 
-**自查**：常规LAN公式不适用于所有特殊/31、/32情形；本题库计算指定普通子网。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：常规LAN公式不适用于所有特殊/31、/32情形；本题库计算指定普通子网。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -342,7 +342,7 @@ The /27 mask is 255.255.255.224. Applying a bitwise AND to the address and mask 
 
 **变式参考**：Mask 255.255.255.224. Network 192.168.10.96, broadcast .127, usable .97–.126, 30 hosts. In the last octet, 01101101 AND 11100000 = 01100000.
 
-**自查**：不能对十进制直接做普通乘法；每个octet要8位。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：不能对十进制直接做普通乘法；每个octet要8位。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -390,7 +390,7 @@ Borrow one host bit to create two /25 subnets. The mask is 255.255.255.128. Each
 
 **变式参考**：192.35.41.0/25 has broadcast 192.35.41.127. 192.35.41.128/25 has broadcast 192.35.41.255. Each supports 126 ordinary hosts.
 
-**自查**：第二块从128开始，不是127；不得借用原/24之外地址。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：第二块从128开始，不是127；不得借用原/24之外地址。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -442,7 +442,7 @@ h=32-prefix；总地址=2^h；普通LAN主机=2^h−2。
 
 **变式参考**：Mask 255.255.255.240; h = 4; total = 2⁴ = 16 addresses; ordinary usable hosts = 16−2 = 14.
 
-**自查**：旧guideline p.14把/27掩码写成255.255.254.0（那是/23），正确/27是255.255.255.224。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：旧guideline p.14把/27掩码写成255.255.254.0（那是/23），正确/27是255.255.255.224。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -488,7 +488,7 @@ host bits=5，32地址、30可用，满足25。
 
 **变式参考**：Yes. Borrow two bits to create four /26 blocks. Each has 64 addresses and 62 ordinary hosts, satisfying both requirements.
 
-**自查**：至少6可以生成8；不能说借6位因为要6个子网。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：至少6可以生成8；不能说借6位因为要6个子网。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -533,7 +533,7 @@ mask=255.255.255.192；每块64总地址，/24可装2^(26−24)=4块。
 
 **变式参考**：2⁶−2=62 is insufficient; 2⁷−2=126 is sufficient. Choose /25. Two /25 blocks fit in a /24.
 
-**自查**：“最长prefix”对应最小够用块；不是/25更节约。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：“最长prefix”对应最小够用块；不是/25更节约。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -579,7 +579,7 @@ Network192.168.10.64；mask255.255.255.224；broadcast192.168.10.95；first.65�
 
 **变式参考**：No. .94 belongs to 192.168.10.64/27; .97 belongs to 192.168.10.96/27. Compare the masked network addresses.
 
-**自查**：同前三octet不保证同子网；network不能分给普通主机。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：同前三octet不保证同子网；network不能分给普通主机。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -624,7 +624,7 @@ h=12，总4096，可用4094。172.20在172.16/12私有块内。
 
 **变式参考**：Third-octet blocks advance by 16. 55 lies in 48–63. Network 172.20.48.0/20; broadcast 172.20.63.255; ordinary range .48.1–.63.254.
 
-**自查**：broadcast不是172.20.32.255；host位跨两个octet。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：broadcast不是172.20.32.255；host位跨两个octet。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -676,7 +676,7 @@ Borrow two bits to produce four /18 subnets. Their third-octet network values ar
 
 **变式参考**：Use /17, mask 255.255.128.0. Networks 172.18.0.0 and 172.18.128.0; broadcasts 172.18.127.255 and 172.18.255.255. Each has 32766 ordinary usable hosts.
 
-**自查**：原solutions p.5：/17误写32764，/18误写16384；正确分别32766、16382。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：原solutions p.5：/17误写32764，/18误写16384；正确分别32766、16382。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -723,7 +723,7 @@ network依次：200.100.10.{0,32,64,96,128,160,192,224}，再200.100.11.{0,32,64
 
 **变式参考**：Use /27: 16 subnets, 30 ordinary hosts each. The tenth network in ascending order is 198.51.101.32/27. This documentation-based block is for practice.
 
-**自查**：别把原/23误当/24；第0索引与第1计数要说明。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：别把原/23误当/24；第0索引与第1计数要说明。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -768,7 +768,7 @@ Eight borrowed bits create 256 /16 subnets. Each has 65534 ordinary usable hosts
 
 **变式参考**：2^(20−16)=16 subnets. Each leaves 12 host bits, giving 4096 addresses and 4094 ordinary usable hosts.
 
-**自查**：子网数量用新旧prefix差；host数量用32−新prefix。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：子网数量用新旧prefix差；host数量用32−新prefix。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -820,7 +820,7 @@ Allocate the largest requirement first. Use /25, /26, /27 and /28 blocks beginni
 
 **变式参考**：One valid plan is .0/26 for 60 (usable .1–.62, broadcast .63), .64/27 for 30 (.65–.94, .95), and .96/28 for 12 (.97–.110, .111). Blocks are aligned and do not overlap.
 
-**自查**：作为范围拓展训练，不声称老师明确点名VLSM综合分配必考。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：作为范围拓展训练，不声称老师明确点名VLSM综合分配必考。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -866,7 +866,7 @@ No. Eight equal subnets from a /24 require /27, which supports only 30 ordinary 
 
 **变式参考**：Yes. Four /26 blocks each provide 62 ordinary hosts. The same /24 cannot support eight such blocks.
 
-**自查**：不能只检查子网数不检查host数。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：不能只检查子网数不检查host数。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -909,7 +909,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：No. AS membership follows administrative routing policy, not distance alone. One AS can cover several sites, with internal logical boundaries.
 
-**自查**：BGP的iBGP形式在AS内部用；不能绝对说BGP只在外部。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：BGP的iBGP形式在AS内部用；不能绝对说BGP只在外部。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -952,7 +952,7 @@ Routing policies guide decisions using organizational requirements, such as pref
 
 **变式参考**：No. Route filtering controls routing information. Packet filtering controls data traffic. Their effects can interact but the operations are different.
 
-**自查**：route filtering与packet ACL不能机械画等号。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：route filtering与packet ACL不能机械画等号。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -995,7 +995,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：Not necessarily. A static default may be sufficient if it meets failure and management requirements. Reassess when paths or scale change.
 
-**自查**：simple不意味着一律先上RIP；课件后页已提示旧建议过时。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：simple不意味着一律先上RIP；课件后页已提示旧建议过时。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -1038,7 +1038,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：No. OSPF is an IGP; BGP supports inter-domain reachability and policy. Choose protocols according to their architectural roles.
 
-**自查**：不要把BGP简单说成“最快路由”；OSPF不是distance vector。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：不要把BGP简单说成“最快路由”；OSPF不是distance vector。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -1081,7 +1081,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：No. It improves addressing flexibility but does not remove hop-count and other operational limits. Evaluate actual size and recovery needs.
 
-**自查**：不能把课件“2 max”当所有网络必须满足的技术定律。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：不能把课件“2 max”当所有网络必须满足的技术定律。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -1124,7 +1124,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：eBGP, because the peers are in different autonomous systems. Physical closeness does not make the session iBGP.
 
-**自查**：iBGP不等于OSPF；inside同一大楼不代表same AS；BGP不是只按最短hop选择。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：iBGP不等于OSPF；inside同一大楼不代表same AS；BGP不是只按最短hop选择。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -1167,7 +1167,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：Review routes and summaries, management targets, access rules and logs. The address change can affect several component architectures at once.
 
-**自查**：例如改地址会改变路由汇总、管理目标与ACL；dynamic address方便分配但使按地址记录身份更难。NAT可改变可见性却不代替安全政策。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：例如改地址会改变路由汇总、管理目标与ACL；dynamic address方便分配但使按地址记录身份更难。NAT可改变可见性却不代替安全政策。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 

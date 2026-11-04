@@ -212,7 +212,7 @@
           ]
         },
         "self_check": [
-          "top-down 不表示完全忽略现有设备。",
+          "已检查并避开这些误区：top-down 不表示完全忽略现有设备。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -249,23 +249,26 @@
         }
       ],
       "guidance": {
-        "task_type": "解释＋条件与应用",
+        "task_type": "三项职责＋作用",
         "answer_plan": [
-          "识别题干要求的对象与输出",
-          "给出定义或已知量，说明机制与因果",
-          "结合场景作解释，保留适用条件",
-          "用明确指标或边界检查结论"
+          "列access、distribution、core并分别说明连接、汇聚、骨干传输",
+          "沿同一校园路径说明层之间如何承接",
+          "解释复杂度、增长、故障隔离等设计收益",
+          "保留功能层不等于固定设备数的条件"
         ],
         "current_organization": [
-          "第1段：The access layer connects users and end devices to the network.",
-          "第2段：The distribution layer brings together traffic from access networks.",
-          "第3段：Separating these roles can reduce complexity and make growth and fault isolation easier."
+          "第1段：access连接终端及接入控制",
+          "第2段：distribution汇聚与core传输",
+          "第3段：层次结构的价值、校园例子与设备合并边界"
         ],
         "lookup_keywords": [
-          "Three Layer Hierarchical Model"
+          "hierarchical",
+          "access",
+          "distribution",
+          "core"
         ],
-        "lookup_check": "按所列页码核对术语、图中关系与适用条件；来源支持知识点，不表示AI例子逐字出现在课件。",
-        "adapt_to_question": "题目改成why时解释因果；改成recommend/evaluate时增加场景依据、代价与验证。",
+        "lookup_check": "看Week1三层图，确认每层职责，而非只记三个名称。",
+        "adapt_to_question": "若问why useful，先解释职责分离如何降低复杂度，再以层名作支持。",
         "label": "AI整理的组织与检索建议，非官方评分细则"
       },
       "answer_colors": {
@@ -363,12 +366,12 @@
             }
           ],
           "targets": [
-            "识别题干要求的对象与输出",
-            "给出定义或已知量，说明机制与因果",
-            "结合场景作解释，保留适用条件",
-            "用明确指标或边界检查结论"
+            "列access、distribution、core并分别说明连接、汇聚、骨干传输",
+            "沿同一校园路径说明层之间如何承接",
+            "解释复杂度、增长、故障隔离等设计收益",
+            "保留功能层不等于固定设备数的条件"
           ],
-          "adaptation": "题目改成why时解释因果；改成recommend/evaluate时增加场景依据、代价与验证。"
+          "adaptation": "若问why useful，先解释职责分离如何降低复杂度，再以层名作支持。"
         },
         "reasoning": [
           "三层首先是功能层：access接终端，distribution汇聚接入并组织策略，core承载主要区域间传输。",
@@ -397,9 +400,12 @@
           "path": "CSIT985 → Lecture Slides → Week 1 - Lecture Slides",
           "pages": "42–44",
           "keywords": [
-            "Three Layer Hierarchical Model"
+            "hierarchical",
+            "access",
+            "distribution",
+            "core"
           ],
-          "check": "按所列页码核对术语、图中关系与适用条件；来源支持知识点，不表示AI例子逐字出现在课件。",
+          "check": "看Week1三层图，确认每层职责，而非只记三个名称。",
           "workflow": [
             "先圈题干动作与限定条件，写出要找的两个术语。",
             "打开本题来源并定位PDF物理页，Ctrl/Cmd+F搜关键词；图像内容需看图。",
@@ -408,7 +414,7 @@
           ]
         },
         "self_check": [
-          "用同一包路径依次说明，才能把名称变成因果。小网可合并设备，但角色仍需完成；高可用核心不能弥补接入单点或过载。",
+          "已检查并避开这些误区：用同一包路径依次说明，才能把名称变成因果。小网可合并设备，但角色仍需完成；高可用核心不能弥补接入单点或过载。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -660,7 +666,7 @@
           ]
         },
         "self_check": [
-          "PPDIOO有两个O：Operate和Optimize；不要漏Prepare或把Plan/Design混同。",
+          "已检查并避开这些误区：PPDIOO有两个O：Operate和Optimize；不要漏Prepare或把Plan/Design混同。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -902,7 +908,7 @@
           ]
         },
         "self_check": [
-          "原型是验证方案的一环；不把课件文字中的prototype与全面安装混成一步。",
+          "已检查并避开这些误区：原型是验证方案的一环；不把课件文字中的prototype与全面安装混成一步。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -1127,7 +1133,7 @@
           ]
         },
         "self_check": [
-          "不要把 architecture 等同于设备型号清单。",
+          "已检查并避开这些误区：不要把 architecture 等同于设备型号清单。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -1164,23 +1170,25 @@
         }
       ],
       "guidance": {
-        "task_type": "解释＋条件与应用",
+        "task_type": "整体解释＋四种依据",
         "answer_plan": [
-          "识别题干要求的对象与输出",
-          "给出定义或已知量，说明机制与因果",
-          "结合场景作解释，保留适用条件",
-          "用明确指标或边界检查结论"
+          "说明用户、应用、设备和网络共同决定服务",
+          "解释audit trail记录什么以及为什么要留记录",
+          "完整列技术、预算、进度、资源四种defensibility",
+          "用技术达标但培训来不及的例子作有条件判断"
         ],
         "current_organization": [
-          "第1段：A system view considers the network together with its users, applications and devices.",
-          "第2段：Network analysis should therefore record requirements, measurements, assumptions and the reasons for decisions.",
-          "第3段：For example, a faster platform may meet a capacity target but require training that cannot be completed before deployment."
+          "第1段：system view与整体瓶颈",
+          "第2段：审计线索和四种可辩护依据",
+          "第3段：培训/上线约束例子与证据要求"
         ],
         "lookup_keywords": [
-          "Defensibility"
+          "system",
+          "audit trail",
+          "defensibility"
         ],
-        "lookup_check": "按所列页码核对术语、图中关系与适用条件；来源支持知识点，不表示AI例子逐字出现在课件。",
-        "adapt_to_question": "题目改成why时解释因果；改成recommend/evaluate时增加场景依据、代价与验证。",
+        "lookup_check": "核对Week1四个defensibility维度，区分记录与证据充分性。",
+        "adapt_to_question": "给出候选方案时逐项检查四种依据；不要只写技术性能。",
         "label": "AI整理的组织与检索建议，非官方评分细则"
       },
       "answer_colors": {
@@ -1281,12 +1289,12 @@
             }
           ],
           "targets": [
-            "识别题干要求的对象与输出",
-            "给出定义或已知量，说明机制与因果",
-            "结合场景作解释，保留适用条件",
-            "用明确指标或边界检查结论"
+            "说明用户、应用、设备和网络共同决定服务",
+            "解释audit trail记录什么以及为什么要留记录",
+            "完整列技术、预算、进度、资源四种defensibility",
+            "用技术达标但培训来不及的例子作有条件判断"
           ],
-          "adaptation": "题目改成why时解释因果；改成recommend/evaluate时增加场景依据、代价与验证。"
+          "adaptation": "给出候选方案时逐项检查四种依据；不要只写技术性能。"
         },
         "reasoning": [
           "system view把用户、应用、设备与网络一起看；局部指标好不等于整体任务达成。",
@@ -1315,9 +1323,11 @@
           "path": "CSIT985 → Lecture Slides → Week 1 - Lecture Slides",
           "pages": "61–64",
           "keywords": [
-            "Defensibility"
+            "system",
+            "audit trail",
+            "defensibility"
           ],
-          "check": "按所列页码核对术语、图中关系与适用条件；来源支持知识点，不表示AI例子逐字出现在课件。",
+          "check": "核对Week1四个defensibility维度，区分记录与证据充分性。",
           "workflow": [
             "先圈题干动作与限定条件，写出要找的两个术语。",
             "打开本题来源并定位PDF物理页，Ctrl/Cmd+F搜关键词；图像内容需看图。",
@@ -1326,7 +1336,7 @@
           ]
         },
         "self_check": [
-          "defensibility分四种理由：技术能达标、钱够、时间赶得上、人员设备资源足。audit trail保存依据与假设，方便说明为什么舍弃一个看似更强的选项。",
+          "已检查并避开这些误区：defensibility分四种理由：技术能达标、钱够、时间赶得上、人员设备资源足。audit trail保存依据与假设，方便说明为什么舍弃一个看似更强的选项。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -1592,7 +1602,7 @@
           ]
         },
         "self_check": [
-          "不要把 switch 与 router 的典型作用写反。",
+          "已检查并避开这些误区：不要把 switch 与 router 的典型作用写反。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -1841,7 +1851,7 @@
           ]
         },
         "self_check": [
-          "CAN 在这里是 Campus Area Network；不要混用地理范围与用途。",
+          "已检查并避开这些误区：CAN 在这里是 Campus Area Network；不要混用地理范围与用途。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -1878,23 +1888,26 @@
         }
       ],
       "guidance": {
-        "task_type": "解释＋条件与应用",
+        "task_type": "按条件比较",
         "answer_plan": [
-          "识别题干要求的对象与输出",
-          "给出定义或已知量，说明机制与因果",
-          "结合场景作解释，保留适用条件",
-          "用明确指标或边界检查结论"
+          "分别说明copper、fibre、wireless承载信号与部署特点",
+          "按距离、干扰、移动性、容量、安装与支持比较",
+          "解释无线覆盖类别不能直接推出实际速率",
+          "用骨干＋无线接入例子说明组合与验证"
         ],
         "current_organization": [
-          "第1段：Copper carries electrical signals and can be practical for local connections, subject to its distance and interference limits.",
-          "第2段：Wireless communication avoids a cable to each mobile endpoint, but its performance depends on coverage, shared demand, obstacles, interference and the radio technology.",
-          "第3段：A designer should compare the required capacity, delay, reach, environment, mobility, installation cost and support skills."
+          "第1段：铜缆与光纤",
+          "第2段：无线介质与传播条件",
+          "第3段：选型维度、校园组合与实测条件"
         ],
         "lookup_keywords": [
-          "Transmission media"
+          "media",
+          "infrared",
+          "radio",
+          "microwave"
         ],
-        "lookup_check": "按所列页码核对术语、图中关系与适用条件；来源支持知识点，不表示AI例子逐字出现在课件。",
-        "adapt_to_question": "题目改成why时解释因果；改成recommend/evaluate时增加场景依据、代价与验证。",
+        "lookup_check": "看Week2介质清单及无线图；不要把某一示例链路当普遍方向限制。",
+        "adapt_to_question": "若场景强调移动性或距离，优先用相应条件比较，再交代代价。",
         "label": "AI整理的组织与检索建议，非官方评分细则"
       },
       "answer_colors": {
@@ -2002,12 +2015,12 @@
             }
           ],
           "targets": [
-            "识别题干要求的对象与输出",
-            "给出定义或已知量，说明机制与因果",
-            "结合场景作解释，保留适用条件",
-            "用明确指标或边界检查结论"
+            "分别说明copper、fibre、wireless承载信号与部署特点",
+            "按距离、干扰、移动性、容量、安装与支持比较",
+            "解释无线覆盖类别不能直接推出实际速率",
+            "用骨干＋无线接入例子说明组合与验证"
           ],
-          "adaptation": "题目改成why时解释因果；改成recommend/evaluate时增加场景依据、代价与验证。"
+          "adaptation": "若场景强调移动性或距离，优先用相应条件比较，再交代代价。"
         },
         "reasoning": [
           "介质选择要问距离、移动性、干扰、容量、安装与支持；名称不能代替实测。光纤适合某些骨干，无线适合移动接入，但都有具体设备和环境限制。",
@@ -2017,9 +2030,9 @@
           "key_sentence": "The medium should fit the distance and environment.",
           "meaning": "介质应适合距离与环境。",
           "language": "medium单数、media复数；fit后直接接条件。",
-          "frame": "X supports ____ because ____. However, it does not guarantee ____.",
-          "frame_meaning": "X支持……，因为……；但不保证……。",
-          "frame_note": "because后解释机制；however后保留边界，不能两句空泛。",
+          "frame": "X provides ____, whereas Y provides ____. The choice depends on ____.",
+          "frame_meaning": "X提供……，而Y提供……；选择取决于……。",
+          "frame_note": "whereas用同一维度做对比；空白要填机制或条件，不填无依据的best。",
           "build_steps": [
             "先用中文或关键词确认概念与条件；概念不清先回到推理，不急着换高级词。",
             "用短句写清主语、动作和对象；专业术语保留英文。",
@@ -2036,9 +2049,12 @@
           "path": "CSIT985 → Lecture Slides → Week 2 - Lecture Slides",
           "pages": "9–12",
           "keywords": [
-            "Transmission media"
+            "media",
+            "infrared",
+            "radio",
+            "microwave"
           ],
-          "check": "按所列页码核对术语、图中关系与适用条件；来源支持知识点，不表示AI例子逐字出现在课件。",
+          "check": "看Week2介质清单及无线图；不要把某一示例链路当普遍方向限制。",
           "workflow": [
             "先圈题干动作与限定条件，写出要找的两个术语。",
             "打开本题来源并定位PDF物理页，Ctrl/Cmd+F搜关键词；图像内容需看图。",
@@ -2047,7 +2063,7 @@
           ]
         },
         "self_check": [
-          "课件列出的红外、射频、微波、激光有不同传播/对准条件；不要把某个示意链路写成整个技术永远单向。",
+          "已检查并避开这些误区：课件列出的红外、射频、微波、激光有不同传播/对准条件；不要把某个示意链路写成整个技术永远单向。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -2309,7 +2325,7 @@
           ]
         },
         "self_check": [
-          "不要声称 distributed 绝对没有中心；模式可以组合。",
+          "已检查并避开这些误区：不要声称 distributed 绝对没有中心；模式可以组合。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -2549,7 +2565,7 @@
           ]
         },
         "self_check": [
-          "不能说任何 ring 断一条链路都必然全网停机。",
+          "已检查并避开这些误区：不能说任何 ring 断一条链路都必然全网停机。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -2794,7 +2810,7 @@
           ]
         },
         "self_check": [
-          "protocol 不只是设备之间的一根线或一种语言名称。",
+          "已检查并避开这些误区：protocol 不只是设备之间的一根线或一种语言名称。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -3049,7 +3065,7 @@
           ]
         },
         "self_check": [
-          "区分 packet、frame 和 signal；TCP/IP 本课用四层。",
+          "已检查并避开这些误区：区分 packet、frame 和 signal；TCP/IP 本课用四层。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -3304,7 +3320,7 @@
           ]
         },
         "self_check": [
-          "DNS 不等于 DHCP；应用与应用层协议不同。",
+          "已检查并避开这些误区：DNS 不等于 DHCP；应用与应用层协议不同。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -3341,23 +3357,26 @@
         }
       ],
       "guidance": {
-        "task_type": "解释＋条件与应用",
+        "task_type": "按层追踪过程",
         "answer_plan": [
-          "识别题干要求的对象与输出",
-          "给出定义或已知量，说明机制与因果",
-          "结合场景作解释，保留适用条件",
-          "用明确指标或边界检查结论"
+          "定义process和socket，区分application与protocol",
+          "按传输、网络、链路、物理顺序列PDU",
+          "解释封装增加本层控制信息、接收端对应处理",
+          "用web说明完整路径，保留消息和包并非一对一"
         ],
         "current_organization": [
-          "第1段：An application process is a running program.",
-          "第2段：In the course model, the upper OSI layers handle data.",
-          "第3段：At the destination, the stack processes the received information and delivers application data through the appropriate socket."
+          "第1段：process、socket与应用协议",
+          "第2段：PDU名称与发送封装",
+          "第3段：接收、web例子与消息边界"
         ],
         "lookup_keywords": [
-          "Protocol Data Units"
+          "PDU",
+          "socket",
+          "process",
+          "encapsulation"
         ],
-        "lookup_check": "按所列页码核对术语、图中关系与适用条件；来源支持知识点，不表示AI例子逐字出现在课件。",
-        "adapt_to_question": "题目改成why时解释因果；改成recommend/evaluate时增加场景依据、代价与验证。",
+        "lookup_check": "核对Week2 p52表及进程/socket图，注意TCP segment与UDP datagram。",
+        "adapt_to_question": "若给具体路径，写出每层对象；若只问socket，围绕应用使用网络服务展开。",
         "label": "AI整理的组织与检索建议，非官方评分细则"
       },
       "answer_colors": {
@@ -3455,12 +3474,12 @@
             }
           ],
           "targets": [
-            "识别题干要求的对象与输出",
-            "给出定义或已知量，说明机制与因果",
-            "结合场景作解释，保留适用条件",
-            "用明确指标或边界检查结论"
+            "定义process和socket，区分application与protocol",
+            "按传输、网络、链路、物理顺序列PDU",
+            "解释封装增加本层控制信息、接收端对应处理",
+            "用web说明完整路径，保留消息和包并非一对一"
           ],
-          "adaptation": "题目改成why时解释因果；改成recommend/evaluate时增加场景依据、代价与验证。"
+          "adaptation": "若给具体路径，写出每层对象；若只问socket，围绕应用使用网络服务展开。"
         },
         "reasoning": [
           "从程序到信号分两条线记：process通过socket使用服务；数据经过各层变成segment/datagram、packet、frame和bits。",
@@ -3470,9 +3489,9 @@
           "key_sentence": "A socket gives a process access to network services.",
           "meaning": "socket让进程使用网络服务。",
           "language": "give A access to B是完整表达“让A有使用B的入口”。",
-          "frame": "X supports ____ because ____. However, it does not guarantee ____.",
-          "frame_meaning": "X支持……，因为……；但不保证……。",
-          "frame_note": "because后解释机制；however后保留边界，不能两句空泛。",
+          "frame": "First, ____. This provides ____ for the next stage. Finally, verify ____.",
+          "frame_meaning": "先……，这为下阶段提供……；最后验证……。",
+          "frame_note": "This必须指向前一阶段产出；不要只用first/next堆清单。",
           "build_steps": [
             "先用中文或关键词确认概念与条件；概念不清先回到推理，不急着换高级词。",
             "用短句写清主语、动作和对象；专业术语保留英文。",
@@ -3489,9 +3508,12 @@
           "path": "CSIT985 → Lecture Slides → Week 2 - Lecture Slides",
           "pages": "52–60",
           "keywords": [
-            "Protocol Data Units"
+            "PDU",
+            "socket",
+            "process",
+            "encapsulation"
           ],
-          "check": "按所列页码核对术语、图中关系与适用条件；来源支持知识点，不表示AI例子逐字出现在课件。",
+          "check": "核对Week2 p52表及进程/socket图，注意TCP segment与UDP datagram。",
           "workflow": [
             "先圈题干动作与限定条件，写出要找的两个术语。",
             "打开本题来源并定位PDF物理页，Ctrl/Cmd+F搜关键词；图像内容需看图。",
@@ -3500,7 +3522,7 @@
           ]
         },
         "self_check": [
-          "封装增加本层控制信息，解封装解释并移除。一个message可分成多个segment/packet，所以不要强行一对一；frame也可有trailer。",
+          "已检查并避开这些误区：封装增加本层控制信息，解封装解释并移除。一个message可分成多个segment/packet，所以不要强行一对一；frame也可有trailer。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -3766,7 +3788,7 @@
           ]
         },
         "self_check": [
-          "不要写 UDP 保证实时、TCP保证固定延迟。",
+          "已检查并避开这些误区：不要写 UDP 保证实时、TCP保证固定延迟。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -4025,7 +4047,7 @@
           ]
         },
         "self_check": [
-          "不要把 forwarding 的逐包动作与 routing 的路径计算互换。",
+          "已检查并避开这些误区：不要把 forwarding 的逐包动作与 routing 的路径计算互换。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -4266,7 +4288,7 @@
           ]
         },
         "self_check": [
-          "switching fabric是路由器内部连接结构，不是独立外置交换机的必然名称。",
+          "已检查并避开这些误区：switching fabric是路由器内部连接结构，不是独立外置交换机的必然名称。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -4519,7 +4541,7 @@
           ]
         },
         "self_check": [
-          "centralized knowledge不表示一定只有一台中心机器；dynamic不等于load-sensitive。",
+          "已检查并避开这些误区：centralized knowledge不表示一定只有一台中心机器；dynamic不等于load-sensitive。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -4788,7 +4810,7 @@
           ]
         },
         "self_check": [
-          "不是所有link protocol都提供可靠交付；某一跳可靠不代表端到端保证。",
+          "已检查并避开这些误区：不是所有link protocol都提供可靠交付；某一跳可靠不代表端到端保证。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -5018,7 +5040,7 @@
           ]
         },
         "self_check": [
-          "不要把 strategy 写成某条具体设备配置命令。",
+          "已检查并避开这些误区：不要把 strategy 写成某条具体设备配置命令。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -5256,7 +5278,7 @@
           ]
         },
         "self_check": [
-          "六条建议、十条陷阱的完整清单见同题变式清单。",
+          "已检查并避开这些误区：六条建议、十条陷阱的完整清单见同题变式清单。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -5498,7 +5520,7 @@
           ]
         },
         "self_check": [
-          "四种是组织变革策略，不是四种 routing protocol。",
+          "已检查并避开这些误区：四种是组织变革策略，不是四种 routing protocol。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -5741,7 +5763,7 @@
           ]
         },
         "self_check": [
-          "让顾问独自决定并不能替代组织领导的参与。",
+          "已检查并避开这些误区：让顾问独自决定并不能替代组织领导的参与。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -5985,7 +6007,7 @@
           ]
         },
         "self_check": [
-          "不要把future当rejected；informational背景也可能用于推导真正需求。",
+          "已检查并避开这些误区：不要把future当rejected；informational背景也可能用于推导真正需求。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -6240,7 +6262,7 @@
           ]
         },
         "self_check": [
-          "普通英文may不是自动在使用RFC关键词；MAY不等于rejected。RFC2119解释与课程管理分类要分清。",
+          "已检查并避开这些误区：普通英文may不是自动在使用RFC关键词；MAY不等于rejected。RFC2119解释与课程管理分类要分清。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -6452,7 +6474,7 @@
           ]
         },
         "self_check": [
-          "Unsupported/unclear并不自动rejected，题目明确“分析后决定不做”才归rejected；TBD就是待确定。",
+          "已检查并避开这些误区：Unsupported/unclear并不自动rejected，题目明确“分析后决定不做”才归rejected；TBD就是待确定。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -6692,7 +6714,7 @@
           ]
         },
         "self_check": [
-          "guaranteed 不等于无条件永远不会出故障。",
+          "已检查并避开这些误区：guaranteed 不等于无条件永远不会出故障。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -6729,23 +6751,26 @@
         }
       ],
       "guidance": {
-        "task_type": "解释＋条件与应用",
+        "task_type": "服务关系＋验证条件",
         "answer_plan": [
-          "识别题干要求的对象与输出",
-          "给出定义或已知量，说明机制与因果",
-          "结合场景作解释，保留适用条件",
-          "用明确指标或边界检查结论"
+          "分别解释configurable、measurable、verifiable",
+          "说明通用骨干服务与靠近用户的特定支持",
+          "解释需求沿端到端路径累积以及瓶颈影响",
+          "用教学服务说明配置存在不等于已验证达标"
         ],
         "current_organization": [
-          "第1段：Network services support user, application and device requirements.",
-          "第2段：A service hierarchy can place more general support in the backbone and more specific support near particular users or applications.",
-          "第3段：For example, an interactive lesson needs suitable access, backbone and endpoint performance."
+          "第1段：服务的三个可检查特征",
+          "第2段：service hierarchy与累积要求",
+          "第3段：教学路径瓶颈与端到端验证"
         ],
         "lookup_keywords": [
-          "Service Characteristics"
+          "configurable",
+          "measurable",
+          "verifiable",
+          "hierarchy"
         ],
-        "lookup_check": "按所列页码核对术语、图中关系与适用条件；来源支持知识点，不表示AI例子逐字出现在课件。",
-        "adapt_to_question": "题目改成why时解释因果；改成recommend/evaluate时增加场景依据、代价与验证。",
+        "lookup_check": "查看Week3服务层次图及累积需求，确认验证覆盖的路径范围。",
+        "adapt_to_question": "若问bottleneck，重点解释为什么局部高性能不能弥补另一个资源限制。",
         "label": "AI整理的组织与检索建议，非官方评分细则"
       },
       "answer_colors": {
@@ -6833,12 +6858,12 @@
             }
           ],
           "targets": [
-            "识别题干要求的对象与输出",
-            "给出定义或已知量，说明机制与因果",
-            "结合场景作解释，保留适用条件",
-            "用明确指标或边界检查结论"
+            "分别解释configurable、measurable、verifiable",
+            "说明通用骨干服务与靠近用户的特定支持",
+            "解释需求沿端到端路径累积以及瓶颈影响",
+            "用教学服务说明配置存在不等于已验证达标"
           ],
-          "adaptation": "题目改成why时解释因果；改成recommend/evaluate时增加场景依据、代价与验证。"
+          "adaptation": "若问bottleneck，重点解释为什么局部高性能不能弥补另一个资源限制。"
         },
         "reasoning": [
           "configurable表示能落实所需行为，measurable表示能获取对应指标，verifiable表示能把指标对照目标判断；三者缺一都会使承诺空泛。",
@@ -6867,9 +6892,12 @@
           "path": "CSIT985 → Lecture Slides → Week 3 - Lecture Slides",
           "pages": "57–61",
           "keywords": [
-            "Service Characteristics"
+            "configurable",
+            "measurable",
+            "verifiable",
+            "hierarchy"
           ],
-          "check": "按所列页码核对术语、图中关系与适用条件；来源支持知识点，不表示AI例子逐字出现在课件。",
+          "check": "查看Week3服务层次图及累积需求，确认验证覆盖的路径范围。",
           "workflow": [
             "先圈题干动作与限定条件，写出要找的两个术语。",
             "打开本题来源并定位PDF物理页，Ctrl/Cmd+F搜关键词；图像内容需看图。",
@@ -6878,7 +6906,7 @@
           ]
         },
         "self_check": [
-          "service hierarchy帮助把通用功能放骨干、专用支持靠近用户，但路径仍累积设备和服务要求；最弱环节可成瓶颈。",
+          "已检查并避开这些误区：service hierarchy帮助把通用功能放骨干、专用支持靠近用户，但路径仍累积设备和服务要求；最弱环节可成瓶颈。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -7123,7 +7151,7 @@
           ]
         },
         "self_check": [
-          "host/device 是需求层级之一，不要漏掉终端瓶颈。",
+          "已检查并避开这些误区：host/device 是需求层级之一，不要漏掉终端瓶颈。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -7353,7 +7381,7 @@
           ]
         },
         "self_check": [
-          "不要把 mission-critical 直接等同于带宽最大。",
+          "已检查并避开这些误区：不要把 mission-critical 直接等同于带宽最大。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -7626,7 +7654,7 @@
           ]
         },
         "self_check": [
-          "流程允许反复修订，不能把收集到的原话直接当最终可测试需求。",
+          "已检查并避开这些误区：流程允许反复修订，不能把收集到的原话直接当最终可测试需求。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -7836,7 +7864,7 @@
           ]
         },
         "self_check": [
-          "说明99.9%不是错误；仅有百分比缺少口径。",
+          "已检查并避开这些误区：说明99.9%不是错误；仅有百分比缺少口径。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -8076,7 +8104,7 @@
           ]
         },
         "self_check": [
-          "不把瞬时测试或安静时段读数当所有时段的性能。",
+          "已检查并避开这些误区：不把瞬时测试或安静时段读数当所有时段的性能。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -8333,7 +8361,7 @@
           ]
         },
         "self_check": [
-          "8bits=1byte；duration不等于delay；average不等于peak。",
+          "已检查并避开这些误区：8bits=1byte；duration不等于delay；average不等于peak。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -8370,23 +8398,26 @@
         }
       ],
       "guidance": {
-        "task_type": "解释＋条件与应用",
+        "task_type": "五指标区分＋因果",
         "answer_plan": [
-          "识别题干要求的对象与输出",
-          "给出定义或已知量，说明机制与因果",
-          "结合场景作解释，保留适用条件",
-          "用明确指标或边界检查结论"
+          "用同一观察口径区分peak、sustained、minimum rate",
+          "说明burst size是数据量、duration是时间",
+          "解释短时输入超过输出如何形成队列、时延与丢失",
+          "用低长时平均的backup说明为什么平均值不足"
         ],
         "current_organization": [
-          "第1段：Peak rate describes a high short-term sending rate under a stated measurement interval.",
-          "第2段：Burst size is the amount of data in a burst, while burst duration is how long the burst lasts.",
-          "第3段：For example, a backup may average a modest rate over an hour while sending much faster for several seconds."
+          "第1段：三种rate及测量口径",
+          "第2段：burst两指标与排队因果",
+          "第3段：备份例子、并发与规划条件"
         ],
         "lookup_keywords": [
-          "Capacity Metrics"
+          "peak",
+          "sustained",
+          "minimum",
+          "burst"
         ],
-        "lookup_check": "按所列页码核对术语、图中关系与适用条件；来源支持知识点，不表示AI例子逐字出现在课件。",
-        "adapt_to_question": "题目改成why时解释因果；改成recommend/evaluate时增加场景依据、代价与验证。",
+        "lookup_check": "核对Week4容量指标，区分观察到的minimum与要求的minimum。",
+        "adapt_to_question": "若出现数字，先统一bits/bytes和时间窗口；不要只比较长期平均。",
         "label": "AI整理的组织与检索建议，非官方评分细则"
       },
       "answer_colors": {
@@ -8479,12 +8510,12 @@
             }
           ],
           "targets": [
-            "识别题干要求的对象与输出",
-            "给出定义或已知量，说明机制与因果",
-            "结合场景作解释，保留适用条件",
-            "用明确指标或边界检查结论"
+            "用同一观察口径区分peak、sustained、minimum rate",
+            "说明burst size是数据量、duration是时间",
+            "解释短时输入超过输出如何形成队列、时延与丢失",
+            "用低长时平均的backup说明为什么平均值不足"
           ],
-          "adaptation": "题目改成why时解释因果；改成recommend/evaluate时增加场景依据、代价与验证。"
+          "adaptation": "若出现数字，先统一bits/bytes和时间窗口；不要只比较长期平均。"
         },
         "reasoning": [
           "peak/sustained/minimum都带时间与语义；burst size是量，duration是时间，rate是量/时间，单位不同。",
@@ -8494,9 +8525,9 @@
           "key_sentence": "A low average can hide a short burst.",
           "meaning": "低平均值可能掩盖短时突发。",
           "language": "hide在性能题表示统计掩盖；short burst是完整搭配。",
-          "frame": "X supports ____ because ____. However, it does not guarantee ____.",
-          "frame_meaning": "X支持……，因为……；但不保证……。",
-          "frame_note": "because后解释机制；however后保留边界，不能两句空泛。",
+          "frame": "X provides ____, whereas Y provides ____. The choice depends on ____.",
+          "frame_meaning": "X提供……，而Y提供……；选择取决于……。",
+          "frame_note": "whereas用同一维度做对比；空白要填机制或条件，不填无依据的best。",
           "build_steps": [
             "先用中文或关键词确认概念与条件；概念不清先回到推理，不急着换高级词。",
             "用短句写清主语、动作和对象；专业术语保留英文。",
@@ -8513,9 +8544,12 @@
           "path": "CSIT985 → Lecture Slides → Week 4 - Lecture Slides",
           "pages": "29、32、55–56",
           "keywords": [
-            "Capacity Metrics"
+            "peak",
+            "sustained",
+            "minimum",
+            "burst"
           ],
-          "check": "按所列页码核对术语、图中关系与适用条件；来源支持知识点，不表示AI例子逐字出现在课件。",
+          "check": "核对Week4容量指标，区分观察到的minimum与要求的minimum。",
           "workflow": [
             "先圈题干动作与限定条件，写出要找的两个术语。",
             "打开本题来源并定位PDF物理页，Ctrl/Cmd+F搜关键词；图像内容需看图。",
@@ -8524,7 +8558,7 @@
           ]
         },
         "self_check": [
-          "短时到达超过输出时先积累队列，队列有限再丢包。较低长时平均不排除突发损害时延敏感业务；minimum须说是观察值还是保证需求。",
+          "已检查并避开这些误区：短时到达超过输出时先积累队列，队列有限再丢包。较低长时平均不排除突发损害时延敏感业务；minimum须说是观察值还是保证需求。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -8759,7 +8793,7 @@
           ]
         },
         "self_check": [
-          "只写“能提高性能”；把duration等同于delay；声称持续更久就必然需要更大带宽；完全不解释并发与峰值。",
+          "已检查并避开这些误区：只写“能提高性能”；把duration等同于delay；声称持续更久就必然需要更大带宽；完全不解释并发与峰值。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -8994,7 +9028,7 @@
           ]
         },
         "self_check": [
-          "MTBF、MTTR单位必须一致；课件公式通常排除计划维护。",
+          "已检查并避开这些误区：MTBF、MTTR单位必须一致；课件公式通常排除计划维护。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -9034,19 +9068,22 @@
       "guidance": {
         "task_type": "计算＋模型边界",
         "answer_plan": [
-          "识别题干要求的对象与输出",
-          "给出定义或已知量，说明机制与因果",
-          "结合场景作解释，保留适用条件",
-          "用明确指标或边界检查结论"
+          "识别series、independent、constant-rate和first failure四个条件",
+          "用λ=1/MTTF将两个平均时间换成h⁻¹",
+          "加故障率后取倒数，写666.67h并检查小于各组件时间",
+          "解释MTTF首次故障、MTBF重复故障间隔和缺少恢复资料的边界"
         ],
         "current_organization": [
-          "第1段：Under the stated independent, constant-rate series model, the system failure rate is 1/1000 + 1/2000 = 0."
+          "结果句：在明确模型下求系统故障率与MTTF",
+          "边界句：不相加平均时间；区分修复模型并拒绝无资料求可用性"
         ],
         "lookup_keywords": [
-          "Reliability"
+          "failure rates",
+          "reliability",
+          "MTBCF"
         ],
-        "lookup_check": "按所列页码核对术语、图中关系与适用条件；来源支持知识点，不表示AI例子逐字出现在课件。",
-        "adapt_to_question": "题目改成why时解释因果；改成recommend/evaluate时增加场景依据、代价与验证。",
+        "lookup_check": "课件p42说明组合故障率思路；题中独立恒定率及首次故障模型是显式教学条件，MTTF边界另经NIST核对。",
+        "adapt_to_question": "若题目改成冗余、相关故障或修复系统，先重新定义模型，不能直接沿用本公式。",
         "label": "AI整理的组织与检索建议，非官方评分细则"
       },
       "answer_colors": {
@@ -9102,14 +9139,19 @@
         },
         "prompt": {
           "meaning": "在独立、恒定故障率串联模型下计算首次故障时间；区分MTTF与修复系统的MTBF。",
-          "verbs": [],
-          "targets": [
-            "识别题干要求的对象与输出",
-            "给出定义或已知量，说明机制与因果",
-            "结合场景作解释，保留适用条件",
-            "用明确指标或边界检查结论"
+          "verbs": [
+            {
+              "word": "estimate",
+              "meaning": "估算：先说明模型与单位，再给在这些条件下的近似结果。"
+            }
           ],
-          "adaptation": "题目改成why时解释因果；改成recommend/evaluate时增加场景依据、代价与验证。"
+          "targets": [
+            "识别series、independent、constant-rate和first failure四个条件",
+            "用λ=1/MTTF将两个平均时间换成h⁻¹",
+            "加故障率后取倒数，写666.67h并检查小于各组件时间",
+            "解释MTTF首次故障、MTBF重复故障间隔和缺少恢复资料的边界"
+          ],
+          "adaptation": "若题目改成冗余、相关故障或修复系统，先重新定义模型，不能直接沿用本公式。"
         },
         "reasoning": [
           "MTTF是平均首次故障时间，λ是每小时故障率；恒定率模型下MTTF=1/λ。任一组件坏就停的series系统，故障机会增加，平均首次故障时间应短于任一组件。",
@@ -9138,9 +9180,11 @@
           "path": "CSIT985 → Lecture Slides → Week 4 - Lecture Slides",
           "pages": "42",
           "keywords": [
-            "Reliability"
+            "failure rates",
+            "reliability",
+            "MTBCF"
           ],
-          "check": "按所列页码核对术语、图中关系与适用条件；来源支持知识点，不表示AI例子逐字出现在课件。",
+          "check": "课件p42说明组合故障率思路；题中独立恒定率及首次故障模型是显式教学条件，MTTF边界另经NIST核对。",
           "workflow": [
             "先圈题干动作与限定条件，写出要找的两个术语。",
             "打开本题来源并定位PDF物理页，Ctrl/Cmd+F搜关键词；图像内容需看图。",
@@ -9149,7 +9193,7 @@
           ]
         },
         "self_check": [
-          "求和的是failure rates，不是平均时间；首次故障MTTF与修复系统MTBF需区分，冗余/相关故障另建模型。",
+          "已检查并避开这些误区：求和的是failure rates，不是平均时间；首次故障MTTF与修复系统MTBF需区分，冗余/相关故障另建模型。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -9302,7 +9346,7 @@
           ]
         },
         "self_check": [
-          "不能用990/10；明确是否含计划维护。",
+          "已检查并避开这些误区：不能用990/10；明确是否含计划维护。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -9461,7 +9505,7 @@
           ]
         },
         "self_check": [
-          "99.9%并不自动说明单次中断最大允许时长。",
+          "已检查并避开这些误区：99.9%并不自动说明单次中断最大允许时长。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -9618,7 +9662,7 @@
           ]
         },
         "self_check": [
-          "duration是事务持续时间；不是这里的数据包路径delay。RTT与单程的测量端点须定义清楚。",
+          "已检查并避开这些误区：duration是事务持续时间；不是这里的数据包路径delay。RTT与单程的测量端点须定义清楚。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -9655,23 +9699,25 @@
         }
       ],
       "guidance": {
-        "task_type": "解释＋条件与应用",
+        "task_type": "时延语境区分",
         "answer_plan": [
-          "识别题干要求的对象与输出",
-          "给出定义或已知量，说明机制与因果",
-          "结合场景作解释，保留适用条件",
-          "用明确指标或边界检查结论"
+          "说明INTD针对任务交互容忍、HRT针对感知",
+          "列课件示例量级并明确并非通用标准",
+          "指出该页不等式与数值矛盾，不照背",
+          "区分传播贡献与完整单程、RTT或整任务指标"
         ],
         "current_organization": [
-          "第1段：The lecture uses interactivity, human response and distance to discuss delay requirements.",
-          "第2段：These values refer to different task and perception contexts.",
-          "第3段：A designer should specify the application event, endpoints and permitted completion or response time."
+          "第1段：INTD/HRT含义与示例",
+          "第2段：不同语境、课件歧义和传播时延",
+          "第3段：应用事件、端点与测量口径"
         ],
         "lookup_keywords": [
-          "Delay"
+          "INTD",
+          "HRT",
+          "propagation"
         ],
-        "lookup_check": "按所列页码核对术语、图中关系与适用条件；来源支持知识点，不表示AI例子逐字出现在课件。",
-        "adapt_to_question": "题目改成why时解释因果；改成recommend/evaluate时增加场景依据、代价与验证。",
+        "lookup_check": "看Week4 p53原文并对照p54，确认10–30秒与约100ms的上下文。",
+        "adapt_to_question": "换成实时媒体场景时重新定义允许时延，不沿用长任务阈值。",
         "label": "AI整理的组织与检索建议，非官方评分细则"
       },
       "answer_colors": {
@@ -9753,12 +9799,12 @@
             }
           ],
           "targets": [
-            "识别题干要求的对象与输出",
-            "给出定义或已知量，说明机制与因果",
-            "结合场景作解释，保留适用条件",
-            "用明确指标或边界检查结论"
+            "说明INTD针对任务交互容忍、HRT针对感知",
+            "列课件示例量级并明确并非通用标准",
+            "指出该页不等式与数值矛盾，不照背",
+            "区分传播贡献与完整单程、RTT或整任务指标"
           ],
-          "adaptation": "题目改成why时解释因果；改成recommend/evaluate时增加场景依据、代价与验证。"
+          "adaptation": "换成实时媒体场景时重新定义允许时延，不沿用长任务阈值。"
         },
         "reasoning": [
           "任务完成能容忍几十秒与人能觉察100ms是不同问题；传播时延则是距离/传播速度的物理贡献。",
@@ -9768,9 +9814,9 @@
           "key_sentence": "Different delay metrics describe different events.",
           "meaning": "不同延迟指标描述不同事件。",
           "language": "metric是“度量指标”；不要在同一句中互换TCT与packet delay。",
-          "frame": "X supports ____ because ____. However, it does not guarantee ____.",
-          "frame_meaning": "X支持……，因为……；但不保证……。",
-          "frame_note": "because后解释机制；however后保留边界，不能两句空泛。",
+          "frame": "X provides ____, whereas Y provides ____. The choice depends on ____.",
+          "frame_meaning": "X提供……，而Y提供……；选择取决于……。",
+          "frame_note": "whereas用同一维度做对比；空白要填机制或条件，不填无依据的best。",
           "build_steps": [
             "先用中文或关键词确认概念与条件；概念不清先回到推理，不急着换高级词。",
             "用短句写清主语、动作和对象；专业术语保留英文。",
@@ -9787,9 +9833,11 @@
           "path": "CSIT985 → Lecture Slides → Week 4 - Lecture Slides",
           "pages": "53–54",
           "keywords": [
-            "Delay"
+            "INTD",
+            "HRT",
+            "propagation"
           ],
-          "check": "按所列页码核对术语、图中关系与适用条件；来源支持知识点，不表示AI例子逐字出现在课件。",
+          "check": "看Week4 p53原文并对照p54，确认10–30秒与约100ms的上下文。",
           "workflow": [
             "先圈题干动作与限定条件，写出要找的两个术语。",
             "打开本题来源并定位PDF物理页，Ctrl/Cmd+F搜关键词；图像内容需看图。",
@@ -9798,7 +9846,7 @@
           ]
         },
         "self_check": [
-          "Week4 p53列INTD约10–30秒、HRT约100ms，却有反向不等式；不要背矛盾关系。实际要求需定义事件、端点、单程/往返/整任务。",
+          "已检查并避开这些误区：Week4 p53列INTD约10–30秒、HRT约100ms，却有反向不等式；不要背矛盾关系。实际要求需定义事件、端点、单程/往返/整任务。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -9914,7 +9962,12 @@
         },
         "prompt": {
           "meaning": "数据量/时间与并发计算，MB采用十进制。",
-          "verbs": [],
+          "verbs": [
+            {
+              "word": "estimate",
+              "meaning": "估算：先说明模型与单位，再给在这些条件下的近似结果。"
+            }
+          ],
           "targets": [
             "说明MB/Mb及十进制口径",
             "数据量×8÷时间求payload rate",
@@ -9963,7 +10016,7 @@
           ]
         },
         "self_check": [
-          "不要把60MB/20s=3MB/s误写成3Mb/s。",
+          "已检查并避开这些误区：不要把60MB/20s=3MB/s误写成3Mb/s。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -10229,7 +10282,7 @@
           ]
         },
         "self_check": [
-          "confidence 在此不是统计置信区间，也不是用户自信。",
+          "已检查并避开这些误区：confidence 在此不是统计置信区间，也不是用户自信。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -10491,7 +10544,7 @@
           ]
         },
         "self_check": [
-          "不要把 flow 当成任意一条物理线；同一设备可同时 source/sink。",
+          "已检查并避开这些误区：不要把 flow 当成任意一条物理线；同一设备可同时 source/sink。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -10685,7 +10738,12 @@
         },
         "prompt": {
           "meaning": "按原图完成四类source/sink、各类型flow map与合并图；题目没唯一指定的端点要写假设。",
-          "verbs": [],
+          "verbs": [
+            {
+              "word": "identify",
+              "meaning": "识别：明确所需对象及判定依据。"
+            }
+          ],
           "targets": [
             "先列四类业务及明确的端点",
             "逐类列source、sink、方向和性能要求",
@@ -10736,7 +10794,7 @@
           ]
         },
         "self_check": [
-          "External Access Server不因external一词而移到校园框外；Type3目的、Type4归档源有歧义，图必须标假设，不能声称唯一官方答案。",
+          "已检查并避开这些误区：External Access Server不因external一词而移到校园框外；Type3目的、Type4归档源有歧义，图必须标假设，不能声称唯一官方答案。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -10907,7 +10965,12 @@
         },
         "prompt": {
           "meaning": "按原练习区分上下行、单向/双向与one-way/RTT。",
-          "verbs": [],
+          "verbs": [
+            {
+              "word": "label",
+              "meaning": "标注：写清对象、方向、单位与测量含义。"
+            }
+          ],
           "targets": [
             "按四个应用分别写source→sink方向",
             "双向需求各自保留速率",
@@ -10957,7 +11020,7 @@
           ]
         },
         "self_check": [
-          "Workshops周号不同于lecture；RTT不能直接当每一方向100ms。",
+          "已检查并避开这些误区：Workshops周号不同于lecture；RTT不能直接当每一方向100ms。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -11175,7 +11238,7 @@
           ]
         },
         "self_check": [
-          "模型可以并存；不是把四种分别当四种互斥物理拓扑。",
+          "已检查并避开这些误区：模型可以并存；不是把四种分别当四种互斥物理拓扑。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -11383,7 +11446,7 @@
           ]
         },
         "self_check": [
-          "Top N 不是忽略所有其他应用；带宽大不自动最重要。",
+          "已检查并避开这些误区：Top N 不是忽略所有其他应用；带宽大不自动最重要。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -11645,7 +11708,7 @@
           ]
         },
         "self_check": [
-          "不相加delay上限或availability百分比；guaranteed不被平均。",
+          "已检查并避开这些误区：不相加delay上限或availability百分比；guaranteed不被平均。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -11804,7 +11867,7 @@
           ]
         },
         "self_check": [
-          "目标聚合不是串联系统实际可用性的概率计算。",
+          "已检查并避开这些误区：目标聚合不是串联系统实际可用性的概率计算。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -12072,7 +12135,7 @@
           ]
         },
         "self_check": [
-          "只列四个component名称；只写“互相影响”而无关系与例子；把external写成internal。",
+          "已检查并避开这些误区：只列四个component名称；只写“互相影响”而无关系与例子；把external写成internal。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -12340,7 +12403,7 @@
           ]
         },
         "self_check": [
-          "internal/external 不等于机构内网/公网。",
+          "已检查并避开这些误区：internal/external 不等于机构内网/公网。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -12591,7 +12654,7 @@
           ]
         },
         "self_check": [
-          "回答所有模型时请用Q06的完整清单；不要漏functional三类。",
+          "已检查并避开这些误区：回答所有模型时请用Q06的完整清单；不要漏functional三类。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -12911,7 +12974,7 @@
           ]
         },
         "self_check": [
-          "只写三类名称；漏functional三项；将模型误答为OSI、TCP/IP、SDN；只列清单不描述。",
+          "已检查并避开这些误区：只写三类名称；漏functional三项；将模型误答为OSI、TCP/IP、SDN；只列清单不描述。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -13115,7 +13178,7 @@
           ]
         },
         "self_check": [
-          "加密主要保密，不能单独保证CIA全目标。",
+          "已检查并避开这些误区：加密主要保密，不能单独保证CIA全目标。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -13372,7 +13435,7 @@
           ]
         },
         "self_check": [
-          "风险不只看攻击概率，还要看业务损害。",
+          "已检查并避开这些误区：风险不只看攻击概率，还要看业务损害。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -13533,7 +13596,7 @@
           ]
         },
         "self_check": [
-          "没有数据就不要凭空写“80%攻击概率”；控制措施不能写成已保证零风险。",
+          "已检查并避开这些误区：没有数据就不要凭空写“80%攻击概率”；控制措施不能写成已保证零风险。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -13748,7 +13811,7 @@
           ]
         },
         "self_check": [
-          "policy是规则，procedure是执行步骤；不能只堆设备名。",
+          "已检查并避开这些误区：policy是规则，procedure是执行步骤；不能只堆设备名。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -13963,7 +14026,7 @@
           ]
         },
         "self_check": [
-          "这是图中的策略逻辑，不能等同某设备ACL语法已配置好；默认拒绝也需正确允许合法业务。",
+          "已检查并避开这些误区：这是图中的策略逻辑，不能等同某设备ACL语法已配置好；默认拒绝也需正确允许合法业务。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -14193,7 +14256,7 @@
           ]
         },
         "self_check": [
-          "允许端口不代表该端口所有内容都安全。",
+          "已检查并避开这些误区：允许端口不代表该端口所有内容都安全。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -14450,7 +14513,7 @@
           ]
         },
         "self_check": [
-          "不要把SNMPv3任意配置都说成必定加密；不死背旧加密算法为现今推荐。",
+          "已检查并避开这些误区：不要把SNMPv3任意配置都说成必定加密；不死背旧加密算法为现今推荐。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -14716,7 +14779,7 @@
           ]
         },
         "self_check": [
-          "只列名称不描述；把authentication和authorization混为一谈；把encryption说成自动满足全部CIA。",
+          "已检查并避开这些误区：只列名称不描述；把authentication和authorization混为一谈；把encryption说成自动满足全部CIA。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -14984,7 +15047,7 @@
           ]
         },
         "self_check": [
-          "NAT不是encryption；DMZ不等于完全可信或无须保护。",
+          "已检查并避开这些误区：NAT不是encryption；DMZ不等于完全可信或无须保护。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -15230,7 +15293,7 @@
           ]
         },
         "self_check": [
-          "扁平分区不等于没有security；多层也不能保证每个跨区flow都满足delay目标。",
+          "已检查并避开这些误区：扁平分区不等于没有security；多层也不能保证每个跨区flow都满足delay目标。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -15480,7 +15543,7 @@
           ]
         },
         "self_check": [
-          "课件15–85%是旧例子，不当普遍性能损失公式。",
+          "已检查并避开这些误区：课件15–85%是旧例子，不当普遍性能损失公式。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -15716,7 +15779,7 @@
           ]
         },
         "self_check": [
-          "IP通常分配给接口；不要把MAC绝对说成永远不可更改。",
+          "已检查并避开这些误区：IP通常分配给接口；不要把MAC绝对说成永远不可更改。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -15948,7 +16011,7 @@
           ]
         },
         "self_check": [
-          "不背可能变化的费用或机构人员信息；AS不等于classful network或一个LAN。",
+          "已检查并避开这些误区：不背可能变化的费用或机构人员信息；AS不等于classful network或一个LAN。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -16178,7 +16241,7 @@
           ]
         },
         "self_check": [
-          "classful是历史语境；CIDR不能仅看首字节推前缀。",
+          "已检查并避开这些误区：classful是历史语境；CIDR不能仅看首字节推前缀。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -16426,7 +16489,7 @@
           ]
         },
         "self_check": [
-          "Week7 p.20把172.32写进private范围是笔误，正确终点31。",
+          "已检查并避开这些误区：Week7 p.20把172.32写进private范围是笔误，正确终点31。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -16686,7 +16749,7 @@
           ]
         },
         "self_check": [
-          "default route写0.0.0.0/0；不是课件特殊地址表里的/8。",
+          "已检查并避开这些误区：default route写0.0.0.0/0；不是课件特殊地址表里的/8。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -16897,7 +16960,7 @@
           ]
         },
         "self_check": [
-          "文档地址不是RFC1918私网；不要把地址数字0.0.0.0、0.0.0.0/8与默认路由/0混写。",
+          "已检查并避开这些误区：文档地址不是RFC1918私网；不要把地址数字0.0.0.0、0.0.0.0/8与默认路由/0混写。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -17142,7 +17205,7 @@
           ]
         },
         "self_check": [
-          "常规LAN公式不适用于所有特殊/31、/32情形；本题库计算指定普通子网。",
+          "已检查并避开这些误区：常规LAN公式不适用于所有特殊/31、/32情形；本题库计算指定普通子网。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -17294,7 +17357,7 @@
           ]
         },
         "self_check": [
-          "不能对十进制直接做普通乘法；每个octet要8位。",
+          "已检查并避开这些误区：不能对十进制直接做普通乘法；每个octet要8位。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -17436,7 +17499,7 @@
           ]
         },
         "self_check": [
-          "第二块从128开始，不是127；不得借用原/24之外地址。",
+          "已检查并避开这些误区：第二块从128开始，不是127；不得借用原/24之外地址。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -17610,7 +17673,7 @@
           ]
         },
         "self_check": [
-          "旧guideline p.14把/27掩码写成255.255.254.0（那是/23），正确/27是255.255.255.224。",
+          "已检查并避开这些误区：旧guideline p.14把/27掩码写成255.255.254.0（那是/23），正确/27是255.255.255.224。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -17752,7 +17815,7 @@
           ]
         },
         "self_check": [
-          "至少6可以生成8；不能说借6位因为要6个子网。",
+          "已检查并避开这些误区：至少6可以生成8；不能说借6位因为要6个子网。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -17894,7 +17957,7 @@
           ]
         },
         "self_check": [
-          "“最长prefix”对应最小够用块；不是/25更节约。",
+          "已检查并避开这些误区：“最长prefix”对应最小够用块；不是/25更节约。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -18041,7 +18104,7 @@
           ]
         },
         "self_check": [
-          "同前三octet不保证同子网；network不能分给普通主机。",
+          "已检查并避开这些误区：同前三octet不保证同子网；network不能分给普通主机。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -18200,7 +18263,7 @@
           ]
         },
         "self_check": [
-          "broadcast不是172.20.32.255；host位跨两个octet。",
+          "已检查并避开这些误区：broadcast不是172.20.32.255；host位跨两个octet。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -18347,7 +18410,7 @@
           ]
         },
         "self_check": [
-          "原solutions p.5：/17误写32764，/18误写16384；正确分别32766、16382。",
+          "已检查并避开这些误区：原solutions p.5：/17误写32764，/18误写16384；正确分别32766、16382。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -18491,7 +18554,7 @@
           ]
         },
         "self_check": [
-          "别把原/23误当/24；第0索引与第1计数要说明。",
+          "已检查并避开这些误区：别把原/23误当/24；第0索引与第1计数要说明。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -18633,7 +18696,7 @@
           ]
         },
         "self_check": [
-          "子网数量用新旧prefix差；host数量用32−新prefix。",
+          "已检查并避开这些误区：子网数量用新旧prefix差；host数量用32−新prefix。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -18775,7 +18838,7 @@
           ]
         },
         "self_check": [
-          "作为范围拓展训练，不声称老师明确点名VLSM综合分配必考。",
+          "已检查并避开这些误区：作为范围拓展训练，不声称老师明确点名VLSM综合分配必考。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -18915,7 +18978,7 @@
           ]
         },
         "self_check": [
-          "不能只检查子网数不检查host数。",
+          "已检查并避开这些误区：不能只检查子网数不检查host数。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -19197,7 +19260,7 @@
           ]
         },
         "self_check": [
-          "BGP的iBGP形式在AS内部用；不能绝对说BGP只在外部。",
+          "已检查并避开这些误区：BGP的iBGP形式在AS内部用；不能绝对说BGP只在外部。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -19480,7 +19543,7 @@
           ]
         },
         "self_check": [
-          "route filtering与packet ACL不能机械画等号。",
+          "已检查并避开这些误区：route filtering与packet ACL不能机械画等号。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -19746,7 +19809,7 @@
           ]
         },
         "self_check": [
-          "simple不意味着一律先上RIP；课件后页已提示旧建议过时。",
+          "已检查并避开这些误区：simple不意味着一律先上RIP；课件后页已提示旧建议过时。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -20005,7 +20068,7 @@
           ]
         },
         "self_check": [
-          "不要把BGP简单说成“最快路由”；OSPF不是distance vector。",
+          "已检查并避开这些误区：不要把BGP简单说成“最快路由”；OSPF不是distance vector。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -20258,7 +20321,7 @@
           ]
         },
         "self_check": [
-          "不能把课件“2 max”当所有网络必须满足的技术定律。",
+          "已检查并避开这些误区：不能把课件“2 max”当所有网络必须满足的技术定律。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -20491,7 +20554,7 @@
           ]
         },
         "self_check": [
-          "iBGP不等于OSPF；inside同一大楼不代表same AS；BGP不是只按最短hop选择。",
+          "已检查并避开这些误区：iBGP不等于OSPF；inside同一大楼不代表same AS；BGP不是只按最短hop选择。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -20528,23 +20591,25 @@
         }
       ],
       "guidance": {
-        "task_type": "解释＋条件与应用",
+        "task_type": "内部/外部关系解释",
         "answer_plan": [
-          "识别题干要求的对象与输出",
-          "给出定义或已知量，说明机制与因果",
-          "结合场景作解释，保留适用条件",
-          "用明确指标或边界检查结论"
+          "内部：静动态、协议、层次和地址计划之间的取舍",
+          "外部：管理需要可达与清楚域边界",
+          "外部：性能路径与QoS协调，安全规则依赖地址",
+          "用改子网地址同时影响routes、monitoring、ACL的例子收束"
         ],
         "current_organization": [
-          "第1段：Internal relationships concern choices within addressing and routing.",
-          "第2段：External relationships connect routing with other component architectures.",
-          "第3段：Security rules may use addresses to control access."
+          "第1段：地址路由内部关系",
+          "第2段：管理与性能外部关系",
+          "第3段：安全、动态地址、NAT及协同变更"
         ],
         "lookup_keywords": [
-          "Architectural Considerations"
+          "internal",
+          "external",
+          "architectural considerations"
         ],
-        "lookup_check": "按所列页码核对术语、图中关系与适用条件；来源支持知识点，不表示AI例子逐字出现在课件。",
-        "adapt_to_question": "题目改成why时解释因果；改成recommend/evaluate时增加场景依据、代价与验证。",
+        "lookup_check": "按Week7 pp77–79逐类找关系两端，避免把internal理解成同机房。",
+        "adapt_to_question": "若要求举例，至少写明两组件与具体影响，不只列组件名。",
         "label": "AI整理的组织与检索建议，非官方评分细则"
       },
       "answer_colors": {
@@ -20650,12 +20715,12 @@
             }
           ],
           "targets": [
-            "识别题干要求的对象与输出",
-            "给出定义或已知量，说明机制与因果",
-            "结合场景作解释，保留适用条件",
-            "用明确指标或边界检查结论"
+            "内部：静动态、协议、层次和地址计划之间的取舍",
+            "外部：管理需要可达与清楚域边界",
+            "外部：性能路径与QoS协调，安全规则依赖地址",
+            "用改子网地址同时影响routes、monitoring、ACL的例子收束"
           ],
-          "adaptation": "题目改成why时解释因果；改成recommend/evaluate时增加场景依据、代价与验证。"
+          "adaptation": "若要求举例，至少写明两组件与具体影响，不只列组件名。"
         },
         "reasoning": [
           "内部是routing/addressing机制之间的取舍；外部连management、performance、security。先把关系两端写出再说影响。",
@@ -20684,9 +20749,11 @@
           "path": "CSIT985 → Lecture Slides → Week 7 - Lecture Slides",
           "pages": "77–79",
           "keywords": [
-            "Architectural Considerations"
+            "internal",
+            "external",
+            "architectural considerations"
           ],
-          "check": "按所列页码核对术语、图中关系与适用条件；来源支持知识点，不表示AI例子逐字出现在课件。",
+          "check": "按Week7 pp77–79逐类找关系两端，避免把internal理解成同机房。",
           "workflow": [
             "先圈题干动作与限定条件，写出要找的两个术语。",
             "打开本题来源并定位PDF物理页，Ctrl/Cmd+F搜关键词；图像内容需看图。",
@@ -20695,7 +20762,7 @@
           ]
         },
         "self_check": [
-          "例如改地址会改变路由汇总、管理目标与ACL；dynamic address方便分配但使按地址记录身份更难。NAT可改变可见性却不代替安全政策。",
+          "已检查并避开这些误区：例如改地址会改变路由汇总、管理目标与ACL；dynamic address方便分配但使按地址记录身份更难。NAT可改变可见性却不代替安全政策。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -20948,7 +21015,7 @@
           ]
         },
         "self_check": [
-          "QoS分配已有资源，不凭空创造capacity。",
+          "已检查并避开这些误区：QoS分配已有资源，不凭空创造capacity。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -21217,7 +21284,7 @@
           ]
         },
         "self_check": [
-          "RSVP是信令；DiffServ标记本身不等于端到端保证。",
+          "已检查并避开这些误区：RSVP是信令；DiffServ标记本身不等于端到端保证。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -21443,7 +21510,7 @@
           ]
         },
         "self_check": [
-          "不要把MPLS限定为只能运行在Ethernet，或把标签直接等同加密。",
+          "已检查并避开这些误区：不要把MPLS限定为只能运行在Ethernet，或把标签直接等同加密。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -21480,24 +21547,27 @@
         }
       ],
       "guidance": {
-        "task_type": "解释＋条件与应用",
+        "task_type": "机制链＋三类服务",
         "answer_plan": [
-          "识别题干要求的对象与输出",
-          "给出定义或已知量，说明机制与因果",
-          "结合场景作解释，保留适用条件",
-          "用明确指标或边界检查结论"
+          "解释classification→DSCP marking→per-hop behaviour",
+          "说明domain与boundary节点职责",
+          "分别说明BE、AF、EF的目标与条件",
+          "保留跨域资源与政策要求，修正RFC2475编号"
         ],
         "current_organization": [
-          "第1段：DiffServ groups traffic into classes rather than maintaining a separate reservation for every application flow.",
-          "第2段：A DiffServ domain contains nodes following a common service policy.",
-          "第3段：Best effort provides ordinary service without a specific performance commitment.",
-          "第4段：A marking alone does not create capacity or guarantee an entire path."
+          "第1段：分类、标记与逐跳处理",
+          "第2段：DiffServ域与边界",
+          "第3段：BE/AF/EF",
+          "第4段：标记的限制、教学流例子及RFC勘误"
         ],
         "lookup_keywords": [
-          "Differentiated Services"
+          "DiffServ",
+          "DSCP",
+          "AF",
+          "EF"
         ],
-        "lookup_check": "按所列页码核对术语、图中关系与适用条件；来源支持知识点，不表示AI例子逐字出现在课件。",
-        "adapt_to_question": "题目改成why时解释因果；改成recommend/evaluate时增加场景依据、代价与验证。",
+        "lookup_check": "查看Week8类与域图；p33的RFC2745为引用笔误，架构为2475。",
+        "adapt_to_question": "若问能否保证端到端，先回答标记不够，再解释资源、逐跳与跨域一致性。",
         "label": "AI整理的组织与检索建议，非官方评分细则"
       },
       "answer_colors": {
@@ -21622,12 +21692,12 @@
             }
           ],
           "targets": [
-            "识别题干要求的对象与输出",
-            "给出定义或已知量，说明机制与因果",
-            "结合场景作解释，保留适用条件",
-            "用明确指标或边界检查结论"
+            "解释classification→DSCP marking→per-hop behaviour",
+            "说明domain与boundary节点职责",
+            "分别说明BE、AF、EF的目标与条件",
+            "保留跨域资源与政策要求，修正RFC2475编号"
           ],
-          "adaptation": "题目改成why时解释因果；改成recommend/evaluate时增加场景依据、代价与验证。"
+          "adaptation": "若问能否保证端到端，先回答标记不够，再解释资源、逐跳与跨域一致性。"
         },
         "reasoning": [
           "分类先辨认流，DSCP标记期望类，节点按policy落实per-hop behaviour；域边界负责承接、改标或调节。",
@@ -21656,9 +21726,12 @@
           "path": "CSIT985 → Lecture Slides → Week 8 - Lecture Slides",
           "pages": "29–37",
           "keywords": [
-            "Differentiated Services"
+            "DiffServ",
+            "DSCP",
+            "AF",
+            "EF"
           ],
-          "check": "按所列页码核对术语、图中关系与适用条件；来源支持知识点，不表示AI例子逐字出现在课件。",
+          "check": "查看Week8类与域图；p33的RFC2745为引用笔误，架构为2475。",
           "workflow": [
             "先圈题干动作与限定条件，写出要找的两个术语。",
             "打开本题来源并定位PDF物理页，Ctrl/Cmd+F搜关键词；图像内容需看图。",
@@ -21667,7 +21740,7 @@
           ]
         },
         "self_check": [
-          "BE/AF/EF不能被理解成贴标签就承诺整路。AF涉及转发/丢弃差别，EF低延迟低丢失也需控制流量与足够资源，跨域还需协商一致。",
+          "已检查并避开这些误区：BE/AF/EF不能被理解成贴标签就承诺整路。AF涉及转发/丢弃差别，EF低延迟低丢失也需控制流量与足够资源，跨域还需协商一致。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -21966,7 +22039,7 @@
           ]
         },
         "self_check": [
-          "metering只测量，不自动等于限速；shaping与dropping不同。",
+          "已检查并避开这些误区：metering只测量，不自动等于限速；shaping与dropping不同。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -22136,7 +22209,7 @@
           ]
         },
         "self_check": [
-          "10ms＝0.01s，但1/0.01得到packet/s需要“一次服务一个包”等明确条件。",
+          "已检查并避开这些误区：10ms＝0.01s，但1/0.01得到packet/s需要“一次服务一个包”等明确条件。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -22400,7 +22473,7 @@
           ]
         },
         "self_check": [
-          "queue management、scheduling是相关但不同层面的机制。",
+          "已检查并避开这些误区：queue management、scheduling是相关但不同层面的机制。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -22652,7 +22725,7 @@
           ]
         },
         "self_check": [
-          "承诺不能超出机制和资源；上/下行需分别定义。",
+          "已检查并避开这些误区：承诺不能超出机制和资源；上/下行需分别定义。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -22689,24 +22762,26 @@
         }
       ],
       "guidance": {
-        "task_type": "解释＋条件与应用",
+        "task_type": "放置＋组件取舍",
         "answer_plan": [
-          "识别题干要求的对象与输出",
-          "给出定义或已知量，说明机制与因果",
-          "结合场景作解释，保留适用条件",
-          "用明确指标或边界检查结论"
+          "从flow map决定逐流或聚合处理位置",
+          "解释细粒度、扩展性与运行成本的内部取舍",
+          "说明management配置/监测验证，security增加处理成本",
+          "用教学与backup混合负载给出测试内容"
         ],
         "current_organization": [
-          "第1段：Performance mechanisms should follow requirements, flow maps, goals and the operating environment.",
-          "第2段：Internal choices must balance service detail, scalability and operating effort.",
-          "第3段：Management configures mechanisms, observes performance and verifies service commitments.",
-          "第4段：For example, an interactive teaching flow can receive controlled priority while backups are shaped, with monitoring at relevant boundaries."
+          "第1段：机制位置的指导",
+          "第2段：必要、足够与资源条件",
+          "第3段：管理/安全外部影响",
+          "第4段：混合流量例子与验证"
         ],
         "lookup_keywords": [
-          "Architectural Considerations"
+          "placement",
+          "architectural considerations",
+          "external"
         ],
-        "lookup_check": "按所列页码核对术语、图中关系与适用条件；来源支持知识点，不表示AI例子逐字出现在课件。",
-        "adapt_to_question": "题目改成why时解释因果；改成recommend/evaluate时增加场景依据、代价与验证。",
+        "lookup_check": "看Week8 pp58–62，位置是guideline，需依实际流量与目标调整。",
+        "adapt_to_question": "若加带宽后仍慢，区分链路与处理瓶颈，不能只继续提速。",
         "label": "AI整理的组织与检索建议，非官方评分细则"
       },
       "answer_colors": {
@@ -22817,12 +22892,12 @@
           "meaning": "说明逐流/聚合机制位置，管理验证与安全处理成本。",
           "verbs": [],
           "targets": [
-            "识别题干要求的对象与输出",
-            "给出定义或已知量，说明机制与因果",
-            "结合场景作解释，保留适用条件",
-            "用明确指标或边界检查结论"
+            "从flow map决定逐流或聚合处理位置",
+            "解释细粒度、扩展性与运行成本的内部取舍",
+            "说明management配置/监测验证，security增加处理成本",
+            "用教学与backup混合负载给出测试内容"
           ],
-          "adaptation": "题目改成why时解释因果；改成recommend/evaluate时增加场景依据、代价与验证。"
+          "adaptation": "若加带宽后仍慢，区分链路与处理瓶颈，不能只继续提速。"
         },
         "reasoning": [
           "逐流细粒度处理适合靠近接入，聚合处理适合多流交汇，是可扩展性思路而非固定设备位置命令。",
@@ -22851,9 +22926,11 @@
           "path": "CSIT985 → Lecture Slides → Week 8 - Lecture Slides",
           "pages": "58–62",
           "keywords": [
-            "Architectural Considerations"
+            "placement",
+            "architectural considerations",
+            "external"
           ],
-          "check": "按所列页码核对术语、图中关系与适用条件；来源支持知识点，不表示AI例子逐字出现在课件。",
+          "check": "看Week8 pp58–62，位置是guideline，需依实际流量与目标调整。",
           "workflow": [
             "先圈题干动作与限定条件，写出要找的两个术语。",
             "打开本题来源并定位PDF物理页，Ctrl/Cmd+F搜关键词；图像内容需看图。",
@@ -22862,7 +22939,7 @@
           ]
         },
         "self_check": [
-          "management配置并验证QoS，也占资源；security处理影响delay/capacity。测试需包括混合负载、允许访问与恢复，不能只测一条空闲链路。",
+          "已检查并避开这些误区：management配置并验证QoS，也占资源；security处理影响delay/capacity。测试需包括混合负载、允许访问与恢复，不能只测一条空闲链路。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -23123,7 +23200,7 @@
           ]
         },
         "self_check": [
-          "层级是管理范围，FCAPS是管理功能，不是同一分类。",
+          "已检查并避开这些误区：层级是管理范围，FCAPS是管理功能，不是同一分类。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -23370,7 +23447,7 @@
           ]
         },
         "self_check": [
-          "低优先级历史内容不标必考；CMOT不是SNMP的新版本。",
+          "已检查并避开这些误区：低优先级历史内容不标必考；CMOT不是SNMP的新版本。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -23641,7 +23718,7 @@
           ]
         },
         "self_check": [
-          "counter累计字节不是瞬时bps；MIB不是性能历史数据库本身。",
+          "已检查并避开这些误区：counter累计字节不是瞬时bps；MIB不是性能历史数据库本身。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -23678,23 +23755,26 @@
         }
       ],
       "guidance": {
-        "task_type": "解释＋条件与应用",
+        "task_type": "对象选择＋数据解释",
         "answer_plan": [
-          "识别题干要求的对象与输出",
-          "给出定义或已知量，说明机制与因果",
-          "结合场景作解释，保留适用条件",
-          "用明确指标或边界检查结论"
+          "按In/Out及Octets/Packets/Errors选择MIB对象",
+          "用两次同对象读数差×8/秒求bit rate",
+          "检查reset、wrap、时间和兼容分母",
+          "区分SNMPv2 bulk操作与v3安全，按管理目标采集"
         ],
         "current_organization": [
-          "第1段：MIB-II interface objects describe different aspects of a device interface.",
-          "第2段：A cumulative value is not a rate.",
-          "第3段：Before trusting the result, check for device reset, counter wrap and changes in what is being measured."
+          "第1段：对象名、方向与单位",
+          "第2段：累计量到速率",
+          "第3段：有效性、错误比例与SNMP版本边界"
         ],
         "lookup_keywords": [
-          "MIB II"
+          "ifInOctets",
+          "ifOutOctets",
+          "ifInErrors",
+          "MIB"
         ],
-        "lookup_check": "按所列页码核对术语、图中关系与适用条件；来源支持知识点，不表示AI例子逐字出现在课件。",
-        "adapt_to_question": "题目改成why时解释因果；改成recommend/evaluate时增加场景依据、代价与验证。",
+        "lookup_check": "Week9 pp21–24列对象；p19 bulk版本表述需按SNMP操作与安全分开理解。",
+        "adapt_to_question": "给一个counter值时不能求当前速率；有两次值也需先检查重置/回卷。",
         "label": "AI整理的组织与检索建议，非官方评分细则"
       },
       "answer_colors": {
@@ -23806,15 +23886,19 @@
             {
               "word": "why",
               "meaning": "说明原因：用机制和后果支持结论，避免只重述题干。"
+            },
+            {
+              "word": "choose",
+              "meaning": "选择：给出与任务相匹配的对象，并说明理由。"
             }
           ],
           "targets": [
-            "识别题干要求的对象与输出",
-            "给出定义或已知量，说明机制与因果",
-            "结合场景作解释，保留适用条件",
-            "用明确指标或边界检查结论"
+            "按In/Out及Octets/Packets/Errors选择MIB对象",
+            "用两次同对象读数差×8/秒求bit rate",
+            "检查reset、wrap、时间和兼容分母",
+            "区分SNMPv2 bulk操作与v3安全，按管理目标采集"
           ],
-          "adaptation": "题目改成why时解释因果；改成recommend/evaluate时增加场景依据、代价与验证。"
+          "adaptation": "给一个counter值时不能求当前速率；有两次值也需先检查重置/回卷。"
         },
         "reasoning": [
           "对象名称按In/Out、Octets/Packets/Errors拆读，分别判断方向与量；累计值要差分除时间才成速率。",
@@ -23843,9 +23927,12 @@
           "path": "CSIT985 → Lecture Slides → Week 9 - Lecture Slides",
           "pages": "19、21–24",
           "keywords": [
-            "MIB II"
+            "ifInOctets",
+            "ifOutOctets",
+            "ifInErrors",
+            "MIB"
           ],
-          "check": "按所列页码核对术语、图中关系与适用条件；来源支持知识点，不表示AI例子逐字出现在课件。",
+          "check": "Week9 pp21–24列对象；p19 bulk版本表述需按SNMP操作与安全分开理解。",
           "workflow": [
             "先圈题干动作与限定条件，写出要找的两个术语。",
             "打开本题来源并定位PDF物理页，Ctrl/Cmd+F搜关键词；图像内容需看图。",
@@ -23854,7 +23941,7 @@
           ]
         },
         "self_check": [
-          "两次同对象counter需检查reset/wrap，error ratio需兼容packet分母。GETBULK在SNMPv2已有，SNMPv3重点安全，避免按课件误记版本。",
+          "已检查并避开这些误区：两次同对象counter需检查reset/wrap，error ratio需兼容packet分母。GETBULK在SNMPv2已有，SNMPv3重点安全，避免按课件误记版本。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -24105,7 +24192,7 @@
           ]
         },
         "self_check": [
-          "ping成功不证明吞吐、全部应用、所有路径都正常。",
+          "已检查并避开这些误区：ping成功不证明吞吐、全部应用、所有路径都正常。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -24341,7 +24428,7 @@
           ]
         },
         "self_check": [
-          "实时分析与长期平均不能互相代替；poll越频繁并非无成本。",
+          "已检查并避开这些误区：实时分析与长期平均不能互相代替；poll越频繁并非无成本。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -24500,7 +24587,7 @@
           ]
         },
         "self_check": [
-          "不能把1.7408Mb/cycle直接写1.7408Mb/s，除非说明1秒发完。",
+          "已检查并避开这些误区：不能把1.7408Mb/cycle直接写1.7408Mb/s，除非说明1秒发完。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -24657,7 +24744,7 @@
           ]
         },
         "self_check": [
-          "不要把wire的60byte overhead计入“只存8byte值”的问题。",
+          "已检查并避开这些误区：不要把wire的60byte overhead计入“只存8byte值”的问题。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -24911,7 +24998,7 @@
           ]
         },
         "self_check": [
-          "比较维度不对齐；把带外说成永不失效；把in-band/out-of-band等同于centralized/distributed。",
+          "已检查并避开这些误区：比较维度不对齐；把带外说成永不失效；把in-band/out-of-band等同于centralized/distributed。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -25158,7 +25245,7 @@
           ]
         },
         "self_check": [
-          "centralized≠必然一台物理主机；logical集中可有冗余。",
+          "已检查并避开这些误区：centralized≠必然一台物理主机；logical集中可有冗余。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -25386,7 +25473,7 @@
           ]
         },
         "self_check": [
-          "2–5%、10%是课件经验参考；不是协议硬上限。",
+          "已检查并避开这些误区：2–5%、10%是课件经验参考；不是协议硬上限。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -25603,7 +25690,7 @@
           ]
         },
         "self_check": [
-          "per-subnet与per-interface是规划起点；别机械重复部署同一位置，也别把一条链路测量当全路径保证。",
+          "已检查并避开这些误区：per-subnet与per-interface是规划起点；别机械重复部署同一位置，也别把一条链路测量当全路径保证。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -25848,7 +25935,7 @@
           ]
         },
         "self_check": [
-          "计数器回卷可能造成错误负数速率；不要直接当真实流量下降。",
+          "已检查并避开这些误区：计数器回卷可能造成错误负数速率；不要直接当真实流量下降。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -26095,7 +26182,7 @@
           ]
         },
         "self_check": [
-          "S3/Q03讲带内带外；本题重跨组件因果。",
+          "已检查并避开这些误区：S3/Q03讲带内带外；本题重跨组件因果。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -26360,7 +26447,7 @@
           ]
         },
         "self_check": [
-          "只写拓扑图；漏traceability或metrics；把architectural design的outcomes当作这五项的同名清单。",
+          "已检查并避开这些误区：只写拓扑图；漏traceability或metrics；把architectural design的outcomes当作这五项的同名清单。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -26630,7 +26717,7 @@
           ]
         },
         "self_check": [
-          "加权分最高不能抵消不满足必备条件。",
+          "已检查并避开这些误区：加权分最高不能抵消不满足必备条件。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -26811,7 +26898,7 @@
           ]
         },
         "self_check": [
-          "权重不能随候选人临时改变；原始价格/延迟等不同单位不能未经规则直接相加。",
+          "已检查并避开这些误区：权重不能随候选人临时改变；原始价格/延迟等不同单位不能未经规则直接相加。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -26935,6 +27022,10 @@
             {
               "word": "explain",
               "meaning": "解释：说明是什么、如何/为何产生结果，并保留条件。"
+            },
+            {
+              "word": "recalculate",
+              "meaning": "重新计算：保留原表口径，逐项复核过程与结果。"
             }
           ],
           "targets": [
@@ -26987,7 +27078,7 @@
           ]
         },
         "self_check": [
-          "不能按原分合计把候选1排第一；图中17.6不是17.6%。",
+          "已检查并避开这些误区：不能按原分合计把候选1排第一；图中17.6不是17.6%。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -27243,7 +27334,7 @@
           ]
         },
         "self_check": [
-          "60%/80%课件规则是指导值，不是所有链路的普遍硬阈值。",
+          "已检查并避开这些误区：60%/80%课件规则是指导值，不是所有链路的普遍硬阈值。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -27473,7 +27564,7 @@
           ]
         },
         "self_check": [
-          "conceptual/architectural设计与最终detailed design不是同一粒度。",
+          "已检查并避开这些误区：conceptual/architectural设计与最终detailed design不是同一粒度。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -27605,7 +27696,12 @@
         },
         "prompt": {
           "meaning": "分别计算纯BE、纯predictable；混合题明确给出口径后再比较。",
-          "verbs": [],
+          "verbs": [
+            {
+              "word": "estimate",
+              "meaning": "估算：先说明模型与单位，再给在这些条件下的近似结果。"
+            }
+          ],
           "targets": [
             "写capacity≥load/utilization limit",
             "分别计算纯BE与纯predictable",
@@ -27656,7 +27752,7 @@
           ]
         },
         "self_check": [
-          "纯流与混合口径不能悄悄互换；总容量够不表示时延或availability达标。",
+          "已检查并避开这些误区：纯流与混合口径不能悄悄互换；总容量够不表示时延或availability达标。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -27910,7 +28006,7 @@
           ]
         },
         "self_check": [
-          "可追溯性不是“保留采购收据”；metric应能检验目标。",
+          "已检查并避开这些误区：可追溯性不是“保留采购收据”；metric应能检验目标。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -28202,7 +28298,7 @@
           ]
         },
         "self_check": [
-          "只列“快、便宜、安全”；把controller当作所有数据包必经转发设备；把逻辑集中当物理单点。",
+          "已检查并避开这些误区：只列“快、便宜、安全”；把controller当作所有数据包必经转发设备；把逻辑集中当物理单点。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -28474,7 +28570,7 @@
           ]
         },
         "self_check": [
-          "application plane不是交换机端口；controller不等于逐个代替交换机传所有数据。",
+          "已检查并避开这些误区：application plane不是交换机端口；controller不等于逐个代替交换机传所有数据。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -28731,7 +28827,7 @@
           ]
         },
         "self_check": [
-          "northbound在不同管理架构语境有不同上层对象；先说明这里是SDN。",
+          "已检查并避开这些误区：northbound在不同管理架构语境有不同上层对象；先说明这里是SDN。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -28768,23 +28864,26 @@
         }
       ],
       "guidance": {
-        "task_type": "解释＋条件与应用",
+        "task_type": "图解组成＋逐包过程",
         "answer_plan": [
-          "识别题干要求的对象与输出",
-          "给出定义或已知量，说明机制与因果",
-          "结合场景作解释，保留适用条件",
-          "用明确指标或边界检查结论"
+          "解释header fields匹配、counters统计、actions执行",
+          "沿入包→匹配→本地动作解释正常转发",
+          "说明controller通过southbound编程和获取状态",
+          "未命中依table-miss与版本处理，保留上报/丢弃条件"
         ],
         "current_organization": [
-          "第1段：The lecture’s OpenFlow switch diagram shows flow entries with header fields, counters and actions.",
-          "第2段：An arriving packet is checked against the installed rules.",
-          "第3段：If no ordinary entry matches, handling depends on the configured table-miss behaviour and protocol version."
+          "第1段：flow entry三组成与动作",
+          "第2段：本地匹配与controller角色",
+          "第3段：未命中边界、例子及扩展/安全条件"
         ],
         "lookup_keywords": [
-          "OpenFlow Switch"
+          "OpenFlow Switch",
+          "Header Fields",
+          "Counters",
+          "Actions"
         ],
-        "lookup_check": "按所列页码核对术语、图中关系与适用条件；来源支持知识点，不表示AI例子逐字出现在课件。",
-        "adapt_to_question": "题目改成why时解释因果；改成recommend/evaluate时增加场景依据、代价与验证。",
+        "lookup_check": "Week12 PDF物理p20/印刷p21的图，按匹配与动作箭头看，不背成每包上controller。",
+        "adapt_to_question": "若给已匹配输出规则，先说明本地执行；若给miss，说明需知道设置和版本。",
         "label": "AI整理的组织与检索建议，非官方评分细则"
       },
       "answer_colors": {
@@ -28895,12 +28994,12 @@
             }
           ],
           "targets": [
-            "识别题干要求的对象与输出",
-            "给出定义或已知量，说明机制与因果",
-            "结合场景作解释，保留适用条件",
-            "用明确指标或边界检查结论"
+            "解释header fields匹配、counters统计、actions执行",
+            "沿入包→匹配→本地动作解释正常转发",
+            "说明controller通过southbound编程和获取状态",
+            "未命中依table-miss与版本处理，保留上报/丢弃条件"
           ],
-          "adaptation": "题目改成why时解释因果；改成recommend/evaluate时增加场景依据、代价与验证。"
+          "adaptation": "若给已匹配输出规则，先说明本地执行；若给miss，说明需知道设置和版本。"
         },
         "reasoning": [
           "flow entry可拆成“匹配谁—统计多少—做什么”：header fields、counters、actions。已装转发规则可由switch本地执行。",
@@ -28910,9 +29009,9 @@
           "key_sentence": "A matching rule can be applied locally.",
           "meaning": "匹配的规则可在本地执行。",
           "language": "can be applied是被动表达；locally说明执行位置，不承诺全部情况无控制器。",
-          "frame": "X supports ____ because ____. However, it does not guarantee ____.",
-          "frame_meaning": "X支持……，因为……；但不保证……。",
-          "frame_note": "because后解释机制；however后保留边界，不能两句空泛。",
+          "frame": "First, ____. This provides ____ for the next stage. Finally, verify ____.",
+          "frame_meaning": "先……，这为下阶段提供……；最后验证……。",
+          "frame_note": "This必须指向前一阶段产出；不要只用first/next堆清单。",
           "build_steps": [
             "先用中文或关键词确认概念与条件；概念不清先回到推理，不急着换高级词。",
             "用短句写清主语、动作和对象；专业术语保留英文。",
@@ -28929,9 +29028,12 @@
           "path": "CSIT985 → Lecture Slides → Week 12 - Lecture Slides",
           "pages": "20（印刷页21）",
           "keywords": [
-            "OpenFlow Switch"
+            "OpenFlow Switch",
+            "Header Fields",
+            "Counters",
+            "Actions"
           ],
-          "check": "按所列页码核对术语、图中关系与适用条件；来源支持知识点，不表示AI例子逐字出现在课件。",
+          "check": "Week12 PDF物理p20/印刷p21的图，按匹配与动作箭头看，不背成每包上controller。",
           "workflow": [
             "先圈题干动作与限定条件，写出要找的两个术语。",
             "打开本题来源并定位PDF物理页，Ctrl/Cmd+F搜关键词；图像内容需看图。",
@@ -28940,7 +29042,7 @@
           ]
         },
         "self_check": [
-          "controller通过southbound编程并收状态；未命中处理由table-miss设置和版本决定，可能上报也可能丢弃，不能说每包或每次miss必定上controller。",
+          "已检查并避开这些误区：controller通过southbound编程并收状态；未命中处理由table-miss设置和版本决定，可能上报也可能丢弃，不能说每包或每次miss必定上controller。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -29188,7 +29290,7 @@
           ]
         },
         "self_check": [
-          "不能声称SDN自动消除全部故障或兼容性问题。",
+          "已检查并避开这些误区：不能声称SDN自动消除全部故障或兼容性问题。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -29434,7 +29536,7 @@
           ]
         },
         "self_check": [
-          "SD-WAN不创造链路容量，也不意味着可以忽略underlay故障。",
+          "已检查并避开这些误区：SD-WAN不创造链路容量，也不意味着可以忽略underlay故障。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -29690,7 +29792,7 @@
           ]
         },
         "self_check": [
-          "veracity=可信度/真实性；不是velocity。",
+          "已检查并避开这些误区：veracity=可信度/真实性；不是velocity。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -29927,7 +30029,7 @@
           ]
         },
         "self_check": [
-          "自动化不等于AI；最后的测试/分批/回退是AI补充实施建议。",
+          "已检查并避开这些误区：自动化不等于AI；最后的测试/分批/回退是AI补充实施建议。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -30183,7 +30285,7 @@
           ]
         },
         "self_check": [
-          "VNF是功能软件，NFVI是承载资源，MANO不是转发业务本身。",
+          "已检查并避开这些误区：VNF是功能软件，NFVI是承载资源，MANO不是转发业务本身。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -30438,7 +30540,7 @@
           ]
         },
         "self_check": [
-          "不要把NFV简单定义成SDN另一个名字。",
+          "已检查并避开这些误区：不要把NFV简单定义成SDN另一个名字。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -30694,7 +30796,7 @@
           ]
         },
         "self_check": [
-          "ML不全是监督学习；DL不等于整个AI。",
+          "已检查并避开这些误区：ML不全是监督学习；DL不等于整个AI。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -30931,7 +31033,7 @@
           ]
         },
         "self_check": [
-          "训练集上高准确率不能直接证明真实环境可用；罕见攻击可能被掩盖。",
+          "已检查并避开这些误区：训练集上高准确率不能直接证明真实环境可用；罕见攻击可能被掩盖。",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -31575,7 +31677,7 @@
           ]
         },
         "self_check": [
-          "是否说明假设与限制？",
+          "已检查并避开这些误区：缺少假设与限制说明",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -32667,7 +32769,7 @@
           ]
         },
         "self_check": [
-          "是否说明假设与限制？",
+          "已检查并避开这些误区：缺少假设与限制说明",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -33770,7 +33872,7 @@
           ]
         },
         "self_check": [
-          "是否说明假设与限制？",
+          "已检查并避开这些误区：缺少假设与限制说明",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -34797,7 +34899,7 @@
           ]
         },
         "self_check": [
-          "是否说明假设与限制？",
+          "已检查并避开这些误区：缺少假设与限制说明",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -35770,7 +35872,7 @@
           ]
         },
         "self_check": [
-          "是否说明假设与限制？",
+          "已检查并避开这些误区：缺少假设与限制说明",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -36902,7 +37004,7 @@
           ]
         },
         "self_check": [
-          "是否说明假设与限制？",
+          "已检查并避开这些误区：缺少假设与限制说明",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -37920,7 +38022,7 @@
           ]
         },
         "self_check": [
-          "是否说明假设与限制？",
+          "已检查并避开这些误区：缺少假设与限制说明",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -38936,7 +39038,7 @@
           ]
         },
         "self_check": [
-          "是否说明假设与限制？",
+          "已检查并避开这些误区：缺少假设与限制说明",
           "是否覆盖题干每个子任务，并用机制支持结论？",
           "是否分清资料事实、语言句式和按场景自行组织的推理？",
           "能否换一个数字或场景仍解释正确，而非只复述原句？"
@@ -39829,7 +39931,7 @@
       "T078"
     ]
   },
-  "guidance_version": "2026-11-02 · 131题组织方式、答题路线与Moodle查阅",
-  "answer_colors_version": "2026-11-02 · 资料知识/固定表达/自行组织",
+  "guidance_version": "2026-11-04 · 144题逐题学习版",
+  "answer_colors_version": "2026-11-04 · 144题逐题学习版",
   "lesson_version": "2026-11-04 · 144题逐题学习版"
 }

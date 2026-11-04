@@ -38,7 +38,7 @@ An individual flow represents a single application session. A composite flow com
 
 **变式参考**：No. It is a sink for requests and a source for responses. Label each direction and its requirements separately.
 
-**自查**：不要把 flow 当成任意一条物理线；同一设备可同时 source/sink。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：不要把 flow 当成任意一条物理线；同一设备可同时 source/sink。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -110,7 +110,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：Keep X in its original campus location. Add the specified Y outside and redirect Type 3 to Y. Update the assumption and flow requirements; do not relocate X or invent link rates.
 
-**自查**：External Access Server不因external一词而移到校园框外；Type3目的、Type4归档源有歧义，图必须标假设，不能声称唯一官方答案。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：External Access Server不因external一词而移到校园框外；Type3目的、Type4归档源有歧义，图必须标假设，不能声称唯一官方答案。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -155,7 +155,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：No. The directions can be asymmetric and endpoint turnaround may contribute. A 50 ms split needs an explicit additional assumption.
 
-**自查**：Workshops周号不同于lecture；RTT不能直接当每一方向100ms。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：Workshops周号不同于lecture；RTT不能直接当每一方向100ms。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -198,7 +198,7 @@ The models help predict communication relationships and service locations. They 
 
 **变式参考**：Yes. The lower server acts as a client in that exchange, forming a hierarchical client-server relationship. Roles depend on the specific flow.
 
-**自查**：模型可以并存；不是把四种分别当四种互斥物理拓扑。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：模型可以并存；不是把四种分别当四种互斥物理拓扑。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -241,7 +241,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：No. Priority should reflect business consequences and service needs, not only traffic volume. A smaller critical transaction may require stronger protection.
 
-**自查**：Top N 不是忽略所有其他应用；带宽大不自动最重要。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：Top N 不是忽略所有其他应用；带宽大不自动最重要。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -284,7 +284,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：Use the stricter 10 ms target in the course aggregation method, while summing relevant capacities. This defines a target; actual delivery still needs verification.
 
-**自查**：不相加delay上限或availability百分比；guaranteed不被平均。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：不相加delay上限或availability百分比；guaranteed不被平均。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -331,7 +331,7 @@ Guaranteed保留独立tuple：(5Mb/s,10ms,99.999%)。
 
 **变式参考**：The target aggregate is 10 Mb/s, 15 ms and 99.95% availability under the course rule. This is a requirement, not proof that the system achieves it.
 
-**自查**：目标聚合不是串联系统实际可用性的概率计算。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：目标聚合不是串联系统实际可用性的概率计算。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 

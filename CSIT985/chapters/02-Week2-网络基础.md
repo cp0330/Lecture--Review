@@ -38,7 +38,7 @@ The media carry signals and may include copper cables, optical fibre or wireless
 
 **变式参考**：No. The server may remain the bottleneck. Check processing, storage and interface limits as well as the network path.
 
-**自查**：不要把 switch 与 router 的典型作用写反。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：不要把 switch 与 router 的典型作用写反。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -81,7 +81,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：Yes. WLAN describes wireless local access. VPN describes a logical private connection. They describe different properties and can coexist.
 
-**自查**：CAN 在这里是 Campus Area Network；不要混用地理范围与用途。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：CAN 在这里是 Campus Area Network；不要混用地理范围与用途。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -116,15 +116,15 @@ A designer should compare the required capacity, delay, reach, environment, mobi
 
 介质应适合距离与环境。 medium单数、media复数；fit后直接接条件。
 
-**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
+**可复用句式**：X provides ____, whereas Y provides ____. The choice depends on ____.
 
-X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
+X提供……，而Y提供……；选择取决于……。 whereas用同一维度做对比；空白要填机制或条件，不填无依据的best。
 
 **变式练习**：A mobile class needs local access. Should a fibre backbone alone satisfy mobility?
 
 **变式参考**：No. Fibre may serve the backbone, while a suitable wireless access system serves moving endpoints. Check coverage, interference, shared load and support.
 
-**自查**：课件列出的红外、射频、微波、激光有不同传播/对准条件；不要把某个示意链路写成整个技术永远单向。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：课件列出的红外、射频、微波、激光有不同传播/对准条件；不要把某个示意链路写成整个技术永远单向。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -167,7 +167,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：It is cloud-based in hosting and client-server in application roles. The categories can overlap; the design still depends on connectivity and service resilience.
 
-**自查**：不要声称 distributed 绝对没有中心；模式可以组合。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：不要声称 distributed 绝对没有中心；模式可以组合。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -210,7 +210,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：No. Usually only that host loses its connection. A central-device failure can affect many hosts, so the failure location matters.
 
-**自查**：不能说任何 ring 断一条链路都必然全网停机。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：不能说任何 ring 断一条链路都必然全网停机。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -253,7 +253,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：Physical connection alone is insufficient. They need common message formats, meanings and exchange rules to process messages correctly.
 
-**自查**：protocol 不只是设备之间的一根线或一种语言名称。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：protocol 不只是设备之间的一根线或一种语言名称。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -296,7 +296,7 @@ During encapsulation, application data passes down the stack. Transport and Inte
 
 **变式参考**：Layers separate communication functions, not physical boxes. A host can implement application, transport, Internet and network-access functions together.
 
-**自查**：区分 packet、frame 和 signal；TCP/IP 本课用四层。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：区分 packet、frame 和 signal；TCP/IP 本课用四层。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -339,7 +339,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 **变式参考**：Transport information supports demultiplexing to the appropriate socket. The IP address alone does not identify every application endpoint.
 
-**自查**：DNS 不等于 DHCP；应用与应用层协议不同。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：DNS 不等于 DHCP；应用与应用层协议不同。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -374,15 +374,15 @@ At the destination, the stack processes the received information and delivers ap
 
 socket让进程使用网络服务。 give A access to B是完整表达“让A有使用B的入口”。
 
-**可复用句式**：X supports ____ because ____. However, it does not guarantee ____.
+**可复用句式**：First, ____. This provides ____ for the next stage. Finally, verify ____.
 
-X支持……，因为……；但不保证……。 because后解释机制；however后保留边界，不能两句空泛。
+先……，这为下阶段提供……；最后验证……。 This必须指向前一阶段产出；不要只用first/next堆清单。
 
 **变式练习**：Must one application message equal one Ethernet frame?
 
 **变式参考**：No. Transport segmentation and link constraints can produce several packets or frames. PDU names identify layer roles, not a fixed one-to-one message mapping.
 
-**自查**：封装增加本层控制信息，解封装解释并移除。一个message可分成多个segment/packet，所以不要强行一对一；frame也可有trailer。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：封装增加本层控制信息，解封装解释并移除。一个message可分成多个segment/packet，所以不要强行一对一；frame也可有trailer。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -425,7 +425,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：TCP is a reasonable choice because it provides a reliable, ordered byte stream. Check the actual application and path; reliability does not imply a fixed delay bound.
 
-**自查**：不要写 UDP 保证实时、TCP保证固定延迟。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：不要写 UDP 保证实时、TCP保证固定延迟。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -468,7 +468,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：Normally no. The local frame is sent to the gateway, while the IP packet keeps the remote server as its destination, unless a translation mechanism changes it.
 
-**自查**：不要把 forwarding 的逐包动作与 routing 的路径计算互换。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：不要把 forwarding 的逐包动作与 routing 的路径计算互换。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -511,7 +511,7 @@ The routing processor performs control-plane work. In a traditional router, it r
 
 **变式参考**：Packets may arrive faster than the output link can transmit. Correct path selection does not remove capacity limits or queuing delay.
 
-**自查**：switching fabric是路由器内部连接结构，不是独立外置交换机的必然名称。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：switching fabric是路由器内部连接结构，不是独立外置交换机的必然名称。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -554,7 +554,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：Not necessarily. It is dynamic in adapting to topology changes, but can remain load-insensitive if congestion does not affect its link costs.
 
-**自查**：centralized knowledge不表示一定只有一台中心机器；dynamic不等于load-sensitive。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：centralized knowledge不表示一定只有一台中心机器；dynamic不等于load-sensitive。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
@@ -597,7 +597,7 @@ X提供……，而Y提供……；选择取决于……。 whereas用同一维�
 
 **变式参考**：No. Other links and endpoints may still fail. End-to-end delivery depends on the whole path and the relevant transport or application mechanisms.
 
-**自查**：不是所有link protocol都提供可靠交付；某一跳可靠不代表端到端保证。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
+**自查**：已检查并避开这些误区：不是所有link protocol都提供可靠交付；某一跳可靠不代表端到端保证。；是否覆盖题干每个子任务，并用机制支持结论？；是否分清资料事实、语言句式和按场景自行组织的推理？；能否换一个数字或场景仍解释正确，而非只复述原句？
 
 </details>
 
