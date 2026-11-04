@@ -8,5 +8,30 @@
   "local_markdown_links_checked": 648,
   "unchanged_original_nonessay_answers": 123,
   "intentional_essay_change": "T124 privacy scope",
-  "numeric_policy": "independent ipaddress and arithmetic, not generated-answer snapshots"
+  "numeric_policy": "independent ipaddress and arithmetic, not generated-answer snapshots",
+  "live_ui": {
+    "date": "2026-11-04 Australia/Sydney",
+    "site": "https://cp0330.github.io/Lecture--Review/CSIT985/review-bank.html",
+    "checks": [
+      "7 teacher short questions, 13 additions, 8 essays and 25-question legacy query filter",
+      "English task breakdown and sentence coaching",
+      "Draft save, word count and reload restoration; test draft restored to blank",
+      "Self-test reference reveal and three-colour reference",
+      "Mastery checkbox and reload restoration; test mark restored to unmarked",
+      "Valid 144-question backup export and reimport",
+      "No-match search state",
+      "All five Flow SVGs loaded",
+      "VLSM worked table rendered",
+      "Essay section explanation and collapsed multiple source header",
+      "Reading List dialog and nine-book table",
+      "Mobile drawer hidden when closed, open/select/close flow",
+      "No whole-page horizontal overflow at requested 390 and 768 viewport widths and normal desktop",
+      "No browser console warnings or errors observed"
+    ],
+    "limits": [
+      "No cross-browser claim",
+      "Old key compatibility checked in source and current reload behaviour; no real prior user progress invented",
+      "No invalid-backup import or browser-storage-failure simulation performed"
+    ]
+  }
 }
