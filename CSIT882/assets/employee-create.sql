@@ -1,0 +1,7 @@
+
+CREATE TABLE EMPLOYEE (
+    enum INT NOT NULL PRIMARY KEY,
+    name VARCHAR(30) NOT NULL,
+    manager INT NULL,
+    FOREIGN KEY (manager) REFERENCES EMPLOYEE(enum)
+);

@@ -35,3 +35,17 @@
 GitHub中可阅读Markdown分册。需要离线使用时，可下载[HTML阅读版](CSIT985/review-bank.html)，或通过仓库的 **Code → Download ZIP** 下载整套资料。
 
 题目及参考答案用于考前学习。老师样题有标记，其余为按现有课程范围整理的练习；参考答案由AI辅助整理，不是官方评分细则。原课件通过Moodle链接定位，访问可能需要学校账号。仓库不包含原始课件PDF、个人学习背景或反馈记录。
+
+## CSIT882 · Database Systems
+
+**三套模拟、Assignment 1–4与课件补充：48个去重题目组，158个小题。**
+
+- [打开 CSIT882 题库](https://cp0330.github.io/Lecture--Review/CSIT882/)
+- [英文题目](CSIT882/questions.md) · [详细解析与参考答案](CSIT882/answers.md)
+- [考点对照](CSIT882/coverage.md) · [核查与勘误](CSIT882/audit.md) · [验证与限制](CSIT882/validation.md)
+
+题目用英文，解析用中文，专业术语与SQL保留英文。一次显示一道题，按小题展开步骤；支持搜索、筛选、放大图、打印和作答记录导入/导出。收到的Mock 3与Mock 1重复，保留来源并跳转。Normalization重点对照Assignment 4。草稿保存在浏览器，不上传。
+
+
+公开版中的样例身份、联系方式和密码字面值已统一匿名化，见[说明](CSIT882/privacy.md)。
+

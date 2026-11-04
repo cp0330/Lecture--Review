@@ -1,0 +1,1286 @@
+{
+  "date": "2026-11-04",
+  "status": "passed",
+  "checks": [
+    "A4-T4(1) all keys and highest NF exhaustively checked",
+    "A4-T4(2) all keys and highest NF exhaustively checked",
+    "A4-T4(3) all keys and highest NF exhaustively checked",
+    "A4-T4(4) all keys and highest NF exhaustively checked",
+    "S05 all keys and highest NF exhaustively checked",
+    "S07(1) all keys and highest NF exhaustively checked",
+    "S07(2) all keys and highest NF exhaustively checked",
+    "S07(3) all keys and highest NF exhaustively checked",
+    "S07(4) all keys and highest NF exhaustively checked",
+    "S08/S10 all keys and highest NF exhaustively checked",
+    "S09 all keys and highest NF exhaustively checked",
+    "A3-T2(1) result and row shape",
+    "A3-T2(2) result and row shape",
+    "A3-T2(3) result and row shape",
+    "A3-T2 technology average",
+    "A3-T3(1) result and row shape",
+    "A3-T3(2) result and row shape",
+    "A3-T3(5) result and row shape",
+    "A3-T3 enrolment zero included",
+    "A3-T3 trainer zero included",
+    "A4-T1(1) result and row shape",
+    "A4-T1(2) result and row shape",
+    "A4-T1(3) result and row shape",
+    "A4-T1(5) result and row shape",
+    "A4-T1 correlated maxima retains equal EXCEL levels",
+    "A4-T1 newly introduced tie retained",
+    "A4-T2 CTE includes cancelled enrolment",
+    "A4-T2 view dependency query result",
+    "S11(1) result and row shape",
+    "S11(2) result and row shape",
+    "S11(3) result and row shape",
+    "S12(1) result and row shape",
+    "S12 unordered pairs no reverse duplicates",
+    "S13(1) result and row shape",
+    "S13 independent counts prevent join multiplication",
+    "S13 every condition handles empty TECHNOLOGY set",
+    "A3-T1 DML keeps FK valid and removes only participant10",
+    "A3-T1 added parent and 2 requirements",
+    "A3-T1 participant3 levels increased",
+    "A4-T2 capacity increment targets assignment counts",
+    "A4-T2 child-first deletion keeps FK valid",
+    "L01(1) value and shape",
+    "L01(2) value and shape",
+    "L01(3) value and shape",
+    "L01(4) value and shape",
+    "L01(5) value and shape",
+    "L01 calculated budget including NULL convention",
+    "L01 date difference is dynamic in database timezone",
+    "L02(1) correct result",
+    "L02(2) correct result",
+    "L03(1) correct result",
+    "LEFT JOIN preserves department without courses",
+    "RIGHT JOIN preserves course without department",
+    "FULL JOIN emulation preserves both unmatched sides",
+    "Source NOT IN example is broken by NULL",
+    "SELECT budget does not mutate table",
+    "L09(1) role direction",
+    "L09(2) role direction",
+    "Capacity original CHECK versus question conflict",
+    "Capacity CHECK excludes boundary 100",
+    "On-leave driver names",
+    "Truck never used is preserved",
+    "Trip count counts trips rather than legs",
+    "Skills can exist without a driver",
+    "Trip36 retains leg1 only",
+    "Trip26 advances one day",
+    "Trip25 returns from Perth to Sydney",
+    "Trip20 remains continuous",
+    "MESSAGE excludes trucks with 100 or fewer trips",
+    "MESSAGE excludes exact boundary100",
+    "MESSAGE contains count above100",
+    "MESSAGE display sentence punctuation",
+    "Bank count includes zero branch bank",
+    "Accounts matched by bank and number and half-open date",
+    "EXISTS bank with two unknown branches once",
+    "Transaction totals initialized including zero",
+    "Only 2019 transaction deleted",
+    "ON UPDATE CASCADE propagates key",
+    "ON DELETE CASCADE deletes child",
+    "L07(1) exhaustive minimal keys and F+ normal forms",
+    "L07(2) exhaustive minimal keys and F+ normal forms",
+    "L07(3) exhaustive minimal keys and F+ normal forms",
+    "p9 source decomposition counterexample has spurious tuples",
+    "p11 source decomposition counterexample has spurious tuples",
+    "p15 source decomposition counterexample has spurious tuples",
+    "p9 corrected retains original pairs",
+    "p11 corrected retains original pairs",
+    "p15 corrected retains original pairs",
+    "54 source blocks, 48 unique, 158 subquestions",
+    "M1-Q1 detailed analysis for every part",
+    "M1-Q1 question is English",
+    "M1-Q2 detailed analysis for every part",
+    "M1-Q2 question is English",
+    "M1-Q2 original diagram exists",
+    "M1-Q3 detailed analysis for every part",
+    "M1-Q3 question is English",
+    "M1-Q4 detailed analysis for every part",
+    "M1-Q4 question is English",
+    "M1-Q5 detailed analysis for every part",
+    "M1-Q5 question is English",
+    "M1-Q6 detailed analysis for every part",
+    "M1-Q6 question is English",
+    "M2-Q1 detailed analysis for every part",
+    "M2-Q1 question is English",
+    "M2-Q2 detailed analysis for every part",
+    "M2-Q2 question is English",
+    "M2-Q2 original diagram exists",
+    "M2-Q3 detailed analysis for every part",
+    "M2-Q3 question is English",
+    "M2-Q4 detailed analysis for every part",
+    "M2-Q4 question is English",
+    "M2-Q5 detailed analysis for every part",
+    "M2-Q5 question is English",
+    "M2-Q6 detailed analysis for every part",
+    "M2-Q6 question is English",
+    "M3-Q1 detailed analysis for every part",
+    "M3-Q1 question is English",
+    "M3-Q2 detailed analysis for every part",
+    "M3-Q2 question is English",
+    "M3-Q3 detailed analysis for every part",
+    "M3-Q3 question is English",
+    "M3-Q4 detailed analysis for every part",
+    "M3-Q4 question is English",
+    "M3-Q5 detailed analysis for every part",
+    "M3-Q5 question is English",
+    "M3-Q6 detailed analysis for every part",
+    "M3-Q6 question is English",
+    "A1-T1 detailed analysis for every part",
+    "A1-T1 question is English",
+    "A1-T2 detailed analysis for every part",
+    "A1-T2 question is English",
+    "A1-T2 original diagram exists",
+    "A2-T1 detailed analysis for every part",
+    "A2-T1 question is English",
+    "A2-T1 original diagram exists",
+    "A2-T2 detailed analysis for every part",
+    "A2-T2 question is English",
+    "A3-T1 detailed analysis for every part",
+    "A3-T1 question is English",
+    "A3-T2 detailed analysis for every part",
+    "A3-T2 question is English",
+    "A3-T3 detailed analysis for every part",
+    "A3-T3 question is English",
+    "A4-T1 detailed analysis for every part",
+    "A4-T1 question is English",
+    "A4-T2 detailed analysis for every part",
+    "A4-T2 question is English",
+    "A4-T3 detailed analysis for every part",
+    "A4-T3 question is English",
+    "A4-T4 detailed analysis for every part",
+    "A4-T4 question is English",
+    "S01 detailed analysis for every part",
+    "S01 question is English",
+    "S02 detailed analysis for every part",
+    "S02 question is English",
+    "S03 detailed analysis for every part",
+    "S03 question is English",
+    "S04 detailed analysis for every part",
+    "S04 question is English",
+    "S05 detailed analysis for every part",
+    "S05 question is English",
+    "S06 detailed analysis for every part",
+    "S06 question is English",
+    "S07 detailed analysis for every part",
+    "S07 question is English",
+    "S08 detailed analysis for every part",
+    "S08 question is English",
+    "S09 detailed analysis for every part",
+    "S09 question is English",
+    "S10 detailed analysis for every part",
+    "S10 question is English",
+    "S11 detailed analysis for every part",
+    "S11 question is English",
+    "S12 detailed analysis for every part",
+    "S12 question is English",
+    "S13 detailed analysis for every part",
+    "S13 question is English",
+    "S14 detailed analysis for every part",
+    "S14 question is English",
+    "S15 detailed analysis for every part",
+    "S15 question is English",
+    "S16 detailed analysis for every part",
+    "S16 question is English",
+    "L01 detailed analysis for every part",
+    "L01 question is English",
+    "L02 detailed analysis for every part",
+    "L02 question is English",
+    "L03 detailed analysis for every part",
+    "L03 question is English",
+    "L04 detailed analysis for every part",
+    "L04 question is English",
+    "L05 detailed analysis for every part",
+    "L05 question is English",
+    "L06 detailed analysis for every part",
+    "L06 question is English",
+    "L07 detailed analysis for every part",
+    "L07 question is English",
+    "L08 detailed analysis for every part",
+    "L08 question is English",
+    "L09 detailed analysis for every part",
+    "L09 question is English",
+    "Six primary areas covered",
+    "Auditing and concurrency visibly extended",
+    "Mock3 duplicate source links to canonical question 1",
+    "Mock3 duplicate source links to canonical question 2",
+    "Mock3 duplicate source links to canonical question 3",
+    "Mock3 duplicate source links to canonical question 4",
+    "Mock3 duplicate source links to canonical question 5",
+    "Mock3 duplicate source links to canonical question 6",
+    "M1-Q1 anonymized edition fingerprint",
+    "M1-Q2 anonymized edition fingerprint",
+    "M1-Q3 anonymized edition fingerprint",
+    "M1-Q4 anonymized edition fingerprint",
+    "M1-Q5 anonymized edition fingerprint",
+    "M1-Q6 anonymized edition fingerprint",
+    "M2-Q1 anonymized edition fingerprint",
+    "M2-Q2 anonymized edition fingerprint",
+    "M2-Q3 anonymized edition fingerprint",
+    "M2-Q4 anonymized edition fingerprint",
+    "M2-Q5 anonymized edition fingerprint",
+    "M2-Q6 anonymized edition fingerprint",
+    "A1-T1 anonymized edition fingerprint",
+    "A1-T2 anonymized edition fingerprint",
+    "A2-T1 anonymized edition fingerprint",
+    "A2-T2 anonymized edition fingerprint",
+    "A3-T1 anonymized edition fingerprint",
+    "A3-T2 anonymized edition fingerprint",
+    "A3-T3 anonymized edition fingerprint",
+    "A4-T1 anonymized edition fingerprint",
+    "A4-T2 anonymized edition fingerprint",
+    "A4-T3 anonymized edition fingerprint",
+    "A4-T4 anonymized edition fingerprint",
+    "assets/mock-1-q2.jpg unchanged original image",
+    "assets/mock-2-q2.jpg unchanged original image",
+    "assets/mock-3-q2.jpg unchanged original image",
+    "assets/assignment-1-task-2.png unchanged original image",
+    "assets/assignment-2-task-1.png unchanged original image",
+    "Portable file study.css",
+    "Portable file index.html",
+    "Portable file answers.md",
+    "Portable file bank.json",
+    "Portable file sources.md",
+    "Portable file validation.md",
+    "Portable file privacy.md",
+    "Portable file README.md",
+    "Portable file audit.md",
+    "Portable file package.json",
+    "Portable file coverage.md",
+    "Portable file questions.md",
+    "Portable file app.js",
+    "Portable file tools/shell.html",
+    "Portable file tools/build.mjs",
+    "Portable file tools/diagrams.mjs",
+    "Portable file tests/source-manifest.json",
+    "Portable file tests/ui-results.json",
+    "Portable file tests/results.json",
+    "Portable file tests/validate.py",
+    "Portable file tests/app.test.mjs",
+    "Portable file assets/employee-load.sql",
+    "Portable file assets/lecture-create.sql",
+    "Portable file assets/employee-create.sql",
+    "Portable file assets/bank-create.sql",
+    "Portable file assets/transport-create.sql",
+    "Portable file assets/lecture-load.sql",
+    "Portable file assets/workshop-create.sql",
+    "Portable file assets/workshop-load.sql",
+    "Public edition labelled anonymized",
+    "M1-Q1 no literal email contacts",
+    "M1-Q2 no literal email contacts",
+    "M1-Q3 no literal email contacts",
+    "M1-Q4 no literal email contacts",
+    "M1-Q5 no literal email contacts",
+    "M1-Q6 no literal email contacts",
+    "M2-Q1 no literal email contacts",
+    "M2-Q2 no literal email contacts",
+    "M2-Q3 no literal email contacts",
+    "M2-Q4 no literal email contacts",
+    "M2-Q5 password placeholder",
+    "M2-Q5 no literal email contacts",
+    "M2-Q6 no literal email contacts",
+    "M3-Q1 no literal email contacts",
+    "M3-Q2 no literal email contacts",
+    "M3-Q3 no literal email contacts",
+    "M3-Q4 no literal email contacts",
+    "M3-Q5 no literal email contacts",
+    "M3-Q6 no literal email contacts",
+    "A1-T1 no literal email contacts",
+    "A1-T2 no literal email contacts",
+    "A2-T1 no literal email contacts",
+    "A2-T2 no literal email contacts",
+    "A3-T1 no literal email contacts",
+    "A3-T2 no literal email contacts",
+    "A3-T3 no literal email contacts",
+    "A4-T1 no literal email contacts",
+    "A4-T2 no literal email contacts",
+    "A4-T3 password placeholder",
+    "A4-T3 password placeholder",
+    "A4-T3 no literal email contacts",
+    "A4-T4 no literal email contacts",
+    "S01 no literal email contacts",
+    "S02 no literal email contacts",
+    "S03 no literal email contacts",
+    "S04 no literal email contacts",
+    "S05 no literal email contacts",
+    "S06 no literal email contacts",
+    "S07 no literal email contacts",
+    "S08 no literal email contacts",
+    "S09 no literal email contacts",
+    "S10 no literal email contacts",
+    "S11 no literal email contacts",
+    "S12 no literal email contacts",
+    "S13 no literal email contacts",
+    "S14 no literal email contacts",
+    "S15 password placeholder",
+    "S15 no literal email contacts",
+    "S16 no literal email contacts",
+    "L01 no literal email contacts",
+    "L02 no literal email contacts",
+    "L03 no literal email contacts",
+    "L04 no literal email contacts",
+    "L05 no literal email contacts",
+    "L06 password placeholder",
+    "L06 no literal email contacts",
+    "L07 no literal email contacts",
+    "L08 no literal email contacts",
+    "L09 no literal email contacts",
+    "Transport no email or phone literal",
+    "Bank no email or phone literal",
+    "Professional training workshops no email or phone literal",
+    "Lecture example: DEPARTMENT and COURSE no email or phone literal",
+    "Lecture self-join: EMPLOYEE no email or phone literal",
+    "No remote scripts or styles",
+    "Eight full attribute diagrams pre-rendered",
+    "Answers hidden until tab selection"
+  ],
+  "check_count": 334,
+  "normalization_cases": 14,
+  "query_results": {
+    "A3-T2(1)": [
+      [
+        1,
+        "PYTHON FOR DATA ANALYSIS",
+        "TECHNOLOGY",
+        180
+      ],
+      [
+        2,
+        "CYBERSECURITY ESSENTIALS",
+        "TECHNOLOGY",
+        220
+      ],
+      [
+        3,
+        "PROJECT MANAGEMENT BASICS",
+        "BUSINESS",
+        160
+      ],
+      [
+        5,
+        "UX DESIGN FUNDAMENTALS",
+        "DESIGN",
+        190
+      ]
+    ],
+    "A3-T2(2)": [
+      [
+        1,
+        "PARTICIPANT_01 SAMPLE"
+      ],
+      [
+        4,
+        "PARTICIPANT_04 SAMPLE"
+      ],
+      [
+        7,
+        "PARTICIPANT_07 SAMPLE"
+      ]
+    ],
+    "A3-T2(3)": [
+      [
+        7
+      ]
+    ],
+    "A3-T2(4)": [
+      [
+        3,
+        "PROJECT MANAGEMENT BASICS",
+        160,
+        "BUSINESS"
+      ],
+      [
+        4,
+        "DIGITAL MARKETING STRATEGY",
+        140,
+        "BUSINESS"
+      ],
+      [
+        8,
+        "EXCEL FOR BUSINESS",
+        120,
+        "BUSINESS"
+      ],
+      [
+        6,
+        "PUBLIC SPEAKING",
+        90,
+        "COMMUNICATION"
+      ],
+      [
+        5,
+        "UX DESIGN FUNDAMENTALS",
+        190,
+        "DESIGN"
+      ],
+      [
+        7,
+        "CLOUD COMPUTING FOUNDATIONS",
+        250,
+        "TECHNOLOGY"
+      ],
+      [
+        2,
+        "CYBERSECURITY ESSENTIALS",
+        220,
+        "TECHNOLOGY"
+      ],
+      [
+        1,
+        "PYTHON FOR DATA ANALYSIS",
+        180,
+        "TECHNOLOGY"
+      ]
+    ],
+    "A3-T2(5)": [
+      [
+        216.66666666666666
+      ]
+    ],
+    "A3-T3(1)": [
+      [
+        "PARTICIPANT_02 SAMPLE",
+        "PHONE_TOKEN_03"
+      ],
+      [
+        "PARTICIPANT_07 SAMPLE",
+        "PHONE_TOKEN_08"
+      ]
+    ],
+    "A3-T3(2)": [
+      [
+        6,
+        "PUBLIC SPEAKING",
+        "COMMUNICATION"
+      ]
+    ],
+    "A3-T3(3)": [
+      [
+        11,
+        "PARTICIPANT_11 SAMPLE",
+        0
+      ],
+      [
+        5,
+        "PARTICIPANT_05 SAMPLE",
+        1
+      ],
+      [
+        8,
+        "PARTICIPANT_08 SAMPLE",
+        1
+      ],
+      [
+        12,
+        "PARTICIPANT_12 SAMPLE",
+        1
+      ],
+      [
+        2,
+        "PARTICIPANT_02 SAMPLE",
+        2
+      ],
+      [
+        3,
+        "PARTICIPANT_03 SAMPLE",
+        2
+      ],
+      [
+        6,
+        "PARTICIPANT_06 SAMPLE",
+        2
+      ],
+      [
+        9,
+        "PARTICIPANT_09 SAMPLE",
+        2
+      ],
+      [
+        10,
+        "PARTICIPANT_10 SAMPLE",
+        2
+      ],
+      [
+        1,
+        "PARTICIPANT_01 SAMPLE",
+        3
+      ],
+      [
+        4,
+        "PARTICIPANT_04 SAMPLE",
+        3
+      ],
+      [
+        7,
+        "PARTICIPANT_07 SAMPLE",
+        4
+      ]
+    ],
+    "A3-T3(4)": [
+      [
+        8,
+        "EXCEL FOR BUSINESS",
+        0
+      ],
+      [
+        1,
+        "PYTHON FOR DATA ANALYSIS",
+        1
+      ],
+      [
+        2,
+        "CYBERSECURITY ESSENTIALS",
+        1
+      ],
+      [
+        4,
+        "DIGITAL MARKETING STRATEGY",
+        1
+      ],
+      [
+        5,
+        "UX DESIGN FUNDAMENTALS",
+        1
+      ],
+      [
+        6,
+        "PUBLIC SPEAKING",
+        1
+      ],
+      [
+        3,
+        "PROJECT MANAGEMENT BASICS",
+        2
+      ],
+      [
+        7,
+        "CLOUD COMPUTING FOUNDATIONS",
+        2
+      ]
+    ],
+    "A3-T3(5)": [
+      [
+        8,
+        "TRAINER_08 SAMPLE"
+      ]
+    ],
+    "A4-T1(1)": [
+      [
+        1,
+        "PYTHON FOR DATA ANALYSIS",
+        180
+      ],
+      [
+        2,
+        "CYBERSECURITY ESSENTIALS",
+        220
+      ],
+      [
+        5,
+        "UX DESIGN FUNDAMENTALS",
+        190
+      ],
+      [
+        7,
+        "CLOUD COMPUTING FOUNDATIONS",
+        250
+      ]
+    ],
+    "A4-T1(2)": [
+      [
+        1,
+        "PARTICIPANT_01 SAMPLE"
+      ],
+      [
+        4,
+        "PARTICIPANT_04 SAMPLE"
+      ],
+      [
+        9,
+        "PARTICIPANT_09 SAMPLE"
+      ]
+    ],
+    "A4-T1(3)": [
+      [
+        1,
+        "TRAINER_01 SAMPLE"
+      ],
+      [
+        7,
+        "TRAINER_07 SAMPLE"
+      ]
+    ],
+    "A4-T1(4)": [
+      [
+        7,
+        "PARTICIPANT_07 SAMPLE",
+        "CLOUD COMPUTING",
+        3
+      ],
+      [
+        3,
+        "PARTICIPANT_03 SAMPLE",
+        "COMMUNICATION",
+        3
+      ],
+      [
+        5,
+        "PARTICIPANT_05 SAMPLE",
+        "COMMUNICATION",
+        3
+      ],
+      [
+        4,
+        "PARTICIPANT_04 SAMPLE",
+        "CYBERSECURITY",
+        5
+      ],
+      [
+        1,
+        "PARTICIPANT_01 SAMPLE",
+        "DATA ANALYSIS",
+        4
+      ],
+      [
+        7,
+        "PARTICIPANT_07 SAMPLE",
+        "DATA ANALYSIS",
+        4
+      ],
+      [
+        5,
+        "PARTICIPANT_05 SAMPLE",
+        "DIGITAL MARKETING",
+        4
+      ],
+      [
+        10,
+        "PARTICIPANT_10 SAMPLE",
+        "EXCEL",
+        5
+      ],
+      [
+        2,
+        "PARTICIPANT_02 SAMPLE",
+        "PRESENTATION SKILLS",
+        2
+      ],
+      [
+        6,
+        "PARTICIPANT_06 SAMPLE",
+        "PROJECT MANAGEMENT",
+        5
+      ],
+      [
+        1,
+        "PARTICIPANT_01 SAMPLE",
+        "PYTHON PROGRAMMING",
+        5
+      ],
+      [
+        7,
+        "PARTICIPANT_07 SAMPLE",
+        "UX DESIGN",
+        5
+      ]
+    ],
+    "A4-T1(5)": [
+      [
+        1,
+        "PARTICIPANT_01 SAMPLE"
+      ],
+      [
+        4,
+        "PARTICIPANT_04 SAMPLE"
+      ],
+      [
+        7,
+        "PARTICIPANT_07 SAMPLE"
+      ],
+      [
+        9,
+        "PARTICIPANT_09 SAMPLE"
+      ]
+    ],
+    "A4-T2(1)": [
+      [
+        1,
+        "PARTICIPANT_01 SAMPLE",
+        "EMAIL_TOKEN_07"
+      ],
+      [
+        2,
+        "PARTICIPANT_02 SAMPLE",
+        "EMAIL_TOKEN_10"
+      ],
+      [
+        4,
+        "PARTICIPANT_04 SAMPLE",
+        null
+      ],
+      [
+        7,
+        "PARTICIPANT_07 SAMPLE",
+        "EMAIL_TOKEN_11"
+      ],
+      [
+        8,
+        "PARTICIPANT_08 SAMPLE",
+        null
+      ],
+      [
+        12,
+        "PARTICIPANT_12 SAMPLE",
+        null
+      ]
+    ],
+    "S11(1)": [
+      [
+        4,
+        "PARTICIPANT_04 SAMPLE"
+      ],
+      [
+        8,
+        "PARTICIPANT_08 SAMPLE"
+      ],
+      [
+        12,
+        "PARTICIPANT_12 SAMPLE"
+      ]
+    ],
+    "S11(2)": [],
+    "S11(3)": [
+      [
+        7,
+        "2026-06-06"
+      ],
+      [
+        8,
+        "2026-06-20"
+      ]
+    ],
+    "S11(4)": [
+      [
+        1,
+        "EMAIL_TOKEN_07"
+      ],
+      [
+        2,
+        "EMAIL_TOKEN_10"
+      ],
+      [
+        3,
+        "EMAIL_TOKEN_14"
+      ],
+      [
+        4,
+        "NO EMAIL"
+      ],
+      [
+        5,
+        "EMAIL_TOKEN_03"
+      ],
+      [
+        6,
+        "EMAIL_TOKEN_08"
+      ],
+      [
+        7,
+        "EMAIL_TOKEN_11"
+      ],
+      [
+        8,
+        "NO EMAIL"
+      ],
+      [
+        9,
+        "EMAIL_TOKEN_15"
+      ],
+      [
+        10,
+        "EMAIL_TOKEN_09"
+      ],
+      [
+        11,
+        "EMAIL_TOKEN_04"
+      ],
+      [
+        12,
+        "NO EMAIL"
+      ]
+    ],
+    "S12(1)": [
+      [
+        1,
+        4,
+        "SYDNEY"
+      ],
+      [
+        1,
+        7,
+        "SYDNEY"
+      ],
+      [
+        4,
+        7,
+        "SYDNEY"
+      ]
+    ],
+    "S12(2)": [
+      [
+        "CLOUD COMPUTING"
+      ],
+      [
+        "COMMUNICATION"
+      ],
+      [
+        "CYBERSECURITY"
+      ],
+      [
+        "DATA ANALYSIS"
+      ],
+      [
+        "DIGITAL MARKETING"
+      ],
+      [
+        "EXCEL"
+      ],
+      [
+        "NETWORKING"
+      ],
+      [
+        "PRESENTATION SKILLS"
+      ],
+      [
+        "PROJECT MANAGEMENT"
+      ],
+      [
+        "PYTHON PROGRAMMING"
+      ],
+      [
+        "UX DESIGN"
+      ]
+    ],
+    "S12(3)": [
+      [
+        "DATA ANALYSIS"
+      ],
+      [
+        "PYTHON PROGRAMMING"
+      ],
+      [
+        "EXCEL"
+      ],
+      [
+        "PRESENTATION SKILLS"
+      ],
+      [
+        "PYTHON PROGRAMMING"
+      ],
+      [
+        "COMMUNICATION"
+      ],
+      [
+        "PROJECT MANAGEMENT"
+      ],
+      [
+        "CYBERSECURITY"
+      ],
+      [
+        "COMMUNICATION"
+      ],
+      [
+        "DIGITAL MARKETING"
+      ],
+      [
+        "EXCEL"
+      ],
+      [
+        "PROJECT MANAGEMENT"
+      ],
+      [
+        "CLOUD COMPUTING"
+      ],
+      [
+        "DATA ANALYSIS"
+      ],
+      [
+        "PYTHON PROGRAMMING"
+      ],
+      [
+        "UX DESIGN"
+      ],
+      [
+        "CLOUD COMPUTING"
+      ],
+      [
+        "CYBERSECURITY"
+      ],
+      [
+        "DIGITAL MARKETING"
+      ],
+      [
+        "EXCEL"
+      ],
+      [
+        "PROJECT MANAGEMENT"
+      ],
+      [
+        "PYTHON PROGRAMMING"
+      ],
+      [
+        "DATA ANALYSIS"
+      ],
+      [
+        "PYTHON PROGRAMMING"
+      ],
+      [
+        "CYBERSECURITY"
+      ],
+      [
+        "NETWORKING"
+      ],
+      [
+        "COMMUNICATION"
+      ],
+      [
+        "PROJECT MANAGEMENT"
+      ],
+      [
+        "DIGITAL MARKETING"
+      ],
+      [
+        "UX DESIGN"
+      ],
+      [
+        "CLOUD COMPUTING"
+      ],
+      [
+        "PYTHON PROGRAMMING"
+      ],
+      [
+        "EXCEL"
+      ]
+    ],
+    "S13(1)": [],
+    "S13(2)": [
+      [
+        1,
+        4,
+        1
+      ],
+      [
+        2,
+        3,
+        1
+      ],
+      [
+        3,
+        4,
+        2
+      ],
+      [
+        4,
+        2,
+        1
+      ],
+      [
+        5,
+        2,
+        1
+      ],
+      [
+        6,
+        3,
+        1
+      ],
+      [
+        7,
+        3,
+        2
+      ],
+      [
+        8,
+        2,
+        0
+      ]
+    ],
+    "L01(1)": [
+      [
+        "BIOLOGY"
+      ],
+      [
+        "MATHEMATICS"
+      ],
+      [
+        "PHYSICS"
+      ]
+    ],
+    "L01(2)": [
+      [
+        "PHY",
+        "Mechanics"
+      ],
+      [
+        "PHY",
+        "Waves"
+      ],
+      [
+        "MAT",
+        "Calculus"
+      ],
+      [
+        "MAT",
+        "Algebra"
+      ],
+      [
+        "GEN",
+        "Unassigned"
+      ]
+    ],
+    "L01(3)": [
+      [
+        "Physics",
+        1100.0
+      ],
+      [
+        "Mathematics",
+        0.0
+      ],
+      [
+        "Biology",
+        550.0
+      ]
+    ],
+    "L01(4)": [
+      [
+        35
+      ]
+    ],
+    "L01(5)": [
+      [
+        20
+      ]
+    ],
+    "L01(6)": [
+      [
+        9438
+      ]
+    ],
+    "L02(1)": [
+      [
+        6
+      ]
+    ],
+    "L02(2)": [
+      [
+        12
+      ]
+    ],
+    "L03(1)": [
+      [
+        null
+      ]
+    ],
+    "L08(1)": [
+      [
+        "Biology",
+        null
+      ],
+      [
+        "Mathematics",
+        "Algebra"
+      ],
+      [
+        "Mathematics",
+        "Calculus"
+      ],
+      [
+        "Physics",
+        "Mechanics"
+      ],
+      [
+        "Physics",
+        "Waves"
+      ]
+    ],
+    "L08(2)": [
+      [
+        "Mathematics",
+        "Calculus"
+      ],
+      [
+        "Mathematics",
+        "Algebra"
+      ],
+      [
+        "Physics",
+        "Mechanics"
+      ],
+      [
+        "Physics",
+        "Waves"
+      ],
+      [
+        null,
+        "Unassigned"
+      ]
+    ],
+    "L08(3)": [
+      [
+        "Biology",
+        null
+      ],
+      [
+        "Mathematics",
+        "Algebra"
+      ],
+      [
+        "Mathematics",
+        "Calculus"
+      ],
+      [
+        "Physics",
+        "Mechanics"
+      ],
+      [
+        "Physics",
+        "Waves"
+      ],
+      [
+        null,
+        "Unassigned"
+      ]
+    ],
+    "L09(1)": [
+      [
+        "STAFF_20"
+      ]
+    ],
+    "L09(2)": [
+      [
+        "STAFF_60"
+      ],
+      [
+        "STAFF_70"
+      ]
+    ],
+    "M1-Q3(1)": [],
+    "M1-Q3(2)": [
+      [
+        "DRIVER_A",
+        "SAMPLE"
+      ]
+    ],
+    "M1-Q3(3)": [
+      [
+        "NEW"
+      ]
+    ],
+    "M1-Q3(4)": [
+      [
+        "USED",
+        4
+      ]
+    ],
+    "M1-Q3(5)": [
+      [
+        "A"
+      ],
+      [
+        "Adelaide"
+      ],
+      [
+        "B"
+      ],
+      [
+        "C"
+      ],
+      [
+        "D"
+      ],
+      [
+        "Darwin"
+      ],
+      [
+        "Perth"
+      ],
+      [
+        "Sydney"
+      ]
+    ],
+    "M1-Q3(6)": [
+      [
+        "Sydney",
+        "Adelaide"
+      ],
+      [
+        "Adelaide",
+        "Darwin"
+      ],
+      [
+        "Darwin",
+        "Perth"
+      ],
+      [
+        "A",
+        "B"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "C",
+        "D"
+      ],
+      [
+        "Adelaide",
+        "Sydney"
+      ],
+      [
+        "Sydney",
+        "Darwin"
+      ]
+    ],
+    "M2-Q3(1)": [
+      [
+        "EMPTY",
+        0
+      ],
+      [
+        "NAB",
+        2
+      ],
+      [
+        "OTHER",
+        1
+      ]
+    ],
+    "M2-Q3(2)": [
+      [
+        1,
+        100
+      ],
+      [
+        3,
+        20
+      ]
+    ],
+    "M2-Q3(3)": [
+      [
+        "NAB",
+        "EMAIL_TOKEN_12"
+      ]
+    ]
+  },
+  "executed_engine": "SQLite in-memory with stated dialect adapters",
+  "limitations": [
+    "Not a MySQL execution certificate. MySQL 26.7 failed to initialize an isolated temporary instance with SIGSEGV; no existing database was accessed.",
+    "MySQL-only ALTER, authentication, GRANT/REVOKE, audit and concurrency statements were statically reviewed with version boundaries; not run against MySQL.",
+    "UI DOM tests and HTTPS browser inspection are reported separately; student mastery is not inferred."
+  ]
+}

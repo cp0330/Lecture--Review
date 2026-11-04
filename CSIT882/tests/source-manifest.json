@@ -1,0 +1,121 @@
+{
+  "date": "2026-11-04",
+  "original_unique_groups": 23,
+  "english_questions": [
+    {
+      "id": "M1-Q1",
+      "sha256": "743fc03b716f4fc53cba4faa9ce83a13ca2afc5478592b6c092439b5d70b7810"
+    },
+    {
+      "id": "M1-Q2",
+      "sha256": "cbfb66ca841b18d158e1c7be1de6f33281b222d389f1fefa665f39cf8ec82e45"
+    },
+    {
+      "id": "M1-Q3",
+      "sha256": "0ae24d70f46572ed6d4732c100b2b782f11c269c4df2fb6da7096aaee5f34afe"
+    },
+    {
+      "id": "M1-Q4",
+      "sha256": "c5422e13fce357b0eacc4189bfb0ce2de74db20ff9be33e78fbeac85de6617ca"
+    },
+    {
+      "id": "M1-Q5",
+      "sha256": "d4501eec38467e2f2a35d16dc6edd4bf81d3c43c96e5436cbf8d014c62c4d569"
+    },
+    {
+      "id": "M1-Q6",
+      "sha256": "b2fa90427d5a488d7c82582dcc6f7937f58b7bcb2f5f1448a64db9bc680cb312"
+    },
+    {
+      "id": "M2-Q1",
+      "sha256": "00f8758946ed2ef39bb56ecd2c8d9899d433d8dbc4712d3e2e075fe44476718b"
+    },
+    {
+      "id": "M2-Q2",
+      "sha256": "6e3c15dd5f4d65e013207371c883c1329df4c986c661ded539faad36561deaad"
+    },
+    {
+      "id": "M2-Q3",
+      "sha256": "a8731cda91ea546c008dc1f985dd84429a791de7fdd929e97a4a5bdf1a303e9e"
+    },
+    {
+      "id": "M2-Q4",
+      "sha256": "58381a7adc97a8f49747c9fc7663a7bc2fff1e2efd39cb412a44e2226c72d390"
+    },
+    {
+      "id": "M2-Q5",
+      "sha256": "4728556a300fe020a41847afaf5e676a1293593e7aba161e7712ae570f4b7572"
+    },
+    {
+      "id": "M2-Q6",
+      "sha256": "dc9bc27cc6eab38164a789533dab3fa34b056ac4ce77d824e7836193f2576622"
+    },
+    {
+      "id": "A1-T1",
+      "sha256": "5f0e7bc800faf1ae8c05a3f5364588ee6d94237d8e35b17cc20900663124626a"
+    },
+    {
+      "id": "A1-T2",
+      "sha256": "6b697115c18c5477f021573e9c72aa61e210414f2882b7b6e0dd0ce5c78967cc"
+    },
+    {
+      "id": "A2-T1",
+      "sha256": "22147dc55db33abed6f1a1c86f3b59e2704231365b9315e2c524211dfbdfac86"
+    },
+    {
+      "id": "A2-T2",
+      "sha256": "070be4fd620da2fd693fdebfc0c948880962072d43ccb7464a896011a20223ba"
+    },
+    {
+      "id": "A3-T1",
+      "sha256": "a5aedb8b7705a23f0e43980a12712d71b59bbee9bbe684bfa9d1ac8692f6b5db"
+    },
+    {
+      "id": "A3-T2",
+      "sha256": "532a61b8792fc0e662852914a51a9ab111b0e0be8c70061bf541aef514399fb2"
+    },
+    {
+      "id": "A3-T3",
+      "sha256": "04204a72fd6b9c93ac499541e7584a17edb888e7f597caaa61db9ad2f5c0e63e"
+    },
+    {
+      "id": "A4-T1",
+      "sha256": "44d578704ea457eccc4722ee9f530c351466ca85767afd80e2faa5361ce9a42f"
+    },
+    {
+      "id": "A4-T2",
+      "sha256": "2c762fd44f68122dd99346801f09164629c5e53a1f0181f66eb330713fa7d565"
+    },
+    {
+      "id": "A4-T3",
+      "sha256": "101df6439da4af611db5f8f8b8fccb34bda15fa335b10b42177723e29f82416e"
+    },
+    {
+      "id": "A4-T4",
+      "sha256": "96130392061e497346a03b573ba9022d9492a62cb903aa9d069d8cecd12ccfd0"
+    }
+  ],
+  "images": [
+    {
+      "path": "assets/mock-1-q2.jpg",
+      "sha256": "167493a070cb3b341622d62702ae9287d24920a621ffbb71a208b084cccbf074"
+    },
+    {
+      "path": "assets/mock-2-q2.jpg",
+      "sha256": "5c49ceb3e12bce6c1e35053e31c2e59c7b738f71da6b5a31437ccdddcd4c7f51"
+    },
+    {
+      "path": "assets/mock-3-q2.jpg",
+      "sha256": "167493a070cb3b341622d62702ae9287d24920a621ffbb71a208b084cccbf074"
+    },
+    {
+      "path": "assets/assignment-1-task-2.png",
+      "sha256": "e067dc7db038baea58803bcfd041cdc704ade4d90d37855587d0863f8e187280"
+    },
+    {
+      "path": "assets/assignment-2-task-1.png",
+      "sha256": "1e4d78223893dd1ad23aeb7e38a1766262745a9e36bf51beaa5f6dd51ab63a8e"
+    }
+  ],
+  "method": "Anonymized public edition fingerprints. Original English conditions preserved; example identity/contact/password values replaced consistently. Original diagrams unchanged."
+}
