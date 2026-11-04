@@ -82,13 +82,13 @@ function renderQuestion(){
  $('save-state').textContent=storageMessage||(canSave?'会自动保存在此浏览器。':'请导出记录备份。');
  tab('question');renderNav();
 }
-function go(id,focus=false){
+function go(id,focus=false,closeList=true){
  if(!byId[id])return;activeId=id;history.replaceState(null,'','#'+id.toLowerCase());renderQuestion();
- document.querySelector('.workspace').classList.remove('show-list');$('list-toggle').setAttribute('aria-expanded','false');if(focus)$('question-heading').focus();
+ if(closeList){document.querySelector('.workspace').classList.remove('show-list');$('list-toggle').setAttribute('aria-expanded','false');}if(focus)$('question-heading').focus();
 }
 function filter(){
  filtered=BANK.questions.filter(q=>matches(q,filters(),state));$('reader').hidden=!filtered.length;$('empty').hidden=!!filtered.length;
- if(filtered.length&&!filtered.some(q=>q.id===activeId)){go(filtered[0].id);}else renderNav();
+ if(filtered.length&&!filtered.some(q=>q.id===activeId)){go(filtered[0].id,false,false);}else renderNav();
 }
 function reset(){for(const id of ids)$(id).value=id==='search'?'':id==='mode'?'unique':'all';filter();}
 function reveal(id){

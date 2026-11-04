@@ -9,7 +9,7 @@ const html=fs.readFileSync(path.join(base,'index.html'),'utf8');
 const BANK=JSON.parse(html.match(/const BANK=([\s\S]*?);<\/script>/)[1]);
 let checks=0;const ok=(label,value)=>{assert.ok(value,label);checks++;};
 class Element{
- constructor(id){this.id=id;this.value='';this.dataset={};this.listeners={};this.attrs={};this.innerHTML='';this.hidden=false;this.disabled=false;this.checked=false;this.classList={toggle:()=>false,remove:()=>{}};}
+ constructor(id){this.id=id;this.value='';this.dataset={};this.listeners={};this.attrs={};this.innerHTML='';this.hidden=false;this.disabled=false;this.checked=false;const classes=new Set();this.classList={toggle:n=>{if(classes.has(n)){classes.delete(n);return false;}classes.add(n);return true;},remove:n=>classes.delete(n),contains:n=>classes.has(n)};}
  addEventListener(type,fn){this.listeners[type]=fn;}
  async dispatch(type,extra={}){return this.listeners[type]?.({target:this,preventDefault(){},...extra});}
  setAttribute(k,v){this.attrs[k]=v;}getAttribute(k){return this.attrs[k];}
@@ -55,6 +55,9 @@ app.get('import').files=[{text:async()=>JSON.stringify({course:'CSIT882',records
 await app.get('import').dispatch('change');ok('Import merges recognized task records',app.api.records.L03.answer==='New imported draft'&&!app.api.records.UNKNOWN);
 app.get('import').files=[{text:async()=>JSON.stringify({course:'CSIT882',records:{L03:{answer:'Older draft',updatedAt:'2020-01-01'}}})}];await app.get('import').dispatch('change');ok('Import retains newer existing draft',app.api.records.L03.answer==='New imported draft');
 ok('Unknown tab-script source remains valid',new vm.Script(source)!==null);
+const mobile=setup();await mobile.get('list-toggle').dispatch('click');mobile.get('search').value='A4';await mobile.get('search').dispatch('input');
+ok('Mobile filtering does not close the input panel',mobile.get('workspace').classList.contains('show-list'));
+mobile.api.reveal('A4-T4');ok('Explicit question navigation closes mobile panel',!mobile.get('workspace').classList.contains('show-list'));
 const scripts=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)];for(const m of scripts)new vm.Script(m[1]);ok('Generated HTML inline JavaScript syntax',scripts.length===2);
 const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);ok('Static shell ids are unique',new Set(ids).size===ids.length);
 const result={status:'passed',checks,scope:'UI state and filtering in a minimal DOM harness, not a visual browser test'};

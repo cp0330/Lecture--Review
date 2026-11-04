@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-04",
+  "url": "https://cp0330.github.io/Lecture--Review/CSIT882/",
+  "deployment": "GitHub Pages build 41753804719 completed successfully",
+  "checks": {
+    "english_question_and_48_unique_groups": "passed",
+    "normalization_A4_T4_part_4_walkthrough": "passed",
+    "draft_restored_after_reload": "passed; test text restored to the previous value afterward",
+    "original_question_image_zoom": "passed",
+    "hospital_answer_has_two_complete_attribute_diagrams_and_qualifiers": "passed",
+    "390_by_844_mobile_layout": "passed; no horizontal document overflow",
+    "mobile_filter_drawer": "fixed premature closing during typing; included in the 29 state regression checks"
+  },
+  "scope": "Observed through the published HTTPS page, separate from the minimal DOM test harness. MySQL-specific runtime validation limits remain as documented."
+}

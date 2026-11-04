@@ -1,5 +1,5 @@
 {
   "status": "passed",
-  "checks": 27,
+  "checks": 29,
   "scope": "UI state and filtering in a minimal DOM harness, not a visual browser test"
 }
