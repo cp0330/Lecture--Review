@@ -14,7 +14,7 @@ class Handler(SimpleHTTPRequestHandler):
         self.send_header('Content-Length',str(len(data))); self.end_headers(); self.wfile.write(data)
     def do_GET(self):
         parsed=urlsplit(self.path); query=parse_qs(parsed.query,keep_blank_values=True)
-        if parsed.path=='/search':
+        if parsed.path in ['/search','/short-url']:
             rows=''.join('<tr><td>'+html.escape(k)+'</td><td>'+html.escape(v)+'</td></tr>' for k,values in query.items() for v in values)
             body='<!doctype html><html lang="en"><meta charset="utf-8"><title>Form parameters</title><h1>Received form parameters</h1><p>This is the local practice service.</p><table border="1"><tr><th>Name</th><th>Value</th></tr>'+rows+'</table><p><a href="javascript:history.back()">Back to the form</a></p></html>'
             return self.reply(200,body,'text/html')

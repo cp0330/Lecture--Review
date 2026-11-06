@@ -1,11 +1,9 @@
-# My Answers
+# My answers
 
-Try each question before opening its reference answer. Record your code, test results and any difficulties.
+Save source files under my-work/. Use the practice server for HTTP, form and storage exercises.
 
-## Q01 HTML only: a competition page
+## A1-1 HTML instructions page
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -13,12 +11,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q02 Required CSS methods and selectors
+## A1-2 HTML coordinator table
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -26,12 +22,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q03 Click events, counters and added content
+## A2-1 HTML page elements
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -39,12 +33,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q04 value, src and the Enter key
+## A2-2 A page with required CSS methods
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -52,12 +44,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q05 Animation: one timer, reset and restart
+## A2-3 Click events on a page
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -65,12 +55,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q06 Random slideshow
+## A3-1 Start, stop and restart an animation
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -78,12 +66,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q07 Web form: follow the service documentation
+## A3-2 A short-URL request form
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -91,12 +77,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q08 Form validation: a random addition question
+## A4-1 A weather information page
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -104,12 +88,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q09 JSON: correct the structure and data types
+## Q01 A competition information page
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -117,12 +99,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q10 JSON: convert between an object and form fields
+## Q02 CSS selectors and an external stylesheet
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -130,12 +110,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q11 XML: represent a complete student record
+## Q03 Clicking text and adding buttons
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -143,12 +121,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q12 DTD: define the XML structure
+## Q04 Animal buttons and text commands
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -156,12 +132,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q13 XSD: nested complex types and restrictions
+## Q05 Animation with a single running sequence
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -169,12 +143,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q14 AJAX: display an object and an array of objects
+## Q06 A random slideshow
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -182,12 +154,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q15 AJAX: query parameters, nested data and required CSS
+## Q07 A library search form
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -195,12 +165,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q16 Canvas: a triangle and its three medians
+## Q08 A random question before form submission
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -208,12 +176,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q17 Drag and drop: matching, counting and added images
+## Q09 Correct an invalid JSON document
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -221,12 +187,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q18 DOM: create, insert, replace, remove and total
+## Q10 Convert subject data to and from JSON
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -234,12 +198,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q19 JSON validation and localStorage
+## Q11 Write a student record in XML
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -247,12 +209,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q20 JavaScript styles and a hover transform
+## Q12 Write an internal DTD
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -260,12 +220,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q21 HTML: merged cells and page links
+## Q13 Write an XSD for exam results
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -273,12 +231,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q22 CSS: spacing, lists and conflicting rules
+## Q14 Load faculty and airport details
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -286,12 +242,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q23 Events: swap images and handle text input
+## Q15 Request and display weather data
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -299,12 +253,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q24 JavaScript: arrays, strings and dates
+## Q16 Draw a triangle and its medians
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -312,12 +264,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q25 Form validation: built-in rules and JavaScript rules
+## Q17 Match animals by drag and drop
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -325,12 +275,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q26 XML schemas: external DTD and text with an attribute
+## Q18 Add books to an order
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -338,12 +286,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q27 DOM: select groups by tag and class
+## Q19 Validate JSON and restore the last input
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -351,12 +297,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q28 Storage: save, restore and delete an object array
+## Q20 Change a heading’s colour and size
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -364,12 +308,10 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
 
-## Q29 Calculator: read an operation and check an answer
+## Q21 Merged table cells and page links
 
-Time taken:
-My score: /10
 My code:
 
 ```text
@@ -377,4 +319,92 @@ My code:
 ```
 
 Test results:
-What I am unsure about:
+What I need to review:
+
+## Q22 CSS spacing and rule selection
+
+My code:
+
+```text
+
+```
+
+Test results:
+What I need to review:
+
+## Q23 Image swapping and input events
+
+My code:
+
+```text
+
+```
+
+Test results:
+What I need to review:
+
+## Q24 Arrays, strings and dates
+
+My code:
+
+```text
+
+```
+
+Test results:
+What I need to review:
+
+## Q25 Two ways to validate a form
+
+My code:
+
+```text
+
+```
+
+Test results:
+What I need to review:
+
+## Q26 An external DTD and an XSD
+
+My code:
+
+```text
+
+```
+
+Test results:
+What I need to review:
+
+## Q27 Select DOM element groups
+
+My code:
+
+```text
+
+```
+
+Test results:
+What I need to review:
+
+## Q28 Save and restore a task list
+
+My code:
+
+```text
+
+```
+
+Test results:
+What I need to review:
+
+## Q29 Check an arithmetic answer
+
+My code:
+
+```text
+
+```
+
+Test results:
+What I need to review:

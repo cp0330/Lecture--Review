@@ -1,0 +1,645 @@
+{
+  "A1-1": {
+    "hints": [
+      "先找出四个页面区域：主标题、身份副标题、步骤列表、最后的链接。",
+      "无序列表是 ul/li。链接的显示文字与目标地址是两个不同部分。",
+      "先写 head/body，再按题目顺序放 h1、h2、ul 和 a；新标签页的 target 值可回笔记核对。"
+    ],
+    "overview": "这道主练题采用 A1 Q1 · adapted instructions-page task 的任务结构。先满足题目明确指定的页面、行为和技术，再逐项核对。",
+    "flow": [
+      "按要求从上到下排列四个区域。页面只有内容与结构，不需要 JavaScript 或 CSS。",
+      "给定资料可以用自己的表达组织，但五个步骤都要保留；不要为了“step-by-step”擅自把指定的 unordered list 改成 ordered list。",
+      "新标签链接同时检查地址、显示文字和打开方式。"
+    ],
+    "trace": "The main heading is followed by the smaller identity heading, all five steps, and the final link.\nThe list has bullets. The final link opens a separate tab. The page uses no CSS.",
+    "pitfalls": []
+  },
+  "A1-2": {
+    "hints": [
+      "表格有一行表头和三行记录；每条记录都需要四个单元格。",
+      "每位 coordinator 的 consultation hours 是单元格内的 ordered list；图片尺寸是 width 和 height。",
+      "先完成一行记录，再重复三次并换数据。图片 src 必须使用给定的完整地址。"
+    ],
+    "overview": "这道主练题采用 A1 Q2 · adapted coordinator-table task 的任务结构。先满足题目明确指定的页面、行为和技术，再逐项核对。",
+    "flow": [
+      "表头为四个 th；每位 coordinator 对应一行，形成 4×4 的逻辑网格。",
+      "consultation hours 是一个单元格内的 ol，不是为每个时间另外增加整行。",
+      "图片的 src 使用完整 URL，尺寸同时约束宽和高；三个不同地址防止误用同一张图。"
+    ],
+    "trace": "The table contains one header row and three coordinator rows, with four columns.\nConsultation hours are numbered. The three pictures are different and each is 100 by 100 pixels.",
+    "pitfalls": []
+  },
+  "A2-1": {
+    "hints": [
+      "先数行列，再处理列表、链接和空格。",
+      "连续普通空格会被 HTML 折叠，需要使用 character entities。",
+      "表格中每行写四个 td。五次重复 non-breaking space 的 entity 才得到五个可见空格。"
+    ],
+    "overview": "这道主练题采用 A2 Q1 · clarified HTML task 的任务结构。先满足题目明确指定的页面、行为和技术，再逐项核对。",
+    "flow": [
+      "题目已消除原文三列/四列矛盾，按两行四列检查即可。",
+      "无序列表、外链与空格是独立要求，可逐项完成。",
+      "普通连续空格会折叠，使用五个 non-breaking space 后再看实际输出。"
+    ],
+    "trace": "The table has exactly eight cells. Student numbers occupy the first row and names occupy the second.\nThere are four bullet items. The link opens a new tab, and all five spaces are visible.",
+    "pitfalls": []
+  },
+  "A2-2": {
+    "hints": [
+      "每条要求同时指定了效果和 CSS 位置；两者都要满足。",
+      "姓名和学号用 style attribute；重复段落用 class；唯一标题用 ID。",
+      "先在 head 写 style 规则，再把 class/id 加到对应元素。class selector 用点，ID selector 用 #。"
+    ],
+    "overview": "这道主练题采用 A2 Q2 · CSS task 的任务结构。先满足题目明确指定的页面、行为和技术，再逐项核对。",
+    "flow": [
+      "同样的视觉效果未必满足题意：inline、document、class、ID 都属于明确条件。",
+      "class 让两个段落复用规则；ID 标识唯一标题。",
+      "external CSS 转换是补充 Q02 的任务，不属于这道 assignment 主练的必做部分。"
+    ],
+    "trace": "The name is 50px and the student number is blue. Each uses the specified CSS method.\nBoth paragraphs have dashed orange borders. The heading is purple on gray. The required class and ID selectors are used.",
+    "pitfalls": []
+  },
+  "A2-3": {
+    "hints": [
+      "页面有三种独立点击：姓名、学号按钮、email。不要让它们共享同一个计数结果。",
+      "counter 的状态要跨函数调用保留；email 的行为是增加内容。",
+      "事件函数分别负责 alert/console、计数加一、追加 button。追加不能覆盖以前的按钮。"
+    ],
+    "overview": "这道主练题采用 A2 Q3 · JavaScript task 的任务结构。先满足题目明确指定的页面、行为和技术，再逐项核对。",
+    "flow": [
+      "姓名事件输出 alert 和 console；学号事件更新数字；email 事件增加新按钮，三者互不干扰。",
+      "计数状态放在可持续访问的位置，每次点击后先更新数据再更新页面。",
+      "追加动作必须保留先前节点。原分项为 1/1/3，新增按钮是该 assignment 的主要分项。"
+    ],
+    "trace": "After three clicks on the student-number button, its count is 3.\nAfter two email clicks, two CSIT884 buttons are displayed. Clicking the name produces both required messages.",
+    "pitfalls": []
+  },
+  "A3-1": {
+    "hints": [
+      "先区分数值状态和定时器状态；Stop 同时影响两者。",
+      "每次更新先让奇数加二，再重新计算右侧的和。",
+      "Start 建立 interval；Stop 清理 interval、恢复奇数为 1 并重新显示。timer ID 必须能被 Stop 访问。"
+    ],
+    "overview": "这道主练题采用 A3 Q1 · animation task 的任务结构。先满足题目明确指定的页面、行为和技术，再逐项核对。",
+    "flow": [
+      "初始化奇数为 1。每次 tick 加 2，再计算奇数与学号的和。",
+      "Stop 清理定时任务，还要把奇数恢复为 1 并立即刷新显示。",
+      "restart 从重置后的状态启动，所以第一秒回到 3。防重复 timer 是参考实现的健壮性，不另算原 assignment 分。"
+    ],
+    "trace": "The first update occurs one second after Start, and the following updates are one second apart.\nStop restores the initial equation immediately. A later Start begins again at 3, rather than continuing the stopped value.",
+    "pitfalls": []
+  },
+  "A3-2": {
+    "hints": [
+      "先把服务文档中的 parameter 与每个控件配对。",
+      "显示 Apple Pay 不代表提交 Apple Pay；服务需要数值代码 100。",
+      "四个 radio 必须用同一 name；各自的 value 不同。id 不能代替服务参数的 name。"
+    ],
+    "overview": "这道主练题采用 A3 Q2 · web-form service contract 的任务结构。先满足题目明确指定的页面、行为和技术，再逐项核对。",
+    "flow": [
+      "以服务契约为准：email 控件的参数名是 user，原 URL 是 longurl，日期是 adate。",
+      "pmethod 的显示标签与实际代码不同。四个 radio 共用 pmethod，value 分别为 100/200/300/400。",
+      "浏览器负责 GET 编码与拼接参数，不需要另写 JavaScript URL 构造。未要求 validation 时不添加。"
+    ],
+    "trace": "Selecting PayPal submits pmethod=200. Only one payment method can be selected.\nFor email maya@example.com, URL https://example.com/book and date 2026-11-11, submission contains user, longurl, adate and the chosen pmethod. Reset restores the initial form.",
+    "pitfalls": []
+  },
+  "A4-1": {
+    "hints": [
+      "先完成静态页面，再处理请求与结果。五城市表格和结果表是两个表格。",
+      "请求使用当前输入；返回值从嵌套 object 读取。User Query 显示本次输入。",
+      "XHR 完成且成功后 parse responseText，再访问 current.temperature_2m 等字段。输出后让 class/ID 对应 document CSS。"
+    ],
+    "overview": "这道主练题采用 A4 · complete AJAX and CSS task 的任务结构。先满足题目明确指定的页面、行为和技术，再逐项核对。",
+    "flow": [
+      "先完成静态身份、五城市表与两个输入。城市表仅提供可测试坐标，不代替读取输入。",
+      "点击时创建一个请求，URL 使用本次输入。异步完成且成功后再 parse 和显示；结果读取 current.time/current.interval/current.temperature_2m。",
+      "输入值显示在 User Query；服务响应值显示在 weather table。两者含义分开，不能照抄截图里的固定数值。",
+      "显示模板携带 lee 与 mayal，document CSS 才能分别匹配温度单元格与标题。主分项按 A4 的 1/1/6/1/1 保留。"
+    ],
+    "trace": "Before a request, the city table has six rows and four columns. Both coordinate fields and the button appear below it.\nWollongong and New York requests display different supplied temperatures. All displayed weather values come from the corresponding response.\nThe required class/ID names and document CSS methods are used. The input coordinates appear under User Query.",
+    "pitfalls": []
+  },
+  "Q01": {
+    "hints": [
+      "先将页面拆成身份、比赛表格、成员列表、结尾内容。",
+      "链接用 href，图片用 src；列表嵌在 Members 单元格中。",
+      "先完成一支队伍的整行，再复制另一行并换数据；entity 末尾不要漏分号。"
+    ],
+    "overview": "这是 Final review: HTML; A1 Q1/Q2; A2 Q1; L01 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "先完成页面骨架，再逐项检查 tag、attribute 和题目规定的列表类型。给定的 example 域名只检查链接设置，不要求网站真实可访问。",
+      "链接用 href，图片用 src；列表嵌在 Members 单元格中。",
+      "先完成一支队伍的整行，再复制另一行并换数据；entity 末尾不要漏分号。"
+    ],
+    "trace": "The table has three rows and three columns, including the header row. Both images are 120 by 80 pixels. Both links have target=\"_blank\".\nThere is no CSS. Use ul and ol in the correct places. The browser must display all five spaces.",
+    "pitfalls": [
+      "连续输入五个普通空格会被折叠。",
+      "HTML-only 题不要擅自加入 CSS。"
+    ]
+  },
+  "Q02": {
+    "hints": [
+      "先完成 document CSS 版本，再做 external 版本。",
+      "空格 selector 匹配后代；> 只匹配直接子元素。",
+      "外部文件只接收 CSS 规则；原 HTML 中的 inline CSS 仍保留。"
+    ],
+    "overview": "这是 Final review: CSS; A2 Q2; A4 selector requirements; L02 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "先按每条要求确定样式放在哪里，再写 selector。外部 CSS 接收的是规则本身，HTML 负责用 link 引入。",
+      "空格 selector 匹配后代；> 只匹配直接子元素。",
+      "外部文件只接收 CSS 规则；原 HTML 中的 inline CSS 仍保留。"
+    ],
+    "trace": "Both HTML pages have the same appearance.\nUse > for direct children in the green list rule. Do not replace it with a space.\nUse . for a class and # for an ID. Do not put style tags inside the CSS file.",
+    "pitfalls": [
+      "做出相同外观但用错指定方式，仍不满足题意。",
+      "把 child selector 写成 descendant selector 会扩大匹配范围。"
+    ]
+  },
+  "Q03": {
+    "hints": [
+      "三种点击各自负责不同输出。",
+      "计数变量要跨点击保留；新增按钮不能替换现有内容。",
+      "先分别测试姓名、计数、追加，再测试交替点击，确认状态没有互相影响。"
+    ],
+    "overview": "这是 Final review: JavaScript and onclick; A2 Q3; L03 Q1/Q5/Q6 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "计数变量放在函数外，才能跨多次点击保留。累加内容与覆盖内容是两个不同要求。",
+      "计数变量要跨点击保留；新增按钮不能替换现有内容。",
+      "先分别测试姓名、计数、追加，再测试交替点击，确认状态没有互相影响。"
+    ],
+    "trace": "After three counter-button clicks, the counter shows 3.\nAfter two email clicks, there are two new buttons. The counter does not change.",
+    "pitfalls": [
+      "把 counter 在每次调用时重新声明为 0。",
+      "用 = 覆盖全部内容而没有累加。"
+    ]
+  },
+  "Q04": {
+    "hints": [
+      "按钮与命令应产生相同的动物显示结果。",
+      "文本框读写 value，图像来源读写 src；命令要先判断 Enter。",
+      "可复用一个显示动物的函数；无效命令只 alert，不改图像和状态。"
+    ],
+    "overview": "这是 Final review: value, src and events; L03 Q2/Q3/Q7 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "先把公共更新功能写成参数化函数，再让按钮和键盘事件共用。这里的条件表达式也可换成 if/else。",
+      "文本框读写 value，图像来源读写 src；命令要先判断 Enter。",
+      "可复用一个显示动物的函数；无效命令只 alert，不改图像和状态。"
+    ],
+    "trace": "Both the buttons and valid commands change the image and status.\ndisplay bird followed by Enter shows an alert and keeps the previous image.",
+    "pitfalls": [
+      "输入框内容用 value，图片地址用 src。",
+      "事件函数要接收 event，不能让每个键都提交命令。"
+    ]
+  },
+  "Q05": {
+    "hints": [
+      "重复 Start 的行为与普通 Start/Stop 不同。",
+      "用一个保存 timer ID 的状态判断动画是否已经运行。",
+      "首次 Start 只有在 timer 未运行时建立 interval；Stop 清理后把 timer 状态恢复，再重置等式。"
+    ],
+    "overview": "这是 Final review: setInterval/clearInterval; A3 Q1; L06 Q4 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "timer 保存是否正在运行；firstNumber 保存动画的当前数值。停止时两种状态都需要恢复。",
+      "用一个保存 timer ID 的状态判断动画是否已经运行。",
+      "首次 Start 只有在 timer 未运行时建立 interval；Stop 清理后把 timer 状态恢复，再重置等式。"
+    ],
+    "trace": "After Start, the first number changes to 3 and then 5 at one-second intervals.\nClicking Start several times quickly still increases the number by only 2 each second.\nStop immediately restores 1. The equation then stays unchanged until Start is clicked.",
+    "pitfalls": [
+      "setInterval(tick(), 1000) 会立刻调用函数，应传 tick。",
+      "只 clearInterval 而没有将 timer 改回 null，后续可能无法启动。"
+    ]
+  },
+  "Q06": {
+    "hints": [
+      "六张图片各有一个位置，随机选择的是位置。",
+      "索引从 0 开始，最大为图片数量减一。",
+      "每次 tick 用 floor(random × array.length) 选择，再设置 img.src；Stop 保留 src。"
+    ],
+    "overview": "这是 Final review: random numbers and animation; L06 Q5; Animation B slideshow 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "用 array.length 决定随机范围，可以随图片数量调整。停止后没有清空 src，因为题目要求保留。",
+      "索引从 0 开始，最大为图片数量减一。",
+      "每次 tick 用 floor(random × array.length) 选择，再设置 img.src；Stop 保留 src。"
+    ],
+    "trace": "Every displayed path is one of the six array items.\nAfter Stop, the image stays visible and does not change.",
+    "pitfalls": [
+      "随机索引加 1 会漏掉第一项，并可能访问越界。",
+      "1200 毫秒与 1.2 毫秒不同。"
+    ]
+  },
+  "Q07": {
+    "hints": [
+      "先逐行读参数表，区分单选、多选和文本。",
+      "checkbox 可以同名不同值；radio 同组也同名，但只能选一个。",
+      "提交的 name/value 与显示标签分开检查；Reset 应回到默认 Print。"
+    ],
+    "overview": "这是 Final review: web-form marking requirements; A3 Q2; L04 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "name 决定参数名，value 决定被选项提交的值。多个同名 checkbox 可以生成多个 sub 参数。reset 恢复默认状态。",
+      "checkbox 可以同名不同值；radio 同组也同名，但只能选一个。",
+      "提交的 name/value 与显示标签分开检查；Reset 应回到默认 Print。"
+    ],
+    "trace": "Each name matches the documentation. The submitted value is the service value, not the displayed label.\nClear empties the text fields, clears the subject choices and restores Print.\nAfter starting the local server, submit the form and check the received parameters. Parameter order does not change their meaning.",
+    "pitfalls": [
+      "id 不能代替 name。",
+      "radio 使用不同 name 会失去单选分组。"
+    ]
+  },
+  "Q08": {
+    "hints": [
+      "需要验证的只是数学题，不是其他搜索字段。",
+      "生成问题时保存两数；提交时不要重新抽取随机数。",
+      "失败返回 false，成功返回 true；form 的提交事件也必须传递该返回值。"
+    ],
+    "overview": "这是 Final review: form validation and random numbers; L05; Form Validation B 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "返回 false 的关键是 form 中也写 return。题目数据是页面状态，应在用户作答期间保持一致。",
+      "生成问题时保存两数；提交时不要重新抽取随机数。",
+      "失败返回 false，成功返回 true；form 的提交事件也必须传递该返回值。"
+    ],
+    "trace": "A wrong answer keeps the current page open and displays Wrong!.\nAfter correcting the answer, the submitted parameters have only the four names defined in Q07.\nAfter Clear, the answer field and error message are empty. Both new numbers are within 1 to 10.",
+    "pitfalls": [
+      "仅调用 validateForm() 而不 return，会失去拦截效果。",
+      "校验时重新生成随机数，会检查另一道题的答案。"
+    ]
+  },
+  "Q09": {
+    "hints": [
+      "对象成员需要属性名，数组不能直接裸放在对象里。",
+      "检查属性名引号、boolean 大小写和末尾逗号。",
+      "为数组加 subjectList 属性名；用 JSON 的小写 true，并保持 age 是数字。"
+    ],
+    "overview": "这是 Final review: JSON syntax; L09 Q1/Q2 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "对象内的每个成员都要有属性名；JSON 的属性名使用双引号，boolean 写 true/false，不使用尾随逗号。JavaScript object 的属性名也可以带引号。",
+      "检查属性名引号、boolean 大小写和末尾逗号。",
+      "为数组加 subjectList 属性名；用 JSON 的小写 true，并保持 age 是数字。"
+    ],
+    "trace": "After JSON.parse, subjectList.length is 2.\nage has type number and fullTime has type boolean.",
+    "pitfalls": [
+      "不能把课程 array 无名地放入 object。",
+      "\"true\" 是字符串，true 才是 boolean。"
+    ]
+  },
+  "Q10": {
+    "hints": [
+      "需要分清控件值、JavaScript object 和 JSON text。",
+      "cp 是 number；checkbox 的选中状态是 boolean。",
+      "读取 cp 时做数值转换；checkbox 用 checked。stringify 写入 textarea.value，parse 后反向赋回控件。"
+    ],
+    "overview": "这是 Final review: stringify/parse; L09 Q3/Q4 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "textarea 也是表单控件，使用 value。checkbox 的选中状态使用 checked。两个方向分别需要 stringify 和 parse。",
+      "cp 是 number；checkbox 的选中状态是 boolean。",
+      "读取 cp 时做数值转换；checkbox 用 checked。stringify 写入 textarea.value，parse 后反向赋回控件。"
+    ],
+    "trace": "In the JSON, 6 has no quotes and coreFlag is true or false.\nChange the textarea data to cp=4 and coreFlag=false. Read JSON must update both controls.",
+    "pitfalls": [
+      "只把 JSON string 赋给变量，不能直接按 object 访问。",
+      "checkbox.value 不是选中状态。"
+    ]
+  },
+  "Q11": {
+    "hints": [
+      "这是数据文档，不是把截图的 HTML 表格复制到 XML。",
+      "先写唯一 root，再按题目顺序放身份和每一条 subject。",
+      "属性值要有引号；相同记录重复 subject 标签，不额外增加第二个 root。"
+    ],
+    "overview": "这是 Final review: XML data and root element; L07 Q1/Q3 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "XML 的任务是保留数据关系。两个顶层 student 缺少共同根元素；XML 属性值必须用引号。空格和缩进可不同。",
+      "先写唯一 root，再按题目顺序放身份和每一条 subject。",
+      "属性值要有引号；相同记录重复 subject 标签，不额外增加第二个 root。"
+    ],
+    "trace": "There is exactly one root. Both subject elements are inside subjects.\nLetter case matches. Attribute values have quotes. Do not add table-presentation tags such as th or td.",
+    "pitfalls": [
+      "把表头 Subject/Mark 当成一组重复的数据。",
+      "题目未要求 DTD，不额外加入。"
+    ]
+  },
+  "Q12": {
+    "hints": [
+      "先确定每个元素的子元素顺序，再写次数和属性。",
+      "+ 表示至少一条；文本元素与属性的声明语法不同。",
+      "ELEMENT 描述内容，ATTLIST 描述 required 属性；DOCTYPE 的名称必须等于 root。"
+    ],
+    "overview": "这是 Final review: XML/DTD; L07 Q4; XMLDTD lecture 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "DOCTYPE 名称与根一致。+ 表示一次或以上，* 表示零次或以上，? 表示零次或一次。逗号规定顺序。",
+      "+ 表示至少一条；文本元素与属性的声明语法不同。",
+      "ELEMENT 描述内容，ATTLIST 描述 required 属性；DOCTYPE 的名称必须等于 root。"
+    ],
+    "trace": "The original XML passes DTD validation.\nRemoving number or code must fail validation. Empty subjects must also fail.",
+    "pitfalls": [
+      "DTD 的 #PCDATA 与 attribute 的 CDATA 不要混用。",
+      "没有声明实际存在的 attribute 会造成 DTD 不匹配。"
+    ]
+  },
+  "Q13": {
+    "hints": [
+      "先画出 batch→result→四个字段的层级。",
+      "有子元素或 attribute 的元素需要 complex type；score/band 的值用限制。",
+      "sequence 内声明子元素，sequence 后声明 attributes；score 用 integer restriction，band 用 enumeration。"
+    ],
+    "overview": "这是 Final review: simple/complex types; L08 Q1/Q2/Q3 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "resultBatch/result 都含子元素和 attribute，因此是 complex type。attribute 声明在 sequence 后；叶子数据的取值限制放在 simpleType 中。",
+      "有子元素或 attribute 的元素需要 complex type；score/band 的值用限制。",
+      "sequence 内声明子元素，sequence 后声明 attributes；score 用 integer restriction，band 用 enumeration。"
+    ],
+    "trace": "The given XML is valid. Scores 0 and 300 are valid.\nReject scores 301 and 1.5, band E, a missing ref, or a resultBatch with no result.",
+    "pitfalls": [
+      "contestantId 使用 integer 会丢失“编号是字符串”的约定。",
+      "只写 string/integer 而没写范围和枚举，不满足全部约束。"
+    ]
+  },
+  "Q14": {
+    "hints": [
+      "先观察两个 JSON：一个平面 object，一个包含 object array。",
+      "请求回调取得数据后，显示函数才读取相应字段。",
+      "按数组长度循环生成行；请求完成且 status 成功后 parse，否则只在对应输出区显示失败状态。"
+    ],
+    "overview": "这是 Final review: XHR, parse and display; L11 Q1/Q2; A4 request/display workflow 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "异步回调负责确认请求结果；parse 负责把字符串变成数据；display 函数负责把数据变成页面。最后一步通常是主要代码量。此题服务数据视为可信、格式正确的练习数据。",
+      "请求回调取得数据后，显示函数才读取相应字段。",
+      "按数组长度循环生成行；请求完成且 status 成功后 parse，否则只在对应输出区显示失败状态。"
+    ],
+    "trace": "The current airport table has a header and three records. It must still work if the number of data records changes.\nRequesting a JSON file that does not exist displays the failure message.\nThe code checks both response completion and request success.",
+    "pitfalls": [
+      "AJAX 名称不要求必须使用 XML 数据。",
+      "用固定 HTML 把截图抄出来，不能适应数据变化。"
+    ]
+  },
+  "Q15": {
+    "hints": [
+      "先确定哪部分是当前输入，哪部分是响应数据。",
+      "每次点击重新读坐标，构造 query，不能固定写某个城市。",
+      "成功时读取 current 下的字段；最后检查 class=lee、id=mayal 与 document CSS 规则一致。"
+    ],
+    "overview": "这是 Final review: AJAX/CSS; A4; L11 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "请求地址与显示内容都要由输入/响应驱动。encodeURIComponent 编码参数值，若本题只允许数字也可用直接拼接；XHR 技术要求仍必须满足。",
+      "每次点击重新读坐标，构造 query，不能固定写某个城市。",
+      "成功时读取 current 下的字段；最后检查 class=lee、id=mayal 与 document CSS 规则一致。"
+    ],
+    "trace": "The temperatures are 18.5 for the first test and 14.7 for the second. Both the request and result change when the input changes.\nRead current.time and current.temperature_2m from the nested current object, not from the top level.",
+    "pitfalls": [
+      "只更换输入文字却没有更换 URL。",
+      "class 名、id 或 CSS 方式与题目不一致。"
+    ]
+  },
+  "Q16": {
+    "hints": [
+      "先画三角形，再画中线和文字。",
+      "读入的坐标是字符串，计算中点之前先转数字。",
+      "清空画布后开始新 path；每条中线连接一个顶点和对边中点，填色和描边分别设置。"
+    ],
+    "overview": "这是 Final review: canvas; L12 Q1 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "先画填充三角形，再画白色中线，最后写标签，避免后画的填充遮住线。clearRect 的后两个参数是宽和高。",
+      "读入的坐标是字符串，计算中点之前先转数字。",
+      "清空画布后开始新 path；每条中线连接一个顶点和对边中点，填色和描边分别设置。"
+    ],
+    "trace": "Change one coordinate and draw again. No old triangle remains.\nEach median ends at the midpoint of the opposite side, not at another vertex.",
+    "pitfalls": [
+      "输入框读出字符串，中点计算前必须转 number。",
+      "忘记 beginPath 会把之前的路径一并重画。"
+    ]
+  },
+  "Q17": {
+    "hints": [
+      "拖动时必须记住源动物，放下时必须知道目标动物。",
+      "dragover 默认不允许普通 drop；匹配以后才更新计数和副本。",
+      "dataTransfer 存取同一个 key；目标动物可通过参数传入，避免内部子元素改变 event.target 后误判。"
+    ],
+    "overview": "这是 Final review: dragstart/drop/dragover; L12 Q2/Q3 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "目标动物通过事件处理函数参数传入，不依赖 event.target.id；这样 drop 到区内子元素时仍可正确判断。新图没有复制原 id。",
+      "dragover 默认不允许普通 drop；匹配以后才更新计数和副本。",
+      "dataTransfer 存取同一个 key；目标动物可通过参数传入，避免内部子元素改变 event.target 后误判。"
+    ],
+    "trace": "Drop dog onto DOG twice and cat onto CAT once. The counters and added-image counts are 2 and 1.\nDropping cat onto DOG changes neither counter.",
+    "pitfalls": [
+      "直接 append 原图片会把源图片移走。",
+      "把 target.id 当成接收区 ID，会在目标包含子元素时出错。"
+    ]
+  },
+  "Q18": {
+    "hints": [
+      "订单条目数与书的总数量不同。",
+      "每次读入 quantity，新增一条记录，再把该数量加到总数。",
+      "伪代码：read fields → convert quantity → create list item → append → total += quantity → display total。"
+    ],
+    "overview": "这是 Final review: DOM methods; L13; DOM lecture; A2 dynamic content 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "基础题只需读输入、追加订单和更新 total；总数是 quantity 的和。q18.html 是另外的 DOM 扩展，不是基础题的必做按钮。",
+      "每次读入 quantity，新增一条记录，再把该数量加到总数。",
+      "伪代码：read fields → convert quantity → create list item → append → total += quantity → display total。"
+    ],
+    "trace": "Add Book A / A1 / 5 and Book B / B1 / 2: both items remain and the total is 7.\nAdd a third order of 3 books: there are three list items and the total is 10.\nThe total adds quantities, not the number of list items.",
+    "pitfalls": [
+      "用 document.removeChild 删除普通 li，父子关系不匹配。",
+      "把 quantity 字符串相加会得到 52，而不是 7。"
+    ]
+  },
+  "Q19": {
+    "hints": [
+      "有效 JSON 与有效业务数据是两种检查；本题只检查语法。",
+      "parse 失败会抛异常；草稿保存的是原始字符串。",
+      "try/catch 控制红绿结果；getItem 返回 null 表示首次使用。对 storage 读写也保留失败时继续验证的路径。"
+    ],
+    "overview": "这是 Final review: local storage and JSON; L14 Q1/Q2 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "保存的是用户原文；解析成功与否只影响验证结果。首次 getItem 返回 null，不能把 null 字样当用户内容显示。textContent 是安全显示纯文本的同类 DOM 属性，换用合适的纯文本节点也可以。",
+      "parse 失败会抛异常；草稿保存的是原始字符串。",
+      "try/catch 控制红绿结果；getItem 返回 null 表示首次使用。对 storage 读写也保留失败时继续验证的路径。"
+    ],
+    "trace": "{\"code\":\"CSIT884\",\"cp\":6} is valid. {code:\"CSIT884\"} is invalid.\nEnter invalid text and reload. The exact text returns. Correct it and validate again; the message becomes green.\nThe exact error wording can differ between browsers. Do not require one fixed character position.",
+    "pitfalls": [
+      "只保存合法 JSON，会丢失用户尚未完成的草稿。",
+      "JSON.parse 放在 try 外面，异常时没有按题意更新错误信息。"
+    ]
+  },
+  "Q20": {
+    "hints": [
+      "颜色、字号属于元素样式，放大属于视觉 transform。",
+      "CSS 的连字符属性在 JS style 中改为 camelCase。",
+      "fontSize 的值要包含 px；transition 只作用于 transform，hover 改 scale，离开后回原状态。"
+    ],
+    "overview": "这是 Final review: CSS with JavaScript; L10; CSS with JS B 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "CSS 的 font-size 在 JavaScript style 中写成 fontSize。transform 决定变换，transition 决定变化过程；本题明确使用 transform 放大。",
+      "CSS 的连字符属性在 JS style 中改为 camelCase。",
+      "fontSize 的值要包含 px；transition 只作用于 transform，hover 改 scale，离开后回原状态。"
+    ],
+    "trace": "Orange makes the text orange. Entering 40 and clicking Apply Size sets 40px.\nAfter the hover transition, the computed transform has a scale of 2. Leaving restores it. Hover does not change the font-size input value.",
+    "pitfalls": [
+      "style.font-size 不是正确的点号属性写法。",
+      "把 transition 写成 all 会超出只过渡 transform 的要求。"
+    ]
+  },
+  "Q21": {
+    "hints": [
+      "先按逻辑网格判断合并格占了哪些位置。",
+      "rowspan 占住下一行的位置，下一行不能再补同一个格子。",
+      "页内链接用 # 与目标 ID 配合；description list 与 pre 各解决不同的内容展示问题。"
+    ],
+    "overview": "这是 HTML lecture pp. 17–18, 36–37, 45, 58–66; L01 HTML-only task form 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "合并后按逻辑列数数格子：rowspan 占用的下一行位置不再添加 td。font、align、valign 是本课程原练习使用的旧式 HTML，不能推广为现代网页的首选写法。",
+      "rowspan 占住下一行的位置，下一行不能再补同一个格子。",
+      "页内链接用 # 与目标 ID 配合；description list 与 pre 各解决不同的内容展示问题。"
+    ],
+    "trace": "The first cell has colspan=\"3\". Monday has rowspan=\"2\". The table has four tr elements.\nGo to terms changes the page fragment to #terms. The two spaces in pre remain visible.",
+    "pitfalls": [
+      "rowspan 的下一行仍补上 Monday 单元格，会造成多余列。",
+      "href=\"#terms\" 的目标是 id，不是另一个文件。"
+    ]
+  },
+  "Q22": {
+    "hints": [
+      "先确认这些规则处于题目限定的同一普通 document CSS 环境。",
+      "在该前提下先比较 specificity，再考虑同条件下的先后顺序。",
+      "ID 比 class 和 type 更具体；border-spacing 只在 separate 模式产生单元格间距。"
+    ],
+    "overview": "这是 CSS lecture: borders, lists, links and cascading; L02 CSS table exercise 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "这里明确排除了 !important、不同来源等因素，才能直接比较 specificity（选择器具体程度）。同一优先级和相同 specificity 才比较后出现的规则。浏览器为隐私限制对 visited 的读取，不能仅靠脚本读取颜色来判定访问历史。",
+      "在该前提下先比较 specificity，再考虑同条件下的先后顺序。",
+      "ID 比 class 和 type 更具体；border-spacing 只在 separate 模式产生单元格间距。"
+    ],
+    "trace": "The paragraph is purple: the ID selector has higher specificity than the class and type selectors in these rules.\nThe table has separated borders. With collapse, border-spacing has no effect; padding still adds space inside cells.",
+    "pitfalls": [
+      "不能把 cascade 简化成“后写一定覆盖前写”。",
+      "border-spacing 与 padding 作用位置不同。"
+    ]
+  },
+  "Q23": {
+    "hints": [
+      "把换图、文本输入事件和对话框分成几个短函数。",
+      "交换前先保存旧值；change 不等同于 select。",
+      "prompt 的取消值为 null；空字符串仍是输入结果。confirm 返回 boolean。"
+    ],
+    "overview": "这是 Week 13: mouseover, focus, blur, change and select; Event lecture pp. 5–19; L03 Q8 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "先保存左图旧 src 再覆盖，否则两图会变成同一来源。onselect 是选中文字；onchange 是值被确认改变。prompt 取消与输入空字符串是两种结果。",
+      "交换前先保存旧值；change 不等同于 select。",
+      "prompt 的取消值为 null；空字符串仍是输入结果。confirm 返回 boolean。"
+    ],
+    "trace": "Moving onto the first image swaps cat/dog; leaving and entering again swaps them back.\nType ab12, then leave the field: it becomes AB12. Selecting text shows the message.\nPrompt Cancel is null. It must not display the word null or be treated as an empty string.",
+    "pitfalls": [
+      "CSS hover 放大没有练到 JavaScript mouseover 交换状态。",
+      "prompt 的返回值不能仅用 if(label) 判断：这样会错误忽略空字符串。"
+    ]
+  },
+  "Q24": {
+    "hints": [
+      "数组操作和日期操作可以分开写、分开测试。",
+      "indexOf 找不到返回 -1；Date 月份索引从 0 开始。",
+      "先判断索引再 splice；复制 Date 后再 setDate，避免修改原日期对象。"
+    ],
+    "overview": "这是 JSbasics lecture: String pp. 61–62, Date pp. 63–70, Array pp. 71–75; L06 input/output task form 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "indexOf 找不到返回 -1；splice(-1,1) 会删除最后一项。Date 的月份索引从 0 开始，getDay 是周几，getDate 是月内日期。复制 Date 再改日期，避免修改原对象。",
+      "indexOf 找不到返回 -1；Date 月份索引从 0 开始。",
+      "先判断索引再 splice；复制 Date 后再 setDate，避免修改原日期对象。"
+    ],
+    "trace": "Add csit985, remove CSIT882, then Show: the list is CSIT884, CSIT985 and the count is 2.\nRemoving a missing code must not remove the last item. The next date is 12. November is month index 10.",
+    "pitfalls": [
+      "忽略 -1 检查会删除错误条目。",
+      "直接写 next = exam 只是同一个 Date 的另一个引用。"
+    ]
+  },
+  "Q25": {
+    "hints": [
+      "这两个 form 用来比较两种 validation，不要让内建检查先挡住 JS 练习。",
+      "空白要在 trim 后检查；只有两项都非空时再比较。",
+      "每次先清旧错误，记录 valid 状态；成功时保存 trimmed 值并返回 true。"
+    ],
+    "overview": "这是 FormValidation lecture pp. 4–6, 8–22; Week 13: onsubmit return; L05 task form 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "Part A 和 Part B 分开，避免浏览器先拦住提交而误以为 JavaScript 分支已经运行。pattern 默认要求整个输入匹配；只在题目要求时添加 validation。",
+      "空白要在 trim 后检查；只有两项都非空时再比较。",
+      "每次先清旧错误，记录 valid 状态；成功时保存 trimmed 值并返回 true。"
+    ],
+    "trace": "Part A rejects an empty email, quantity 0 or 6, quantity 1.5, and code ab1. It accepts a valid email, quantity 1 or 5, and ABC.\nPart B rejects spaces-only input and different strings. Two equal trimmed strings submit. A later valid attempt must remove old error messages.",
+    "pitfalls": [
+      "type=number 不会自己表达 1–5 的范围，需 min/max/step。",
+      "只写 onsubmit=\"validateEmails()\" 会丢失 false 返回值。"
+    ]
+  },
+  "Q26": {
+    "hints": [
+      "DTD 约束结构，XSD 还约束数据类型。",
+      "price 有文本也有 attribute，因此不能只给它一个 simple type。",
+      "simpleContent/extension 在 decimal 文本上添加 currency；无 targetNamespace 的 instance 用 noNamespaceSchemaLocation。"
+    ],
+    "overview": "这是 XMLDTD lecture pp. 25–38; XSD lecture p. 11; Week 13: attributes require a complex type 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "DTD 的 #PCDATA 只声明文本内容，不能限制为 decimal。带 attribute 的纯文本元素需要 complexType + simpleContent。无 targetNamespace 的 schema 用 noNamespaceSchemaLocation；课件单独写 schemaLocation=\"student.xsd\" 的连接示例应按此修正。",
+      "price 有文本也有 attribute，因此不能只给它一个 simple type。",
+      "simpleContent/extension 在 decimal 文本上添加 currency；无 targetNamespace 的 instance 用 noNamespaceSchemaLocation。"
+    ],
+    "trace": "Both XML samples validate against their stated DTD or XSD. The XSD rejects price text free and a missing currency attribute.\nExternal DTD declarations are not wrapped in a DOCTYPE block inside the .dtd file. A price with an attribute cannot be defined only as xsd:decimal.",
+    "pitfalls": [
+      "不要把属性放到 xsd:sequence 内。",
+      "xsi:schemaLocation 需要 namespace/location 配对，不能把单个文件名当作该属性的正确一般写法。"
+    ]
+  },
+  "Q27": {
+    "hints": [
+      "单个 element 和 element collection 的用法不同。",
+      "集合要用 length 和索引；class 名参数不带 CSS 的点。",
+      "每次操作查询当前集合并循环；新增 p 接入页面后，下次查询就会包括它。"
+    ],
+    "overview": "这是 Week 13: getElementsByTagName/getElementsByClassName; DOM lecture p. 6 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "getElementById 返回单个元素；getElementsByTagName 和 getElementsByClassName 返回集合，需 length、索引和循环。class 参数不带点；点属于 CSS selector 写法。",
+      "集合要用 length 和索引；class 名参数不带 CSS 的点。",
+      "每次操作查询当前集合并循环；新增 p 接入页面后，下次查询就会包括它。"
+    ],
+    "trace": "Initial paragraph count is 3. Add twice, then count again: it is 5.\nAfter Colour topics, HTML, CSS and all new JavaScript paragraphs are orange. Notes keeps its normal colour.",
+    "pitfalls": [
+      "集合本身不是一个 p，不能直接 topics.style.color。",
+      "用 p 显示计数会让该计数段落也进入结果。"
+    ]
+  },
+  "Q28": {
+    "hints": [
+      "保存的是任务数组，显示的是数组生成的列表。",
+      "对象数组需要先转换为 JSON 字符串，恢复后再重建列表。",
+      "load: getItem → null check → parse → display；add/delete 后保存；Clear 只 removeItem 本题 key。"
+    ],
+    "overview": "这是 Week 13: local storage; WebStorage lecture pp. 5–31, task-list example 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "这与 Q19 保存原始 textarea 字符串不同：array/object 先 stringify，读回后 parse。删除用稳定 ID，避免数组索引因删除而变化；Clear 只移除本题自己的 key。",
+      "对象数组需要先转换为 JSON 字符串，恢复后再重建列表。",
+      "load: getItem → null check → parse → display；add/delete 后保存；Clear 只 removeItem 本题 key。"
+    ],
+    "trace": "Add Read notes/High and Practise AJAX/Low, reload: both return with the same IDs and urgency values.\nDelete the first item, reload: only the second returns. Clear tasks and reload: the list is empty and the tasks key is absent.\nThe JSON contains an array of objects. It is not [object Object], and IDs are unique.",
+    "pitfalls": [
+      "直接 setItem(key,tasks) 会把对象转换成无用字符串。",
+      "使用 localStorage.clear() 会清掉同 origin 下其他题目的草稿。"
+    ]
+  },
+  "Q29": {
+    "hints": [
+      "同一个 + 符号对字符串和数字的行为不同。",
+      "先读 select 的 value 再选择运算；显示 x 时计算运算符是 *。",
+      "三个输入按题意转换为数字，算 expected，再比较 answer 并替换原反馈。"
+    ],
+    "overview": "这是 L06 Q2: addition, subtraction and multiplication; JS2 input/output; Week 13: value and functions 的补充练习。基础要求与 Optional extension 分开处理，先完成 Task 中的要求。",
+    "flow": [
+      "原题库练到数值转换和条件判断，但没有直接要求按 select 的三种运算检查答案。补题把这个 lab 题型独立保留。显示 x，对应 JavaScript 运算符是 *。",
+      "先读 select 的 value 再选择运算；显示 x 时计算运算符是 *。",
+      "三个输入按题意转换为数字，算 expected，再比较 answer 并替换原反馈。"
+    ],
+    "trace": "10 x 5 = 50 shows Correct!; 14 - 5 = 11 shows Incorrect, please try again.\n10 + 5 = 15 must be correct. A previous incorrect message must disappear after a correct answer.",
+    "pitfalls": [
+      "10 与 5 若保留为字符串，+ 得到 105。",
+      "option 显示的符号与提交/读取的 value 可以不同。"
+    ]
+  }
+}

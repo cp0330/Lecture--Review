@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Book order</title><script>
+var total = 0;
+function addOrder() {
+  // Add the requested quantity, not just one per order line.
+  var title = document.getElementById("title").value;
+  var code = document.getElementById("code").value;
+  var quantity = Number(document.getElementById("quantity").value);
+  var item = document.createElement("li");
+  item.appendChild(document.createTextNode(code + ": " + title + " x " + quantity));
+  document.getElementById("orders").appendChild(item);
+  total += quantity;
+  document.getElementById("total").textContent = total;
+}
+</script></head><body><label>Book title: <input id="title"></label><br><label>Product code: <input id="code"></label><br><label>Quantity: <input id="quantity"></label><br><button onclick="addOrder()">Add to order</button><ul id="orders"></ul><p>Total number of books ordered: <span id="total">0</span></p></body></html>

@@ -4,7 +4,7 @@
 
 ## CSIT884 · Web Development
 
-**20 道重点题 + 9 道查漏题，附独立参考答案、记忆笔记与速记表。**
+**8 道 assignment 风格主练 + 29 道 lab/课堂补充，附分级提示、独立解析与参考答案。**
 
 - [打开 CSIT884 复习入口](https://cp0330.github.io/Lecture--Review/CSIT884/)
 - [英文题库](CSIT884/questions.md) · [参考答案](CSIT884/reference-answers.md)
@@ -12,7 +12,7 @@
 - [查缺补漏与勘误](CSIT884/audit.md) · [验证记录](CSIT884/validation.md)
 - [下载可运行练习包](CSIT884/practice-pack.zip) · [本地运行说明](CSIT884/setup.html)
 
-逐题练习支持搜索、主题/轮次/状态筛选、自动保存草稿、并排答案对照、导出和导入进度。草稿留在当前浏览器；不上传到服务器。
+逐题练习支持按来源/主题/状态筛选；作答、提示、解析、参考答案独立切换，保留草稿、历史尝试及旧版备份。草稿留在当前浏览器；不上传到服务器。
 
 ## CSIT985 · Strategic Network Design
 

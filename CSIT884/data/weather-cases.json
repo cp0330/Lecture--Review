@@ -20,5 +20,60 @@
       "interval": 900,
       "temperature_2m": 14.7
     }
+  },
+  {
+    "latitude": -34.4278,
+    "longitude": 150.8931,
+    "elevation": 32,
+    "generationtime_ms": 0.12,
+    "current": {
+      "time": "2026-11-06T09:00",
+      "interval": 900,
+      "temperature_2m": 18.5
+    }
+  },
+  {
+    "latitude": 40.7128,
+    "longitude": -74.006,
+    "elevation": 10,
+    "generationtime_ms": 0.13,
+    "current": {
+      "time": "2026-11-06T09:00",
+      "interval": 900,
+      "temperature_2m": 14.7
+    }
+  },
+  {
+    "latitude": 48.8566,
+    "longitude": 2.3522,
+    "elevation": 35,
+    "generationtime_ms": 0.13999999999999999,
+    "current": {
+      "time": "2026-11-06T09:00",
+      "interval": 900,
+      "temperature_2m": 16.2
+    }
+  },
+  {
+    "latitude": 35.6762,
+    "longitude": 139.6503,
+    "elevation": 40,
+    "generationtime_ms": 0.15,
+    "current": {
+      "time": "2026-11-06T09:00",
+      "interval": 900,
+      "temperature_2m": 22.1
+    }
+  },
+  {
+    "latitude": -36.8509,
+    "longitude": 174.7645,
+    "elevation": 15,
+    "generationtime_ms": 0.16,
+    "current": {
+      "time": "2026-11-06T09:00",
+      "interval": 900,
+      "temperature_2m": 17.3
+    }
   }
 ]

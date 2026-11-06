@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Equation animation</title>
+<script>
+var studentNumber = 2026001;
+var firstNumber = 1;
+var timer = null;
+function showEquation() {
+  // Add numbers before constructing the output string.
+  var result = firstNumber + studentNumber;
+  document.getElementById("equation").innerHTML = firstNumber + " + " + studentNumber + " = " + result;
+}
+function tick() { firstNumber += 2; showEquation(); }
+function startAnimation() {
+  // A running animation must not be started again.
+  if (timer != null) { return; }
+  timer = setInterval(tick, 1000);
+}
+function stopAnimation() {
+  // This task requires a reset, not only a pause.
+  clearInterval(timer);
+  timer = null;
+  firstNumber = 1;
+  showEquation();
+}
+</script>
+</head>
+<body>
+<p id="equation" style="color:red;font-size:60px;">1 + 2026001 = 2026002</p>
+<span style="color:orange;cursor:pointer;" onclick="startAnimation()">Start Animation</span>
+<span style="color:purple;cursor:pointer;" onclick="stopAnimation()">Stop Animation</span>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Click events</title>
+<script>
+var clickCount = 0;
+function sayHi() {
+  // Send the two required messages.
+  alert("Hi");
+  console.log("Maya Lee");
+}
+function increase() {
+  // Save the count outside this function.
+  clickCount = clickCount + 1;
+  document.getElementById("count").innerHTML = clickCount;
+}
+function addButton() {
+  // Append new content without replacing earlier buttons.
+  var holder = document.getElementById("buttons");
+  holder.innerHTML += "<button>CSIT884</button>";
+}
+</script>
+</head>
+<body>
+<p onclick="sayHi()">Maya Lee</p>
+<button onclick="increase()">2026001</button><p id="count">0</p>
+<p onclick="addButton()">mayal@uowmail.edu.au</p><div id="buttons"></div>
+</body>
+</html>

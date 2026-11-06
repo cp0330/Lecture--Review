@@ -1,1068 +1,1884 @@
 [
   {
-    "n": 1,
-    "id": "Q01",
-    "title": "HTML only: a competition page",
-    "minutes": 30,
-    "priority": 1,
-    "sources": "Final review: HTML; A1 Q1/Q2; A2 Q1; L01",
+    "id": "A1-1",
+    "title": "HTML instructions page",
+    "source": "A1 Q1 · adapted instructions-page task",
+    "track": "assignment",
+    "topic": "HTML",
+    "minutes": 25,
+    "version": 2,
     "requirements": [
-      "Save your page as q01.html. Use HTML only. Do not use a style attribute, a style element or an external CSS file. Set the page title to Coding Competition. Use this practice identity: Maya Lee / 2026001 / mayal@uowmail.edu.au.",
-      "Use h1 to display Coding Competition. Use h2 to display the name, student number and email.",
-      "Create a table with a visible border. Use the column headings Rank, Team and Members. Add two data rows: 1st / River and 2nd / Mountain.",
-      "In the River cell, add the link River Team to https://river.example/. Open it in a new tab. On the next line, display ../assets/team1.svg at 120 pixels wide and 80 pixels high. Do the same for Mountain, using https://mountain.example/ and ../assets/team2.svg.",
-      "Use an unordered list for each team. River has Alex and Bo. Mountain has Chen and Dee. Make Alex and Chen bold. After each leader name, add (team leader) in italic.",
-      "Below the table, add an ordered list: Register, Practice, Compete. Display FROG and EMU with exactly five non-breaking spaces between them. Add a smiley face using the given decimal character entity number 128516."
+      "Use HTML only, with no CSS, to create a web page called workshop.html. Use the practice identity Maya Lee / 2026001 / mayal@uowmail.edu.au.",
+      "On the top of the page, display the main large heading \"How do I register for a study workshop?\". Below it, display a smaller heading containing the student number and email.",
+      "Use the information in the supplied table to write the registration steps in your own words. Display the steps in an unordered list.",
+      "Below the list, display a link with the text \"Click here to read more about study workshops\" and the address https://workshops.example/. When the user clicks the link, it must open in a new tab."
     ],
     "checks": [
-      "The table has three rows and three columns, including the header row. Both images are 120 by 80 pixels. Both links have target=\"_blank\".",
-      "There is no CSS. Use ul and ol in the correct places. The browser must display all five spaces."
+      "The main heading is followed by the smaller identity heading, all five steps, and the final link.",
+      "The list has bullets. The final link opens a separate tab. The page uses no CSS."
     ],
-    "rubric": [
+    "files": [
+      "a1-1.html"
+    ],
+    "marks": null,
+    "adaptation": "A1 Q1 uses Academic Consideration and an external reading task. This adaptation supplies fictional workshop information, so HTML practice is self-contained. The required heading, identity, list and new-tab link follow the assignment form.",
+    "resources": [
+      {
+        "title": "Information to use",
+        "headers": [
+          "Step",
+          "Information"
+        ],
+        "rows": [
+          [
+            "Check the workshop list",
+            "Choose a workshop and check its date."
+          ],
+          [
+            "Complete the form",
+            "Enter your student number and university email."
+          ],
+          [
+            "Review your details",
+            "Check the workshop and your contact details."
+          ],
+          [
+            "Submit the request",
+            "Submit the form before the closing date."
+          ],
+          [
+            "Read the confirmation",
+            "Check your university email for the result."
+          ]
+        ]
+      }
+    ],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The main heading is followed by the smaller identity heading, all five steps, and the final link."
+      },
+      {
+        "id": "c2",
+        "text": "The list has bullets. The final link opens a separate tab. The page uses no CSS."
+      }
+    ],
+    "note_section": 5,
+    "local_service": false
+  },
+  {
+    "id": "A1-2",
+    "title": "HTML coordinator table",
+    "source": "A1 Q2 · adapted coordinator-table task",
+    "track": "assignment",
+    "topic": "HTML",
+    "minutes": 25,
+    "version": 2,
+    "requirements": [
+      "Use HTML only, with no CSS, to create coordinators.html. On the top of the page, display a large heading containing CSIT884, the practice student number and full name: 2026001, Maya Lee.",
+      "Below the heading, use a table with a visible border to display the three supplied coordinator records. The table headers must be Coordinator name, Subject code, Consultation hours and Picture. Each coordinator must appear in a separate row.",
+      "In the Consultation hours column, display the hours using an ordered list.",
+      "In the Picture column, display the supplied picture for that coordinator at 100 by 100 pixels. Use the full image address. Each row must use a different picture."
+    ],
+    "checks": [
+      "The table contains one header row and three coordinator rows, with four columns.",
+      "Consultation hours are numbered. The three pictures are different and each is 100 by 100 pixels."
+    ],
+    "files": [
+      "a1-2.html"
+    ],
+    "marks": null,
+    "adaptation": "A1 Q2 uses the learner’s actual subject coordinators and pictures from uow.edu.au. These names, hours and supplied image addresses are fictional practice data; the original domain requirement is adapted explicitly.",
+    "resources": [
+      {
+        "title": "Supplied practice records",
+        "headers": [
+          "Coordinator",
+          "Subject",
+          "Consultation hours",
+          "Full image address"
+        ],
+        "rows": [
+          [
+            "Alex Green",
+            "CSIT884",
+            "Tuesday 10:00–11:00; Thursday 14:00–15:00",
+            "https://cp0330.github.io/Lecture--Review/CSIT884/assets/team1.svg"
+          ],
+          [
+            "Sam Brown",
+            "CSIT882",
+            "Monday 09:00–10:00; Friday 11:00–12:00",
+            "https://cp0330.github.io/Lecture--Review/CSIT884/assets/team2.svg"
+          ],
+          [
+            "Robin White",
+            "CSIT985",
+            "Wednesday 13:00–14:00",
+            "https://cp0330.github.io/Lecture--Review/CSIT884/assets/team3.svg"
+          ]
+        ]
+      }
+    ],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The table contains one header row and three coordinator rows, with four columns."
+      },
+      {
+        "id": "c2",
+        "text": "Consultation hours are numbered. The three pictures are different and each is 100 by 100 pixels."
+      }
+    ],
+    "note_section": 5,
+    "local_service": false
+  },
+  {
+    "id": "A2-1",
+    "title": "HTML page elements",
+    "source": "A2 Q1 · clarified HTML task",
+    "track": "assignment",
+    "topic": "HTML",
+    "minutes": 20,
+    "version": 2,
+    "requirements": [
+      "Use HTML only to create a web page. Use the practice identity Maya Lee / 2026001.",
+      "Display a table with a visible border, two rows and four columns. In every cell of the first row, display 2026001. In every cell of the second row, display Maya Lee.",
+      "Display an unordered list containing four animal names of your choice.",
+      "Display a link with the text \"Click here\" and the address https://spider.example/. When the user clicks the link, it must open in a new tab.",
+      "Display FROG, then exactly five non-breaking spaces, then EMU."
+    ],
+    "checks": [
+      "The table has exactly eight cells. Student numbers occupy the first row and names occupy the second.",
+      "There are four bullet items. The link opens a new tab, and all five spaces are visible."
+    ],
+    "files": [
+      "a2-1.html"
+    ],
+    "marks": [
       [
-        "Page structure and practice identity",
+        "Table",
         2
       ],
       [
-        "Table and both list types",
-        3
+        "Unordered list",
+        1
       ],
       [
-        "Images and links in new tabs",
-        3
+        "New-tab link",
+        1
       ],
       [
-        "Bold, italic, spaces and character entity",
-        2
+        "Five spaces",
+        1
       ]
+    ],
+    "adaptation": "The original A2 Q1 says both four columns and three columns. This practice explicitly uses two rows and four columns. The original link destination is replaced with a fictional practice domain.",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "Table",
+        "points": 2
+      },
+      {
+        "id": "c2",
+        "text": "Unordered list",
+        "points": 1
+      },
+      {
+        "id": "c3",
+        "text": "New-tab link",
+        "points": 1
+      },
+      {
+        "id": "c4",
+        "text": "Five spaces",
+        "points": 1
+      }
+    ],
+    "note_section": 5,
+    "local_service": false
+  },
+  {
+    "id": "A2-2",
+    "title": "A page with required CSS methods",
+    "source": "A2 Q2 · CSS task",
+    "track": "assignment",
+    "topic": "CSS",
+    "minutes": 20,
+    "version": 2,
+    "requirements": [
+      "Use HTML and CSS to create a web page. Use the practice identity Maya Lee / 2026001 / mayal@uowmail.edu.au, and the country Australia.",
+      "Display the full name at a font size of 50px using inline CSS.",
+      "Display the student number in blue using inline CSS.",
+      "Display two paragraphs: one containing the country and one containing the email. Use document CSS with a class selector to give both paragraphs a dashed orange border.",
+      "Display a large heading \"City of Wollongong\". Use document CSS with an ID selector to set its text colour to purple and its background colour to gray."
+    ],
+    "checks": [
+      "The name is 50px and the student number is blue. Each uses the specified CSS method.",
+      "Both paragraphs have dashed orange borders. The heading is purple on gray. The required class and ID selectors are used."
+    ],
+    "files": [
+      "a2-2.html"
+    ],
+    "marks": [
+      [
+        "Inline name size",
+        1
+      ],
+      [
+        "Inline student-number colour",
+        1
+      ],
+      [
+        "Document CSS class for both paragraphs",
+        2
+      ],
+      [
+        "Document CSS ID for heading",
+        1
+      ]
+    ],
+    "adaptation": "",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "Inline name size",
+        "points": 1
+      },
+      {
+        "id": "c2",
+        "text": "Inline student-number colour",
+        "points": 1
+      },
+      {
+        "id": "c3",
+        "text": "Document CSS class for both paragraphs",
+        "points": 2
+      },
+      {
+        "id": "c4",
+        "text": "Document CSS ID for heading",
+        "points": 1
+      }
+    ],
+    "note_section": 4,
+    "local_service": false
+  },
+  {
+    "id": "A2-3",
+    "title": "Click events on a page",
+    "source": "A2 Q3 · JavaScript task",
+    "track": "assignment",
+    "topic": "Events",
+    "minutes": 20,
+    "version": 2,
+    "requirements": [
+      "Use HTML and JavaScript to create a web page. Display the practice full name Maya Lee. Whenever the user clicks the name, display an alert message \"Hi\" and write Maya Lee to the console.",
+      "Display a button labelled 2026001. The first click displays 1 below the button. Further clicks display 2, 3, and so on. You may display 0 before the first click.",
+      "Display the email mayal@uowmail.edu.au. The first click on the email adds one button labelled CSIT884 below it. The second click gives two buttons, the third gives three, and so on. Keep the buttons already added."
+    ],
+    "checks": [
+      "After three clicks on the student-number button, its count is 3.",
+      "After two email clicks, two CSIT884 buttons are displayed. Clicking the name produces both required messages."
+    ],
+    "files": [
+      "a2-3.html"
+    ],
+    "marks": [
+      [
+        "Name alert and console",
+        1
+      ],
+      [
+        "Student-number counter",
+        1
+      ],
+      [
+        "Repeatedly added buttons",
+        3
+      ]
+    ],
+    "adaptation": "",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "Name alert and console",
+        "points": 1
+      },
+      {
+        "id": "c2",
+        "text": "Student-number counter",
+        "points": 1
+      },
+      {
+        "id": "c3",
+        "text": "Repeatedly added buttons",
+        "points": 3
+      }
+    ],
+    "note_section": 7,
+    "local_service": false
+  },
+  {
+    "id": "A3-1",
+    "title": "Start, stop and restart an animation",
+    "source": "A3 Q1 · animation task",
+    "track": "assignment",
+    "topic": "Animation",
+    "minutes": 30,
+    "version": 2,
+    "requirements": [
+      "Use the practice student number 2026001. Create a web page that initially displays 1 + 2026001 = 2026002. Use inline CSS to make the equation red and 60px.",
+      "Display two clickable texts: \"Start Animation\" in orange and \"Stop Animation\" in purple.",
+      "When the user clicks Start Animation, update the equation every second. After one second, display 3 + 2026001 = 2026004. After another second, display 5 + 2026001 = 2026006. Continue with 7, 9, and so on.",
+      "When the user clicks Stop Animation, stop the updates and display the original equation: 1 + 2026001 = 2026002.",
+      "If the user clicks Start Animation again, start the sequence again with 3 after one second, then 5, 7, and so on."
+    ],
+    "checks": [
+      "The first update occurs one second after Start, and the following updates are one second apart.",
+      "Stop restores the initial equation immediately. A later Start begins again at 3, rather than continuing the stopped value."
+    ],
+    "files": [
+      "a3-1.html"
+    ],
+    "marks": [
+      [
+        "Initial equation and inline CSS",
+        1
+      ],
+      [
+        "Clickable coloured texts",
+        1
+      ],
+      [
+        "One-second equation sequence",
+        5
+      ],
+      [
+        "Stop and original equation",
+        2
+      ],
+      [
+        "Restart sequence",
+        1
+      ]
+    ],
+    "adaptation": "The assignment requires the learner’s own student number. This public practice uses a fixed sample identity. The reference also prevents duplicate timers; that lab robustness detail is not a new assignment marking item.",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "Initial equation and inline CSS",
+        "points": 1
+      },
+      {
+        "id": "c2",
+        "text": "Clickable coloured texts",
+        "points": 1
+      },
+      {
+        "id": "c3",
+        "text": "One-second equation sequence",
+        "points": 5
+      },
+      {
+        "id": "c4",
+        "text": "Stop and original equation",
+        "points": 2
+      },
+      {
+        "id": "c5",
+        "text": "Restart sequence",
+        "points": 1
+      }
+    ],
+    "note_section": 10,
+    "local_service": false
+  },
+  {
+    "id": "A3-2",
+    "title": "A short-URL request form",
+    "source": "A3 Q2 · web-form service contract",
+    "track": "assignment",
+    "topic": "Forms",
+    "minutes": 25,
+    "version": 2,
+    "requirements": [
+      "Create a web page containing a form for a customer to request a short URL. The service documentation is supplied below.",
+      "Use three text fields: one for the customer email, one for the original long URL, and one for the activation date.",
+      "Use radio buttons for the payment method. The customer can choose Apple Pay, PayPal, AliPay or WeChat Pay.",
+      "Display a Submit button and a Reset button. The form must explicitly use the action, method, parameter names and values in the service documentation. Do not add input validation."
+    ],
+    "checks": [
+      "Selecting PayPal submits pmethod=200. Only one payment method can be selected.",
+      "For email maya@example.com, URL https://example.com/book and date 2026-11-11, submission contains user, longurl, adate and the chosen pmethod. Reset restores the initial form."
+    ],
+    "files": [
+      "a3-2.html"
+    ],
+    "marks": [
+      [
+        "Three text fields",
+        1
+      ],
+      [
+        "Payment radio controls and values",
+        2
+      ],
+      [
+        "Submit and reset",
+        1
+      ],
+      [
+        "Explicit action and method",
+        1
+      ]
+    ],
+    "adaptation": "The original fictional service is http://urlservice.org/form. The runnable practice substitutes /short-url on the local practice server. Parameter names and payment values are retained.",
+    "resources": [
+      {
+        "title": "Service documentation",
+        "headers": [
+          "Item",
+          "Required value"
+        ],
+        "rows": [
+          [
+            "Action",
+            "/short-url on the local practice server"
+          ],
+          [
+            "Method",
+            "GET"
+          ],
+          [
+            "user",
+            "Customer email"
+          ],
+          [
+            "longurl",
+            "Original long URL"
+          ],
+          [
+            "adate",
+            "Activation date"
+          ],
+          [
+            "pmethod",
+            "100 = Apple Pay; 200 = PayPal; 300 = AliPay; 400 = WeChat Pay"
+          ]
+        ]
+      }
+    ],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "Three text fields",
+        "points": 1
+      },
+      {
+        "id": "c2",
+        "text": "Payment radio controls and values",
+        "points": 2
+      },
+      {
+        "id": "c3",
+        "text": "Submit and reset",
+        "points": 1
+      },
+      {
+        "id": "c4",
+        "text": "Explicit action and method",
+        "points": 1
+      }
+    ],
+    "note_section": 8,
+    "local_service": true
+  },
+  {
+    "id": "A4-1",
+    "title": "A weather information page",
+    "source": "A4 · complete AJAX and CSS task",
+    "track": "assignment",
+    "topic": "AJAX",
+    "minutes": 45,
+    "version": 2,
+    "requirements": [
+      "Create a web page. On the top, display a heading containing the practice student number and name: 2026001, Maya Lee.",
+      "Below the heading, display a table with a visible border, four columns and six rows. The headers are City, Country, Latitude and Longitude. Display the five supplied city records in the remaining rows.",
+      "Below the table, display two text fields for the user to enter latitude and longitude. Display a button labelled \"Get Weather JSON\".",
+      "When the user enters coordinates and clicks the button, construct the request URL from those inputs and obtain the corresponding JSON. You must use the XMLHttpRequest AJAX method taught in this subject.",
+      "Display User Query with the entered coordinates. Then display a bordered Weather information table containing Elevation, Time, Interval, Temperature and Generationtime (ms), using the response data. Follow the supplied target layout.",
+      "Use document CSS and a class selector to make the temperature orange and 50px. The class name must equal the practice family name, lee.",
+      "Use document CSS and an ID selector to make \"Weather information\" purple and 50px. The ID must equal the practice email username, mayal.",
+      "You may assume valid numeric input. Test several coordinate pairs, including Wollongong and New York. Each new request must display the result for the current input."
+    ],
+    "checks": [
+      "Before a request, the city table has six rows and four columns. Both coordinate fields and the button appear below it.",
+      "Wollongong and New York requests display different supplied temperatures. All displayed weather values come from the corresponding response.",
+      "The required class/ID names and document CSS methods are used. The input coordinates appear under User Query."
+    ],
+    "files": [
+      "a4-1.html"
+    ],
+    "marks": [
+      [
+        "Heading and five-city table",
+        1
+      ],
+      [
+        "Coordinate fields and button",
+        1
+      ],
+      [
+        "Input-based classroom AJAX and result display",
+        6
+      ],
+      [
+        "Temperature document CSS class",
+        1
+      ],
+      [
+        "Heading document CSS ID",
+        1
+      ]
+    ],
+    "adaptation": "A4 uses Open-Meteo. This practice substitutes a documented local endpoint and fixed response data, so it works without a live weather service. The full five-city table and assignment task structure are retained.",
+    "resources": [
+      {
+        "title": "City records",
+        "headers": [
+          "City",
+          "Country",
+          "Latitude",
+          "Longitude"
+        ],
+        "rows": [
+          [
+            "Wollongong",
+            "Australia",
+            -34.4278,
+            150.8931
+          ],
+          [
+            "New York",
+            "USA",
+            40.7128,
+            -74.006
+          ],
+          [
+            "Paris",
+            "France",
+            48.8566,
+            2.3522
+          ],
+          [
+            "Tokyo",
+            "Japan",
+            35.6762,
+            139.6503
+          ],
+          [
+            "Auckland",
+            "New Zealand",
+            -36.8509,
+            174.7645
+          ]
+        ]
+      },
+      {
+        "title": "Service documentation",
+        "headers": [
+          "Item",
+          "Required value"
+        ],
+        "rows": [
+          [
+            "Endpoint",
+            "/weather on the local practice server"
+          ],
+          [
+            "Method",
+            "GET"
+          ],
+          [
+            "Parameters",
+            "latitude; longitude; current=temperature_2m"
+          ],
+          [
+            "Sample query",
+            "/weather?latitude=-34.4278&longitude=150.8931&current=temperature_2m"
+          ],
+          [
+            "Response fields",
+            "latitude, longitude, elevation, generationtime_ms; current.time, current.interval, current.temperature_2m"
+          ]
+        ]
+      },
+      {
+        "title": "Sample response",
+        "code": "{\"latitude\":-34.4278,\"longitude\":150.8931,\"elevation\":32,\"generationtime_ms\":0.12,\"current\":{\"time\":\"2026-11-06T09:00\",\"interval\":900,\"temperature_2m\":18.5}}"
+      }
+    ],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "Heading and five-city table",
+        "points": 1
+      },
+      {
+        "id": "c2",
+        "text": "Coordinate fields and button",
+        "points": 1
+      },
+      {
+        "id": "c3",
+        "text": "Input-based classroom AJAX and result display",
+        "points": 6
+      },
+      {
+        "id": "c4",
+        "text": "Temperature document CSS class",
+        "points": 1
+      },
+      {
+        "id": "c5",
+        "text": "Heading document CSS ID",
+        "points": 1
+      }
+    ],
+    "note_section": 15,
+    "local_service": true
+  },
+  {
+    "id": "Q01",
+    "title": "A competition information page",
+    "source": "Final review: HTML; A1 Q1/Q2; A2 Q1; L01",
+    "track": "lab",
+    "topic": "HTML",
+    "minutes": 30,
+    "version": 2,
+    "requirements": [
+      "Create q01.html using HTML only, with no CSS. Set the page title to Coding Competition. Display a large heading Coding Competition, then a smaller heading with Maya Lee / 2026001 / mayal@uowmail.edu.au.",
+      "Display a bordered table with the headings Rank, Team and Members. The two data rows are 1st / River and 2nd / Mountain.",
+      "For River, display a River Team link to https://river.example/ and, on the next line, ../assets/team1.svg at 120 by 80 pixels. For Mountain, use https://mountain.example/ and ../assets/team2.svg with the same size. Both links must open in a new tab.",
+      "Display each team’s members in an unordered list. River: Alex and Bo; Mountain: Chen and Dee. Make Alex and Chen bold and add (team leader) in italic after each name.",
+      "Below the table, display an ordered list containing Register, Practice and Compete. Then display FROG, five non-breaking spaces and EMU. Add a smiley face using the supplied decimal character entity number 128516."
+    ],
+    "checks": [
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q01.html"
     ],
-    "topic": "HTML"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 5,
+    "local_service": false
   },
   {
-    "n": 2,
     "id": "Q02",
-    "title": "Required CSS methods and selectors",
+    "title": "CSS selectors and an external stylesheet",
+    "source": "Final review: CSS; A2 Q2; A4 selector requirements; L02",
+    "track": "lab",
+    "topic": "CSS",
     "minutes": 30,
-    "priority": 1,
-    "sources": "Final review: CSS; A2 Q2; A4 selector requirements; L02",
+    "version": 2,
     "requirements": [
-      "Create q02.html. Use h1 to display City Coding Teams, with id=\"heading\". Use document CSS and an ID selector to set purple text and a lightgray background.",
-      "Display Maya Lee at 50px using inline CSS. Display 2026001 in blue using inline CSS.",
-      "Create two p elements. Display Australia in one and mayal@uowmail.edu.au in the other. Give both class=\"info\". Use document CSS and a class selector to set a 2px dashed orange border and 10px padding.",
-      "Create a table with id=\"teamTable\". Use the headings Rank and Members. Add one data row: 1 and an unordered list containing Alex and Bo. Give the list class=\"members\".",
-      "Use descendant selectors to select all th and td elements inside teamTable. Set a 1px solid black border, 12px padding and vertical-align: top. Set border-collapse: collapse on the table. Give the Rank cells class=\"rank\" and right-align them.",
-      "Use a child selector to make the direct li children of members green.",
-      "Also create q02-external.html and q02.css. Move only the document CSS to q02.css. Keep the inline CSS. Use a link element to load the CSS file. Both pages must look the same."
+      "Create q02.html with a heading City Coding Teams, name Maya Lee, student number 2026001, and paragraphs Australia and mayal@uowmail.edu.au.",
+      "Use document CSS and an ID selector for the heading: purple text and lightgray background. Use inline CSS for the name at 50px and the student number in blue.",
+      "Give both paragraphs class info. Use document CSS with that class to give them a 2px dashed orange border and 10px padding.",
+      "Add a table with ID teamTable, column headings Rank and Members, and a row containing 1 and a list of Alex and Bo. Give the list class members and the Rank cells class rank.",
+      "Use descendant selectors for the table cells: a 1px solid black border, 12px padding and top vertical alignment. Collapse the table borders and right-align the Rank cells. Use a child selector to make the direct list items green.",
+      "Create q02-external.html and q02.css. Move the document CSS into the CSS file, keep the inline CSS, and link the stylesheet. Both versions must have the same appearance."
     ],
     "checks": [
-      "Both HTML pages have the same appearance.",
-      "Use > for direct children in the green list rule. Do not replace it with a space.",
-      "Use . for a class and # for an ID. Do not put style tags inside the CSS file."
-    ],
-    "rubric": [
-      [
-        "Required inline/document CSS and selectors",
-        4
-      ],
-      [
-        "Table, descendant and child selectors",
-        3
-      ],
-      [
-        "Conversion to external CSS",
-        3
-      ]
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q02.html",
       "q02-external.html",
       "q02.css"
     ],
-    "topic": "CSS"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 4,
+    "local_service": false
   },
   {
-    "n": 3,
     "id": "Q03",
-    "title": "Click events, counters and added content",
+    "title": "Clicking text and adding buttons",
+    "source": "Final review: JavaScript and onclick; A2 Q3; L03 Q1/Q5/Q6",
+    "track": "lab",
+    "topic": "Events",
     "minutes": 20,
-    "priority": 1,
-    "sources": "Final review: JavaScript and onclick; A2 Q3; L03 Q1/Q5/Q6",
+    "version": 2,
     "requirements": [
-      "Display the clickable name Maya Lee. When clicked, show an alert containing Hi and write Maya Lee to the console.",
-      "Display a button labelled 2026001. Below it, display a counter starting at 0. Increase it by 1 each time the button is clicked.",
-      "Display the clickable email mayal@uowmail.edu.au. Each click adds one button labelled CSIT884 below the email. Keep all earlier buttons.",
-      "Add short JavaScript comments that explain the purpose of the main steps."
+      "Create a web page displaying Maya Lee. Clicking the name must show the alert Hi and write Maya Lee to the console.",
+      "Display a button labelled 2026001 and a counter initially showing 0. Each click increases that counter by one.",
+      "Display mayal@uowmail.edu.au. Each click on the email adds one CSIT884 button below it. Keep all earlier buttons."
     ],
     "checks": [
-      "After three counter-button clicks, the counter shows 3.",
-      "After two email clicks, there are two new buttons. The counter does not change."
-    ],
-    "rubric": [
-      [
-        "Alert and console output",
-        2
-      ],
-      [
-        "Counter state and display",
-        3
-      ],
-      [
-        "Adding buttons without replacing earlier ones",
-        3
-      ],
-      [
-        "Structure, names and comments",
-        2
-      ]
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q03.html"
     ],
-    "topic": "Events"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 7,
+    "local_service": false
   },
   {
-    "n": 4,
     "id": "Q04",
-    "title": "value, src and the Enter key",
+    "title": "Animal buttons and text commands",
+    "source": "Final review: value, src and events; L03 Q2/Q3/Q7",
+    "track": "lab",
+    "topic": "Events",
     "minutes": 25,
-    "priority": 2,
-    "sources": "Final review: value, src and events; L03 Q2/Q3/Q7",
+    "version": 2,
     "requirements": [
-      "Display Cat and Dog buttons, a read-only status text field, an img element and a command text field.",
-      "When Cat is clicked, set the status field to Cat selected and show ../assets/cat.svg. The Dog button shows Dog selected and ../assets/dog.svg.",
-      "In the command field, pressing Enter executes display cat or display dog. Use the same update function as the buttons. For any other command, show an alert containing Invalid command. Keep the previous image and status.",
-      "Execute a command only on Enter, not on other keys. You do not need to ignore letter case or remove spaces."
+      "Create a page with Cat and Dog buttons, a read-only status field, an image and a command field.",
+      "Clicking Cat displays Cat selected and ../assets/cat.svg. Clicking Dog displays Dog selected and ../assets/dog.svg.",
+      "When the user enters display cat or display dog in the command field and presses Enter, display the same corresponding result as the buttons.",
+      "Any other command followed by Enter must show the alert Invalid command and keep the previous result. Other keys do not execute a command. Commands are case-sensitive and spaces do not need to be removed."
     ],
     "checks": [
-      "Both the buttons and valid commands change the image and status.",
-      "display bird followed by Enter shows an alert and keeps the previous image."
-    ],
-    "rubric": [
-      [
-        "Button behaviour",
-        3
-      ],
-      [
-        "Correct use of value and src",
-        3
-      ],
-      [
-        "Enter key and invalid commands",
-        3
-      ],
-      [
-        "Comments and function reuse",
-        1
-      ]
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q04.html"
     ],
-    "topic": "Events"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 7,
+    "local_service": false
   },
   {
-    "n": 5,
     "id": "Q05",
-    "title": "Animation: one timer, reset and restart",
+    "title": "Animation with a single running sequence",
+    "source": "Final review: setInterval/clearInterval; A3 Q1; L06 Q4",
+    "track": "lab",
+    "topic": "Animation",
     "minutes": 30,
-    "priority": 1,
-    "sources": "Final review: setInterval/clearInterval; A3 Q1; L06 Q4",
+    "version": 2,
     "requirements": [
-      "Use the fixed practice student number 2026001. Initially display 1 + 2026001 = 2026002. Use inline CSS to make it red and 60px.",
-      "Display two clickable texts: Start Animation in orange and Stop Animation in purple.",
-      "After Start is clicked, increase the first number by 2 every 1000ms: 3, 5, 7 and so on. Update the sum on the right. The first change happens after one second.",
-      "Clicking Start again while the animation is running must not create another timer or reset the current sequence.",
-      "Stop must stop the animation and restore the original equation. After another Start click, the first change is again to 3 after one second."
+      "Create a page initially displaying 1 + 2026001 = 2026002 in red at 60px using inline CSS. Display clickable Start Animation in orange and Stop Animation in purple.",
+      "Start increases the first number by two every second and updates the sum. The first change is to 3 after one second, followed by 5, 7, and so on.",
+      "Clicking Start several times while running must still produce only one update per second and must not reset the sequence.",
+      "Stop stops the updates and restores the original equation. A later Start begins again at 3 after one second."
     ],
     "checks": [
-      "After Start, the first number changes to 3 and then 5 at one-second intervals.",
-      "Clicking Start several times quickly still increases the number by only 2 each second.",
-      "Stop immediately restores 1. The equation then stays unchanged until Start is clicked."
-    ],
-    "rubric": [
-      [
-        "Initial page and required styles",
-        2
-      ],
-      [
-        "Interval and equation updates",
-        3
-      ],
-      [
-        "Only one running timer",
-        2
-      ],
-      [
-        "Stop, reset and restart",
-        3
-      ]
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q05.html"
     ],
-    "topic": "Animation"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 10,
+    "local_service": false
   },
   {
-    "n": 6,
     "id": "Q06",
-    "title": "Random slideshow",
+    "title": "A random slideshow",
+    "source": "Final review: random numbers and animation; L06 Q5; Animation B slideshow",
+    "track": "lab",
+    "topic": "Animation",
     "minutes": 20,
-    "priority": 2,
-    "sources": "Final review: random numbers and animation; L06 Q5; Animation B slideshow",
+    "version": 2,
     "requirements": [
-      "Create an array with six image paths: ../assets/team1.svg through ../assets/team6.svg.",
-      "After Start Slideshow is clicked, show one randomly selected image every 1200ms. The index must be from 0 to 5. The same image may appear twice in a row. Show the first image after 1.2 seconds.",
-      "Stop Slideshow stops the updates and keeps the last image. Start begins random updates again.",
-      "There must be only one timer, even after several Start clicks."
+      "Create a web page with Start Slideshow and Stop Slideshow buttons. Use the six supplied pictures, ../assets/team1.svg through ../assets/team6.svg.",
+      "After Start, display a randomly selected picture every 1.2 seconds. The first picture appears after 1.2 seconds. The same picture may appear twice in a row.",
+      "Stop keeps the last picture and stops further updates. Start can then resume the slideshow. Repeated Start clicks must never create simultaneous slideshows."
     ],
     "checks": [
-      "Every displayed path is one of the six array items.",
-      "After Stop, the image stays visible and does not change."
-    ],
-    "rubric": [
-      [
-        "Array and correct random index range",
-        4
-      ],
-      [
-        "Image update every 1200ms",
-        2
-      ],
-      [
-        "One timer, stopping and restarting",
-        3
-      ],
-      [
-        "Comments",
-        1
-      ]
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q06.html"
     ],
-    "topic": "Animation"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 10,
+    "local_service": false
   },
   {
-    "n": 7,
     "id": "Q07",
-    "title": "Web form: follow the service documentation",
+    "title": "A library search form",
+    "source": "Final review: web-form marking requirements; A3 Q2; L04",
+    "track": "lab",
+    "topic": "Forms",
     "minutes": 25,
-    "priority": 1,
-    "sources": "Final review: web-form marking requirements; A3 Q2; L04",
+    "version": 2,
     "requirements": [
-      "The practice service is /search on the current website. It accepts GET requests. The included local server displays the received parameters.",
-      "The parameters are author, year, sub and format. Use text fields for author and year, checkboxes for sub, and radio buttons for format.",
-      "sub accepts multiple values: mth for Mathematics, cs for Computer Science, and bio for Biology.",
-      "format accepts one value: p for Print or e for Electronic. Put both radio buttons in the same group. Select Print by default.",
-      "Add a Search submit button and a Clear reset button. Do not add validation.",
-      "For author smith, year 2024, subjects Mathematics and Biology, and format Electronic, submit author=smith&year=2024&sub=mth&sub=bio&format=e."
+      "Create a library search form using the supplied service documentation. Use text fields for author and year, checkboxes for subjects and radio buttons for format.",
+      "Offer Mathematics, Computer Science and Biology. Allow more than one subject. Offer Print and Electronic formats, with Print selected initially.",
+      "Display Search and Clear buttons. Search submits the form; Clear restores the default form. Do not add validation."
     ],
     "checks": [
-      "Each name matches the documentation. The submitted value is the service value, not the displayed label.",
-      "Clear empties the text fields, clears the subject choices and restores Print.",
-      "After starting the local server, submit the form and check the received parameters. Parameter order does not change their meaning."
-    ],
-    "rubric": [
-      [
-        "Correct action and method",
-        2
-      ],
-      [
-        "Text fields, checkboxes and parameter names",
-        3
-      ],
-      [
-        "Radio group, default choice and values",
-        3
-      ],
-      [
-        "Submit and reset",
-        2
-      ]
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q07.html"
     ],
-    "topic": "Forms"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [
+      {
+        "title": "Service documentation",
+        "headers": [
+          "Item",
+          "Required value"
+        ],
+        "rows": [
+          [
+            "Action",
+            "/search on the local practice server"
+          ],
+          [
+            "Method",
+            "GET"
+          ],
+          [
+            "author; year",
+            "Author and publication year"
+          ],
+          [
+            "sub",
+            "mth = Mathematics; cs = Computer Science; bio = Biology; multiple values allowed"
+          ],
+          [
+            "format",
+            "p = Print (default); e = Electronic"
+          ]
+        ]
+      }
+    ],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 8,
+    "local_service": true
   },
   {
-    "n": 8,
     "id": "Q08",
-    "title": "Form validation: a random addition question",
+    "title": "A random question before form submission",
+    "source": "Final review: form validation and random numbers; L05; Form Validation B",
+    "track": "lab",
+    "topic": "Forms",
     "minutes": 30,
-    "priority": 2,
-    "sources": "Final review: form validation and random numbers; L05; Form Validation B",
+    "version": 2,
     "requirements": [
-      "Extend the complete Q07 form. On page load, generate and store two random integers from 1 to 10. Display their addition question and an answer field.",
-      "Call a validation function from onsubmit and use its return value. Do not give the answer field a name. Do not submit the maths question as a service parameter.",
-      "For an empty or wrong answer, show Wrong! in red and stop submission. For a correct answer, clear the error message and submit normally.",
-      "Check the question currently shown. Do not generate new numbers during validation. Clear resets the form, generates a new question and clears Wrong!.",
-      "Validate only the maths answer. Do not add extra rules such as requiring author or year."
+      "Create the library form shown in the supplied starting file, with an addition question and an answer field.",
+      "On page load, display two random integers from 1 to 10 as an addition question.",
+      "When the user submits an empty or incorrect answer, display Wrong! in red and prevent submission. A correct answer clears the message and submits the library parameters normally.",
+      "The question stays the same until Clear is clicked. Clear restores the form, creates a new question and removes the error. Do not send the question or answer as service parameters. Validate only the maths answer."
     ],
     "checks": [
-      "A wrong answer keeps the current page open and displays Wrong!.",
-      "After correcting the answer, the submitted parameters have only the four names defined in Q07.",
-      "After Clear, the answer field and error message are empty. Both new numbers are within 1 to 10."
-    ],
-    "rubric": [
-      [
-        "Random range and stored question state",
-        3
-      ],
-      [
-        "onsubmit and false/true return values",
-        3
-      ],
-      [
-        "Error display and clearing",
-        2
-      ],
-      [
-        "Unchanged service parameters and reset",
-        2
-      ]
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q08.html"
     ],
-    "topic": "Forms"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [
+      {
+        "title": "Starting form",
+        "download": "data/starters/q08-start.html",
+        "description": "This supplied HTML contains the complete search form. Add the random question and validation to it. The form is provided, not assessed as recall from Q07."
+      }
+    ],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 8,
+    "local_service": true
   },
   {
-    "n": 9,
     "id": "Q09",
-    "title": "JSON: correct the structure and data types",
+    "title": "Correct an invalid JSON document",
+    "source": "Final review: JSON syntax; L09 Q1/Q2",
+    "track": "lab",
+    "topic": "JSON",
     "minutes": 15,
-    "priority": 2,
-    "sources": "Final review: JSON syntax; L09 Q1/Q2",
+    "version": 2,
     "requirements": [
-      "Correct the JSON below and save it as q09.json. Name the subject array subjectList. Keep all data. age must be a number and fullTime must be a boolean.",
-      "Incorrect JSON:\n```json\n{\n \"firstName\":\"Maya\",\n \"lastName\":\"Lee\",\n [ {\"code\":\"CSIT884\",\"title\":\"Web Development\"},\n   {\"code\":\"CSIT882\",\"title\":\"Systems\"} ],\n age:22,\n \"fullTime\":True,\n}\n```"
+      "Correct the supplied JSON and save it as q09.json. Keep all data. The subject array must be named subjectList, age must be a number, and fullTime must be a boolean."
     ],
     "checks": [
-      "After JSON.parse, subjectList.length is 2.",
-      "age has type number and fullTime has type boolean."
-    ],
-    "rubric": [
-      [
-        "Property names and object structure",
-        3
-      ],
-      [
-        "Array, brackets and commas",
-        3
-      ],
-      [
-        "Number and boolean types",
-        2
-      ],
-      [
-        "All data kept",
-        2
-      ]
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q09.json"
     ],
-    "topic": "JSON"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [
+      {
+        "title": "Supplied document",
+        "code": "{\n \"firstName\":\"Maya\",\n \"lastName\":\"Lee\",\n [ {\"code\":\"CSIT884\",\"title\":\"Web Development\"},\n   {\"code\":\"CSIT882\",\"title\":\"Systems\"} ],\n age:22,\n \"fullTime\":True,\n}",
+        "language": "json"
+      }
+    ],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 11,
+    "local_service": false
   },
   {
-    "n": 10,
     "id": "Q10",
-    "title": "JSON: convert between an object and form fields",
+    "title": "Convert subject data to and from JSON",
+    "source": "Final review: stringify/parse; L09 Q3/Q4",
+    "track": "lab",
+    "topic": "JSON",
     "minutes": 25,
-    "priority": 1,
-    "sources": "Final review: stringify/parse; L09 Q3/Q4",
+    "version": 2,
     "requirements": [
-      "Display three text fields for code, title and credit point, a Core subject checkbox, and a textarea.",
-      "View JSON constructs an object with code, title, cp and coreFlag. cp must be a number and coreFlag a boolean. Use JSON.stringify(..., null, 2) to display it in the textarea.",
-      "Read JSON uses JSON.parse on the textarea content. Fill the three text fields and checkbox from the resulting object.",
-      "Test with CSIT884 / Web Development / 6 / true. Assume all input is valid. Error handling is not required."
+      "Create a page with text fields for subject code, title and credit point, a Core subject checkbox, a textarea, and View JSON and Read JSON buttons.",
+      "When View JSON is clicked, construct a subject object from the fields and display its JSON in the textarea with two-space indentation. Its properties are code, title, cp and coreFlag. cp is numeric and coreFlag is boolean.",
+      "When Read JSON is clicked, reconstruct the subject from the textarea and display its values in the fields and checkbox.",
+      "Test with CSIT884, Web Development, 6 and a selected checkbox. You may assume valid input; error handling is not required."
     ],
     "checks": [
-      "In the JSON, 6 has no quotes and coreFlag is true or false.",
-      "Change the textarea data to cp=4 and coreFlag=false. Read JSON must update both controls."
-    ],
-    "rubric": [
-      [
-        "Reading input and using correct types",
-        3
-      ],
-      [
-        "stringify and indentation",
-        2
-      ],
-      [
-        "Parsing and restoring form controls",
-        3
-      ],
-      [
-        "checked, value and comments",
-        2
-      ]
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q10.html"
     ],
-    "topic": "JSON"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 11,
+    "local_service": false
   },
   {
-    "n": 11,
     "id": "Q11",
-    "title": "XML: represent a complete student record",
+    "title": "Write a student record in XML",
+    "source": "Final review: XML data and root element; L07 Q1/Q3",
+    "track": "lab",
+    "topic": "XML / DTD / XSD",
     "minutes": 20,
-    "priority": 2,
-    "sources": "Final review: XML data and root element; L07 Q1/Q3",
+    "version": 2,
     "requirements": [
-      "Write q11.xml. Put the XML declaration at the start of the first line. Write XML only; do not add a DTD.",
-      "Use student as the root, with the required attribute number=\"2026001\". Its child elements, in order, are firstName containing Maya, lastName containing Lee, and subjects.",
-      "subjects contains two subject elements. Each has a code attribute and these child elements in order: creditPoint, mark, grade.",
-      "The records are CSIT884 / 6 / 84 / A and CSIT882 / 6 / 72 / B. Keep all data.",
-      "After your XML, explain separately why two student elements at the top level break the single-root rule, and why number=2026001 needs quotes. Do not put these explanations inside the XML file."
+      "Write q11.xml to represent the supplied complete student record. Write XML only, without a DTD. Put the XML declaration at the start of the first line.",
+      "Use a student root with a number attribute. Use firstName, lastName and subjects in that order. Each subject has a code attribute and creditPoint, mark and grade children in that order.",
+      "The student is Maya Lee, number 2026001. The subjects are CSIT884 / 6 / 84 / A and CSIT882 / 6 / 72 / B. Keep all records and values."
     ],
     "checks": [
-      "There is exactly one root. Both subject elements are inside subjects.",
-      "Letter case matches. Attribute values have quotes. Do not add table-presentation tags such as th or td."
-    ],
-    "rubric": [
-      [
-        "Declaration, single root and syntax",
-        3
-      ],
-      [
-        "Required structure and attributes",
-        3
-      ],
-      [
-        "All record data",
-        2
-      ],
-      [
-        "Explanation of both errors",
-        2
-      ]
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q11.xml"
     ],
-    "topic": "XML / DTD / XSD"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 14,
+    "local_service": false
   },
   {
-    "n": 12,
     "id": "Q12",
-    "title": "DTD: define the XML structure",
+    "title": "Write an internal DTD",
+    "source": "Final review: XML/DTD; L07 Q4; XMLDTD lecture",
+    "track": "lab",
+    "topic": "XML / DTD / XSD",
     "minutes": 20,
-    "priority": 2,
-    "sources": "Final review: XML/DTD; L07 Q4; XMLDTD lecture",
+    "version": 2,
     "requirements": [
-      "Copy Q11 to q12.xml. Add an internal DTD between the XML declaration and the student element.",
-      "The children of student must be firstName, lastName and subjects, in that order. subjects must contain one or more subject elements.",
-      "The children of subject must be creditPoint, mark and grade, in that order. Use #PCDATA for the text-only elements.",
-      "student.number and subject.code must both be required CDATA attributes.",
-      "In a separate sentence, explain the allowed numbers of occurrences for subject+, subject* and subject?."
+      "The supplied XML describes a student and subject records. Create q12.xml with the same data and a corresponding internal DTD.",
+      "student contains firstName, lastName and subjects in that order. subjects contains one or more subject records. Each subject contains creditPoint, mark and grade in that order.",
+      "The number attribute on student and the code attribute on subject are required. All element text and both attributes are text data."
     ],
     "checks": [
-      "The original XML passes DTD validation.",
-      "Removing number or code must fail validation. Empty subjects must also fail."
-    ],
-    "rubric": [
-      [
-        "DOCTYPE and all element declarations",
-        4
-      ],
-      [
-        "Order and subject+",
-        2
-      ],
-      [
-        "Both required attributes",
-        3
-      ],
-      [
-        "Occurrence-symbol explanation",
-        1
-      ]
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q12.xml"
     ],
-    "topic": "XML / DTD / XSD"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [
+      {
+        "title": "XML to constrain",
+        "code": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<student number=\"2026001\">\n  <firstName>Maya</firstName>\n  <lastName>Lee</lastName>\n  <subjects>\n    <subject code=\"CSIT884\"><creditPoint>6</creditPoint><mark>84</mark><grade>A</grade></subject>\n    <subject code=\"CSIT882\"><creditPoint>6</creditPoint><mark>72</mark><grade>B</grade></subject>\n  </subjects>\n</student>\n",
+        "language": "xml"
+      }
+    ],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 14,
+    "local_service": false
   },
   {
-    "n": 13,
     "id": "Q13",
-    "title": "XSD: nested complex types and restrictions",
+    "title": "Write an XSD for exam results",
+    "source": "Final review: simple/complex types; L08 Q1/Q2/Q3",
+    "track": "lab",
+    "topic": "XML / DTD / XSD",
     "minutes": 35,
-    "priority": 2,
-    "sources": "Final review: simple/complex types; L08 Q1/Q2/Q3",
+    "version": 2,
     "requirements": [
-      "Write q13.xsd for this XML:\n```xml\n<?xml version=\"1.0\"?>\n<resultBatch campus=\"Sydney\">\n  <result ref=\"R001\"><contestantId>00025142</contestantId><examId>WEB01</examId><score>156</score><band>C</band></result>\n  <result ref=\"R002\"><contestantId>00025143</contestantId><examId>WEB01</examId><score>280</score><band>A</band></result>\n</resultBatch>\n```",
-      "resultBatch contains one or more result elements, with no upper limit. campus and ref are required string attributes.",
-      "Each result has exactly one of each child element, in the shown order. contestantId and examId are strings. Keep leading zeros in identifiers.",
-      "score is an integer from 0 to 300, including both limits. band can only be A, B, C or D.",
-      "Use xsd:schema, complexType, sequence and simpleType/restriction. Explain separately why resultBatch and result are complex types."
+      "Write q13.xsd for the supplied XML. resultBatch contains one or more result records, with no upper limit. campus and ref are required string attributes.",
+      "Each result contains exactly one contestantId, examId, score and band, in that order. contestantId and examId are strings, including any leading zeros.",
+      "score must be an integer from 0 to 300 inclusive. band must be A, B, C or D."
     ],
     "checks": [
-      "The given XML is valid. Scores 0 and 300 are valid.",
-      "Reject scores 301 and 1.5, band E, a missing ref, or a resultBatch with no result."
-    ],
-    "rubric": [
-      [
-        "Schema and nested structure",
-        3
-      ],
-      [
-        "Occurrence limits and order",
-        2
-      ],
-      [
-        "Score and band restrictions",
-        3
-      ],
-      [
-        "Attributes, types and explanation",
-        2
-      ]
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q13.xsd",
       "q13-sample.xml"
     ],
-    "topic": "XML / DTD / XSD"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [
+      {
+        "title": "Supplied document",
+        "code": "<?xml version=\"1.0\"?>\n<resultBatch campus=\"Sydney\">\n  <result ref=\"R001\"><contestantId>00025142</contestantId><examId>WEB01</examId><score>156</score><band>C</band></result>\n  <result ref=\"R002\"><contestantId>00025143</contestantId><examId>WEB01</examId><score>280</score><band>A</band></result>\n</resultBatch>",
+        "language": "xml"
+      }
+    ],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 14,
+    "local_service": false
   },
   {
-    "n": 14,
     "id": "Q14",
-    "title": "AJAX: display an object and an array of objects",
+    "title": "Load faculty and airport details",
+    "source": "Final review: XHR, parse and display; L11 Q1/Q2; A4 request/display workflow",
+    "track": "lab",
+    "topic": "AJAX",
     "minutes": 40,
-    "priority": 1,
-    "sources": "Final review: XHR, parse and display; L11 Q1/Q2; A4 request/display workflow",
+    "version": 2,
     "requirements": [
-      "Start the local server. The data files are ../data/faculty.json and ../data/airports.json. Their full contents are included in the data folder.",
-      "Add Get Faculty Details and Search Airport buttons. Each sends an XMLHttpRequest with onreadystatechange, asynchronous GET and send. Do not use fetch, Axios or jQuery.",
-      "When readyState is 4, check status==200. Only then read responseText and call JSON.parse. On failure, display Request failed: followed by the status in the correct output area.",
-      "For faculty, read the object fields and display Name, Abbreviation, Email and Website.",
-      "For airports, display Search Query and a bordered table with Airport, ICAO, IATA and Location columns. Add one row per record. Location is city + \", \" + country. Use a loop; do not hard-code the three airports.",
-      "A new click replaces the relevant result area. Do not add a second full table below the first."
+      "Create a page with Get Faculty Details and Search Airport buttons. Use the supplied faculty.json and airports.json files.",
+      "When Get Faculty Details is clicked, use the classroom XMLHttpRequest method to obtain the faculty JSON. Display Name, Abbreviation, Email and Website.",
+      "When Search Airport is clicked, use the same AJAX method to obtain the airport JSON. Display Search Query and a bordered table with Airport, ICAO, IATA and Location columns. Display every airport record. Location is city followed by country.",
+      "Each click replaces that result area. If a request fails, display Request failed: followed by its status number."
     ],
     "checks": [
-      "The current airport table has a header and three records. It must still work if the number of data records changes.",
-      "Requesting a JSON file that does not exist displays the failure message.",
-      "The code checks both response completion and request success."
-    ],
-    "rubric": [
-      [
-        "Classroom XHR workflow and status handling",
-        4
-      ],
-      [
-        "JSON.parse and object fields",
-        2
-      ],
-      [
-        "Array loop and complete table",
-        3
-      ],
-      [
-        "Repeated display and comments",
-        1
-      ]
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q14.html"
     ],
-    "topic": "AJAX"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [
+      {
+        "title": "faculty.json",
+        "code": "{\n  \"name\": \"Faculty of Engineering and Information Sciences\",\n  \"abbreviation\": \"EIS\",\n  \"email\": \"eis@uow.edu.au\",\n  \"web\": \"www.uow.edu.au/engineering-information-sciences\"\n}",
+        "language": "json"
+      },
+      {
+        "title": "airports.json",
+        "code": "{\n  \"searchQuery\": \"Australia\",\n  \"searchResult\": [\n    {\n      \"airportName\": \"Sydney Airport\",\n      \"ICAO\": \"YSSY\",\n      \"IATA\": \"SYD\",\n      \"city\": \"Sydney\",\n      \"country\": \"Australia\"\n    },\n    {\n      \"airportName\": \"Canberra Airport\",\n      \"ICAO\": \"YSCB\",\n      \"IATA\": \"CBR\",\n      \"city\": \"Canberra\",\n      \"country\": \"Australia\"\n    },\n    {\n      \"airportName\": \"Brisbane Airport\",\n      \"ICAO\": \"YBBN\",\n      \"IATA\": \"BNE\",\n      \"city\": \"Brisbane\",\n      \"country\": \"Australia\"\n    }\n  ]\n}",
+        "language": "json"
+      }
+    ],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 15,
+    "local_service": false
   },
   {
-    "n": 15,
     "id": "Q15",
-    "title": "AJAX: query parameters, nested data and required CSS",
+    "title": "Request and display weather data",
+    "source": "Final review: AJAX/CSS; A4; L11",
+    "track": "lab",
+    "topic": "AJAX",
     "minutes": 40,
-    "priority": 1,
-    "sources": "Final review: AJAX/CSS; A4; L11",
+    "version": 2,
     "requirements": [
-      "Use the practice identity Maya Lee / 2026001 / mayal@uowmail.edu.au. Display a heading with the name and student number. Add latitude and longitude text fields and a Get Weather JSON button.",
-      "The practice endpoint is /weather on the current website. Use GET parameters latitude, longitude and current=temperature_2m. The package includes this local endpoint. Do not call a live external service. Build the URL from user input, not a fixed location.",
-      "Use the classroom XMLHttpRequest workflow. Handle status==200 and failure. The response has this structure:\n```json\n{\"latitude\":-34.43,\"longitude\":150.89,\"elevation\":32,\"generationtime_ms\":0.12,\"current\":{\"time\":\"2026-11-03T09:00\",\"interval\":900,\"temperature_2m\":18.5}}\n```",
-      "Display the input coordinates under User Query. Under Weather information, use a table to display Elevation, Time, Interval, Temperature and Generationtime(ms). Read every weather value from the response.",
-      "Use document CSS and a class selector for the temperature: the class name must be lee, the colour orange, and the font size 50px.",
-      "Use document CSS and an ID selector for Weather information: the ID must be mayal, the colour purple, and the font size 50px. Do not use inline CSS for these two styles.",
-      "Assume valid numeric input. Test at least (-34.43,150.89) and (40.71,-74.01). The fixed test responses are in data/weather-cases.json."
+      "Create a page headed Maya Lee, 2026001. Display latitude and longitude text fields and a Get Weather JSON button.",
+      "Use the supplied local weather-service documentation. On click, request the coordinates entered by the user using the classroom XMLHttpRequest method. Display request failures with the status number.",
+      "Display the entered coordinates under User Query. Display Weather information and a bordered table containing Elevation, Time, Interval, Temperature and Generationtime(ms), from the response.",
+      "Use document CSS: a class selector named lee makes the temperature orange and 50px; an ID selector named mayal makes Weather information purple and 50px.",
+      "You may assume valid numeric input. Test both supplied coordinate pairs."
     ],
     "checks": [
-      "The temperatures are 18.5 for the first test and 14.7 for the second. Both the request and result change when the input changes.",
-      "Read current.time and current.temperature_2m from the nested current object, not from the top level."
-    ],
-    "rubric": [
-      [
-        "Input-based URL and classroom XHR",
-        4
-      ],
-      [
-        "Nested fields and complete display",
-        3
-      ],
-      [
-        "Required document CSS class and ID",
-        2
-      ],
-      [
-        "Failure handling and comments",
-        1
-      ]
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q15.html"
     ],
-    "topic": "AJAX"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [
+      {
+        "title": "Service documentation",
+        "headers": [
+          "Item",
+          "Required value"
+        ],
+        "rows": [
+          [
+            "Endpoint",
+            "/weather on the local practice server"
+          ],
+          [
+            "Method",
+            "GET"
+          ],
+          [
+            "Parameters",
+            "latitude; longitude; current=temperature_2m"
+          ],
+          [
+            "Sample query",
+            "/weather?latitude=-34.4278&longitude=150.8931&current=temperature_2m"
+          ],
+          [
+            "Response fields",
+            "latitude, longitude, elevation, generationtime_ms; current.time, current.interval, current.temperature_2m"
+          ]
+        ]
+      },
+      {
+        "title": "Sample response",
+        "code": "{\"latitude\":-34.43,\"longitude\":150.89,\"elevation\":32,\"generationtime_ms\":0.12,\"current\":{\"time\":\"2026-11-03T09:00\",\"interval\":900,\"temperature_2m\":18.5}}"
+      },
+      {
+        "title": "Test pairs",
+        "headers": [
+          "Latitude",
+          "Longitude"
+        ],
+        "rows": [
+          [
+            -34.43,
+            150.89
+          ],
+          [
+            40.71,
+            -74.01
+          ]
+        ]
+      }
+    ],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 15,
+    "local_service": true
   },
   {
-    "n": 16,
     "id": "Q16",
-    "title": "Canvas: a triangle and its three medians",
+    "title": "Draw a triangle and its medians",
+    "source": "Final review: canvas; L12 Q1",
+    "track": "lab",
+    "topic": "Canvas / Drag and drop",
     "minutes": 35,
-    "priority": 2,
-    "sources": "Final review: canvas; L12 Q1",
+    "version": 2,
     "requirements": [
-      "Display six text fields for the x/y coordinates of A, B and C. Use default points (80,20), (20,160) and (260,160). Set the canvas width to 320 and height to 200.",
-      "Draw triangle clears the old canvas and draws a closed triangle from the input. Use a 3px purple outline and a plum fill.",
-      "Draw three white median lines, each 2px wide. A median joins a vertex to the midpoint of the opposite side. The midpoint is ((x1+x2)/2,(y1+y2)/2).",
-      "Label A, B and C in black, using 16px Arial. Assume valid, non-collinear points (not on one straight line) inside the canvas. Do not add geometry validation."
+      "Create a page with six text fields for the x and y coordinates of triangle vertices A, B and C, a canvas of 320 by 200 pixels, and a Draw triangle button. Initially use A(80,20), B(20,160) and C(260,160).",
+      "When the button is clicked, clear the old drawing and draw the triangle from the input. Use a 3px purple outline and a plum fill.",
+      "Draw three white median lines at 2px and label A, B and C in black 16px Arial. A median joins a vertex to the midpoint of the opposite side. The midpoint of two points is ((x1+x2)/2, (y1+y2)/2).",
+      "You may assume valid, non-collinear points inside the canvas. Geometry validation is not required."
     ],
     "checks": [
-      "Change one coordinate and draw again. No old triangle remains.",
-      "Each median ends at the midpoint of the opposite side, not at another vertex."
-    ],
-    "rubric": [
-      [
-        "Numeric input and 2D context",
-        2
-      ],
-      [
-        "Clear, closed path, stroke and fill",
-        3
-      ],
-      [
-        "Three midpoints and median lines",
-        3
-      ],
-      [
-        "Labels and required styles",
-        2
-      ]
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q16.html"
     ],
-    "topic": "Canvas / Drag and drop"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 18,
+    "local_service": false
   },
   {
-    "n": 17,
     "id": "Q17",
-    "title": "Drag and drop: matching, counting and added images",
+    "title": "Match animals by drag and drop",
+    "source": "Final review: dragstart/drop/dragover; L12 Q2/Q3",
+    "track": "lab",
+    "topic": "Canvas / Drag and drop",
     "minutes": 35,
-    "priority": 2,
-    "sources": "Final review: dragstart/drop/dragover; L12 Q2/Q3",
+    "version": 2,
     "requirements": [
-      "Create DOG and CAT drop areas. Each has a counter starting at 0 and an area for added images. Below them, display source images ../assets/cat.svg and ../assets/dog.svg.",
-      "Set draggable=true on each source image. On dragstart, store the animal identifier in dataTransfer.",
-      "On dragover, call preventDefault to allow a drop.",
-      "Only a matching drop increases that animal counter by 1 and adds one image to that target. Keep both source images.",
-      "A wrong match changes nothing. Repeated correct drops add more images. A drop on text or an image inside a target must still be handled as a drop on that area."
+      "Create DOG and CAT drop areas, each with a counter initially showing 0 and space for added images. Below them, display the supplied cat and dog images.",
+      "Allow the source images to be dragged. A correct matching drop increases that animal’s counter by one and adds one copy of its picture in the target area. Keep both source images.",
+      "A wrong match changes nothing. Repeated correct drops add further pictures. Drops on text or a picture inside the target must count for that target area."
     ],
     "checks": [
-      "Drop dog onto DOG twice and cat onto CAT once. The counters and added-image counts are 2 and 1.",
-      "Dropping cat onto DOG changes neither counter."
-    ],
-    "rubric": [
-      [
-        "Three events and dataTransfer",
-        4
-      ],
-      [
-        "Correct matching rule",
-        2
-      ],
-      [
-        "Counters and image additions",
-        3
-      ],
-      [
-        "Keep source images and handle child targets",
-        1
-      ]
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q17.html"
     ],
-    "topic": "Canvas / Drag and drop"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 18,
+    "local_service": false
   },
   {
-    "n": 18,
     "id": "Q18",
-    "title": "DOM: create, insert, replace, remove and total",
+    "title": "Add books to an order",
+    "source": "Final review: DOM methods; L13; DOM lecture; A2 dynamic content",
+    "track": "lab",
+    "topic": "DOM",
     "minutes": 40,
-    "priority": 2,
-    "sources": "Final review: DOM methods; L13; DOM lecture; A2 dynamic content",
+    "version": 2,
     "requirements": [
-      "Display text fields for title, product code and quantity, an empty ul, and Total 0. Assume valid title/code and a positive integer quantity.",
-      "Add last creates a li containing code: title x quantity and appends it to the list. Add first creates the same type of item and inserts it before the first item.",
-      "Use createElement/createTextNode to create the item. Use appendChild and insertBefore for the two insertions. Store the quantity on the li with setAttribute(\"data-quantity\",...).",
-      "Replace last creates an item from the current input and uses replaceChild on the last item. Remove last uses removeChild. If the list is empty, these two buttons do nothing.",
-      "Total is the sum of all quantities. On replacement or removal, read the old quantity with getAttribute. Do not just count li elements."
+      "Create a page with three text fields for a book title, a product code and a quantity. Display an Add to order button and an unordered list.",
+      "When the user clicks the button, add an item in the format code: title x quantity. Keep all earlier items.",
+      "Display the total number of books ordered, initially 0. An order of 5 books followed by an order of 2 books must give a total of 7.",
+      "You may assume valid titles, product codes and positive integer quantities."
     ],
     "checks": [
-      "Add last: Book A/A1/5, then Book B/B1/2. Total is 7.",
-      "Add first: Book C/C1/3. The order is C/A/B and Total is 10.",
-      "Replace last with Book D/D1/4. Total is 12. Remove last. Total is then 8."
-    ],
-    "rubric": [
-      [
-        "Element/text creation and attributes",
-        3
-      ],
-      [
-        "appendChild and insertBefore",
-        2
-      ],
-      [
-        "replaceChild and removeChild",
-        2
-      ],
-      [
-        "Total updates and empty-list behaviour",
-        3
-      ]
+      "Add Book A / A1 / 5 and Book B / B1 / 2: both items remain and the total is 7.",
+      "Add a third order of 3 books: there are three list items and the total is 10.",
+      "The total adds quantities, not the number of list items."
     ],
     "files": [
+      "q18-basic.html",
       "q18.html"
     ],
-    "topic": "DOM"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [],
+    "extensions": [
+      "DOM extension: add Add first, Replace last and Remove last buttons. Use the corresponding DOM node methods and update the total after each action. Empty-list actions do nothing. The separate extension reference is q18.html."
+    ],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "Add Book A / A1 / 5 and Book B / B1 / 2: both items remain and the total is 7."
+      },
+      {
+        "id": "c2",
+        "text": "Add a third order of 3 books: there are three list items and the total is 10."
+      },
+      {
+        "id": "c3",
+        "text": "The total adds quantities, not the number of list items."
+      }
+    ],
+    "note_section": 16,
+    "local_service": false
   },
   {
-    "n": 19,
     "id": "Q19",
-    "title": "JSON validation and localStorage",
+    "title": "Validate JSON and restore the last input",
+    "source": "Final review: local storage and JSON; L14 Q1/Q2",
+    "track": "lab",
+    "topic": "Storage",
     "minutes": 25,
-    "priority": 2,
-    "sources": "Final review: local storage and JSON; L14 Q1/Q2",
+    "version": 2,
     "requirements": [
-      "Display a textarea for raw JSON text and a Validate JSON button. Valid JSON shows JSON is valid in green. Invalid JSON shows Error: and the parsing error message in red.",
-      "Use JSON.parse and try/catch. Check JSON syntax only. Do not require a particular set of properties.",
-      "After each edit, store the raw text under localStorage key csit884-json-draft, including invalid JSON text. Clear the old validation message when the user edits.",
-      "On page load, use getItem to restore the textarea. If there is no saved text, leave it empty. Do not stringify the draft again and add escaped quotes.",
-      "Use typeof(Storage) to check support. JSON validation must still work if storage is not supported."
+      "Create a page with a textarea and a Validate JSON button. Valid JSON displays JSON is valid in green. Invalid JSON displays Error: and the parser’s message in red.",
+      "Check JSON syntax only. No particular properties are required. The exact error wording may differ between browsers.",
+      "Store the raw input in localStorage under csit884-json-draft after each edit, including invalid JSON. Restore it when the page next loads. If there is no saved input, start empty.",
+      "Editing clears the old validation message. Validation must remain available if storage is unsupported or unavailable."
     ],
     "checks": [
-      "{\"code\":\"CSIT884\",\"cp\":6} is valid. {code:\"CSIT884\"} is invalid.",
-      "Enter invalid text and reload. The exact text returns. Correct it and validate again; the message becomes green.",
-      "The exact error wording can differ between browsers. Do not require one fixed character position."
-    ],
-    "rubric": [
-      [
-        "parse and try/catch",
-        3
-      ],
-      [
-        "Result, colour and clearing old messages",
-        2
-      ],
-      [
-        "Raw-text saving and onload restoration",
-        4
-      ],
-      [
-        "Storage support check",
-        1
-      ]
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q19.html"
     ],
-    "topic": "Storage"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 20,
+    "local_service": false
   },
   {
-    "n": 20,
     "id": "Q20",
-    "title": "JavaScript styles and a hover transform",
+    "title": "Change a heading’s colour and size",
+    "source": "Final review: CSS with JavaScript; L10; CSS with JS B",
+    "track": "lab",
+    "topic": "CSS",
     "minutes": 20,
-    "priority": 2,
-    "sources": "Final review: CSS with JavaScript; L10; CSS with JS B",
+    "version": 2,
     "requirements": [
-      "Use h1 to display University of Wollongong. Initially it is black, centred and 32px. Add Green, Orange and Blue buttons.",
-      "Use JavaScript to change the existing heading through style.color. Do not rebuild the whole h1 element.",
-      "Add a font-size text field and an Apply Size button. Read a valid number and use style.fontSize to apply it in pixels.",
-      "Use document CSS for a 0.3s transform transition on the heading. On hover, use scale(2). When the pointer leaves, restore the original scale.",
-      "Apply the transition only to transform. Colour changes do not need a transition."
+      "Create a page with a black, centred, 32px heading University of Wollongong and Green, Orange and Blue buttons. Clicking a button changes the existing heading to that colour using JavaScript.",
+      "Add a font-size field and an Apply Size button. When clicked, set the heading to the entered valid pixel size using JavaScript.",
+      "Use document CSS so that moving over the heading doubles its visual size with a 0.3-second transform transition. Moving away restores its original scale. Colour changes do not require a transition."
     ],
     "checks": [
-      "Orange makes the text orange. Entering 40 and clicking Apply Size sets 40px.",
-      "After the hover transition, the computed transform has a scale of 2. Leaving restores it. Hover does not change the font-size input value."
-    ],
-    "rubric": [
-      [
-        "Initial page and styles",
-        2
-      ],
-      [
-        "JavaScript color and fontSize",
-        4
-      ],
-      [
-        "Hover transform and transition",
-        3
-      ],
-      [
-        "Functions and comments",
-        1
-      ]
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q20.html"
     ],
-    "topic": "CSS"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 4,
+    "local_service": false
   },
   {
-    "n": 21,
     "id": "Q21",
-    "title": "HTML: merged cells and page links",
+    "title": "Merged table cells and page links",
+    "source": "HTML lecture pp. 17–18, 36–37, 45, 58–66; L01 HTML-only task form",
+    "track": "lecture",
+    "topic": "HTML",
     "minutes": 20,
-    "priority": 3,
-    "sources": "HTML lecture pp. 17–18, 36–37, 45, 58–66; L01 HTML-only task form",
+    "version": 2,
     "requirements": [
-      "Create q21.html using HTML only. Do not use CSS. Add a link labelled Go to terms that points to an element with id=\"terms\" on the same page.",
-      "Create a table with a visible border and three logical columns. Its first row is one th cell reading Lab timetable and spanning all three columns. Its second row contains the headings Day, Time and Topic.",
-      "The third row is Monday / 09:00 / HTML. The fourth row is [the same Monday cell] / 10:00 / CSS. Use rowspan for Monday, so it appears once across these two rows. Right-align both time cells and align them to the top using HTML attributes.",
-      "At terms, create a description list: HTML means Page structure; CSS means Page style. Use dl, dt and dd. Add a pre element showing two lines, A then two spaces then B on the first line, and C on the second line.",
-      "Use the course font element to display Practice only in blue with size=\"5\". This exercise uses the legacy HTML attributes taught in the course. In CSS questions, follow the required CSS method instead."
+      "Create q21.html using HTML only. Add a Go to terms link to the terms section on the same page.",
+      "Create a bordered table with three logical columns. The first row is a single heading Lab timetable across all columns. The second row has Day, Time and Topic headings.",
+      "Show Monday / 09:00 / HTML and Monday / 10:00 / CSS in the next two rows. Monday must appear once, covering both rows. Right-align the times and align them to the top using HTML attributes.",
+      "At the terms section, use a description list: HTML — Page structure; CSS — Page style. Display A, two spaces, B on one line and C on the next, preserving spaces and line breaks.",
+      "Use the course font element to show Practice only in blue at size 5."
     ],
     "checks": [
-      "The first cell has colspan=\"3\". Monday has rowspan=\"2\". The table has four tr elements.",
-      "Go to terms changes the page fragment to #terms. The two spaces in pre remain visible."
-    ],
-    "rubric": [
-      [
-        "Table structure and merged cells",
-        4
-      ],
-      [
-        "HTML alignment and font attributes",
-        2
-      ],
-      [
-        "Page link and description list",
-        2
-      ],
-      [
-        "Preformatted text and no CSS",
-        2
-      ]
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q21.html"
     ],
-    "topic": "HTML"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 5,
+    "local_service": false
   },
   {
-    "n": 22,
     "id": "Q22",
-    "title": "CSS: spacing, lists and conflicting rules",
+    "title": "CSS spacing and rule selection",
+    "source": "CSS lecture: borders, lists, links and cascading; L02 CSS table exercise",
+    "track": "lecture",
+    "topic": "CSS",
     "minutes": 20,
-    "priority": 3,
-    "sources": "CSS lecture: borders, lists, links and cascading; L02 CSS table exercise",
+    "version": 2,
     "requirements": [
-      "Create q22.html with document CSS. Add a two-cell table with id=\"demoTable\". Set border-collapse: separate and border-spacing: 10px on the table; set 1px solid black borders and 8px padding on its cells.",
-      "Add ul id=\"topics\" containing HTML and CSS. Make its markers square using list-style-type. Add a link to https://example.com/ inside a container with class=\"links\". Set unvisited links blue, visited links purple, hovered links orange, and active links red. Use the order link, visited, hover, active.",
-      "Add <p id=\"note\" class=\"info\">Check the selector</p>. In this order, write p {color:green}, .info {color:orange}, #note {color:purple}, then .info {color:blue}. All rules are ordinary document CSS without !important.",
-      "Below the paragraph, explain in English which rule controls its colour and why. Also explain what border-spacing would do if border-collapse changed to collapse."
+      "Create q22.html using document CSS. Add a two-cell table with ID demoTable. Use separated borders with 10px between cells. Give the cells 1px solid black borders and 8px padding.",
+      "Display HTML and CSS in a list with ID topics and square markers. Inside a links class container, add a link to https://example.com/. Set unvisited links blue, visited links purple, hovered links orange and active links red.",
+      "Use the supplied paragraph and four CSS rules without changing their order. These are ordinary document CSS rules without !important.",
+      "Explain which rule controls the paragraph colour, and what happens to border-spacing if the table borders are collapsed. This is a classroom explanation exercise."
     ],
     "checks": [
-      "The paragraph is purple: the ID selector has higher specificity than the class and type selectors in these rules.",
-      "The table has separated borders. With collapse, border-spacing has no effect; padding still adds space inside cells."
-    ],
-    "rubric": [
-      [
-        "Separated borders, spacing and padding",
-        3
-      ],
-      [
-        "List and link pseudo-classes",
-        3
-      ],
-      [
-        "Required conflicting rules",
-        2
-      ],
-      [
-        "Correct explanations",
-        2
-      ]
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q22.html"
     ],
-    "topic": "CSS"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [
+      {
+        "title": "Given HTML and CSS",
+        "code": "<p id=\"note\" class=\"info\">Check the selector</p>\n\np {color:green}\n.info {color:orange}\n#note {color:purple}\n.info {color:blue}",
+        "language": "text"
+      }
+    ],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 4,
+    "local_service": false
   },
   {
-    "n": 23,
     "id": "Q23",
-    "title": "Events: swap images and handle text input",
+    "title": "Image swapping and input events",
+    "source": "Week 13: mouseover, focus, blur, change and select; Event lecture pp. 5–19; L03 Q8",
+    "track": "lab",
+    "topic": "Events",
     "minutes": 25,
-    "priority": 3,
-    "sources": "Week 13: mouseover, focus, blur, change and select; Event lecture pp. 5–19; L03 Q8",
+    "version": 2,
     "requirements": [
-      "Create q23.html. Display ../assets/cat.svg and ../assets/dog.svg side by side at 120 by 100 pixels. Each mouseover on either image swaps the two src values. Keep the image elements in place. Also update each alt value to match its image.",
-      "Add a code text field. Focus gives it a lightyellow background; blur restores white. A change event converts its text to uppercase. Selecting text in it displays Text selected in a separate message span.",
-      "Add a span labelled Press here. Mousedown changes its text to Release me. Mouseup changes it to Thank you. Mouseout restores Press here.",
-      "Add a Rename button. On click, use prompt to ask for a label. Cancel keeps the current heading. Any entered string, including an empty one, replaces the heading text.",
-      "Add a Clear label button. Use confirm before clearing the heading. Cancel keeps it unchanged. Add short comments."
+      "Create a page with the supplied cat and dog pictures side by side, each 120 by 100 pixels. Whenever the pointer moves onto either picture, swap the pictures while keeping the image elements in place. Keep the alternative text correct.",
+      "Display a code field. Focus makes its background lightyellow; blur restores white. A change event converts its value to uppercase. Selecting text displays Text selected beside it.",
+      "Display Press here. Pressing the mouse on it displays Release me; releasing displays Thank you; leaving restores Press here.",
+      "Display a heading initially Animal practice. A Rename button asks for a new label using prompt. Any entered string replaces the heading; Cancel keeps it. A Clear label button uses confirm before clearing the heading."
     ],
     "checks": [
-      "Moving onto the first image swaps cat/dog; leaving and entering again swaps them back.",
-      "Type ab12, then leave the field: it becomes AB12. Selecting text shows the message.",
-      "Prompt Cancel is null. It must not display the word null or be treated as an empty string."
-    ],
-    "rubric": [
-      [
-        "Image swap and matching alt text",
-        3
-      ],
-      [
-        "Focus, blur, change and select",
-        3
-      ],
-      [
-        "Mouse press/release/out",
-        1
-      ],
-      [
-        "Prompt, confirm and cancellation",
-        3
-      ]
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q23.html"
     ],
-    "topic": "Events"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [],
+    "extensions": [
+      "You may first practise the image swap alone, then add the independent input/mouse/dialog exercises."
+    ],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 7,
+    "local_service": false
   },
   {
-    "n": 24,
     "id": "Q24",
-    "title": "JavaScript: arrays, strings and dates",
+    "title": "Arrays, strings and dates",
+    "source": "JSbasics lecture: String pp. 61–62, Date pp. 63–70, Array pp. 71–75; L06 input/output task form",
+    "track": "lecture",
+    "topic": "JavaScript basics",
     "minutes": 25,
-    "priority": 3,
-    "sources": "JSbasics lecture: String pp. 61–62, Date pp. 63–70, Array pp. 71–75; L06 input/output task form",
+    "version": 2,
     "requirements": [
-      "Create q24.html. Start with the array [\"CSIT884\", \"CSIT882\"]. Add a text field and Add, Remove and Show buttons. Assume each entered subject code is valid.",
-      "Add trims both ends, converts the code to uppercase and appends it using push. Allow duplicate codes. Remove applies the same conversion, uses indexOf, then removes only the first match using splice. If not found, do nothing.",
-      "Show displays every array item in order and the number of items. Also display the first four characters of the current text-field value after trimming and uppercase conversion, using slice.",
-      "On Show, create new Date(2026, 10, 11, 9, 0, 0) and display 2026-11-11 9:0:0 and weekday 3. Construct the values with Date getters. This is local time. Zero-padding is not required.",
-      "Also show the next calendar date by making a copy of that Date and using setDate. The original date must remain 11. Explain in one sentence why the constructor uses 10 for November."
+      "Part A: start with subject codes CSIT884 and CSIT882. Display an input and Add, Remove and Show buttons. You may assume valid subject codes.",
+      "Add removes spaces at both ends, changes the code to uppercase and adds it to the end. Duplicates are allowed. Remove applies the same conversion and removes only the first matching code; a missing code changes nothing.",
+      "Show displays all codes in order, the item count and the first four characters of the converted input.",
+      "Part B: use the local date 11 November 2026 at 09:00:00. Construct and display its year, month, day, time, weekday and next calendar date using Date methods. Keep the original date unchanged. Zero-padding is not required. Parts A and B may share one page."
     ],
     "checks": [
-      "Add csit985, remove CSIT882, then Show: the list is CSIT884, CSIT985 and the count is 2.",
-      "Removing a missing code must not remove the last item. The next date is 12. November is month index 10."
-    ],
-    "rubric": [
-      [
-        "Array push, search and safe removal",
-        4
-      ],
-      [
-        "String conversion and slice",
-        2
-      ],
-      [
-        "Date construction, getters and next date",
-        3
-      ],
-      [
-        "Output, explanation and comments",
-        1
-      ]
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q24.html"
     ],
-    "topic": "JavaScript basics"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 21,
+    "local_service": false
   },
   {
-    "n": 25,
     "id": "Q25",
-    "title": "Form validation: built-in rules and JavaScript rules",
+    "title": "Two ways to validate a form",
+    "source": "FormValidation lecture pp. 4–6, 8–22; Week 13: onsubmit return; L05 task form",
+    "track": "lecture",
+    "topic": "Forms",
     "minutes": 25,
-    "priority": 3,
-    "sources": "FormValidation lecture pp. 4–6, 8–22; Week 13: onsubmit return; L05 task form",
+    "version": 2,
     "requirements": [
-      "Create q25.html with two separate GET forms, both using action=\"/search\". Part A uses built-in HTML validation only. Add email (required, type=email), quantity (required integer from 1 to 5), and code (required, exactly three uppercase ASCII letters). Use names email, quantity and code. Add a Submit A button.",
-      "Part B uses JavaScript validation only. Use novalidate on this form. Add two text fields named email and email2, plus a Submit B button. Both fields are required after trimming, and their trimmed values must match exactly. Do not check email format in Part B.",
-      "Use onsubmit=\"return validateEmails()\". Display separate red messages beside the two fields. On each attempt, clear old messages, then show Email is required or Confirmation is required when empty. When both are non-empty but unequal, show Emails do not match beside the second field.",
-      "Return false on failure and true on success. On success, replace both field values with the trimmed values before normal submission. Add reset buttons and clear the custom messages on reset."
+      "Create two separate GET forms using /search. Part A uses built-in HTML validation: email is required and must have email format; quantity is a required integer from 1 to 5; code is required and must be exactly three uppercase ASCII letters. Use parameter names email, quantity and code.",
+      "Part B uses JavaScript validation only, with text fields email and email2. Both must contain text after trimming, and the trimmed strings must match exactly. Do not check email format in this part.",
+      "On submission, clear old messages. Show separate red messages Email is required, Confirmation is required or Emails do not match where appropriate. Invalid input prevents submission. Valid input submits the trimmed values.",
+      "Each form has its own Submit and Reset buttons. Reset Part B also removes its custom messages."
     ],
     "checks": [
-      "Part A rejects an empty email, quantity 0 or 6, quantity 1.5, and code ab1. It accepts a valid email, quantity 1 or 5, and ABC.",
-      "Part B rejects spaces-only input and different strings. Two equal trimmed strings submit. A later valid attempt must remove old error messages."
-    ],
-    "rubric": [
-      [
-        "Part A constraints and parameter names",
-        4
-      ],
-      [
-        "Part B exact checks and separate messages",
-        3
-      ],
-      [
-        "Return value, trimming and normal submission",
-        2
-      ],
-      [
-        "Reset and comments",
-        1
-      ]
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q25.html"
     ],
-    "topic": "Forms"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 8,
+    "local_service": true
   },
   {
-    "n": 26,
     "id": "Q26",
-    "title": "XML schemas: external DTD and text with an attribute",
+    "title": "An external DTD and an XSD",
+    "source": "XMLDTD lecture pp. 25–38; XSD lecture p. 11; Week 13: attributes require a complex type",
+    "track": "lecture",
+    "topic": "XML / DTD / XSD",
     "minutes": 25,
-    "priority": 3,
-    "sources": "XMLDTD lecture pp. 25–38; XSD lecture p. 11; Week 13: attributes require a complex type",
+    "version": 2,
     "requirements": [
-      "Use this XML structure: <catalog><book code=\"B01\"><title>Web basics</title><price currency=\"AUD\">39.50</price></book></catalog>. Write a complete q26.xml with an XML declaration and an external DTD reference to q26.dtd.",
-      "Write q26.dtd. A catalog contains one or more book elements. Each book has title then price, and a required code attribute. Both title and price contain text. The currency attribute is required. Use CDATA for both attributes.",
-      "Write q26.xsd for the same data structure. The title and both attributes are strings. The price text is decimal. Use complexType, simpleContent and extension for price. Both attributes are required. Allow one or more books.",
-      "A separate file q26-schema.xml must contain the same data without a DOCTYPE and link to the no-target-namespace schema using xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" and xsi:noNamespaceSchemaLocation=\"q26.xsd\".",
-      "Explain why DTD text content alone does not enforce a decimal price, while the XSD does."
+      "Use the supplied catalog XML to write q26.xml and a corresponding external q26.dtd. A catalog contains one or more books; each book contains title then price. The code attribute on book and currency attribute on price are required. DTD element content is text.",
+      "Write q26.xsd for the same structure. title, code and currency are strings; the price text is decimal. Allow one or more books and require both attributes.",
+      "Create q26-schema.xml with the same data, no DOCTYPE, and a correct link to this no-target-namespace schema.",
+      "As a classroom recall check, explain why the XSD can enforce a decimal price while the DTD text declaration cannot."
     ],
     "checks": [
-      "Both XML samples validate against their stated DTD or XSD. The XSD rejects price text free and a missing currency attribute.",
-      "External DTD declarations are not wrapped in a DOCTYPE block inside the .dtd file. A price with an attribute cannot be defined only as xsd:decimal."
-    ],
-    "rubric": [
-      [
-        "XML data and external DTD reference",
-        2
-      ],
-      [
-        "Correct DTD and required attributes",
-        2
-      ],
-      [
-        "XSD simpleContent, decimal and repetition",
-        4
-      ],
-      [
-        "Schema link and explanation",
-        2
-      ]
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q26.xml",
@@ -1070,133 +1886,161 @@
       "q26.xsd",
       "q26-schema.xml"
     ],
-    "topic": "XML / DTD / XSD"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [
+      {
+        "title": "Catalog data",
+        "code": "<?xml version=\"1.0\"?>\n<catalog><book code=\"B01\"><title>Web basics</title><price currency=\"AUD\">39.50</price></book></catalog>",
+        "language": "xml"
+      }
+    ],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 14,
+    "local_service": false
   },
   {
-    "n": 27,
     "id": "Q27",
-    "title": "DOM: select groups by tag and class",
+    "title": "Select DOM element groups",
+    "source": "Week 13: getElementsByTagName/getElementsByClassName; DOM lecture p. 6",
+    "track": "lecture",
+    "topic": "DOM",
     "minutes": 15,
-    "priority": 3,
-    "sources": "Week 13: getElementsByTagName/getElementsByClassName; DOM lecture p. 6",
+    "version": 2,
     "requirements": [
-      "Create q27.html with three p elements. The first reads HTML and has class=\"topic\"; the second reads CSS and has class=\"topic\"; the third reads Notes and has no class.",
-      "Add buttons Count paragraphs, Colour topics and Add topic. Count paragraphs uses document.getElementsByTagName(\"p\") and shows the count in a span, not a p.",
-      "Colour topics uses document.getElementsByClassName(\"topic\") and a loop to turn every matching element orange. Do not use querySelectorAll for this task.",
-      "Add topic creates a new p with class=\"topic\" and text JavaScript, then appends it inside a div. Use createElement and createTextNode. Each click adds another paragraph. A later count or colour action must include the new paragraphs."
+      "Create a page with three paragraphs: HTML and CSS have class topic; Notes has no class. Display Count paragraphs, Colour topics and Add topic buttons, plus a span for the count.",
+      "Count paragraphs displays the number of p elements using getElementsByTagName. Colour topics turns every topic element orange using getElementsByClassName and a loop. These are required methods for this API drill.",
+      "Add topic creates and appends another paragraph with class topic and text JavaScript using createElement and createTextNode. Later count and colour actions must include new paragraphs."
     ],
     "checks": [
-      "Initial paragraph count is 3. Add twice, then count again: it is 5.",
-      "After Colour topics, HTML, CSS and all new JavaScript paragraphs are orange. Notes keeps its normal colour."
-    ],
-    "rubric": [
-      [
-        "Tag-name lookup and count",
-        3
-      ],
-      [
-        "Class-name lookup and loop",
-        3
-      ],
-      [
-        "Dynamic creation and updated results",
-        3
-      ],
-      [
-        "Comments and correct output element",
-        1
-      ]
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q27.html"
     ],
-    "topic": "DOM"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 16,
+    "local_service": false
   },
   {
-    "n": 28,
     "id": "Q28",
-    "title": "Storage: save, restore and delete an object array",
+    "title": "Save and restore a task list",
+    "source": "Week 13: local storage; WebStorage lecture pp. 5–31, task-list example",
+    "track": "lecture",
+    "topic": "Storage",
     "minutes": 30,
-    "priority": 3,
-    "sources": "Week 13: local storage; WebStorage lecture pp. 5–31, task-list example",
+    "version": 2,
     "requirements": [
-      "Create q28.html. Add a task text field, an urgency select with High, Medium and Low (default), and an Add task button. Assume valid non-empty input and working localStorage.",
-      "Keep tasks in an array of objects with numeric id, string task and string urgency. Use new Date().getTime() for the first new ID and ensure later IDs are larger even if two tasks are added in the same millisecond.",
-      "On Add, append an object, display all tasks in an unordered list, and save the array as JSON under csit884-tasks. Each item needs its own Delete button. Delete only that ID, update the display and save the new array.",
-      "On load, read the key, check for null, parse saved JSON and restore the list. A first visit starts with an empty list. Use JSON.stringify to save and JSON.parse to restore.",
-      "Add Clear tasks. It empties the array and list and calls removeItem for csit884-tasks. Keep unrelated localStorage keys.",
-      "Explain in English how replacing localStorage with sessionStorage changes persistence after closing a tab. Also display the current array in a read-only textarea using JSON.stringify(tasks, null, 2)."
+      "Create a page with a task field, an urgency list offering High, Medium and Low (default), and an Add task button. Keep an array of task objects containing a numeric ID, task text and urgency.",
+      "Add displays another task in an unordered list and saves the complete array under localStorage key csit884-tasks. Each task has a Delete button that removes that task and saves the updated list.",
+      "When the page next loads, restore and display the saved tasks. A first visit starts with an empty list. A Clear tasks button empties the list and removes only this storage key.",
+      "Display the current array as formatted JSON in a read-only textarea. You may assume valid non-empty input and working storage.",
+      "For classroom recall, explain how sessionStorage changes persistence when the tab closes."
     ],
     "checks": [
-      "Add Read notes/High and Practise AJAX/Low, reload: both return with the same IDs and urgency values.",
-      "Delete the first item, reload: only the second returns. Clear tasks and reload: the list is empty and the tasks key is absent.",
-      "The JSON contains an array of objects. It is not [object Object], and IDs are unique."
-    ],
-    "rubric": [
-      [
-        "Array, controls and display",
-        2
-      ],
-      [
-        "Unique IDs and deleting the correct item",
-        2
-      ],
-      [
-        "JSON save and first-load restoration",
-        3
-      ],
-      [
-        "removeItem and storage explanation",
-        2
-      ],
-      [
-        "Formatted JSON and comments",
-        1
-      ]
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q28.html"
     ],
-    "topic": "Storage"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [],
+    "extensions": [
+      "Optional robustness: ensure newly generated IDs cannot collide when two tasks are added in the same millisecond. This is not part of the basic task."
+    ],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 20,
+    "local_service": false
   },
   {
-    "n": 29,
     "id": "Q29",
-    "title": "Calculator: read an operation and check an answer",
+    "title": "Check an arithmetic answer",
+    "source": "L06 Q2: addition, subtraction and multiplication; JS2 input/output; Week 13: value and functions",
+    "track": "lab",
+    "topic": "JavaScript basics",
     "minutes": 15,
-    "priority": 3,
-    "sources": "L06 Q2: addition, subtraction and multiplication; JS2 input/output; Week 13: value and functions",
+    "version": 2,
     "requirements": [
-      "Create q29.html with three text fields and a select between the first two fields. The select displays +, - and x, with values add, subtract and multiply. Place = before the third text field and add a Check button.",
-      "The first two fields contain numbers. The third contains the user's proposed answer. Assume all three inputs are valid integers and all results fit normal JavaScript number precision. Do not add validation.",
-      "On Check, read the select value and convert the three input strings to numbers. Use the chosen operation to calculate the expected answer. Display Correct! for an equal answer, otherwise Incorrect, please try again.",
-      "Each check replaces the previous message. Add comments and use meaningful variable names."
+      "Create a page with three text fields, an operation list and a Check button. Display the first number, operation, second number, =, and the proposed answer in that order.",
+      "The operation choices are +, - and x, with values add, subtract and multiply. You may assume valid integers and results within normal JavaScript number precision.",
+      "When Check is clicked, display Correct! if the proposed answer equals the result of the chosen operation. Otherwise display Incorrect, please try again. Each check replaces the old result."
     ],
     "checks": [
-      "10 x 5 = 50 shows Correct!; 14 - 5 = 11 shows Incorrect, please try again.",
-      "10 + 5 = 15 must be correct. A previous incorrect message must disappear after a correct answer."
-    ],
-    "rubric": [
-      [
-        "Controls and operation values",
-        2
-      ],
-      [
-        "Numeric conversion and three operations",
-        4
-      ],
-      [
-        "Answer comparison and replaced message",
-        3
-      ],
-      [
-        "Comments and names",
-        1
-      ]
+      "The page or document contains every item and value required above.",
+      "The stated interactions or data constraints work for the supplied examples.",
+      "The specified method is followed, and repeated actions keep the required state."
     ],
     "files": [
       "q29.html"
     ],
-    "topic": "JavaScript basics"
+    "marks": null,
+    "adaptation": "Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "The page or document contains every item and value required above."
+      },
+      {
+        "id": "c2",
+        "text": "The stated interactions or data constraints work for the supplied examples."
+      },
+      {
+        "id": "c3",
+        "text": "The specified method is followed, and repeated actions keep the required state."
+      }
+    ],
+    "note_section": 21,
+    "local_service": false
   }
 ]

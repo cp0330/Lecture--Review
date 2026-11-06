@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Library form</title>
+</head>
+<body>
+<h1>Library book search</h1>
+<form id="searchForm" action="/search" method="get" >
+ Author: <input type="text" name="author" id="author"><br>
+ Year: <input type="text" name="year" id="year"><br>
+ Subject:<br>
+ <label><input type="checkbox" name="sub" value="mth">Mathematics</label>
+ <label><input type="checkbox" name="sub" value="cs">Computer Science</label>
+ <label><input type="checkbox" name="sub" value="bio">Biology</label><br>
+ Format:
+ <label><input type="radio" name="format" value="p" checked>Print</label>
+ <label><input type="radio" name="format" value="e">Electronic</label><br>
+ 
+ <input type="submit" value="Search"><input type="reset" value="Clear">
+</form>
+</body>
+</html>

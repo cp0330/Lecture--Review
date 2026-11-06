@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Weather information</title><style>.lee {color:orange;font-size:50px} #mayal {color:purple;font-size:50px}</style><script>
+function getWeather() {
+  // Build the query from the values entered for this request.
+  var latitude = document.getElementById("latitude").value;
+  var longitude = document.getElementById("longitude").value;
+  var url = "/weather?latitude=" + encodeURIComponent(latitude) + "&longitude=" + encodeURIComponent(longitude) + "&current=temperature_2m";
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4) {
+      if (xhttp.status == 200) { displayWeather(JSON.parse(xhttp.responseText), latitude, longitude); }
+      else { document.getElementById("weatherDisplay").textContent = "Request failed: " + xhttp.status; }
+    }
+  };
+  xhttp.open("GET", url, true);
+  xhttp.send();
+}
+function displayWeather(weather, latitude, longitude) {
+  // Response values, rather than copied sample numbers, supply the result.
+  var output = "<table border='1'><tr><th colspan='2'>User Query</th></tr><tr><td>Latitude</td><td>" + latitude + "</td></tr><tr><td>Longitude</td><td>" + longitude + "</td></tr></table>";
+  output += "<table border='1'><tr><th colspan='2' id='mayal'>Weather information</th></tr>";
+  output += "<tr><td>Elevation</td><td>" + weather.elevation + "</td></tr>";
+  output += "<tr><td>Time</td><td>" + weather.current.time + "</td></tr>";
+  output += "<tr><td>Interval</td><td>" + weather.current.interval + "</td></tr>";
+  output += "<tr><td>Temperature</td><td class='lee'>" + weather.current.temperature_2m + "</td></tr>";
+  output += "<tr><td>Generationtime (ms)</td><td>" + weather.generationtime_ms + "</td></tr></table>";
+  document.getElementById("weatherDisplay").innerHTML = output;
+}
+</script></head><body><h1>2026001, Maya Lee</h1><table border="1"><tr><th>City</th><th>Country</th><th>Latitude</th><th>Longitude</th></tr><tr><td>Wollongong</td><td>Australia</td><td>-34.4278</td><td>150.8931</td></tr><tr><td>New York</td><td>USA</td><td>40.7128</td><td>-74.006</td></tr><tr><td>Paris</td><td>France</td><td>48.8566</td><td>2.3522</td></tr><tr><td>Tokyo</td><td>Japan</td><td>35.6762</td><td>139.6503</td></tr><tr><td>Auckland</td><td>New Zealand</td><td>-36.8509</td><td>174.7645</td></tr></table><p><label>Latitude: <input id="latitude"></label></p><p><label>Longitude: <input id="longitude"></label></p><button onclick="getWeather()">Get Weather JSON</button><div id="weatherDisplay"></div></body></html>

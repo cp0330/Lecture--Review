@@ -1,73 +1,12 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CSIT884 · Reference answers</title><link rel="stylesheet" href="study.css"></head><body><a class="skip" href="#main">Skip to content</a><div class="topbar"><a class="brand" href="../index.html">Lecture Review<span> / CSIT884</span></a><div class="tabs" role="navigation" aria-label="Course pages"><a href="index.html">Overview</a><a href="questions.html">Practice</a><a href="notes.html">Memory notes</a><a href="quick-notes.html">Quick sheet</a><a href="audit.html">Coverage audit</a></div></div><main id="main" class="answer-list"><section class="paper"><h1>Reference answers</h1><p>先独立作答，再比较功能、数据类型和题目指定的技术。中文解释帮助理解；题干和检查要求保持英文。</p><div class="index"><a href="#Q01">Q01</a><a href="#Q02">Q02</a><a href="#Q03">Q03</a><a href="#Q04">Q04</a><a href="#Q05">Q05</a><a href="#Q06">Q06</a><a href="#Q07">Q07</a><a href="#Q08">Q08</a><a href="#Q09">Q09</a><a href="#Q10">Q10</a><a href="#Q11">Q11</a><a href="#Q12">Q12</a><a href="#Q13">Q13</a><a href="#Q14">Q14</a><a href="#Q15">Q15</a><a href="#Q16">Q16</a><a href="#Q17">Q17</a><a href="#Q18">Q18</a><a href="#Q19">Q19</a><a href="#Q20">Q20</a><a href="#Q21">Q21</a><a href="#Q22">Q22</a><a href="#Q23">Q23</a><a href="#Q24">Q24</a><a href="#Q25">Q25</a><a href="#Q26">Q26</a><a href="#Q27">Q27</a><a href="#Q28">Q28</a><a href="#Q29">Q29</a></div></section><section class="card answers" id="Q01"><a class="back-question button" href="questions.html#Q01">Back to Q01</a><h2>Q01 · HTML only: a competition page</h2><p>先完成页面骨架，再逐项检查 tag、attribute 和题目规定的列表类型。给定的 example 域名只检查链接设置，不要求网站真实可访问。</p><div class="file"><h3>q01.html</h3><div class="code-actions"><a class="button" href="answers/q01.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/q01.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Coding Competition&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;h1&gt;Coding Competition&lt;/h1&gt;
-&lt;h2&gt;Maya Lee, 2026001, mayal@uowmail.edu.au&lt;/h2&gt;
-&lt;table border=&quot;1&quot;&gt;
-  &lt;tr&gt;&lt;th&gt;Rank&lt;/th&gt;&lt;th&gt;Team&lt;/th&gt;&lt;th&gt;Members&lt;/th&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;1st&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://river.example/&quot; target=&quot;_blank&quot;&gt;River Team&lt;/a&gt;&lt;br&gt;&lt;img src=&quot;../assets/team1.svg&quot; width=&quot;120&quot; height=&quot;80&quot; alt=&quot;River flag&quot;&gt;&lt;/td&gt;
-    &lt;td&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Alex&lt;/b&gt; &lt;i&gt;(team leader)&lt;/i&gt;&lt;/li&gt;&lt;li&gt;Bo&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;2nd&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://mountain.example/&quot; target=&quot;_blank&quot;&gt;Mountain Team&lt;/a&gt;&lt;br&gt;&lt;img src=&quot;../assets/team2.svg&quot; width=&quot;120&quot; height=&quot;80&quot; alt=&quot;Mountain flag&quot;&gt;&lt;/td&gt;
-    &lt;td&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Chen&lt;/b&gt; &lt;i&gt;(team leader)&lt;/i&gt;&lt;/li&gt;&lt;li&gt;Dee&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;
-&lt;ol&gt;&lt;li&gt;Register&lt;/li&gt;&lt;li&gt;Practice&lt;/li&gt;&lt;li&gt;Compete&lt;/li&gt;&lt;/ol&gt;
-&lt;p&gt;FROG&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;EMU &amp;#128516;&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>The table has three rows and three columns, including the header row. Both images are 120 by 80 pixels. Both links have target=&quot;_blank&quot;.</li><li>There is no CSS. Use ul and ol in the correct places. The browser must display all five spaces.</li></ul><h3>常见错误</h3><ul><li>连续输入五个普通空格会被折叠。</li><li>HTML-only 题不要擅自加入 CSS。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q02"><a class="back-question button" href="questions.html#Q02">Back to Q02</a><h2>Q02 · Required CSS methods and selectors</h2><p>先按每条要求确定样式放在哪里，再写 selector。外部 CSS 接收的是规则本身，HTML 负责用 link 引入。</p><div class="file"><h3>q02.html</h3><div class="code-actions"><a class="button" href="answers/q02.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/q02.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;CSS methods&lt;/title&gt;
-&lt;style&gt;
-#heading { color: purple; background-color: lightgray; }
-.info { border: 2px dashed orange; padding: 10px; }
-#teamTable { border-collapse: collapse; }
-#teamTable th, #teamTable td { border: 1px solid black; padding: 12px; vertical-align: top; }
-#teamTable .rank { text-align: right; }
-.members &gt; li { color: green; }
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;h1 id=&quot;heading&quot;&gt;City Coding Teams&lt;/h1&gt;
-&lt;p style=&quot;font-size:50px;&quot;&gt;Maya Lee&lt;/p&gt;
-&lt;p style=&quot;color:blue;&quot;&gt;2026001&lt;/p&gt;
-&lt;p class=&quot;info&quot;&gt;Australia&lt;/p&gt;&lt;p class=&quot;info&quot;&gt;mayal@uowmail.edu.au&lt;/p&gt;
-&lt;table id=&quot;teamTable&quot;&gt;
- &lt;tr&gt;&lt;th class=&quot;rank&quot;&gt;Rank&lt;/th&gt;&lt;th&gt;Members&lt;/th&gt;&lt;/tr&gt;
- &lt;tr&gt;&lt;td class=&quot;rank&quot;&gt;1&lt;/td&gt;&lt;td&gt;&lt;ul class=&quot;members&quot;&gt;&lt;li&gt;Alex&lt;/li&gt;&lt;li&gt;Bo&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre></details></div><div class="file"><h3>q02-external.html</h3><div class="code-actions"><a class="button" href="answers/q02-external.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/q02-external.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;CSS external&lt;/title&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;q02.css&quot;&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;h1 id=&quot;heading&quot;&gt;City Coding Teams&lt;/h1&gt;
-&lt;p style=&quot;font-size:50px;&quot;&gt;Maya Lee&lt;/p&gt;
-&lt;p style=&quot;color:blue;&quot;&gt;2026001&lt;/p&gt;
-&lt;p class=&quot;info&quot;&gt;Australia&lt;/p&gt;&lt;p class=&quot;info&quot;&gt;mayal@uowmail.edu.au&lt;/p&gt;
-&lt;table id=&quot;teamTable&quot;&gt;
- &lt;tr&gt;&lt;th class=&quot;rank&quot;&gt;Rank&lt;/th&gt;&lt;th&gt;Members&lt;/th&gt;&lt;/tr&gt;
- &lt;tr&gt;&lt;td class=&quot;rank&quot;&gt;1&lt;/td&gt;&lt;td&gt;&lt;ul class=&quot;members&quot;&gt;&lt;li&gt;Alex&lt;/li&gt;&lt;li&gt;Bo&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre></details></div><div class="file"><h3>q02.css</h3><div class="code-actions"><a class="button" href="answers/q02.css" target="_blank" rel="noopener">Open file</a><a class="button" href="answers/q02.css" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>#heading { color: purple; background-color: lightgray; }
-.info { border: 2px dashed orange; padding: 10px; }
-#teamTable { border-collapse: collapse; }
-#teamTable th, #teamTable td { border: 1px solid black; padding: 12px; vertical-align: top; }
-#teamTable .rank { text-align: right; }
-.members &gt; li { color: green; }
-</code></pre></details></div><h3>对照检查</h3><ul><li>Both HTML pages have the same appearance.</li><li>Use &gt; for direct children in the green list rule. Do not replace it with a space.</li><li>Use . for a class and # for an ID. Do not put style tags inside the CSS file.</li></ul><h3>常见错误</h3><ul><li>做出相同外观但用错指定方式，仍不满足题意。</li><li>把 child selector 写成 descendant selector 会扩大匹配范围。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q03"><a class="back-question button" href="questions.html#Q03">Back to Q03</a><h2>Q03 · Click events, counters and added content</h2><p>计数变量放在函数外，才能跨多次点击保留。累加内容与覆盖内容是两个不同要求。</p><div class="file"><h3>q03.html</h3><div class="code-actions"><a class="button" href="answers/q03.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/q03.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CSIT884 · Reference answers</title><link rel="stylesheet" href="study.css?v=20261106-2"></head><body><a class="skip" href="#main">Skip to content</a><div class="topbar"><a class="brand" href="../index.html">Lecture Review<span> / CSIT884</span></a><div class="tabs" role="navigation" aria-label="Course pages"><a href="index.html">Overview</a><a href="questions.html">Practice</a><a href="notes.html">Memory notes</a><a href="quick-notes.html">Quick sheet</a><a href="audit.html">Coverage</a></div></div><main id="main" class="answer-list"><section class="paper"><h1>Reference answers</h1><p>完整代码需主动展开。分级提示与解析在练习页中分别打开。</p><div class="index"><a href="#A1-1">A1-1</a><a href="#A1-2">A1-2</a><a href="#A2-1">A2-1</a><a href="#A2-2">A2-2</a><a href="#A2-3">A2-3</a><a href="#A3-1">A3-1</a><a href="#A3-2">A3-2</a><a href="#A4-1">A4-1</a><a href="#Q01">Q01</a><a href="#Q02">Q02</a><a href="#Q03">Q03</a><a href="#Q04">Q04</a><a href="#Q05">Q05</a><a href="#Q06">Q06</a><a href="#Q07">Q07</a><a href="#Q08">Q08</a><a href="#Q09">Q09</a><a href="#Q10">Q10</a><a href="#Q11">Q11</a><a href="#Q12">Q12</a><a href="#Q13">Q13</a><a href="#Q14">Q14</a><a href="#Q15">Q15</a><a href="#Q16">Q16</a><a href="#Q17">Q17</a><a href="#Q18">Q18</a><a href="#Q19">Q19</a><a href="#Q20">Q20</a><a href="#Q21">Q21</a><a href="#Q22">Q22</a><a href="#Q23">Q23</a><a href="#Q24">Q24</a><a href="#Q25">Q25</a><a href="#Q26">Q26</a><a href="#Q27">Q27</a><a href="#Q28">Q28</a><a href="#Q29">Q29</a></div></section><section class="card answers" id="A1-1"><a class="back-question button" href="questions.html#A1-1">Back to A1-1</a><h2>A1-1 · HTML instructions page</h2><p>A1 Q1 · adapted instructions-page task</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>a1-1.html</h3><div class="code-actions"><a class="button" href="answers/a1-1.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/a1-1.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;title&gt;Study workshop registration&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;How do I register for a study workshop?&lt;/h1&gt;&lt;h2&gt;2026001, mayal@uowmail.edu.au&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;Choose a suitable workshop from the list and note when it will run.&lt;/li&gt;&lt;li&gt;Fill in the form with your student number and university email address.&lt;/li&gt;&lt;li&gt;Check that you chose the right workshop and entered the correct contact details.&lt;/li&gt;&lt;li&gt;Send the request before registration closes.&lt;/li&gt;&lt;li&gt;Look in your university email for the confirmation.&lt;/li&gt;&lt;/ul&gt;&lt;a href=&quot;https://workshops.example/&quot; target=&quot;_blank&quot;&gt;Click here to read more about study workshops&lt;/a&gt;&lt;/body&gt;&lt;/html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>The main heading is followed by the smaller identity heading, all five steps, and the final link.</li><li>The list has bullets. The final link opens a separate tab. The page uses no CSS.</li></ul></section><section class="card answers" id="A1-2"><a class="back-question button" href="questions.html#A1-2">Back to A1-2</a><h2>A1-2 · HTML coordinator table</h2><p>A1 Q2 · adapted coordinator-table task</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>a1-2.html</h3><div class="code-actions"><a class="button" href="answers/a1-2.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/a1-2.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;title&gt;Subject coordinators&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;CSIT884, 2026001, Maya Lee&lt;/h1&gt;&lt;table border=&quot;1&quot;&gt;&lt;tr&gt;&lt;th&gt;Coordinator name&lt;/th&gt;&lt;th&gt;Subject code&lt;/th&gt;&lt;th&gt;Consultation hours&lt;/th&gt;&lt;th&gt;Picture&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Alex Green&lt;/td&gt;&lt;td&gt;CSIT884&lt;/td&gt;&lt;td&gt;&lt;ol&gt;&lt;li&gt;Tuesday 10:00–11:00&lt;/li&gt;&lt;li&gt;Thursday 14:00–15:00&lt;/li&gt;&lt;/ol&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&quot;https://cp0330.github.io/Lecture--Review/CSIT884/assets/team1.svg&quot; width=&quot;100&quot; height=&quot;100&quot; alt=&quot;Alex Green&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Sam Brown&lt;/td&gt;&lt;td&gt;CSIT882&lt;/td&gt;&lt;td&gt;&lt;ol&gt;&lt;li&gt;Monday 09:00–10:00&lt;/li&gt;&lt;li&gt;Friday 11:00–12:00&lt;/li&gt;&lt;/ol&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&quot;https://cp0330.github.io/Lecture--Review/CSIT884/assets/team2.svg&quot; width=&quot;100&quot; height=&quot;100&quot; alt=&quot;Sam Brown&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Robin White&lt;/td&gt;&lt;td&gt;CSIT985&lt;/td&gt;&lt;td&gt;&lt;ol&gt;&lt;li&gt;Wednesday 13:00–14:00&lt;/li&gt;&lt;/ol&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&quot;https://cp0330.github.io/Lecture--Review/CSIT884/assets/team3.svg&quot; width=&quot;100&quot; height=&quot;100&quot; alt=&quot;Robin White&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>The table contains one header row and three coordinator rows, with four columns.</li><li>Consultation hours are numbered. The three pictures are different and each is 100 by 100 pixels.</li></ul></section><section class="card answers" id="A2-1"><a class="back-question button" href="questions.html#A2-1">Back to A2-1</a><h2>A2-1 · HTML page elements</h2><p>A2 Q1 · clarified HTML task</p><p class="small">Source assignment total: 5. These are source assignment marks, not an exam marking prediction.</p><div class="file"><h3>a2-1.html</h3><div class="code-actions"><a class="button" href="answers/a2-1.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/a2-1.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;title&gt;HTML elements&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;table border=&quot;1&quot;&gt;&lt;tr&gt;&lt;td&gt;2026001&lt;/td&gt;&lt;td&gt;2026001&lt;/td&gt;&lt;td&gt;2026001&lt;/td&gt;&lt;td&gt;2026001&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Maya Lee&lt;/td&gt;&lt;td&gt;Maya Lee&lt;/td&gt;&lt;td&gt;Maya Lee&lt;/td&gt;&lt;td&gt;Maya Lee&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;ul&gt;&lt;li&gt;Cat&lt;/li&gt;&lt;li&gt;Dog&lt;/li&gt;&lt;li&gt;Frog&lt;/li&gt;&lt;li&gt;Emu&lt;/li&gt;&lt;/ul&gt;&lt;a href=&quot;https://spider.example/&quot; target=&quot;_blank&quot;&gt;Click here&lt;/a&gt;&lt;p&gt;FROG&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;EMU&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>The table has exactly eight cells. Student numbers occupy the first row and names occupy the second.</li><li>There are four bullet items. The link opens a new tab, and all five spaces are visible.</li></ul></section><section class="card answers" id="A2-2"><a class="back-question button" href="questions.html#A2-2">Back to A2-2</a><h2>A2-2 · A page with required CSS methods</h2><p>A2 Q2 · CSS task</p><p class="small">Source assignment total: 5. These are source assignment marks, not an exam marking prediction.</p><div class="file"><h3>a2-2.html</h3><div class="code-actions"><a class="button" href="answers/a2-2.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/a2-2.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;title&gt;Required CSS methods&lt;/title&gt;&lt;style&gt;.info {border-style:dashed;border-color:orange} #city {color:purple;background-color:gray}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;p style=&quot;font-size:50px&quot;&gt;Maya Lee&lt;/p&gt;&lt;p style=&quot;color:blue&quot;&gt;2026001&lt;/p&gt;&lt;p class=&quot;info&quot;&gt;Australia&lt;/p&gt;&lt;p class=&quot;info&quot;&gt;mayal@uowmail.edu.au&lt;/p&gt;&lt;h1 id=&quot;city&quot;&gt;City of Wollongong&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>The name is 50px and the student number is blue. Each uses the specified CSS method.</li><li>Both paragraphs have dashed orange borders. The heading is purple on gray. The required class and ID selectors are used.</li></ul></section><section class="card answers" id="A2-3"><a class="back-question button" href="questions.html#A2-3">Back to A2-3</a><h2>A2-3 · Click events on a page</h2><p>A2 Q3 · JavaScript task</p><p class="small">Source assignment total: 5. These are source assignment marks, not an exam marking prediction.</p><div class="file"><h3>a2-3.html</h3><div class="code-actions"><a class="button" href="answers/a2-3.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/a2-3.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -97,34 +36,7 @@ function addButton() {
 &lt;p onclick=&quot;addButton()&quot;&gt;mayal@uowmail.edu.au&lt;/p&gt;&lt;div id=&quot;buttons&quot;&gt;&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>After three counter-button clicks, the counter shows 3.</li><li>After two email clicks, there are two new buttons. The counter does not change.</li></ul><h3>常见错误</h3><ul><li>把 counter 在每次调用时重新声明为 0。</li><li>用 = 覆盖全部内容而没有累加。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q04"><a class="back-question button" href="questions.html#Q04">Back to Q04</a><h2>Q04 · value, src and the Enter key</h2><p>先把公共更新功能写成参数化函数，再让按钮和键盘事件共用。这里的条件表达式也可换成 if/else。</p><div class="file"><h3>q04.html</h3><div class="code-actions"><a class="button" href="answers/q04.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/q04.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Commands&lt;/title&gt;
-&lt;script&gt;
-function showAnimal(name) {
-  // Text fields use value; images use src.
-  document.getElementById(&quot;status&quot;).value = name == &quot;cat&quot; ? &quot;Cat selected&quot; : &quot;Dog selected&quot;;
-  document.getElementById(&quot;animal&quot;).src = &quot;../assets/&quot; + name + &quot;.svg&quot;;
-}
-function runCommand(event) {
-  // Only the Enter key executes a command.
-  if (event.key != &quot;Enter&quot;) { return; }
-  var command = document.getElementById(&quot;command&quot;).value;
-  if (command == &quot;display cat&quot;) { showAnimal(&quot;cat&quot;); }
-  else if (command == &quot;display dog&quot;) { showAnimal(&quot;dog&quot;); }
-  else { alert(&quot;Invalid command&quot;); }
-}
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;button onclick=&quot;showAnimal(&#x27;cat&#x27;)&quot;&gt;Cat&lt;/button&gt;&lt;button onclick=&quot;showAnimal(&#x27;dog&#x27;)&quot;&gt;Dog&lt;/button&gt;
-&lt;input id=&quot;status&quot; readonly&gt;&lt;br&gt;&lt;img id=&quot;animal&quot; width=&quot;100&quot; alt=&quot;Selected animal&quot;&gt;&lt;br&gt;
-Enter command: &lt;input id=&quot;command&quot; onkeydown=&quot;runCommand(event)&quot;&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>Both the buttons and valid commands change the image and status.</li><li>display bird followed by Enter shows an alert and keeps the previous image.</li></ul><h3>常见错误</h3><ul><li>输入框内容用 value，图片地址用 src。</li><li>事件函数要接收 event，不能让每个键都提交命令。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q05"><a class="back-question button" href="questions.html#Q05">Back to Q05</a><h2>Q05 · Animation: one timer, reset and restart</h2><p>timer 保存是否正在运行；firstNumber 保存动画的当前数值。停止时两种状态都需要恢复。</p><div class="file"><h3>q05.html</h3><div class="code-actions"><a class="button" href="answers/q05.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/q05.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>After three clicks on the student-number button, its count is 3.</li><li>After two email clicks, two CSIT884 buttons are displayed. Clicking the name produces both required messages.</li></ul></section><section class="card answers" id="A3-1"><a class="back-question button" href="questions.html#A3-1">Back to A3-1</a><h2>A3-1 · Start, stop and restart an animation</h2><p>A3 Q1 · animation task</p><p class="small">Source assignment total: 10. These are source assignment marks, not an exam marking prediction.</p><div class="file"><h3>a3-1.html</h3><div class="code-actions"><a class="button" href="answers/a3-1.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/a3-1.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -159,7 +71,204 @@ function stopAnimation() {
 &lt;span style=&quot;color:purple;cursor:pointer;&quot; onclick=&quot;stopAnimation()&quot;&gt;Stop Animation&lt;/span&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>After Start, the first number changes to 3 and then 5 at one-second intervals.</li><li>Clicking Start several times quickly still increases the number by only 2 each second.</li><li>Stop immediately restores 1. The equation then stays unchanged until Start is clicked.</li></ul><h3>常见错误</h3><ul><li>setInterval(tick(), 1000) 会立刻调用函数，应传 tick。</li><li>只 clearInterval 而没有将 timer 改回 null，后续可能无法启动。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q06"><a class="back-question button" href="questions.html#Q06">Back to Q06</a><h2>Q06 · Random slideshow</h2><p>用 array.length 决定随机范围，可以随图片数量调整。停止后没有清空 src，因为题目要求保留。</p><div class="file"><h3>q06.html</h3><div class="code-actions"><a class="button" href="answers/q06.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/q06.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>The first update occurs one second after Start, and the following updates are one second apart.</li><li>Stop restores the initial equation immediately. A later Start begins again at 3, rather than continuing the stopped value.</li></ul></section><section class="card answers" id="A3-2"><a class="back-question button" href="questions.html#A3-2">Back to A3-2</a><h2>A3-2 · A short-URL request form</h2><p>A3 Q2 · web-form service contract</p><p class="small">Source assignment total: 5. These are source assignment marks, not an exam marking prediction.</p><div class="file"><h3>a3-2.html</h3><div class="code-actions"><a class="button" href="answers/a3-2.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/a3-2.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;title&gt;Short-URL request&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;Request a short URL&lt;/h1&gt;&lt;form action=&quot;/short-url&quot; method=&quot;get&quot;&gt;
+&lt;p&gt;&lt;label&gt;Customer email: &lt;input type=&quot;text&quot; name=&quot;user&quot;&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label&gt;Original long URL: &lt;input type=&quot;text&quot; name=&quot;longurl&quot;&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label&gt;Activation date: &lt;input type=&quot;text&quot; name=&quot;adate&quot;&gt;&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;Payment method:&lt;br&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;pmethod&quot; value=&quot;100&quot;&gt;Apple Pay&lt;/label&gt;&lt;br&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;pmethod&quot; value=&quot;200&quot;&gt;PayPal&lt;/label&gt;&lt;br&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;pmethod&quot; value=&quot;300&quot;&gt;AliPay&lt;/label&gt;&lt;br&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;pmethod&quot; value=&quot;400&quot;&gt;WeChat Pay&lt;/label&gt;&lt;/p&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;&lt;input type=&quot;reset&quot; value=&quot;Reset&quot;&gt;&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>Selecting PayPal submits pmethod=200. Only one payment method can be selected.</li><li>For email maya@example.com, URL https://example.com/book and date 2026-11-11, submission contains user, longurl, adate and the chosen pmethod. Reset restores the initial form.</li></ul></section><section class="card answers" id="A4-1"><a class="back-question button" href="questions.html#A4-1">Back to A4-1</a><h2>A4-1 · A weather information page</h2><p>A4 · complete AJAX and CSS task</p><p class="small">Source assignment total: 10. These are source assignment marks, not an exam marking prediction.</p><div class="file"><h3>a4-1.html</h3><div class="code-actions"><a class="button" href="answers/a4-1.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/a4-1.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;title&gt;Weather information&lt;/title&gt;&lt;style&gt;.lee {color:orange;font-size:50px} #mayal {color:purple;font-size:50px}&lt;/style&gt;&lt;script&gt;
+function getWeather() {
+  // Build the query from the values entered for this request.
+  var latitude = document.getElementById(&quot;latitude&quot;).value;
+  var longitude = document.getElementById(&quot;longitude&quot;).value;
+  var url = &quot;/weather?latitude=&quot; + encodeURIComponent(latitude) + &quot;&amp;longitude=&quot; + encodeURIComponent(longitude) + &quot;&amp;current=temperature_2m&quot;;
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4) {
+      if (xhttp.status == 200) { displayWeather(JSON.parse(xhttp.responseText), latitude, longitude); }
+      else { document.getElementById(&quot;weatherDisplay&quot;).textContent = &quot;Request failed: &quot; + xhttp.status; }
+    }
+  };
+  xhttp.open(&quot;GET&quot;, url, true);
+  xhttp.send();
+}
+function displayWeather(weather, latitude, longitude) {
+  // Response values, rather than copied sample numbers, supply the result.
+  var output = &quot;&lt;table border=&#x27;1&#x27;&gt;&lt;tr&gt;&lt;th colspan=&#x27;2&#x27;&gt;User Query&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Latitude&lt;/td&gt;&lt;td&gt;&quot; + latitude + &quot;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Longitude&lt;/td&gt;&lt;td&gt;&quot; + longitude + &quot;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&quot;;
+  output += &quot;&lt;table border=&#x27;1&#x27;&gt;&lt;tr&gt;&lt;th colspan=&#x27;2&#x27; id=&#x27;mayal&#x27;&gt;Weather information&lt;/th&gt;&lt;/tr&gt;&quot;;
+  output += &quot;&lt;tr&gt;&lt;td&gt;Elevation&lt;/td&gt;&lt;td&gt;&quot; + weather.elevation + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
+  output += &quot;&lt;tr&gt;&lt;td&gt;Time&lt;/td&gt;&lt;td&gt;&quot; + weather.current.time + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
+  output += &quot;&lt;tr&gt;&lt;td&gt;Interval&lt;/td&gt;&lt;td&gt;&quot; + weather.current.interval + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
+  output += &quot;&lt;tr&gt;&lt;td&gt;Temperature&lt;/td&gt;&lt;td class=&#x27;lee&#x27;&gt;&quot; + weather.current.temperature_2m + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
+  output += &quot;&lt;tr&gt;&lt;td&gt;Generationtime (ms)&lt;/td&gt;&lt;td&gt;&quot; + weather.generationtime_ms + &quot;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&quot;;
+  document.getElementById(&quot;weatherDisplay&quot;).innerHTML = output;
+}
+&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;2026001, Maya Lee&lt;/h1&gt;&lt;table border=&quot;1&quot;&gt;&lt;tr&gt;&lt;th&gt;City&lt;/th&gt;&lt;th&gt;Country&lt;/th&gt;&lt;th&gt;Latitude&lt;/th&gt;&lt;th&gt;Longitude&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Wollongong&lt;/td&gt;&lt;td&gt;Australia&lt;/td&gt;&lt;td&gt;-34.4278&lt;/td&gt;&lt;td&gt;150.8931&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;New York&lt;/td&gt;&lt;td&gt;USA&lt;/td&gt;&lt;td&gt;40.7128&lt;/td&gt;&lt;td&gt;-74.006&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Paris&lt;/td&gt;&lt;td&gt;France&lt;/td&gt;&lt;td&gt;48.8566&lt;/td&gt;&lt;td&gt;2.3522&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Tokyo&lt;/td&gt;&lt;td&gt;Japan&lt;/td&gt;&lt;td&gt;35.6762&lt;/td&gt;&lt;td&gt;139.6503&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Auckland&lt;/td&gt;&lt;td&gt;New Zealand&lt;/td&gt;&lt;td&gt;-36.8509&lt;/td&gt;&lt;td&gt;174.7645&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;label&gt;Latitude: &lt;input id=&quot;latitude&quot;&gt;&lt;/label&gt;&lt;/p&gt;&lt;p&gt;&lt;label&gt;Longitude: &lt;input id=&quot;longitude&quot;&gt;&lt;/label&gt;&lt;/p&gt;&lt;button onclick=&quot;getWeather()&quot;&gt;Get Weather JSON&lt;/button&gt;&lt;div id=&quot;weatherDisplay&quot;&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>Before a request, the city table has six rows and four columns. Both coordinate fields and the button appear below it.</li><li>Wollongong and New York requests display different supplied temperatures. All displayed weather values come from the corresponding response.</li><li>The required class/ID names and document CSS methods are used. The input coordinates appear under User Query.</li></ul></section><section class="card answers" id="Q01"><a class="back-question button" href="questions.html#Q01">Back to Q01</a><h2>Q01 · A competition information page</h2><p>Final review: HTML; A1 Q1/Q2; A2 Q1; L01</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q01.html</h3><div class="code-actions"><a class="button" href="answers/q01.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q01.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Coding Competition&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Coding Competition&lt;/h1&gt;
+&lt;h2&gt;Maya Lee, 2026001, mayal@uowmail.edu.au&lt;/h2&gt;
+&lt;table border=&quot;1&quot;&gt;
+  &lt;tr&gt;&lt;th&gt;Rank&lt;/th&gt;&lt;th&gt;Team&lt;/th&gt;&lt;th&gt;Members&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;1st&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://river.example/&quot; target=&quot;_blank&quot;&gt;River Team&lt;/a&gt;&lt;br&gt;&lt;img src=&quot;../assets/team1.svg&quot; width=&quot;120&quot; height=&quot;80&quot; alt=&quot;River flag&quot;&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Alex&lt;/b&gt; &lt;i&gt;(team leader)&lt;/i&gt;&lt;/li&gt;&lt;li&gt;Bo&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;2nd&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://mountain.example/&quot; target=&quot;_blank&quot;&gt;Mountain Team&lt;/a&gt;&lt;br&gt;&lt;img src=&quot;../assets/team2.svg&quot; width=&quot;120&quot; height=&quot;80&quot; alt=&quot;Mountain flag&quot;&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Chen&lt;/b&gt; &lt;i&gt;(team leader)&lt;/i&gt;&lt;/li&gt;&lt;li&gt;Dee&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;ol&gt;&lt;li&gt;Register&lt;/li&gt;&lt;li&gt;Practice&lt;/li&gt;&lt;li&gt;Compete&lt;/li&gt;&lt;/ol&gt;
+&lt;p&gt;FROG&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;EMU &amp;#128516;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>The table has three rows and three columns, including the header row. Both images are 120 by 80 pixels. Both links have target=&quot;_blank&quot;.</li><li>There is no CSS. Use ul and ol in the correct places. The browser must display all five spaces.</li></ul></section><section class="card answers" id="Q02"><a class="back-question button" href="questions.html#Q02">Back to Q02</a><h2>Q02 · CSS selectors and an external stylesheet</h2><p>Final review: CSS; A2 Q2; A4 selector requirements; L02</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q02.html</h3><div class="code-actions"><a class="button" href="answers/q02.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q02.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;CSS methods&lt;/title&gt;
+&lt;style&gt;
+#heading { color: purple; background-color: lightgray; }
+.info { border: 2px dashed orange; padding: 10px; }
+#teamTable { border-collapse: collapse; }
+#teamTable th, #teamTable td { border: 1px solid black; padding: 12px; vertical-align: top; }
+#teamTable .rank { text-align: right; }
+.members &gt; li { color: green; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1 id=&quot;heading&quot;&gt;City Coding Teams&lt;/h1&gt;
+&lt;p style=&quot;font-size:50px;&quot;&gt;Maya Lee&lt;/p&gt;
+&lt;p style=&quot;color:blue;&quot;&gt;2026001&lt;/p&gt;
+&lt;p class=&quot;info&quot;&gt;Australia&lt;/p&gt;&lt;p class=&quot;info&quot;&gt;mayal@uowmail.edu.au&lt;/p&gt;
+&lt;table id=&quot;teamTable&quot;&gt;
+ &lt;tr&gt;&lt;th class=&quot;rank&quot;&gt;Rank&lt;/th&gt;&lt;th&gt;Members&lt;/th&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td class=&quot;rank&quot;&gt;1&lt;/td&gt;&lt;td&gt;&lt;ul class=&quot;members&quot;&gt;&lt;li&gt;Alex&lt;/li&gt;&lt;li&gt;Bo&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></details></div><div class="file"><h3>q02-external.html</h3><div class="code-actions"><a class="button" href="answers/q02-external.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q02-external.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;CSS external&lt;/title&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;q02.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1 id=&quot;heading&quot;&gt;City Coding Teams&lt;/h1&gt;
+&lt;p style=&quot;font-size:50px;&quot;&gt;Maya Lee&lt;/p&gt;
+&lt;p style=&quot;color:blue;&quot;&gt;2026001&lt;/p&gt;
+&lt;p class=&quot;info&quot;&gt;Australia&lt;/p&gt;&lt;p class=&quot;info&quot;&gt;mayal@uowmail.edu.au&lt;/p&gt;
+&lt;table id=&quot;teamTable&quot;&gt;
+ &lt;tr&gt;&lt;th class=&quot;rank&quot;&gt;Rank&lt;/th&gt;&lt;th&gt;Members&lt;/th&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td class=&quot;rank&quot;&gt;1&lt;/td&gt;&lt;td&gt;&lt;ul class=&quot;members&quot;&gt;&lt;li&gt;Alex&lt;/li&gt;&lt;li&gt;Bo&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></details></div><div class="file"><h3>q02.css</h3><div class="code-actions"><a class="button" href="answers/q02.css" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q02.css">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>#heading { color: purple; background-color: lightgray; }
+.info { border: 2px dashed orange; padding: 10px; }
+#teamTable { border-collapse: collapse; }
+#teamTable th, #teamTable td { border: 1px solid black; padding: 12px; vertical-align: top; }
+#teamTable .rank { text-align: right; }
+.members &gt; li { color: green; }
+</code></pre></details></div><h3>对照检查</h3><ul><li>Both HTML pages have the same appearance.</li><li>Use &gt; for direct children in the green list rule. Do not replace it with a space.</li><li>Use . for a class and # for an ID. Do not put style tags inside the CSS file.</li></ul></section><section class="card answers" id="Q03"><a class="back-question button" href="questions.html#Q03">Back to Q03</a><h2>Q03 · Clicking text and adding buttons</h2><p>Final review: JavaScript and onclick; A2 Q3; L03 Q1/Q5/Q6</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q03.html</h3><div class="code-actions"><a class="button" href="answers/q03.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q03.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Click events&lt;/title&gt;
+&lt;script&gt;
+var clickCount = 0;
+function sayHi() {
+  // Send the two required messages.
+  alert(&quot;Hi&quot;);
+  console.log(&quot;Maya Lee&quot;);
+}
+function increase() {
+  // Save the count outside this function.
+  clickCount = clickCount + 1;
+  document.getElementById(&quot;count&quot;).innerHTML = clickCount;
+}
+function addButton() {
+  // Append new content without replacing earlier buttons.
+  var holder = document.getElementById(&quot;buttons&quot;);
+  holder.innerHTML += &quot;&lt;button&gt;CSIT884&lt;/button&gt;&quot;;
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p onclick=&quot;sayHi()&quot;&gt;Maya Lee&lt;/p&gt;
+&lt;button onclick=&quot;increase()&quot;&gt;2026001&lt;/button&gt;&lt;p id=&quot;count&quot;&gt;0&lt;/p&gt;
+&lt;p onclick=&quot;addButton()&quot;&gt;mayal@uowmail.edu.au&lt;/p&gt;&lt;div id=&quot;buttons&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>After three counter-button clicks, the counter shows 3.</li><li>After two email clicks, there are two new buttons. The counter does not change.</li></ul></section><section class="card answers" id="Q04"><a class="back-question button" href="questions.html#Q04">Back to Q04</a><h2>Q04 · Animal buttons and text commands</h2><p>Final review: value, src and events; L03 Q2/Q3/Q7</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q04.html</h3><div class="code-actions"><a class="button" href="answers/q04.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q04.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Commands&lt;/title&gt;
+&lt;script&gt;
+function showAnimal(name) {
+  // Text fields use value; images use src.
+  document.getElementById(&quot;status&quot;).value = name == &quot;cat&quot; ? &quot;Cat selected&quot; : &quot;Dog selected&quot;;
+  document.getElementById(&quot;animal&quot;).src = &quot;../assets/&quot; + name + &quot;.svg&quot;;
+}
+function runCommand(event) {
+  // Only the Enter key executes a command.
+  if (event.key != &quot;Enter&quot;) { return; }
+  var command = document.getElementById(&quot;command&quot;).value;
+  if (command == &quot;display cat&quot;) { showAnimal(&quot;cat&quot;); }
+  else if (command == &quot;display dog&quot;) { showAnimal(&quot;dog&quot;); }
+  else { alert(&quot;Invalid command&quot;); }
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;button onclick=&quot;showAnimal(&#x27;cat&#x27;)&quot;&gt;Cat&lt;/button&gt;&lt;button onclick=&quot;showAnimal(&#x27;dog&#x27;)&quot;&gt;Dog&lt;/button&gt;
+&lt;input id=&quot;status&quot; readonly&gt;&lt;br&gt;&lt;img id=&quot;animal&quot; width=&quot;100&quot; alt=&quot;Selected animal&quot;&gt;&lt;br&gt;
+Enter command: &lt;input id=&quot;command&quot; onkeydown=&quot;runCommand(event)&quot;&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>Both the buttons and valid commands change the image and status.</li><li>display bird followed by Enter shows an alert and keeps the previous image.</li></ul></section><section class="card answers" id="Q05"><a class="back-question button" href="questions.html#Q05">Back to Q05</a><h2>Q05 · Animation with a single running sequence</h2><p>Final review: setInterval/clearInterval; A3 Q1; L06 Q4</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q05.html</h3><div class="code-actions"><a class="button" href="answers/q05.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q05.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Equation animation&lt;/title&gt;
+&lt;script&gt;
+var studentNumber = 2026001;
+var firstNumber = 1;
+var timer = null;
+function showEquation() {
+  // Add numbers before constructing the output string.
+  var result = firstNumber + studentNumber;
+  document.getElementById(&quot;equation&quot;).innerHTML = firstNumber + &quot; + &quot; + studentNumber + &quot; = &quot; + result;
+}
+function tick() { firstNumber += 2; showEquation(); }
+function startAnimation() {
+  // A running animation must not be started again.
+  if (timer != null) { return; }
+  timer = setInterval(tick, 1000);
+}
+function stopAnimation() {
+  // This task requires a reset, not only a pause.
+  clearInterval(timer);
+  timer = null;
+  firstNumber = 1;
+  showEquation();
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p id=&quot;equation&quot; style=&quot;color:red;font-size:60px;&quot;&gt;1 + 2026001 = 2026002&lt;/p&gt;
+&lt;span style=&quot;color:orange;cursor:pointer;&quot; onclick=&quot;startAnimation()&quot;&gt;Start Animation&lt;/span&gt;
+&lt;span style=&quot;color:purple;cursor:pointer;&quot; onclick=&quot;stopAnimation()&quot;&gt;Stop Animation&lt;/span&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>After Start, the first number changes to 3 and then 5 at one-second intervals.</li><li>Clicking Start several times quickly still increases the number by only 2 each second.</li><li>Stop immediately restores 1. The equation then stays unchanged until Start is clicked.</li></ul></section><section class="card answers" id="Q06"><a class="back-question button" href="questions.html#Q06">Back to Q06</a><h2>Q06 · A random slideshow</h2><p>Final review: random numbers and animation; L06 Q5; Animation B slideshow</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q06.html</h3><div class="code-actions"><a class="button" href="answers/q06.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q06.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -186,7 +295,7 @@ function stopSlideshow() {
 &lt;br&gt;&lt;img id=&quot;slide&quot; width=&quot;240&quot; height=&quot;160&quot; alt=&quot;Slideshow&quot;&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>Every displayed path is one of the six array items.</li><li>After Stop, the image stays visible and does not change.</li></ul><h3>常见错误</h3><ul><li>随机索引加 1 会漏掉第一项，并可能访问越界。</li><li>1200 毫秒与 1.2 毫秒不同。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q07"><a class="back-question button" href="questions.html#Q07">Back to Q07</a><h2>Q07 · Web form: follow the service documentation</h2><p>name 决定参数名，value 决定被选项提交的值。多个同名 checkbox 可以生成多个 sub 参数。reset 恢复默认状态。</p><p class="notice local">This form or weather example needs the local practice server. GitHub Pages does not provide /search or /weather. <a href="setup.html">Open setup steps</a>.</p><div class="file"><h3>q07.html</h3><div class="code-actions"><a class="button" href="answers/q07.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/q07.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>Every displayed path is one of the six array items.</li><li>After Stop, the image stays visible and does not change.</li></ul></section><section class="card answers" id="Q07"><a class="back-question button" href="questions.html#Q07">Back to Q07</a><h2>Q07 · A library search form</h2><p>Final review: web-form marking requirements; A3 Q2; L04</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q07.html</h3><div class="code-actions"><a class="button" href="answers/q07.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q07.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -209,7 +318,7 @@ function stopSlideshow() {
 &lt;/form&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>Each name matches the documentation. The submitted value is the service value, not the displayed label.</li><li>Clear empties the text fields, clears the subject choices and restores Print.</li><li>After starting the local server, submit the form and check the received parameters. Parameter order does not change their meaning.</li></ul><h3>常见错误</h3><ul><li>id 不能代替 name。</li><li>radio 使用不同 name 会失去单选分组。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q08"><a class="back-question button" href="questions.html#Q08">Back to Q08</a><h2>Q08 · Form validation: a random addition question</h2><p>返回 false 的关键是 form 中也写 return。题目数据是页面状态，应在用户作答期间保持一致。</p><p class="notice local">This form or weather example needs the local practice server. GitHub Pages does not provide /search or /weather. <a href="setup.html">Open setup steps</a>.</p><div class="file"><h3>q08.html</h3><div class="code-actions"><a class="button" href="answers/q08.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/q08.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>Each name matches the documentation. The submitted value is the service value, not the displayed label.</li><li>Clear empties the text fields, clears the subject choices and restores Print.</li><li>After starting the local server, submit the form and check the received parameters. Parameter order does not change their meaning.</li></ul></section><section class="card answers" id="Q08"><a class="back-question button" href="questions.html#Q08">Back to Q08</a><h2>Q08 · A random question before form submission</h2><p>Final review: form validation and random numbers; L05; Form Validation B</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q08.html</h3><div class="code-actions"><a class="button" href="answers/q08.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q08.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -257,7 +366,7 @@ function resetQuestion() {
 &lt;/form&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>A wrong answer keeps the current page open and displays Wrong!.</li><li>After correcting the answer, the submitted parameters have only the four names defined in Q07.</li><li>After Clear, the answer field and error message are empty. Both new numbers are within 1 to 10.</li></ul><h3>常见错误</h3><ul><li>仅调用 validateForm() 而不 return，会失去拦截效果。</li><li>校验时重新生成随机数，会检查另一道题的答案。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q09"><a class="back-question button" href="questions.html#Q09">Back to Q09</a><h2>Q09 · JSON: correct the structure and data types</h2><p>对象内的每个成员都要有属性名；JSON 的属性名使用双引号，boolean 写 true/false，不使用尾随逗号。JavaScript object 的属性名也可以带引号。</p><div class="file"><h3>q09.json</h3><div class="code-actions"><a class="button" href="answers/q09.json" target="_blank" rel="noopener">Open file</a><a class="button" href="answers/q09.json" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>{
+</code></pre></details></div><h3>对照检查</h3><ul><li>A wrong answer keeps the current page open and displays Wrong!.</li><li>After correcting the answer, the submitted parameters have only the four names defined in Q07.</li><li>After Clear, the answer field and error message are empty. Both new numbers are within 1 to 10.</li></ul></section><section class="card answers" id="Q09"><a class="back-question button" href="questions.html#Q09">Back to Q09</a><h2>Q09 · Correct an invalid JSON document</h2><p>Final review: JSON syntax; L09 Q1/Q2</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q09.json</h3><div class="code-actions"><a class="button" href="answers/q09.json" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q09.json">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>{
   &quot;firstName&quot;: &quot;Maya&quot;,
   &quot;lastName&quot;: &quot;Lee&quot;,
   &quot;subjectList&quot;: [
@@ -273,7 +382,7 @@ function resetQuestion() {
   &quot;age&quot;: 22,
   &quot;fullTime&quot;: true
 }
-</code></pre></details></div><h3>对照检查</h3><ul><li>After JSON.parse, subjectList.length is 2.</li><li>age has type number and fullTime has type boolean.</li></ul><h3>常见错误</h3><ul><li>不能把课程 array 无名地放入 object。</li><li>&quot;true&quot; 是字符串，true 才是 boolean。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q10"><a class="back-question button" href="questions.html#Q10">Back to Q10</a><h2>Q10 · JSON: convert between an object and form fields</h2><p>textarea 也是表单控件，使用 value。checkbox 的选中状态使用 checked。两个方向分别需要 stringify 和 parse。</p><div class="file"><h3>q10.html</h3><div class="code-actions"><a class="button" href="answers/q10.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/q10.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>After JSON.parse, subjectList.length is 2.</li><li>age has type number and fullTime has type boolean.</li></ul></section><section class="card answers" id="Q10"><a class="back-question button" href="questions.html#Q10">Back to Q10</a><h2>Q10 · Convert subject data to and from JSON</h2><p>Final review: stringify/parse; L09 Q3/Q4</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q10.html</h3><div class="code-actions"><a class="button" href="answers/q10.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q10.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -305,7 +414,7 @@ Core subject: &lt;input type=&quot;checkbox&quot; id=&quot;core&quot;&gt;&lt;br&
 &lt;textarea id=&quot;jsonText&quot; rows=&quot;12&quot; cols=&quot;60&quot;&gt;&lt;/textarea&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>In the JSON, 6 has no quotes and coreFlag is true or false.</li><li>Change the textarea data to cp=4 and coreFlag=false. Read JSON must update both controls.</li></ul><h3>常见错误</h3><ul><li>只把 JSON string 赋给变量，不能直接按 object 访问。</li><li>checkbox.value 不是选中状态。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q11"><a class="back-question button" href="questions.html#Q11">Back to Q11</a><h2>Q11 · XML: represent a complete student record</h2><p>XML 的任务是保留数据关系。两个顶层 student 缺少共同根元素；XML 属性值必须用引号。空格和缩进可不同。</p><div class="file"><h3>q11.xml</h3><div class="code-actions"><a class="button" href="answers/q11.xml" target="_blank" rel="noopener">Open file</a><a class="button" href="answers/q11.xml" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>In the JSON, 6 has no quotes and coreFlag is true or false.</li><li>Change the textarea data to cp=4 and coreFlag=false. Read JSON must update both controls.</li></ul></section><section class="card answers" id="Q11"><a class="back-question button" href="questions.html#Q11">Back to Q11</a><h2>Q11 · Write a student record in XML</h2><p>Final review: XML data and root element; L07 Q1/Q3</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q11.xml</h3><div class="code-actions"><a class="button" href="answers/q11.xml" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q11.xml">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;student number=&quot;2026001&quot;&gt;
   &lt;firstName&gt;Maya&lt;/firstName&gt;
   &lt;lastName&gt;Lee&lt;/lastName&gt;
@@ -314,7 +423,7 @@ Core subject: &lt;input type=&quot;checkbox&quot; id=&quot;core&quot;&gt;&lt;br&
     &lt;subject code=&quot;CSIT882&quot;&gt;&lt;creditPoint&gt;6&lt;/creditPoint&gt;&lt;mark&gt;72&lt;/mark&gt;&lt;grade&gt;B&lt;/grade&gt;&lt;/subject&gt;
   &lt;/subjects&gt;
 &lt;/student&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>There is exactly one root. Both subject elements are inside subjects.</li><li>Letter case matches. Attribute values have quotes. Do not add table-presentation tags such as th or td.</li></ul><h3>常见错误</h3><ul><li>把表头 Subject/Mark 当成一组重复的数据。</li><li>题目未要求 DTD，不额外加入。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q12"><a class="back-question button" href="questions.html#Q12">Back to Q12</a><h2>Q12 · DTD: define the XML structure</h2><p>DOCTYPE 名称与根一致。+ 表示一次或以上，* 表示零次或以上，? 表示零次或一次。逗号规定顺序。</p><div class="file"><h3>q12.xml</h3><div class="code-actions"><a class="button" href="answers/q12.xml" target="_blank" rel="noopener">Open file</a><a class="button" href="answers/q12.xml" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>There is exactly one root. Both subject elements are inside subjects.</li><li>Letter case matches. Attribute values have quotes. Do not add table-presentation tags such as th or td.</li></ul></section><section class="card answers" id="Q12"><a class="back-question button" href="questions.html#Q12">Back to Q12</a><h2>Q12 · Write an internal DTD</h2><p>Final review: XML/DTD; L07 Q4; XMLDTD lecture</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q12.xml</h3><div class="code-actions"><a class="button" href="answers/q12.xml" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q12.xml">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE student [
   &lt;!ELEMENT student (firstName,lastName,subjects)&gt;
   &lt;!ATTLIST student number CDATA #REQUIRED&gt;
@@ -335,7 +444,7 @@ Core subject: &lt;input type=&quot;checkbox&quot; id=&quot;core&quot;&gt;&lt;br&
     &lt;subject code=&quot;CSIT882&quot;&gt;&lt;creditPoint&gt;6&lt;/creditPoint&gt;&lt;mark&gt;72&lt;/mark&gt;&lt;grade&gt;B&lt;/grade&gt;&lt;/subject&gt;
   &lt;/subjects&gt;
 &lt;/student&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>The original XML passes DTD validation.</li><li>Removing number or code must fail validation. Empty subjects must also fail.</li></ul><h3>常见错误</h3><ul><li>DTD 的 #PCDATA 与 attribute 的 CDATA 不要混用。</li><li>没有声明实际存在的 attribute 会造成 DTD 不匹配。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q13"><a class="back-question button" href="questions.html#Q13">Back to Q13</a><h2>Q13 · XSD: nested complex types and restrictions</h2><p>resultBatch/result 都含子元素和 attribute，因此是 complex type。attribute 声明在 sequence 后；叶子数据的取值限制放在 simpleType 中。</p><div class="file"><h3>q13.xsd</h3><div class="code-actions"><a class="button" href="answers/q13.xsd" target="_blank" rel="noopener">Open file</a><a class="button" href="answers/q13.xsd" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>The original XML passes DTD validation.</li><li>Removing number or code must fail validation. Empty subjects must also fail.</li></ul></section><section class="card answers" id="Q13"><a class="back-question button" href="questions.html#Q13">Back to Q13</a><h2>Q13 · Write an XSD for exam results</h2><p>Final review: simple/complex types; L08 Q1/Q2/Q3</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q13.xsd</h3><div class="code-actions"><a class="button" href="answers/q13.xsd" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q13.xsd">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;xsd:schema xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
   &lt;xsd:element name=&quot;resultBatch&quot;&gt;
     &lt;xsd:complexType&gt;
@@ -365,12 +474,12 @@ Core subject: &lt;input type=&quot;checkbox&quot; id=&quot;core&quot;&gt;&lt;br&
     &lt;/xsd:complexType&gt;
   &lt;/xsd:element&gt;
 &lt;/xsd:schema&gt;
-</code></pre></details></div><div class="file"><h3>q13-sample.xml</h3><div class="code-actions"><a class="button" href="answers/q13-sample.xml" target="_blank" rel="noopener">Open file</a><a class="button" href="answers/q13-sample.xml" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;?xml version=&quot;1.0&quot;?&gt;
+</code></pre></details></div><div class="file"><h3>q13-sample.xml</h3><div class="code-actions"><a class="button" href="answers/q13-sample.xml" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q13-sample.xml">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;?xml version=&quot;1.0&quot;?&gt;
 &lt;resultBatch campus=&quot;Sydney&quot;&gt;
   &lt;result ref=&quot;R001&quot;&gt;&lt;contestantId&gt;00025142&lt;/contestantId&gt;&lt;examId&gt;WEB01&lt;/examId&gt;&lt;score&gt;156&lt;/score&gt;&lt;band&gt;C&lt;/band&gt;&lt;/result&gt;
   &lt;result ref=&quot;R002&quot;&gt;&lt;contestantId&gt;00025143&lt;/contestantId&gt;&lt;examId&gt;WEB01&lt;/examId&gt;&lt;score&gt;280&lt;/score&gt;&lt;band&gt;A&lt;/band&gt;&lt;/result&gt;
 &lt;/resultBatch&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>The given XML is valid. Scores 0 and 300 are valid.</li><li>Reject scores 301 and 1.5, band E, a missing ref, or a resultBatch with no result.</li></ul><h3>常见错误</h3><ul><li>contestantId 使用 integer 会丢失“编号是字符串”的约定。</li><li>只写 string/integer 而没写范围和枚举，不满足全部约束。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q14"><a class="back-question button" href="questions.html#Q14">Back to Q14</a><h2>Q14 · AJAX: display an object and an array of objects</h2><p>异步回调负责确认请求结果；parse 负责把字符串变成数据；display 函数负责把数据变成页面。最后一步通常是主要代码量。此题服务数据视为可信、格式正确的练习数据。</p><div class="file"><h3>q14.html</h3><div class="code-actions"><a class="button" href="answers/q14.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/q14.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>The given XML is valid. Scores 0 and 300 are valid.</li><li>Reject scores 301 and 1.5, band E, a missing ref, or a resultBatch with no result.</li></ul></section><section class="card answers" id="Q14"><a class="back-question button" href="questions.html#Q14">Back to Q14</a><h2>Q14 · Load faculty and airport details</h2><p>Final review: XHR, parse and display; L11 Q1/Q2; A4 request/display workflow</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q14.html</h3><div class="code-actions"><a class="button" href="answers/q14.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q14.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -417,7 +526,7 @@ function displayAirports(obj) {
 &lt;button onclick=&quot;loadJSON(&#x27;../data/airports.json&#x27;,&#x27;airports&#x27;)&quot;&gt;Search Airport&lt;/button&gt;&lt;div id=&quot;airportsDisplay&quot;&gt;&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>The current airport table has a header and three records. It must still work if the number of data records changes.</li><li>Requesting a JSON file that does not exist displays the failure message.</li><li>The code checks both response completion and request success.</li></ul><h3>常见错误</h3><ul><li>AJAX 名称不要求必须使用 XML 数据。</li><li>用固定 HTML 把截图抄出来，不能适应数据变化。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q15"><a class="back-question button" href="questions.html#Q15">Back to Q15</a><h2>Q15 · AJAX: query parameters, nested data and required CSS</h2><p>请求地址与显示内容都要由输入/响应驱动。encodeURIComponent 编码参数值，若本题只允许数字也可用直接拼接；XHR 技术要求仍必须满足。</p><p class="notice local">This form or weather example needs the local practice server. GitHub Pages does not provide /search or /weather. <a href="setup.html">Open setup steps</a>.</p><div class="file"><h3>q15.html</h3><div class="code-actions"><a class="button" href="answers/q15.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/q15.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>The current airport table has a header and three records. It must still work if the number of data records changes.</li><li>Requesting a JSON file that does not exist displays the failure message.</li><li>The code checks both response completion and request success.</li></ul></section><section class="card answers" id="Q15"><a class="back-question button" href="questions.html#Q15">Back to Q15</a><h2>Q15 · Request and display weather data</h2><p>Final review: AJAX/CSS; A4; L11</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q15.html</h3><div class="code-actions"><a class="button" href="answers/q15.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q15.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -465,7 +574,7 @@ Latitude: &lt;input id=&quot;latitude&quot;&gt;&lt;br&gt;Longitude: &lt;input id
 &lt;button onclick=&quot;getWeather()&quot;&gt;Get Weather JSON&lt;/button&gt;&lt;div id=&quot;weatherDisplay&quot;&gt;&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>The temperatures are 18.5 for the first test and 14.7 for the second. Both the request and result change when the input changes.</li><li>Read current.time and current.temperature_2m from the nested current object, not from the top level.</li></ul><h3>常见错误</h3><ul><li>只更换输入文字却没有更换 URL。</li><li>class 名、id 或 CSS 方式与题目不一致。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q16"><a class="back-question button" href="questions.html#Q16">Back to Q16</a><h2>Q16 · Canvas: a triangle and its three medians</h2><p>先画填充三角形，再画白色中线，最后写标签，避免后画的填充遮住线。clearRect 的后两个参数是宽和高。</p><div class="file"><h3>q16.html</h3><div class="code-actions"><a class="button" href="answers/q16.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/q16.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>The temperatures are 18.5 for the first test and 14.7 for the second. Both the request and result change when the input changes.</li><li>Read current.time and current.temperature_2m from the nested current object, not from the top level.</li></ul></section><section class="card answers" id="Q16"><a class="back-question button" href="questions.html#Q16">Back to Q16</a><h2>Q16 · Draw a triangle and its medians</h2><p>Final review: canvas; L12 Q1</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q16.html</h3><div class="code-actions"><a class="button" href="answers/q16.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q16.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -500,7 +609,7 @@ C: X &lt;input id=&quot;cx&quot; value=&quot;260&quot; size=&quot;4&quot;&gt; Y 
 &lt;button onclick=&quot;drawTriangle()&quot;&gt;Draw triangle&lt;/button&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>Change one coordinate and draw again. No old triangle remains.</li><li>Each median ends at the midpoint of the opposite side, not at another vertex.</li></ul><h3>常见错误</h3><ul><li>输入框读出字符串，中点计算前必须转 number。</li><li>忘记 beginPath 会把之前的路径一并重画。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q17"><a class="back-question button" href="questions.html#Q17">Back to Q17</a><h2>Q17 · Drag and drop: matching, counting and added images</h2><p>目标动物通过事件处理函数参数传入，不依赖 event.target.id；这样 drop 到区内子元素时仍可正确判断。新图没有复制原 id。</p><div class="file"><h3>q17.html</h3><div class="code-actions"><a class="button" href="answers/q17.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/q17.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>Change one coordinate and draw again. No old triangle remains.</li><li>Each median ends at the midpoint of the opposite side, not at another vertex.</li></ul></section><section class="card answers" id="Q17"><a class="back-question button" href="questions.html#Q17">Back to Q17</a><h2>Q17 · Match animals by drag and drop</h2><p>Final review: dragstart/drop/dragover; L12 Q2/Q3</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q17.html</h3><div class="code-actions"><a class="button" href="answers/q17.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q17.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -536,7 +645,22 @@ function dropAnimal(event, targetAnimal) {
 &lt;img id=&quot;dog&quot; src=&quot;../assets/dog.svg&quot; width=&quot;100&quot; draggable=&quot;true&quot; ondragstart=&quot;startDrag(event)&quot; alt=&quot;dog&quot;&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>Drop dog onto DOG twice and cat onto CAT once. The counters and added-image counts are 2 and 1.</li><li>Dropping cat onto DOG changes neither counter.</li></ul><h3>常见错误</h3><ul><li>直接 append 原图片会把源图片移走。</li><li>把 target.id 当成接收区 ID，会在目标包含子元素时出错。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q18"><a class="back-question button" href="questions.html#Q18">Back to Q18</a><h2>Q18 · DOM: create, insert, replace, remove and total</h2><p>DOM 操作必须在实际父节点 list 上执行。数量字符串用 Number 转换后参与加减；firstElementChild/lastElementChild 避开空白文本节点。</p><div class="file"><h3>q18.html</h3><div class="code-actions"><a class="button" href="answers/q18.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/q18.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>Drop dog onto DOG twice and cat onto CAT once. The counters and added-image counts are 2 and 1.</li><li>Dropping cat onto DOG changes neither counter.</li></ul></section><section class="card answers" id="Q18"><a class="back-question button" href="questions.html#Q18">Back to Q18</a><h2>Q18 · Add books to an order</h2><p>Final review: DOM methods; L13; DOM lecture; A2 dynamic content</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q18-basic.html</h3><div class="code-actions"><a class="button" href="answers/q18-basic.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q18-basic.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;title&gt;Book order&lt;/title&gt;&lt;script&gt;
+var total = 0;
+function addOrder() {
+  // Add the requested quantity, not just one per order line.
+  var title = document.getElementById(&quot;title&quot;).value;
+  var code = document.getElementById(&quot;code&quot;).value;
+  var quantity = Number(document.getElementById(&quot;quantity&quot;).value);
+  var item = document.createElement(&quot;li&quot;);
+  item.appendChild(document.createTextNode(code + &quot;: &quot; + title + &quot; x &quot; + quantity));
+  document.getElementById(&quot;orders&quot;).appendChild(item);
+  total += quantity;
+  document.getElementById(&quot;total&quot;).textContent = total;
+}
+&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;label&gt;Book title: &lt;input id=&quot;title&quot;&gt;&lt;/label&gt;&lt;br&gt;&lt;label&gt;Product code: &lt;input id=&quot;code&quot;&gt;&lt;/label&gt;&lt;br&gt;&lt;label&gt;Quantity: &lt;input id=&quot;quantity&quot;&gt;&lt;/label&gt;&lt;br&gt;&lt;button onclick=&quot;addOrder()&quot;&gt;Add to order&lt;/button&gt;&lt;ul id=&quot;orders&quot;&gt;&lt;/ul&gt;&lt;p&gt;Total number of books ordered: &lt;span id=&quot;total&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+</code></pre></details></div><div class="file"><h3>q18.html</h3><div class="code-actions"><a class="button" href="answers/q18.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q18.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>DOM extension reference</summary><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -588,7 +712,7 @@ Title: &lt;input id=&quot;title&quot;&gt;&lt;br&gt;Code: &lt;input id=&quot;code
 &lt;ul id=&quot;orders&quot;&gt;&lt;/ul&gt;&lt;p&gt;Total: &lt;span id=&quot;total&quot;&gt;0&lt;/span&gt;&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>Add last: Book A/A1/5, then Book B/B1/2. Total is 7.</li><li>Add first: Book C/C1/3. The order is C/A/B and Total is 10.</li><li>Replace last with Book D/D1/4. Total is 12. Remove last. Total is then 8.</li></ul><h3>常见错误</h3><ul><li>用 document.removeChild 删除普通 li，父子关系不匹配。</li><li>把 quantity 字符串相加会得到 52，而不是 7。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q19"><a class="back-question button" href="questions.html#Q19">Back to Q19</a><h2>Q19 · JSON validation and localStorage</h2><p>保存的是用户原文；解析成功与否只影响验证结果。首次 getItem 返回 null，不能把 null 字样当用户内容显示。textContent 是安全显示纯文本的同类 DOM 属性，换用合适的纯文本节点也可以。</p><div class="file"><h3>q19.html</h3><div class="code-actions"><a class="button" href="answers/q19.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/q19.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>Add Book A / A1 / 5 and Book B / B1 / 2: both items remain and the total is 7.</li><li>Add a third order of 3 books: there are three list items and the total is 10.</li><li>The total adds quantities, not the number of list items.</li></ul></section><section class="card answers" id="Q19"><a class="back-question button" href="questions.html#Q19">Back to Q19</a><h2>Q19 · Validate JSON and restore the last input</h2><p>Final review: local storage and JSON; L14 Q1/Q2</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q19.html</h3><div class="code-actions"><a class="button" href="answers/q19.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q19.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -631,7 +755,7 @@ function validateJSON() {
 &lt;button onclick=&quot;validateJSON()&quot;&gt;Validate JSON&lt;/button&gt;&lt;span id=&quot;message&quot;&gt;&lt;/span&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>{&quot;code&quot;:&quot;CSIT884&quot;,&quot;cp&quot;:6} is valid. {code:&quot;CSIT884&quot;} is invalid.</li><li>Enter invalid text and reload. The exact text returns. Correct it and validate again; the message becomes green.</li><li>The exact error wording can differ between browsers. Do not require one fixed character position.</li></ul><h3>常见错误</h3><ul><li>只保存合法 JSON，会丢失用户尚未完成的草稿。</li><li>JSON.parse 放在 try 外面，异常时没有按题意更新错误信息。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q20"><a class="back-question button" href="questions.html#Q20">Back to Q20</a><h2>Q20 · JavaScript styles and a hover transform</h2><p>CSS 的 font-size 在 JavaScript style 中写成 fontSize。transform 决定变换，transition 决定变化过程；本题明确使用 transform 放大。</p><div class="file"><h3>q20.html</h3><div class="code-actions"><a class="button" href="answers/q20.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/q20.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>{&quot;code&quot;:&quot;CSIT884&quot;,&quot;cp&quot;:6} is valid. {code:&quot;CSIT884&quot;} is invalid.</li><li>Enter invalid text and reload. The exact text returns. Correct it and validate again; the message becomes green.</li><li>The exact error wording can differ between browsers. Do not require one fixed character position.</li></ul></section><section class="card answers" id="Q20"><a class="back-question button" href="questions.html#Q20">Back to Q20</a><h2>Q20 · Change a heading’s colour and size</h2><p>Final review: CSS with JavaScript; L10; CSS with JS B</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q20.html</h3><div class="code-actions"><a class="button" href="answers/q20.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q20.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -657,7 +781,7 @@ function applySize() {
 &lt;br&gt;Font size: &lt;input id=&quot;fontSize&quot; value=&quot;32&quot;&gt;&lt;button onclick=&quot;applySize()&quot;&gt;Apply Size&lt;/button&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>Orange makes the text orange. Entering 40 and clicking Apply Size sets 40px.</li><li>After the hover transition, the computed transform has a scale of 2. Leaving restores it. Hover does not change the font-size input value.</li></ul><h3>常见错误</h3><ul><li>style.font-size 不是正确的点号属性写法。</li><li>把 transition 写成 all 会超出只过渡 transform 的要求。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q21"><a class="back-question button" href="questions.html#Q21">Back to Q21</a><h2>Q21 · HTML: merged cells and page links</h2><p>合并后按逻辑列数数格子：rowspan 占用的下一行位置不再添加 td。font、align、valign 是本课程原练习使用的旧式 HTML，不能推广为现代网页的首选写法。</p><div class="file"><h3>q21.html</h3><div class="code-actions"><a class="button" href="answers/q21.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/q21.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>Orange makes the text orange. Entering 40 and clicking Apply Size sets 40px.</li><li>After the hover transition, the computed transform has a scale of 2. Leaving restores it. Hover does not change the font-size input value.</li></ul></section><section class="card answers" id="Q21"><a class="back-question button" href="questions.html#Q21">Back to Q21</a><h2>Q21 · Merged table cells and page links</h2><p>HTML lecture pp. 17–18, 36–37, 45, 58–66; L01 HTML-only task form</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q21.html</h3><div class="code-actions"><a class="button" href="answers/q21.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q21.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -678,7 +802,7 @@ C&lt;/pre&gt;
 &lt;font size=&quot;5&quot; color=&quot;blue&quot;&gt;Practice only&lt;/font&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>The first cell has colspan=&quot;3&quot;. Monday has rowspan=&quot;2&quot;. The table has four tr elements.</li><li>Go to terms changes the page fragment to #terms. The two spaces in pre remain visible.</li></ul><h3>常见错误</h3><ul><li>rowspan 的下一行仍补上 Monday 单元格，会造成多余列。</li><li>href=&quot;#terms&quot; 的目标是 id，不是另一个文件。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q22"><a class="back-question button" href="questions.html#Q22">Back to Q22</a><h2>Q22 · CSS: spacing, lists and conflicting rules</h2><p>这里明确排除了 !important、不同来源等因素，才能直接比较 specificity（选择器具体程度）。同一优先级和相同 specificity 才比较后出现的规则。浏览器为隐私限制对 visited 的读取，不能仅靠脚本读取颜色来判定访问历史。</p><div class="file"><h3>q22.html</h3><div class="code-actions"><a class="button" href="answers/q22.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/q22.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>The first cell has colspan=&quot;3&quot;. Monday has rowspan=&quot;2&quot;. The table has four tr elements.</li><li>Go to terms changes the page fragment to #terms. The two spaces in pre remain visible.</li></ul></section><section class="card answers" id="Q22"><a class="back-question button" href="questions.html#Q22">Back to Q22</a><h2>Q22 · CSS spacing and rule selection</h2><p>CSS lecture: borders, lists, links and cascading; L02 CSS table exercise</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q22.html</h3><div class="code-actions"><a class="button" href="answers/q22.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q22.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -706,7 +830,7 @@ p { color: green; }
 &lt;p&gt;With collapsed borders, border-spacing has no effect. Padding still adds space inside each cell.&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>The paragraph is purple: the ID selector has higher specificity than the class and type selectors in these rules.</li><li>The table has separated borders. With collapse, border-spacing has no effect; padding still adds space inside cells.</li></ul><h3>常见错误</h3><ul><li>不能把 cascade 简化成“后写一定覆盖前写”。</li><li>border-spacing 与 padding 作用位置不同。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q23"><a class="back-question button" href="questions.html#Q23">Back to Q23</a><h2>Q23 · Events: swap images and handle text input</h2><p>先保存左图旧 src 再覆盖，否则两图会变成同一来源。onselect 是选中文字；onchange 是值被确认改变。prompt 取消与输入空字符串是两种结果。</p><div class="file"><h3>q23.html</h3><div class="code-actions"><a class="button" href="answers/q23.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/q23.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>The paragraph is purple: the ID selector has higher specificity than the class and type selectors in these rules.</li><li>The table has separated borders. With collapse, border-spacing has no effect; padding still adds space inside cells.</li></ul></section><section class="card answers" id="Q23"><a class="back-question button" href="questions.html#Q23">Back to Q23</a><h2>Q23 · Image swapping and input events</h2><p>Week 13: mouseover, focus, blur, change and select; Event lecture pp. 5–19; L03 Q8</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q23.html</h3><div class="code-actions"><a class="button" href="answers/q23.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q23.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -741,7 +865,7 @@ function clearLabel() {
 &lt;button onclick=&quot;renameLabel()&quot;&gt;Rename&lt;/button&gt;&lt;button onclick=&quot;clearLabel()&quot;&gt;Clear label&lt;/button&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>Moving onto the first image swaps cat/dog; leaving and entering again swaps them back.</li><li>Type ab12, then leave the field: it becomes AB12. Selecting text shows the message.</li><li>Prompt Cancel is null. It must not display the word null or be treated as an empty string.</li></ul><h3>常见错误</h3><ul><li>CSS hover 放大没有练到 JavaScript mouseover 交换状态。</li><li>prompt 的返回值不能仅用 if(label) 判断：这样会错误忽略空字符串。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q24"><a class="back-question button" href="questions.html#Q24">Back to Q24</a><h2>Q24 · JavaScript: arrays, strings and dates</h2><p>indexOf 找不到返回 -1；splice(-1,1) 会删除最后一项。Date 的月份索引从 0 开始，getDay 是周几，getDate 是月内日期。复制 Date 再改日期，避免修改原对象。</p><div class="file"><h3>q24.html</h3><div class="code-actions"><a class="button" href="answers/q24.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/q24.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>Moving onto the first image swaps cat/dog; leaving and entering again swaps them back.</li><li>Type ab12, then leave the field: it becomes AB12. Selecting text shows the message.</li><li>Prompt Cancel is null. It must not display the word null or be treated as an empty string.</li></ul></section><section class="card answers" id="Q24"><a class="back-question button" href="questions.html#Q24">Back to Q24</a><h2>Q24 · Arrays, strings and dates</h2><p>JSbasics lecture: String pp. 61–62, Date pp. 63–70, Array pp. 71–75; L06 input/output task form</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q24.html</h3><div class="code-actions"><a class="button" href="answers/q24.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q24.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -775,7 +899,7 @@ function showSubjects() {
 &lt;pre id=&quot;result&quot;&gt;&lt;/pre&gt;&lt;p&gt;The month index starts at 0, so November uses 10.&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>Add csit985, remove CSIT882, then Show: the list is CSIT884, CSIT985 and the count is 2.</li><li>Removing a missing code must not remove the last item. The next date is 12. November is month index 10.</li></ul><h3>常见错误</h3><ul><li>忽略 -1 检查会删除错误条目。</li><li>直接写 next = exam 只是同一个 Date 的另一个引用。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q25"><a class="back-question button" href="questions.html#Q25">Back to Q25</a><h2>Q25 · Form validation: built-in rules and JavaScript rules</h2><p>Part A 和 Part B 分开，避免浏览器先拦住提交而误以为 JavaScript 分支已经运行。pattern 默认要求整个输入匹配；只在题目要求时添加 validation。</p><p class="notice local">This form or weather example needs the local practice server. GitHub Pages does not provide /search or /weather. <a href="setup.html">Open setup steps</a>.</p><div class="file"><h3>q25.html</h3><div class="code-actions"><a class="button" href="answers/q25.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/q25.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>Add csit985, remove CSIT882, then Show: the list is CSIT884, CSIT985 and the count is 2.</li><li>Removing a missing code must not remove the last item. The next date is 12. November is month index 10.</li></ul></section><section class="card answers" id="Q25"><a class="back-question button" href="questions.html#Q25">Back to Q25</a><h2>Q25 · Two ways to validate a form</h2><p>FormValidation lecture pp. 4–6, 8–22; Week 13: onsubmit return; L05 task form</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q25.html</h3><div class="code-actions"><a class="button" href="answers/q25.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q25.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -818,16 +942,16 @@ function validateEmails() {
 &lt;/form&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>Part A rejects an empty email, quantity 0 or 6, quantity 1.5, and code ab1. It accepts a valid email, quantity 1 or 5, and ABC.</li><li>Part B rejects spaces-only input and different strings. Two equal trimmed strings submit. A later valid attempt must remove old error messages.</li></ul><h3>常见错误</h3><ul><li>type=number 不会自己表达 1–5 的范围，需 min/max/step。</li><li>只写 onsubmit=&quot;validateEmails()&quot; 会丢失 false 返回值。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q26"><a class="back-question button" href="questions.html#Q26">Back to Q26</a><h2>Q26 · XML schemas: external DTD and text with an attribute</h2><p>DTD 的 #PCDATA 只声明文本内容，不能限制为 decimal。带 attribute 的纯文本元素需要 complexType + simpleContent。无 targetNamespace 的 schema 用 noNamespaceSchemaLocation；课件单独写 schemaLocation=&quot;student.xsd&quot; 的连接示例应按此修正。</p><div class="file"><h3>q26.xml</h3><div class="code-actions"><a class="button" href="answers/q26.xml" target="_blank" rel="noopener">Open file</a><a class="button" href="answers/q26.xml" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;?xml version=&quot;1.0&quot;?&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>Part A rejects an empty email, quantity 0 or 6, quantity 1.5, and code ab1. It accepts a valid email, quantity 1 or 5, and ABC.</li><li>Part B rejects spaces-only input and different strings. Two equal trimmed strings submit. A later valid attempt must remove old error messages.</li></ul></section><section class="card answers" id="Q26"><a class="back-question button" href="questions.html#Q26">Back to Q26</a><h2>Q26 · An external DTD and an XSD</h2><p>XMLDTD lecture pp. 25–38; XSD lecture p. 11; Week 13: attributes require a complex type</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q26.xml</h3><div class="code-actions"><a class="button" href="answers/q26.xml" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q26.xml">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;?xml version=&quot;1.0&quot;?&gt;
 &lt;!DOCTYPE catalog SYSTEM &quot;q26.dtd&quot;&gt;
 &lt;catalog&gt;&lt;book code=&quot;B01&quot;&gt;&lt;title&gt;Web basics&lt;/title&gt;&lt;price currency=&quot;AUD&quot;&gt;39.50&lt;/price&gt;&lt;/book&gt;&lt;/catalog&gt;
-</code></pre></details></div><div class="file"><h3>q26.dtd</h3><div class="code-actions"><a class="button" href="answers/q26.dtd" target="_blank" rel="noopener">Open file</a><a class="button" href="answers/q26.dtd" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;!ELEMENT catalog (book+)&gt;
+</code></pre></details></div><div class="file"><h3>q26.dtd</h3><div class="code-actions"><a class="button" href="answers/q26.dtd" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q26.dtd">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!ELEMENT catalog (book+)&gt;
 &lt;!ELEMENT book (title,price)&gt;
 &lt;!ATTLIST book code CDATA #REQUIRED&gt;
 &lt;!ELEMENT title (#PCDATA)&gt;
 &lt;!ELEMENT price (#PCDATA)&gt;
 &lt;!ATTLIST price currency CDATA #REQUIRED&gt;
-</code></pre></details></div><div class="file"><h3>q26.xsd</h3><div class="code-actions"><a class="button" href="answers/q26.xsd" target="_blank" rel="noopener">Open file</a><a class="button" href="answers/q26.xsd" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;?xml version=&quot;1.0&quot;?&gt;
+</code></pre></details></div><div class="file"><h3>q26.xsd</h3><div class="code-actions"><a class="button" href="answers/q26.xsd" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q26.xsd">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;?xml version=&quot;1.0&quot;?&gt;
 &lt;xsd:schema xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
  &lt;xsd:element name=&quot;catalog&quot;&gt;&lt;xsd:complexType&gt;&lt;xsd:sequence&gt;
   &lt;xsd:element name=&quot;book&quot; minOccurs=&quot;1&quot; maxOccurs=&quot;unbounded&quot;&gt;&lt;xsd:complexType&gt;&lt;xsd:sequence&gt;
@@ -838,11 +962,11 @@ function validateEmails() {
   &lt;/xsd:sequence&gt;&lt;xsd:attribute name=&quot;code&quot; type=&quot;xsd:string&quot; use=&quot;required&quot;/&gt;&lt;/xsd:complexType&gt;&lt;/xsd:element&gt;
  &lt;/xsd:sequence&gt;&lt;/xsd:complexType&gt;&lt;/xsd:element&gt;
 &lt;/xsd:schema&gt;
-</code></pre></details></div><div class="file"><h3>q26-schema.xml</h3><div class="code-actions"><a class="button" href="answers/q26-schema.xml" target="_blank" rel="noopener">Open file</a><a class="button" href="answers/q26-schema.xml" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;?xml version=&quot;1.0&quot;?&gt;
+</code></pre></details></div><div class="file"><h3>q26-schema.xml</h3><div class="code-actions"><a class="button" href="answers/q26-schema.xml" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q26-schema.xml">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;?xml version=&quot;1.0&quot;?&gt;
 &lt;catalog xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:noNamespaceSchemaLocation=&quot;q26.xsd&quot;&gt;
  &lt;book code=&quot;B01&quot;&gt;&lt;title&gt;Web basics&lt;/title&gt;&lt;price currency=&quot;AUD&quot;&gt;39.50&lt;/price&gt;&lt;/book&gt;
 &lt;/catalog&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>Both XML samples validate against their stated DTD or XSD. The XSD rejects price text free and a missing currency attribute.</li><li>External DTD declarations are not wrapped in a DOCTYPE block inside the .dtd file. A price with an attribute cannot be defined only as xsd:decimal.</li></ul><h3>常见错误</h3><ul><li>不要把属性放到 xsd:sequence 内。</li><li>xsi:schemaLocation 需要 namespace/location 配对，不能把单个文件名当作该属性的正确一般写法。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q27"><a class="back-question button" href="questions.html#Q27">Back to Q27</a><h2>Q27 · DOM: select groups by tag and class</h2><p>getElementById 返回单个元素；getElementsByTagName 和 getElementsByClassName 返回集合，需 length、索引和循环。class 参数不带点；点属于 CSS selector 写法。</p><div class="file"><h3>q27.html</h3><div class="code-actions"><a class="button" href="answers/q27.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/q27.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>Both XML samples validate against their stated DTD or XSD. The XSD rejects price text free and a missing currency attribute.</li><li>External DTD declarations are not wrapped in a DOCTYPE block inside the .dtd file. A price with an attribute cannot be defined only as xsd:decimal.</li></ul></section><section class="card answers" id="Q27"><a class="back-question button" href="questions.html#Q27">Back to Q27</a><h2>Q27 · Select DOM element groups</h2><p>Week 13: getElementsByTagName/getElementsByClassName; DOM lecture p. 6</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q27.html</h3><div class="code-actions"><a class="button" href="answers/q27.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q27.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -870,7 +994,7 @@ function addTopic() {
 &lt;span id=&quot;count&quot;&gt;&lt;/span&gt;&lt;div id=&quot;extra&quot;&gt;&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>Initial paragraph count is 3. Add twice, then count again: it is 5.</li><li>After Colour topics, HTML, CSS and all new JavaScript paragraphs are orange. Notes keeps its normal colour.</li></ul><h3>常见错误</h3><ul><li>集合本身不是一个 p，不能直接 topics.style.color。</li><li>用 p 显示计数会让该计数段落也进入结果。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q28"><a class="back-question button" href="questions.html#Q28">Back to Q28</a><h2>Q28 · Storage: save, restore and delete an object array</h2><p>这与 Q19 保存原始 textarea 字符串不同：array/object 先 stringify，读回后 parse。删除用稳定 ID，避免数组索引因删除而变化；Clear 只移除本题自己的 key。</p><div class="file"><h3>q28.html</h3><div class="code-actions"><a class="button" href="answers/q28.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/q28.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>Initial paragraph count is 3. Add twice, then count again: it is 5.</li><li>After Colour topics, HTML, CSS and all new JavaScript paragraphs are orange. Notes keeps its normal colour.</li></ul></section><section class="card answers" id="Q28"><a class="back-question button" href="questions.html#Q28">Back to Q28</a><h2>Q28 · Save and restore a task list</h2><p>Week 13: local storage; WebStorage lecture pp. 5–31, task-list example</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q28.html</h3><div class="code-actions"><a class="button" href="answers/q28.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q28.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -929,7 +1053,7 @@ function clearTasks() {
 &lt;p&gt;localStorage normally keeps data across browser sessions. sessionStorage keeps data for the page session; reloading keeps it, but closing the tab ends that session.&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>Add Read notes/High and Practise AJAX/Low, reload: both return with the same IDs and urgency values.</li><li>Delete the first item, reload: only the second returns. Clear tasks and reload: the list is empty and the tasks key is absent.</li><li>The JSON contains an array of objects. It is not [object Object], and IDs are unique.</li></ul><h3>常见错误</h3><ul><li>直接 setItem(key,tasks) 会把对象转换成无用字符串。</li><li>使用 localStorage.clear() 会清掉同 origin 下其他题目的草稿。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section><section class="card answers" id="Q29"><a class="back-question button" href="questions.html#Q29">Back to Q29</a><h2>Q29 · Calculator: read an operation and check an answer</h2><p>原题库练到数值转换和条件判断，但没有直接要求按 select 的三种运算检查答案。补题把这个 lab 题型独立保留。显示 x，对应 JavaScript 运算符是 *。</p><div class="file"><h3>q29.html</h3><div class="code-actions"><a class="button" href="answers/q29.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/q29.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap" open><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>Add Read notes/High and Practise AJAX/Low, reload: both return with the same IDs and urgency values.</li><li>Delete the first item, reload: only the second returns. Clear tasks and reload: the list is empty and the tasks key is absent.</li><li>The JSON contains an array of objects. It is not [object Object], and IDs are unique.</li></ul></section><section class="card answers" id="Q29"><a class="back-question button" href="questions.html#Q29">Back to Q29</a><h2>Q29 · Check an arithmetic answer</h2><p>L06 Q2: addition, subtraction and multiplication; JS2 input/output; Week 13: value and functions</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q29.html</h3><div class="code-actions"><a class="button" href="answers/q29.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q29.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -956,4 +1080,4 @@ function checkAnswer() {
 &lt;button onclick=&quot;checkAnswer()&quot;&gt;Check&lt;/button&gt;&lt;span id=&quot;result&quot;&gt;&lt;/span&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>10 x 5 = 50 shows Correct!; 14 - 5 = 11 shows Incorrect, please try again.</li><li>10 + 5 = 15 must be correct. A previous incorrect message must disappear after a correct answer.</li></ul><h3>常见错误</h3><ul><li>10 与 5 若保留为字符串，+ 得到 105。</li><li>option 显示的符号与提交/读取的 value 可以不同。</li></ul><p class="muted">参考实现不是唯一正确解法；按行为、数据与指定技术检查。</p></section></main><footer>CSIT884 · Source audit: 4 November 2026 · Practice material, not an official exam paper.</footer><script>async function copyCode(button){const code=button.closest('.file').querySelector('code').textContent;try{await navigator.clipboard.writeText(code);button.textContent='Copied';setTimeout(()=>button.textContent='Copy code',1500);}catch(e){const range=document.createRange();range.selectNodeContents(button.closest('.file').querySelector('code'));getSelection().removeAllRanges();getSelection().addRange(range);button.textContent='Selected: use Copy';}}</script></body></html>
+</code></pre></details></div><h3>对照检查</h3><ul><li>10 x 5 = 50 shows Correct!; 14 - 5 = 11 shows Incorrect, please try again.</li><li>10 + 5 = 15 must be correct. A previous incorrect message must disappear after a correct answer.</li></ul></section></main><footer>CSIT884 · Updated 6 November 2026 · Assignment-led practice and source-labelled supplements.</footer><script>async function copyCode(button){const code=button.closest('.file').querySelector('code');try{await navigator.clipboard.writeText(code.textContent);button.textContent='Copied';setTimeout(()=>button.textContent='Copy code',1500);}catch(e){const range=document.createRange();range.selectNodeContents(code);getSelection().removeAllRanges();getSelection().addRange(range);button.textContent='Selected: use Copy';}}</script></body></html>
