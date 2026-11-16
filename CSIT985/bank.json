@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-04 · 144题逐题学习版",
+  "version": "2026-11-16 · 144题零基础中英教学版",
   "question_count": 144,
   "counts": {
     "short": 111,
@@ -15,7 +15,7 @@
       "pages": "39–40",
       "title": "Top-down 与 bottom-up",
       "question": "Compare top-down and bottom-up approaches to network design.",
-      "cn": "比较两种设计方法。",
+      "cn": "比较网络设计中的自顶向下与自底向上方法。",
       "points": "先业务目标还是先技术；需求匹配、既有约束与反馈。",
       "answer": "A top-down approach starts with the organization’s goals and the needs of users and applications. The designer develops service requirements, traffic flows and architecture before selecting detailed technologies and equipment. This helps the network support the business.\n\nA bottom-up approach begins with technologies, topologies or products. It can be convenient when a designer already knows particular equipment, but it may produce a network that fails to meet the real requirements.\n\nFor example, buying faster switches first will not solve every application problem. The actual problem may be delay on an external link or poor server performance. A top-down process investigates that need first. Existing equipment and technical limits still matter, so the process allows feedback. The key is to justify technology choices through requirements rather than personal preference.",
       "trap": "top-down 不表示完全忽略现有设备。",
@@ -158,10 +158,6 @@
             {
               "word": "compare",
               "meaning": "比较：选相同维度分别说明，再给取舍条件。"
-            },
-            {
-              "word": "design",
-              "meaning": "设计：由需求选择机制、说明位置与关系、提出验证。"
             }
           ],
           "targets": [
@@ -221,7 +217,17 @@
       "answer_word_count": 128,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "学校要让一间教室的学生同时上网。先问他们要做什么，还是先挑熟悉的设备？",
+        "plain": "Top-down从目标和用户需要出发，再决定方案与技术；bottom-up先从技术或连接结构出发，再发展方案。前者便于核对需求，后者也可能有用，但须回查真实需要。现有设备和预算在两种方法中都要考虑。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Top-down先看组织目标、用户和应用需要，再逐步确定服务、流量、架构，最后选具体技术设备。",
+          "Bottom-up先从技术、连接结构或产品出发；熟悉设备可使开始较方便，但可能不符合真实需求。",
+          "先买更快交换机未必解决外部链路或服务器慢的问题。应先查需求和瓶颈，同时考虑现有设备及技术限制，允许回头修改。"
+        ]
+      }
     },
     {
       "display_id": "T132",
@@ -359,10 +365,6 @@
             {
               "word": "explain",
               "meaning": "解释：说明是什么、如何/为何产生结果，并保留条件。"
-            },
-            {
-              "word": "design",
-              "meaning": "设计：由需求选择机制、说明位置与关系、提出验证。"
             }
           ],
           "targets": [
@@ -424,7 +426,17 @@
       "priority": "补充练习",
       "week7_preparation": false,
       "new_in_audit": true,
-      "ordinal": 2
+      "ordinal": 2,
+      "beginner": {
+        "start": "把校园网络想成从教室到楼宇，再到全校的道路。每一段承担的工作不同。",
+        "plain": "Access接终端；distribution汇聚多个接入区域并应用政策；core连接主要区域。分层使扩容和定位故障较清楚；它是功能分工，不强制每个小网络都买三层设备。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Access把用户和终端接入网络，可负责本地转发、端口控制和流量初步分类。",
+          "Distribution汇聚接入流量并应用跨区域政策；core负责主要网络区域之间的运输，重视可靠、可用、低延迟与可管理。",
+          "分工便于扩容和定位故障。校园可按教室、楼宇、楼间连接来理解；功能层不等于必须买三套独立设备。"
+        ]
+      }
     },
     {
       "id": "Q83",
@@ -612,10 +624,6 @@
             {
               "word": "why",
               "meaning": "说明原因：用机制和后果支持结论，避免只重述题干。"
-            },
-            {
-              "word": "design",
-              "meaning": "设计：由需求选择机制、说明位置与关系、提出验证。"
             }
           ],
           "targets": [
@@ -675,7 +683,17 @@
       "answer_word_count": 134,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "网络建好后，可能出现新应用或新故障，所以设计工作不会在安装时结束。",
+        "plain": "PPDIOO依次是准备、规划、设计、实施、运行、优化。运行时测到的问题可带回规划或设计，这就是life cycle；每一步都应服务业务目标并验证结果。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "六阶段依次准备目标、规划信息与方案、依据需求和现网完成设计。",
+          "实施阶段安装配置，运行阶段管理监测，优化阶段用实际证据解决问题或适应新需求。",
+          "所以安装不是终点：新教学应用可能暴露容量不足，需回到规划或设计，再实施并验证。"
+        ]
+      }
     },
     {
       "id": "Q84",
@@ -853,10 +871,6 @@
             {
               "word": "describe",
               "meaning": "描述：列齐要求对象，每项给主要作用；不要只写名称。"
-            },
-            {
-              "word": "design",
-              "meaning": "设计：由需求选择机制、说明位置与关系、提出验证。"
             }
           ],
           "targets": [
@@ -917,7 +931,17 @@
       "answer_word_count": 134,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "盖楼前要问用途、看旧楼、画图、试建、留记录，网络项目也需要可检查的步骤。",
+        "plain": "八步从需求、现网、方案、实施计划、原型、文档、实施走到验证与修改。文档记录每一步的依据，原型和测量帮助检验设计，而非只看设备能否开机。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "八步依次是识别需求、描述现网、设计拓扑和方案、规划实施、建立原型、完整记录、实施、验证监测并修改。",
+          "需求含目标与限制；现网记录地点、设备、线缆、地址和协议。原型在正式部署前提供证据。",
+          "文档保存为什么这样做，供后续运行改进。实施后还须用测量核对目标，不以“装好了”代替成功。"
+        ]
+      }
     },
     {
       "id": "Q08",
@@ -1078,10 +1102,6 @@
             {
               "word": "explain",
               "meaning": "解释：说明是什么、如何/为何产生结果，并保留条件。"
-            },
-            {
-              "word": "design",
-              "meaning": "设计：由需求选择机制、说明位置与关系、提出验证。"
             }
           ],
           "targets": [
@@ -1142,7 +1162,17 @@
       "answer_word_count": 127,
       "priority": "第二轮基础",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "一个学校说“视频课要稳定”，还不能立刻推出该买哪台设备。",
+        "plain": "Analysis弄清需求和现状；architecture安排路由、性能、安全等功能及关系；design落实设备、链路、位置和供应商。实际选择不合适时要回头修改前面的判断。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Analysis收集用户、应用、设备和现网需要，研究流量、服务与限制，为后续选择提供依据。",
+          "Architecture安排路由、性能、安全、管理等主要功能及关系；design把它落实成设备、服务、供应商和位置。",
+          "例如教学需稳定，架构可安排冗余和优先级，设计才选具体链路设备。太贵或达不到要求时回头修订。"
+        ]
+      }
     },
     {
       "display_id": "T133",
@@ -1346,7 +1376,17 @@
       "priority": "补充练习",
       "week7_preparation": false,
       "new_in_audit": true,
-      "ordinal": 6
+      "ordinal": 6,
+      "beginner": {
+        "start": "一条链路很快，视频仍卡；也许服务器或学生设备才是慢点。",
+        "plain": "System view把用户、应用、设备与网络一起看。Audit trail保存需求、测量、假设和决策理由；方案还须在技术、预算、进度和人员资源上说得通。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "System view把网络和用户、应用、终端一起看；一条链路加速不一定解决服务器慢。",
+          "记录需求、测量、假设与理由形成audit trail。技术、预算、进度和人员设备资源四方面都要能解释。",
+          "例如设备性能够，但团队来不及培训，方案仍可能不可实施。可辩护是有证据地说明取舍，不是宣称产品永远最好。"
+        ]
+      }
     },
     {
       "id": "Q10",
@@ -1611,7 +1651,17 @@
       "answer_word_count": 129,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "手机向服务器要网页，信息要经过设备、连接和共同规则。",
+        "plain": "Host发出或接收信息；switch在本地转发frame；router在网络之间转发IP packet；AP让无线设备接入；介质承载信号。整条路径的慢点会限制服务。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "网络由终端、中间设备和传输介质组成；终端发出或接收消息。",
+          "Switch通常在本地转发frame，router跨网络转发IP packet，AP接入无线设备，其他设备承担信号或连接工作。",
+          "铜线、光纤、无线承载信号，协议和地址让通信可理解。整条路径中慢的无线接入或服务器仍可限制效果。"
+        ]
+      }
     },
     {
       "id": "Q11",
@@ -1860,7 +1910,17 @@
       "answer_word_count": 134,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "同一所大学既有校园网络，也可能有无线和远程私有连接。",
+        "plain": "LAN、CAN、MAN、WAN主要说覆盖范围；WLAN说无线局域连接；SAN说存储用途；VPN说在其他网络上建立逻辑私有连接。这些标签可同时成立，不是一组选一题。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "LAN、WAN、MAN、CAN、PAN主要按地理范围区分，从个人附近到跨广域。",
+          "WLAN说无线局域接入，SAN说存储用途，VPN说在其他网络上建立受控的逻辑私有连接。",
+          "这些词按范围、技术、用途或访问方式分类，能重叠；大学可同时有校园LAN、无线和远程VPN。"
+        ]
+      }
     },
     {
       "display_id": "T134",
@@ -2073,7 +2133,17 @@
       "priority": "补充练习",
       "week7_preparation": false,
       "new_in_audit": true,
-      "ordinal": 9
+      "ordinal": 9,
+      "beginner": {
+        "start": "教室里可用网线，楼与楼之间可用光纤，移动学生可用无线。",
+        "plain": "Copper用电信号，fibre用光，无线靠电磁传播；各有距离、干扰、容量和安装条件。选介质要看整条路径的实际需求，不能只凭标称速度。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Copper传电信号，适合一定距离内连接但受距离与干扰限制；fibre传光，适合合适条件下的高容量远距离连接。",
+          "Wireless便于移动终端，但覆盖、障碍、干扰和共享用户会影响实得性能；不同无线技术的范围和对准要求也不同。",
+          "选介质应核对容量、时延、距离、环境、移动、成本与维护技能。整条路径可混用介质，不能只看标称速率。"
+        ]
+      }
     },
     {
       "id": "Q12",
@@ -2334,7 +2404,17 @@
       "answer_word_count": 129,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "图书馆的资料可放一台中心服务器，也可分到多台电脑。",
+        "plain": "Centralized强调集中；client-server按请求者与提供者分工；distributed把工作分散；peer-to-peer双方都能提供和请求。Cloud说明远端托管，hybrid可组合多种方式；选法取决于流量、管理和故障要求。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Centralized把重要处理集中；client-server把请求和提供服务分给不同角色，便于管理也可能形成关键故障点。",
+          "Distributed分散资源与工作；peer-to-peer的节点可同时请求与提供资源，控制一致性可能较难。",
+          "Cloud使用远端托管资源，hybrid组合模式。选择跟随flow、管理、可靠性和成本；cloud也可能是client-server。"
+        ]
+      }
     },
     {
       "id": "Q13",
@@ -2574,7 +2654,17 @@
       "answer_word_count": 131,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "五台电脑都连一个中心点与互相多路连接，故障影响范围不同。",
+        "plain": "Star易扩展但中心失效影响大；mesh有备用路但更贵；tree按层组织且靠根部故障影响大；bus共享介质；ring形成环。还要分清实际线缆连接和逻辑通信关系。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Star连接中心，易扩展；中心故障影响多人，单条边缘链路坏通常只影响所接设备。",
+          "Mesh提供备用路径但增加线缆端口和管理；tree分层但根附近故障影响大；bus共享介质；ring故障影响取决于保护机制。",
+          "Physical topology说实际连接，logical topology说通信关系。选择要平衡成本、规模、流量和故障要求。"
+        ]
+      }
     },
     {
       "id": "Q14",
@@ -2758,6 +2848,10 @@
           "meaning": "什么是协议，为什么必须遵循共同规则？",
           "verbs": [
             {
+              "word": "define",
+              "meaning": "定义：说清它是什么、包含哪些规则。"
+            },
+            {
               "word": "why",
               "meaning": "说明原因：用机制和后果支持结论，避免只重述题干。"
             }
@@ -2819,7 +2913,17 @@
       "answer_word_count": 132,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "两个人即使都能说话，若不约定语言和轮流规则仍可能无法交流。",
+        "plain": "Protocol规定消息格式、字段含义、交换顺序和遇到事件后的动作。设备遵守相同规则，才能把收到的比特解释为正确消息并作出回应。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Protocol规定消息格式、字段含义、交换顺序及事件发生时的动作。",
+          "双方还须约定编码、消息大小、封装、时序和交付；例如何时回应、超时怎么办。",
+          "协议可由软件或硬件实现，应用、路由、安全各有任务。物理上连通仍不代表双方能正确理解消息。"
+        ]
+      }
     },
     {
       "id": "Q15",
@@ -3074,7 +3178,17 @@
       "answer_word_count": 129,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "寄包裹时一层层加上目的地与运输信息，收件时再逐层查看。",
+        "plain": "OSI有七层，课程TCP/IP模型有四层；各层负责不同通信任务。Encapsulation是在发送时逐层加入控制信息，接收时逐层解释；层是职责划分，不等于七台设备。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "OSI七层各有职责并使用下层服务，顺序从application到physical。",
+          "课程TCP/IP四层为application、transport、Internet、network access；上下层功能分组与OSI不完全一对一。",
+          "发送时逐层加传输与地址等控制信息、形成frame并发送信号；接收时反向处理。分层便于排错，不代表每层一台设备。"
+        ]
+      }
     },
     {
       "id": "Q17",
@@ -3329,7 +3443,17 @@
       "answer_word_count": 135,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "同一台电脑能同时开网页和收邮件，收到的数据须送给正确程序。",
+        "plain": "IP帮助定位主机接口，port帮助定位主机上的应用端点，socket是程序使用的通信端点。HTTP、DNS等application protocol规定应用消息怎样交换；程序与协议不是同一物。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "HTTP、DNS、SMTP等application protocol规定应用怎样交换有意义的消息；不同协议完成不同任务。",
+          "IP帮助把packet送到主机接口，port帮助识别主机内应用端点；socket是程序使用的通信端点。",
+          "Multiplexing把不同socket的数据送上网，demultiplexing把收到的数据分回正确socket。浏览器是应用，HTTP是协议。"
+        ]
+      }
     },
     {
       "display_id": "T135",
@@ -3532,7 +3656,17 @@
       "priority": "补充练习",
       "week7_preparation": false,
       "new_in_audit": true,
-      "ordinal": 15
+      "ordinal": 15,
+      "beginner": {
+        "start": "浏览器发出一个请求，数据不会直接变成电信号，中间经过多层处理。",
+        "plain": "Process通过socket交给协议栈；transport形成segment或datagram，network形成packet，link形成frame，physical发送bits。接收端逐层处理，再把数据交给相应socket；一个应用消息不保证恰好一个packet。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "运行中的程序是process，借socket使用协议栈；应用协议规定消息类型、形式、含义和交换规则。",
+          "Transport的TCP segment或UDP datagram、network packet、link frame、physical bits依次处理；封装会加入header，link也可加trailer。",
+          "目的端逐层读信息并交给正确socket。一个网页消息不必刚好对应一个packet，socket也不是实体网线。"
+        ]
+      }
     },
     {
       "id": "Q16",
@@ -3797,7 +3931,17 @@
       "answer_word_count": 129,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "传文件通常怕丢字节；即时语音更在意“现在收到”，应用需求不同。",
+        "plain": "TCP给可靠、有序的字节流，并处理重传、流控和拥塞；UDP给较简单的datagram服务，本身不保证送达与顺序。选哪种要看丢失、延迟和应用自行处理能力，UDP不自动等于低延迟。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "TCP建立连接，提供可靠有序字节流，用编号、确认和重传处理缺失，还管理流量和拥塞。",
+          "UDP发送datagram，没有TCP式连接，也不内建送达、顺序或重传保证；应用可能要自行处理。",
+          "文件传输通常重视完整有序；某些实时应用重视及时到达。但UDP不自动低延迟，TCP也不保证低延迟，仍需看整条路径。"
+        ]
+      }
     },
     {
       "id": "Q18",
@@ -4056,7 +4200,17 @@
       "answer_word_count": 130,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "地图先算去机场的路线，路口再决定当前这辆车往哪条路走。",
+        "plain": "Routing学可达性和选路径；forwarding依据已有表把当前packet送往下一跳。IP用于跨网络目的地，MAC用于当前链路的frame；换链路时frame通常重做，最终IP目的地通常不变。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Routing学到哪些网络可达并选择路径，生成供forwarding使用的信息；forwarding是当前路由器把包交给出口/下一跳的动作。",
+          "IP地址用于跨网络目的接口；frame和MAC用于当前本地链路；physical层把bit变成信号。",
+          "跨下一条链路时router通常换新的frame；除NAT等特殊机制外最终IP目的地不变。两层信息都要有。"
+        ]
+      }
     },
     {
       "id": "Q85",
@@ -4297,7 +4451,17 @@
       "answer_word_count": 137,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "路由器像一个有入口、内部通道、出口和调度者的车站。",
+        "plain": "Input port收包；switching fabric把包送到合适出口；output port排队与发送；routing processor处理路径与控制信息。拥塞或处理能力不足可能出现在不同部位。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Input ports收包并处理接入链路功能，也参与查转发表。",
+          "Switching fabric在机内把包搬到出口；output ports必要时排队并发送；到达多于服务能力就排队。",
+          "Routing processor负责控制平面与路由信息；SDN下规则也可来自controller。决定规则和逐包执行不同，任一内部部件都可能成瓶颈。"
+        ]
+      }
     },
     {
       "id": "Q86",
@@ -4550,7 +4714,17 @@
       "answer_word_count": 136,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "选路方法可以分别问：谁知道全图、路线多久更新、是否考虑当前拥塞。",
+        "plain": "三组维度互不替代：centralized/decentralized说信息方式；static/dynamic说变化方式；load-sensitive/insensitive说是否把当前负载计入成本。Link-state可由每台路由器各自用全局信息计算，不必有一台中心机器。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "第一维看算法用全网信息还是邻居逐步交换；link-state可在各router各自用全图计算。",
+          "第二维看路线静态还是会随变化更新；第三维看成本是否反映当前负载。",
+          "三维可以组合，不能把“全局信息”误认为必须只有一台中心计算机；选择还看规模、变化与开销。"
+        ]
+      }
     },
     {
       "id": "Q87",
@@ -4819,7 +4993,17 @@
       "answer_word_count": 131,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "数据从手机到服务器会经过好几段连接，每一段能做的保证不等于全程保证。",
+        "plain": "Data-link负责相邻节点的frame，physical把bits变成介质信号。端到端应用服务还取决于所有链路、路由器和端点；某一跳可靠不能推出整个任务可靠。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Data-link在相邻节点间处理frame，可包括成帧、接入介质和某些差错处理。",
+          "Physical负责bit对应的电、光或无线信号及传输条件；某一跳的服务能力有边界。",
+          "端到端服务还涉及所有链路、router和端点。单条链路可靠不保证整个应用任务可靠或准时。"
+        ]
+      }
     },
     {
       "id": "Q19",
@@ -5049,7 +5233,17 @@
       "answer_word_count": 136,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "学校说“希望教学数字化”，还须说明现在哪里、要到哪里、怎么知道成功。",
+        "plain": "Strategic plan把使命、现状、目标、实现路径和检验串起来。Crouch问题帮助从“为什么存在”走到“如何行动”；策略方向与具体措施要连起来。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "战略网络计划把组织长期目标与行动和资源连接起来，先回答使命和当前状态。",
+          "Crouch的问题帮助问目标、差距、路径、策略和怎样判断成功。",
+          "例如扩校区须先说明教学业务目标，再分解网络措施；策略方向和实际行动都需能被检查。"
+        ]
+      }
     },
     {
       "id": "Q20",
@@ -5287,7 +5481,17 @@
       "answer_word_count": 136,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "一份没人实施的漂亮计划不能改善网络。",
+        "plain": "战略规划要持续、简单、让负责人与使用者参与，并定期检查是否服务使命。常见失败是照抄别人、资源不足、目标不清或缺少执行与反馈。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "战略规划不是一次写完的文件，而应持续、简单、让领导和相关人员参与。",
+          "计划应与使命相连，也要考虑创新、资源与实际可执行性；常见陷阱是照抄或脱离现实。",
+          "网络需求变了就复查计划；只写雄心口号却没负责人、资源和检验，会使计划失效。"
+        ]
+      }
     },
     {
       "id": "Q21",
@@ -5529,7 +5733,17 @@
       "answer_word_count": 128,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "推动同事接受新系统，可讲利益、改变团队习惯、用管理权，或先搭新环境。",
+        "plain": "四种change strategy分别用信息与利益、群体规范、权力要求和新环境适应推动变化。哪种合适要看时间、权力、文化与资源；它们是组织变革方法，不是路由协议。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Rational-empirical靠信息与利益；normative-re-educative改变共同价值；power-coercive用权力；environmental-adaptive先建新环境再迁移。",
+          "没有一法通用；考虑阻力、受影响人数、风险、时间、团队能力及人员对组织的依赖。",
+          "网络迁移可结合解释培训、期限和逐步切换。时间紧可能更多用权力，但仍需沟通支持。"
+        ]
+      }
     },
     {
       "id": "Q22",
@@ -5772,7 +5986,17 @@
       "answer_word_count": 134,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "校长可以批准预算，教师知道课堂使用问题，工程师知道现网限制。",
+        "plain": "规划应让决策者、实施者、用户及相关专家参与。不同人提供授权、实际需求和可行性证据；只听一个角色可能漏掉关键限制。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "战略规划同时需要有批准预算和方向权力的人，也需要了解真实网络使用情况的人。",
+          "领导提供授权与方向；使用者、工程师和管理者提供真实需求、现网知识和实施限制。",
+          "参与范围要足以发现冲突并形成责任；只让某一方写计划，可能漏掉预算、体验或运维问题。"
+        ]
+      }
     },
     {
       "id": "Q89",
@@ -6016,7 +6240,17 @@
       "answer_word_count": 138,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "“必须能上课”“最好有报表”“明年扩校区”不是同一种要求。",
+        "plain": "Core是当前成功必需；feature是期望功能；future是将来需要；rejected是分析后不纳入；informational是背景信息。这是要求的处理类别，和“谁提出需求”的type不同。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Core是达成约定目的所必需；feature是期望但可权衡的能力；future属于后续增长。",
+          "Rejected是分析后明确不纳入，informational只是背景事实，可用来推导真正需求。",
+          "类别帮助决定现在做什么以及为什么；不要把“用户提出”误当“必须做”，也不要把尚不清楚的项直接拒绝。"
+        ]
+      }
     },
     {
       "id": "Q90",
@@ -6271,7 +6505,17 @@
       "answer_word_count": 142,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "规范中的“必须”与“可以”会改变验收方式。",
+        "plain": "MUST是硬性要求，MUST NOT是硬性禁止；SHOULD通常应遵守，例外需理由；MAY是可选。用词表达强度，不自动决定这条需求来自用户还是网络层。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "MUST/SHALL/REQUIRED表示强制，MUST NOT表示强制禁止；SHOULD系列通常要遵守，偏离需说明理由；MAY可选。",
+          "课件把强制词与core、建议词与feature或future等联系，是分析提示，不是任何可选项都要删除。",
+          "例如保护核心记录可写MUST，报表可写SHOULD，附加显示可写MAY；禁止未授权访问仍是核心要求。"
+        ]
+      }
     },
     {
       "id": "Q91",
@@ -6421,6 +6665,10 @@
           "meaning": "给五项陈述分类，再解释规格表三个字段。",
           "verbs": [
             {
+              "word": "classify",
+              "meaning": "分类：逐项说明属于哪一类及依据。"
+            },
+            {
               "word": "distinguish",
               "meaning": "区分：指出决定性差异、作用范围和易混边界。"
             }
@@ -6483,7 +6731,17 @@
       "answer_word_count": 139,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "同一需求可同时是“应用提出”“必须做”“高优先级”，三个标签各说不同事。",
+        "plain": "题中访问控制是core，可选报表是feature，明年扩建是future，已否决项是rejected，人数是informational。Type说来源/对象，status说处理状态，priority说重要程度；不能混为一栏。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "必需访问控制属core，可选仪表板是feature，明年扩校区是future，分析后拒绝的要求属rejected，现有人数属informational。",
+          "Type写谁或什么提出需求，status写当前处理状态，priority写重要程度与处理顺序。",
+          "一条application需求也可同时是core和high priority；尚未明确时记不确定，不暗中批准或否决。"
+        ]
+      }
     },
     {
       "id": "Q24",
@@ -6723,7 +6981,17 @@
       "answer_word_count": 134,
       "priority": "第二轮基础",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "普通下载偶尔慢些可接受，在线课堂或关键业务可能要求更明确的服务。",
+        "plain": "Best-effort不承诺具体表现；predictable求较稳定可控；guaranteed在约定条件下承诺指标。强保证需要整条路径的资源、控制和测量，单台路由器设置不足以保证端到端。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Best-effort尽力传送，但不承诺特定容量或时延，适合能容忍波动的任务。",
+          "Predictable追求较可控稳定；guaranteed在约定条件下对个别流承诺指标，需要资源、控制和端到端验证。",
+          "下载可用尽力服务，关键互动可能需更强支持；不是所有flow都用最贵级别，单台router配置也不等于全程保证。"
+        ]
+      }
     },
     {
       "display_id": "T136",
@@ -6916,7 +7184,17 @@
       "priority": "补充练习",
       "week7_preparation": false,
       "new_in_audit": true,
-      "ordinal": 29
+      "ordinal": 29,
+      "beginner": {
+        "start": "教室无线好、校园骨干好，但服务器太忙，学生仍看不到顺畅视频。",
+        "plain": "Service hierarchy按需要在不同位置提供支撑；服务要求须可配置、可测量、可验证。沿用户到应用的完整路径查瓶颈，不能只用“链路通了”证明体验达标。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "网络服务要支撑用户、应用、设备需求；可配置是能落实要求，可测量是能观察表现，可验证是能和目标比较。",
+          "服务层次可让骨干提供通用支撑、靠近用户处提供专用支撑；这是设计思路，不是固定设备位置规则。",
+          "互动课堂依赖接入、骨干、端点完整路径。核心再好也补不了忙碌服务器，须查瓶颈与实际体验。"
+        ]
+      }
     },
     {
       "id": "Q23",
@@ -7160,7 +7438,17 @@
       "answer_word_count": 133,
       "priority": "第二轮基础",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "“视频别卡”是用户话语，工程师须追问应用、设备和网络各需做到什么。",
+        "plain": "User requirement说明人的目标；application requirement描述流量与时延等服务；device requirement检查端点能力；network requirement包括连接、扩展和现有条件。四类一起决定端到端体验。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "User requirement先表达人的期望，往往还需澄清；application requirement把它变成流量和时延等技术需要。",
+          "Device requirement说服务器终端的处理、存储和接口能力；network requirement含现网、扩容、位置和互通限制。",
+          "“视频流畅”须同时看应用指标、终端处理和整条网络路径，不能只问链路速度。"
+        ]
+      }
     },
     {
       "id": "Q25",
@@ -7390,7 +7678,17 @@
       "answer_word_count": 128,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "考试系统不能停、文件传输需要够快、视频互动怕迟到：关注点各不同。",
+        "plain": "Mission-critical强调故障后果与RMA；rate-critical强调数据速率；real-time强调时限；interactive强调用户等待。一个应用可属多类，标签还须转成可量的指标。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Mission-critical的失败后果重，关注可靠、可维护与可用；rate-critical关注所需数据速率。",
+          "Real-time数据迟到可能失去价值；interactive用户需要可接受的响应时间，两者也可有丢失和可靠性要求。",
+          "类别会重叠；应把“关键”“实时”写成可量的容量、时延或可用性要求。"
+        ]
+      }
     },
     {
       "id": "Q26",
@@ -7663,7 +7961,17 @@
       "answer_word_count": 131,
       "priority": "第二轮基础",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "“大家说网慢”只是开头，不能直接据此买设备。",
+        "plain": "需求分析先收集与列出，再设测量指标、研究使用行为、细化容量/时延/RMA，最后把要求映到地点。结果是持续更新的需求规格和位置图。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "先从用户、管理层、现网和项目起点收集并列出需求，再制定可测指标。",
+          "研究用户和应用行为，包括人数、频率、持续时间和数据量，然后细化容量、时延与RMA。",
+          "最后映到具体地点，产出可维护的requirements specification与地图；新高峰数据出现时可回头修订。"
+        ]
+      }
     },
     {
       "id": "Q27",
@@ -7815,7 +8123,12 @@
         },
         "prompt": {
           "meaning": "收集需求时应检查哪些条件和警讯？",
-          "verbs": [],
+          "verbs": [
+            {
+              "word": "identify",
+              "meaning": "识别：列出初始条件和警示信号，再说明需要澄清什么。"
+            }
+          ],
           "targets": [
             "列项目类型、范围、目标、现网及外部条件",
             "列预算、人员、设备约束",
@@ -7873,7 +8186,17 @@
       "answer_word_count": 130,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "“网络要高性能”缺少要快到什么程度、何时、对谁。",
+        "plain": "先看项目范围、现网、预算等初始条件，再识别含糊或矛盾要求。对“实时”“99.9%”这类词补事件、测量窗口和服务定义，才能检验设计。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "先了解项目类型、范围、目标、现网和外部组织或财务影响；预算、设备、人员等也会限制方案。",
+          "含糊的“实时”“高性能”、互相矛盾的要求、没定义观察窗口的可用性百分比都是警讯。",
+          "通过访谈、测量或试验澄清；例如99.9%要写服务、时间窗口和维护计法，才可能检验。"
+        ]
+      }
     },
     {
       "id": "Q28",
@@ -8054,7 +8377,12 @@
         },
         "prompt": {
           "meaning": "如何测量、记录、维护需求？",
-          "verbs": [],
+          "verbs": [
+            {
+              "word": "explain",
+              "meaning": "说明：写出测量、记录、更新和理由。"
+            }
+          ],
           "targets": [
             "用调查、访谈、观察和测量收集证据",
             "记录规格字段及来源",
@@ -8113,7 +8441,17 @@
       "answer_word_count": 130,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "两个人对“快”有不同看法，记录和实测能把讨论变成可核对要求。",
+        "plain": "用调查、访谈、观察、现网测量和试验收集证据。规格记录ID、来源、地点、状态等并保留变更；测量须写时间、负载和单位，避免用空闲时段代表高峰。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "调查、跟进访谈、会议、观察和现网测量帮助核对用户说法，试验台可验证技术与应用能否一起工作。",
+          "规格表写清ID、日期、类别、内容、来源、地点、状态与优先级，区分原话和分析推导要求。",
+          "变更和拒绝理由要留历史；测量要写时间、负载、方法和单位，不能用空闲时数据代表高峰。"
+        ]
+      }
     },
     {
       "id": "Q30",
@@ -8370,7 +8708,17 @@
       "answer_word_count": 133,
       "priority": "第二轮基础",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "一条路限速很高，不代表你每次都能那么快到达目的地。",
+        "plain": "Capacity是资源可承载能力，throughput是实际有用速率，delay是等待时间，jitter是等待时间变化，task completion time是整个任务完成所需时间。文件大小除以时间得到基础平均速率，还须考虑开销与并发。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Capacity是资源可能承载的速率，throughput是特定条件下实际收到的有用速率，二者不能画等号。",
+          "Delay是一段数据/响应的时间，单向和往返不同；jitter是delay变化，task completion time是一整个任务所用时间。",
+          "数据量除以允许时间得基础平均速率，还须加开销、峰值、并发和端点限制；应用持续时间也不是packet delay。"
+        ]
+      }
     },
     {
       "display_id": "T137",
@@ -8568,7 +8916,17 @@
       "priority": "补充练习",
       "week7_preparation": false,
       "new_in_audit": true,
-      "ordinal": 36
+      "ordinal": 36,
+      "beginner": {
+        "start": "一小时平均不大，不代表某10秒不会突然涌来大量数据。",
+        "plain": "Peak看短时高峰，sustained看较长时间保持的速率，minimum是需明确口径的最低速率；burst size是突发数据量，duration是持续多久。缓冲能暂存但增加等待，空间不够会丢失。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Peak是给定短时间窗口内的高发送速率，sustained是较长窗口维持速率，minimum要说是观测值还是服务最低要求。",
+          "Burst size是一次突发的数据量，duration是持续时间；突发可能快于链路服务，缓冲会增加等待，不足则丢包。",
+          "一小时平均值可隐藏几秒钟的高峰；规划要看同时发生的flow、缓冲、开销与应用容忍度。"
+        ]
+      }
     },
     {
       "id": "Q01",
@@ -8802,7 +9160,17 @@
       "answer_word_count": 147,
       "priority": "老师样题",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "每5分钟启动一次任务，每次用10分钟，第二次开始时第一次还没结束。",
+        "plain": "Frequency说多久发生一次，duration说每次持续多久；两者决定同时活跃的数量和高峰负载。持续更久不必然是每秒速率更高，还要看数据量。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Frequency说事务发生多常，duration说每次活跃多久；合起来帮助估计何时重叠。",
+          "多个事务同时活跃会竞争链路和服务器，影响容量、时延和用户感受；全天总量可能藏住高峰。",
+          "还须看人数、数据量与速率；持续更久不必然每秒速率更高，弹性备份可避开繁忙教学时段。"
+        ]
+      }
     },
     {
       "id": "Q29",
@@ -9037,7 +9405,17 @@
       "answer_word_count": 126,
       "priority": "第二轮基础",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "服务可能经常坏、每次修得很快；也可能很少坏、但一坏很久。",
+        "plain": "Reliability说故障频度，maintainability说恢复所需时间，availability是可用时间占比。MTBF与MTTR共同影响可用性；比较时要先定什么算故障与观察窗口。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Reliability看故障频度，可用MTBF或关键业务的MTBCF表示。",
+          "Maintainability看修复恢复要多久，MTTR包含发现、定位、维修和测试；availability由故障间隔和恢复时间共同影响。",
+          "减少故障或缩短恢复都可提高可用性，但相同百分比可对应很不同的中断模式；先定义故障与统计窗口。"
+        ]
+      }
     },
     {
       "display_id": "T139",
@@ -9203,7 +9581,12 @@
       "priority": "补充练习",
       "week7_preparation": false,
       "new_in_audit": true,
-      "ordinal": 39
+      "ordinal": 39,
+      "beginner": {
+        "start": "两只灯泡串联，只要坏一只，整条服务就停止；故障机会会相加。",
+        "plain": "题设独立、恒定故障率且无冗余，故λ=1/1000+1/2000=0.0015每小时，系统MTTF≈666.67小时。加的是故障率，不是平均寿命；没有修复信息不能算可用性。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "C13",
@@ -9355,7 +9738,12 @@
       "answer_word_count": 36,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "服务平均990小时坏一次，恢复平均10小时，周期中可用占多少？",
+        "plain": "A=990/(990+10)=99%。减少故障可提高MTBF，缩短检测与修复可降低MTTR；这两条都能提高availability，前提是统计口径一致。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "C14",
@@ -9456,7 +9844,12 @@
         },
         "prompt": {
           "meaning": "30天、99.9%的停机预算。",
-          "verbs": [],
+          "verbs": [
+            {
+              "word": "calculate",
+              "meaning": "计算：写公式、代入、单位与条件。"
+            }
+          ],
           "targets": [
             "先求观察窗口总时间",
             "把availability转成不可用比例",
@@ -9514,7 +9907,12 @@
       "answer_word_count": 39,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "一个月“99.9%可用”听起来很高，但还要换算成可停多久。",
+        "plain": "30天有720小时；不可用0.1%，所以720×0.001=0.72小时=43.2分钟。合同若排除维护时间或另定观察窗口，结果要重算。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "C23",
@@ -9671,7 +10069,12 @@
       "answer_word_count": 47,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "往返80毫秒，不能据此断言去程和回程各40毫秒。",
+        "plain": "前向四项之和40ms；加回程30ms和端点10ms得RTT80ms。即使RTT≤100ms，单向仍可能超过50ms，因为两方向未必对称。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "display_id": "T138",
@@ -9856,7 +10259,17 @@
       "priority": "补充练习",
       "week7_preparation": false,
       "new_in_audit": true,
-      "ordinal": 43
+      "ordinal": 43,
+      "beginner": {
+        "start": "等网页加载十几秒与人察觉到微小延迟，是不同层面的“慢”。",
+        "plain": "INTD谈互动任务可容忍多久，HRT谈人何时注意到反应延迟；课件示例数值属不同语境，不能背成统一标准。传播时延来自信号传输距离，还须说明单向、往返或整任务。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "INTD谈互动任务多久后变得不合用，课件约10–30秒是某种任务语境；HRT约100ms谈人何时注意到延迟。",
+          "两个数讨论不同事件与感知，课件不一致不等式不能当普遍法则；传播时延来自信号必须跨越距离。",
+          "设计时定义事件、端点、容忍时间，并说明单向、往返或整任务；实时媒体可能要求更紧。"
+        ]
+      }
     },
     {
       "id": "C15",
@@ -10025,7 +10438,12 @@
       "answer_word_count": 39,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "60 MB文件要20秒传完，先换成bit，再除以秒。",
+        "plain": "60×8/20=24 Mb/s；5个同方向同时进行则至少120 Mb/s payload。协议开销和余量尚未计入；若单位是MiB，要按题意另算。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "Q31",
@@ -10291,7 +10709,17 @@
       "answer_word_count": 130,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "新网络规格很强，但本地团队不会维护，服务可能仍失败。",
+        "plain": "Operational suitability看客户能否实际运行；supportability看能否长期支持；confidence关注按需速率、正确性与丢失情况的可信交付。设备能力与人的技能都要考虑。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Operational suitability问客户能否操作设计好的网络，既看技术也看人员技能。",
+          "Supportability问交付后能否长期维护，需RMA、培训、程序文档、工具及备件。",
+          "Confidence在本课指按需速率、无不可接受错误或丢失地传数据的可信能力。高规格设备若团队不会维护仍可能不合适。"
+        ]
+      }
     },
     {
       "id": "Q32",
@@ -10494,7 +10922,12 @@
         },
         "prompt": {
           "meaning": "定义 flow 并说明建立步骤。",
-          "verbs": [],
+          "verbs": [
+            {
+              "word": "define",
+              "meaning": "定义并说明：先说flow是什么，再说怎样从需求得到它。"
+            }
+          ],
           "targets": [
             "定义flow的共同属性和端到端范围",
             "从应用需求与位置找到source/sink",
@@ -10553,7 +10986,17 @@
       "answer_word_count": 126,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "从教室到服务器的视频，与从教室到打印机的文件，是不同流量。",
+        "plain": "Flow按源、目的、方向、信息类型和服务要求组织通信。先从需求找谁和谁通信，再标位置与性能；可分析单条、组合或关键flow。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Flow是具有共同源、目的、方向、信息类型或服务要求的一组网络流量。",
+          "先从应用需求确定谁与谁通信、在哪里、发什么、以什么速率及时限发送，可分个别、组合或关键流。",
+          "Flow图为后续容量与机制选择提供依据；不能只数总流量而不看方向和位置。"
+        ]
+      }
     },
     {
       "id": "G01",
@@ -10740,6 +11183,10 @@
           "meaning": "按原图完成四类source/sink、各类型flow map与合并图；题目没唯一指定的端点要写假设。",
           "verbs": [
             {
+              "word": "draw",
+              "meaning": "绘图：先放对对象，再画有方向的箭头，并标假设。"
+            },
+            {
               "word": "identify",
               "meaning": "识别：明确所需对象及判定依据。"
             }
@@ -10803,7 +11250,12 @@
       "answer_word_count": 153,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "画校园通信图时，先放对楼宇和服务器，再画谁向谁发数据。",
+        "plain": "四类flow分别画后再合并；箭头表达应用通信方向，不等于已知实际线缆。按Workshop给出的设备位置和角色绘图，未给出的方向与路径要明说假设。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "Q88",
@@ -11029,7 +11481,18 @@
       "answer_word_count": 139,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "“服务器给学生视频”与“学生给服务器请求”大小和方向都可能不同。",
+        "plain": "Workshop四种flow要分别写方向、速率和时限；video是单向，client-server与Web/PoS有双向数据。不要把单向时延、往返时延和整任务完成时间混用。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Client-server有双向流：服务器向客户端1.2Mb/s，反向15kb/s，应分别标。",
+          "UDP video的主媒体流从服务器到观看者，300kb/s、40ms单向；若有控制流要另注明。",
+          "Web下行250、上行100kb/s，题中5秒delay不应擅改为RTT；PoS上行30、下行50kb/s、100ms RTT。",
+          "单向、往返和整任务时间不同，flow map须保留方向与测量含义。"
+        ]
+      }
     },
     {
       "id": "Q33",
@@ -11247,7 +11710,17 @@
       "answer_word_count": 131,
       "priority": "第二轮基础",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "谁和谁交换信息与网线怎样铺，是两种问题。",
+        "plain": "Peer-to-peer是对等双方，client-server是请求者与服务者，hierarchical client-server有分层服务，distributed computing由多节点协作算任务。这些是流量关系模型，不是物理拓扑。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Peer-to-peer双方都能请求与提供资源；client-server分请求者与服务者。",
+          "Hierarchical client-server再加服务层级与服务器之间通信；distributed computing由多个计算资源合作并交换数据。",
+          "这些模型描述通信流，而非实际布线拓扑；可用它们发现关键方向与瓶颈。"
+        ]
+      }
     },
     {
       "id": "Q34",
@@ -11397,7 +11870,12 @@
         },
         "prompt": {
           "meaning": "如何选择分析对象并给流排序？",
-          "verbs": [],
+          "verbs": [
+            {
+              "word": "prioritize",
+              "meaning": "确定优先级：说明筛选依据及可能漏掉的关键流。"
+            }
+          ],
           "targets": [
             "先选择分析的应用或profile",
             "说明不能忽略被排除流量的服务",
@@ -11455,7 +11933,17 @@
       "answer_word_count": 130,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "时间不够时，可先分析承载最多业务的应用，但必须确认没漏关键小流。",
+        "plain": "可按单应用、相似flow组合或top N选择；优先级要看业务重要性、用户数量、安全和性能。排序依据不同，结果也会变。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "可逐个分析应用，也可把相似flow做profile，或先抓产生主要负载的top应用。",
+          "优先级要看业务重要性、用户、性能、安全等，而非仅按字节总量；小流也可能很关键。",
+          "选择依据需记录并复核，确保没有漏掉关键但低容量的业务。"
+        ]
+      }
     },
     {
       "id": "Q35",
@@ -11717,7 +12205,17 @@
       "answer_word_count": 134,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "把几条水流合起来规划管道，普通流量和必须保证的流量不能同样合并。",
+        "plain": "One-part只含best-effort；two-part再含predictable；multipart还保留guaranteed逐流要求。可合的速率求和，predictable的时延和RMA取最严格条件。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Flowspec记录flow和性能要求；one-part只有best-effort，容量可合并；two-part再含predictable。",
+          "Predictable合容量，但时延取更严格的较小上限，RMA取更高目标，不能把百分比相加。",
+          "Multipart还含guaranteed，每条保证流应单独保留其要求；合并后的总容量不能抹掉逐流承诺。"
+        ]
+      }
     },
     {
       "id": "C16",
@@ -11817,7 +12315,12 @@
         },
         "prompt": {
           "meaning": "按课件规则给multipart flowspec。",
-          "verbs": [],
+          "verbs": [
+            {
+              "word": "calculate",
+              "meaning": "合成计算：按服务类型分组、取严格约束、保留保证流。"
+            }
+          ],
           "targets": [
             "按BE、predictable、guaranteed分组",
             "BE和predictable分别合容量",
@@ -11876,7 +12379,12 @@
       "answer_word_count": 42,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "几条flow共用链路，先按服务类型分组，再算各组的量。",
+        "plain": "Best-effort速率2+3=5 Mb/s；predictable速率4+6=10 Mb/s，时延取20ms、可靠要求取99.99%；guaranteed逐条保留。不能把最宽松的时限当组合要求。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "Q05",
@@ -12144,7 +12652,19 @@
       "answer_word_count": 150,
       "priority": "老师样题",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "安全措施和性能措施都在同一设计里，内部不同选择可能互相帮忙或冲突。",
+        "plain": "Component architecture把一个功能所需机制及内部关系放在一起。内部关系可为trade-off、dependency或constraint；答题要指出哪两个机制、影响方向和为什么。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Component architecture把功能、机制和内部关系放在一起；内部相互作用有取舍、依赖和约束。",
+          "Trade-off例子：集中管理较简单，分布管理降低集中故障风险但更复杂。",
+          "Dependency例子：SLA承诺要有合适QoS机制和设备能力支撑。",
+          "Constraint例子：RIP等协议限制可有效支持的网络结构。",
+          "答题写明组件和关系方向；跨组件的安全影响性能属于external relationship。"
+        ]
+      }
     },
     {
       "id": "Q36",
@@ -12412,7 +12932,17 @@
       "answer_word_count": 127,
       "priority": "第二轮基础",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "同一间厨房内炉子与排风扇的关系，和厨房与餐厅的关系，处在不同范围。",
+        "plain": "Internal relationship发生在同一组件架构内；external relationship连接不同组件架构。两者都可有取舍、依赖和限制，不能只写名词而不说作用方向。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "内部关系发生在同一组件架构的机制间，例如安全组件中的认证与访问控制。",
+          "外部关系发生在不同组件架构之间，例如安全检查增加性能处理量，或管理依赖路由可达。",
+          "无论内外都要说明trade-off、dependency或constraint的具体机制与方向，不能只写两个架构名称。"
+        ]
+      }
     },
     {
       "id": "Q37",
@@ -12604,7 +13134,12 @@
         },
         "prompt": {
           "meaning": "如何把组件架构和模型合成参考架构？",
-          "verbs": [],
+          "verbs": [
+            {
+              "word": "explain",
+              "meaning": "说明关系：写清各架构和模型怎样形成总架构。"
+            }
+          ],
           "targets": [
             "先定义reference architecture是完整架构视图",
             "用topological作结构基础",
@@ -12663,7 +13198,17 @@
       "answer_word_count": 131,
       "priority": "第二轮基础",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "校园网络要把连接结构、流量、安全与管理放进一张能协同工作的总图。",
+        "plain": "Reference architecture组合组件架构、内部与外部关系及拓扑/流量/功能模型。它说明各功能怎样一起工作，供后续设备与位置设计使用。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Reference architecture整合各组件架构及其关系，让网络功能在总图中协调。",
+          "Topological model说明连接与层次，flow model说明谁与谁通信，functional model说明服务/访问功能。",
+          "把这些视角组合，再用需求验证，才可指导后续设备与位置选择；一张拓扑图不足以代替完整架构。"
+        ]
+      }
     },
     {
       "id": "Q06",
@@ -12671,7 +13216,7 @@
       "week": "6a",
       "pages": "39–47",
       "title": "课堂讨论的全部架构模型",
-      "question": "Briefly describe all architectural model as discussed in the lectures.",
+      "question": "Briefly describe all architectural models discussed in the lectures.",
       "cn": "简要描述课堂讨论过的所有架构模型。",
       "points": "课堂讨论三组架构模型。拓扑类包含LAN/MAN/WAN，即按地理尺度组织网络，以及access/distribution/core，即按功能层次组织网络。\n\n流量类描述通信模式。对等模式使通信实体处于相近层级；客户端—服务器模式关注双方通信；分层客户端—服务器加入服务器层级及层间通信；分布式计算描述协作计算资源及其数据交换。\n\n功能类围绕服务或访问要求组织架构。服务提供方模型关注服务交付、隐私和安全等提供方功能；内网/外网模型根据内部使用和被许可的外部使用划分访问；端到端模型考虑完整流量路径上的所有组件。\n\n这些视角可以组合。设计者可从拓扑模型开始，添加流量与功能视角，形成满足需求的参考架构。这些是互补视角，不是单一通用解法。",
       "answer": "The lectures discuss three groups of architectural models. Topological models include LAN/MAN/WAN, which organizes the network by geographical scale, and access/distribution/core, which organizes it by functional layers.\n\nFlow-based models describe communication patterns. Peer-to-peer places communicating entities at a similar level. Client-server focuses on communication between clients and servers. Hierarchical client-server adds server tiers and communication between them. Distributed computing describes cooperating computing resources and their data exchanges.\n\nFunctional models organize the architecture around services or access requirements. The service-provider model focuses on provider functions such as service delivery, privacy and security. The intranet/extranet model separates access according to internal and permitted external use. The end-to-end model considers all components along a complete traffic path.\n\nThese views can be combined. A designer can start with a topological model and add flow-based and functional views to form a reference architecture that meets the requirements. They are complementary views rather than a single universal solution.",
@@ -12983,7 +13528,18 @@
       "answer_word_count": 157,
       "priority": "老师样题",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "同一校园可从“哪里连接”“谁与谁通信”“哪些功能要部署”三种视角看。",
+        "plain": "课程模型分拓扑、flow和functional等组；拓扑含范围与access/distribution/core层级，flow描述通信关系，functional组织主要服务。它们互补，不是互相排斥的候选。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Topological模型按地理范围或access/distribution/core功能层次组织网络。",
+          "Flow模型包括peer-to-peer、client-server、hierarchical client-server和distributed computing，描述通信参与者和方向。",
+          "Functional模型按服务或访问组织，如service-provider、intranet/extranet和end-to-end视角。",
+          "多种模型可一起使用：先有拓扑骨架，再叠加流量和功能，形成符合需求的reference architecture。"
+        ]
+      }
     },
     {
       "id": "Q38",
@@ -13123,10 +13679,6 @@
             {
               "word": "explain",
               "meaning": "解释：说明是什么、如何/为何产生结果，并保留条件。"
-            },
-            {
-              "word": "design",
-              "meaning": "设计：由需求选择机制、说明位置与关系、提出验证。"
             }
           ],
           "targets": [
@@ -13187,7 +13739,17 @@
       "answer_word_count": 131,
       "priority": "第二轮基础",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "学生记录如果被看、被改或在需要时打不开，损害各不相同。",
+        "plain": "Confidentiality防未授权披露，integrity防未授权修改，availability保证合法使用时能访问。Privacy还涉及个人信息是否被适当收集和使用；加密不能单独解决全部问题。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Confidentiality防未授权读取或披露；integrity防未经许可的修改；availability保证需要时合法用户能使用。",
+          "本课把privacy放在security中讨论，尤其关注个人信息未授权访问和披露；更广义还看适当收集、使用和披露。",
+          "教学、记录和研究的目标不同，控制应按需求和风险选择；有加密不等于隐私及可用性都解决。"
+        ]
+      }
     },
     {
       "id": "Q39",
@@ -13444,7 +14006,17 @@
       "answer_word_count": 134,
       "priority": "第二轮基础",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "有限预算不能把每一种危险都按同样代价处理。",
+        "plain": "Threat analysis先列资产，再看威胁、可能性和后果，据此排优先级、选控制并复查。未知概率要标不确定，不编造数字；让不同角色参与可减少遗漏。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Threat analysis先识别要保护的资产及可能损害它的威胁，包括数据、设备、软件和服务。",
+          "对每组资产与威胁考虑可能性和影响，从而排优先级，决定政策与技术控制。",
+          "概率未知时记录不确定并找证据，涉及用户和管理人员一起复评；只列攻击名称不能指导设计。"
+        ]
+      }
     },
     {
       "id": "Q96",
@@ -13544,6 +14116,10 @@
           "meaning": "对三个资产给出威胁、可能性、损害和措施。",
           "verbs": [
             {
+              "word": "complete",
+              "meaning": "完成表格：逐项填写资产、威胁、可能性、损害和措施。"
+            },
+            {
               "word": "explain",
               "meaning": "解释：说明是什么、如何/为何产生结果，并保留条件。"
             }
@@ -13605,7 +14181,17 @@
       "answer_word_count": 135,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "“有黑客”不是完整分析；还要知道哪项资产可能受何损害。",
+        "plain": "学生记录对应未授权访问，在线教学对应拒绝服务，研究存储对应恶意软件/损坏；逐项写可能性、影响、措施与验证。没有证据时把概率留待评估。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "表格应连起资产、威胁、可能性、损害与回应；学生记录的未授权访问可能泄露或改成绩，需身份、权限和日志。",
+          "在线教学遭拒绝服务会停课，可考虑流量控制和韧性；研究存储被恶意软件破坏需受控访问与测试过的恢复。",
+          "这些是示例而非真实概率；有证据才估可能性，高可能性高影响通常要重点处理，并随服务变化复查。"
+        ]
+      }
     },
     {
       "id": "Q40",
@@ -13762,7 +14348,12 @@
         },
         "prompt": {
           "meaning": "安全政策与流程应包含什么？",
-          "verbs": [],
+          "verbs": [
+            {
+              "word": "describe",
+              "meaning": "描述：分别写policy和procedure应包含的内容。"
+            }
+          ],
           "targets": [
             "区分policy定规则与procedure定落实方法",
             "按访问、隐私、问责、认证、报告等组织清单",
@@ -13820,7 +14411,17 @@
       "answer_word_count": 129,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "“只有教师可看成绩”是规则；如何开通、撤销权限是具体做法。",
+        "plain": "Security policy写允许与禁止的原则和责任；procedure写认证、配置、报告、备份或应急的操作。两者须配合，定期复核是否仍支持组织目标。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Policy说明访问与可接受使用等规则；procedure说明人员怎样执行这些规则。",
+          "应覆盖隐私、责任、认证、报告、配置、补丁、备份和事件回应等，具体范围按风险与组织目标定。",
+          "规则要让人能执行、检查和更新，不能只写“要安全”三个字。"
+        ]
+      }
     },
     {
       "id": "Q97",
@@ -14035,7 +14636,17 @@
       "answer_word_count": 135,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "门卫可采用“没在黑名单就进”或“只让名单上的人进”两种默认。",
+        "plain": "Deny list默认允许其他流量；allow list默认拒绝未列出的流量。前者开放但易漏禁项，后者控制较严但可能挡住合法新业务；规则维护和例外也要考虑。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "第一种只拒绝名单上的流量，其余默认允许，开放但容易漏掉新的危险。",
+          "第二种只允许明确列出的流量，其余默认拒绝，控制较严但可能阻碍新业务。",
+          "按资产、需要的通信与维护能力选择并测试例外；图中是两种默认处理哲学，不是四类安全目标。"
+        ]
+      }
     },
     {
       "id": "Q41",
@@ -14265,7 +14876,17 @@
       "answer_word_count": 130,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "锁好机房不能阻止所有网络攻击；过滤网络包也不能防偷设备。",
+        "plain": "Physical security管人员接触与设施；packet filtering按IP、port等条件允许或拒绝流量。各自覆盖不同风险，且单一规则看不到所有攻击内容。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Physical security防人接触、偷窃或损坏机房与设备，可用门禁、位置和设施措施。",
+          "Packet filtering依据地址、协议或port等字段准许/拒绝包，能执行部分通信政策。",
+          "机房锁不能防所有网络攻击，包字段过滤也看不出所有恶意内容；应按威胁组合控制。"
+        ]
+      }
     },
     {
       "id": "Q42",
@@ -14522,7 +15143,17 @@
       "answer_word_count": 128,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "用户数据与管理员命令都要保护，但可用机制层次不同。",
+        "plain": "IPsec在IP层提供经选择的认证、完整性或保密服务；SNMPv3加强管理通信的安全；encryption保护可读内容，但还需要安全密钥管理。不可说任一机制自动包办全部安全。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "IPsec在IP层通过选定机制提供认证、完整性和/或保密，可用于传输或隧道安排。",
+          "SNMPv3保护设备管理消息，避免管理通信暴露或被冒用；encryption让无密钥者难读内容。",
+          "三者保护位置与目的不同，密钥管理、设备支持和性能仍须考虑，不能互相当同义词。"
+        ]
+      }
     },
     {
       "id": "Q02",
@@ -14788,7 +15419,17 @@
       "answer_word_count": 149,
       "priority": "老师样题",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "给文件上锁与确认拿钥匙的人是谁，是两件事。",
+        "plain": "Encryption使无合适密钥者难以读数据，主要服务保密性；authentication确认身份，是访问控制的前提。二者都需正确配置，且不能单独证明数据可用或使用合规。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Encryption把可读数据变成需密钥才能理解的形式，保护传输或存储中的保密性；密钥也要保护。",
+          "Authentication确认用户或设备声称的身份，但登录成功后仍须authorization决定能看什么。",
+          "两种机制可一起用，各有边界；不能因为有加密或登录就宣称所有风险消失。"
+        ]
+      }
     },
     {
       "id": "Q43",
@@ -14992,10 +15633,6 @@
             {
               "word": "explain",
               "meaning": "解释：说明是什么、如何/为何产生结果，并保留条件。"
-            },
-            {
-              "word": "design",
-              "meaning": "设计：由需求选择机制、说明位置与关系、提出验证。"
             }
           ],
           "targets": [
@@ -15056,7 +15693,17 @@
       "answer_word_count": 131,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "学校把公开网页放在对外区域，内部成绩系统放在更受保护区域。",
+        "plain": "NAT转换地址，firewall按政策控制流量，DMZ隔离需对外服务；它们作用不同。NAT不等于防火墙，分区仍需认证、更新与监测。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "NAT转换内外地址，能隐藏内部地址安排，但本身不是安全政策。",
+          "Firewall按规则允许或阻断流量；DMZ把对外服务和敏感内网分区，减少直接暴露。",
+          "三者作用互补；公开服务仍要更新、认证和监测，不能把NAT当成防火墙。"
+        ]
+      }
     },
     {
       "id": "Q98",
@@ -15239,10 +15886,6 @@
             {
               "word": "compare",
               "meaning": "比较：选相同维度分别说明，再给取舍条件。"
-            },
-            {
-              "word": "design",
-              "meaning": "设计：由需求选择机制、说明位置与关系、提出验证。"
             }
           ],
           "targets": [
@@ -15302,7 +15945,17 @@
       "answer_word_count": 145,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "贵重物品可放在层层门内，也可按不同用途分成多个受控房间。",
+        "plain": "Nested zones使访问更敏感区时经过多道边界；较扁平分区按功能和敏感性并列设置。放在哪里要由资产、威胁和必要flow决定，不把它与access/distribution/core混同。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Nested zones把更敏感区域放在受控区域内，访问可经过多道边界，也增加处理和管理工作。",
+          "较扁平设计按不同资产、功能或用户群布置并列安全区，不要求所有区都一层套一层。",
+          "先查资产、威胁、允许flow、管理路径和性能，再设计边界并测试合法访问；安全区与物理层级是不同视角。"
+        ]
+      }
     },
     {
       "id": "Q44",
@@ -15552,7 +16205,17 @@
       "answer_word_count": 131,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "加密可能增加处理负担，安全规则也需要管理工具维护。",
+        "plain": "安全架构内部要解释机制之间的依赖和限制；外部要说明与performance、management、addressing的影响。好的答案写清哪项安全收益带来什么成本，以及如何验证。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "安全机制之间有依赖：加密要密钥管理，按地址过滤要准确的地址资料。",
+          "安全还影响性能、管理和地址：检查与加密可增加延迟，规则可能挡监控，NAT可使日志解释困难。",
+          "按优先级选择位置与力度，测量真实效果并记录剩余风险，而不是假定机制越多越好。"
+        ]
+      }
     },
     {
       "id": "Q45",
@@ -15788,7 +16451,17 @@
       "answer_word_count": 130,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "邮递员先到一栋楼，再在楼内找到具体房间；两类地址承担不同范围的工作。",
+        "plain": "MAC用于本地链路frame，IP用于跨网络packet；IPv4是32位，IPv6是128位。二者不能简单互换；转发跨链路时本地MAC信息会改变。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "MAC用于以太网等本地链路的frame交付；IP是跨网络可路由的逻辑地址。",
+          "IPv4长32bit，IPv6长128bit，地址空间和表示方式不同；它们同属IP层地址。",
+          "跨router时本地frame/MAC会更新，通常最终IP目的保持，故两类地址各有职责。"
+        ]
+      }
     },
     {
       "id": "Q99",
@@ -16020,7 +16693,17 @@
       "answer_word_count": 137,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "地址资源要有人协调分配；路由策略则由各网络管理者决定。",
+        "plain": "IANA负责顶层号码资源协调，RIR在地区管理分配，AS是共同管理路由策略的网络集合。地址分配组织层级不等于packet实际经过的路由器顺序。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "IANA协调顶层互联网号码资源分配；RIR按地区分配管理地址资源，如APNIC。",
+          "AS是采用共同管理路由政策的一组IP前缀/网络，并由AS号识别。",
+          "谁分配地址与packet实际走哪条路是两回事；规划中要分别处理资源与路由政策。"
+        ]
+      }
     },
     {
       "id": "Q46",
@@ -16250,7 +16933,17 @@
       "answer_word_count": 133,
       "priority": "补充练习",
       "week7_preparation": true,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "门牌上写“这部分是街区、那部分是住户”，prefix告诉我们分界。",
+        "plain": "Classful旧方式按A/B/C固定边界；CIDR用显式/prefix length。IPv4中前p位是网络部分、后32−p位可用于主机编号；mask从左连续为1。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Classful旧方式按A/B/C给固定网络边界，不灵活。",
+          "CIDR明确写/prefix length；IPv4前p位是网络，余下32−p位可用于地址编号，mask左边连续为1。",
+          "计算时不要只凭地址第一组数字猜mask；例如/27需用题给前缀判断边界。"
+        ]
+      }
     },
     {
       "id": "Q47",
@@ -16498,7 +17191,17 @@
       "answer_word_count": 140,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "家中设备可用内部地址上网，但内部地址本身不会自动变成公共地址。",
+        "plain": "Private IPv4块用于内部、不会在公网全球路由；DHCP可自动分配地址；NAT在边界转换地址。三者分别是地址范围、配置方法和转换机制，不可混为一个概念。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "三个private IPv4块是10/8、172.16/12和192.168/16，第二块止于172.31.255.255，不在公网全球路由。",
+          "Public地址按全球协调；地址短期租用或长期使用是另一维度，DHCP能租约分配。",
+          "NAT转换地址/port，可让多个内部连接共享外部地址；它不是加密认证，还要考虑地址冲突、日志和扩容。"
+        ]
+      }
     },
     {
       "id": "Q48",
@@ -16758,7 +17461,17 @@
       "answer_word_count": 141,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "给自己发消息、给同一局部连接的人发消息、发给一个人或一组人，地址用途不同。",
+        "plain": "Loopback用于本机，link-local只限本地链路；unicast一对一，multicast一对组，broadcast发往广播域。不同机制适用的范围和接收者不同。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Loopback让主机与自己通信，常见127.0.0.1；link-local如169.254/16限本地链路。",
+          "Unicast一对一，multicast一对组，broadcast给本广播域；目标接收范围不同。",
+          "答题要说明地址用途与传播范围，不把link-local当普通公网地址。"
+        ]
+      }
     },
     {
       "id": "Q94",
@@ -16969,7 +17682,17 @@
       "answer_word_count": 146,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "教材例子里的地址不一定能用于真实公网服务。",
+        "plain": "127/8是loopback，169.254/16是IPv4 link-local，192.0.2/24是文档示例，240/4属保留/实验语境。默认路由是0.0.0.0/0，不要照课件表格误写/8。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "127/8是本机回环，169.254/16是本链路通信，均不是普通公网地址。",
+          "192.0.2/24是TEST-NET文档示例，240/4在课件历史分类中是实验/保留空间。",
+          "0.0.0.0/0是匹配所有目的地的默认路由，和分配一块/8主机地址不同；课件表格旧记法不可照抄。"
+        ]
+      }
     },
     {
       "id": "Q49",
@@ -17214,7 +17937,17 @@
       "answer_word_count": 132,
       "priority": "补充练习",
       "week7_preparation": true,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "一大段地址要分给几个班，既要每班够用，也不能让地址重叠。",
+        "plain": "先写原block和子网/主机需求，再借位定prefix与mask，算子网数和可用主机，最后查每块网络、广播和范围。结果还要核对是否落在原block内。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "先写原网络和prefix，以及要多少子网、每个多少普通主机。",
+          "等长子网按借位得到新prefix、mask、子网数与每块地址数；VLSM则按不同需求分大小。",
+          "列出边界、network/broadcast/可用范围，核对不重叠、都在原块且数量满足要求。"
+        ]
+      }
     },
     {
       "id": "C01",
@@ -17225,7 +17958,7 @@
       "question": "Convert 192.168.10.77 and /27 to binary, then find the network address.",
       "cn": "把IP和掩码转二进制，用AND求network。",
       "steps": "1. IP：11000000.10101000.00001010.01001101。\n2. /27：11111111.11111111.11111111.11100000，即255.255.255.224。\n3. 最后一字节：01001101 AND 11100000 = 01000000 = 64；前三字节不变。\n4. Network = 192.168.10.64/27。host bits 5，总32地址，边界为64–95。",
-      "answer": "The /27 mask is 255.255.255.224. Applying a bitwise AND to the address and mask gives 192.168.10.64. The subnet therefore runs from 192.168.10.64 to 192.168.10.95. Its ordinary usable range is 192.168.10.65–192.168.10.94.",
+      "answer": "192.168.10.77 in binary is 11000000.10101000.00001010.01001101. The /27 mask is 11111111.11111111.11111111.11100000, or 255.255.255.224. Their bitwise AND is 11000000.10101000.00001010.01000000, giving network address 192.168.10.64/27. The block runs from .64 to .95, with ordinary usable hosts .65–.94.",
       "trap": "不能对十进制直接做普通乘法；每个octet要8位。",
       "kind": "AI计算变式；题值并非真实试题",
       "type": "calculation",
@@ -17268,13 +18001,13 @@
         "blocks": [
           {
             "key": "T067",
-            "text_sha256": "2da2f57cb4406cd2cf8e5e0423b3cb37412a3580cf018f7b669341b44abfb3e6",
+            "text_sha256": "fff80400fe7939fc0c32f207944ba007ede3167badcc3e2e236ae8957c2a96b5",
             "source_question": null,
             "sources": [],
             "parts": [
               {
                 "start": 0,
-                "end": 221,
+                "end": 303,
                 "role": "compose"
               }
             ]
@@ -17304,6 +18037,10 @@
         "prompt": {
           "meaning": "把IP和掩码转二进制，用AND求network。",
           "verbs": [
+            {
+              "word": "convert",
+              "meaning": "换算：写二进制、mask、AND与结果。"
+            },
             {
               "word": "find",
               "meaning": "求解：确认要求的输出，步骤与单位要可复查。"
@@ -17366,7 +18103,12 @@
       "answer_word_count": 48,
       "priority": "补充练习",
       "week7_preparation": true,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "把IP地址与mask按位对齐，只有两边都是1的位才留下。",
+        "plain": "/27的mask是255.255.255.224。192.168.10.77与mask做AND得网络192.168.10.64；不要把host地址直接当网络地址。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "C03",
@@ -17450,7 +18192,12 @@
         },
         "prompt": {
           "meaning": "按课件同一地址块分两个子网。",
-          "verbs": [],
+          "verbs": [
+            {
+              "word": "split",
+              "meaning": "划分：给新prefix、边界、mask和主机数。"
+            }
+          ],
           "targets": [
             "由两块确定借1位",
             "得到/25、mask、host bits和普通可用数",
@@ -17508,7 +18255,12 @@
       "answer_word_count": 51,
       "priority": "补充练习",
       "week7_preparation": true,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "一块/24平分两半，就是把一位原本给主机的位借作子网位。",
+        "plain": "新前缀/25，mask 255.255.255.128；两块从.0和.128开始。每块128个地址，普通可用主机126个。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "C02",
@@ -17519,7 +18271,7 @@
       "question": "Give masks and ordinary usable hosts for /25, /26, /27, /28, /29 and /30.",
       "cn": "写常见前缀、掩码、块大小和可用主机。",
       "steps": "| Prefix | Mask | 总地址/步长（最后octet） | 普通可用主机 |\n|---|---|---:|---:|\n| /25 | 255.255.255.128 |128|126|\n| /26 | 255.255.255.192 |64|62|\n| /27 | 255.255.255.224 |32|30|\n| /28 | 255.255.255.240 |16|14|\n| /29 | 255.255.255.248 |8|6|\n| /30 | 255.255.255.252 |4|2|\n\nh=32-prefix；总地址=2^h；普通LAN主机=2^h−2。",
-      "answer": "A longer prefix leaves fewer host bits. Each additional prefix bit halves the number of addresses in a block. For these ordinary subnets, usable host count is total addresses minus the network and broadcast addresses.",
+      "answer": "A longer prefix leaves fewer host bits. Each additional prefix bit halves the addresses in a block. For /25, /26, /27, /28, /29 and /30, the masks are respectively 255.255.255.128, 255.255.255.192, 255.255.255.224, 255.255.255.240, 255.255.255.248 and 255.255.255.252. Their ordinary usable host counts are respectively 126, 62, 30, 14, 6 and 2; each count excludes the network and broadcast addresses.",
       "trap": "旧guideline p.14把/27掩码写成255.255.254.0（那是/23），正确/27是255.255.255.224。",
       "kind": "AI计算变式；题值并非真实试题",
       "type": "calculation",
@@ -17562,7 +18314,7 @@
         "blocks": [
           {
             "key": "T069",
-            "text_sha256": "d3e0cff3b6de1e2353f3041e730456dfc5ed5ccf929431e7106000c6b419ae1f",
+            "text_sha256": "0fcd55e54f241b851ce857086438be6790c33b876bfd83397f3a9cc76bfc946a",
             "source_question": "T069",
             "sources": [
               {
@@ -17575,28 +18327,8 @@
             "parts": [
               {
                 "start": 0,
-                "end": 39,
-                "role": "source"
-              },
-              {
-                "start": 39,
-                "end": 40,
+                "end": 402,
                 "role": "compose"
-              },
-              {
-                "start": 40,
-                "end": 109,
-                "role": "source"
-              },
-              {
-                "start": 109,
-                "end": 110,
-                "role": "compose"
-              },
-              {
-                "start": 110,
-                "end": 217,
-                "role": "source"
               }
             ]
           }
@@ -17682,7 +18414,12 @@
       "answer_word_count": 35,
       "priority": "补充练习",
       "week7_preparation": true,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "prefix每增加1，留给主机的位少1，地址数减半。",
+        "plain": "/25至/30依次有128、64、32、16、8、4个地址；普通可用主机一般各减2，得到126、62、30、14、6、2。先辨认题目是否为普通IPv4子网，再套这个规则。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "C04",
@@ -17693,7 +18430,7 @@
       "question": "Split 192.168.8.0/24 into at least six equal subnets, each supporting at least 25 hosts.",
       "cn": "至少6个等长子网，每个25主机。",
       "steps": "子网数：2^2=4不够，2^3=8够。借3位得到/27，mask255.255.255.224。\nhost bits=5，32地址、30可用，满足25。\n最后字节network：0、32、64、96、128、160、192、224；broadcast分别31、63、95、127、159、191、223、255。\n第一块可用.1–.30，第六块.161–.190；剩余两块可保留。",
-      "answer": "Three borrowed bits produce eight equal /27 subnets. Each supports 30 ordinary hosts, so both requirements are met. Subnet addresses increase by 32 in the last octet. Six may be allocated and two kept for future use.",
+      "answer": "Borrow three bits from /24 to obtain eight equal /27 subnets, each with 30 ordinary usable hosts. Their network addresses are 192.168.8.0, .32, .64, .96, .128, .160, .192 and .224, all with /27. Allocate at least the first six and keep two for future use. The mask is 255.255.255.224. Both the subnet-count and host-count requirements are met.",
       "trap": "至少6可以生成8；不能说借6位因为要6个子网。",
       "kind": "AI计算变式；题值并非真实试题",
       "type": "calculation",
@@ -17736,13 +18473,13 @@
         "blocks": [
           {
             "key": "T070",
-            "text_sha256": "0f7f6e218201199946d1436a615896c72d540bca049228123874f2dd7aeb2cbe",
+            "text_sha256": "a835dc4dd4e1240daed06f5acc60d0226e6a463e7884d7ae67933aaf6fc7a7fd",
             "source_question": null,
             "sources": [],
             "parts": [
               {
                 "start": 0,
-                "end": 216,
+                "end": 343,
                 "role": "compose"
               }
             ]
@@ -17766,7 +18503,12 @@
         },
         "prompt": {
           "meaning": "至少6个等长子网，每个25主机。",
-          "verbs": [],
+          "verbs": [
+            {
+              "word": "split",
+              "meaning": "划分：同时验证子网数量和每块可用主机数。"
+            }
+          ],
           "targets": [
             "子网需求确定最少borrow bits",
             "得到/27并核对30可用满足25",
@@ -17824,7 +18566,12 @@
       "answer_word_count": 37,
       "priority": "补充练习",
       "week7_preparation": true,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "至少6个班，每班至少25台设备，试借位时要同时满足两件事。",
+        "plain": "从/24借3位得8个/27子网，每块32地址、普通可用30个主机。只检查子网数量或只检查主机数都不够。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "C05",
@@ -17908,7 +18655,12 @@
         },
         "prompt": {
           "meaning": "50主机时选最长前缀，算/24能容纳多少块。",
-          "verbs": [],
+          "verbs": [
+            {
+              "word": "calculate",
+              "meaning": "求解：先找满足主机数的位数，再求可划分块数。"
+            }
+          ],
           "targets": [
             "由2^h−2≥50找最小h",
             "prefix=32−h得到最长可用前缀",
@@ -17966,7 +18718,12 @@
       "answer_word_count": 34,
       "priority": "补充练习",
       "week7_preparation": true,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "至少50台设备，5个host位只给30个普通地址，不够；要6位。",
+        "plain": "6个host位给62个普通可用主机，所以最长合适prefix是/26；一块/24可切4块/26。选更长的/27就不满足50台。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "C06",
@@ -18113,7 +18870,12 @@
       "answer_word_count": 48,
       "priority": "补充练习",
       "week7_preparation": true,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "看到192.168.10.77/27，先找它落在哪个32地址大小的区间。",
+        "plain": "它在.64–.95块，网络.64、广播.95、普通可用.65–.94。.96是下一块起点，因此不在同一子网。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "C07",
@@ -18272,7 +19034,12 @@
       "answer_word_count": 49,
       "priority": "补充练习",
       "week7_preparation": true,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "/20的分界在第三组数字中间，不能只看最后一组。",
+        "plain": "Mask为255.255.240.0，第三组每16递增；37落在32–47，因此网络172.20.32.0，广播172.20.47.255，可用主机4094。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "C08",
@@ -18283,7 +19050,7 @@
       "question": "Split 172.16.0.0/16 into four equal subnets. Give usable hosts for /17 and /18.",
       "cn": "分4块，并校正workshop主机数。",
       "steps": "借2位，新/18，mask255.255.192.0，h14，每块16384地址、16382可用。\n\n| Network | First | Last | Broadcast |\n|---|---|---|---|\n|172.16.0.0/18|172.16.0.1|172.16.63.254|172.16.63.255|\n|172.16.64.0/18|172.16.64.1|172.16.127.254|172.16.127.255|\n|172.16.128.0/18|172.16.128.1|172.16.191.254|172.16.191.255|\n|172.16.192.0/18|172.16.192.1|172.16.255.254|172.16.255.255|\n\n/17为2^15−2=32766可用，原solutions p.5误写32764；/18为16382，不是16384。",
-      "answer": "Borrow two bits to produce four /18 subnets. Their third-octet network values are 0, 64, 128 and 192. Each has 16382 ordinary usable hosts. A /17 has 32766 usable hosts. Total addresses must be distinguished from usable host addresses.",
+      "answer": "Borrow two bits from 172.16.0.0/16 to create four equal /18 networks: 172.16.0.0/18, 172.16.64.0/18, 172.16.128.0/18 and 172.16.192.0/18. The /18 mask is 255.255.192.0 and each block has 16,382 ordinary usable hosts. A /17 block has 32,766 ordinary usable hosts. Total addresses must be distinguished from usable host addresses.",
       "trap": "原solutions p.5：/17误写32764，/18误写16384；正确分别32766、16382。",
       "kind": "AI计算变式；题值并非真实试题",
       "type": "calculation",
@@ -18326,13 +19093,13 @@
         "blocks": [
           {
             "key": "T074",
-            "text_sha256": "b26f68cce29fc8be24c97fe828e59a1f3450f7f8dc5d194b440d26cec3034743",
+            "text_sha256": "9c4c939844080ec14377c5f9f3963d6ed157dbdb11acce2ad1b4ab2943a4331d",
             "source_question": null,
             "sources": [],
             "parts": [
               {
                 "start": 0,
-                "end": 235,
+                "end": 328,
                 "role": "compose"
               }
             ]
@@ -18357,6 +19124,10 @@
         "prompt": {
           "meaning": "分4块，并校正workshop主机数。",
           "verbs": [
+            {
+              "word": "split",
+              "meaning": "划分：写借位、四块边界及可用主机数。"
+            },
             {
               "word": "give",
               "meaning": "列出：逐项给所需结果，按题干数量和格式作答。"
@@ -18419,7 +19190,12 @@
       "answer_word_count": 39,
       "priority": "补充练习",
       "week7_preparation": true,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "把/16分为4块，要借2位；每块的第三组起点隔64。",
+        "plain": "四个/18网络起点为0、64、128、192；每块普通可用16382。/17和/18的主机数分别是32766和16382，不能混淆。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "C09",
@@ -18504,7 +19280,12 @@
         },
         "prompt": {
           "meaning": "把/23分成至少10块并保留每块25主机。",
-          "verbs": [],
+          "verbs": [
+            {
+              "word": "subnet",
+              "meaning": "划分子网：同时满足块数与每块主机数。"
+            }
+          ],
           "targets": [
             "原/23先确定512地址覆盖范围",
             "至少10块需借4位到/27",
@@ -18563,7 +19344,12 @@
       "answer_word_count": 41,
       "priority": "补充练习",
       "week7_preparation": true,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "原块/23跨两个/24，不能假装它只覆盖最后一组0–255。",
+        "plain": "从/23借4位得16块/27，每块普通可用30个主机，满足至少10块、每块25人。列后半地址时要跨到200.100.11.x。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "C10",
@@ -18647,7 +19433,12 @@
         },
         "prompt": {
           "meaning": "计算/8到/16与指定子网范围。",
-          "verbs": [],
+          "verbs": [
+            {
+              "word": "calculate",
+              "meaning": "计算：写借位数、子网数和所问地址范围。"
+            }
+          ],
           "targets": [
             "由/16−/8求借8位和256块",
             "求每/16的16个host bits",
@@ -18705,7 +19496,12 @@
       "answer_word_count": 39,
       "priority": "补充练习",
       "week7_preparation": true,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "/8改成/16，等于再划出8位作为子网编号。",
+        "plain": "10.0.0.0/8可分256块/16；10.7.0.0/16范围到10.7.255.255，普通可用从10.7.0.1到10.7.255.254。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "C11",
@@ -18716,7 +19512,7 @@
       "question": "Allocate subnets for 100, 50, 20 and 10 hosts from 192.168.50.0/24 using VLSM.",
       "cn": "按不同大小分配子网。材料有VLSM概念，本综合分配为AI扩展。",
       "steps": "按主机需求从大到小：100→/25（126可用）；50→/26（62）；20→/27（30）；10→/28（14）。\n\n|需求|Network|可用范围|Broadcast|\n|---|---|---|---|\n|100|192.168.50.0/25|.1–.126|.127|\n|50|192.168.50.128/26|.129–.190|.191|\n|20|192.168.50.192/27|.193–.222|.223|\n|10|192.168.50.224/28|.225–.238|.239|\n\n余192.168.50.240/28可保留。每块要满足自己的prefix对齐，不重叠。",
-      "answer": "Allocate the largest requirement first. Use /25, /26, /27 and /28 blocks beginning at .0, .128, .192 and .224. Each meets its host requirement and none overlap. The final .240/28 block remains available.",
+      "answer": "Allocate the largest need first: 192.168.50.0/25 for 100 hosts (126 usable), 192.168.50.128/26 for 50 (62 usable), 192.168.50.192/27 for 20 (30 usable), and 192.168.50.224/28 for 10 (14 usable). These VLSM blocks fit within 192.168.50.0/24 and do not overlap. The final 192.168.50.240/28 block remains available.",
       "trap": "作为范围拓展训练，不声称老师明确点名VLSM综合分配必考。",
       "kind": "AI计算变式；题值并非真实试题",
       "type": "calculation",
@@ -18759,13 +19555,13 @@
         "blocks": [
           {
             "key": "T077",
-            "text_sha256": "7cc1d7d9a9594ddba88356057b1b209d11619ef14b7eb4cf10ad0951fd462a31",
+            "text_sha256": "33ead85917bfa68052f22341fc7fb2b73029a848bc7e316b8213578661d67787",
             "source_question": null,
             "sources": [],
             "parts": [
               {
                 "start": 0,
-                "end": 203,
+                "end": 312,
                 "role": "compose"
               }
             ]
@@ -18789,7 +19585,12 @@
         },
         "prompt": {
           "meaning": "按不同大小分配子网。材料有VLSM概念，本综合分配为AI扩展。",
-          "verbs": [],
+          "verbs": [
+            {
+              "word": "allocate",
+              "meaning": "分配：从大到小安排VLSM，核对不重叠。"
+            }
+          ],
           "targets": [
             "按主机需求从大到小排序",
             "逐个求最小足够prefix",
@@ -18847,7 +19648,12 @@
       "answer_word_count": 34,
       "priority": "补充练习",
       "week7_preparation": true,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "四个部门要100、50、20、10个地址，先给最大部门分块较容易排齐边界。",
+        "plain": "在192.168.50.0/24内依次给/25、/26、/27、/28，从.0、.128、.192、.224开始。VLSM允许不同大小，须验证容量、边界和不重叠。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "C12",
@@ -18930,7 +19736,12 @@
         },
         "prompt": {
           "meaning": "判断需求是否可同时满足。",
-          "verbs": [],
+          "verbs": [
+            {
+              "word": "evaluate",
+              "meaning": "判断可行性：同时核对块数和主机数。"
+            }
+          ],
           "targets": [
             "按8块求/27并发现30可用不足40",
             "反向由40求至少/26",
@@ -18987,7 +19798,12 @@
       "answer_word_count": 37,
       "priority": "补充练习",
       "week7_preparation": true,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "8个班每班40台，需要至少320个普通地址，/24总共只有256个。",
+        "plain": "若/24平分8块则每块/27，仅30个普通可用主机；40台需/26，但/24只能分4块/26。要求在该原块内不可行，要扩大地址块或改需求。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "Q50",
@@ -19269,7 +20085,17 @@
       "answer_word_count": 134,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "一所大学内部自己安排道路，与去其他机构的跨域路线，规则不同。",
+        "plain": "AS有共同路由政策；IGP用于AS内部，BGP作为跨AS交换可达性与政策的主要协议。边界可按功能或行政责任划分；不要把iBGP当IGP。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "AS是共同路由政策管理下的网络集合；IGP处理AS内部可达，EGP/BGP处理跨AS信息。",
+          "边界可能是机构、功能或技术管理边界；内部和外部需要不同政策与规模考虑。",
+          "不同协议可协作，判断先看AS归属，不凭物理距离或名称猜用途。"
+        ]
+      }
     },
     {
       "id": "Q51",
@@ -19552,7 +20378,17 @@
       "answer_word_count": 133,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "“不知道走哪条具体路就走默认出口”，但有些路由信息也可能被拦下或合并。",
+        "plain": "Default route提供兜底下一跳；route filtering控制路由通告，aggregation合并连续前缀；policy影响选择。ACL过滤实际流量包，与route filtering不是一回事。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Default route在没有更具体匹配时提供下一跳；aggregation把合适连续前缀汇总，减少路由信息。",
+          "Route filtering控制接受、发布或使用哪些路由；packet filtering/ACL控制实际数据包，这两者不可混。",
+          "政策可按提供商和行政边界选路；过滤和汇总后要核对仍可到达所需目的地。"
+        ]
+      }
     },
     {
       "id": "Q52",
@@ -19818,7 +20654,17 @@
       "answer_word_count": 126,
       "priority": "第二轮基础",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "给每个路口手写固定指示牌，与让路口互相交换变化信息，维护方式不同。",
+        "plain": "Static route简单、协议负担低但需人工改；dynamic routing可随网络变化更新，但有开销、收敛和管理复杂度。选法看规模、变化、技能与可靠要求。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Static route由人明确配置，协议开销小且容易理解，但变化时须人工调整。",
+          "Dynamic routing交换信息并随变化改路径，但带来协议流量、收敛时间和管理要求。",
+          "小而稳定的网络与多路径、频繁变化的网络需求不同；看规模、故障恢复与团队技能做取舍。"
+        ]
+      }
     },
     {
       "id": "Q53",
@@ -20077,7 +20923,17 @@
       "answer_word_count": 131,
       "priority": "第二轮基础",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "小网络、复杂内部网络和跨机构网络，选路协议承担的范围不同。",
+        "plain": "RIP按跳数且有15跳限制，OSPF用link-state和区域，BGP重政策与跨AS路径。选择时评估规模、收敛、开销和运维能力，不说某协议在所有场景都最好。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "RIP是按hop count的distance-vector IGP，可用跳数上限15，简单但规模和收敛受限。",
+          "OSPF是link-state IGP，支持区域和较大层级网络；BGP是跨AS、重政策的path-vector协议。",
+          "评价收敛、开销、内存CPU、稳定、扩展、互通和团队能力；内部选路与域间选路不是同一任务。"
+        ]
+      }
     },
     {
       "id": "Q54",
@@ -20330,7 +21186,17 @@
       "answer_word_count": 131,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "旧协议若不携带明确mask，就难以支持灵活大小的子网。",
+        "plain": "RIPv1是classful，不能携带mask或支持VLSM；RIPv2携带mask，支持classless路由，但仍受15跳限制。原课件旧时代的建议要结合现代需求判断。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "RIPv1是classful，不能携带mask支持VLSM；RIPv2携带mask，能支持classless地址。",
+          "RIPv2仍有RIP的hop count限制，版本升级不等于适合大网络。",
+          "课件旧建议如限制协议数是历史语境；应以当前规模、收敛、兼容、运维能力和需求判断，而非机械背规则。"
+        ]
+      }
     },
     {
       "id": "Q92",
@@ -20563,7 +21429,17 @@
       "answer_word_count": 135,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "同一机构内的BGP邻居，与两家机构之间的BGP邻居，名字差一个字母。",
+        "plain": "iBGP是同一AS内BGP会话；eBGP是不同AS之间BGP会话。iBGP仍是BGP，不是IGP；看图时先识别AS边界。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "eBGP在不同AS的BGP邻居间交换可达信息；iBGP在同一AS内部传播BGP信息。",
+          "课件图中AS100对AS200/300/400是eBGP，AS100内部BGP邻居是iBGP。",
+          "iBGP不是OSPF等IGP；IGP支撑内部可达，iBGP传播BGP信息。区分依据是AS归属，不是距离远近。"
+        ]
+      }
     },
     {
       "display_id": "T140",
@@ -20772,7 +21648,17 @@
       "priority": "补充练习",
       "week7_preparation": false,
       "new_in_audit": true,
-      "ordinal": 93
+      "ordinal": 93,
+      "beginner": {
+        "start": "地址怎样分配会影响路由表大小，路由边界又会影响哪些地址能互通。",
+        "plain": "Addressing与routing在架构中相互依赖；连续地址利于聚合，边界与政策决定可达性。还要协调安全、管理、性能与扩容，不能各自独立设计。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "地址规划与路由选择内部互相影响：静态/动态方式、协议限制、边界设计都会改变可达性与运维负担。",
+          "外部还连接management与performance；管理需要可达地址，路径变化影响监测与服务表现。",
+          "安全按地址设规则时要考虑动态分配、NAT与日志；设计须一起检查可达、保护、扩容和故障情况。"
+        ]
+      }
     },
     {
       "id": "Q55",
@@ -20965,7 +21851,12 @@
         },
         "prompt": {
           "meaning": "性能目标怎样决定QoS部署？",
-          "verbs": [],
+          "verbs": [
+            {
+              "word": "explain",
+              "meaning": "解释：从性能目标推出是否需要QoS和如何验证。"
+            }
+          ],
           "targets": [
             "先从requirements、flowspec与map明确性能问题",
             "解释single-tier与multi-tier处理",
@@ -21024,7 +21915,17 @@
       "answer_word_count": 137,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "网络性能的目标不是把所有数字都调到最大，而是让关键应用够用且可持续维护。",
+        "plain": "从需求和flow得到容量、时延、可靠性等目标，再选必要且充分的QoS与分层服务。机制少而清楚较易管理，但必须验证端到端结果。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "性能目标来自需求、flow规格和位置图，指出哪些应用需多少容量、时延和RMA，先问机制是否必要且足够。",
+          "Single-tier给流量较一致处理；multi-tier按业务类别差异处理，QoS可在共享链路上分配或优先使用资源。",
+          "从少量可维护机制开始；优先教学流可能帮拥塞，但造不出无限带宽，也修不了过载服务器，需端到端验证。"
+        ]
+      }
     },
     {
       "id": "Q56",
@@ -21293,7 +22194,17 @@
       "answer_word_count": 130,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "为每个乘客单独预订座位，与把乘客分到不同服务车厢，是两种资源管理方式。",
+        "plain": "IntServ逐flow保留状态，RSVP可用于信令；DiffServ把流量分类并按类逐跳处理。前者细但扩展代价高，后者更可扩展但单独标记不保证端到端。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "IntServ给单条flow沿路径提供细粒度待遇，路由器需保留状态；RSVP负责请求/维持预留的信令，不传应用数据。",
+          "DiffServ把流量分成类、靠packet标记识别并逐跳处理，常见BE、AF、EF，比逐条预留更易扩展。",
+          "逐流控制和规模/运维复杂度要取舍；标记本身不保证端到端，途经设备和域需有一致政策及容量。"
+        ]
+      }
     },
     {
       "id": "Q57",
@@ -21519,7 +22430,17 @@
       "answer_word_count": 140,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "给包裹贴一个可沿途中规则处理的短标签，不代表目的地服务一定够快。",
+        "plain": "MPLS入口设备加label，中间设备按label转送，出口处理离开标签路径。它支持路径工程和QoS安排，但保障还取决于资源、政策及整条路径。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "MPLS在其网络内按label转发；边缘router负责进出时处理label，内部router依据label送往下一段。",
+          "选定label路径可支持traffic engineering和差异服务，有利于管理语音、视频和约定业务流。",
+          "标签本身不是速率、时延或可用性保证；仍需资源、政策、监测，并评估成本、兼容、技能和故障。"
+        ]
+      }
     },
     {
       "display_id": "T141",
@@ -21750,7 +22671,18 @@
       "priority": "补充练习",
       "week7_preparation": false,
       "new_in_audit": true,
-      "ordinal": 97
+      "ordinal": 97,
+      "beginner": {
+        "start": "把急件贴“优先”标签，仍需每个处理点都认识并按约定执行。",
+        "plain": "DiffServ边界分类和标记，域内设备按服务类处理，如EF、AF、BE。标记与资源和政策必须配合；跨域、拥塞和端点条件会影响最终效果。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "DiffServ按类而非逐flow预留；分类先识别流量，DSCP标记提示下一跳采用哪种per-hop behaviour。",
+          "DiffServ domain内节点遵守共同服务政策，边界节点负责分类、标记和流量整形；跨域还要协调政策。",
+          "BE无具体保证，AF给予差异转发/丢弃待遇，EF面向低时延等需要，但均依赖配置和资源。",
+          "只贴标签不会产生带宽；教学流仍需匹配队列政策、准入/整形与端到端验证。"
+        ]
+      }
     },
     {
       "id": "Q58",
@@ -22048,7 +22980,17 @@
       "answer_word_count": 133,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "入口先看车辆类别、测速度，再决定让其排队、限速或拒绝。",
+        "plain": "Resource control可用优先级和admission；traffic conditioning依次分类、计量、整形或丢弃。Shaping通过等待平滑速率，因此可能增加delay。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Resource control决定有限资源分给谁：prioritization排先后，admission control在资源不足时可拒绝新flow。",
+          "Traffic conditioning先分类、计量速率/突发，再整形等待或丢弃超标流量。",
+          "Shaping平滑流量但增加排队和缓冲需求；dropping保护其他流却损害被丢流；要按应用容忍度选择。"
+        ]
+      }
     },
     {
       "id": "C22",
@@ -22218,7 +23160,12 @@
       "answer_word_count": 59,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "一个整形器每隔固定时间只放一包，后到的包就排队等待。",
+        "plain": "先按题设的服务间隔列每包到达与可发送时刻，再求逐包等待和最终离开时间。不能把平均速率直接当每包等待，且要检查队列与单位。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "Q59",
@@ -22482,7 +23429,17 @@
       "answer_word_count": 133,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "候诊室负责存等待的人，叫号规则决定谁先进去。",
+        "plain": "Queue暂存packets，scheduling决定服务顺序。FIFO按先来后到；priority可能使低类饥饿；round robin轮流；WFQ按权重分配。选择要看公平、时限和管理负担。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Queue存等待的packet，scheduling决定下一包/队列何时被服务，两者功能不同。",
+          "FIFO按到达顺序；strict priority可减高类时延却可能饿死低类；round robin轮流；WFQ按权重分配。",
+          "RED/WRED等管理策略可在缓冲满前提前丢部分包，以控制拥塞；选法应跟随服务目标与公平要求。"
+        ]
+      }
     },
     {
       "id": "Q60",
@@ -22734,7 +23691,17 @@
       "answer_word_count": 130,
       "priority": "第二轮基础",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "“视频课要达到约定延迟”只有写在纸上还不够，要配置和测量。",
+        "plain": "SLA写服务承诺，policy把业务目标变成网络规则，QoS机制执行，measurement核实。发现不达标时回到需求、配置和路径检查。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "SLA写服务目标和提供方责任，可约定速率、突发、上下行、时延与可用性等条件。",
+          "Policy把组织目标写成资源、访问和优先级规则，QoS机制在设备上执行相关待遇。",
+          "如教学流有约定时延与容量，配置后还要沿路径测量，比较SLA；未达标就回查政策、资源和设备。"
+        ]
+      }
     },
     {
       "display_id": "T142",
@@ -22890,7 +23857,12 @@
         },
         "prompt": {
           "meaning": "说明逐流/聚合机制位置，管理验证与安全处理成本。",
-          "verbs": [],
+          "verbs": [
+            {
+              "word": "explain",
+              "meaning": "解释放置与关系：指出机制、位置、原因及跨组件影响。"
+            }
+          ],
           "targets": [
             "从flow map决定逐流或聚合处理位置",
             "解释细粒度、扩展性与运行成本的内部取舍",
@@ -22949,7 +23921,18 @@
       "priority": "补充练习",
       "week7_preparation": false,
       "new_in_audit": true,
-      "ordinal": 102
+      "ordinal": 102,
+      "beginner": {
+        "start": "在入口丢弃不合规流量，可能保护核心；但入口配置错误也会挡合法业务。",
+        "plain": "Performance机制应放在能识别、控制和测量所需flow的位置；与security、routing和management互相影响。写出放置理由、代价、失效方式和验证。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "机制放置要看需求、flow图、目标和运行环境；靠近接入处可细分流，骨干处可能更适合按类处理。",
+          "内部取舍是细节程度、可扩展性和运维成本；机制要对目标必要且在预期条件下够用。",
+          "Management负责配置和测量却也占用资源；security检查可能增加处理与时延，routing改变路径也会影响效果。",
+          "可给教学流优先级、备份整形，并在关键边界监测；然后用端到端测试检查收益与副作用。"
+        ]
+      }
     },
     {
       "id": "Q61",
@@ -23209,7 +24192,17 @@
       "answer_word_count": 129,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "校方关心教学服务是否正常，工程师还要看到每台设备和接口。",
+        "plain": "管理可从business、service、network、element group到single element分层；FCAPS是故障、配置、计费、性能、安全五类工作。层次说观察范围，FCAPS说工作类型。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "网络管理从business、service、network、element group到individual element逐层细化，分别看预算目标、交付服务、整体网络、设备群和单设备。",
+          "FCAPS是fault、configuration、accounting、performance、security五类管理工作，关注故障、设置、用量、性能和安全。",
+          "管理层级与FCAPS可结合：教学可靠的业务目标要变成服务目标，再落实成网络与设备测量和行动。"
+        ]
+      }
     },
     {
       "id": "Q93",
@@ -23456,7 +24449,17 @@
       "answer_word_count": 136,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "管理员需要向设备询问状态，也会接收设备主动报告异常。",
+        "plain": "SNMP是本课主要管理协议，manager与agent通过MIB对象读写信息、接收通知；CMIP是历史OSI管理协议，CMOT让CMIP跑在TCP/IP上。MIB定义可管理对象，不是日志数据库。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "SNMP让manager从设备agent收集或配置定义好的管理对象，MIB组织对象，trap可主动报告事件；课程重点学SNMP。",
+          "CMIP属OSI管理方法，操作较多但复杂；CMOT是CMIP Over TCP/IP，本课主要作历史背景。",
+          "功能多不自动更合适，还要看任务、设备支持与运维；MIB定义对象，不是保存历史测量的数据库。"
+        ]
+      }
     },
     {
       "id": "Q62",
@@ -23727,7 +24730,17 @@
       "answer_word_count": 135,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "温度计上有可读的刻度，管理系统也需要知道设备有哪些可读对象。",
+        "plain": "Manager发查询或设置请求，agent在设备侧提供MIB对象；polling主动取值，trap主动通知。Counter差值除以时间才得到一段时间内速率，单次值不是速率。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "SNMP管理系统与设备上的agent通信，读取/设置管理信息；agent向管理方呈现设备对象。",
+          "MIB定义对象名称和含义，例如接口计数器；它不是所有历史数据的存储库。",
+          "Manager可主动poll，设备可用trap主动报事件；counter要用两次差值和时间间隔才能推速率。"
+        ]
+      }
     },
     {
       "display_id": "T143",
@@ -23951,7 +24964,17 @@
       "priority": "补充练习",
       "week7_preparation": false,
       "new_in_audit": true,
-      "ordinal": 106
+      "ordinal": 106,
+      "beginner": {
+        "start": "接口累计收到多少字节，与这一秒收到多少速率，是不同读法。",
+        "plain": "MIB-II提供有定义的对象/计数器；选择与目标匹配的对象，记录两次值、时间间隔和单位后计算变化。还须处理回卷、重置和异常，不把累积值当瞬时流量。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "MIB-II不同接口对象计入/出octet、单播/非单播包和错误；octet是8bit，选对对象才能回答目标问题。",
+          "累计counter不是速率；两次octet差×8÷经过秒数才得bit/s，错误率也需匹配的包数分母。",
+          "读取前后检查设备重启、回卷和口径变化，避免把counter变小直接解释为流量下降。"
+        ]
+      }
     },
     {
       "id": "Q63",
@@ -24201,7 +25224,17 @@
       "answer_word_count": 129,
       "priority": "第二轮基础",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "看仪表、安装测量点、修改设备设置，是三种不同管理动作。",
+        "plain": "Monitoring采集、处理、展示和归档状态；instrumentation使设备暴露可观察信息；configuration改变设置。一个能被监测的对象不代表它可远程配置。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Monitoring收集、分析、展示和归档网络表现，可观察事件、趋势、容量或服务。",
+          "Instrumentation提供取得信息的工具和接入，如SNMP、counter、探针、抓包、ping或traceroute。",
+          "Configuration改变实际运行参数，可依据监测结果调整；能观察不代表能配置，改完要再监测。"
+        ]
+      }
     },
     {
       "id": "Q64",
@@ -24437,7 +25470,17 @@
       "answer_word_count": 124,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "报警看眼前是否越界；趋势分析看几周来是否越来越接近极限。",
+        "plain": "Event notification利于快速响应，trend analysis用基线与长期数据规划容量。轮询越密开销越大；长期平均可能掩盖短时故障。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Event notification针对故障或越阈值等短期事件，短暂问题可能需要较密采样或主动告警。",
+          "Trend analysis用持续一致的数据建基线，看利用率、时延和可用性的长期变化，支持容量规划。",
+          "日均值可能藏短故障，零碎警报也看不出增长；轮询越密越及时但流量与处理成本越高。"
+        ]
+      }
     },
     {
       "id": "C17",
@@ -24596,7 +25639,12 @@
       "answer_word_count": 41,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "每台设备每5秒回一次管理消息，设备多了也会占链路。",
+        "plain": "先算一次轮询的请求加回复字节，再乘设备、接口、参数和次数，转bit/s。题给是否含协议开销必须看清，平均负载不能代替突发峰值。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "C18",
@@ -24753,7 +25801,12 @@
       "answer_word_count": 40,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "一分钟存一次测量值与每5秒存一次，年度存储差很多。",
+        "plain": "按记录数×每条存储字节×采样次数求总量；网络传输开销与数据库存储开销要分开。Counter速率需两次采样差值与时间，且检查重置或回卷。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "Q03",
@@ -24949,7 +26002,12 @@
         },
         "prompt": {
           "meaning": "网络管理中的带内与带外方法有什么区别？",
-          "verbs": [],
+          "verbs": [
+            {
+              "word": "compare",
+              "meaning": "比较：看管理路径、成本与故障时可达性。"
+            }
+          ],
           "targets": [
             "先按路径是否与用户共享比较",
             "再按业务网故障时的访问能力比较",
@@ -25007,7 +26065,17 @@
       "answer_word_count": 151,
       "priority": "老师样题",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "网络坏了时，如果管理员也只能靠同一条坏路进入，可能无法维修。",
+        "plain": "In-band管理共用业务路径，省独立网络但受同样故障和拥塞影响；out-of-band另有访问路径，更利于故障恢复但需额外成本与保护。关键点是故障时还能否到达设备。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "In-band管理与普通业务共用网络路径，省独立设施，但同样受拥塞或断网影响，最需要排错时可能进不去。",
+          "Out-of-band提供替代管理路径，可在主业务路径故障时提供观察和恢复，但需额外建设与安全控制。",
+          "它也不能保证所有故障下可用，例如设备完全断电；可日常用带内、关键恢复用替代路径，并测试。"
+        ]
+      }
     },
     {
       "id": "Q67",
@@ -25254,7 +26322,17 @@
       "answer_word_count": 132,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "一人管全校容易统一，但忙或离线会影响大家；分校各自管也要协调。",
+        "plain": "Centralized集中处理，distributed分散本地处理，hierarchical分层汇总与控制。比较响应、规模、故障风险和管理复杂度，不能只说“集中简单”。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Centralized在主要系统汇聚管理和数据，易统一但可能集中流量和故障风险。",
+          "Distributed在多个位置处理本地信息，利于规模与本地响应，但协调和一致性更复杂；hierarchical分层汇总。",
+          "按规模、地点、可靠、人员与成本选择；多校区可本地采集、中心总览，故障时保留本地能力。"
+        ]
+      }
     },
     {
       "id": "Q65",
@@ -25424,7 +26502,12 @@
         },
         "prompt": {
           "meaning": "如何估计与控制管理开销？",
-          "verbs": [],
+          "verbs": [
+            {
+              "word": "estimate",
+              "meaning": "估算：区分网络流量、存储量和峰值。"
+            }
+          ],
           "targets": [
             "用device×interfaces×parameters得到每轮测量数",
             "乘每项wire bytes并除interval求速率",
@@ -25482,7 +26565,17 @@
       "answer_word_count": 133,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "测量多少设备、每台多少参数、每次多大、多久问一次，决定管理流量。",
+        "plain": "平均带宽可按设备×接口×参数×每值字节及开销×8÷轮询周期计算；存储量可不含链路开销。还要查同时轮询时的峰值。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "先数设备、接口、参数、一次值及协议开销和轮询周期；每轮bit数除周期得平均管理带宽。",
+          "Storage另算保存的值、metadata和保留时长，链路协议开销不一定全存入数据库；同步轮询还有峰值。",
+          "课件2–5%与超过10%复查是LAN经验值，不是通用标准；可减不必要参数、调整频率或分布采集。"
+        ]
+      }
     },
     {
       "id": "Q95",
@@ -25699,7 +26792,17 @@
       "answer_word_count": 139,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "只在校园中心测量，可能看不到某教学楼局部故障。",
+        "plain": "先在LAN子网或关键位置设监测点，再看WAN–LAN交界。实际位置按需要的本地与跨站指标、SLA、负载与成本调整；同一监测器可承担多项任务。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "LAN可先以每subnet一个监测点估算，再计算设备、参数、频率带来的负载。",
+          "WAN还要看每个WAN–LAN接口；已有合适监测器可兼任，不必机械重复安装。",
+          "本地与边界数据可比较，以定位问题并验证SLA；实际位置仍需按成本、负载和安全调整。"
+        ]
+      }
     },
     {
       "id": "Q66",
@@ -25944,7 +27047,17 @@
       "answer_word_count": 131,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "一个计数器突然变小，可能是设备重启，也可能是计数回卷，不能马上断言流量减少。",
+        "plain": "Check测量与设备状态，选与目标相关的MIB，记录时间、单位和上下文；短期数据便于排故，长期归档便于趋势分析。管理软件也须符合所需功能。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Checks and balances用复测或独立点比较管理数据，识别记录错、counter回卷、设备或厂商差异。",
+          "短期本地数据有助排故，选取信息做长期归档并保留时间、单位和上下文。",
+          "按任务选MIB：基本健康可用标准对象，特殊服务或厂商功能可能需额外对象；不为“能采到”就存一切。"
+        ]
+      }
     },
     {
       "id": "Q68",
@@ -26191,7 +27304,17 @@
       "answer_word_count": 137,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "监控系统依赖网络连接；安全限制又会决定管理员能访问哪些设备。",
+        "plain": "Management与routing、performance、security互相依赖。管理流量要可达且不压垮业务，访问要受保护；设计要写清双向影响与替代路径。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Management需要可靠路径、容量、存储和设备支持，与OSS对接还需接口与流程。",
+          "Addressing/routing决定管理可达；performance需要监测且也受管理流量影响；security控制管理员访问。",
+          "设计应保证关键管理流既可达又受保护、负载不过大；替代管理路径可帮助主网故障恢复。"
+        ]
+      }
     },
     {
       "id": "Q04",
@@ -26391,10 +27514,6 @@
             {
               "word": "describe",
               "meaning": "描述：列齐要求对象，每项给主要作用；不要只写名称。"
-            },
-            {
-              "word": "design",
-              "meaning": "设计：由需求选择机制、说明位置与关系、提出验证。"
             }
           ],
           "targets": [
@@ -26456,7 +27575,19 @@
       "answer_word_count": 151,
       "priority": "老师样题",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "施工前不能只有一张“设备清单”，还要有图、功能计划和验收证据。",
+        "plain": "五类成果是network blueprints（设备和线缆等位置连接）、component plans（各功能怎么实现）、vendor/equipment/service selections（选哪家与哪种产品服务）、traceability（为什么选，连到哪条需求）、design metrics（如何量成功）。设备购物清单只是其中一部分。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Network blueprints写设备、连接、线缆、位置及相关物理安全，供实施人员建设。",
+          "Component plan写某功能怎样由机制实现，以及内部和外部关系，如安全或管理。",
+          "供应商、设备和服务选择记录具体选项，并与准则和架构相符。",
+          "Traceability把选择连接需求和架构决策，让审核者知道为什么这样选。",
+          "Design metrics写成功如何测量，如容量、时延、可用性；五类合起来比购物清单完整。"
+        ]
+      }
     },
     {
       "id": "Q69",
@@ -26726,7 +27857,17 @@
       "answer_word_count": 136,
       "priority": "第二轮基础",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "买设备时“最便宜”可能缺少支持，“分数最高”也可能不满足硬性条件。",
+        "plain": "先确定目标、必备条件和评价准则，再独立收集资料、打分、加权和比较供应商/设备/服务。分数帮助决策，但不能替代约束和证据检查。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "先从需求和reference architecture设目标、准则及比较规则，再收集候选产品、供应商和服务的证据。",
+          "使用同一评分尺度和按优先级确定权重，可比较成本、技术、性能、风险和扩展性；记录信息来源。",
+          "首选方案还须通过硬性条件并兼顾支持、长期费用和运维，最低购买价不必然最合适。"
+        ]
+      }
     },
     {
       "id": "C19",
@@ -26848,7 +27989,12 @@
         },
         "prompt": {
           "meaning": "使用课件p.18权重、自拟候选分数，计算并检查必备条件。",
-          "verbs": [],
+          "verbs": [
+            {
+              "word": "calculate",
+              "meaning": "计算并判断：加权总分之后检查硬性条件。"
+            }
+          ],
           "targets": [
             "先明确所有原分越高越好",
             "按各项weight×rating逐项求和",
@@ -26907,7 +28053,12 @@
       "answer_word_count": 54,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "两个候选设备各有不同长处，先确定各项重要程度再算总分。",
+        "plain": "每项评分×权重后相加，权重须合适且条件相同。先检查必须条件；若候选不满足核心要求，较高总分也不应直接获选。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "C20",
@@ -27087,7 +28238,12 @@
       "answer_word_count": 55,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "九项评价表中每项权重不同，不能只数“优秀”有几个。",
+        "plain": "逐项评分乘权重求和，再按原表比较候选；核对权重、算术、评分方向与约束。总分只是有记录的取舍依据，不能掩盖硬性不合格项。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "Q70",
@@ -27279,10 +28435,6 @@
             {
               "word": "explain",
               "meaning": "解释：说明是什么、如何/为何产生结果，并保留条件。"
-            },
-            {
-              "word": "design",
-              "meaning": "设计：由需求选择机制、说明位置与关系、提出验证。"
             }
           ],
           "targets": [
@@ -27343,7 +28495,17 @@
       "answer_word_count": 133,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "高速但超预算的方案，与稍慢但满足必要要求的方案，须先判断什么不能让步。",
+        "plain": "Primary criteria是成败必要条件，secondary criteria可权衡；还要检查flowspec、现网、场地、支持能力等约束。先淘汰硬性不合格，再比较可取舍项。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Primary criteria是项目成功必须满足的条件；secondary是可权衡的加分项，冲突时可能让步。",
+          "把目标写成短而具体的容量、时延、RMA或可维护准则，便于评价。",
+          "选技术还受预算、现网与设施限制；flowspec给服务要求，大网络可分区域评价，不能只按一项速度排名。"
+        ]
+      }
     },
     {
       "id": "Q71",
@@ -27511,8 +28673,8 @@
           "meaning": "架构设计应包含哪些概念及技术要素？",
           "verbs": [
             {
-              "word": "design",
-              "meaning": "设计：由需求选择机制、说明位置与关系、提出验证。"
+              "word": "describe",
+              "meaning": "描述：分别说明概念条件与技术要素。"
             }
           ],
           "targets": [
@@ -27573,7 +28735,17 @@
       "answer_word_count": 129,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "设备、链路、接口和服务要一起规划，不能只列一串产品名。",
+        "plain": "Architectural design把业务目标、技术限制和性能风险转成节点、链路、拓扑、协议及服务关系。解释每项怎样支持需求、扩容、管理与简单性。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Architectural design给高层技术、协议、通信能力及网络分段关系，把组织方向连到后续详细设计。",
+          "概念方面考虑业务、扩展、可靠、安全、管理、旧系统兼容、地理、资金、风险、性能与简单性。",
+          "技术方面写node、link、topology、interface、service、protocol和traffic map；需具体到能指导选择，但不等于最终型号/线缆长度清单。"
+        ]
+      }
     },
     {
       "id": "C21",
@@ -27761,7 +28933,12 @@
       "answer_word_count": 53,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "一条100 Mb/s链路的可用规划预算，可能只按一定占用率留余量。",
+        "plain": "按题给60%或80%指导阈值，把所需业务负载除以允许占用率求最低标称容量；阈值是规划指导，不是物理定律或所有应用的统一保证。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "Q72",
@@ -27952,10 +29129,6 @@
             {
               "word": "explain",
               "meaning": "解释：说明是什么、如何/为何产生结果，并保留条件。"
-            },
-            {
-              "word": "design",
-              "meaning": "设计：由需求选择机制、说明位置与关系、提出验证。"
             }
           ],
           "targets": [
@@ -28015,7 +29188,17 @@
       "answer_word_count": 131,
       "priority": "第二轮基础",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "先画谁与谁需要连，再画设备放哪、线怎么走，最后列如何验收。",
+        "plain": "Logical layout说功能与通信关系，physical blueprint说实际位置和连接；traceability把需求、架构、设计选择及metric连成链。成功要用可测指标验证。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Layout结合拓扑、技术、设备、关系和关键位置；逻辑图强调通信与服务关系，物理图强调实际摆放和连接。",
+          "Traceability把问题与需求连到架构和详细选择，留下客观可辩护的证据链。",
+          "Success metrics用容量、时延、RMA以及用户/设备要求检查是否达成目标；没有测量就不能宣称设计成功。"
+        ]
+      }
     },
     {
       "id": "Q07",
@@ -28248,7 +29431,12 @@
         },
         "prompt": {
           "meaning": "SDN有哪些优点？",
-          "verbs": [],
+          "verbs": [
+            {
+              "word": "explain",
+              "meaning": "解释优势：每项优势都联系控制/转发分离的机制和条件。"
+            }
+          ],
           "targets": [
             "先点出自动化、政策一致、协调与灵活性收益",
             "用control/data separation解释收益来源",
@@ -28307,7 +29495,18 @@
       "answer_word_count": 155,
       "priority": "老师样题",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "给每台交换机逐台手改规则很费事；集中可编程控制可更快调整。",
+        "plain": "SDN分开control plane与data plane，软件管理转发规则，可提高自动化和灵活性。但应用需求、控制器可靠性和实际设备能力仍限制收益。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "SDN把控制决策与逐包转发分开，软件控制规则，设备按规则执行，减轻逐台手工改配置。",
+          "可编程接口让应用提出网络需要，支持快速变更、自动化与较一致政策；控制器较广的视图有利于协同资源。",
+          "控制软件和转发设备可较独立演进，便于引入服务和适应变化。",
+          "收益取决于控制器可用、安全、规模和接口兼容；逻辑集中不等于只有一台物理控制器，SDN也不自动更快更安全。"
+        ]
+      }
     },
     {
       "id": "Q73",
@@ -28579,7 +29778,17 @@
       "answer_word_count": 132,
       "priority": "第二轮基础",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "餐厅顾客提出需求、经理决定安排、服务员按安排执行。",
+        "plain": "SDN application plane表达服务意图，control plane计算政策和规则，data plane匹配并转发packet。三个plane是职责划分，不一定三台物理机器。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Application plane放网络应用与服务意图，control plane负责政策和规则，data plane执行转发。",
+          "一个或多个controller维护基础设施视图、作决策并给转发设备编程，data plane依据规则匹配packet。",
+          "例如应用提出教学流优先请求，控制器转为规则，交换机逐包执行；分层使职责清楚，但仍须验证通信与控制可靠性。"
+        ]
+      }
     },
     {
       "id": "Q74",
@@ -28836,7 +30045,17 @@
       "answer_word_count": 127,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "应用向控制器提要求，与控制器向交换机下规则，用的接口方向不同。",
+        "plain": "Northbound连接应用和控制，southbound连接控制与转发设备，east-west连接控制器之间。OpenFlow是一种southbound协议，不等于整个SDN。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Northbound连接应用与controller，使应用表达需求和读取网络信息；southbound连接controller与转发设备落实决策。",
+          "East–west连接分布式controller之间；OpenFlow只是southbound协议之一，不等于SDN所有接口。",
+          "交换机按flow table匹配并执行转发或丢弃；是否联系controller取决于已有规则与配置，接口还要考虑安全、规模与兼容。"
+        ]
+      }
     },
     {
       "display_id": "T144",
@@ -29052,7 +30271,17 @@
       "priority": "补充练习",
       "week7_preparation": false,
       "new_in_audit": true,
-      "ordinal": 128
+      "ordinal": 128,
+      "beginner": {
+        "start": "交换机收到一个packet时，先拿它与表里的匹配条件比较，再按动作处理。",
+        "plain": "OpenFlow flow table条目包含match、actions及相关统计/优先级等字段；命中后执行指定动作，未命中按设备规则处理。控制器可更新规则，但每包处理仍发生在数据设备。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "OpenFlow表条目有header fields作匹配条件、counters记流量统计、actions规定匹配后怎样处理。",
+          "Packet到达时查已装规则；匹配的转发规则可在设备本地执行，非每包都送controller。",
+          "无匹配时按table-miss及版本配置处理，可送controller也可丢弃；还要考虑表容量、控制器负载、安全与故障。"
+        ]
+      }
     },
     {
       "id": "Q75",
@@ -29299,7 +30528,17 @@
       "answer_word_count": 130,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "集中控制方便改配置，但如果控制器不可用或规则不同步，会出现新风险。",
+        "plain": "SDN部署须检查接口兼容、控制器安全与规模、分布式一致性、QoS及旧网迁移。先试点、测量和准备恢复路径，不能把“可编程”直接等同“可靠”。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "SDN能统一控制与编程，但controller及接口成为关键部分；故障或通信中断会影响新规则和观察。",
+          "规模取决于控制负载、状态采集、flow table和分布控制器协调；多控制器增加韧性也增加一致性工作。",
+          "部署应测试设备支持、政策、管理和故障恢复，比较收益与成本；“可编程”不等于自动可靠。"
+        ]
+      }
     },
     {
       "id": "Q76",
@@ -29487,7 +30726,12 @@
         },
         "prompt": {
           "meaning": "解释SD-WAN及其收益条件。",
-          "verbs": [],
+          "verbs": [
+            {
+              "word": "define",
+              "meaning": "定义并评价：说明SD-WAN及收益成立的条件。"
+            }
+          ],
           "targets": [
             "定义SD-WAN面向广域网的软件管理",
             "列应用体验、安全管理、云连接和简化收益",
@@ -29545,7 +30789,17 @@
       "answer_word_count": 135,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "多校区访问云服务时，可用软件更灵活地管理广域连接。",
+        "plain": "SD-WAN按应用和政策管理WAN路径，可改善部署与观察，但仍依赖真实链路容量、故障和安全配置。软件不会消除底层物理限制。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "SD-WAN用软件方法管理相隔较远的WAN连接，如多校区或办公室之间。",
+          "它可改善政策一致性、应用对现有路径的使用、云连接与管理效率，也可结合安全功能。",
+          "底层链路容量、时延、丢失和可用性仍存在，安全、监测、控制器韧性与成本要检查。"
+        ]
+      }
     },
     {
       "id": "Q77",
@@ -29801,7 +31055,17 @@
       "answer_word_count": 129,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "大量网络日志可帮助识别拥塞；可编程网络也能支持大量数据搬运。",
+        "plain": "Big Data常用五个V描述规模与特征；SDN可调度数据流，数据分析可反馈路由、安全和资源安排。两方向都须考虑容量、数据质量与隐私。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Big Data的五V是量、种类、速度、价值和可信程度，帮助说明数据特点。",
+          "SDN的广域视图、可编程控制和动态重配可帮助大量数据的运输与资源协调。",
+          "反过来，分析网络数据可帮助流量工程、跨层决策、安全检测与数据中心运行；但数据质量、控制器规模和规则更新仍是限制。"
+        ]
+      }
     },
     {
       "id": "Q78",
@@ -30038,7 +31302,17 @@
       "answer_word_count": 134,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "把同一配置手敲一百次容易出错，自动化可重复执行并留记录。",
+        "plain": "Network automation可辅助配置、测试、部署和运行，减少重复操作；错误脚本也会大范围传播，所以要先验证、分批实施、监测与回退。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "Network automation用软件处理配置、管理、测试、部署与运行等重复任务，可结合SDN或其他工具。",
+          "自动化能减少手敲错误和不一致，让变化更快、规模更大，但也需要可靠输入和统一政策。",
+          "错误脚本也会把同一错误推广到很多设备；应控制权限、先测试、分批实施、监测并能回退。"
+        ]
+      }
     },
     {
       "id": "Q79",
@@ -30294,7 +31568,17 @@
       "answer_word_count": 126,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "原本一台专用盒子才能做的网络功能，可改由软件运行在通用资源上。",
+        "plain": "NFV把网络功能从专有硬件解耦；基础设施提供计算/存储/网络资源，VNF实现功能，MANO负责管理编排。仍需性能、可靠性和运维规划。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "NFV把防火墙等网络功能作为软件运行在共享通用基础设施，而非每处都要一台专用盒子。",
+          "NFVI提供计算、存储、网络和虚拟化资源；VNF实现具体功能；MANO负责部署、生命周期与资源编排。",
+          "软件化增加放置与扩缩灵活性，但共享竞争、性能、隔离和故障仍须测试。"
+        ]
+      }
     },
     {
       "id": "Q80",
@@ -30549,7 +31833,17 @@
       "answer_word_count": 138,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "改变“谁决定转发规则”和改变“功能跑在哪种硬件上”，是两个不同问题。",
+        "plain": "SDN分离控制与转发；NFV把网络功能软件化并与专用盒子分离。二者可组合，但都不是对方的必要定义。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "SDN分开控制决策与数据转发；NFV把功能从专用实体设备移到软件与通用资源。",
+          "前者更关注流量如何受控和连接，后者更关注防火墙等功能如何实现与放置；二者不同。",
+          "可用NFV部署虚拟防火墙、SDN按政策引导流量经过它；MANO管功能生命周期，组合仍需验证容量与安全。"
+        ]
+      }
     },
     {
       "id": "Q81",
@@ -30805,7 +32099,17 @@
       "answer_word_count": 137,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "识别异常流量可用写死的规则，也可让系统从数据中学习模式。",
+        "plain": "AI是更广的智能方法，ML是从数据学习的一部分，DL是多层表示学习的一类ML。有监督用标签，无监督找结构，强化学习按奖励改行为；DL仍需数据、目标与评价。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "AI是更大的智能任务领域，ML从数据/经验学模式，DL是用多层神经网络的ML一类。",
+          "监督学习有标签，可做分类或数值回归；无监督从无目标标签数据找结构；强化学习在动作与奖励反馈中学习。",
+          "攻击标签可用于分类，流量数据可用于预测，网络环境反馈可用于资源控制；方法必须匹配任务、数据和限制，名称叫AI不保证效果。"
+        ]
+      }
     },
     {
       "id": "Q82",
@@ -31042,7 +32346,17 @@
       "answer_word_count": 135,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "模型在旧流量上表现好，不保证在新校区流量上也正确。",
+        "plain": "ML workflow要收集和清理数据、训练、评估、部署与持续监测；可用于路由、安全和QoS。偏差、隐私、算力、解释性与环境变化都可能限制效果。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。",
+        "paragraph_cn": [
+          "ML先准备合适历史数据，建模、评价和优化要反复进行，之后才在新数据上预测并继续监测。",
+          "可用于流量/链路预测、入侵检测、路由辅助、QoS和资源分配，任务与数据须匹配。",
+          "算力、数据缺乏与隐私、类别不平衡及真实场景测试都会限制结果；旧数据高分不等于新网络可用。"
+        ]
+      }
     },
     {
       "id": "E01",
@@ -31617,10 +32931,6 @@
               "meaning": "讨论：覆盖不同方面并建立联系，最后给有条件的判断。"
             },
             {
-              "word": "design",
-              "meaning": "设计：由需求选择机制、说明位置与关系、提出验证。"
-            },
-            {
               "word": "give",
               "meaning": "列出：逐项给所需结果，按题干数量和格式作答。"
             }
@@ -31785,7 +33095,12 @@
       "answer_word_count": 974,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "学校需要保护成绩、课堂与研究数据；先决定哪项损害最严重，再选控制。",
+        "plain": "Essay先解释security/privacy与业务目标，再用asset→threat→likelihood/impact→priority→control→review推理。三个例子分别写资产、威胁、后果、措施与验证；未知概率不能编造。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "E02",
@@ -32712,10 +34027,6 @@
             {
               "word": "explain",
               "meaning": "解释：说明是什么、如何/为何产生结果，并保留条件。"
-            },
-            {
-              "word": "design",
-              "meaning": "设计：由需求选择机制、说明位置与关系、提出验证。"
             }
           ],
           "targets": [
@@ -32873,7 +34184,12 @@
       "answer_word_count": 1027,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "“学校要扩校区”要从战略目标一路走到可建设、可验收的网络。",
+        "plain": "Essay按规划→需求→flow→架构→方案评价→实施验证写因果链。用同一多校区案例贯穿，写出每一步的产物如何成为下一步输入，遇到约束如何回头修订。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "E03",
@@ -33976,7 +35292,12 @@
       "answer_word_count": 1044,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "在线课堂、交易和备份共用链路；三者不能一律按同样优先级处理。",
+        "plain": "Essay先定义各应用指标和flow，再做flowspec、QoS与资源控制，写SLA和端到端验证。解释为何备份可移时、互动流怕时延、交易怕失败，并说明保障的边界。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "E04",
@@ -35003,7 +36324,12 @@
       "answer_word_count": 1028,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "多校区网络长大后，地址乱分会让路由、维护和扩容都变难。",
+        "plain": "Essay先规划连续可扩展地址与subnet，再定AS/区域/边界和协议；比较静态与动态、IGP与BGP等选择。用增长和故障场景检查聚合、可达性与取舍。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "E05",
@@ -35976,7 +37302,12 @@
       "answer_word_count": 1017,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "管理员要在校园网络故障时仍能找到原因并进入关键设备。",
+        "plain": "Essay从管理目标与FCAPS出发，选监测点、SNMP/MIB数据、轮询周期、存储和集中/分布组织；估算负载并设计out-of-band恢复访问。每个选择用故障场景验证。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "E06",
@@ -37108,7 +38439,12 @@
       "answer_word_count": 1039,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "一张总图须同时说明连接结构、谁与谁通信、安全和管理如何协同。",
+        "plain": "Essay先解释拓扑、flow和functional模型，再把组件内部取舍与跨组件依赖放进reference architecture。用校园例子追踪一个服务，说明冲突、约束和验证。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "E07",
@@ -37964,10 +39300,6 @@
             {
               "word": "evaluate",
               "meaning": "评价：收益、代价、依赖、限制与场景结论缺一不可。"
-            },
-            {
-              "word": "design",
-              "meaning": "设计：由需求选择机制、说明位置与关系、提出验证。"
             }
           ],
           "targets": [
@@ -38126,7 +39458,12 @@
       "answer_word_count": 1021,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "“新技术”不是一张万能清单；每项解决的具体问题不同。",
+        "plain": "Essay分别写SDN控制与转发、SD-WAN广域连接、NFV软件功能、automation重复操作、ML数据学习。比较收益、依赖与限制，最后按组织需求给有条件的组合建议。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     },
     {
       "id": "E08",
@@ -39142,7 +40479,12 @@
       "answer_word_count": 1055,
       "priority": "补充练习",
       "week7_preparation": false,
-      "new_in_audit": false
+      "new_in_audit": false,
+      "beginner": {
+        "start": "选方案要能说明为什么合适，还要让别人有材料实施并测量成败。",
+        "plain": "Essay先定primary/secondary准则与约束，再用证据评价候选；交付蓝图、组件计划等，建立需求→设计→指标traceability。最后说明如何验收、维护与复评。",
+        "label": "AI编写的零基础引入与中文解题要点，非官方评分标准。"
+      }
     }
   ],
   "themes": [
@@ -39933,5 +41275,6 @@
   },
   "guidance_version": "2026-11-04 · 144题逐题学习版",
   "answer_colors_version": "2026-11-04 · 144题逐题学习版",
-  "lesson_version": "2026-11-04 · 144题逐题学习版"
+  "lesson_version": "2026-11-04 · 144题逐题学习版",
+  "beginner_version": "2026-11-16 · 144题零基础中英教学版"
 }

@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "question_count": 144,
+  "teaching_pages": 144,
+  "themes": 38,
+  "short_answer_paragraphs_aligned": 342,
+  "lecture_source_links_checked": 184,
+  "workshop_source_links_checked": 2,
+  "essay_sections_aligned": 73,
+  "original_answer_fixes": [
+    "T067",
+    "T069",
+    "T070",
+    "T074",
+    "T077"
+  ],
+  "prompt_or_wording_fixes": [
+    "T001",
+    "T048"
+  ],
+  "limitations": "Source links and page bounds are checked; semantic judgments use the supplied course materials and prior errata. No claim of official marking approval or future exam coverage."
+}
