@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "assertions": 3994,
+  "question_count": 144,
+  "original_calculations_checked": 23,
+  "all_calculation_variations_checked": 24,
+  "answer_colour_blocks_checked": 209,
+  "local_markdown_links_checked": 796,
+  "expanded_numerical_answers": [
+    "C01",
+    "C02",
+    "C04",
+    "C06",
+    "C08",
+    "C11",
+    "C20"
+  ],
+  "intentional_essay_change": "T124 privacy scope",
+  "numeric_policy": "independent ipaddress and arithmetic, not generated-answer snapshots",
+  "version": "2026-11-17 · 筛检与深入解析版",
+  "screening": {
+    "primary": 77,
+    "companion": 60,
+    "essay_transfer": 7
+  },
+  "deep_explanations": 144,
+  "essay_paragraphs": 73,
+  "unique_questions": 144,
+  "source_scope": "Existing course materials and targeted rechecks; not a new exhaustive page-by-page audit."
+}

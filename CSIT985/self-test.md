@@ -162,7 +162,7 @@ Explain MUST, MUST NOT, SHOULD, SHOULD NOT and MAY. How does the course relate t
 
 ## T023 · 分类、Type、Status 与 Priority 的案例
 
-Classify a mandatory access-control requirement, an optional dashboard, a next-year campus expansion, an unsupported request and a user-count statement. Distinguish type, status and priority.
+Classify a mandatory access-control requirement, an optional dashboard, a next-year campus expansion, a request formally rejected after analysis and a user-count statement. Distinguish type, status and priority.
 
 [回看解析](review-bank.html#T023)
 
@@ -654,13 +654,13 @@ Compare event notification with trend analysis and explain polling trade-offs.
 
 ## T097 · Polling 带宽
 
-For 100 devices, 4 interfaces each and 8 parameters per interface, each value is 8 bytes with 60 bytes of overhead. Poll every 5 seconds. Find average traffic.
+For 100 devices, 4 interfaces each and 8 parameters per interface, each value is 8 bytes and, for this exercise, incurs its own 60 bytes of transmission overhead. Poll every 5 seconds. Find average traffic.
 
 [回看解析](review-bank.html#T097)
 
 ## T098 · 存储量与counter速率
 
-Using C17, store only the 8-byte values. Find daily storage. Separately, a byte counter rises from 1,000,000 to 1,750,000 in 10 s; find the rate.
+Using T097 (100 devices, 4 interfaces per device, 8 parameters per interface, polled every 5 seconds), store only the 8-byte values. Find daily storage. Separately, a byte counter rises from 1,000,000 to 1,750,000 in 10 s; find the rate.
 
 [回看解析](review-bank.html#T098)
 

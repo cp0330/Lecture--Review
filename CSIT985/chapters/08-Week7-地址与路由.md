@@ -550,7 +550,7 @@ Find all subnet details for 192.168.10.77/27. Is 192.168.10.96 in the same subne
 
 ### 精简参考答案
 
-192.168.10.77/27 belongs to 192.168.10.64/27. Its broadcast is 192.168.10.95 and its usable range is .65–.94. Address .96 begins the next subnet, so it is not in the same subnet and is not an ordinary host address there.
+The /27 mask is 255.255.255.224, leaving 5 host bits. There are 32 addresses and 30 ordinary usable hosts per subnet. 192.168.10.77/27 belongs to 192.168.10.64/27. Its broadcast address is 192.168.10.95 and its usable range is 192.168.10.65–192.168.10.94. Address 192.168.10.96 begins the next /27 subnet, so it is not in the same subnet and is not an ordinary host address there.
 
 ### 逐步解法
 

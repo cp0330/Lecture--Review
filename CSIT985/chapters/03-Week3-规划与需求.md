@@ -264,7 +264,7 @@ X支持……，因为……；但不保证……。 because后解释机制；ho
 
 ## T023 · 分类、Type、Status 与 Priority 的案例
 
-Classify a mandatory access-control requirement, an optional dashboard, a next-year campus expansion, an unsupported request and a user-count statement. Distinguish type, status and priority.
+Classify a mandatory access-control requirement, an optional dashboard, a next-year campus expansion, a request formally rejected after analysis and a user-count statement. Distinguish type, status and priority.
 
 给五项陈述分类，再解释规格表三个字段。
 
