@@ -1,34 +1,31 @@
-# CSIT882 · Exam Practice
+# CSIT882 考试题库工作台
 
-[打开题库](https://cp0330.github.io/Lecture--Review/CSIT882/)
+围绕Assignment 1–4、三份Mock及Normalization进行复习。界面和讲解以中文为主；保留英文原题、英文专业术语和SQL。公开版样例身份、联系值和密码已经匿名化，题意和条件保留。原始材料及私人学习记录不上传。
 
-题目保留英文，优先用课程资料中的原文；公开版样例身份、联系方式和密码已统一匿名化，见[说明](privacy.md)。解析使用中文，专业术语、表名、列名和SQL保留英文。按小题展开步骤，先自己作答，再对照解析。
+[打开工作台](./index.html) · [覆盖矩阵](./coverage.md) · [审查报告](./audit-2026-11-18.md) · [验证记录](./validation.md) · [复习顺序](./study-order.md)
 
-- **54个来源任务块，48个去重题目组，158个小题**。三套模拟全部保留；收到的Mock 3与Mock 1重复。
-- Assignment 1–4共11个Task；16组原范围补充题；本次新增L01–L09课件补充。
-- [六个范围及对应练习](coverage.md)：Conceptual、Logical、Normalization、SELECT、DDL/DML、Access control。
-- [核查与勘误](audit.md) · [验证及限制](validation.md) · [资料来源](sources.md)。
-- Auditing和Concurrency按原模拟扩展保留；alternate generalization methods与decomposition按方法补强标明，不声称老师保证会以独立题出现。
+## 从哪里开始
 
-## 使用
+1. **考试题库**：默认显示23组去重原题。按来源可查看29个原始题号，包括完整的Mock 3。
+2. **引导学习**：选一个小题，依次读英文、中文翻译、任务、必需规则、步骤、参考答案、自检点和常见错误。
+3. **Normalization**：先做A4-T4的四道原题；七步推理和closure表可逐项核对。
+4. **独立练习**：答案默认隐藏，可写多行SQL、分级看提示、保存多轮作答、自评及重练错题。保存或看过答案不会自动变成已掌握。
+5. **模拟考试**：Mock 1–3保留原顺序；Custom Mock另加Normalization，明确标为非教师原卷。默认180分钟，可修改。正式延期考试的新规则未提供，以学校通知为准。
 
-1. 从左侧选择一个题目组，在Question阅读英文题面。需要SQL schema时点击“查看表结构 / 数据”。
-2. 在“我的作答”先完成。草稿自动保存在当前浏览器；跨设备用JSON导出/导入。同题导入保留较新时间记录。
-3. 在“详细解析”选择小题，逐步核对；“参考答案”提供完整SQL、schema或conceptual schema。
-4. “已独立作答”只是个人记录，不表示系统判定正确或已掌握。旧版同浏览器的记录键继续沿用。
+辅助／归档入口保留24组C级内容，其中9组默认归档；它们不进入主要刷题列表。3组B级必要变式可在优先级筛选中打开。
 
-一次只显示一道题；键盘可切换tabs；原题图和完整conceptual schema可放大；手机可展开筛选；打印本题仅输出英文题面及所需schema，不打印答案。答题数据不上传服务器。
+## 草稿和历史
 
-也可下载[英文题目](questions.md)、[解析全文](answers.md)或index.html。页面无远程脚本依赖；下载离线时请同时保留assets目录中的原题图。
+旧版题号与浏览器记录键保留，升级时建立新版记录并保留迁移前备份。旧“已做”只迁移为历史勾选，不等于掌握。草稿按小题保存，多小题旧稿作为整题原文保留，不擅自拆分。重复原题共享最新掌握自评，作答原稿各自保存。
 
-## 数据与重建
+记录仅保存在当前浏览器。换设备前用“记录备份”导出；导入按时间合并，冲突旧稿和未知题号继续保留。浏览器禁用保存或空间不足时会显示提醒，可导出本页内存记录。新版JSON不可解析时，不覆盖原数据。
 
-bank.json是题目、答案、小题步骤、考点与勘误的结构化源文件。app.js与study.css是界面源码。index.html为预渲染发布结果。
+## 文件和技术
 
-```sh
-npm install
-npm run build
-npm test
-```
+- `bank.json`是全部模式共用的数据源，含完整英文原题、中文翻译、答案、步骤、来源、标签和覆盖关系。
+- `index.html`为自包含页面，图和辅助资源位于`assets/`；静态图形预先渲染，无浏览器远程依赖。
+- 原有Vanilla JS、CSS、JSON及浏览器localStorage沿用；新增纯状态模块`core.js`，未更换技术栈。
+- 可直接打开`index.html`；在线版建议使用同一浏览器持续学习。无JavaScript时可读[题目](./questions.md)和[解析](./answers.md)。
+- 构建：`npm install`后`npm run build`。验证：`npm test`（需要Python 3及SQLite）。构建依赖沿用marked与Viz，不添加运行时框架。
 
-构建需要Node.js与Python 3；marked 17.0.5和@viz-js/viz 3.25.0版本已固定。也可用CSIT882_NODE_MODULES指定已安装依赖的目录。测试只用临时内存数据库，不连接已有业务库。MySQL专属DDL、权限、审计和并发的验证边界见validation.md。
+本站为学习工具。浏览器没有连接MySQL，静态提示不提供精确评分；不同正确SQL写法不按参考答案字符串判错。来源、歧义、执行范围见验证记录。学习材料不等于已获准在正式考试中使用。

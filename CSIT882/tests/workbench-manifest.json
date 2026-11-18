@@ -1,0 +1,781 @@
+{
+  "version": "2026-11-18-workbench-v2",
+  "questions": [
+    {
+      "id": "M1-Q1",
+      "source": "mock-1",
+      "origin": "Official Mock Exam",
+      "level": "A",
+      "parts": [
+        "1"
+      ],
+      "english_sha256": "743fc03b716f4fc53cba4faa9ce83a13ca2afc5478592b6c092439b5d70b7810",
+      "related": [
+        "M3-Q1"
+      ]
+    },
+    {
+      "id": "M1-Q2",
+      "source": "mock-1",
+      "origin": "Official Mock Exam",
+      "level": "A",
+      "parts": [
+        "1"
+      ],
+      "english_sha256": "cbfb66ca841b18d158e1c7be1de6f33281b222d389f1fefa665f39cf8ec82e45",
+      "related": [
+        "M3-Q2"
+      ]
+    },
+    {
+      "id": "M1-Q3",
+      "source": "mock-1",
+      "origin": "Official Mock Exam",
+      "level": "A",
+      "parts": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "english_sha256": "0ae24d70f46572ed6d4732c100b2b782f11c269c4df2fb6da7096aaee5f34afe",
+      "related": [
+        "M3-Q3"
+      ]
+    },
+    {
+      "id": "M1-Q4",
+      "source": "mock-1",
+      "origin": "Official Mock Exam",
+      "level": "A",
+      "parts": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "english_sha256": "c5422e13fce357b0eacc4189bfb0ce2de74db20ff9be33e78fbeac85de6617ca",
+      "related": [
+        "M3-Q4"
+      ]
+    },
+    {
+      "id": "M1-Q5",
+      "source": "mock-1",
+      "origin": "Official Mock Exam",
+      "level": "A",
+      "parts": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "english_sha256": "d4501eec38467e2f2a35d16dc6edd4bf81d3c43c96e5436cbf8d014c62c4d569",
+      "related": [
+        "M3-Q5"
+      ]
+    },
+    {
+      "id": "M1-Q6",
+      "source": "mock-1",
+      "origin": "Official Mock Exam",
+      "level": "A",
+      "parts": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "english_sha256": "b2fa90427d5a488d7c82582dcc6f7937f58b7bcb2f5f1448a64db9bc680cb312",
+      "related": [
+        "M3-Q6"
+      ]
+    },
+    {
+      "id": "M2-Q1",
+      "source": "mock-2",
+      "origin": "Official Mock Exam",
+      "level": "A",
+      "parts": [
+        "1"
+      ],
+      "english_sha256": "00f8758946ed2ef39bb56ecd2c8d9899d433d8dbc4712d3e2e075fe44476718b",
+      "related": []
+    },
+    {
+      "id": "M2-Q2",
+      "source": "mock-2",
+      "origin": "Official Mock Exam",
+      "level": "A",
+      "parts": [
+        "1"
+      ],
+      "english_sha256": "6e3c15dd5f4d65e013207371c883c1329df4c986c661ded539faad36561deaad",
+      "related": []
+    },
+    {
+      "id": "M2-Q3",
+      "source": "mock-2",
+      "origin": "Official Mock Exam",
+      "level": "A",
+      "parts": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "english_sha256": "a8731cda91ea546c008dc1f985dd84429a791de7fdd929e97a4a5bdf1a303e9e",
+      "related": []
+    },
+    {
+      "id": "M2-Q4",
+      "source": "mock-2",
+      "origin": "Official Mock Exam",
+      "level": "A",
+      "parts": [
+        "1"
+      ],
+      "english_sha256": "58381a7adc97a8f49747c9fc7663a7bc2fff1e2efd39cb412a44e2226c72d390",
+      "related": []
+    },
+    {
+      "id": "M2-Q5",
+      "source": "mock-2",
+      "origin": "Official Mock Exam",
+      "level": "A",
+      "parts": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "english_sha256": "4728556a300fe020a41847afaf5e676a1293593e7aba161e7712ae570f4b7572",
+      "related": []
+    },
+    {
+      "id": "M2-Q6",
+      "source": "mock-2",
+      "origin": "Official Mock Exam",
+      "level": "A",
+      "parts": [
+        "1",
+        "2"
+      ],
+      "english_sha256": "dc9bc27cc6eab38164a789533dab3fa34b056ac4ce77d824e7836193f2576622",
+      "related": []
+    },
+    {
+      "id": "M3-Q1",
+      "source": "mock-3",
+      "origin": "Official Mock Exam",
+      "level": "A",
+      "parts": [
+        "1"
+      ],
+      "english_sha256": "743fc03b716f4fc53cba4faa9ce83a13ca2afc5478592b6c092439b5d70b7810",
+      "related": [
+        "M1-Q1"
+      ]
+    },
+    {
+      "id": "M3-Q2",
+      "source": "mock-3",
+      "origin": "Official Mock Exam",
+      "level": "A",
+      "parts": [
+        "1"
+      ],
+      "english_sha256": "1c3d98e27e5750423b82c0658a69717b15bd83106c709405f6476aa5bc9781ee",
+      "related": [
+        "M1-Q2"
+      ]
+    },
+    {
+      "id": "M3-Q3",
+      "source": "mock-3",
+      "origin": "Official Mock Exam",
+      "level": "A",
+      "parts": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "english_sha256": "0ae24d70f46572ed6d4732c100b2b782f11c269c4df2fb6da7096aaee5f34afe",
+      "related": [
+        "M1-Q3"
+      ]
+    },
+    {
+      "id": "M3-Q4",
+      "source": "mock-3",
+      "origin": "Official Mock Exam",
+      "level": "A",
+      "parts": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "english_sha256": "c5422e13fce357b0eacc4189bfb0ce2de74db20ff9be33e78fbeac85de6617ca",
+      "related": [
+        "M1-Q4"
+      ]
+    },
+    {
+      "id": "M3-Q5",
+      "source": "mock-3",
+      "origin": "Official Mock Exam",
+      "level": "A",
+      "parts": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "english_sha256": "d4501eec38467e2f2a35d16dc6edd4bf81d3c43c96e5436cbf8d014c62c4d569",
+      "related": [
+        "M1-Q5"
+      ]
+    },
+    {
+      "id": "M3-Q6",
+      "source": "mock-3",
+      "origin": "Official Mock Exam",
+      "level": "A",
+      "parts": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "english_sha256": "b2fa90427d5a488d7c82582dcc6f7937f58b7bcb2f5f1448a64db9bc680cb312",
+      "related": [
+        "M1-Q6"
+      ]
+    },
+    {
+      "id": "A1-T1",
+      "source": "assignment-1",
+      "origin": "Official Assignment",
+      "level": "A",
+      "parts": [
+        "1"
+      ],
+      "english_sha256": "5f0e7bc800faf1ae8c05a3f5364588ee6d94237d8e35b17cc20900663124626a",
+      "related": []
+    },
+    {
+      "id": "A1-T2",
+      "source": "assignment-1",
+      "origin": "Official Assignment",
+      "level": "A",
+      "parts": [
+        "1"
+      ],
+      "english_sha256": "6b697115c18c5477f021573e9c72aa61e210414f2882b7b6e0dd0ce5c78967cc",
+      "related": []
+    },
+    {
+      "id": "A2-T1",
+      "source": "assignment-2",
+      "origin": "Official Assignment",
+      "level": "A",
+      "parts": [
+        "1",
+        "2"
+      ],
+      "english_sha256": "22147dc55db33abed6f1a1c86f3b59e2704231365b9315e2c524211dfbdfac86",
+      "related": []
+    },
+    {
+      "id": "A2-T2",
+      "source": "assignment-2",
+      "origin": "Official Assignment",
+      "level": "A",
+      "parts": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "english_sha256": "070be4fd620da2fd693fdebfc0c948880962072d43ccb7464a896011a20223ba",
+      "related": []
+    },
+    {
+      "id": "A3-T1",
+      "source": "assignment-3",
+      "origin": "Official Assignment",
+      "level": "A",
+      "parts": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "english_sha256": "a5aedb8b7705a23f0e43980a12712d71b59bbee9bbe684bfa9d1ac8692f6b5db",
+      "related": []
+    },
+    {
+      "id": "A3-T2",
+      "source": "assignment-3",
+      "origin": "Official Assignment",
+      "level": "A",
+      "parts": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "english_sha256": "532a61b8792fc0e662852914a51a9ab111b0e0be8c70061bf541aef514399fb2",
+      "related": []
+    },
+    {
+      "id": "A3-T3",
+      "source": "assignment-3",
+      "origin": "Official Assignment",
+      "level": "A",
+      "parts": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "english_sha256": "04204a72fd6b9c93ac499541e7584a17edb888e7f597caaa61db9ad2f5c0e63e",
+      "related": []
+    },
+    {
+      "id": "A4-T1",
+      "source": "assignment-4",
+      "origin": "Official Assignment",
+      "level": "A",
+      "parts": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "english_sha256": "44d578704ea457eccc4722ee9f530c351466ca85767afd80e2faa5361ce9a42f",
+      "related": []
+    },
+    {
+      "id": "A4-T2",
+      "source": "assignment-4",
+      "origin": "Official Assignment",
+      "level": "A",
+      "parts": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "english_sha256": "2c762fd44f68122dd99346801f09164629c5e53a1f0181f66eb330713fa7d565",
+      "related": []
+    },
+    {
+      "id": "A4-T3",
+      "source": "assignment-4",
+      "origin": "Official Assignment",
+      "level": "A",
+      "parts": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "english_sha256": "101df6439da4af611db5f8f8b8fccb34bda15fa335b10b42177723e29f82416e",
+      "related": []
+    },
+    {
+      "id": "A4-T4",
+      "source": "assignment-4",
+      "origin": "Official Assignment",
+      "level": "A",
+      "parts": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "english_sha256": "96130392061e497346a03b573ba9022d9492a62cb903aa9d069d8cecd12ccfd0",
+      "related": []
+    },
+    {
+      "id": "S01",
+      "source": "supplement",
+      "origin": "Supplementary Practice",
+      "level": "C",
+      "parts": [
+        "1"
+      ],
+      "english_sha256": "e373f8bcdeed28b1c87c55848add7aa05f6ad6678a7737489b29d7a95a594d02",
+      "related": []
+    },
+    {
+      "id": "S02",
+      "source": "supplement",
+      "origin": "Supplementary Practice",
+      "level": "C",
+      "parts": [
+        "1",
+        "2",
+        "3"
+      ],
+      "english_sha256": "dbcb3efb3ce8028c47452dd482f1e828eb6446cef39d2bec7e480d234819c6e4",
+      "related": []
+    },
+    {
+      "id": "S03",
+      "source": "supplement",
+      "origin": "Supplementary Practice",
+      "level": "C",
+      "parts": [
+        "1",
+        "2"
+      ],
+      "english_sha256": "e74ebe7ed50cc9afb1c1dd6c7e4f3904d31dad0ff6d8ef3c36dcc0f8850e03b8",
+      "related": []
+    },
+    {
+      "id": "S04",
+      "source": "supplement",
+      "origin": "Supplementary Practice",
+      "level": "C",
+      "parts": [
+        "1",
+        "2",
+        "3"
+      ],
+      "english_sha256": "8f1dbc86004431403ef8d804606a7c278ffd86524942cd7c45e48b39b3307833",
+      "related": []
+    },
+    {
+      "id": "S05",
+      "source": "supplement",
+      "origin": "Supplementary Practice",
+      "level": "C",
+      "parts": [
+        "1",
+        "2",
+        "3"
+      ],
+      "english_sha256": "3efa2d5d105aebc20bd299a40d81c6332041071a936b02a8532d143f12c62294",
+      "related": []
+    },
+    {
+      "id": "S06",
+      "source": "supplement",
+      "origin": "Supplementary Practice",
+      "level": "C",
+      "parts": [
+        "1",
+        "2",
+        "3"
+      ],
+      "english_sha256": "c5ca078e4c93f319ac9152f1e4b7af76ce91fe4c4f97b9b59fd4e008df95c3b5",
+      "related": []
+    },
+    {
+      "id": "S07",
+      "source": "supplement",
+      "origin": "AI-generated Variant",
+      "level": "B",
+      "parts": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "english_sha256": "a252720d997cd8a1ce9b9a2d2047fabcad13a46ec9b2b4f21728782cc82ffaa8",
+      "related": [
+        "A4-T4"
+      ]
+    },
+    {
+      "id": "S08",
+      "source": "supplement",
+      "origin": "Supplementary Practice",
+      "level": "C",
+      "parts": [
+        "1",
+        "2",
+        "3"
+      ],
+      "english_sha256": "9602014dcf06288a10b04f3b09a3f5e62c28fb0a926fa5da887d3cb1ccbd3744",
+      "related": []
+    },
+    {
+      "id": "S09",
+      "source": "supplement",
+      "origin": "Supplementary Practice",
+      "level": "C",
+      "parts": [
+        "1",
+        "2",
+        "3"
+      ],
+      "english_sha256": "52d18a5bae9ed7549e9aafd87dcbb0fe517102a220ff972e731428c8cbdec098",
+      "related": []
+    },
+    {
+      "id": "S10",
+      "source": "supplement",
+      "origin": "Supplementary Practice",
+      "level": "C",
+      "parts": [
+        "1",
+        "2",
+        "3"
+      ],
+      "english_sha256": "7f4f728c330e190e7c855de3399bbe6403ac62d40701d823dc6301d0d884faa4",
+      "related": []
+    },
+    {
+      "id": "S11",
+      "source": "supplement",
+      "origin": "Supplementary Practice",
+      "level": "C",
+      "parts": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "english_sha256": "26bd83e5af9f13063eba85fef588a5237e453664bba1318aeafeadecbe583ac6",
+      "related": []
+    },
+    {
+      "id": "S12",
+      "source": "supplement",
+      "origin": "Supplementary Practice",
+      "level": "C",
+      "parts": [
+        "1",
+        "2",
+        "3"
+      ],
+      "english_sha256": "3624cacb7198cc3d3c954170a5a4aeeaa1664a37f5c6eb60fd3fadb10fc65148",
+      "related": []
+    },
+    {
+      "id": "S13",
+      "source": "supplement",
+      "origin": "Supplementary Practice",
+      "level": "C",
+      "parts": [
+        "1",
+        "2"
+      ],
+      "english_sha256": "41d55b19b3a4d3eacad7bb2c44c41c9679de93b3d2ac02c46c4fd2a0276c0f88",
+      "related": []
+    },
+    {
+      "id": "S14",
+      "source": "supplement",
+      "origin": "Supplementary Practice",
+      "level": "C",
+      "parts": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "english_sha256": "a9d8eed0b657aeafffc262fdee99471e9f5aab527dc241dc6b0d37f0b9ec8453",
+      "related": []
+    },
+    {
+      "id": "S15",
+      "source": "supplement",
+      "origin": "Supplementary Practice",
+      "level": "C",
+      "parts": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "english_sha256": "67e661c84dfa01e7498e659523a238619601c9234459e1c55792eb156901532f",
+      "related": []
+    },
+    {
+      "id": "S16",
+      "source": "supplement",
+      "origin": "Supplementary Practice",
+      "level": "C",
+      "parts": [
+        "1",
+        "2",
+        "3"
+      ],
+      "english_sha256": "0c44a4562c4dc7ccc2792da7f84394f6eb127c48f2b0c9ae1766a39510b38032",
+      "related": []
+    },
+    {
+      "id": "L01",
+      "source": "lecture-select",
+      "origin": "Supplementary Practice",
+      "level": "C",
+      "parts": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "english_sha256": "d69ea1990ccba12f5ab0e192d1a3a98f9210f6ebb5fddf96f0f70ce89b277af1",
+      "related": []
+    },
+    {
+      "id": "L02",
+      "source": "lecture-select",
+      "origin": "Supplementary Practice",
+      "level": "C",
+      "parts": [
+        "1",
+        "2"
+      ],
+      "english_sha256": "13ef6640ea5e32d96c7d718d0f89eca84a05a45a8f3337db8c89eebf4e0eefd5",
+      "related": []
+    },
+    {
+      "id": "L03",
+      "source": "lecture-select",
+      "origin": "Supplementary Practice",
+      "level": "C",
+      "parts": [
+        "1"
+      ],
+      "english_sha256": "21f7de64d45154d6a87971193a80c4d37976d83fd2b6d88a82d0d669009843b8",
+      "related": []
+    },
+    {
+      "id": "L04",
+      "source": "lecture-ddl",
+      "origin": "Supplementary Practice",
+      "level": "C",
+      "parts": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "english_sha256": "71767bb40ad539599123b24e82f0706e632237d2b6cb8c251e35d837c5cf48ac",
+      "related": []
+    },
+    {
+      "id": "L05",
+      "source": "lecture-logical",
+      "origin": "Supplementary Practice",
+      "level": "C",
+      "parts": [
+        "1",
+        "2",
+        "3"
+      ],
+      "english_sha256": "56e59d803b2d2f62ed7d26b643a76b1d2e9dab3ca15b71872e2fe7274d0125a2",
+      "related": []
+    },
+    {
+      "id": "L06",
+      "source": "lecture-access",
+      "origin": "Supplementary Practice",
+      "level": "C",
+      "parts": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "english_sha256": "f87785013b87c223744d9aa7dc21ff0d44ff95c20091df6fdd424b4a1e6dc19a",
+      "related": []
+    },
+    {
+      "id": "L07",
+      "source": "lecture-normalization",
+      "origin": "Supplementary Practice",
+      "level": "C",
+      "parts": [
+        "1",
+        "2",
+        "3"
+      ],
+      "english_sha256": "1cc1c54a9e4947944c2ab0321d8ac408a0ebbccafaab37aba4fafce7c68283e9",
+      "related": []
+    },
+    {
+      "id": "L08",
+      "source": "lecture-select",
+      "origin": "Supplementary Practice",
+      "level": "C",
+      "parts": [
+        "1",
+        "2",
+        "3"
+      ],
+      "english_sha256": "c84c3109828d04fc96cdb69b4a09aa6987fa1d078b491073a57d4e70462766b1",
+      "related": []
+    },
+    {
+      "id": "L09",
+      "source": "lecture-select",
+      "origin": "Supplementary Practice",
+      "level": "C",
+      "parts": [
+        "1",
+        "2",
+        "3"
+      ],
+      "english_sha256": "81ae0c73736c4b52982da3b403e6cae2c84d4901bec1208b12762e5a3bc06949",
+      "related": []
+    },
+    {
+      "id": "V01",
+      "source": "supplement",
+      "origin": "AI-generated Variant",
+      "level": "B",
+      "parts": [
+        "1",
+        "2",
+        "3"
+      ],
+      "english_sha256": "dbfaf87899d362263f832f517bfe0b3b0e736589dbed3471c7688cc8bdca7a9d",
+      "related": [
+        "A4-T1"
+      ]
+    },
+    {
+      "id": "V02",
+      "source": "supplement",
+      "origin": "AI-generated Variant",
+      "level": "B",
+      "parts": [
+        "1",
+        "2",
+        "3"
+      ],
+      "english_sha256": "46cd7d99b2ae3890fc72bdd3bd06a05e71eea78cded866f8eef2dca32b997b32",
+      "related": [
+        "A3-T2",
+        "A3-T3"
+      ]
+    }
+  ]
+}

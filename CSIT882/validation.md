@@ -1,16 +1,32 @@
-# 验证与限制 · 2026-11-04
+# 验证记录 · 2026-11-18
 
-题库内容、题目来源、答案逻辑和界面分别核对。[公开版匿名化说明](privacy.md)。以下记录不代表用户已完成练习或掌握知识。
+## 自动检查
 
-- **来源保留**：对照修订前题库逐项比较23个去重原题组（Mock 1–2与Assignment 1–4）。原英文条件保留，样例身份、联系值和密码按公开版要求匿名化，图片路径改为相对路径。五张原图按字节比较一致；Mock 1和Mock 3的服务图相同。六个Mock 3重复入口保留。见[source manifest](tests/source-manifest.json)。
-- **内容完整性**：54个来源任务块，48个去重题目组，158个小题；全部非重复题均有目标、至少三步推理、完成后核对及易错点。49项范围映射涵盖老师列出的六个广义范围。原题歧义、标识假设、最低参与数量及SQL方言限制单独说明。
-- **查询与数据操作**：内存SQLite执行并记录48项查询结果。用结构、NULL位置和数值保持一致的匿名化作业数据核对A3/A4，用独立边界数据验证NULL、空集合、同名/同号不同银行、年界、并列最大值、零报名、取消报名、join放大、foreign key、CASCADE及子表先删除。日期函数使用明确的方言适配；动态日期按数据库时区核对。见[可复跑测试](tests/validate.py)及[执行记录](tests/results.json)。
-- **Normalization**：穷举14组FD问题的全部最小keys及F⁺中的normal form条件；给课件p9、p11、p15的有损分解建立投影/join反例，并核对修正分解保留原配对。
-- **UI状态**：29项最小DOM环境检查覆盖旧草稿迁移、筛选、深链接、tabs、输入保存、重复来源跳转、导入合并、保存失败时保留内存草稿、手机筛选面板保持展开，以及生成页面的JavaScript语法。见[UI测试](tests/app.test.mjs)与[结果](tests/ui-results.json)。
-- **图示**：八张参考conceptual schema预渲染为SVG；包含attributes、identifiers、multiplicities，医院图标明qualifiers，self-association包含role names。四个不同的原题图保持不变。
+- `tests/validate.py`：内容、来源指纹、图片、ID、小题号、分类、覆盖和SQL逻辑检查；最新实际数量见`tests/results.json`。
+- `tests/app.test.mjs`：记录迁移／安全合并、草稿、多轮练习、自评、隐藏答案、筛选、归档、Mock顺序、暂停恢复、试用与异常保存检查；结果见`tests/ui-results.json`。
+- 构建完成56组185小题，预渲染12个答案图。3个内嵌脚本语法正确；浏览器没有加载远程脚本或字体。
+- 23组不同的原题英文指纹及5张原题图片保留原核对证据；Mock 3展开为与Mock 1相同的完整题面，原图对应文件保留。
+- 14组范式用例经过独立枚举检验；A4-T4和S07额外核对128行全部closure表。全部candidate keys、prime属性、2NF／3NF／BCNF判断一致。
+- 54组查询结果记录在JSON中；并检查NULL、零匹配、同号不同bank、日期半开区间、最高等级并列、100次边界以及外键依赖下的数据变化。
 
-MySQL专属DDL、账户、GRANT/REVOKE、日志及并发语句依据课程资料和[官方文档](sources.md)静态核对。本机MySQL 26.7在初始化独立临时实例时发生SIGSEGV，未连接或修改已有数据库。因此没有宣称全套SQL已在MySQL执行通过；SQLite结果不能替代该证明。并发题明确区分显式事务、默认autocommit、Oracle模型和MySQL同表子查询限制。
+## 数据库执行边界
 
-已在发布后的HTTPS页面验证：英文题面加载、Normalization小题切换、详细解析、草稿刷新后恢复、原题图放大、医院图的attributes/qualifiers，以及390px手机布局。手机筛选输入引起面板过早收起的问题已修正并加入回归检查。见[线上检查记录](tests/browser-results.json)。浏览器曾拒绝本机file预览，未使用其他本地访问方式绕过限制。
+本轮尝试在新建临时目录启动隔离MySQL 26.7测试实例，初始化因SIGSEGV失败。没有连接、更改或重置任何已有数据库。
 
-复跑：安装package.json中固定版本依赖后，执行`npm run build`、`npm test`。测试仅使用临时内存数据，不连接已有数据库。
+可执行的SELECT、View、DML及部分通用DDL在SQLite内存数据库和原样例数据上核对。MySQL日期函数等少量表达式使用明确的适配；这能验证相关输出／数据变化，不能充当MySQL语法执行证书。
+
+MySQL专有ALTER、SOURCE、账号权限、general_log审计和并发隔离语句经过静态及文档复核，未在MySQL执行。每个核心小题的参考答案显示其验证状态。浏览器练习不连接数据库；“静态自检”只指出常见风险，不宣称语法通过或结果正确。
+
+MySQL原始同表子查询UPDATE及事务边界问题均在Mock 2 Q6保留说明。并发题按显式事务、可执行等价语句及所述引擎给出条件结论，不省略假设。
+
+参考官方文档：[Subquery restrictions](https://dev.mysql.com/doc/refman/8.4/en/subquery-restrictions.html)、[GRANT](https://dev.mysql.com/doc/refman/8.4/en/grant.html)、[InnoDB isolation](https://dev.mysql.com/doc/refman/8.4/en/innodb-transaction-isolation-levels.html)。
+
+## 浏览器实测
+
+自动事件回归已通过；真实HTTPS页面的视觉和交互验收在发布后另记于`tests/browser-results.json`。旧浏览器记录注明旧版本，不能代替本轮新功能验收。
+
+## 来源与数据保护
+
+Assignment 1–4题页及随附参考已读。Mock原始PDF、独立评分表及新的延期考试特别规则未提供，只能核对转发材料。所有参考的具体假设见覆盖矩阵和题目讲解，不虚构官方分值。
+
+本地修改前已备份题库和发布源；旧浏览器记录键不覆盖。原有答案、未知题号和不同草稿保留。旧勾选不等于掌握；试用模拟不计入学习记录。公开版仅发布匿名学习内容，不发布私人学习档案、答题卡或浏览器记录。

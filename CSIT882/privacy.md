@@ -1,3 +1,5 @@
+> 历史记录（2026-11-04）。本轮2026-11-18的数量、范围和功能以[审查报告](./audit-2026-11-18.md)、[覆盖矩阵](./coverage.md)和[验证记录](./validation.md)为准。
+
 # 公开版匿名化说明
 
 按用户要求，公开版统一替换了教学样例中的人名、电话、邮箱和密码字面值。姓名改为PARTICIPANT_02、TRAINER_01、STAFF_50等示例代号；联系方式改为PHONE_TOKEN或EMAIL_TOKEN；密码改为[CHOOSE_PASSWORD]等占位文本。

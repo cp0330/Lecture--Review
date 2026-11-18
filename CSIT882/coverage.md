@@ -1,57 +1,84 @@
-# 考点核查
+# 考试范围—题库覆盖关系
 
-依据：21Review.pdf p10、Week13 transcript、三套模拟题及Assignment 1–4。六个广义范围不等于固定题序、分值或每类恰好一大题。
+统计单位是“来源题组”和“小题”；重复来源仍分别保留。A29组含100个来源小题；其中去重后23组、79小题。B3组10小题；C24组75小题。总计56组185小题。
 
-| 范围 | 考点 | 对应题目 | 资料依据 |
-| --- | --- | --- | --- |
-| Conceptual | Classes, attributes and identifiers | M1-Q1, M2-Q1, A1-T1, A1-T2 | Object Data Model pp8–15; A1 pp3–4 |
-| Conceptual | Composite and alternative identifiers | M1-Q1, M2-Q1, S02 | Mock1 Q1 employee/name combination; Mock2 Q1 hospital identifiers |
-| Conceptual | Multiplicities and role directions | M1-Q1, A1-T2, L09 | Object Data Model associations; A1 p4 |
-| Conceptual | Multivalued, optional and derived attributes | M2-Q1, S01, S06 | Object Data Model pp9–15; hospital model |
-| Conceptual | Association attributes and repeated events | M2-Q1, S01, S03 | Hospital admission; flight role; Logical Design pp10–12 |
-| Conceptual | Local identifiers and qualifiers | M2-Q1, S02, S03 | Hospital buildings/decks/employees; Logical Design pp15–16 |
-| Conceptual | Generalization and subtype properties | M1-Q1, A1-T2, S04 | Object Data Model; A1 student subtypes |
-| Conceptual | Self-association and role names | L09 | SELECT Statement (3) pp24–31, model instruction added |
-| Logical | Primary, candidate and composite foreign keys | M1-Q2, M2-Q2, A2-T1 | Logical Design pp17–19,28–29,42–43 |
-| Logical | Multivalued attribute transformation | M2-Q2, A2-T1, S03 | Logical Design pp6–9 |
-| Logical | Many-to-many and association attributes | M1-Q2, M2-Q2, A2-T1 | Logical Design pp10–14 |
-| Logical | Qualified association transformation | M1-Q2, M2-Q2, A2-T1 | Logical Design pp15–16 |
-| Logical | One-to-one merge and nullable identifiers | A2-T1, S04 | Logical Design pp20–21; course-style CK convention distinguished |
-| Logical | Superset method | M1-Q2, M2-Q2, A2-T1, S04, L05 | Logical Design pp22–23; required explicitly by original tasks |
-| Logical | Subset and association methods（方法补强） | L05 | Logical Design pp24–27; compare methods only when asked |
-| Logical | Parent-before-child and classroom schema format | M1-Q2, M2-Q2, A2-T1 | Logical Design pp42–43; Week13 |
-| Normalization | Functional dependencies and attribute closure | S05, A4-T4, L07 | lecture B 05–06; A4 Task4 |
-| Normalization | All minimal keys and prime attributes | A4-T4, S07, S08, S09, L07 | A4 Task4; lecture B 06,08–09 |
-| Normalization | 1NF and repeating groups | S06 | lecture B 07 pp3–4 |
-| Normalization | Full and partial dependency; 2NF | A4-T4, S07, S09, L07 | lecture B 07 pp6–15 |
-| Normalization | 3NF versus BCNF with justification | A4-T4, S08, L07 | lecture B 08–09; Review p10; Week13 |
-| Normalization | Lossless decomposition and dependency preservation（方法补强） | S10, L07 | lecture B 09; extra method depth, not promised exam part |
-| SELECT | Projection, filters, Boolean conditions and sorting | M1-Q3, A3-T2, S11 | SELECT (1)–(2); A3 Task2 |
-| SELECT | NULL, empty strings and three-valued logic | M2-Q3, S11, L03 | SELECT (2) pp21–22; SELECT (5) p10 |
-| SELECT | Row functions, strings, arithmetic and dates | S11, L01 | SELECT (1) pp19,24; trip date update |
-| SELECT | COUNT, SUM, AVG and MAX | A3-T2, A3-T3, A4-T1, L01 | SELECT (1) p21; A3/A4 |
-| SELECT | GROUP BY and HAVING | M1-Q3, A3-T2, A3-T3 | SELECT (2) pp27–34 |
-| SELECT | JOIN and LEFT/RIGHT/FULL OUTER JOIN | A3-T3, M2-Q3, L08 | SELECT (3)–(4), including p18; MySQL full-join emulation |
-| SELECT | Self-join and alias roles | S12, L09 | SELECT (3) pp24–31 |
-| SELECT | UNION, duplicates, intersection and difference | M1-Q3, S12, L02 | SELECT (2) pp11–14 |
-| SELECT | Nested queries, EXISTS and anti-joins | M1-Q3, A4-T1, L03 | SELECT (5); A4 Task1 |
-| SELECT | Correlated queries, ties and universal conditions | A4-T1, S13 | SELECT (5); A4 Task1(4)–(5) |
-| SELECT | CTE and derived tables | A4-T2, S13 | Views pp3–17; A4 Task2(1) |
-| SELECT | View dependencies and drop order | A4-T2 | Views pp18–25; A4 Task2(2) |
-| SELECT | Independent counts without join multiplication | S13, A3-T3 | A3 Task3; aggregation grain check |
-| DDL/DML | CREATE TABLE and suitable types | A2-T2, A3-T1, M1-Q4 | DDL pp5–14; A2 Task2 |
-| DDL/DML | CHECK, UNIQUE, NOT NULL and numeric capacity | A2-T2, A3-T1, S14 | DDL pp7–14; A3 Task1 |
-| DDL/DML | ALTER add/drop/modify/rename and constraints | A3-T1, L04 | DDL pp20–26 |
-| DDL/DML | INSERT, UPDATE, DELETE and parent/child order | M1-Q4, A2-T2, A3-T1 | DML pp5–17; A2/A3 |
-| DDL/DML | CTAS and INSERT SELECT | M1-Q6, A4-T2, S14 | Advanced DDL/DML pp6–10 |
-| DDL/DML | Subquery-driven UPDATE and DELETE | M2-Q3, A4-T2 | Advanced DDL/DML pp12–17 |
-| DDL/DML | Referential actions CASCADE | L04 | DDL p13; DML p17 |
-| DDL/DML | TRUNCATE, COMMIT, ROLLBACK and implicit commit | M1-Q6, S14, L04 | Advanced DDL/DML pp3–4; Data Integrity |
-| Access | CREATE/ALTER/DROP USER and database management | M1-Q5, M2-Q5, L06 | Discretionary Access Control pp3–6 |
-| Access | Database/table/column scopes and GRANT OPTION | M1-Q5, M2-Q5, A4-T3 | Discretionary Access Control pp13–21 |
-| Access | Roles, activation, inheritance and ADMIN OPTION | S15, L06 | Discretionary Access Control pp23–25; MySQL role semantics |
-| Access | REVOKE and multiple effective privilege sources | S16, L06 | Discretionary Access Control p13; additive privilege levels |
-| Access | Views for restricted rows/columns and summaries | M1-Q5, M2-Q5, A4-T3 | Discretionary Access Control; original view tasks |
-| Extension | Statement auditing and concurrency conditions | M2-Q4, M2-Q6 | Original Mock2 Q4/Q6; outside the six independently named final topics |
+| 材料 | 题组 | 小题 | 状态 | 依据／缺口 |
+|---|---:|---:|---|---|
+| Assignment 1 | 2 | 2 | 已覆盖 | 原PDF全部Task页已读；安装／提交说明保留在原PDF，不当作额外考题。 |
+| Assignment 2 | 2 | 7 | 已覆盖 | 原PDF全部Task页已读；安装／提交说明保留在原PDF，不当作额外考题。 |
+| Assignment 3 | 3 | 15 | 已覆盖 | 原PDF全部Task页已读；安装／提交说明保留在原PDF，不当作额外考题。 |
+| Assignment 4 | 4 | 19 | 已覆盖 | 原PDF全部Task页已读；安装／提交说明保留在原PDF，不当作额外考题。 |
+| Mock Examination 1 | 6 | 21 | 已覆盖 | 按转发文字、图及现存原文核对；Mock原始PDF和独立评分表未提供。 |
+| Mock Examination 2 | 6 | 15 | 已覆盖 | 按转发文字、图及现存原文核对；Mock原始PDF和独立评分表未提供。 |
+| Mock Examination 3 | 6 | 21 | 已覆盖 | 按转发文字、图及现存原文核对；Mock原始PDF和独立评分表未提供。 |
 
-原始模拟没有Normalization，现由A4-T4、S05–S10和L07覆盖。Mock 1和收到的Mock 3重复，仍保留全部来源。Auditing、Concurrency按扩展保留；其他generalization methods和decomposition不冒充必出的独立小题。
+## 逐题对应矩阵
+
+Original Question链接指向[questions.md](./questions.md)中的完整英文题面；全部原文及完整字段同时存在于`bank.json.coverage`，没有补造缺失教师原题。每题的中文翻译与详细教学在工作台同一题号下。
+
+| Source／Original Question | Topic／Question Type | Required Skills | Related Questions | Exam Relevance | Coverage Status |
+|---|---|---|---|---|---|
+| Mock Examination 1 / [M1-Q1](./questions.md#m1-q1) | Conceptual modelling · 概念图； | Class / attribute / 对象类别与属性；Identifier / 唯一标识；Multiplicity / 关联两端的数量范围；Many-to-many / association attribute / 多对多与关联属性；Generalization / inheritance / 泛化与继承；Multivalued / optional / derived / 多值、可选与可计算属性 | M3-Q1 | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Mock Examination 1 / [M1-Q2](./questions.md#m1-q2) | Logical design · 关系模式； | Primary / candidate / foreign key / 主键、候选键与外键；Qualified association / 用局部值限定的关联；Many-to-many / association attribute / 多对多与关联属性；Superset method / 超集法实现泛化 | M3-Q2 | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Mock Examination 1 / [M1-Q3](./questions.md#m1-q3) | SQL Fundamentals · 基础查询；Joins · 连接与零匹配, Nested queries · 嵌套查询, Aggregate queries · 分组统计 | SELECT / projection / 选择输出列；WHERE / predicate / 逐行筛选条件；BETWEEN / date range / 区间筛选；JOIN / join condition / 连接及连接条件；Nested query / 嵌套查询；EXISTS / NOT EXISTS / 存在与不存在；COUNT / grain / 计数与计数单位；GROUP BY / aggregate / 分组与聚合；UNION / UNION ALL / 合并结果集；DISTINCT / 删除重复结果行 | M3-Q3 | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Mock Examination 1 / [M1-Q4](./questions.md#m1-q4) | DDL / DML · 结构与数据操作； | Primary / candidate / foreign key / 主键、候选键与外键；CHECK / UNIQUE / NOT NULL / 值限制、唯一与必填；DECIMAL(p,s) / 精确数值的位数；WHERE / predicate / 逐行筛选条件；INSERT / UPDATE / DELETE / 增加、修改和删除行 | M3-Q4 | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Mock Examination 1 / [M1-Q5](./questions.md#m1-q5) | Access control · 权限； | CREATE USER / account host / 创建用户及主机范围；USE / SOURCE / client commands / 选库与处理SQL脚本；GRANT / privilege scope / 授予权限与对象范围；WITH GRANT OPTION / 权限转授；INSERT / UPDATE / DELETE / 增加、修改和删除行；SELECT / projection / 选择输出列；JOIN / join condition / 连接及连接条件；COUNT / grain / 计数与计数单位；View / dependency / 视图与依赖；SQL SECURITY DEFINER / 由视图定义者权限读取底表；LEFT JOIN / 保留左侧未匹配行的连接；GROUP BY / aggregate / 分组与聚合 | M3-Q5 | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Mock Examination 1 / [M1-Q6](./questions.md#m1-q6) | DDL / DML · 结构与数据操作； | SELECT / projection / 选择输出列；COUNT / grain / 计数与计数单位；GROUP BY / aggregate / 分组与聚合；HAVING / 聚合后的筛选；Primary / candidate / foreign key / 主键、候选键与外键；CHECK / UNIQUE / NOT NULL / 值限制、唯一与必填；CONCAT / column alias / 合成姓名与输出列别名；COMMIT / ROLLBACK / 提交与回滚；ALTER TABLE / 修改表结构；INSERT / UPDATE / DELETE / 增加、修改和删除行 | M3-Q6 | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Mock Examination 2 / [M2-Q1](./questions.md#m2-q1) | Conceptual modelling · 概念图； | Class / attribute / 对象类别与属性；Identifier / 唯一标识；Multiplicity / 关联两端的数量范围；Many-to-many / association attribute / 多对多与关联属性；Generalization / inheritance / 泛化与继承；Multivalued / optional / derived / 多值、可选与可计算属性；Qualified association / 用局部值限定的关联 | — | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Mock Examination 2 / [M2-Q2](./questions.md#m2-q2) | Logical design · 关系模式； | Primary / candidate / foreign key / 主键、候选键与外键；Qualified association / 用局部值限定的关联；Many-to-many / association attribute / 多对多与关联属性；Superset method / 超集法实现泛化；Multivalued / optional / derived / 多值、可选与可计算属性 | — | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Mock Examination 2 / [M2-Q3](./questions.md#m2-q3) | Joins · 连接与零匹配；Nested queries · 嵌套查询, DDL / DML · 结构与数据操作 | SELECT / projection / 选择输出列；JOIN / join condition / 连接及连接条件；COUNT / grain / 计数与计数单位；LEFT JOIN / 保留左侧未匹配行的连接；GROUP BY / aggregate / 分组与聚合；WHERE / predicate / 逐行筛选条件；Nested query / 嵌套查询；EXISTS / NOT EXISTS / 存在与不存在；NULL / IS NULL / 未知值及空值判断；INSERT / UPDATE / DELETE / 增加、修改和删除行；ALTER TABLE / 修改表结构；DECIMAL(p,s) / 精确数值的位数；CHECK / UNIQUE / NOT NULL / 值限制、唯一与必填；Primary / candidate / foreign key / 主键、候选键与外键 | — | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Mock Examination 2 / [M2-Q4](./questions.md#m2-q4) | Auditing · 审计原题； | Statement auditing / 语句活动审计；GRANT / privilege scope / 授予权限与对象范围；SELECT / projection / 选择输出列；WHERE / predicate / 逐行筛选条件；INSERT / UPDATE / DELETE / 增加、修改和删除行；Primary / candidate / foreign key / 主键、候选键与外键；ORDER BY / 结果排序；CHECK / UNIQUE / NOT NULL / 值限制、唯一与必填 | — | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Mock Examination 2 / [M2-Q5](./questions.md#m2-q5) | Access control · 权限； | USE / SOURCE / client commands / 选库与处理SQL脚本；CREATE USER / account host / 创建用户及主机范围；GRANT / privilege scope / 授予权限与对象范围；WITH GRANT OPTION / 权限转授；View / dependency / 视图与依赖；SQL SECURITY DEFINER / 由视图定义者权限读取底表；SELECT / projection / 选择输出列；WHERE / predicate / 逐行筛选条件 | — | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Mock Examination 2 / [M2-Q6](./questions.md#m2-q6) | Transactions · 并发原题； | Isolation level / row lock / 隔离级别与行锁；COMMIT / ROLLBACK / 提交与回滚；WHERE / predicate / 逐行筛选条件；INSERT / UPDATE / DELETE / 增加、修改和删除行；JOIN / join condition / 连接及连接条件 | — | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Mock Examination 3 / [M3-Q1](./questions.md#m3-q1) | Conceptual modelling · 概念图； | Class / attribute / 对象类别与属性；Identifier / 唯一标识；Multiplicity / 关联两端的数量范围；Many-to-many / association attribute / 多对多与关联属性；Generalization / inheritance / 泛化与继承；Multivalued / optional / derived / 多值、可选与可计算属性 | M1-Q1 | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Mock Examination 3 / [M3-Q2](./questions.md#m3-q2) | Logical design · 关系模式； | Primary / candidate / foreign key / 主键、候选键与外键；Qualified association / 用局部值限定的关联；Many-to-many / association attribute / 多对多与关联属性；Superset method / 超集法实现泛化 | M1-Q2 | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Mock Examination 3 / [M3-Q3](./questions.md#m3-q3) | SQL Fundamentals · 基础查询；Joins · 连接与零匹配, Nested queries · 嵌套查询, Aggregate queries · 分组统计 | SELECT / projection / 选择输出列；WHERE / predicate / 逐行筛选条件；BETWEEN / date range / 区间筛选；JOIN / join condition / 连接及连接条件；Nested query / 嵌套查询；EXISTS / NOT EXISTS / 存在与不存在；COUNT / grain / 计数与计数单位；GROUP BY / aggregate / 分组与聚合；UNION / UNION ALL / 合并结果集；DISTINCT / 删除重复结果行 | M1-Q3 | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Mock Examination 3 / [M3-Q4](./questions.md#m3-q4) | DDL / DML · 结构与数据操作； | Primary / candidate / foreign key / 主键、候选键与外键；CHECK / UNIQUE / NOT NULL / 值限制、唯一与必填；DECIMAL(p,s) / 精确数值的位数；WHERE / predicate / 逐行筛选条件；INSERT / UPDATE / DELETE / 增加、修改和删除行 | M1-Q4 | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Mock Examination 3 / [M3-Q5](./questions.md#m3-q5) | Access control · 权限； | CREATE USER / account host / 创建用户及主机范围；USE / SOURCE / client commands / 选库与处理SQL脚本；GRANT / privilege scope / 授予权限与对象范围；WITH GRANT OPTION / 权限转授；INSERT / UPDATE / DELETE / 增加、修改和删除行；SELECT / projection / 选择输出列；JOIN / join condition / 连接及连接条件；COUNT / grain / 计数与计数单位；View / dependency / 视图与依赖；SQL SECURITY DEFINER / 由视图定义者权限读取底表；LEFT JOIN / 保留左侧未匹配行的连接；GROUP BY / aggregate / 分组与聚合 | M1-Q5 | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Mock Examination 3 / [M3-Q6](./questions.md#m3-q6) | DDL / DML · 结构与数据操作； | SELECT / projection / 选择输出列；COUNT / grain / 计数与计数单位；GROUP BY / aggregate / 分组与聚合；HAVING / 聚合后的筛选；Primary / candidate / foreign key / 主键、候选键与外键；CHECK / UNIQUE / NOT NULL / 值限制、唯一与必填；CONCAT / column alias / 合成姓名与输出列别名；COMMIT / ROLLBACK / 提交与回滚；ALTER TABLE / 修改表结构；INSERT / UPDATE / DELETE / 增加、修改和删除行 | M1-Q6 | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Assignment 1 / [A1-T1](./questions.md#a1-t1) | Conceptual modelling · 概念图； | Class / attribute / 对象类别与属性；Identifier / 唯一标识；Multiplicity / 关联两端的数量范围；Many-to-many / association attribute / 多对多与关联属性 | — | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Assignment 1 / [A1-T2](./questions.md#a1-t2) | Conceptual modelling · 概念图； | Class / attribute / 对象类别与属性；Identifier / 唯一标识；Multiplicity / 关联两端的数量范围；Many-to-many / association attribute / 多对多与关联属性；Generalization / inheritance / 泛化与继承 | — | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Assignment 2 / [A2-T1](./questions.md#a2-t1) | Logical design · 关系模式； | Primary / candidate / foreign key / 主键、候选键与外键；Qualified association / 用局部值限定的关联；Many-to-many / association attribute / 多对多与关联属性；Superset method / 超集法实现泛化；Multivalued / optional / derived / 多值、可选与可计算属性 | — | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Assignment 2 / [A2-T2](./questions.md#a2-t2) | DDL / DML · 结构与数据操作； | Primary / candidate / foreign key / 主键、候选键与外键；CHECK / UNIQUE / NOT NULL / 值限制、唯一与必填；DECIMAL(p,s) / 精确数值的位数；ALTER TABLE / 修改表结构；INSERT / UPDATE / DELETE / 增加、修改和删除行；WHERE / predicate / 逐行筛选条件；JOIN / join condition / 连接及连接条件 | — | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Assignment 3 / [A3-T1](./questions.md#a3-t1) | DDL / DML · 结构与数据操作； | ALTER TABLE / 修改表结构；DECIMAL(p,s) / 精确数值的位数；CHECK / UNIQUE / NOT NULL / 值限制、唯一与必填；INSERT / UPDATE / DELETE / 增加、修改和删除行；WHERE / predicate / 逐行筛选条件；Primary / candidate / foreign key / 主键、候选键与外键 | — | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Assignment 3 / [A3-T2](./questions.md#a3-t2) | SQL Fundamentals · 基础查询；Aggregate queries · 分组统计 | SELECT / projection / 选择输出列；WHERE / predicate / 逐行筛选条件；BETWEEN / date range / 区间筛选；CONCAT / column alias / 合成姓名与输出列别名；COUNT / grain / 计数与计数单位；GROUP BY / aggregate / 分组与聚合；HAVING / 聚合后的筛选；ORDER BY / 结果排序；AVG / MAX / SUM / 对选定行计算统计值 | — | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Assignment 3 / [A3-T3](./questions.md#a3-t3) | Joins · 连接与零匹配；Aggregate queries · 分组统计 | SELECT / projection / 选择输出列；JOIN / join condition / 连接及连接条件；COUNT / grain / 计数与计数单位；CONCAT / column alias / 合成姓名与输出列别名；GROUP BY / aggregate / 分组与聚合；HAVING / 聚合后的筛选；ORDER BY / 结果排序；WHERE / predicate / 逐行筛选条件；LEFT JOIN / 保留左侧未匹配行的连接；NULL / IS NULL / 未知值及空值判断 | — | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Assignment 4 / [A4-T1](./questions.md#a4-t1) | Nested queries · 嵌套查询；Correlated queries · 相关子查询 | SELECT / projection / 选择输出列；WHERE / predicate / 逐行筛选条件；AVG / MAX / SUM / 对选定行计算统计值；Nested query / 嵌套查询；CONCAT / column alias / 合成姓名与输出列别名；COUNT / grain / 计数与计数单位；GROUP BY / aggregate / 分组与聚合；HAVING / 聚合后的筛选；JOIN / join condition / 连接及连接条件；MAX / ties / 最大值与并列；Correlated subquery / 相关子查询；ORDER BY / 结果排序；EXISTS / NOT EXISTS / 存在与不存在 | — | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Assignment 4 / [A4-T2](./questions.md#a4-t2) | WITH / CTE · 命名中间结果；Views · 视图, DDL / DML · 结构与数据操作 | SELECT / projection / 选择输出列；WHERE / predicate / 逐行筛选条件；JOIN / join condition / 连接及连接条件；CONCAT / column alias / 合成姓名与输出列别名；WITH / CTE / 命名公共表表达式；DISTINCT / 删除重复结果行；View / dependency / 视图与依赖；SQL SECURITY DEFINER / 由视图定义者权限读取底表；COUNT / grain / 计数与计数单位；LEFT JOIN / 保留左侧未匹配行的连接；GROUP BY / aggregate / 分组与聚合；Primary / candidate / foreign key / 主键、候选键与外键；CHECK / UNIQUE / NOT NULL / 值限制、唯一与必填；ALTER TABLE / 修改表结构；DECIMAL(p,s) / 精确数值的位数；INSERT / UPDATE / DELETE / 增加、修改和删除行；HAVING / 聚合后的筛选 | — | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Assignment 4 / [A4-T3](./questions.md#a4-t3) | Access control · 权限； | CREATE USER / account host / 创建用户及主机范围；GRANT / privilege scope / 授予权限与对象范围；WITH GRANT OPTION / 权限转授；INSERT / UPDATE / DELETE / 增加、修改和删除行；Primary / candidate / foreign key / 主键、候选键与外键；SELECT / projection / 选择输出列；JOIN / join condition / 连接及连接条件；COUNT / grain / 计数与计数单位；CONCAT / column alias / 合成姓名与输出列别名；View / dependency / 视图与依赖；SQL SECURITY DEFINER / 由视图定义者权限读取底表；LEFT JOIN / 保留左侧未匹配行的连接；GROUP BY / aggregate / 分组与聚合 | — | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Assignment 4 / [A4-T4](./questions.md#a4-t4) | Normalization · 范式证明； | Functional dependency / 函数依赖；Attribute closure X⁺ / 属性闭包；Superkey / candidate key / 超键与候选键；Prime / non-prime attribute / 主属性与非主属性；Partial dependency / 2NF / 部分依赖与第二范式；Transitive dependency / 3NF / 传递依赖与第三范式；BCNF / Boyce–Codd范式 | — | A：教师作业／模拟原题：完整保留 | 已覆盖 |
+| Supplementary practice / [S01](./questions.md#s01) | Conceptual modelling · 概念图； | Class / attribute / 对象类别与属性；Identifier / 唯一标识；Multiplicity / 关联两端的数量范围；Many-to-many / association attribute / 多对多与关联属性 | — | C：按需参考；不进入主要练习 | 按需参考 |
+| Supplementary practice / [S02](./questions.md#s02) | Conceptual modelling · 概念图； | Class / attribute / 对象类别与属性；Identifier / 唯一标识；Multiplicity / 关联两端的数量范围；Many-to-many / association attribute / 多对多与关联属性 | — | C：按需参考；不进入主要练习 | 按需参考 |
+| Supplementary practice / [S03](./questions.md#s03) | Logical design · 关系模式； | Primary / candidate / foreign key / 主键、候选键与外键；Qualified association / 用局部值限定的关联；Many-to-many / association attribute / 多对多与关联属性；Superset method / 超集法实现泛化 | — | C：按需参考；不进入主要练习 | 按需参考 |
+| Supplementary practice / [S04](./questions.md#s04) | Logical design · 关系模式； | Primary / candidate / foreign key / 主键、候选键与外键；Qualified association / 用局部值限定的关联；Many-to-many / association attribute / 多对多与关联属性；Superset method / 超集法实现泛化 | — | C：按需参考；不进入主要练习 | 按需参考 |
+| Supplementary practice / [S05](./questions.md#s05) | Normalization · 范式证明； | Functional dependency / 函数依赖；Attribute closure X⁺ / 属性闭包；Superkey / candidate key / 超键与候选键；Prime / non-prime attribute / 主属性与非主属性；Partial dependency / 2NF / 部分依赖与第二范式；Transitive dependency / 3NF / 传递依赖与第三范式；BCNF / Boyce–Codd范式 | — | C：按需参考；不进入主要练习 | 按需参考 |
+| Supplementary practice / [S06](./questions.md#s06) | Normalization · 范式证明； | Functional dependency / 函数依赖；Attribute closure X⁺ / 属性闭包；Superkey / candidate key / 超键与候选键；Prime / non-prime attribute / 主属性与非主属性；Partial dependency / 2NF / 部分依赖与第二范式；Transitive dependency / 3NF / 传递依赖与第三范式；BCNF / Boyce–Codd范式 | — | C：按需参考；不进入主要练习 | 按需参考 |
+| Supplementary practice / [S07](./questions.md#s07) | Normalization · 范式证明； | Functional dependency / 函数依赖；Attribute closure X⁺ / 属性闭包；Superkey / candidate key / 超键与候选键；Prime / non-prime attribute / 主属性与非主属性；Partial dependency / 2NF / 部分依赖与第二范式；Transitive dependency / 3NF / 传递依赖与第三范式；BCNF / Boyce–Codd范式 | A4-T4 | B：直接改变核心题的条件或FD，检验迁移 | 已覆盖 |
+| Supplementary practice / [S08](./questions.md#s08) | Normalization · 范式证明； | Functional dependency / 函数依赖；Attribute closure X⁺ / 属性闭包；Superkey / candidate key / 超键与候选键；Prime / non-prime attribute / 主属性与非主属性；Partial dependency / 2NF / 部分依赖与第二范式；Transitive dependency / 3NF / 传递依赖与第三范式；BCNF / Boyce–Codd范式 | — | C：按需参考；不进入主要练习 | 按需参考 |
+| Supplementary practice / [S09](./questions.md#s09) | Normalization · 范式证明； | Functional dependency / 函数依赖；Attribute closure X⁺ / 属性闭包；Superkey / candidate key / 超键与候选键；Prime / non-prime attribute / 主属性与非主属性；Partial dependency / 2NF / 部分依赖与第二范式；Transitive dependency / 3NF / 传递依赖与第三范式；BCNF / Boyce–Codd范式 | — | C：按需参考；不进入主要练习 | 按需参考 |
+| Supplementary practice / [S10](./questions.md#s10) | Normalization · 范式证明； | Functional dependency / 函数依赖；Attribute closure X⁺ / 属性闭包；Superkey / candidate key / 超键与候选键；Prime / non-prime attribute / 主属性与非主属性；Partial dependency / 2NF / 部分依赖与第二范式；Transitive dependency / 3NF / 传递依赖与第三范式；BCNF / Boyce–Codd范式 | — | C：按需参考；不进入主要练习 | 归档 |
+| Supplementary practice / [S11](./questions.md#s11) | SQL Fundamentals · 基础查询； | SELECT / projection / 选择输出列；WHERE / predicate / 逐行筛选条件；CONCAT / column alias / 合成姓名与输出列别名；NULL / IS NULL / 未知值及空值判断 | — | C：按需参考；不进入主要练习 | 按需参考 |
+| Supplementary practice / [S12](./questions.md#s12) | SQL Fundamentals · 基础查询； | SELECT / projection / 选择输出列；JOIN / join condition / 连接及连接条件；UNION / UNION ALL / 合并结果集 | — | C：按需参考；不进入主要练习 | 按需参考 |
+| Supplementary practice / [S13](./questions.md#s13) | SQL Fundamentals · 基础查询； | SELECT / projection / 选择输出列；WHERE / predicate / 逐行筛选条件；CONCAT / column alias / 合成姓名与输出列别名；EXISTS / NOT EXISTS / 存在与不存在；JOIN / join condition / 连接及连接条件；COUNT / grain / 计数与计数单位；LEFT JOIN / 保留左侧未匹配行的连接；GROUP BY / aggregate / 分组与聚合 | — | C：按需参考；不进入主要练习 | 归档 |
+| Supplementary practice / [S14](./questions.md#s14) | DDL / DML · 结构与数据操作； | Primary / candidate / foreign key / 主键、候选键与外键；CHECK / UNIQUE / NOT NULL / 值限制、唯一与必填；DECIMAL(p,s) / 精确数值的位数；SELECT / projection / 选择输出列；JOIN / join condition / 连接及连接条件；COUNT / grain / 计数与计数单位；INSERT / UPDATE / DELETE / 增加、修改和删除行；LEFT JOIN / 保留左侧未匹配行的连接；GROUP BY / aggregate / 分组与聚合；ALTER TABLE / 修改表结构；WHERE / predicate / 逐行筛选条件 | — | C：按需参考；不进入主要练习 | 按需参考 |
+| Supplementary practice / [S15](./questions.md#s15) | Access control · 权限； | CREATE USER / account host / 创建用户及主机范围；GRANT / privilege scope / 授予权限与对象范围；WITH GRANT OPTION / 权限转授；SQL SECURITY DEFINER / 由视图定义者权限读取底表 | — | C：按需参考；不进入主要练习 | 按需参考 |
+| Supplementary practice / [S16](./questions.md#s16) | Access control · 权限； | GRANT / privilege scope / 授予权限与对象范围；WITH GRANT OPTION / 权限转授；SQL SECURITY DEFINER / 由视图定义者权限读取底表；SELECT / projection / 选择输出列 | — | C：按需参考；不进入主要练习 | 归档 |
+| SELECT lectures / [L01](./questions.md#l01) | SQL Fundamentals · 基础查询； | SELECT / projection / 选择输出列；AVG / MAX / SUM / 对选定行计算统计值；WHERE / predicate / 逐行筛选条件 | — | C：按需参考；不进入主要练习 | 按需参考 |
+| SELECT lectures / [L02](./questions.md#l02) | SQL Fundamentals · 基础查询； | SELECT / projection / 选择输出列；WHERE / predicate / 逐行筛选条件；DISTINCT / 删除重复结果行；EXISTS / NOT EXISTS / 存在与不存在 | — | C：按需参考；不进入主要练习 | 归档 |
+| SELECT lectures / [L03](./questions.md#l03) | SQL Fundamentals · 基础查询； | SELECT / projection / 选择输出列；WHERE / predicate / 逐行筛选条件；EXISTS / NOT EXISTS / 存在与不存在 | — | C：按需参考；不进入主要练习 | 按需参考 |
+| DDL and advanced DDL/DML / [L04](./questions.md#l04) | DDL / DML · 结构与数据操作； | INSERT / UPDATE / DELETE / 增加、修改和删除行；Primary / candidate / foreign key / 主键、候选键与外键；CHECK / UNIQUE / NOT NULL / 值限制、唯一与必填；SELECT / projection / 选择输出列；WHERE / predicate / 逐行筛选条件；COMMIT / ROLLBACK / 提交与回滚；ALTER TABLE / 修改表结构；DECIMAL(p,s) / 精确数值的位数 | — | C：按需参考；不进入主要练习 | 归档 |
+| Logical Design / [L05](./questions.md#l05) | Logical design · 关系模式； | Primary / candidate / foreign key / 主键、候选键与外键；Qualified association / 用局部值限定的关联；Many-to-many / association attribute / 多对多与关联属性；Superset method / 超集法实现泛化 | — | C：按需参考；不进入主要练习 | 归档 |
+| Discretionary Access Control / [L06](./questions.md#l06) | Access control · 权限； | INSERT / UPDATE / DELETE / 增加、修改和删除行；GRANT / privilege scope / 授予权限与对象范围；WITH GRANT OPTION / 权限转授；Primary / candidate / foreign key / 主键、候选键与外键；SQL SECURITY DEFINER / 由视图定义者权限读取底表 | — | C：按需参考；不进入主要练习 | 归档 |
+| Functional dependencies and normalization / [L07](./questions.md#l07) | Normalization · 范式证明； | Functional dependency / 函数依赖；Attribute closure X⁺ / 属性闭包；Superkey / candidate key / 超键与候选键；Prime / non-prime attribute / 主属性与非主属性；Partial dependency / 2NF / 部分依赖与第二范式；Transitive dependency / 3NF / 传递依赖与第三范式；BCNF / Boyce–Codd范式 | — | C：按需参考；不进入主要练习 | 归档 |
+| SELECT lectures / [L08](./questions.md#l08) | SQL Fundamentals · 基础查询； | SELECT / projection / 选择输出列；JOIN / join condition / 连接及连接条件；LEFT JOIN / 保留左侧未匹配行的连接；COUNT / grain / 计数与计数单位；WHERE / predicate / 逐行筛选条件；NULL / IS NULL / 未知值及空值判断；UNION / UNION ALL / 合并结果集 | — | C：按需参考；不进入主要练习 | 归档 |
+| SELECT lectures / [L09](./questions.md#l09) | SQL Fundamentals · 基础查询； | SELECT / projection / 选择输出列；WHERE / predicate / 逐行筛选条件；JOIN / join condition / 连接及连接条件 | — | C：按需参考；不进入主要练习 | 按需参考 |
+| AI-generated Variant / [V01](./questions.md#v01) | Correlated queries · 相关子查询；Nested queries · 嵌套查询 | SELECT / projection / 选择输出列；WHERE / predicate / 逐行筛选条件；JOIN / join condition / 连接及连接条件；CONCAT / column alias / 合成姓名与输出列别名；Correlated subquery / 相关子查询；EXISTS / NOT EXISTS / 存在与不存在；AVG / MAX / SUM / 对选定行计算统计值；Nested query / 嵌套查询；MAX / ties / 最大值与并列；ORDER BY / 结果排序 | A4-T1 | B：直接改变核心题的条件或FD，检验迁移 | 已覆盖 |
+| AI-generated Variant / [V02](./questions.md#v02) | SQL Fundamentals · 基础查询；Joins · 连接与零匹配, Aggregate queries · 分组统计 | SELECT / projection / 选择输出列；WHERE / predicate / 逐行筛选条件；BETWEEN / date range / 区间筛选；JOIN / join condition / 连接及连接条件；COUNT / grain / 计数与计数单位；CONCAT / column alias / 合成姓名与输出列别名；LEFT JOIN / 保留左侧未匹配行的连接；GROUP BY / aggregate / 分组与聚合；ORDER BY / 结果排序；HAVING / 聚合后的筛选 | A3-T2, A3-T3 | B：直接改变核心题的条件或FD，检验迁移 | 已覆盖 |
+
+## 未能独立核实的材料与条件
+
+- Mock原始PDF与独立评分表缺失；目前只能核对用户转发的完整文字、图片与Mock 2 Q3–Q5原文文件。Mock 3收到的内容与Mock 1相同，两卷仍完整保留。
+- 随附Solution.pdf及Assignment2_Solution.pdf已读；其作者身份没有独立认证，不将文件名当作官方评分保证。A3/A4的solution脚本是空模板，不是假装已有官方答案。
+- 教师在21Review.pdf pp5、10给出3小时作答、15分钟提交及六类内容。用户确认本次延期考试按Assignment／Mock形式并另有Normalization；新的正式日期、独立题分和延期考试特别规则没有提供。
+- Assignment 1–4的题目、关联原图和共享schema均可追踪；没有缺失的Assignment任务。原PDF安装、运行、提交步骤保留在本地原文件中，训练其相关操作，不把行政说明变成新题型。
+- 题面中的capacity条件冲突、城市输出形式、局部标识假设和事务引擎差异均保留并明确说明，见审查报告。

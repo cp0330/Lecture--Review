@@ -25,10 +25,21 @@ function md(s,id){
  s=s.replace(/```mermaid\n([\s\S]*?)```/g,(_,src)=>renderDiagram(src,id,viz,diagrams++));
  return marked.parse(math(s)).replace(/<table>/g,'<div class="table-scroll"><table>').replace(/<\/table>/g,'</table></div>');
 }
-for(const q of data.questions){q.questionHTML=md(q.question,q.id);q.answerHTML=md(q.answer,q.id);}
+for(const q of data.questions){
+ const id=q.canonical||q.id;
+ q.questionHTML=md(q.question,id);q.translationHTML=md(q.questionZh||'',id);
+ if(q.imageGlossary)q.translationHTML+='<details><summary>图中文字逐项对照</summary>'+md(q.imageGlossary,id)+'</details>';
+ if(q.level==='C')q.answerHTML=md(q.answer,id);
+ if(q.providedAnswer?.text){q.providedAnswer.html=md(q.providedAnswer.text,id);delete q.providedAnswer.text;}
+ for(const p of q.parts){p.referenceHTML=md(p.referenceAnswerEn||q.referenceAnswerEn||q.answer,id);delete p.referenceAnswerEn;delete p.code;}
+ // Keep full source/legacy answers in bank.json; avoid embedding unused copies and SVGs.
+ delete q.answer;delete q.referenceAnswerEn;
+}
+for(const row of data.coverage)delete row.originalQuestion;
 const json=JSON.stringify(data).replace(/</g,'\\u003c');
 const style=fs.readFileSync(path.join(base,'study.css'),'utf8');
 const script=fs.readFileSync(path.join(base,'app.js'),'utf8');
+const core=fs.readFileSync(path.join(base,'core.js'),'utf8');
 const shell=fs.readFileSync(path.join(base,'tools/shell.html'),'utf8');
-fs.writeFileSync(path.join(base,'index.html'),shell.replace('/* INLINE_STYLE */',style).replace('/* INLINE_DATA */',`const BANK=${json};`).replace('/* INLINE_APP */',script));
+fs.writeFileSync(path.join(base,'index.html'),shell.replace('/* INLINE_STYLE */',style).replace('/* INLINE_DATA */',`const BANK=${json};`).replace('/* INLINE_CORE */',core).replace('/* INLINE_APP */',script));
 console.log(JSON.stringify({questions:data.questions.length,parts:data.questions.reduce((a,q)=>a+q.parts.length,0),diagrams,bytes:fs.statSync(path.join(base,'index.html')).size}));

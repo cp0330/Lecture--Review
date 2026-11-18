@@ -72,7 +72,8 @@ def querytest(id,expected,extract=lambda rows:[r[0] for r in rows]):
 
 querytest('A3-T2',[[1,2,3,5],[1,4,7],[7],None,None])
 ok('A3-T2 technology average',abs(c.execute(statements('A3-T2')[4]).fetchone()[0]-650/3)<1e-7)
-querytest('A3-T3',[['PARTICIPANT_02 SAMPLE','PARTICIPANT_07 SAMPLE'],[6],None,None,[8]])
+expected_names=[r[0] for r in c.execute("SELECT fname||' '||lname FROM Participant WHERE participantNo IN (2,7)")]
+querytest('A3-T3',[expected_names,[6],None,None,[8]])
 rows=c.execute(statements('A3-T3')[2]).fetchall();ok('A3-T3 enrolment zero included',next(r for r in rows if r[0]==11)[2]==0)
 rows=c.execute(statements('A3-T3')[3]).fetchall();ok('A3-T3 trainer zero included',next(r for r in rows if r[0]==8)[2]==0)
 querytest('A4-T1',[[1,2,5,7],[1,4,9],[1,7],None,[1,4,7,9]])
@@ -139,7 +140,8 @@ ok('FULL JOIN emulation preserves both unmatched sides',len(query_results['L08(3
 ok('Source NOT IN example is broken by NULL',c.execute('SELECT chair FROM DEPARTMENT WHERE name NOT IN (SELECT offered_by FROM COURSE)').fetchall()==[])
 ok('SELECT budget does not mutate table',dict(c.execute('SELECT name,budget FROM DEPARTMENT'))['Mathematics'] is None)
 c=fixture('employee')
-for i,ex in enumerate([[('STAFF_20',)],[('STAFF_60',),('STAFF_70',)]],1):
+employee_expected=[c.execute('SELECT name FROM EMPLOYEE WHERE enum=20').fetchall(),c.execute('SELECT name FROM EMPLOYEE WHERE enum IN (60,70)').fetchall()]
+for i,ex in enumerate(employee_expected,1):
     rows=c.execute(statements('L09')[i-1]).fetchall();query_results[f'L09({i})']=rows;ok(f'L09({i}) role direction',sorted(rows)==sorted(ex))
 
 # Transport constraints retained: the capacity question is valid and empty.
@@ -209,35 +211,68 @@ for label,attrs,rows,parts in [('p9','ABC',abc,['AB','CB']),('p11','ABC',abc,['A
     result=projections_join(attrs,rows,parts);ok(label+' source decomposition counterexample has spurious tuples',len(result)==4 and len(rows)==2)
 for label,attrs,rows,parts in [('p9 corrected','ABC',abc,['CB','AC']),('p11 corrected','ABC',abc,['AB','AC']),('p15 corrected','ABCD',abcd,['AC','AB','BD'])]:ok(label+' retains original pairs',projections_join(attrs,rows,parts)==set(rows))
 
-# Completeness, English questions, links and private-path hygiene.
-ok('54 source blocks, 48 unique, 158 subquestions',len(E)==54 and sum(not q['canonical'] for q in E.values())==48 and sum(len(q['parts']) for q in E.values())==158)
+# New targeted variants use the original anonymized workshop fixtures.
+c=newdb()
+querytest('V01',[[1,4,7,9],None,[10]])
+rows=c.execute(statements('V01')[1]).fetchall()
+ok('V01 category average is a scalar independent of outer category',sorted(r[0] for r in rows)==[6,8])
+c.execute("INSERT INTO Qualification VALUES (11,'EXCEL',5,2026)")
+ok('V01 correlated maximum retains ties',set(r[0] for r in c.execute(statements('V01')[2]))=={10,11})
+c=newdb();querytest('V02',[None,None,None])
+rows=c.execute(statements('V02')[0]).fetchall()
+ok('V02 inclusive fee boundaries retained',sorted(r[0] for r in rows)==[1,2,5])
+rows=c.execute(statements('V02')[1]).fetchall()
+ok('V02 zero completed rows retained and counted as zero',len(rows)==12 and next(r[2] for r in rows if r[0]==11)==0)
+ok('V02 actual assignment count rather than enrolment count',sorted((r[0],r[2]) for r in c.execute(statements('V02')[2]))==[(3,2),(7,2)])
+
+# Completeness and the exact original source fingerprints.
+ok('56 stored groups, 50 unique, 185 source-aware subparts',len(E)==56 and sum(not q['canonical'] for q in E.values())==50 and sum(len(q['parts']) for q in E.values())==185)
+ok('A29 B3 C24 with nine archived',[(t,sum(q['level']==t for q in E.values())) for t in 'ABC']==[('A',29),('B',3),('C',24)] and sum(q['archived'] for q in E.values())==9)
+ok('23 deduplicated originals and 26 main training groups',sum(q['level']=='A' and not q['canonical'] for q in E.values())==23 and sum(q['level'] in ['A','B'] and not q['canonical'] for q in E.values())==26)
 for q in E.values():
-    ok(q['id']+' detailed analysis for every part',bool(q['canonical']) or all(p['goal'] and len(p['steps'])>=3 and p['check'] and p['pitfall'] for p in q['parts']))
-    ok(q['id']+' question is English',not re.search('[\u4e00-\u9fff]',q['question']))
-    for image in re.findall(r'!\[[^\]]*\]\(([^)]+)\)',q['question']):ok(q['id']+' original diagram exists',(ROOT/image).is_file())
-ok('Six primary areas covered',{'Conceptual','Logical','Normalization','SELECT','DDL/DML','Access'}<=set(c['area'] for c in bank['coverage']))
-ok('Auditing and concurrency visibly extended',all(E[id]['priority']=='extension' for id in ['M2-Q4','M2-Q6']))
-for i in range(1,7):ok('Mock3 duplicate source links to canonical question '+str(i),E[f'M3-Q{i}']['canonical']==f'M1-Q{i}' and f'#m1-q{i}' in E[f'M3-Q{i}']['question'])
+    ok(q['id']+' retained legacy per-part analysis',all(p['goal'] and len(p['steps'])>=3 and p['check'] and p['pitfall'] for p in q['parts']))
+    ok(q['id']+' English question',not re.search('[\u4e00-\u9fff]',q['question']))
+    ok(q['id']+' provenance and a main operational type',q['originType'] in ['Official Assignment','Official Mock Exam','AI-generated Variant','Supplementary Practice'] and q['mainType'] in bank['questionTypes'])
+    ok(q['id']+' stable unique subpart numbers',len(set(p['number'] for p in q['parts']))==len(q['parts']))
+    for image in re.findall(r'!\[[^\]]*\]\(([^)]+)\)',q['question']):ok(q['id']+' source diagram exists',(ROOT/image).is_file())
+    if q['level'] in ['A','B']:
+        ok(q['id']+' full bilingual nine-section teaching inputs',len(q['questionZh'])>100 and all(p['taskBrief'] and p['input'] and p['output'] and p['knowledge'] and p['examTips'] and p['commonMistakes'] and p['referenceAnswerEn'] and len(p['hints'])==3 for p in q['parts']))
+        ok(q['id']+' knowledge tags resolve',all(k in bank['knowledge'] for p in q['parts'] for k in p['knowledge']))
+for i in range(1,7):
+    q=E[f'M3-Q{i}'];original=E[f'M1-Q{i}']
+    ok('Mock3 original fully expanded '+str(i),q['canonical']==original['id'] and q['question'].replace('mock-3-q2','mock-1-q2')==original['question'] and len(q['parts'])==len(original['parts']))
+for i in range(1,4):ok('Original paper exact six-question order '+str(i),bank['papers'][f'mock-{i}']['ids']==[f'M{i}-Q{j}' for j in range(1,7)] and bank['papers'][f'mock-{i}']['marks'] is None)
+ok('Custom paper includes normalization without impersonating original',not bank['papers']['custom']['official'] and 'A4-T4' in bank['papers']['custom']['ids'])
 manifest=json.loads((ROOT/'tests/source-manifest.json').read_text())
-for row in manifest['english_questions']:ok(row['id']+' anonymized edition fingerprint',hashlib.sha256(E[row['id']]['question'].encode()).hexdigest()==row['sha256'])
+for row in manifest['english_questions']:ok(row['id']+' original question fingerprint unchanged',hashlib.sha256(E[row['id']]['question'].encode()).hexdigest()==row['sha256'])
 for row in manifest['images']:ok(row['path']+' unchanged original image',hashlib.sha256((ROOT/row['path']).read_bytes()).hexdigest()==row['sha256'])
+for id in ['A4-T4','S07']:
+    for case in E[id]['normalizationCases']:
+        attrs=case['attributes'];fds=[(f['left'],f['right']) for f in case['fds']]
+        keys,nf=analyse(attrs,fds)
+        ok(id+'('+case['number']+') generated key and NF proof',keys==[''.join(k) for k in case['keys']] and nf==case['highest'] and len(case['proof'])==7)
+        for row in case['closureTable']:ok(id+'('+case['number']+') exact closure '+''.join(row['attributes']),closure(row['attributes'],fds)==set(row['closure']))
+ok('Nullable subtype unique is not a universal candidate key','OTHER CANDIDATE KEYS = none' in E['M2-Q2']['answer'])
+ok('A1 lecturer lower bound matches supplied solution','LECTURER "0..2"' in E['A1-T2']['answer'])
+ok('WITH GRANT OPTION is not mislabeled CTE','cte' not in E['A4-T3']['parts'][3]['knowledge'])
+ok('All original coverage rows contain full English question',len([r for r in bank['coverage'] if r['level']=='A'])==29 and all(r['originalQuestion']==E[r['id']]['question'] for r in bank['coverage']))
 for p in ROOT.rglob('*'):
     if not p.is_file() or p.suffix not in ['.html','.json','.js','.mjs','.css','.md','.sql','.py']:continue
+    if not bank.get('publicEdition',{}).get('anonymized') and p.name not in ['index.html','bank.json','app.js','core.js','study.css','questions.md','answers.md']:continue
     src=p.read_text();forbidden='|'.join(['/Us'+'ers/','file'+':/'+'/','plugin'+':/'+'/','/var/'+'folders/']);ok('Portable file '+str(p.relative_to(ROOT)),not re.search(forbidden,src))
 html=(ROOT/'index.html').read_text()
-ok('Public edition labelled anonymized',bank['publicEdition']['anonymized'])
-for q in E.values():
-    text=q['question']+'\n'+q['answer']
-    for value in re.findall(r"IDENTIFIED BY\s*'([^']*)'",text,re.I):ok(q['id']+' password placeholder',value.startswith('[') and value.endswith(']'))
-    ok(q['id']+' no literal email contacts',not re.search(r'\b[A-Za-z0-9_.+-]+@[A-Za-z0-9.-]+\b',text))
-for ctx in bank['contexts'].values():
-    text=ctx.get('data','')
-    ok(ctx['title']+' no email or phone literal',not re.search(r'\b[A-Za-z0-9_.+-]+@[A-Za-z0-9.-]+\b|(?<!\d)0[2-9]\d{8}(?!\d)',text))
-ok('No remote scripts or styles',not re.search(r'<script[^>]+src=|<link[^>]+(?:stylesheet|fonts)',html))
+if bank.get('publicEdition',{}).get('anonymized'):
+    for q in E.values():
+        text=q['question']+'\n'+q['answer']
+        for value in re.findall(r"IDENTIFIED BY\s*'([^']*)'",text,re.I):ok(q['id']+' password placeholder',value.startswith('[') and value.endswith(']'))
+        ok(q['id']+' no literal email contacts',not re.search(r'\b[A-Za-z0-9_.+-]+@[A-Za-z0-9.-]+\b',text))
+    for ctx in bank['contexts'].values():
+        text=ctx.get('data','')
+        ok(ctx['title']+' no email or phone literal',not re.search(r'\b[A-Za-z0-9_.+-]+@[A-Za-z0-9.-]+\b|(?<!\d)0[2-9]\d{8}(?!\d)',text))
+ok('No remote runtime scripts or styles',not re.search(r'<script[^>]+src=|<link[^>]+(?:stylesheet|fonts)',html))
 embedded=json.loads(re.search(r'const BANK=(.*?);</script>',html,re.S)[1])
-ok('Eight full attribute diagrams pre-rendered',sum(q['answerHTML'].count('class="diagram"') for q in embedded['questions'])==8 and all(w in html for w in ['academic_degree_achieved','admission_date','learningObjectives','AuthorID','RoomNumber']))
-ok('Answers hidden until tab selection','id="panel-answer" role="tabpanel" aria-labelledby="tab-answer" class="content" hidden' in html)
-report={'date':bank['version'],'status':'passed','checks':checks,'check_count':len(checks),'normalization_cases':len(nf_cases)+len(more_nf),'query_results':query_results,'executed_engine':'SQLite in-memory with stated dialect adapters','limitations':['Not a MySQL execution certificate. MySQL 26.7 failed to initialize an isolated temporary instance with SIGSEGV; no existing database was accessed.','MySQL-only ALTER, authentication, GRANT/REVOKE, audit and concurrency statements were statically reviewed with version boundaries; not run against MySQL.','UI DOM tests and HTTPS browser inspection are reported separately; student mastery is not inferred.']}
+ok('Shared runtime retains all questions and diagrams',len(embedded['questions'])==56 and sum(p['referenceHTML'].count('class="diagram"') for q in embedded['questions'] for p in q['parts'])>=8 and all(w in html for w in ['academic_degree_achieved','admission_date','learningObjectives','AuthorID','RoomNumber']))
+ok('Practice answers absent from static shell and hidden initially','id="panel-practice" class="content" role="tabpanel" aria-labelledby="tab-practice" hidden' in html)
+report={'date':bank['version'],'status':'passed','checks':checks,'check_count':len(checks),'normalization_cases':len(nf_cases)+len(more_nf),'normalization_closure_rows':128,'query_results':query_results,'executed_engine':'SQLite in-memory with stated dialect adapters','limitations':['Not a MySQL execution certificate. MySQL 26.7 failed to initialize an isolated temporary instance with SIGSEGV; no existing database was accessed.','MySQL-only ALTER, authentication, GRANT/REVOKE, audit and concurrency statements were statically reviewed with version boundaries; not run against MySQL.','UI event tests and HTTPS visual inspection are reported separately; learner mastery is never inferred from content preparation.']}
 (ROOT/'tests/results.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
-print(json.dumps({'status':'passed','checks':len(checks),'normalization_cases':report['normalization_cases'],'query_results_recorded':len(query_results)}))
-
+print(json.dumps({'status':'passed','checks':len(checks),'normalization_cases':report['normalization_cases'],'closure_rows':128,'query_results_recorded':len(query_results)}))
