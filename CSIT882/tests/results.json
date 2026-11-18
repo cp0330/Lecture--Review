@@ -580,6 +580,7 @@
     "Portable file sources.md",
     "Portable file validation.md",
     "Portable file privacy.md",
+    "Portable file completion-2026-11-18.md",
     "Portable file study-order.md",
     "Portable file README.md",
     "Portable file audit.md",
@@ -675,7 +676,7 @@
     "Shared runtime retains all questions and diagrams",
     "Practice answers absent from static shell and hidden initially"
   ],
-  "check_count": 672,
+  "check_count": 673,
   "normalization_cases": 14,
   "normalization_closure_rows": 128,
   "query_results": {

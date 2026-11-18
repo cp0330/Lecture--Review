@@ -1,6 +1,23 @@
 {
   "date": "2026-11-18",
-  "version": "workbench-v2",
-  "status": "pending-https-inspection",
-  "note": "Previous visual evidence belongs to the 2026-11-04 edition, preserved in the local pre-change backup. Current live inspection follows deployment."
+  "status": "passed",
+  "ui_commit": "aa7b791fde3c17b1ca2715999d263d0d53925959",
+  "url": "https://cp0330.github.io/Lecture--Review/CSIT882/",
+  "checks": [
+    "Published HTTPS workbench loaded with 23 deduplicated original groups and bilingual question text.",
+    "Guided Learning shows nine sections, per-part steps and folded reference answer.",
+    "Practice starts with no visible reference answer; multiline SQL restores after reload. Trial text was cleared without saving an attempt or mastery assessment.",
+    "Normalization A4-T4 case1 displays 2NF proof; case4 displays both AB and AC keys, prime RHS exception and 3NF/BCNF distinction.",
+    "Mock3 trial displays six questions in original order, full Q1 wording and the loaded original Q2 diagram.",
+    "Mock pause disables the editor; reload restores trial draft and paused state.",
+    "Mock end opens consolidated manual review; trial is excluded from saved mock history.",
+    "Reference filter shows 15 active C groups; Archive filter shows nine groups; Mock3 source filter exposes all six full originals.",
+    "Mobile 390x844 layout supports all module entries, filter typing preserves the drawer, question selection closes it; temporary viewport override reset.",
+    "Conceptual answer SVG and supplied A1 reference image load successfully.",
+    "Final accessible paper selector works by exact label; Custom Mock is clearly labeled as not a teacher original.",
+    "No console error entries during final published-version check."
+  ],
+  "grading": "Manual self-assessment; no exact automatic SQL grade or learner mastery inferred.",
+  "scope": "Visual and real interaction checks complement the separately reported pure-state and small-DOM regression tests. Not a full screen-reader or cross-browser certification.",
+  "screenshots": "Final desktop proof saved locally; no private browser records are published."
 }

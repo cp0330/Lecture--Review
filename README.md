@@ -38,13 +38,15 @@ GitHub中可阅读Markdown分册。需要离线使用时，可下载[HTML阅读�
 
 ## CSIT882 · Database Systems
 
-**三套模拟、Assignment 1–4与课件补充：48个去重题目组，158个小题。**
+**考试优先：29个原题来源，默认23组去重原题；另有3组必要变式。全库保留56组185小题，9组辅助内容归档。**
 
 - [打开 CSIT882 题库](https://cp0330.github.io/Lecture--Review/CSIT882/)
 - [英文题目](CSIT882/questions.md) · [详细解析与参考答案](CSIT882/answers.md)
-- [考点对照](CSIT882/coverage.md) · [核查与勘误](CSIT882/audit.md) · [验证与限制](CSIT882/validation.md)
+- [考点对照](CSIT882/coverage.md) · [本轮审查](CSIT882/audit-2026-11-18.md) · [验证与限制](CSIT882/validation.md)
 
-题目用英文，解析用中文，专业术语与SQL保留英文。一次显示一道题，按小题展开步骤；支持搜索、筛选、放大图、打印和作答记录导入/导出。收到的Mock 3与Mock 1重复，保留来源并跳转。Normalization重点对照Assignment 4。草稿保存在浏览器，不上传。
+英文原题＋中文翻译；SQL与专业术语保留。五个模块包含九段教学、Normalization七步推理、分级提示、独立练习、多轮错题与计时模拟。Mock 3与Mock 1相同，两卷仍完整保留；Custom Mock含Normalization并明确非教师原卷。原有草稿迁移保留，记录不上传。
+
+[改造交付报告](CSIT882/completion-2026-11-18.md) · [建议复习顺序](CSIT882/study-order.md)。浏览器使用静态自检与人工对照，不提供虚假的精确SQL评分。
 
 
 公开版中的样例身份、联系方式和密码字面值已统一匿名化，见[说明](CSIT882/privacy.md)。
