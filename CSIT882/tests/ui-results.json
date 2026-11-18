@@ -1,7 +1,7 @@
 {
   "date": "2026-11-18",
   "status": "passed",
-  "checks": 51,
+  "checks": 53,
   "labels": [
     "Legacy drafts, duplicate IDs and unknown IDs preserved",
     "Legacy done never becomes mastery",
@@ -37,6 +37,8 @@
     "Reference answer shown only after request",
     "New round keeps previous draft and hides answer",
     "Manual mastery saved per part",
+    "New round self-review does not rewrite previous attempts",
+    "Current round review and mistake attach to current attempt only",
     "Mock3 source exposes six full original questions",
     "Reference defaults to 15 non-archived groups",
     "Archive filter shows exactly nine groups",
