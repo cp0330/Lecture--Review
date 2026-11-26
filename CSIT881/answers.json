@@ -1,0 +1,1164 @@
+{
+  "D01": {
+    "hint": "Both addends must be greater than zero.",
+    "explanation": "First addend: 1. Last addend: 5. Rows: 5. Loop: range(1, 6). The second addend is 6 minus the first, so first addend 6 would produce zero.",
+    "traceTest": "assert list(range(1, 6)) == [1, 2, 3, 4, 5]; assert [(i,6-i) for i in range(1,6)][-1] == (5,1)"
+  },
+  "D02": {
+    "hint": "Make the whole equation one format argument.",
+    "explanation": "Format the entire string with a dynamic width. For width 12, '2 + 8 = 10' takes 10 characters, leaving two spaces on its left.",
+    "code": "def equation_field(equation, width):\n    return \"|{0:>{1}}|\".format(equation, width)\n",
+    "tests": [
+      {
+        "assertion": "assert equation_field(\"2 + 8 = 10\", 12) == \"|  2 + 8 = 10|\""
+      },
+      {
+        "assertion": "assert equation_field(\"1 + 3 = 4\", 9) == \"|1 + 3 = 4|\""
+      }
+    ]
+  },
+  "D03": {
+    "hint": "Count the two vertical bars separately.",
+    "explanation": "The usable field is 18. The text is 10 characters, so 8 spaces precede the 3. The border has 20 stars.",
+    "traceTest": "assert 20-2 == 18; assert 18-len('3 + 8 = 11') == 8; assert len('*' * 20) == 20"
+  },
+  "D04": {
+    "hint": "Build the equation string before you place it in the frame.",
+    "explanation": "Loop from 1 through target − 1. Build the ruler using the position modulo 10. The equation field uses the supplied width. The border uses that width plus two.",
+    "code": "width = int(input(\"Enter a length value: \"))\ntarget = int(input(\"Enter a number: \"))\nprint(\"Friend of {0} display\".format(target))\nruler = \" \" + \"\".join(str(i % 10) for i in range(1, width + 1))\nborder = \"*\" * (width + 2)\nprint(ruler)\nprint(border)\nfor first in range(1, target):\n    equation = \"{0} + {1} = {2}\".format(first, target - first, target)\n    print(\"|{0:>{1}}|\".format(equation, width))\nprint(border)\nprint(ruler)\n",
+    "tests": [
+      {
+        "input": [
+          "11",
+          "5"
+        ],
+        "result": "Enter a length value: 11\nEnter a number: 5\nFriend of 5 display\n 12345678901\n*************\n|  1 + 4 = 5|\n|  2 + 3 = 5|\n|  3 + 2 = 5|\n|  4 + 1 = 5|\n*************\n 12345678901\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "9",
+          "2"
+        ],
+        "result": "Enter a length value: 9\nEnter a number: 2\nFriend of 2 display\n 123456789\n***********\n|1 + 1 = 2|\n***********\n 123456789\n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "A01-1": {
+    "hint": "input() returns a string.",
+    "explanation": "Convert each input with int before adding.",
+    "code": "first = int(input(\"Enter the 1st integer: \"))\nsecond = int(input(\"Enter the 2nd integer: \"))\nprint(\"The sum of {0} and {1} is {2}\".format(first, second, first + second))\n",
+    "tests": [
+      {
+        "input": [
+          "100",
+          "50"
+        ],
+        "result": "Enter the 1st integer: 100\nEnter the 2nd integer: 50\nThe sum of 100 and 50 is 150\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "-2",
+          "2"
+        ],
+        "result": "Enter the 1st integer: -2\nEnter the 2nd integer: 2\nThe sum of -2 and 2 is 0\n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "A02-1": {
+    "hint": "Reuse the same four-field format string for every row.",
+    "explanation": "Use widths 15, 10, 25 and 15 with <, <, ^ and > respectively. The position ruler is 65 characters long.",
+    "code": "rows = (('Element', 'Symbol', 'Atomic number', 'Atomic weight'), ('Lithium', 'Li', 3, 6.94), ('Sodium', 'Na', 11, 22.99), ('Potassium', 'K', 19, 39.098), ('Rubidium', 'Rb', 37, 85.468), ('Caesium', 'Cs', 55, 132.905), ('Francium', 'Fr', 87, 223))\nprint(\"Alkali metals:\")\nprint()\nrow_format = \"{0:<15}{1:<10}{2:^25}{3:>15}\"\nfor row in rows:\n    print(row_format.format(*row))\nprint()\nprint(\"1234567890\" * 6 + \"12345\")\n",
+    "tests": [
+      {
+        "input": [],
+        "result": "Alkali metals:\n\nElement        Symbol          Atomic number        Atomic weight\nLithium        Li                    3                       6.94\nSodium         Na                   11                      22.99\nPotassium      K                    19                     39.098\nRubidium       Rb                   37                     85.468\nCaesium        Cs                   55                    132.905\nFrancium       Fr                   87                        223\n\n12345678901234567890123456789012345678901234567890123456789012345\n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "A02-2": {
+    "hint": "Compute the number of full bundles and the leftover items separately.",
+    "explanation": "Floor division counts full bundles. The remainder gives single items.",
+    "code": "count = int(input(\"How many items? \"))\ntotal = (count // 3) * 20 + (count % 3) * 10\nprint(\"Total cost: ${0}\".format(total))\n",
+    "tests": [
+      {
+        "input": [
+          "7"
+        ],
+        "result": "How many items? 7\nTotal cost: $50\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "12"
+        ],
+        "result": "How many items? 12\nTotal cost: $80\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "14"
+        ],
+        "result": "How many items? 14\nTotal cost: $100\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "0"
+        ],
+        "result": "How many items? 0\nTotal cost: $0\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "2"
+        ],
+        "result": "How many items? 2\nTotal cost: $20\n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "A03-1": {
+    "hint": "Choose the unit price and the postage under separate rules.",
+    "explanation": "The <= 50 breakpoint affects the item price and standard postage only. Test 50 and 51 to catch an incorrect inequality.",
+    "code": "count = int(input(\"Enter the number of items: \"))\nshipping = input(\"Choose shipping (s/r/e): \")\nunit = 3 if count <= 50 else 2\nif shipping == \"s\":\n    postage = 10 if count <= 50 else 0\nelif shipping == \"r\":\n    postage = 15\nelse:\n    postage = 20\ncost = count * unit\nprint(\"Item cost = ${0} x {1} = ${2}\".format(unit, count, cost))\nprint(\"Postage: \" + (\"free\" if postage == 0 else \"${0}\".format(postage)))\nprint(\"Total cost: ${0}\".format(cost + postage))\n",
+    "tests": [
+      {
+        "input": [
+          "10",
+          "r"
+        ],
+        "result": "Enter the number of items: 10\nChoose shipping (s/r/e): r\nItem cost = $3 x 10 = $30\nPostage: $15\nTotal cost: $45\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "50",
+          "s"
+        ],
+        "result": "Enter the number of items: 50\nChoose shipping (s/r/e): s\nItem cost = $3 x 50 = $150\nPostage: $10\nTotal cost: $160\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "51",
+          "s"
+        ],
+        "result": "Enter the number of items: 51\nChoose shipping (s/r/e): s\nItem cost = $2 x 51 = $102\nPostage: free\nTotal cost: $102\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "75",
+          "e"
+        ],
+        "result": "Enter the number of items: 75\nChoose shipping (s/r/e): e\nItem cost = $2 x 75 = $150\nPostage: $20\nTotal cost: $170\n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "A04-1": {
+    "hint": "Include both endpoints when deriving the first addend's range.",
+    "explanation": "The first addend in this slide runs from 0 to 10 inclusive. The subtraction gives the second addend.",
+    "code": "for first in range(11):\n    print(\"{0:>2} + {1:>2} = {2:>2}\".format(first, 10 - first, 10))\n",
+    "tests": [
+      {
+        "input": [],
+        "result": " 0 + 10 = 10\n 1 +  9 = 10\n 2 +  8 = 10\n 3 +  7 = 10\n 4 +  6 = 10\n 5 +  5 = 10\n 6 +  4 = 10\n 7 +  3 = 10\n 8 +  2 = 10\n 9 +  1 = 10\n10 +  0 = 10\n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "A04-2": {
+    "hint": "Work out how the first number in each row depends on the row number.",
+    "explanation": "The outer loop selects the row. The inner loop counts from twice that row number down to 1.",
+    "code": "for row in range(1, 6):\n    values = []\n    for value in range(2 * row, 0, -1):\n        values.append(str(value))\n    print(\" \".join(values))\n",
+    "tests": [
+      {
+        "input": [],
+        "result": "2 1\n4 3 2 1\n6 5 4 3 2 1\n8 7 6 5 4 3 2 1\n10 9 8 7 6 5 4 3 2 1\n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "A05-1": {
+    "hint": "Start the counter at the lower endpoint and advance after printing.",
+    "explanation": "Using <= includes the upper bound; the increment ensures termination.",
+    "code": "start = int(input(\"Enter start number: \"))\nend = int(input(\"Enter end number: \"))\nprint(\"Equations:\")\nvalue = start\nwhile value <= end:\n    print(\"{0} + {0} = {1}\".format(value, 2 * value))\n    value += 1\n",
+    "tests": [
+      {
+        "input": [
+          "4",
+          "7"
+        ],
+        "result": "Enter start number: 4\nEnter end number: 7\nEquations:\n4 + 4 = 8\n5 + 5 = 10\n6 + 6 = 12\n7 + 7 = 14\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "-2",
+          "-2"
+        ],
+        "result": "Enter start number: -2\nEnter end number: -2\nEquations:\n-2 + -2 = -4\n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "A05-2": {
+    "hint": "Check the sentinel before attempting int conversion.",
+    "explanation": "Check q before conversion, update one count per integer, and print the summaries after the loop. Zero is even.",
+    "code": "even_count = 0\nodd_count = 0\nwhile True:\n    entry = input(\"Enter an integer (or q to quit): \")\n    if entry == \"q\":\n        break\n    if int(entry) % 2 == 0:\n        even_count += 1\n    else:\n        odd_count += 1\nprint(\"You have entered {0} even numbers\".format(even_count))\nprint(\"You have entered {0} odd numbers\".format(odd_count))\n",
+    "tests": [
+      {
+        "input": [
+          "5",
+          "7",
+          "0",
+          "13",
+          "8",
+          "15",
+          "q"
+        ],
+        "result": "Enter an integer (or q to quit): 5\nEnter an integer (or q to quit): 7\nEnter an integer (or q to quit): 0\nEnter an integer (or q to quit): 13\nEnter an integer (or q to quit): 8\nEnter an integer (or q to quit): 15\nEnter an integer (or q to quit): q\nYou have entered 2 even numbers\nYou have entered 4 odd numbers\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "q"
+        ],
+        "result": "Enter an integer (or q to quit): q\nYou have entered 0 even numbers\nYou have entered 0 odd numbers\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "-2",
+          "-3",
+          "q"
+        ],
+        "result": "Enter an integer (or q to quit): -2\nEnter an integer (or q to quit): -3\nEnter an integer (or q to quit): q\nYou have entered 1 even numbers\nYou have entered 1 odd numbers\n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "A06-1": {
+    "hint": "Order the lower bounds from highest to lowest.",
+    "explanation": "Return a grade string and check every threshold at the boundary.",
+    "code": "def calculate_grade(mark):\n    if mark >= 80:\n        return \"A\"\n    if mark >= 60:\n        return \"B\"\n    if mark >= 40:\n        return \"C\"\n    return \"D\"\n",
+    "tests": [
+      {
+        "assertion": "assert calculate_grade(0) == 'D'"
+      },
+      {
+        "assertion": "assert calculate_grade(39) == 'D'"
+      },
+      {
+        "assertion": "assert calculate_grade(40) == 'C'"
+      },
+      {
+        "assertion": "assert calculate_grade(59) == 'C'"
+      },
+      {
+        "assertion": "assert calculate_grade(60) == 'B'"
+      },
+      {
+        "assertion": "assert calculate_grade(79) == 'B'"
+      },
+      {
+        "assertion": "assert calculate_grade(80) == 'A'"
+      },
+      {
+        "assertion": "assert calculate_grade(100) == 'A'"
+      }
+    ]
+  },
+  "A06-2": {
+    "hint": "Repeat each character separately.",
+    "explanation": "Build a new string by multiplying the individual characters, in their original order.",
+    "code": "def expand(word, multiplicity):\n    result = \"\"\n    for character in word:\n        result += character * multiplicity\n    return result\n",
+    "tests": [
+      {
+        "assertion": "assert expand(\"Meow\", 4) == \"MMMMeeeeoooowwww\""
+      },
+      {
+        "assertion": "assert expand(\"Cat\", 2) == \"CCaatt\""
+      },
+      {
+        "assertion": "assert expand(\"Dog\", 1) == \"Dog\""
+      },
+      {
+        "assertion": "assert expand(\"Frog\", 0) == \"\" and expand(\"\", 4) == \"\""
+      }
+    ]
+  },
+  "A06-3": {
+    "hint": "Identify the smallest allowed input.",
+    "explanation": "The base case is 1. All other calls reduce n by one and multiply the returned subproblem by n.",
+    "code": "def factorial(n):\n    if n == 1:\n        return 1\n    return n * factorial(n - 1)\n",
+    "tests": [
+      {
+        "assertion": "assert factorial(1) == 1"
+      },
+      {
+        "assertion": "assert factorial(5) == 120 and factorial(9) == 362880"
+      }
+    ]
+  },
+  "A07-1": {
+    "hint": "Store the ID exactly as received.",
+    "explanation": "The constructor saves instance attributes. __str__ and __repr__ both return strings. Defining them does not print anything.",
+    "code": "class Student:\n    def __init__(self, id, first_name, last_name):\n        self.id = id\n        self.first_name = first_name\n        self.last_name = last_name\n\n    def __str__(self):\n        return \"{0} {1} ({2})\".format(self.first_name, self.last_name, self.id)\n\n    def __repr__(self):\n        return \"Student({0!r}, {1!r}, {2!r})\".format(\n            self.id, self.first_name, self.last_name)\n",
+    "tests": [
+      {
+        "assertion": "s=Student(\"0012345\",\"Ava\",\"Lee\")\nassert str(s) == \"Ava Lee (0012345)\"\nassert repr(s) == \"Student('0012345', 'Ava', 'Lee')\""
+      },
+      {
+        "assertion": "a=Student(\"00\",\"A\",\"B\")\nb=Student(\"01\",\"C\",\"D\")\na.last_name=\"E\"\nassert str(a) == \"A E (00)\" and str(b) == \"C D (01)\""
+      }
+    ]
+  },
+  "A08-1": {
+    "hint": "Use instance attributes in all three methods.",
+    "explanation": "Store all four constructor arguments. Format the equation string and compare answer directly to solution.",
+    "code": "class MathQuestion:\n    def __init__(self, number1, number2, operation, solution):\n        self.number1 = number1\n        self.number2 = number2\n        self.operation = operation\n        self.solution = solution\n\n    def question_text(self):\n        return \"{0} {1} {2} = \".format(self.number1, self.operation, self.number2)\n\n    def __str__(self):\n        return self.question_text() + str(self.solution)\n\n    def check_answer(self, answer):\n        return answer == self.solution\n",
+    "tests": [
+      {
+        "assertion": "q=MathQuestion(4,6,\"+\",10)\nassert str(q) == \"4 + 6 = 10\"\nassert q.question_text() == \"4 + 6 = \"\nassert q.check_answer(10) is True and q.check_answer(6) is False"
+      },
+      {
+        "assertion": "a=MathQuestion(35,5,\"/\",7)\nb=MathQuestion(0,2,\"x\",0)\nassert str(a) == \"35 / 5 = 7\" and b.check_answer(0) is True"
+      }
+    ]
+  },
+  "A08-2": {
+    "hint": "Test for q before converting the input to an integer.",
+    "explanation": "Separate the question from its solution. Give each input one response, except q which exits the quiz.",
+    "code": "questions = [(3, \"+\", 12, 15), (14, \"/\", 2, 7), (5, \"x\", 8, 40), (10, \"-\", 4, 6)]\nprint(\"Welcome to cool math:\")\nfor left, operation, right, solution in questions:\n    prompt = \"{0} {1} {2} = \".format(left, operation, right)\n    response = input(prompt)\n    if response == \"q\":\n        break\n    print(\"Correct\" if int(response) == solution else \"Incorrect\")\nprint(\"Good bye!\")\n",
+    "tests": [
+      {
+        "input": [
+          "15",
+          "8",
+          "40",
+          "q"
+        ],
+        "result": "Welcome to cool math:\n3 + 12 = 15\nCorrect\n14 / 2 = 8\nIncorrect\n5 x 8 = 40\nCorrect\n10 - 4 = q\nGood bye!\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "q"
+        ],
+        "result": "Welcome to cool math:\n3 + 12 = q\nGood bye!\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "15",
+          "7",
+          "40",
+          "6"
+        ],
+        "result": "Welcome to cool math:\n3 + 12 = 15\nCorrect\n14 / 2 = 7\nCorrect\n5 x 8 = 40\nCorrect\n10 - 4 = 6\nCorrect\nGood bye!\n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "A09-1": {
+    "hint": "Append each item twice to a new list.",
+    "explanation": "Both copies belong together, before visiting the next item.",
+    "code": "def doubling(values):\n    result = []\n    for value in values:\n        result.append(value)\n        result.append(value)\n    return result\n",
+    "tests": [
+      {
+        "assertion": "a=[4,5,6]\nassert doubling(a) == [4,4,5,5,6,6] and a == [4,5,6]"
+      },
+      {
+        "assertion": "assert doubling([]) == [] and doubling([0]) == [0,0]"
+      }
+    ]
+  },
+  "A09-2": {
+    "hint": "Use the same index in both lists.",
+    "explanation": "One product belongs to each index. Leave the input lists unchanged.",
+    "code": "def list_multiply(list1, list2):\n    result = []\n    for i in range(len(list1)):\n        result.append(list1[i] * list2[i])\n    return result\n",
+    "tests": [
+      {
+        "assertion": "a=[4,5,6]; b=[10,0,1]\nassert list_multiply(a,b) == [40,0,6] and a == [4,5,6] and b == [10,0,1]"
+      },
+      {
+        "assertion": "assert list_multiply([],[]) == [] and list_multiply([-2],[3]) == [-6]"
+      }
+    ]
+  },
+  "A10-1": {
+    "hint": "dict.get(key) can return None when the key is missing.",
+    "explanation": "Read exactly one key. Handle the missing-key case before formatting the successful lookup.",
+    "code": "states = {\n    \"NSW\": \"New South Wales\", \"ACT\": \"Australian Capital Territory\",\n    \"NT\": \"Northern Territory\", \"QLD\": \"Queensland\", \"SA\": \"South Australia\",\n    \"TAS\": \"Tasmania\", \"VIC\": \"Victoria\", \"WA\": \"Western Australia\",\n}\nkey = input(\"Enter state NSW/ACT/NT/QLD/SA/TAS/VIC/WA: \")\nname = states.get(key)\nif name is None:\n    print(\"Unknown state\")\nelse:\n    print(\"The state you entered is \" + name)\n",
+    "tests": [
+      {
+        "input": [
+          "NT"
+        ],
+        "result": "Enter state NSW/ACT/NT/QLD/SA/TAS/VIC/WA: NT\nThe state you entered is Northern Territory\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "XX"
+        ],
+        "result": "Enter state NSW/ACT/NT/QLD/SA/TAS/VIC/WA: XX\nUnknown state\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "WA"
+        ],
+        "result": "Enter state NSW/ACT/NT/QLD/SA/TAS/VIC/WA: WA\nThe state you entered is Western Australia\n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "A10-2": {
+    "hint": "Build a new dictionary on every loop iteration.",
+    "explanation": "Keep the records in a list to preserve entry order. Add the current record before checking whether to finish.",
+    "code": "subjects = []\nprint(\"Welcome to subject enrolment\")\nwhile True:\n    code = input(\"Enter subject code: \")\n    credit_points = int(input(\"Enter credit point: \"))\n    subjects.append({\"code\": code, \"cp\": credit_points})\n    if input(\"Add more subjects? Y/N: \") == \"N\":\n        break\nprint(\"Subject code CP\")\nfor subject in subjects:\n    print(\"{0:<13}{1}\".format(subject[\"code\"], subject[\"cp\"]))\n",
+    "tests": [
+      {
+        "input": [
+          "MATH111",
+          "10",
+          "Y",
+          "CS222",
+          "4",
+          "Y",
+          "LOGIC333",
+          "5",
+          "N"
+        ],
+        "result": "Welcome to subject enrolment\nEnter subject code: MATH111\nEnter credit point: 10\nAdd more subjects? Y/N: Y\nEnter subject code: CS222\nEnter credit point: 4\nAdd more subjects? Y/N: Y\nEnter subject code: LOGIC333\nEnter credit point: 5\nAdd more subjects? Y/N: N\nSubject code CP\nMATH111      10\nCS222        4\nLOGIC333     5\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "CSIT881",
+          "6",
+          "N"
+        ],
+        "result": "Welcome to subject enrolment\nEnter subject code: CSIT881\nEnter credit point: 6\nAdd more subjects? Y/N: N\nSubject code CP\nCSIT881      6\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "CS",
+          "3",
+          "Y",
+          "CS",
+          "6",
+          "N"
+        ],
+        "result": "Welcome to subject enrolment\nEnter subject code: CS\nEnter credit point: 3\nAdd more subjects? Y/N: Y\nEnter subject code: CS\nEnter credit point: 6\nAdd more subjects? Y/N: N\nSubject code CP\nCS           3\nCS           6\n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "A11-1": {
+    "hint": "The int conversion and the division must both run inside the try block.",
+    "explanation": "ValueError means invalid integer text. ZeroDivisionError means the conversion succeeded but the divisor was zero.",
+    "code": "try:\n    left = int(input(\"Enter the 1st integer: \"))\n    right = int(input(\"Enter the 2nd integer: \"))\n    print(\"{0} / {1} = {2}\".format(left, right, left / right))\nexcept ValueError:\n    print(\"You have entered an invalid number\")\nexcept ZeroDivisionError:\n    print(\"Invalid division - cannot divide by 0\")\n",
+    "tests": [
+      {
+        "input": [
+          "13",
+          "2"
+        ],
+        "result": "Enter the 1st integer: 13\nEnter the 2nd integer: 2\n13 / 2 = 6.5\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "13",
+          "0"
+        ],
+        "result": "Enter the 1st integer: 13\nEnter the 2nd integer: 0\nInvalid division - cannot divide by 0\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "13",
+          "abc"
+        ],
+        "result": "Enter the 1st integer: 13\nEnter the 2nd integer: abc\nYou have entered an invalid number\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "abc"
+        ],
+        "result": "Enter the 1st integer: abc\nYou have entered an invalid number\n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "A11-2": {
+    "hint": "Only leave the loop after a successful conversion and range check.",
+    "explanation": "Use try/except for invalid text, then check positivity before printing success and breaking.",
+    "code": "while True:\n    try:\n        value = int(input(\"Enter a positive integer: \"))\n    except ValueError:\n        print(\"Error: Invalid integer format\")\n        continue\n    if value <= 0:\n        print(\"Error: Input must be a positive number\")\n        continue\n    print(\"You have entered {0}\".format(value))\n    break\n",
+    "tests": [
+      {
+        "input": [
+          "abc",
+          "-10",
+          "xyz",
+          "0",
+          "5"
+        ],
+        "result": "Enter a positive integer: abc\nError: Invalid integer format\nEnter a positive integer: -10\nError: Input must be a positive number\nEnter a positive integer: xyz\nError: Invalid integer format\nEnter a positive integer: 0\nError: Input must be a positive number\nEnter a positive integer: 5\nYou have entered 5\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "1"
+        ],
+        "result": "Enter a positive integer: 1\nYou have entered 1\n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "A12-1": {
+    "hint": "Open the file in write mode and send each equation to that file.",
+    "explanation": "Use with open(..., 'w') and write a line per multiplier. The program prints no equation to the console.",
+    "code": "number = int(input(\"Enter a number to generate times table: \"))\nfilename = input(\"Enter output file path: \")\nwith open(filename, \"w\", encoding=\"utf-8\") as table:\n    for multiplier in range(1, 10):\n        table.write(\"{0} x {1} = {2}\\n\".format(number, multiplier, number * multiplier))\n",
+    "tests": [
+      {
+        "input": [
+          "7",
+          "table.txt"
+        ],
+        "result": "Enter a number to generate times table: 7\nEnter output file path: table.txt\n",
+        "files": {},
+        "written": {
+          "table.txt": "7 x 1 = 7\n7 x 2 = 14\n7 x 3 = 21\n7 x 4 = 28\n7 x 5 = 35\n7 x 6 = 42\n7 x 7 = 49\n7 x 8 = 56\n7 x 9 = 63\n"
+        }
+      },
+      {
+        "input": [
+          "0",
+          "table.txt"
+        ],
+        "result": "Enter a number to generate times table: 0\nEnter output file path: table.txt\n",
+        "files": {},
+        "written": {
+          "table.txt": "0 x 1 = 0\n0 x 2 = 0\n0 x 3 = 0\n0 x 4 = 0\n0 x 5 = 0\n0 x 6 = 0\n0 x 7 = 0\n0 x 8 = 0\n0 x 9 = 0\n"
+        }
+      },
+      {
+        "input": [
+          "-2",
+          "table.txt"
+        ],
+        "result": "Enter a number to generate times table: -2\nEnter output file path: table.txt\n",
+        "files": {},
+        "written": {
+          "table.txt": "-2 x 1 = -2\n-2 x 2 = -4\n-2 x 3 = -6\n-2 x 4 = -8\n-2 x 5 = -10\n-2 x 6 = -12\n-2 x 7 = -14\n-2 x 8 = -16\n-2 x 9 = -18\n"
+        }
+      }
+    ]
+  },
+  "A12-2": {
+    "hint": "Iterating a DictReader produces one dictionary per data record.",
+    "explanation": "Open with newline='' for csv, select code, name and cp by key, then format their columns.",
+    "code": "import csv\n\nfilename = input(\"Enter subject filename: \")\nwith open(filename, newline=\"\", encoding=\"utf-8\") as source:\n    for row in csv.DictReader(source):\n        print(\"{0:<10}{1:<30}{2:<10}\".format(row[\"code\"], row[\"name\"], row[\"cp\"]))\n",
+    "tests": [
+      {
+        "input": [
+          "subject.csv"
+        ],
+        "result": "Enter subject filename: subject.csv\nMATH100   Algebra                       6         \nCS200     C++                           2         \nIT300     Biotechnology                 3         \n",
+        "files": {
+          "subject.csv": "code,name,cp\nMATH100,Algebra,6\nCS200,C++,2\nIT300,Biotechnology,3\n"
+        },
+        "written": {}
+      },
+      {
+        "input": [
+          "subject.csv"
+        ],
+        "result": "Enter subject filename: subject.csv\n",
+        "files": {
+          "subject.csv": "code,name,cp\n"
+        },
+        "written": {}
+      },
+      {
+        "input": [
+          "subject.csv"
+        ],
+        "result": "Enter subject filename: subject.csv\nCS100     Data, I                       6         \n",
+        "files": {
+          "subject.csv": "code,name,cp\nCS100,\"Data, I\",6\n"
+        },
+        "written": {}
+      }
+    ]
+  },
+  "A12-3": {
+    "hint": "Use csv.DictWriter with an explicit field order.",
+    "explanation": "Call writeheader once, then write the dictionaries. Use newline='' when opening a file for csv.",
+    "code": "import csv\n\ndef write_subjects(filename, records):\n    with open(filename, \"w\", newline=\"\", encoding=\"utf-8\") as target:\n        writer = csv.DictWriter(target, fieldnames=[\"code\", \"name\", \"cp\"])\n        writer.writeheader()\n        writer.writerows(records)\n",
+    "tests": [
+      {
+        "assertion": "from pathlib import Path\np=Path(\"subject.csv\")\nassert write_subjects(p,[dict(code=\"MATH100\",name=\"Algebra\",cp=6)]) is None\nassert p.read_text() == \"code,name,cp\\nMATH100,Algebra,6\\n\""
+      },
+      {
+        "assertion": "from pathlib import Path\np=Path(\"s.csv\")\nwrite_subjects(p,[dict(code=\"CS1\",name=\"Data, I\",cp=0)])\nassert p.read_text() == 'code,name,cp\\nCS1,\"Data, I\",0\\n'\nwrite_subjects(p,[])\nassert p.read_text() == \"code,name,cp\\n\""
+      }
+    ]
+  },
+  "AS2-1": {
+    "hint": "Compare the spaces immediately before and after each bar.",
+    "explanation": "The word field is centered at width 15. The two numeric fields are right-aligned at width 5. Keep the ruler independent of the row width.",
+    "code": "word = input(\"Enter a word: \")\nvalue = int(input(\"Enter an integer: \"))\noption = input(\"Enter display option (next/pre): \")\nneighbour = value + 1 if option == \"next\" else value - 1\nruler = \"0123456789\" * 3\nrow = \"|{0:^15}|{1:>5}|{2:>5}|\"\nprint(ruler)\nprint(row.format(\"word\", \"int\", option))\nprint(row.format(word, value, neighbour))\nprint(ruler)\n",
+    "tests": [
+      {
+        "input": [
+          "Sydney",
+          "12",
+          "next"
+        ],
+        "result": "Enter a word: Sydney\nEnter an integer: 12\nEnter display option (next/pre): next\n012345678901234567890123456789\n|     word      |  int| next|\n|    Sydney     |   12|   13|\n012345678901234567890123456789\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "executing",
+          "100",
+          "pre"
+        ],
+        "result": "Enter a word: executing\nEnter an integer: 100\nEnter display option (next/pre): pre\n012345678901234567890123456789\n|     word      |  int|  pre|\n|   executing   |  100|   99|\n012345678901234567890123456789\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "A",
+          "0",
+          "pre"
+        ],
+        "result": "Enter a word: A\nEnter an integer: 0\nEnter display option (next/pre): pre\n012345678901234567890123456789\n|     word      |  int|  pre|\n|       A       |    0|   -1|\n012345678901234567890123456789\n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "AS2-2": {
+    "hint": "An order with a total of exactly $35 qualifies.",
+    "explanation": "Compute the subtotal from all three quantities. Show a discount line only for eligible totals and use the same prompts and blank line as the examples.",
+    "code": "print(\"Product A: $5/per item\")\nprint(\"Product B: $10/per item\")\nprint(\"Product C: $30/per item\")\nprint(\"Discount $5 if buy >= $35\")\nprint()\na = int(input(\"How many product A? \"))\nb = int(input(\"How many product B? \"))\nc = int(input(\"How many product C? \"))\ncosts = (a * 5, b * 10, c * 30)\nfor name, quantity, price, cost in zip(\"ABC\", (a, b, c), (5, 10, 30), costs):\n    print(\"Product {0} cost: {1} x ${2} = ${3}\".format(name, quantity, price, cost))\ntotal = sum(costs)\nprint(\"Total cost: ${0} + ${1} + ${2} = ${3}\".format(*costs, total))\nif total >= 35:\n    print(\"Discount: ${0} - $5 = ${1}\".format(total, total - 5))\n    total -= 5\nprint(\"Please pay ${0}\".format(total))\n",
+    "tests": [
+      {
+        "input": [
+          "1",
+          "2",
+          "1"
+        ],
+        "result": "Product A: $5/per item\nProduct B: $10/per item\nProduct C: $30/per item\nDiscount $5 if buy >= $35\n\nHow many product A? 1\nHow many product B? 2\nHow many product C? 1\nProduct A cost: 1 x $5 = $5\nProduct B cost: 2 x $10 = $20\nProduct C cost: 1 x $30 = $30\nTotal cost: $5 + $20 + $30 = $55\nDiscount: $55 - $5 = $50\nPlease pay $50\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "3",
+          "1",
+          "0"
+        ],
+        "result": "Product A: $5/per item\nProduct B: $10/per item\nProduct C: $30/per item\nDiscount $5 if buy >= $35\n\nHow many product A? 3\nHow many product B? 1\nHow many product C? 0\nProduct A cost: 3 x $5 = $15\nProduct B cost: 1 x $10 = $10\nProduct C cost: 0 x $30 = $0\nTotal cost: $15 + $10 + $0 = $25\nPlease pay $25\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "1",
+          "0",
+          "1"
+        ],
+        "result": "Product A: $5/per item\nProduct B: $10/per item\nProduct C: $30/per item\nDiscount $5 if buy >= $35\n\nHow many product A? 1\nHow many product B? 0\nHow many product C? 1\nProduct A cost: 1 x $5 = $5\nProduct B cost: 0 x $10 = $0\nProduct C cost: 1 x $30 = $30\nTotal cost: $5 + $0 + $30 = $35\nDiscount: $35 - $5 = $30\nPlease pay $30\n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "AS2-3": {
+    "hint": "Separate the field width, line width and loop endpoints.",
+    "explanation": "The ruler starts with one leading blank. The star border spans both bars. Build the entire equation and right-align it within the bars. The last first addend is n − 1.",
+    "code": "width = int(input(\"Enter a length value: \"))\ntarget = int(input(\"Enter a number: \"))\nprint(\"Friend of {0} display\".format(target))\nruler = \" \" + \"\".join(str(i % 10) for i in range(1, width + 1))\nborder = \"*\" * (width + 2)\nprint(ruler)\nprint(border)\nfor first in range(1, target):\n    equation = \"{0} + {1} = {2}\".format(first, target - first, target)\n    print(\"|{0:>{1}}|\".format(equation, width))\nprint(border)\nprint(ruler)\n",
+    "tests": [
+      {
+        "input": [
+          "16",
+          "11"
+        ],
+        "result": "Enter a length value: 16\nEnter a number: 11\nFriend of 11 display\n 1234567890123456\n******************\n|     1 + 10 = 11|\n|      2 + 9 = 11|\n|      3 + 8 = 11|\n|      4 + 7 = 11|\n|      5 + 6 = 11|\n|      6 + 5 = 11|\n|      7 + 4 = 11|\n|      8 + 3 = 11|\n|      9 + 2 = 11|\n|     10 + 1 = 11|\n******************\n 1234567890123456\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "15",
+          "7"
+        ],
+        "result": "Enter a length value: 15\nEnter a number: 7\nFriend of 7 display\n 123456789012345\n*****************\n|      1 + 6 = 7|\n|      2 + 5 = 7|\n|      3 + 4 = 7|\n|      4 + 3 = 7|\n|      5 + 2 = 7|\n|      6 + 1 = 7|\n*****************\n 123456789012345\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "9",
+          "2"
+        ],
+        "result": "Enter a length value: 9\nEnter a number: 2\nFriend of 2 display\n 123456789\n***********\n|1 + 1 = 2|\n***********\n 123456789\n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "AS3-1": {
+    "hint": "Use both sample endpoints when inferring the loop range.",
+    "explanation": "For a current value i, compute its square and i + 1. Print the expression before and after evaluating the square. Both endpoints appear.",
+    "code": "start = int(input(\"Enter an integer: \"))\nend = int(input(\"Enter another integer: \"))\nprint(\"Here we go:\")\nfor i in range(start, end + 1):\n    square = i * i\n    successor = i + 1\n    print(\"({0} x {0}) + {1} = {2} + {1} = {3}\".format(i, successor, square, square + successor))\n",
+    "tests": [
+      {
+        "input": [
+          "9",
+          "14"
+        ],
+        "result": "Enter an integer: 9\nEnter another integer: 14\nHere we go:\n(9 x 9) + 10 = 81 + 10 = 91\n(10 x 10) + 11 = 100 + 11 = 111\n(11 x 11) + 12 = 121 + 12 = 133\n(12 x 12) + 13 = 144 + 13 = 157\n(13 x 13) + 14 = 169 + 14 = 183\n(14 x 14) + 15 = 196 + 15 = 211\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "10",
+          "11"
+        ],
+        "result": "Enter an integer: 10\nEnter another integer: 11\nHere we go:\n(10 x 10) + 11 = 100 + 11 = 111\n(11 x 11) + 12 = 121 + 12 = 133\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "0",
+          "0"
+        ],
+        "result": "Enter an integer: 0\nEnter another integer: 0\nHere we go:\n(0 x 0) + 1 = 0 + 1 = 1\n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "AS3-2": {
+    "hint": "Pay attention to uppercase and lowercase in the two examples.",
+    "explanation": "Visit every index and compare its character exactly with the supplied letter. Print the summary after the loop.",
+    "code": "text = input(\"Enter a string: \")\nletter = input(\"Enter a letter: \")\nprint(\"Searching {0} in {1}:\".format(letter, text))\ncount = 0\nfor i in range(len(text)):\n    current = text[i]\n    if current == letter:\n        label = \"match\"\n        count += 1\n    else:\n        label = \"NOT match\"\n    print(\"Index {0}: {1} {2}\".format(i, current, label))\nprint(\"Match count: {0}\".format(count))\n",
+    "tests": [
+      {
+        "input": [
+          "Abcabcaa",
+          "a"
+        ],
+        "result": "Enter a string: Abcabcaa\nEnter a letter: a\nSearching a in Abcabcaa:\nIndex 0: A NOT match\nIndex 1: b NOT match\nIndex 2: c NOT match\nIndex 3: a match\nIndex 4: b NOT match\nIndex 5: c NOT match\nIndex 6: a match\nIndex 7: a match\nMatch count: 3\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "Dog",
+          "G"
+        ],
+        "result": "Enter a string: Dog\nEnter a letter: G\nSearching G in Dog:\nIndex 0: D NOT match\nIndex 1: o NOT match\nIndex 2: g NOT match\nMatch count: 0\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "",
+          "a"
+        ],
+        "result": "Enter a string: \nEnter a letter: a\nSearching a in :\nMatch count: 0\n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "AS3-3": {
+    "hint": "Select the operator, then return an integer.",
+    "explanation": "Use // for floor division. For negative operands it rounds down, so −5 // 3 is −2.",
+    "code": "def operate_2_numbers(number1, number2, operator):\n    if operator == \"+\":\n        return number1 + number2\n    if operator == \"-\":\n        return number1 - number2\n    if operator == \"x\":\n        return number1 * number2\n    return number1 // number2\n",
+    "tests": [
+      {
+        "assertion": "result = operate_2_numbers(2,5,'+'); assert type(result) is int and result == 7"
+      },
+      {
+        "assertion": "result = operate_2_numbers(5,3,'-'); assert type(result) is int and result == 2"
+      },
+      {
+        "assertion": "result = operate_2_numbers(5,4,'x'); assert type(result) is int and result == 20"
+      },
+      {
+        "assertion": "result = operate_2_numbers(5,3,'/'); assert type(result) is int and result == 1"
+      },
+      {
+        "assertion": "result = operate_2_numbers(-5,3,'/'); assert type(result) is int and result == -2"
+      },
+      {
+        "assertion": "result = operate_2_numbers(0,4,'x'); assert type(result) is int and result == 0"
+      }
+    ]
+  },
+  "LAB-1": {
+    "hint": "For descending order, a larger item moves left past a smaller neighbour.",
+    "explanation": "Read the sentinel before converting to int. After collecting inputs, run insertion sort beginning at index 1. A strict comparison keeps equal adjacent values in their original order.",
+    "code": "values = []\nwhile True:\n    text = input(\"Enter an integer or q to quit: \")\n    if text == \"q\":\n        break\n    values.append(int(text))\nprint(\"Before insertion sort: {0}\".format(values))\nfor i in range(1, len(values)):\n    j = i\n    while j > 0 and values[j - 1] < values[j]:\n        values[j - 1], values[j] = values[j], values[j - 1]\n        j -= 1\nprint(\"After insertion sort: {0}\".format(values))\n",
+    "tests": [
+      {
+        "input": [
+          "4",
+          "-7",
+          "66",
+          "12",
+          "3",
+          "q"
+        ],
+        "result": "Enter an integer or q to quit: 4\nEnter an integer or q to quit: -7\nEnter an integer or q to quit: 66\nEnter an integer or q to quit: 12\nEnter an integer or q to quit: 3\nEnter an integer or q to quit: q\nBefore insertion sort: [4, -7, 66, 12, 3]\nAfter insertion sort: [66, 12, 4, 3, -7]\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "q"
+        ],
+        "result": "Enter an integer or q to quit: q\nBefore insertion sort: []\nAfter insertion sort: []\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "3",
+          "3",
+          "-1",
+          "4",
+          "q"
+        ],
+        "result": "Enter an integer or q to quit: 3\nEnter an integer or q to quit: 3\nEnter an integer or q to quit: -1\nEnter an integer or q to quit: 4\nEnter an integer or q to quit: q\nBefore insertion sort: [3, 3, -1, 4]\nAfter insertion sort: [4, 3, 3, -1]\n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "LAB-2": {
+    "hint": "Check the integer interval after conversion.",
+    "explanation": "Handle conversion separately. The two boundaries are valid marks.",
+    "code": "try:\n    mark = int(input(\"Enter Quiz 1 mark: \"))\nexcept ValueError:\n    print(\"Error: invalid integer\")\nelse:\n    if 0 <= mark <= 10:\n        print(\"Accepted mark: {0}\".format(mark))\n    else:\n        print(\"Error: out of range\")\n",
+    "tests": [
+      {
+        "input": [
+          "8"
+        ],
+        "result": "Enter Quiz 1 mark: 8\nAccepted mark: 8\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "x"
+        ],
+        "result": "Enter Quiz 1 mark: x\nError: invalid integer\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "0"
+        ],
+        "result": "Enter Quiz 1 mark: 0\nAccepted mark: 0\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "10"
+        ],
+        "result": "Enter Quiz 1 mark: 10\nAccepted mark: 10\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "11"
+        ],
+        "result": "Enter Quiz 1 mark: 11\nError: out of range\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "-1"
+        ],
+        "result": "Enter Quiz 1 mark: -1\nError: out of range\n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "B03-1": {
+    "hint": "Count the matching position as a visited position.",
+    "explanation": "Both return index 3. Algorithm 1 visits 6 positions and is Θ(n) in both cases. Algorithm 2 visits 4, with best case Θ(1) and worst case Θ(n).",
+    "traceTest": "\nfrom itertools import takewhile\na = [4,6,-3,7,1,5]\nb = [8,-6,8,7,4,5]\nmatches = [x == y for x,y in zip(a,b)]\nassert matches.index(True) == 3 and len(matches) == 6\nassert len(list(takewhile(lambda same: not same, matches))) + 1 == 4\nassert [False, False].count(True) == 0\n"
+  },
+  "B03-2": {
+    "hint": "The fallback applies only after every position has been examined.",
+    "explanation": "Define the function, loop over indices, then test equality and return the index inside the condition. Return −1 after the loop.",
+    "order": [
+      "C",
+      "E",
+      "A",
+      "D",
+      "B"
+    ],
+    "traceTest": "assert first_match([4,6,-3,7,1,5],[8,-6,8,7,4,5]) == 3\nassert first_match([1,2],[1,2]) == 0\nassert first_match([],[]) == -1\nassert first_match([1,2],[3,2]) == 1"
+  },
+  "B05-1": {
+    "hint": "Separate the sorted region from the region still being processed.",
+    "explanation": "Insert each incoming value into the sorted prefix. Rounds 1 and 2 end in the same state.\n\nRound 1: [10, 60, 90, 50, 100, 80, 70, 30, 40, 20]\nRound 2: [10, 60, 90, 50, 100, 80, 70, 30, 40, 20]\nRound 3: [10, 50, 60, 90, 100, 80, 70, 30, 40, 20]",
+    "traceTest": "values = [60, 10, 90, 50, 100, 80, 70, 30, 40, 20]\nseen = []\nfor i in range(1, 4):\n    values[:i+1] = sorted(values[:i+1])\n    seen.append(values.copy())\nassert seen == [[10, 60, 90, 50, 100, 80, 70, 30, 40, 20], [10, 60, 90, 50, 100, 80, 70, 30, 40, 20], [10, 50, 60, 90, 100, 80, 70, 30, 40, 20]], seen"
+  },
+  "B05-2": {
+    "hint": "Separate the sorted region from the region still being processed.",
+    "explanation": "At each round one minimum lands in its final slot. Round 1 moves 20 in front of the remaining suffix.\n\nRound 0: [10, 60, 90, 50, 100, 80, 70, 30, 40, 20]\nRound 1: [10, 20, 90, 50, 100, 80, 70, 30, 40, 60]\nRound 2: [10, 20, 30, 50, 100, 80, 70, 90, 40, 60]",
+    "traceTest": "values = [60, 10, 90, 50, 100, 80, 70, 30, 40, 20]\nseen = []\nfor i in range(3):\n    j = values.index(min(values[i:]),i)\n    values[i],values[j] = values[j],values[i]\n    seen.append(values.copy())\nassert seen == [[10, 60, 90, 50, 100, 80, 70, 30, 40, 20], [10, 20, 90, 50, 100, 80, 70, 30, 40, 60], [10, 20, 30, 50, 100, 80, 70, 90, 40, 60]], seen"
+  },
+  "B05-3": {
+    "hint": "Separate the sorted region from the region still being processed.",
+    "explanation": "The first three rounds park 100, then 90, then 80 at the right end.\n\nRound 0: [10, 60, 50, 90, 80, 70, 30, 40, 20, 100]\nRound 1: [10, 50, 60, 80, 70, 30, 40, 20, 90, 100]\nRound 2: [10, 50, 60, 70, 30, 40, 20, 80, 90, 100]",
+    "traceTest": "values = [60, 10, 90, 50, 100, 80, 70, 30, 40, 20]\nseen = []\nfor high in range(len(values)-1,len(values)-4,-1):\n    for left in range(high):\n        if values[left] > values[left+1]:\n            values[left], values[left+1] = values[left+1], values[left]\n    seen.append(values.copy())\nassert seen == [[10, 60, 50, 90, 80, 70, 30, 40, 20, 100], [10, 50, 60, 80, 70, 30, 40, 20, 90, 100], [10, 50, 60, 70, 30, 40, 20, 80, 90, 100]], seen"
+  },
+  "B05-4": {
+    "hint": "At the start of each outer pass, begin with the newly considered index.",
+    "explanation": "Start at index 1. Set j to the incoming index, swap while the pair is out of order, and move j left after each swap.",
+    "order": [
+      "C",
+      "F",
+      "A",
+      "E",
+      "B",
+      "D"
+    ],
+    "traceTest": "a=[60, 10, 90, 50, 100, 80, 70, 30, 40, 20]\ninsertion_sort(a)\nassert a == [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]\nb=[2,-1,2]\ninsertion_sort(b)\nassert b == [-1,2,2]\ninsertion_sort([])"
+  },
+  "B05-5": {
+    "hint": "Update the minimum index inside the scan; swap outside it.",
+    "explanation": "Reset the minimum candidate at each outer iteration. The inner loop compares all subsequent positions before the exchange.",
+    "order": [
+      "C",
+      "F",
+      "B",
+      "E",
+      "D",
+      "A"
+    ],
+    "traceTest": "a=[60, 10, 90, 50, 100, 80, 70, 30, 40, 20]\nselection_sort(a)\nassert a == [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]\nb=[2,2,-1]\nselection_sort(b)\nassert b == [-1,2,2]\nselection_sort([])"
+  },
+  "B05-6": {
+    "hint": "Reset swapped before the adjacent-pair loop.",
+    "explanation": "A swap sets the pass flag. Only evaluate the early exit after finishing every comparison in the current pass.",
+    "order": [
+      "C",
+      "G",
+      "B",
+      "F",
+      "E",
+      "D",
+      "A"
+    ],
+    "traceTest": "a=[60, 10, 90, 50, 100, 80, 70, 30, 40, 20]\nbubble_sort(a)\nassert a == [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]\nb=[1,1,2]\nbubble_sort(b)\nassert b == [1,1,2]\nbubble_sort([])"
+  },
+  "B07-1": {
+    "hint": "Saving the old first node makes it possible to keep the remainder of the list reachable.",
+    "explanation": "After insertion: head 9, order 9, 7, 8, 3, 5. After removal: head 7, order 7, 8, 3, 5. Removal returns 9. An empty list returns None (NULL on the slide).",
+    "traceTest": "\nfrom collections import deque\nq=deque([7,8,3,5]); q.appendleft(9)\nassert q[0] == 9 and list(q) == [9,7,8,3,5]\nassert q.popleft() == 9 and list(q) == [7,8,3,5]\n"
+  },
+  "B07-2": {
+    "hint": "Read the first node's datum before moving the head.",
+    "explanation": "Guard the empty case, save the datum, update the head, and return the saved datum.",
+    "order": [
+      "D",
+      "E",
+      "A",
+      "C",
+      "B"
+    ],
+    "traceTest": "class Node:\n    def __init__(self, datum, next_node=None):\n        self.datum = datum\n        self.next = next_node\n\nclass ListOwner:\n    def __init__(self, first_node=None):\n        self.firstNode = first_node\n\nowner=ListOwner(Node(7,Node(8,Node(3,Node(5)))))\nfor expected in (7,8,3,5,None):\n    assert remove_first(owner) == expected\nassert owner.firstNode is None\n"
+  },
+  "B07-3": {
+    "hint": "Advance both the node reference and the current index.",
+    "explanation": "Start at the head, then move until either the current index is the target or the reference is None.",
+    "order": [
+      "C",
+      "E",
+      "B",
+      "D",
+      "A"
+    ],
+    "traceTest": "class Node:\n    def __init__(self, datum, next_node=None):\n        self.datum = datum\n        self.next = next_node\n\nclass ListOwner:\n    def __init__(self, first_node=None):\n        self.firstNode = first_node\n\nhead=Node(7,Node(8,Node(3,Node(5))))\nowner=ListOwner(head)\nassert get_node(owner,0) is head\nassert get_node(owner,2).datum == 3\nassert get_node(owner,4) is None and get_node(ListOwner(),0) is None\n"
+  },
+  "B09-1": {
+    "hint": "A closing bracket matches only the most recent unmatched opening bracket.",
+    "explanation": "After openings: ['{'], ['{','['], ['{','[','(']. The first ')' pops '(' and leaves ['{','[']. The next ')' encounters '[' and the expression is rejected.",
+    "traceTest": "def balanced(text):\n    closing = {\")\": \"(\", \"]\": \"[\", \"}\": \"{\"}\n    stack = []\n    for char in text:\n        if char in \"([{\":\n            stack.append(char)\n        elif char in closing:\n            if not stack or stack.pop() != closing[char]:\n                return False\n    return not stack\n\nstack=[]; states=[]\nfor c in \"{[(\":\n    stack.append(c); states.append(stack.copy())\nassert states == [[\"{\"],[\"{\",\"[\"],[\"{\",\"[\",\"(\"]]\nassert stack.pop() == \"(\" and stack == [\"{\",\"[\"]\nassert stack[-1] == \"[\"\nassert not balanced(\"y + {w * [(2+k)) - z]}\")\nassert balanced(\"y + {w * [(2+k) - z]}\")\n"
+  },
+  "B09-2": {
+    "hint": "The final check must detect opening brackets that were never closed.",
+    "explanation": "Initialise an empty stack, scan each character, push openers, check and pop closers, then verify that the stack is empty after the scan.",
+    "order": [
+      "D",
+      "C",
+      "B",
+      "E",
+      "A"
+    ],
+    "traceTest": "assert balanced(\"([])\") and balanced(\"\") and balanced(\"a+(b)\")\nassert not balanced(\"([)]\") and not balanced(\"]\") and not balanced(\"[\")"
+  },
+  "B09-3": {
+    "hint": "Dequeue twice and enqueue once in a normal round.",
+    "explanation": "Round 1 (1,2): [3,4,5,6,7,8,9,10,11,12,1]. Round 2 (3,4): [5,6,7,8,9,10,11,12,1,3]. Round 3 (5,6): [7,8,9,10,11,12,1,3,5]. Survivor: 9.",
+    "traceTest": "\nfrom collections import deque\nq=deque(range(1,13)); states=[]\nwhile len(q)>1:\n    first,removed=q.popleft(),q.popleft()\n    q.append(first)\n    states.append((first,removed,list(q)))\nassert states[:3] == [(1,2,[3,4,5,6,7,8,9,10,11,12,1]),(3,4,[5,6,7,8,9,10,11,12,1,3]),(5,6,[7,8,9,10,11,12,1,3,5])]\nassert list(q) == [9]\n"
+  },
+  "B09-4": {
+    "hint": "Test for an empty queue again after moving the front reference.",
+    "explanation": "Check for an empty input, save the datum, advance the front, clear the rear if needed, and return the datum.",
+    "order": [
+      "D",
+      "F",
+      "E",
+      "A",
+      "C",
+      "B"
+    ],
+    "traceTest": "class Node:\n    def __init__(self, datum, next_node=None):\n        self.datum = datum\n        self.next = next_node\n\nclass ListOwner:\n    def __init__(self, first_node=None):\n        self.firstNode = first_node\n\nq=ListOwner()\none=Node(1); two=Node(2)\none.next=two; q.frontNode=one; q.endNode=two\nassert dequeue(q) == 1 and q.frontNode is two and q.endNode is two\nassert dequeue(q) == 2 and q.frontNode is None and q.endNode is None\nassert dequeue(q) is None\n"
+  },
+  "B11-1": {
+    "hint": "Use the position of the visit relative to the two child calls.",
+    "explanation": "In-order: D B H E I A J F K C G L.\nPre-order: A B D E H I C F J K G L.\nPost-order: D H I E B J K F L G C A.\nLevel-order: A B C D E F G H I J K L.",
+    "traceTest": "\nedges = {'A': ['B', 'C'], 'B': ['D', 'E'], 'E': ['H', 'I'], 'C': ['F', 'G'], 'F': ['J', 'K'], 'G': [None, 'L']}\ndef traverse(node, order):\n    if node is None:\n        return []\n    left,right = edges.get(node,[None,None])\n    return sum(({\"L\":lambda:traverse(left,order), \"N\":lambda:[node], \"R\":lambda:traverse(right,order)}[k]() for k in order), [])\n\nfrom collections import deque\nassert traverse(\"A\",\"LNR\")==list(\"DBHEIAJFKCGL\")\nassert traverse(\"A\",\"NLR\")==list(\"ABDEHICFJKGL\")\nassert traverse(\"A\",\"LRN\")==list(\"DHIEBJKFLGCA\")\nqueue=deque([\"A\"]); seen=[]\nwhile queue:\n    node=queue.popleft(); seen.append(node)\n    queue.extend(child for child in edges.get(node,[]) if child is not None)\nassert seen == list(\"ABCDEFGHIJKL\")\n"
+  },
+  "B11-2": {
+    "hint": "An absent child must return before any attribute access.",
+    "explanation": "Return on None. Visit the left subtree, print the node, and visit the right subtree.",
+    "order": [
+      "D",
+      "B",
+      "E",
+      "A",
+      "C"
+    ],
+    "traceTest": "\nedges = {'A': ['B', 'C'], 'B': ['D', 'E'], 'E': ['H', 'I'], 'C': ['F', 'G'], 'F': ['J', 'K'], 'G': [None, 'L']}\ndef traverse(node, order):\n    if node is None:\n        return []\n    left,right = edges.get(node,[None,None])\n    return sum(({\"L\":lambda:traverse(left,order), \"N\":lambda:[node], \"R\":lambda:traverse(right,order)}[k]() for k in order), [])\n\nfrom contextlib import redirect_stdout\nfrom io import StringIO\nfrom types import SimpleNamespace\ndef make_tree(node):\n    if node is None:\n        return None\n    l,r=edges.get(node,[None,None])\n    return SimpleNamespace(datum=node,left=make_tree(l),right=make_tree(r))\nbuffer=StringIO()\nwith redirect_stdout(buffer):\n    visit_in_order(make_tree(\"A\"))\nassert buffer.getvalue().split() == list(\"DBHEIAJFKCGL\")\n"
+  },
+  "B11-3": {
+    "hint": "Each comparison eliminates the entire opposite subtree.",
+    "explanation": "67: 76 → 50 → 68 → 62 → 67, found. 75: 76 → 50 → 68 → 73, then missing right child. Insert 75 as the right child of 73.",
+    "traceTest": "\nedges={'76': ['50', '97'], '50': [None, '68'], '68': ['62', '73'], '62': ['60', '67'], '97': ['86', None], '86': ['77', None]}\ndef route(value):\n    path=[]; current=\"76\"\n    while current is not None:\n        path.append(int(current))\n        if value == int(current):\n            return (path,True,None)\n        direction=int(value > int(current))\n        current=edges.get(current,[None,None])[direction]\n    return (path,False,direction)\nassert route(67) == ([76,50,68,62,67],True,None)\nassert route(75) == ([76,50,68,73],False,1)\n"
+  },
+  "A04-3": {
+    "hint": "The valid string indices end at len(text) − 1.",
+    "explanation": "A for loop over the indices visits each character once. A space is a character and must occupy its own output line.",
+    "code": "text = input(\"Enter a string: \")\nfor i in range(len(text)):\n    print(text[i])\n",
+    "tests": [
+      {
+        "input": [
+          "Hi there!"
+        ],
+        "result": "Enter a string: Hi there!\nH\ni\n \nt\nh\ne\nr\ne\n!\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          ""
+        ],
+        "result": "Enter a string: \n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "A11-3": {
+    "hint": "The conversion can already raise ValueError. Check the numeric range afterwards.",
+    "explanation": "Use int first. Raise the specified error only when the integer is out of range.",
+    "code": "def parse_positive(text):\n    value = int(text)\n    if value <= 0:\n        raise ValueError(\"Input must be a positive number\")\n    return value\n",
+    "tests": [
+      {
+        "assertion": "assert parse_positive(\"5\") == 5 and parse_positive(\" 1 \") == 1"
+      },
+      {
+        "assertion": "for bad in (\"0\",\"-10\"):\n    try:\n        parse_positive(bad)\n    except ValueError as error:\n        assert str(error) == \"Input must be a positive number\"\n    else:\n        raise AssertionError(bad)"
+      },
+      {
+        "assertion": "try:\n    parse_positive(\"abc\")\nexcept ValueError as error:\n    assert \"invalid literal\" in str(error)\nelse:\n    raise AssertionError(\"missing ValueError\")"
+      }
+    ]
+  },
+  "B03-3": {
+    "hint": "Compare growth rates as n becomes large; constant coefficients do not affect the class.",
+    "explanation": "In order: O(1), O(n), O(n), O(log n), O(n²), O(n²). In the last expression, n² eventually dominates n log n.",
+    "traceTest": "\n# Rank terms by asymptotic growth: 1, log n, n, n log n, n^2.\nexpressions = [(0,),(2,0),(2,1,0),(1,0),(4,2,0),(3,4,2)]\nassert list(map(max,expressions)) == [0,2,2,1,4,4]\n"
+  },
+  "B07-4": {
+    "hint": "The previous-node reference is still None if the traversal does not advance.",
+    "explanation": "The previous node is 3; return 5 and set 3.next to None. For the one-node list, set firstNode to None and return 7.",
+    "traceTest": "\nvalues=[7,8,3,5]\nassert values[-2:] == [3,5]\nassert values.pop() == 5 and values == [7,8,3]\nsingle=[7]\nassert single.pop() == 7 and not single\n"
+  },
+  "B09-5": {
+    "hint": "Inserting the first node sets both end references to the same node.",
+    "explanation": "After 7: front 7 and rear 7; 7.next is None. After 8: front 7 and rear 8; 7.next points to 8, 8.next is None. After dequeuing both, frontNode and endNode are None.",
+    "traceTest": "class Node:\n    def __init__(self, datum, next_node=None):\n        self.datum = datum\n        self.next = next_node\n\nclass ListOwner:\n    def __init__(self, first_node=None):\n        self.firstNode = first_node\n\ndef enqueue(q, value):\n    node = Node(value)\n    if q.frontNode is None:\n        q.frontNode = node\n    else:\n        q.endNode.next = node\n    q.endNode = node\nq=ListOwner()\nq.frontNode=q.endNode=None\nenqueue(q,7)\nassert q.frontNode is q.endNode and q.endNode.datum == 7 and q.endNode.next is None\nenqueue(q,8)\nassert q.frontNode.datum == 7 and q.endNode.datum == 8 and q.frontNode.next is q.endNode\nassert q.endNode.next is None\n"
+  }
+}

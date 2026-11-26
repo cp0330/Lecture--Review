@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSIT881 · 第二轮闭卷自测</title>
+  <meta name="description" content="CSIT881 Lecture A、Lecture B 和闭卷作业复习题。">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="back-link" href="../">Lecture Review</a>
+      <span>CSIT881 / Programming and Data Structures</span>
+    </div>
+  </header>
+  <main class="shell">
+    <section class="intro" aria-labelledby="page-title">
+      <div>
+        <h1 id="page-title">第二轮闭卷自测</h1>
+        <p>先读英文并提交，再揭示答案。作答和状态保存在当前浏览器。</p>
+      </div>
+      <div id="totals" class="totals" aria-label="练习进度"></div>
+    </section>
+    <div class="workspace">
+      <aside class="bank" aria-labelledby="bank-title">
+        <h2 id="bank-title">题目</h2>
+        <div class="filters">
+          <label for="search">搜索</label>
+          <input id="search" type="search" placeholder="题名、编号或来源">
+          <div class="filter-row">
+            <label>范围<select id="section">
+              <option value="">全部</option>
+              <option value="Diagnostics">Friend of n 诊断</option>
+              <option value="Lecture A">Lecture A</option>
+              <option value="Lecture B">Lecture B</option>
+              <option value="Lab">Lab</option>
+              <option value="Assignment">闭卷 Assignment</option>
+            </select></label>
+            <label>状态<select id="status">
+              <option value="">全部</option>
+              <option value="unseen">待测</option>
+              <option value="independent">独立通过</option>
+              <option value="assisted">提示后通过</option>
+              <option value="review">待复测</option>
+            </select></label>
+          </div>
+        </div>
+        <p class="result-count" id="count" role="status"></p>
+        <nav id="question-list" class="question-list" aria-label="筛选后的题目"></nav>
+      </aside>
+      <div class="work-area">
+        <article class="question" id="question" aria-label="当前题目">
+          <p id="load-message" role="status">正在加载题库…</p>
+        </article>
+        <nav id="question-navigation" class="question-navigation" aria-label="上一题与下一题">
+          <button type="button" id="previous" disabled>← 上一题</button>
+          <button type="button" id="next" disabled>下一题 →</button>
+        </nav>
+      </div>
+    </div>
+  </main>
+  <noscript>此题库需要启用 JavaScript。</noscript>
+  <footer class="shell footer"><a href="https://github.com/cp0330/Lecture--Review/tree/main/CSIT881">题库来源与验证记录</a></footer>
+</body>
+</html>

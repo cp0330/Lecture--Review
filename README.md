@@ -2,6 +2,13 @@
 
 课程复习题库，按课件顺序组织。
 
+## CSIT881 · Programming and Data Structures
+
+58 道第二轮闭卷自测题，覆盖 Lecture A、Lecture B、专题 Lab 和两次闭卷 Assignment。
+
+- [打开 CSIT881 在线题库](https://cp0330.github.io/Lecture--Review/CSIT881/)
+- [覆盖范围与验证记录](CSIT881/README.md)
+
 ## CSIT884 · Web Development
 
 **5 道补考母题、10 道变式、1 道综合题及原 37 题，附中文解析与可运行参考。**
