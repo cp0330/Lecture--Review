@@ -1,3 +1,787 @@
+# CSIT884 参考答案
+
+## E1 · 课程表与两段说明
+
+先写 table，再给每行加 tr。第一行用 th 表示列名，下一行用 td 放数据。
+head 里的 th, td 同时选中两类格子；border-collapse 写在 table 上。
+第一段 class="note" 对应 .note；第二段把 color 放进自己的 style 属性。
+
+### e1.html
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>课程表与两段说明</title>
+<style>
+table { border-collapse: collapse; }
+th, td { border: 1px solid black; padding: 4px; }
+.note { color: navy; }
+</style>
+</head>
+<body>
+<table>
+  <tr><th>Unit</th><th>Room</th></tr>
+  <tr><td>Web</td><td>B12</td></tr>
+</table>
+<p class="note">Spring timetable</p>
+<p style="color: red">Check your room</p>
+</body>
+</html>
+```
+
+
+## E1-A · 基础变式 · 单列成绩
+
+每个 tr 只放一个格子。
+内部规则列出 th 和 td，行内颜色只作用于 p。
+
+### e1-a.html
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>基础变式 · 单列成绩</title>
+<style>
+th, td { border: 1px solid black; }
+</style>
+</head>
+<body>
+<table>
+  <tr><th>Mark</th></tr>
+  <tr><td>85</td></tr>
+</table>
+<p style="color: green">Result</p>
+</body>
+</html>
+```
+
+
+## E1-B · 进阶变式 · 合并表头
+
+colspan 写在占两列的 th 上，下面的行仍各写两格。
+p 规则给两个段落同一个默认色，第二段自己的 style 覆盖它。
+
+### e1-b.html
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>进阶变式 · 合并表头</title>
+<style>
+table { border-collapse: collapse; }
+th, td { border: 1px solid black; padding: 4px; }
+p { color: navy; }
+</style>
+</head>
+<body>
+<table>
+  <tr><th colspan="2">Timetable</th></tr>
+  <tr><th>Unit</th><th>Room</th></tr>
+  <tr><td>Web</td><td>B12</td></tr>
+</table>
+<p>Week 1</p>
+<p style="color: red">Revised</p>
+</body>
+</html>
+```
+
+
+## E2 · 三个标签共用一个结果框
+
+页面先用 JSON.parse 把字符串转成数组。
+事件传入 0、1 等下标，units[index] 取出对应的整条记录。
+用 textContent 替换旧内容。用 result.style.color 读取记录中的颜色并应用到 div。
+
+### e2.html
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Unit rooms</title>
+<script>
+var jsonText = '[{"code":"WEB","room":"B12","color":"navy"},{"code":"DB","room":"C20","color":"green"},{"code":"AI","room":"A08","color":"purple"}]';
+var units = JSON.parse(jsonText);
+
+function showUnit(index) {
+  // Each label selects one record in the same array.
+  var unit = units[index];
+  var result = document.getElementById("result");
+  result.textContent = unit.code + ": " + unit.room;
+  result.style.color = unit.color;
+}
+</script>
+</head>
+<body>
+<span onmouseover="showUnit(0)">WEB</span>
+<span onmouseover="showUnit(1)">DB</span>
+<span onmouseover="showUnit(2)">AI</span>
+<div id="result">Choose a unit</div>
+</body>
+</html>
+```
+
+
+## E2-A · 基础变式 · 两个标签
+
+页面先用 JSON.parse 把字符串转成数组。
+事件传入 0、1 等下标，units[index] 取出对应的整条记录。
+用 textContent 替换旧内容。从一个标签移到另一个，旧结果应消失。
+
+### e2-a.html
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Unit rooms</title>
+<script>
+var jsonText = '[{"code":"WEB","room":"B12","color":"navy"},{"code":"DB","room":"C20","color":"green"}]';
+var units = JSON.parse(jsonText);
+
+function showUnit(index) {
+  // Each label selects one record in the same array.
+  var unit = units[index];
+  var result = document.getElementById("result");
+  result.textContent = unit.code + ": " + unit.room;
+}
+</script>
+</head>
+<body>
+<span onmouseover="showUnit(0)">WEB</span>
+<span onmouseover="showUnit(1)">DB</span>
+<div id="result">Choose a unit</div>
+</body>
+</html>
+```
+
+
+## E2-B · 进阶变式 · 移出时复原
+
+页面先用 JSON.parse 把字符串转成数组。
+事件传入 0、1 等下标，units[index] 取出对应的整条记录。
+用 textContent 替换旧内容。用 result.style.color 读取记录中的颜色并应用到 div。
+移出时同时重设文字和颜色。
+
+### e2-b.html
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Unit rooms</title>
+<script>
+var jsonText = '[{"code":"WEB","room":"B12","color":"navy"},{"code":"DB","room":"C20","color":"green"},{"code":"AI","room":"A08","color":"purple"}]';
+var units = JSON.parse(jsonText);
+
+function showUnit(index) {
+  // Each label selects one record in the same array.
+  var unit = units[index];
+  var result = document.getElementById("result");
+  result.textContent = unit.code + ": " + unit.room;
+  result.style.color = unit.color;
+}
+function clearUnit() {
+  var result = document.getElementById("result");
+  result.textContent = "Choose a unit";
+  result.style.color = "black";
+}
+</script>
+</head>
+<body>
+<span onmouseover="showUnit(0)" onmouseout="clearUnit()">WEB</span>
+<span onmouseover="showUnit(1)" onmouseout="clearUnit()">DB</span>
+<span onmouseover="showUnit(2)" onmouseout="clearUnit()">AI</span>
+<div id="result">Choose a unit</div>
+</body>
+</html>
+```
+
+
+## E3 · 报名表的五种控件
+
+form 的 action 决定接收页，method="get" 把选中的 name=value 放进网址。
+输入框的 name 与 select 的 name 是字段名；option 的 value 是服务器要的值。
+两个 radio 的 name 相同才能互斥，每项用自己的 value。
+Reset 恢复标记中的初始内容；Submit 后看地址栏，核对字段名、值及大小写。
+
+### e3.html
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Registration</title>
+</head>
+<body>
+<form action="receipt.html" method="get">
+  <p><label>User: <input type="text" name="user"></label></p>
+  <p>Mode:
+    <label><input type="radio" name="mode" value="campus" checked>Campus</label>
+    <label><input type="radio" name="mode" value="online">Online</label>
+  </p>
+  <label>Day:
+    <select name="day">
+      <option value="mon" selected>Monday</option>
+      <option value="fri">Friday</option>
+    </select>
+  </label>
+  <input type="submit" value="Submit">
+  <input type="reset" value="Reset">
+</form>
+</body>
+</html>
+```
+
+
+## E3-A · 基础变式 · 两个提交字段
+
+form 的 action 决定接收页，method="get" 把选中的 name=value 放进网址。
+输入框的 name 与 select 的 name 是字段名；option 的 value 是服务器要的值。
+Reset 恢复标记中的初始内容；Submit 后看地址栏，核对字段名、值及大小写。
+
+### e3-a.html
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Registration</title>
+</head>
+<body>
+<form action="receipt.html" method="get">
+  <p><label>User: <input type="text" name="user"></label></p>
+  <label>Day:
+    <select name="day">
+      <option value="mon" selected>Monday</option>
+      <option value="fri">Friday</option>
+    </select>
+  </label>
+  <input type="submit" value="Submit">
+  <input type="reset" value="Reset">
+</form>
+</body>
+</html>
+```
+
+
+## E3-B · 进阶变式 · 带默认值的登记表
+
+form 的 action 决定接收页，method="get" 把选中的 name=value 放进网址。
+输入框的 name 与 select 的 name 是字段名；option 的 value 是服务器要的值。
+两个 radio 的 name 相同才能互斥，每项用自己的 value。
+Reset 恢复标记中的初始内容；Submit 后看地址栏，核对字段名、值及大小写。
+
+### e3-b.html
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Registration</title>
+</head>
+<body>
+<form action="receipt.html" method="get">
+  <p><label>User: <input type="text" name="user" value="Demo"></label></p>
+  <p>Mode:
+    <label><input type="radio" name="mode" value="campus">Campus</label>
+    <label><input type="radio" name="mode" value="online" checked>Online</label>
+  </p>
+  <label>Day:
+    <select name="day">
+      <option value="mon">Monday</option>
+      <option value="fri" selected>Friday</option>
+    </select>
+  </label>
+  <input type="submit" value="Submit">
+  <input type="reset" value="Reset">
+</form>
+</body>
+</html>
+```
+
+
+## E4 · 每秒增加一个用户名
+
+count 记数量，timer 记时钟编号，两者跨调用保存。
+Start 先画 1 个，再把 tick 函数交给 setInterval；1000 毫秒后才调用第一次。
+tick 先加一，超过 10 才归一。drawNames 从一个名字起步，再补 count−1 个，替换上次整行。
+
+### e4.html
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Name animation</title>
+<script>
+var count = 1;
+var timer = null;
+
+function drawNames() {
+  // Rebuild the current line from the count.
+  var line = "demo";
+  for (var i = 1; i < count; i++) {
+    line += " demo";
+  }
+  document.getElementById("result").textContent = line;
+}
+
+function tick() {
+  count++;
+  if (count > 10) {
+    count = 1;
+  }
+  drawNames();
+}
+
+function start() {
+  if (timer !== null) { return; }
+  count = 1;
+  drawNames();
+  timer = setInterval(tick, 1000);
+}
+</script>
+</head>
+<body>
+<button onclick="start()">Start</button>
+<div id="result"></div>
+</body>
+</html>
+```
+
+
+## E4-A · 基础变式 · 三步循环
+
+count 记数量，timer 记时钟编号，两者跨调用保存。
+Start 先画 1 个，再把 tick 函数交给 setInterval；1000 毫秒后才调用第一次。
+tick 先加一，超过 3 才归一。drawNames 从一个名字起步，再补 count−1 个，替换上次整行。
+
+### e4-a.html
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Name animation</title>
+<script>
+var count = 1;
+var timer = null;
+
+function drawNames() {
+  // Rebuild the current line from the count.
+  var line = "demo";
+  for (var i = 1; i < count; i++) {
+    line += " demo";
+  }
+  document.getElementById("result").textContent = line;
+}
+
+function tick() {
+  count++;
+  if (count > 3) {
+    count = 1;
+  }
+  drawNames();
+}
+
+function start() {
+  if (timer !== null) { return; }
+  count = 1;
+  drawNames();
+  timer = setInterval(tick, 1000);
+}
+</script>
+</head>
+<body>
+<button onclick="start()">Start</button>
+<div id="result"></div>
+</body>
+</html>
+```
+
+
+## E4-B · 进阶变式 · 停止与重启
+
+count 记数量，timer 记时钟编号，两者跨调用保存。
+Start 先画 1 个，再把 tick 函数交给 setInterval；1000 毫秒后才调用第一次。
+tick 先加一，超过 10 才归一。drawNames 从一个名字起步，再补 count−1 个，替换上次整行。
+Stop 清理定时器并把编号恢复为 null。
+
+### e4-b.html
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Name animation</title>
+<script>
+var count = 1;
+var timer = null;
+
+function drawNames() {
+  // Rebuild the current line from the count.
+  var line = "demo";
+  for (var i = 1; i < count; i++) {
+    line += " demo";
+  }
+  document.getElementById("result").textContent = line;
+}
+
+function tick() {
+  count++;
+  if (count > 10) {
+    count = 1;
+  }
+  drawNames();
+}
+
+function start() {
+  if (timer !== null) { return; }
+  count = 1;
+  drawNames();
+  timer = setInterval(tick, 1000);
+}
+function stopTimer() {
+  clearInterval(timer);
+  timer = null;
+}
+</script>
+</head>
+<body>
+<button onclick="start()">Start</button>
+<button onclick="stopTimer()">Stop</button>
+<div id="result"></div>
+</body>
+</html>
+```
+
+
+## E5 · 从目标输出写 JSON，再补全 XHR
+
+标题和日期各一个值，用双引号写成字符串；教室可有多个，所以用数组。
+readystatechange 会触发多次。题给框架先等 readyState == 4，才按 status 分流。
+在 failure 中写错误文字与状态码；success 中 responseText 是字符串，用 JSON.parse 得到对象，再传给 displayReport。
+显示函数从对象读字段，构造 h2 和 p。遍历 rooms 生成 li，再一次写入 result。
+
+### e5.html
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lab report</title>
+<script>
+function loadData() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (xhttp.readyState == 4) {
+      if (xhttp.status == 200) {
+        handleStatusSuccess(xhttp);
+      } else {
+        handleStatusFailure(xhttp);
+      }
+    }
+  };
+  xhttp.open("GET", "e5.json", true);
+  xhttp.send();
+}
+
+function handleStatusFailure(xhttp) {
+  document.getElementById("result").textContent = "Request failed: " + xhttp.status;
+}
+
+function handleStatusSuccess(xhttp) {
+  // Parse the response before passing it to the display function.
+  var data = JSON.parse(xhttp.responseText);
+  displayReport(data);
+}
+
+function displayReport(data) {
+  var html = "<h2>" + data.title + "</h2>";
+  html += "<p>Date: " + data.date + "</p>";
+  html += "<ul>";
+  for (var i = 0; i < data.rooms.length; i++) {
+    html += "<li>" + data.rooms[i] + "</li>";
+  }
+  html += "</ul>";
+  document.getElementById("result").innerHTML = html;
+}
+</script>
+</head>
+<body>
+<button onclick="loadData()">Load</button>
+<div id="result"></div>
+</body>
+</html>
+```
+
+### e5.json
+
+```json
+{
+  "date": "2026-11-26",
+  "title": "Web lab",
+  "rooms": [
+    "B12",
+    "C20"
+  ]
+}
+```
+
+
+## E5-A · 基础变式 · 标题与日期
+
+标题和日期各一个值，用双引号写成字符串；日期按题面原样保留。
+readystatechange 会触发多次。题给框架先等 readyState == 4，才按 status 分流。
+在 failure 中写错误文字与状态码；success 中 responseText 是字符串，用 JSON.parse 得到对象，再传给 displayReport。
+显示函数从对象读字段，构造 h2 和 p。拼好后一次写入 result。
+
+### e5-a.html
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lab report</title>
+<script>
+function loadData() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (xhttp.readyState == 4) {
+      if (xhttp.status == 200) {
+        handleStatusSuccess(xhttp);
+      } else {
+        handleStatusFailure(xhttp);
+      }
+    }
+  };
+  xhttp.open("GET", "e5-a.json", true);
+  xhttp.send();
+}
+
+function handleStatusFailure(xhttp) {
+  document.getElementById("result").textContent = "Request failed: " + xhttp.status;
+}
+
+function handleStatusSuccess(xhttp) {
+  // Parse the response before passing it to the display function.
+  var data = JSON.parse(xhttp.responseText);
+  displayReport(data);
+}
+
+function displayReport(data) {
+  var html = "<h2>" + data.title + "</h2>";
+  html += "<p>Date: " + data.date + "</p>";
+  document.getElementById("result").innerHTML = html;
+}
+</script>
+</head>
+<body>
+<button onclick="loadData()">Load</button>
+<div id="result"></div>
+</body>
+</html>
+```
+
+### e5-a.json
+
+```json
+{
+  "date": "2026-11-26",
+  "title": "Web lab"
+}
+```
+
+
+## E5-B · 进阶变式 · 动态条目与总数
+
+标题和日期各一个值，用双引号写成字符串；教室可有多个，所以用数组。
+readystatechange 会触发多次。题给框架先等 readyState == 4，才按 status 分流。
+在 failure 中写错误文字与状态码；success 中 responseText 是字符串，用 JSON.parse 得到对象，再传给 displayReport。
+显示函数从对象读字段，构造 h2 和 p。遍历 rooms 生成 li，再一次写入 result。
+
+### e5-b.html
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lab report</title>
+<script>
+function loadData() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (xhttp.readyState == 4) {
+      if (xhttp.status == 200) {
+        handleStatusSuccess(xhttp);
+      } else {
+        handleStatusFailure(xhttp);
+      }
+    }
+  };
+  xhttp.open("GET", "e5-b.json", true);
+  xhttp.send();
+}
+
+function handleStatusFailure(xhttp) {
+  document.getElementById("result").textContent = "Request failed: " + xhttp.status;
+}
+
+function handleStatusSuccess(xhttp) {
+  // Parse the response before passing it to the display function.
+  var data = JSON.parse(xhttp.responseText);
+  displayReport(data);
+}
+
+function displayReport(data) {
+  var html = "<h2>" + data.title + "</h2>";
+  html += "<p>Date: " + data.date + "</p>";
+  html += "<ul>";
+  for (var i = 0; i < data.rooms.length; i++) {
+    html += "<li>" + data.rooms[i] + "</li>";
+  }
+  html += "</ul>";
+  html += "<p>Total: " + data.rooms.length + "</p>";
+  document.getElementById("result").innerHTML = html;
+}
+</script>
+</head>
+<body>
+<button onclick="loadData()">Load</button>
+<div id="result"></div>
+</body>
+</html>
+```
+
+### e5-b.json
+
+```json
+{
+  "date": "2026-11-26",
+  "title": "Web lab",
+  "rooms": [
+    "B12",
+    "C20"
+  ]
+}
+```
+
+
+## M1 · 综合模拟 · 教室查询页
+
+给每条记录相同的三个键，数组保留表格顺序。
+等待 XHR 完成。成功解析后把数组交给 displayRows，失败清空旧行并更新第一段。
+表头写在静态 HTML 中，只替换存放数据行的 tbody。把下标交给事件处理函数，hover 时仍可取回对应对象。
+
+### m1.html
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Room finder</title>
+<style>
+table { border-collapse: collapse; }
+th, td { border: 1px solid black; padding: 4px; }
+</style>
+<script>
+var units = [];
+
+function loadRooms() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (xhttp.readyState == 4) {
+      if (xhttp.status == 200) {
+        var data = JSON.parse(xhttp.responseText);
+        displayRows(data);
+      } else {
+        units = [];
+        document.getElementById("rows").innerHTML = "";
+        document.getElementById("result").textContent = "Request failed: " + xhttp.status;
+        document.getElementById("result").style.color = "black";
+      }
+    }
+  };
+  xhttp.open("GET", "rooms.json", true);
+  xhttp.send();
+}
+
+function displayRows(data) {
+  units = data;
+  var html = "";
+  // The index links the rendered row to its JSON record.
+  for (var i = 0; i < units.length; i++) {
+    html += '<tr onmouseover="showRoom(' + i + ')"><td>' + units[i].code;
+    html += "</td><td>" + units[i].room + "</td></tr>";
+  }
+  document.getElementById("rows").innerHTML = html;
+  document.getElementById("result").textContent = "Choose a unit";
+  document.getElementById("result").style.color = "black";
+}
+
+function showRoom(index) {
+  var item = units[index];
+  var result = document.getElementById("result");
+  result.textContent = item.code + ": " + item.room;
+  result.style.color = item.color;
+}
+</script>
+</head>
+<body>
+<button onclick="loadRooms()">Load rooms</button>
+<table>
+  <tr><th>Unit</th><th>Room</th></tr>
+  <tbody id="rows"></tbody>
+</table>
+<p id="result">Choose a unit</p>
+<p style="color: gray">Rooms may change</p>
+</body>
+</html>
+```
+
+### rooms.json
+
+```json
+[
+  {
+    "code": "WEB",
+    "room": "B12",
+    "color": "navy"
+  },
+  {
+    "code": "DB",
+    "room": "C20",
+    "color": "green"
+  },
+  {
+    "code": "AI",
+    "room": "A08",
+    "color": "purple"
+  }
+]
+```
+
+
 # CSIT884 · Reference answers
 
 解析与分级提示见学习页面的对应视图；完整源码默认单独打开。
@@ -18,7 +802,7 @@
 
 ```html
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Study workshop registration</title></head><body><h1>How do I register for a study workshop?</h1><h2>2026001, mayal@uowmail.edu.au</h2><ul><li>Choose a suitable workshop from the list and note when it will run.</li><li>Fill in the form with your student number and university email address.</li><li>Check that you chose the right workshop and entered the correct contact details.</li><li>Send the request before registration closes.</li><li>Look in your university email for the confirmation.</li></ul><a href="https://workshops.example/" target="_blank">Click here to read more about study workshops</a></body></html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Study workshop registration</title></head><body><h1>How do I register for a study workshop?</h1><h2>101, demo@example.invalid</h2><ul><li>Choose a suitable workshop from the list and note when it will run.</li><li>Fill in the form with your student number and university email address.</li><li>Check that you chose the right workshop and entered the correct contact details.</li><li>Send the request before registration closes.</li><li>Look in your university email for the confirmation.</li></ul><a href="https://workshops.example/" target="_blank">Click here to read more about study workshops</a></body></html>
 ```
 
 ## A1-2 HTML coordinator table
@@ -35,7 +819,7 @@
 
 ```html
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Subject coordinators</title></head><body><h1>CSIT884, 2026001, Maya Lee</h1><table border="1"><tr><th>Coordinator name</th><th>Subject code</th><th>Consultation hours</th><th>Picture</th></tr><tr><td>Alex Green</td><td>CSIT884</td><td><ol><li>Tuesday 10:00–11:00</li><li>Thursday 14:00–15:00</li></ol></td><td><img src="https://cp0330.github.io/Lecture--Review/CSIT884/assets/team1.svg" width="100" height="100" alt="Alex Green"></td></tr><tr><td>Sam Brown</td><td>CSIT882</td><td><ol><li>Monday 09:00–10:00</li><li>Friday 11:00–12:00</li></ol></td><td><img src="https://cp0330.github.io/Lecture--Review/CSIT884/assets/team2.svg" width="100" height="100" alt="Sam Brown"></td></tr><tr><td>Robin White</td><td>CSIT985</td><td><ol><li>Wednesday 13:00–14:00</li></ol></td><td><img src="https://cp0330.github.io/Lecture--Review/CSIT884/assets/team3.svg" width="100" height="100" alt="Robin White"></td></tr></table></body></html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Subject coordinators</title></head><body><h1>CSIT884, 101, Demo Student</h1><table border="1"><tr><th>Coordinator name</th><th>Subject code</th><th>Consultation hours</th><th>Picture</th></tr><tr><td>Tutor A</td><td>CSIT884</td><td><ol><li>Tuesday 10:00–11:00</li><li>Thursday 14:00–15:00</li></ol></td><td><img src="https://cp0330.github.io/Lecture--Review/CSIT884/assets/team1.svg" width="100" height="100" alt="Tutor A"></td></tr><tr><td>Tutor B</td><td>CSIT882</td><td><ol><li>Monday 09:00–10:00</li><li>Friday 11:00–12:00</li></ol></td><td><img src="https://cp0330.github.io/Lecture--Review/CSIT884/assets/team2.svg" width="100" height="100" alt="Tutor B"></td></tr><tr><td>Tutor C</td><td>CSIT985</td><td><ol><li>Wednesday 13:00–14:00</li></ol></td><td><img src="https://cp0330.github.io/Lecture--Review/CSIT884/assets/team3.svg" width="100" height="100" alt="Tutor C"></td></tr></table></body></html>
 ```
 
 ## A2-1 HTML page elements
@@ -52,7 +836,7 @@
 
 ```html
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HTML elements</title></head><body><table border="1"><tr><td>2026001</td><td>2026001</td><td>2026001</td><td>2026001</td></tr><tr><td>Maya Lee</td><td>Maya Lee</td><td>Maya Lee</td><td>Maya Lee</td></tr></table><ul><li>Cat</li><li>Dog</li><li>Frog</li><li>Emu</li></ul><a href="https://spider.example/" target="_blank">Click here</a><p>FROG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EMU</p></body></html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HTML elements</title></head><body><table border="1"><tr><td>101</td><td>101</td><td>101</td><td>101</td></tr><tr><td>Demo Student</td><td>Demo Student</td><td>Demo Student</td><td>Demo Student</td></tr></table><ul><li>Cat</li><li>Dog</li><li>Frog</li><li>Emu</li></ul><a href="https://spider.example/" target="_blank">Click here</a><p>FROG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EMU</p></body></html>
 ```
 
 ## A2-2 A page with required CSS methods
@@ -69,7 +853,7 @@
 
 ```html
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Required CSS methods</title><style>.info {border-style:dashed;border-color:orange} #city {color:purple;background-color:gray}</style></head><body><p style="font-size:50px">Maya Lee</p><p style="color:blue">2026001</p><p class="info">Australia</p><p class="info">mayal@uowmail.edu.au</p><h1 id="city">City of Wollongong</h1></body></html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Required CSS methods</title><style>.info {border-style:dashed;border-color:orange} #city {color:purple;background-color:gray}</style></head><body><p style="font-size:50px">Demo Student</p><p style="color:blue">101</p><p class="info">Australia</p><p class="info">demo@example.invalid</p><h1 id="city">City of Wollongong</h1></body></html>
 ```
 
 ## A2-3 Click events on a page
@@ -95,7 +879,7 @@ var clickCount = 0;
 function sayHi() {
   // Send the two required messages.
   alert("Hi");
-  console.log("Maya Lee");
+  console.log("Demo Student");
 }
 function increase() {
   // Save the count outside this function.
@@ -110,9 +894,9 @@ function addButton() {
 </script>
 </head>
 <body>
-<p onclick="sayHi()">Maya Lee</p>
-<button onclick="increase()">2026001</button><p id="count">0</p>
-<p onclick="addButton()">mayal@uowmail.edu.au</p><div id="buttons"></div>
+<p onclick="sayHi()">Demo Student</p>
+<button onclick="increase()">101</button><p id="count">0</p>
+<p onclick="addButton()">demo@example.invalid</p><div id="buttons"></div>
 </body>
 </html>
 ```
@@ -136,7 +920,7 @@ function addButton() {
 <meta charset="UTF-8">
 <title>Equation animation</title>
 <script>
-var studentNumber = 2026001;
+var studentNumber = 101;
 var firstNumber = 1;
 var timer = null;
 function showEquation() {
@@ -160,7 +944,7 @@ function stopAnimation() {
 </script>
 </head>
 <body>
-<p id="equation" style="color:red;font-size:60px;">1 + 2026001 = 2026002</p>
+<p id="equation" style="color:red;font-size:60px;">1 + 101 = 102</p>
 <span style="color:orange;cursor:pointer;" onclick="startAnimation()">Start Animation</span>
 <span style="color:purple;cursor:pointer;" onclick="stopAnimation()">Stop Animation</span>
 </body>
@@ -198,13 +982,13 @@ function stopAnimation() {
 - 先完成静态身份、五城市表与两个输入。城市表仅提供可测试坐标，不代替读取输入。
 - 点击时创建一个请求，URL 使用本次输入。异步完成且成功后再 parse 和显示；结果读取 current.time/current.interval/current.temperature_2m。
 - 输入值显示在 User Query；服务响应值显示在 weather table。两者含义分开，不能照抄截图里的固定数值。
-- 显示模板携带 lee 与 mayal，document CSS 才能分别匹配温度单元格与标题。主分项按 A4 的 1/1/6/1/1 保留。
+- 显示模板携带 student 与 demo，document CSS 才能分别匹配温度单元格与标题。主分项按 A4 的 1/1/6/1/1 保留。
 
 ### a4-1.html
 
 ```html
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Weather information</title><style>.lee {color:orange;font-size:50px} #mayal {color:purple;font-size:50px}</style><script>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Weather information</title><style>.student {color:orange;font-size:50px} #demo {color:purple;font-size:50px}</style><script>
 function getWeather() {
   // Build the query from the values entered for this request.
   var latitude = document.getElementById("latitude").value;
@@ -223,15 +1007,15 @@ function getWeather() {
 function displayWeather(weather, latitude, longitude) {
   // Response values, rather than copied sample numbers, supply the result.
   var output = "<table border='1'><tr><th colspan='2'>User Query</th></tr><tr><td>Latitude</td><td>" + latitude + "</td></tr><tr><td>Longitude</td><td>" + longitude + "</td></tr></table>";
-  output += "<table border='1'><tr><th colspan='2' id='mayal'>Weather information</th></tr>";
+  output += "<table border='1'><tr><th colspan='2' id='demo'>Weather information</th></tr>";
   output += "<tr><td>Elevation</td><td>" + weather.elevation + "</td></tr>";
   output += "<tr><td>Time</td><td>" + weather.current.time + "</td></tr>";
   output += "<tr><td>Interval</td><td>" + weather.current.interval + "</td></tr>";
-  output += "<tr><td>Temperature</td><td class='lee'>" + weather.current.temperature_2m + "</td></tr>";
+  output += "<tr><td>Temperature</td><td class='student'>" + weather.current.temperature_2m + "</td></tr>";
   output += "<tr><td>Generationtime (ms)</td><td>" + weather.generationtime_ms + "</td></tr></table>";
   document.getElementById("weatherDisplay").innerHTML = output;
 }
-</script></head><body><h1>2026001, Maya Lee</h1><table border="1"><tr><th>City</th><th>Country</th><th>Latitude</th><th>Longitude</th></tr><tr><td>Wollongong</td><td>Australia</td><td>-34.4278</td><td>150.8931</td></tr><tr><td>New York</td><td>USA</td><td>40.7128</td><td>-74.006</td></tr><tr><td>Paris</td><td>France</td><td>48.8566</td><td>2.3522</td></tr><tr><td>Tokyo</td><td>Japan</td><td>35.6762</td><td>139.6503</td></tr><tr><td>Auckland</td><td>New Zealand</td><td>-36.8509</td><td>174.7645</td></tr></table><p><label>Latitude: <input id="latitude"></label></p><p><label>Longitude: <input id="longitude"></label></p><button onclick="getWeather()">Get Weather JSON</button><div id="weatherDisplay"></div></body></html>
+</script></head><body><h1>101, Demo Student</h1><table border="1"><tr><th>City</th><th>Country</th><th>Latitude</th><th>Longitude</th></tr><tr><td>Wollongong</td><td>Australia</td><td>-34.4278</td><td>150.8931</td></tr><tr><td>New York</td><td>USA</td><td>40.7128</td><td>-74.006</td></tr><tr><td>Paris</td><td>France</td><td>48.8566</td><td>2.3522</td></tr><tr><td>Tokyo</td><td>Japan</td><td>35.6762</td><td>139.6503</td></tr><tr><td>Auckland</td><td>New Zealand</td><td>-36.8509</td><td>174.7645</td></tr></table><p><label>Latitude: <input id="latitude"></label></p><p><label>Longitude: <input id="longitude"></label></p><button onclick="getWeather()">Get Weather JSON</button><div id="weatherDisplay"></div></body></html>
 ```
 
 ## Q01 A competition information page
@@ -255,13 +1039,13 @@ function displayWeather(weather, latitude, longitude) {
 </head>
 <body>
 <h1>Coding Competition</h1>
-<h2>Maya Lee, 2026001, mayal@uowmail.edu.au</h2>
+<h2>Demo Student, 101, demo@example.invalid</h2>
 <table border="1">
   <tr><th>Rank</th><th>Team</th><th>Members</th></tr>
   <tr><td>1st</td><td><a href="https://river.example/" target="_blank">River Team</a><br><img src="../assets/team1.svg" width="120" height="80" alt="River flag"></td>
-    <td><ul><li><b>Alex</b> <i>(team leader)</i></li><li>Bo</li></ul></td></tr>
+    <td><ul><li><b>SampleA</b> <i>(team leader)</i></li><li>SampleB</li></ul></td></tr>
   <tr><td>2nd</td><td><a href="https://mountain.example/" target="_blank">Mountain Team</a><br><img src="../assets/team2.svg" width="120" height="80" alt="Mountain flag"></td>
-    <td><ul><li><b>Chen</b> <i>(team leader)</i></li><li>Dee</li></ul></td></tr>
+    <td><ul><li><b>SampleC</b> <i>(team leader)</i></li><li>SampleD</li></ul></td></tr>
 </table>
 <ol><li>Register</li><li>Practice</li><li>Compete</li></ol>
 <p>FROG&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EMU &#128516;</p>
@@ -298,12 +1082,12 @@ function displayWeather(weather, latitude, longitude) {
 </head>
 <body>
 <h1 id="heading">City Coding Teams</h1>
-<p style="font-size:50px;">Maya Lee</p>
-<p style="color:blue;">2026001</p>
-<p class="info">Australia</p><p class="info">mayal@uowmail.edu.au</p>
+<p style="font-size:50px;">Demo Student</p>
+<p style="color:blue;">101</p>
+<p class="info">Australia</p><p class="info">demo@example.invalid</p>
 <table id="teamTable">
  <tr><th class="rank">Rank</th><th>Members</th></tr>
- <tr><td class="rank">1</td><td><ul class="members"><li>Alex</li><li>Bo</li></ul></td></tr>
+ <tr><td class="rank">1</td><td><ul class="members"><li>SampleA</li><li>SampleB</li></ul></td></tr>
 </table>
 </body>
 </html>
@@ -321,12 +1105,12 @@ function displayWeather(weather, latitude, longitude) {
 </head>
 <body>
 <h1 id="heading">City Coding Teams</h1>
-<p style="font-size:50px;">Maya Lee</p>
-<p style="color:blue;">2026001</p>
-<p class="info">Australia</p><p class="info">mayal@uowmail.edu.au</p>
+<p style="font-size:50px;">Demo Student</p>
+<p style="color:blue;">101</p>
+<p class="info">Australia</p><p class="info">demo@example.invalid</p>
 <table id="teamTable">
  <tr><th class="rank">Rank</th><th>Members</th></tr>
- <tr><td class="rank">1</td><td><ul class="members"><li>Alex</li><li>Bo</li></ul></td></tr>
+ <tr><td class="rank">1</td><td><ul class="members"><li>SampleA</li><li>SampleB</li></ul></td></tr>
 </table>
 </body>
 </html>
@@ -366,7 +1150,7 @@ var clickCount = 0;
 function sayHi() {
   // Send the two required messages.
   alert("Hi");
-  console.log("Maya Lee");
+  console.log("Demo Student");
 }
 function increase() {
   // Save the count outside this function.
@@ -381,9 +1165,9 @@ function addButton() {
 </script>
 </head>
 <body>
-<p onclick="sayHi()">Maya Lee</p>
-<button onclick="increase()">2026001</button><p id="count">0</p>
-<p onclick="addButton()">mayal@uowmail.edu.au</p><div id="buttons"></div>
+<p onclick="sayHi()">Demo Student</p>
+<button onclick="increase()">101</button><p id="count">0</p>
+<p onclick="addButton()">demo@example.invalid</p><div id="buttons"></div>
 </body>
 </html>
 ```
@@ -449,7 +1233,7 @@ Enter command: <input id="command" onkeydown="runCommand(event)">
 <meta charset="UTF-8">
 <title>Equation animation</title>
 <script>
-var studentNumber = 2026001;
+var studentNumber = 101;
 var firstNumber = 1;
 var timer = null;
 function showEquation() {
@@ -473,7 +1257,7 @@ function stopAnimation() {
 </script>
 </head>
 <body>
-<p id="equation" style="color:red;font-size:60px;">1 + 2026001 = 2026002</p>
+<p id="equation" style="color:red;font-size:60px;">1 + 101 = 102</p>
 <span style="color:orange;cursor:pointer;" onclick="startAnimation()">Start Animation</span>
 <span style="color:purple;cursor:pointer;" onclick="stopAnimation()">Stop Animation</span>
 </body>
@@ -637,8 +1421,8 @@ function resetQuestion() {
 
 ```json
 {
-  "firstName": "Maya",
-  "lastName": "Lee",
+  "firstName": "Demo",
+  "lastName": "Student",
   "subjectList": [
     {
       "code": "CSIT884",
@@ -715,9 +1499,9 @@ Core subject: <input type="checkbox" id="core"><br>
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<student number="2026001">
-  <firstName>Maya</firstName>
-  <lastName>Lee</lastName>
+<student number="101">
+  <firstName>Demo</firstName>
+  <lastName>Student</lastName>
   <subjects>
     <subject code="CSIT884"><creditPoint>6</creditPoint><mark>84</mark><grade>A</grade></subject>
     <subject code="CSIT882"><creditPoint>6</creditPoint><mark>72</mark><grade>B</grade></subject>
@@ -751,9 +1535,9 @@ Core subject: <input type="checkbox" id="core"><br>
   <!ELEMENT mark (#PCDATA)>
   <!ELEMENT grade (#PCDATA)>
 ]>
-<student number="2026001">
-  <firstName>Maya</firstName>
-  <lastName>Lee</lastName>
+<student number="101">
+  <firstName>Demo</firstName>
+  <lastName>Student</lastName>
   <subjects>
     <subject code="CSIT884"><creditPoint>6</creditPoint><mark>84</mark><grade>A</grade></subject>
     <subject code="CSIT882"><creditPoint>6</creditPoint><mark>72</mark><grade>B</grade></subject>
@@ -811,8 +1595,8 @@ Core subject: <input type="checkbox" id="core"><br>
 ```xml
 <?xml version="1.0"?>
 <resultBatch campus="Sydney">
-  <result ref="R001"><contestantId>00025142</contestantId><examId>WEB01</examId><score>156</score><band>C</band></result>
-  <result ref="R002"><contestantId>00025143</contestantId><examId>WEB01</examId><score>280</score><band>A</band></result>
+  <result ref="R001"><contestantId>00000001</contestantId><examId>WEB01</examId><score>156</score><band>C</band></result>
+  <result ref="R002"><contestantId>00000002</contestantId><examId>WEB01</examId><score>280</score><band>A</band></result>
 </resultBatch>
 ```
 
@@ -886,7 +1670,7 @@ function displayAirports(obj) {
 
 - 请求地址与显示内容都要由输入/响应驱动。encodeURIComponent 编码参数值，若本题只允许数字也可用直接拼接；XHR 技术要求仍必须满足。
 - 每次点击重新读坐标，构造 query，不能固定写某个城市。
-- 成功时读取 current 下的字段；最后检查 class=lee、id=mayal 与 document CSS 规则一致。
+- 成功时读取 current 下的字段；最后检查 class=student、id=demo 与 document CSS 规则一致。
 
 ### q15.html
 
@@ -897,8 +1681,8 @@ function displayAirports(obj) {
 <meta charset="UTF-8">
 <title>Weather AJAX</title>
 <style>
-.lee { color: orange; font-size: 50px; }
-#mayal { color: purple; font-size: 50px; }
+.student { color: orange; font-size: 50px; }
+#demo { color: purple; font-size: 50px; }
 </style>
 <script>
 function getWeather() {
@@ -923,18 +1707,18 @@ function getWeather() {
 function displayWeather(obj, latitude, longitude) {
   // Keep the query input separate from the server response data.
   var html = "<p>User Query: Latitude " + latitude + ", Longitude " + longitude + "</p>";
-  html += "<h2 id='mayal'>Weather information</h2><table border='1'>";
+  html += "<h2 id='demo'>Weather information</h2><table border='1'>";
   html += "<tr><td>Elevation</td><td>" + obj.elevation + "</td></tr>";
   html += "<tr><td>Time</td><td>" + obj.current.time + "</td></tr>";
   html += "<tr><td>Interval</td><td>" + obj.current.interval + "</td></tr>";
-  html += "<tr><td>Temperature</td><td class='lee'>" + obj.current.temperature_2m + "</td></tr>";
+  html += "<tr><td>Temperature</td><td class='student'>" + obj.current.temperature_2m + "</td></tr>";
   html += "<tr><td>Generationtime(ms)</td><td>" + obj.generationtime_ms + "</td></tr></table>";
   document.getElementById("weatherDisplay").innerHTML = html;
 }
 </script>
 </head>
 <body>
-<h1>Maya Lee, 2026001</h1>
+<h1>Demo Student, 101</h1>
 Latitude: <input id="latitude"><br>Longitude: <input id="longitude"><br>
 <button onclick="getWeather()">Get Weather JSON</button><div id="weatherDisplay"></div>
 </body>

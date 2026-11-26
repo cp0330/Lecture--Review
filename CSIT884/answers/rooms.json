@@ -1,0 +1,17 @@
+[
+  {
+    "code": "WEB",
+    "room": "B12",
+    "color": "navy"
+  },
+  {
+    "code": "DB",
+    "room": "C20",
+    "color": "green"
+  },
+  {
+    "code": "AI",
+    "room": "A08",
+    "color": "purple"
+  }
+]

@@ -1,5 +1,759 @@
 [
   {
+    "id": "E1",
+    "title": "课程表与两段说明",
+    "track": "core",
+    "topic": "表格与 CSS",
+    "source": "L01A HTML · L02A CSS / Lab L01、L02 / A1 Q2、A2 Q2",
+    "version": 2,
+    "minutes": 20,
+    "requirements": [
+      "Build a two-column table. Header: Unit | Room. Data: Web | B12. In a style block collapse borders, give all cells a 1px solid black border and 4px padding. Below the table put two paragraphs: Spring timetable (navy, document CSS) and Check your room (red, inline CSS).",
+      "按给定文字写一行表头、一行数据，表格下写两个段落。内部样式设置合并边框、单元格黑色实线边框和内边距，第一段深蓝；第二段用行内样式标红。"
+    ],
+    "checks": [
+      "Unit、Room 是两个表头；Web、B12 在下一行。",
+      "每格边框为 1px solid black，内边距 4px；边框合并。",
+      "表后恰有两个 p，第一段内部规则为 navy，第二段行内 red。"
+    ],
+    "files": [
+      "e1.html"
+    ],
+    "marks": null,
+    "adaptation": "依据题型回忆编写。数据、样式和练习时限为自拟。",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "Unit、Room 是两个表头；Web、B12 在下一行。"
+      },
+      {
+        "id": "c2",
+        "text": "每格边框为 1px solid black，内边距 4px；边框合并。"
+      },
+      {
+        "id": "c3",
+        "text": "表后恰有两个 p，第一段内部规则为 navy，第二段行内 red。"
+      }
+    ],
+    "note_section": 5,
+    "local_service": false,
+    "skills": "HTML · table / tr / th / td · document CSS · inline CSS",
+    "module": 1
+  },
+  {
+    "id": "E1-A",
+    "title": "基础变式 · 单列成绩",
+    "track": "variant",
+    "topic": "表格与 CSS",
+    "source": "L01A HTML · L02A CSS / Lab L01、L02 / A1 Q2、A2 Q2",
+    "version": 2,
+    "minutes": 12,
+    "requirements": [
+      "Create a one-column table with header Mark and value 85. Use document CSS for a 1px solid black cell border. Add one paragraph Result in inline green.",
+      "建单列表格，表头 Mark，下一行 85；内部 CSS 为所有格子加 1px 黑实线；表后一个段落 Result，用行内样式设绿色。"
+    ],
+    "checks": [
+      "两行各一个格子。",
+      "边框来自内部 CSS，绿色来自行内 CSS。"
+    ],
+    "files": [
+      "e1-a.html"
+    ],
+    "marks": null,
+    "adaptation": "依据题型回忆编写。数据、样式和练习时限为自拟。",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "两行各一个格子。"
+      },
+      {
+        "id": "c2",
+        "text": "边框来自内部 CSS，绿色来自行内 CSS。"
+      }
+    ],
+    "note_section": 5,
+    "local_service": false,
+    "skills": "HTML · table / tr / th / td · document CSS · inline CSS",
+    "module": 1
+  },
+  {
+    "id": "E1-B",
+    "title": "进阶变式 · 合并表头",
+    "track": "variant",
+    "topic": "表格与 CSS",
+    "source": "L01A HTML · L02A CSS / Lab L01、L02 / A1 Q2、A2 Q2",
+    "version": 2,
+    "minutes": 12,
+    "requirements": [
+      "Extend the Unit/Room table (Web | B12) with a top header Timetable spanning both columns. Collapse borders; use 1px solid black and 4px padding on all cells. Follow it with two paragraphs, Week 1 and Revised. Set paragraphs navy in document CSS and override Revised to red inline.",
+      "在 Unit、Room 和 Web、B12 两行上面加一行 Timetable，横跨两列。内部 CSS 合并边框，所有格子 1px 黑实线、4px 内边距，两段统一深蓝；第二段 Revised 行内设红色，第一段 Week 1。"
+    ],
+    "checks": [
+      "第一行只有一个 th，横跨两列。",
+      "后续每行两个格子且共享边框规则。",
+      "普通段落 navy，Revised 行内覆盖为 red。"
+    ],
+    "files": [
+      "e1-b.html"
+    ],
+    "marks": null,
+    "adaptation": "依据题型回忆编写。数据、样式和练习时限为自拟。",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "第一行只有一个 th，横跨两列。"
+      },
+      {
+        "id": "c2",
+        "text": "后续每行两个格子且共享边框规则。"
+      },
+      {
+        "id": "c3",
+        "text": "普通段落 navy，Revised 行内覆盖为 red。"
+      }
+    ],
+    "note_section": 5,
+    "local_service": false,
+    "skills": "HTML · table / tr / th / td · document CSS · inline CSS",
+    "module": 1
+  },
+  {
+    "id": "E2",
+    "title": "三个标签共用一个结果框",
+    "track": "core",
+    "topic": "悬停读取 JSON",
+    "source": "L03B Event · 7B JS/CSS · L09A JSON / Lab L03、L09、L10",
+    "version": 2,
+    "minutes": 20,
+    "requirements": [
+      "Use the supplied JSON string. Show 3 text labels in array order, using their codes. On mouseover replace the same result div with CODE: ROOM. Set its text colour from that record using JavaScript. Initially show Choose a unit.",
+      "按数组顺序显示 3 个代码标签，初始结果为 Choose a unit。移入任一标签，在同一个 div 中替换为“代码: 教室”。用 JS 把结果字色改成该记录的 color。"
+    ],
+    "checks": [
+      "初始显示 Choose a unit。",
+      "逐个移入，输出与对应记录一致，只有一个结果框。",
+      "结果框颜色来自所选数据。"
+    ],
+    "files": [
+      "e2.html"
+    ],
+    "marks": null,
+    "adaptation": "依据题型回忆编写。数据、样式和练习时限为自拟。",
+    "resources": [
+      {
+        "title": "Supplied JSON string content",
+        "code": "[{\"code\":\"WEB\",\"room\":\"B12\",\"color\":\"navy\"},{\"code\":\"DB\",\"room\":\"C20\",\"color\":\"green\"},{\"code\":\"AI\",\"room\":\"A08\",\"color\":\"purple\"}]"
+      }
+    ],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "初始显示 Choose a unit。"
+      },
+      {
+        "id": "c2",
+        "text": "逐个移入，输出与对应记录一致，只有一个结果框。"
+      },
+      {
+        "id": "c3",
+        "text": "结果框颜色来自所选数据。"
+      }
+    ],
+    "note_section": 17,
+    "local_service": false,
+    "skills": "mouseover · JSON.parse · array index · getElementById · style",
+    "module": 2
+  },
+  {
+    "id": "E2-A",
+    "title": "基础变式 · 两个标签",
+    "track": "variant",
+    "topic": "悬停读取 JSON",
+    "source": "L03B Event · 7B JS/CSS · L09A JSON / Lab L03、L09、L10",
+    "version": 2,
+    "minutes": 12,
+    "requirements": [
+      "Use the supplied JSON string. Show 2 text labels in array order, using their codes. On mouseover replace the same result div with CODE: ROOM. Initially show Choose a unit.",
+      "按数组顺序显示 2 个代码标签，初始结果为 Choose a unit。移入任一标签，在同一个 div 中替换为“代码: 教室”。"
+    ],
+    "checks": [
+      "初始显示 Choose a unit。",
+      "逐个移入，输出与对应记录一致，只有一个结果框。"
+    ],
+    "files": [
+      "e2-a.html"
+    ],
+    "marks": null,
+    "adaptation": "依据题型回忆编写。数据、样式和练习时限为自拟。",
+    "resources": [
+      {
+        "title": "Supplied JSON string content",
+        "code": "[{\"code\":\"WEB\",\"room\":\"B12\",\"color\":\"navy\"},{\"code\":\"DB\",\"room\":\"C20\",\"color\":\"green\"}]"
+      }
+    ],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "初始显示 Choose a unit。"
+      },
+      {
+        "id": "c2",
+        "text": "逐个移入，输出与对应记录一致，只有一个结果框。"
+      }
+    ],
+    "note_section": 17,
+    "local_service": false,
+    "skills": "mouseover · JSON.parse · array index · getElementById · style",
+    "module": 2
+  },
+  {
+    "id": "E2-B",
+    "title": "进阶变式 · 移出时复原",
+    "track": "variant",
+    "topic": "悬停读取 JSON",
+    "source": "L03B Event · 7B JS/CSS · L09A JSON / Lab L03、L09、L10",
+    "version": 2,
+    "minutes": 12,
+    "requirements": [
+      "Use the supplied JSON string. Show 3 text labels in array order, using their codes. On mouseover replace the same result div with CODE: ROOM. Set its text colour from that record using JavaScript. Initially show Choose a unit. On leaving a label, restore Choose a unit in black.",
+      "按数组顺序显示 3 个代码标签，初始结果为 Choose a unit。移入任一标签，在同一个 div 中替换为“代码: 教室”。用 JS 把结果字色改成该记录的 color。移出时恢复提示并变回黑色。"
+    ],
+    "checks": [
+      "初始显示 Choose a unit。",
+      "逐个移入，输出与对应记录一致，只有一个结果框。",
+      "结果框颜色来自所选数据。",
+      "移出恢复黑色提示。"
+    ],
+    "files": [
+      "e2-b.html"
+    ],
+    "marks": null,
+    "adaptation": "依据题型回忆编写。数据、样式和练习时限为自拟。",
+    "resources": [
+      {
+        "title": "Supplied JSON string content",
+        "code": "[{\"code\":\"WEB\",\"room\":\"B12\",\"color\":\"navy\"},{\"code\":\"DB\",\"room\":\"C20\",\"color\":\"green\"},{\"code\":\"AI\",\"room\":\"A08\",\"color\":\"purple\"}]"
+      }
+    ],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "初始显示 Choose a unit。"
+      },
+      {
+        "id": "c2",
+        "text": "逐个移入，输出与对应记录一致，只有一个结果框。"
+      },
+      {
+        "id": "c3",
+        "text": "结果框颜色来自所选数据。"
+      },
+      {
+        "id": "c4",
+        "text": "移出恢复黑色提示。"
+      }
+    ],
+    "note_section": 17,
+    "local_service": false,
+    "skills": "mouseover · JSON.parse · array index · getElementById · style",
+    "module": 2
+  },
+  {
+    "id": "E3",
+    "title": "报名表的五种控件",
+    "track": "core",
+    "topic": "GET 表单",
+    "source": "L04A WebForm / Lab L04 / A3 Q2",
+    "version": 2,
+    "minutes": 20,
+    "requirements": [
+      "Create a GET form that submits to receipt.html. Use a text field named user, a radio group named mode (Campus=campus, Online=online), and a select named day (Monday=mon, Friday=fri). Include Submit and Reset. Defaults: empty user, campus, mon.",
+      "表单用 GET 提交到 receipt.html。用户名是 text（name 为 user），学习方式为同组的 Campus/Online 单选（mode），日期是 Monday/Friday 下拉框（day）。提交值与默认项按英文题，修改后 Reset 应恢复初始值。"
+    ],
+    "checks": [
+      "文本初始值为 空；日期默认 mon。",
+      "两项同时只能选一项，默认 campus。",
+      "修改后 Reset 可恢复；改选 Friday 后提交，地址含 day=fri 和 user 字段。"
+    ],
+    "files": [
+      "e3.html"
+    ],
+    "marks": null,
+    "adaptation": "依据题型回忆编写。数据、样式和练习时限为自拟。",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "文本初始值为 空；日期默认 mon。"
+      },
+      {
+        "id": "c2",
+        "text": "两项同时只能选一项，默认 campus。"
+      },
+      {
+        "id": "c3",
+        "text": "修改后 Reset 可恢复；改选 Friday 后提交，地址含 day=fri 和 user 字段。"
+      }
+    ],
+    "note_section": 8,
+    "local_service": false,
+    "skills": "form · action / method · name / value · radio · select · reset",
+    "module": 3
+  },
+  {
+    "id": "E3-A",
+    "title": "基础变式 · 两个提交字段",
+    "track": "variant",
+    "topic": "GET 表单",
+    "source": "L04A WebForm / Lab L04 / A3 Q2",
+    "version": 2,
+    "minutes": 12,
+    "requirements": [
+      "Create a GET form that submits to receipt.html. Use a text field named user, and a select named day (Monday=mon, Friday=fri). Include Submit and Reset. Defaults: empty user, mon.",
+      "表单用 GET 提交到 receipt.html。用户名是 text（name 为 user），日期是 Monday/Friday 下拉框（day）。提交值与默认项按英文题，修改后 Reset 应恢复初始值。"
+    ],
+    "checks": [
+      "文本初始值为 空；日期默认 mon。",
+      "修改后 Reset 可恢复；改选 Friday 后提交，地址含 day=fri 和 user 字段。"
+    ],
+    "files": [
+      "e3-a.html"
+    ],
+    "marks": null,
+    "adaptation": "依据题型回忆编写。数据、样式和练习时限为自拟。",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "文本初始值为 空；日期默认 mon。"
+      },
+      {
+        "id": "c2",
+        "text": "修改后 Reset 可恢复；改选 Friday 后提交，地址含 day=fri 和 user 字段。"
+      }
+    ],
+    "note_section": 8,
+    "local_service": false,
+    "skills": "form · action / method · name / value · radio · select · reset",
+    "module": 3
+  },
+  {
+    "id": "E3-B",
+    "title": "进阶变式 · 带默认值的登记表",
+    "track": "variant",
+    "topic": "GET 表单",
+    "source": "L04A WebForm / Lab L04 / A3 Q2",
+    "version": 2,
+    "minutes": 12,
+    "requirements": [
+      "Create a GET form that submits to receipt.html. Use a text field named user, a radio group named mode (Campus=campus, Online=online), and a select named day (Monday=mon, Friday=fri). Include Submit and Reset. Defaults: Demo, online, fri.",
+      "表单用 GET 提交到 receipt.html。用户名是 text（name 为 user），学习方式为同组的 Campus/Online 单选（mode），日期是 Monday/Friday 下拉框（day）。提交值与默认项按英文题，修改后 Reset 应恢复初始值。"
+    ],
+    "checks": [
+      "文本初始值为 Demo；日期默认 fri。",
+      "两项同时只能选一项，默认 online。",
+      "修改后 Reset 可恢复；改选 Friday 后提交，地址含 day=fri 和 user 字段。"
+    ],
+    "files": [
+      "e3-b.html"
+    ],
+    "marks": null,
+    "adaptation": "依据题型回忆编写。数据、样式和练习时限为自拟。",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "文本初始值为 Demo；日期默认 fri。"
+      },
+      {
+        "id": "c2",
+        "text": "两项同时只能选一项，默认 online。"
+      },
+      {
+        "id": "c3",
+        "text": "修改后 Reset 可恢复；改选 Friday 后提交，地址含 day=fri 和 user 字段。"
+      }
+    ],
+    "note_section": 8,
+    "local_service": false,
+    "skills": "form · action / method · name / value · radio · select · reset",
+    "module": 3
+  },
+  {
+    "id": "E4",
+    "title": "每秒增加一个用户名",
+    "track": "core",
+    "topic": "用户名循环动画",
+    "source": "5B Animation · L05A JS2 / Lab L06 Q4 / A3 Q1",
+    "version": 2,
+    "minutes": 20,
+    "requirements": [
+      "Click Start to show one copy of the sample username demo immediately. Add one copy every second, separated by single spaces, up to 10. On the following tick return to one. Initially leave the output empty. Repeated Start must not speed it up.",
+      "初始留空。点击 Start 立即显示一个 demo，每秒多显示一个，各名字之间一个空格。显示 10 个后，再过一秒变回一个。重复点击不能加速。"
+    ],
+    "checks": [
+      "点击立即 1 个；1 秒后 2 个。",
+      "第 9 秒恰有 10 个；第 10 秒回到 1 个。",
+      "重复 Start 仍只运行一个时钟。"
+    ],
+    "files": [
+      "e4.html"
+    ],
+    "marks": null,
+    "adaptation": "依据题型回忆编写。数据、样式和练习时限为自拟。",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "点击立即 1 个；1 秒后 2 个。"
+      },
+      {
+        "id": "c2",
+        "text": "第 9 秒恰有 10 个；第 10 秒回到 1 个。"
+      },
+      {
+        "id": "c3",
+        "text": "重复 Start 仍只运行一个时钟。"
+      }
+    ],
+    "note_section": 10,
+    "local_service": false,
+    "skills": "setInterval · 1000 ms · counter · for · timer ID",
+    "module": 4
+  },
+  {
+    "id": "E4-A",
+    "title": "基础变式 · 三步循环",
+    "track": "variant",
+    "topic": "用户名循环动画",
+    "source": "5B Animation · L05A JS2 / Lab L06 Q4 / A3 Q1",
+    "version": 2,
+    "minutes": 12,
+    "requirements": [
+      "Click Start to show one copy of the sample username demo immediately. Add one copy every second, separated by single spaces, up to 3. On the following tick return to one. Initially leave the output empty. Repeated Start must not speed it up.",
+      "初始留空。点击 Start 立即显示一个 demo，每秒多显示一个，各名字之间一个空格。显示 3 个后，再过一秒变回一个。重复点击不能加速。"
+    ],
+    "checks": [
+      "点击立即 1 个；1 秒后 2 个。",
+      "第 2 秒恰有 3 个；第 3 秒回到 1 个。",
+      "重复 Start 仍只运行一个时钟。"
+    ],
+    "files": [
+      "e4-a.html"
+    ],
+    "marks": null,
+    "adaptation": "依据题型回忆编写。数据、样式和练习时限为自拟。",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "点击立即 1 个；1 秒后 2 个。"
+      },
+      {
+        "id": "c2",
+        "text": "第 2 秒恰有 3 个；第 3 秒回到 1 个。"
+      },
+      {
+        "id": "c3",
+        "text": "重复 Start 仍只运行一个时钟。"
+      }
+    ],
+    "note_section": 10,
+    "local_service": false,
+    "skills": "setInterval · 1000 ms · counter · for · timer ID",
+    "module": 4
+  },
+  {
+    "id": "E4-B",
+    "title": "进阶变式 · 停止与重启",
+    "track": "variant",
+    "topic": "用户名循环动画",
+    "source": "5B Animation · L05A JS2 / Lab L06 Q4 / A3 Q1",
+    "version": 2,
+    "minutes": 12,
+    "requirements": [
+      "Click Start to show one copy of the sample username demo immediately. Add one copy every second, separated by single spaces, up to 10. On the following tick return to one. Initially leave the output empty. Repeated Start must not speed it up. Add Stop: freeze the current output. The next Start begins again at one.",
+      "初始留空。点击 Start 立即显示一个 demo，每秒多显示一个，各名字之间一个空格。显示 10 个后，再过一秒变回一个。重复点击不能加速。Stop 冻结当前画面，再点 Start 从一个重新开始。"
+    ],
+    "checks": [
+      "点击立即 1 个；1 秒后 2 个。",
+      "第 9 秒恰有 10 个；第 10 秒回到 1 个。",
+      "重复 Start 仍只运行一个时钟。",
+      "停止后时间流逝不改变画面，再开始立即显示 1 个。"
+    ],
+    "files": [
+      "e4-b.html"
+    ],
+    "marks": null,
+    "adaptation": "依据题型回忆编写。数据、样式和练习时限为自拟。",
+    "resources": [],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "点击立即 1 个；1 秒后 2 个。"
+      },
+      {
+        "id": "c2",
+        "text": "第 9 秒恰有 10 个；第 10 秒回到 1 个。"
+      },
+      {
+        "id": "c3",
+        "text": "重复 Start 仍只运行一个时钟。"
+      },
+      {
+        "id": "c4",
+        "text": "停止后时间流逝不改变画面，再开始立即显示 1 个。"
+      }
+    ],
+    "note_section": 10,
+    "local_service": false,
+    "skills": "setInterval · 1000 ms · counter · for · timer ID",
+    "module": 4
+  },
+  {
+    "id": "E5",
+    "title": "从目标输出写 JSON，再补全 XHR",
+    "track": "core",
+    "topic": "JSON 与 AJAX",
+    "source": "L09A JSON · L10A AJAX pp. 10–15 / Lab L09、L11 / A4",
+    "version": 2,
+    "minutes": 20,
+    "requirements": [
+      "Part A. Write e5.json to produce the target below. Use title and date (both strings), plus rooms (an array of strings). Part B. Keep the supplied XHR code. Fill (1)–(3). Use an h2 for the title and a paragraph for the date. Render one li per room inside a ul. For a failed request show Request failed: followed by a space and the status number.",
+      "A：根据下面的目标输出反推 JSON，字段和类型见英文题。B：保留题给请求框架，在 (1) 写错误提示、(2) 调用自己的函数、(3) 根据响应生成标题和日期段落。把每间教室写成一个无序列表项。作答框内分开写 JSON 和 JS。"
+    ],
+    "checks": [
+      "JSON 合法，日期是字符串。",
+      "成功后标题、日期和顺序符合目标。",
+      "列表随响应长度改变。",
+      "请求失败显示状态码，覆盖旧结果。"
+    ],
+    "files": [
+      "e5.html",
+      "e5.json"
+    ],
+    "marks": null,
+    "adaptation": "依据题型回忆编写。数据、样式和练习时限为自拟。",
+    "resources": [
+      {
+        "title": "Target output · 目标效果",
+        "code": "Web lab\nDate: 2026-11-26\n• B12\n• C20"
+      },
+      {
+        "title": "Given · 页面已有 Load 按钮和 id=\"result\" 的 div；补全以下 JS",
+        "code": "function loadData() {\n  var xhttp = new XMLHttpRequest();\n  xhttp.onreadystatechange = function () {\n    if (xhttp.readyState == 4) {\n      if (xhttp.status == 200) {\n        handleStatusSuccess(xhttp);\n      } else {\n        handleStatusFailure(xhttp);\n      }\n    }\n  };\n  xhttp.open(\"GET\", \"e5.json\", true);\n  xhttp.send();\n}\n\nfunction handleStatusFailure(xhttp) {\n  // (1) Show the error in the result div.\n}\nfunction handleStatusSuccess(xhttp) {\n  var data = JSON.parse(xhttp.responseText);\n  // (2) Pass the object to your display function.\n}\n// (3) Write displayReport here."
+      }
+    ],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "JSON 合法，日期是字符串。"
+      },
+      {
+        "id": "c2",
+        "text": "成功后标题、日期和顺序符合目标。"
+      },
+      {
+        "id": "c3",
+        "text": "列表随响应长度改变。"
+      },
+      {
+        "id": "c4",
+        "text": "请求失败显示状态码，覆盖旧结果。"
+      }
+    ],
+    "note_section": 15,
+    "local_service": true,
+    "skills": "XMLHttpRequest · readyState · status · JSON.parse · callback · list",
+    "module": 5
+  },
+  {
+    "id": "E5-A",
+    "title": "基础变式 · 标题与日期",
+    "track": "variant",
+    "topic": "JSON 与 AJAX",
+    "source": "L09A JSON · L10A AJAX pp. 10–15 / Lab L09、L11 / A4",
+    "version": 2,
+    "minutes": 12,
+    "requirements": [
+      "Part A. Write e5-a.json to produce the target below. Use title and date (both strings). Part B. Keep the supplied XHR code. Fill (1)–(3). Use an h2 for the title and a paragraph for the date. For a failed request show Request failed: followed by a space and the status number.",
+      "A：根据下面的目标输出反推 JSON，字段和类型见英文题。B：保留题给请求框架，在 (1) 写错误提示、(2) 调用自己的函数、(3) 根据响应生成标题和日期段落。作答框内分开写 JSON 和 JS。"
+    ],
+    "checks": [
+      "JSON 合法，日期是字符串。",
+      "成功后标题、日期和顺序符合目标。",
+      "请求失败显示状态码，覆盖旧结果。"
+    ],
+    "files": [
+      "e5-a.html",
+      "e5-a.json"
+    ],
+    "marks": null,
+    "adaptation": "依据题型回忆编写。数据、样式和练习时限为自拟。",
+    "resources": [
+      {
+        "title": "Target output · 目标效果",
+        "code": "Web lab\nDate: 2026-11-26"
+      },
+      {
+        "title": "Given · 页面已有 Load 按钮和 id=\"result\" 的 div；补全以下 JS",
+        "code": "function loadData() {\n  var xhttp = new XMLHttpRequest();\n  xhttp.onreadystatechange = function () {\n    if (xhttp.readyState == 4) {\n      if (xhttp.status == 200) {\n        handleStatusSuccess(xhttp);\n      } else {\n        handleStatusFailure(xhttp);\n      }\n    }\n  };\n  xhttp.open(\"GET\", \"e5-a.json\", true);\n  xhttp.send();\n}\n\nfunction handleStatusFailure(xhttp) {\n  // (1) Show the error in the result div.\n}\nfunction handleStatusSuccess(xhttp) {\n  var data = JSON.parse(xhttp.responseText);\n  // (2) Pass the object to your display function.\n}\n// (3) Write displayReport here."
+      }
+    ],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "JSON 合法，日期是字符串。"
+      },
+      {
+        "id": "c2",
+        "text": "成功后标题、日期和顺序符合目标。"
+      },
+      {
+        "id": "c3",
+        "text": "请求失败显示状态码，覆盖旧结果。"
+      }
+    ],
+    "note_section": 15,
+    "local_service": true,
+    "skills": "XMLHttpRequest · readyState · status · JSON.parse · callback · list",
+    "module": 5
+  },
+  {
+    "id": "E5-B",
+    "title": "进阶变式 · 动态条目与总数",
+    "track": "variant",
+    "topic": "JSON 与 AJAX",
+    "source": "L09A JSON · L10A AJAX pp. 10–15 / Lab L09、L11 / A4",
+    "version": 2,
+    "minutes": 12,
+    "requirements": [
+      "Part A. Write e5-b.json to produce the target below. Use title and date (both strings), plus rooms (an array of strings). Part B. Keep the supplied XHR code. Fill (1)–(3). Use an h2 for the title and a paragraph for the date. Render one li per room inside a ul. End with a paragraph giving Total from the array length. An empty list must show Total: 0. For a failed request show Request failed: followed by a space and the status number.",
+      "A：根据下面的目标输出反推 JSON，字段和类型见英文题。B：保留题给请求框架，在 (1) 写错误提示、(2) 调用自己的函数、(3) 根据响应生成标题和日期段落。把每间教室写成一个无序列表项。末段显示实际总数，空数组也要正确。作答框内分开写 JSON 和 JS。"
+    ],
+    "checks": [
+      "JSON 合法，日期是字符串。",
+      "成功后标题、日期和顺序符合目标。",
+      "列表随响应长度改变。",
+      "空数组输出 Total: 0。",
+      "请求失败显示状态码，覆盖旧结果。"
+    ],
+    "files": [
+      "e5-b.html",
+      "e5-b.json"
+    ],
+    "marks": null,
+    "adaptation": "依据题型回忆编写。数据、样式和练习时限为自拟。",
+    "resources": [
+      {
+        "title": "Target output · 目标效果",
+        "code": "Web lab\nDate: 2026-11-26\n• B12\n• C20\nTotal: 2"
+      },
+      {
+        "title": "Given · 页面已有 Load 按钮和 id=\"result\" 的 div；补全以下 JS",
+        "code": "function loadData() {\n  var xhttp = new XMLHttpRequest();\n  xhttp.onreadystatechange = function () {\n    if (xhttp.readyState == 4) {\n      if (xhttp.status == 200) {\n        handleStatusSuccess(xhttp);\n      } else {\n        handleStatusFailure(xhttp);\n      }\n    }\n  };\n  xhttp.open(\"GET\", \"e5-b.json\", true);\n  xhttp.send();\n}\n\nfunction handleStatusFailure(xhttp) {\n  // (1) Show the error in the result div.\n}\nfunction handleStatusSuccess(xhttp) {\n  var data = JSON.parse(xhttp.responseText);\n  // (2) Pass the object to your display function.\n}\n// (3) Write displayReport here."
+      }
+    ],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "JSON 合法，日期是字符串。"
+      },
+      {
+        "id": "c2",
+        "text": "成功后标题、日期和顺序符合目标。"
+      },
+      {
+        "id": "c3",
+        "text": "列表随响应长度改变。"
+      },
+      {
+        "id": "c4",
+        "text": "空数组输出 Total: 0。"
+      },
+      {
+        "id": "c5",
+        "text": "请求失败显示状态码，覆盖旧结果。"
+      }
+    ],
+    "note_section": 15,
+    "local_service": true,
+    "skills": "XMLHttpRequest · readyState · status · JSON.parse · callback · list",
+    "module": 5
+  },
+  {
+    "id": "M1",
+    "title": "综合模拟 · 教室查询页",
+    "track": "mock",
+    "topic": "JSON 与 AJAX",
+    "source": "综合改编 · L02A / L03B / 7B / L09A / L10A · Lab L02、L03、L09、L10、L11",
+    "version": 2,
+    "minutes": 35,
+    "requirements": [
+      "Write rooms.json as an array of records with code, room and color from the supplied rows. On Load rooms, use XHR to load it. Call your display function to build a Unit | Room table. Use document CSS for collapsed borders, 1px solid black cell borders and 4px padding. Below it show two paragraphs: Choose a unit and Rooms may change (inline gray). Hover any data row to replace the first paragraph with CODE: ROOM in its colour. On failure clear the data rows and show Request failed: STATUS. Repeated loads must replace the old rows.",
+      "闭卷完成 JSON 和 HTML 两个文件。加载后用响应建表；移入数据行时更新表下第一段的文字和颜色，第二段用行内灰色。重复加载不能堆积行；失败要清掉旧行并显示状态码。"
+    ],
+    "checks": [
+      "加载后表头和三行内容正确，再次加载仍三行。",
+      "内部 CSS 设格线与间距，第二段为行内灰色。",
+      "三行 hover 各显示自己的文字和颜色。",
+      "失败后没有旧行，第一段有状态码。"
+    ],
+    "files": [
+      "m1.html",
+      "rooms.json"
+    ],
+    "marks": null,
+    "adaptation": "依据题型回忆编写。数据、样式和练习时限为自拟。",
+    "resources": [
+      {
+        "title": "Target rows · 给定数据",
+        "code": "Unit | Room | Text colour\nWEB  | B12  | navy\nDB   | C20  | green\nAI   | A08  | purple"
+      }
+    ],
+    "extensions": [],
+    "criteria": [
+      {
+        "id": "c1",
+        "text": "加载后表头和三行内容正确，再次加载仍三行。"
+      },
+      {
+        "id": "c2",
+        "text": "内部 CSS 设格线与间距，第二段为行内灰色。"
+      },
+      {
+        "id": "c3",
+        "text": "三行 hover 各显示自己的文字和颜色。"
+      },
+      {
+        "id": "c4",
+        "text": "失败后没有旧行，第一段有状态码。"
+      }
+    ],
+    "note_section": 15,
+    "local_service": true,
+    "skills": "table · inline CSS · mouseover · JSON · XHR",
+    "module": 5
+  },
+  {
     "id": "A1-1",
     "title": "HTML instructions page",
     "source": "A1 Q1 · adapted instructions-page task",
@@ -8,7 +762,7 @@
     "minutes": 25,
     "version": 2,
     "requirements": [
-      "Use HTML only, with no CSS, to create a web page called workshop.html. Use the practice identity Maya Lee / 2026001 / mayal@uowmail.edu.au.",
+      "Use HTML only, with no CSS, to create a web page called workshop.html. Use the practice identity Demo Student / 101 / demo@example.invalid.",
       "On the top of the page, display the main large heading \"How do I register for a study workshop?\". Below it, display a smaller heading containing the student number and email.",
       "Use the information in the supplied table to write the registration steps in your own words. Display the steps in an unordered list.",
       "Below the list, display a link with the text \"Click here to read more about study workshops\" and the address https://workshops.example/. When the user clicks the link, it must open in a new tab."
@@ -76,7 +830,7 @@
     "minutes": 25,
     "version": 2,
     "requirements": [
-      "Use HTML only, with no CSS, to create coordinators.html. On the top of the page, display a large heading containing CSIT884, the practice student number and full name: 2026001, Maya Lee.",
+      "Use HTML only, with no CSS, to create coordinators.html. On the top of the page, display a large heading containing CSIT884, the practice student number and full name: 101, Demo Student.",
       "Below the heading, use a table with a visible border to display the three supplied coordinator records. The table headers must be Coordinator name, Subject code, Consultation hours and Picture. Each coordinator must appear in a separate row.",
       "In the Consultation hours column, display the hours using an ordered list.",
       "In the Picture column, display the supplied picture for that coordinator at 100 by 100 pixels. Use the full image address. Each row must use a different picture."
@@ -101,19 +855,19 @@
         ],
         "rows": [
           [
-            "Alex Green",
+            "Tutor A",
             "CSIT884",
             "Tuesday 10:00–11:00; Thursday 14:00–15:00",
             "https://cp0330.github.io/Lecture--Review/CSIT884/assets/team1.svg"
           ],
           [
-            "Sam Brown",
+            "Tutor B",
             "CSIT882",
             "Monday 09:00–10:00; Friday 11:00–12:00",
             "https://cp0330.github.io/Lecture--Review/CSIT884/assets/team2.svg"
           ],
           [
-            "Robin White",
+            "Tutor C",
             "CSIT985",
             "Wednesday 13:00–14:00",
             "https://cp0330.github.io/Lecture--Review/CSIT884/assets/team3.svg"
@@ -144,8 +898,8 @@
     "minutes": 20,
     "version": 2,
     "requirements": [
-      "Use HTML only to create a web page. Use the practice identity Maya Lee / 2026001.",
-      "Display a table with a visible border, two rows and four columns. In every cell of the first row, display 2026001. In every cell of the second row, display Maya Lee.",
+      "Use HTML only to create a web page. Use the practice identity Demo Student / 101.",
+      "Display a table with a visible border, two rows and four columns. In every cell of the first row, display 101. In every cell of the second row, display Demo Student.",
       "Display an unordered list containing four animal names of your choice.",
       "Display a link with the text \"Click here\" and the address https://spider.example/. When the user clicks the link, it must open in a new tab.",
       "Display FROG, then exactly five non-breaking spaces, then EMU."
@@ -212,7 +966,7 @@
     "minutes": 20,
     "version": 2,
     "requirements": [
-      "Use HTML and CSS to create a web page. Use the practice identity Maya Lee / 2026001 / mayal@uowmail.edu.au, and the country Australia.",
+      "Use HTML and CSS to create a web page. Use the practice identity Demo Student / 101 / demo@example.invalid, and the country Australia.",
       "Display the full name at a font size of 50px using inline CSS.",
       "Display the student number in blue using inline CSS.",
       "Display two paragraphs: one containing the country and one containing the email. Use document CSS with a class selector to give both paragraphs a dashed orange border.",
@@ -280,9 +1034,9 @@
     "minutes": 20,
     "version": 2,
     "requirements": [
-      "Use HTML and JavaScript to create a web page. Display the practice full name Maya Lee. Whenever the user clicks the name, display an alert message \"Hi\" and write Maya Lee to the console.",
-      "Display a button labelled 2026001. The first click displays 1 below the button. Further clicks display 2, 3, and so on. You may display 0 before the first click.",
-      "Display the email mayal@uowmail.edu.au. The first click on the email adds one button labelled CSIT884 below it. The second click gives two buttons, the third gives three, and so on. Keep the buttons already added."
+      "Use HTML and JavaScript to create a web page. Display the practice full name Demo Student. Whenever the user clicks the name, display an alert message \"Hi\" and write Demo Student to the console.",
+      "Display a button labelled 101. The first click displays 1 below the button. Further clicks display 2, 3, and so on. You may display 0 before the first click.",
+      "Display the email demo@example.invalid. The first click on the email adds one button labelled CSIT884 below it. The second click gives two buttons, the third gives three, and so on. Keep the buttons already added."
     ],
     "checks": [
       "After three clicks on the student-number button, its count is 3.",
@@ -337,10 +1091,10 @@
     "minutes": 30,
     "version": 2,
     "requirements": [
-      "Use the practice student number 2026001. Create a web page that initially displays 1 + 2026001 = 2026002. Use inline CSS to make the equation red and 60px.",
+      "Use the practice student number 101. Create a web page that initially displays 1 + 101 = 102. Use inline CSS to make the equation red and 60px.",
       "Display two clickable texts: \"Start Animation\" in orange and \"Stop Animation\" in purple.",
-      "When the user clicks Start Animation, update the equation every second. After one second, display 3 + 2026001 = 2026004. After another second, display 5 + 2026001 = 2026006. Continue with 7, 9, and so on.",
-      "When the user clicks Stop Animation, stop the updates and display the original equation: 1 + 2026001 = 2026002.",
+      "When the user clicks Start Animation, update the equation every second. After one second, display 3 + 101 = 104. After another second, display 5 + 101 = 106. Continue with 7, 9, and so on.",
+      "When the user clicks Stop Animation, stop the updates and display the original equation: 1 + 101 = 102.",
       "If the user clicks Start Animation again, start the sequence again with 3 after one second, then 5, 7, and so on."
     ],
     "checks": [
@@ -421,7 +1175,7 @@
     ],
     "checks": [
       "Selecting PayPal submits pmethod=200. Only one payment method can be selected.",
-      "For email maya@example.com, URL https://example.com/book and date 2026-11-11, submission contains user, longurl, adate and the chosen pmethod. Reset restores the initial form."
+      "For email demo@example.invalid, URL https://example.com/book and date 2026-11-11, submission contains user, longurl, adate and the chosen pmethod. Reset restores the initial form."
     ],
     "files": [
       "a3-2.html"
@@ -515,13 +1269,13 @@
     "minutes": 45,
     "version": 2,
     "requirements": [
-      "Create a web page. On the top, display a heading containing the practice student number and name: 2026001, Maya Lee.",
+      "Create a web page. On the top, display a heading containing the practice student number and name: 101, Demo Student.",
       "Below the heading, display a table with a visible border, four columns and six rows. The headers are City, Country, Latitude and Longitude. Display the five supplied city records in the remaining rows.",
       "Below the table, display two text fields for the user to enter latitude and longitude. Display a button labelled \"Get Weather JSON\".",
       "When the user enters coordinates and clicks the button, construct the request URL from those inputs and obtain the corresponding JSON. You must use the XMLHttpRequest AJAX method taught in this subject.",
       "Display User Query with the entered coordinates. Then display a bordered Weather information table containing Elevation, Time, Interval, Temperature and Generationtime (ms), using the response data. Follow the supplied target layout.",
-      "Use document CSS and a class selector to make the temperature orange and 50px. The class name must equal the practice family name, lee.",
-      "Use document CSS and an ID selector to make \"Weather information\" purple and 50px. The ID must equal the practice email username, mayal.",
+      "Use document CSS and a class selector to make the temperature orange and 50px. The class name must equal the practice family name, student.",
+      "Use document CSS and an ID selector to make \"Weather information\" purple and 50px. The ID must equal the practice email username, demo.",
       "You may assume valid numeric input. Test several coordinate pairs, including Wollongong and New York. Each new request must display the result for the current input."
     ],
     "checks": [
@@ -671,10 +1425,10 @@
     "minutes": 30,
     "version": 2,
     "requirements": [
-      "Create q01.html using HTML only, with no CSS. Set the page title to Coding Competition. Display a large heading Coding Competition, then a smaller heading with Maya Lee / 2026001 / mayal@uowmail.edu.au.",
+      "Create q01.html using HTML only, with no CSS. Set the page title to Coding Competition. Display a large heading Coding Competition, then a smaller heading with Demo Student / 101 / demo@example.invalid.",
       "Display a bordered table with the headings Rank, Team and Members. The two data rows are 1st / River and 2nd / Mountain.",
       "For River, display a River Team link to https://river.example/ and, on the next line, ../assets/team1.svg at 120 by 80 pixels. For Mountain, use https://mountain.example/ and ../assets/team2.svg with the same size. Both links must open in a new tab.",
-      "Display each team’s members in an unordered list. River: Alex and Bo; Mountain: Chen and Dee. Make Alex and Chen bold and add (team leader) in italic after each name.",
+      "Display each team’s members in an unordered list. River: SampleA and SampleB; Mountain: SampleC and SampleD. Make SampleA and SampleC bold and add (team leader) in italic after each name.",
       "Below the table, display an ordered list containing Register, Practice and Compete. Then display FROG, five non-breaking spaces and EMU. Add a smiley face using the supplied decimal character entity number 128516."
     ],
     "checks": [
@@ -715,10 +1469,10 @@
     "minutes": 30,
     "version": 2,
     "requirements": [
-      "Create q02.html with a heading City Coding Teams, name Maya Lee, student number 2026001, and paragraphs Australia and mayal@uowmail.edu.au.",
+      "Create q02.html with a heading City Coding Teams, name Demo Student, student number 101, and paragraphs Australia and demo@example.invalid.",
       "Use document CSS and an ID selector for the heading: purple text and lightgray background. Use inline CSS for the name at 50px and the student number in blue.",
       "Give both paragraphs class info. Use document CSS with that class to give them a 2px dashed orange border and 10px padding.",
-      "Add a table with ID teamTable, column headings Rank and Members, and a row containing 1 and a list of Alex and Bo. Give the list class members and the Rank cells class rank.",
+      "Add a table with ID teamTable, column headings Rank and Members, and a row containing 1 and a list of SampleA and SampleB. Give the list class members and the Rank cells class rank.",
       "Use descendant selectors for the table cells: a 1px solid black border, 12px padding and top vertical alignment. Collapse the table borders and right-align the Rank cells. Use a child selector to make the direct list items green.",
       "Create q02-external.html and q02.css. Move the document CSS into the CSS file, keep the inline CSS, and link the stylesheet. Both versions must have the same appearance."
     ],
@@ -762,9 +1516,9 @@
     "minutes": 20,
     "version": 2,
     "requirements": [
-      "Create a web page displaying Maya Lee. Clicking the name must show the alert Hi and write Maya Lee to the console.",
-      "Display a button labelled 2026001 and a counter initially showing 0. Each click increases that counter by one.",
-      "Display mayal@uowmail.edu.au. Each click on the email adds one CSIT884 button below it. Keep all earlier buttons."
+      "Create a web page displaying Demo Student. Clicking the name must show the alert Hi and write Demo Student to the console.",
+      "Display a button labelled 101 and a counter initially showing 0. Each click increases that counter by one.",
+      "Display demo@example.invalid. Each click on the email adds one CSIT884 button below it. Keep all earlier buttons."
     ],
     "checks": [
       "The page or document contains every item and value required above.",
@@ -847,7 +1601,7 @@
     "minutes": 30,
     "version": 2,
     "requirements": [
-      "Create a page initially displaying 1 + 2026001 = 2026002 in red at 60px using inline CSS. Display clickable Start Animation in orange and Stop Animation in purple.",
+      "Create a page initially displaying 1 + 101 = 102 in red at 60px using inline CSS. Display clickable Start Animation in orange and Stop Animation in purple.",
       "Start increases the first number by two every second and updates the sum. The first change is to 3 after one second, followed by 5, 7, and so on.",
       "Clicking Start several times while running must still produce only one update per second and must not reset the sequence.",
       "Stop stops the updates and restores the original equation. A later Start begins again at 3 after one second."
@@ -1068,7 +1822,7 @@
     "resources": [
       {
         "title": "Supplied document",
-        "code": "{\n \"firstName\":\"Maya\",\n \"lastName\":\"Lee\",\n [ {\"code\":\"CSIT884\",\"title\":\"Web Development\"},\n   {\"code\":\"CSIT882\",\"title\":\"Systems\"} ],\n age:22,\n \"fullTime\":True,\n}",
+        "code": "{\n \"firstName\":\"Demo\",\n \"lastName\":\"Student\",\n [ {\"code\":\"CSIT884\",\"title\":\"Web Development\"},\n   {\"code\":\"CSIT882\",\"title\":\"Systems\"} ],\n age:22,\n \"fullTime\":True,\n}",
         "language": "json"
       }
     ],
@@ -1144,7 +1898,7 @@
     "requirements": [
       "Write q11.xml to represent the supplied complete student record. Write XML only, without a DTD. Put the XML declaration at the start of the first line.",
       "Use a student root with a number attribute. Use firstName, lastName and subjects in that order. Each subject has a code attribute and creditPoint, mark and grade children in that order.",
-      "The student is Maya Lee, number 2026001. The subjects are CSIT884 / 6 / 84 / A and CSIT882 / 6 / 72 / B. Keep all records and values."
+      "The student is Demo Student, number 101. The subjects are CSIT884 / 6 / 84 / A and CSIT882 / 6 / 72 / B. Keep all records and values."
     ],
     "checks": [
       "The page or document contains every item and value required above.",
@@ -1201,7 +1955,7 @@
     "resources": [
       {
         "title": "XML to constrain",
-        "code": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<student number=\"2026001\">\n  <firstName>Maya</firstName>\n  <lastName>Lee</lastName>\n  <subjects>\n    <subject code=\"CSIT884\"><creditPoint>6</creditPoint><mark>84</mark><grade>A</grade></subject>\n    <subject code=\"CSIT882\"><creditPoint>6</creditPoint><mark>72</mark><grade>B</grade></subject>\n  </subjects>\n</student>\n",
+        "code": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<student number=\"101\">\n  <firstName>Demo</firstName>\n  <lastName>Student</lastName>\n  <subjects>\n    <subject code=\"CSIT884\"><creditPoint>6</creditPoint><mark>84</mark><grade>A</grade></subject>\n    <subject code=\"CSIT882\"><creditPoint>6</creditPoint><mark>72</mark><grade>B</grade></subject>\n  </subjects>\n</student>\n",
         "language": "xml"
       }
     ],
@@ -1250,7 +2004,7 @@
     "resources": [
       {
         "title": "Supplied document",
-        "code": "<?xml version=\"1.0\"?>\n<resultBatch campus=\"Sydney\">\n  <result ref=\"R001\"><contestantId>00025142</contestantId><examId>WEB01</examId><score>156</score><band>C</band></result>\n  <result ref=\"R002\"><contestantId>00025143</contestantId><examId>WEB01</examId><score>280</score><band>A</band></result>\n</resultBatch>",
+        "code": "<?xml version=\"1.0\"?>\n<resultBatch campus=\"Sydney\">\n  <result ref=\"R001\"><contestantId>00000001</contestantId><examId>WEB01</examId><score>156</score><band>C</band></result>\n  <result ref=\"R002\"><contestantId>00000002</contestantId><examId>WEB01</examId><score>280</score><band>A</band></result>\n</resultBatch>",
         "language": "xml"
       }
     ],
@@ -1299,7 +2053,7 @@
     "resources": [
       {
         "title": "faculty.json",
-        "code": "{\n  \"name\": \"Faculty of Engineering and Information Sciences\",\n  \"abbreviation\": \"EIS\",\n  \"email\": \"eis@uow.edu.au\",\n  \"web\": \"www.uow.edu.au/engineering-information-sciences\"\n}",
+        "code": "{\n  \"name\": \"Faculty of Engineering and Information Sciences\",\n  \"abbreviation\": \"EIS\",\n  \"email\": \"faculty@example.invalid\",\n  \"web\": \"www.uow.edu.au/engineering-information-sciences\"\n}",
         "language": "json"
       },
       {
@@ -1335,10 +2089,10 @@
     "minutes": 40,
     "version": 2,
     "requirements": [
-      "Create a page headed Maya Lee, 2026001. Display latitude and longitude text fields and a Get Weather JSON button.",
+      "Create a page headed Demo Student, 101. Display latitude and longitude text fields and a Get Weather JSON button.",
       "Use the supplied local weather-service documentation. On click, request the coordinates entered by the user using the classroom XMLHttpRequest method. Display request failures with the status number.",
       "Display the entered coordinates under User Query. Display Weather information and a bordered table containing Elevation, Time, Interval, Temperature and Generationtime(ms), from the response.",
-      "Use document CSS: a class selector named lee makes the temperature orange and 50px; an ID selector named mayal makes Weather information purple and 50px.",
+      "Use document CSS: a class selector named student makes the temperature orange and 50px; an ID selector named demo makes Weather information purple and 50px.",
       "You may assume valid numeric input. Test both supplied coordinate pairs."
     ],
     "checks": [

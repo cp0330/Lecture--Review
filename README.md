@@ -4,7 +4,7 @@
 
 ## CSIT884 · Web Development
 
-**8 道 assignment 风格主练 + 29 道 lab/课堂补充，附分级提示、独立解析与参考答案。**
+**5 道补考母题、10 道变式、1 道综合题及原 37 题，附中文解析与可运行参考。**
 
 - [打开 CSIT884 复习入口](https://cp0330.github.io/Lecture--Review/CSIT884/)
 - [英文题库](CSIT884/questions.md) · [参考答案](CSIT884/reference-answers.md)

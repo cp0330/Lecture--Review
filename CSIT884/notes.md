@@ -2,7 +2,7 @@
 
 目的：闭卷时能写出正确语法、选择正确的函数或属性，并把代码步骤接起来。
 
-笔记用中文解释，专业术语和代码保留英文。末尾自测问题全部用英语。题库题目仍保持全英语。
+笔记用中文解释，专业术语和代码保留英文。末尾自测问题全部用英语。旧题保留英文，补考母题提供中英双语。
 
 **来源标记**：Review = Week 13 明确提及的主题或写法；Lab detail = 对应 lab/assignment/lecture 补齐的实现细节；Lecture extra = 已教、但复习课没有展开的补充。标记说明来源，不代表出题概率。
 
@@ -25,7 +25,7 @@
 | HTML entity 的写法 | 需要的 emoji 编号；老师说明会给，不要求背全部编号 |
 | 状态更新、循环、条件、开始/停止逻辑 | 题目要求的时间间隔、数值范围、停止条件 |
 
-**使用方法**：每次只处理一个主题。先读用途，遮住代码默写，再用对应题验证。不会的新主题先学 lecture/lab 示例；“看懂”和“能独立写”分开记录。主练现为 A1–A4 的八个 assignment 风格任务，Q01–Q29 作为 lab/课堂补充。知识点、技术规则及勘误仍适用。更新日期：2026-11-06。
+**使用方法**：每次只处理一个主题。先读用途，遮住代码默写，再用对应题验证。不会的新主题先学 lecture/lab 示例；“看懂”和“能独立写”分开记录。当前先练 E1–E5，再按缺口查本笔记、旧作业和课堂题。
 
 ## 01 · CSS properties：老师明确要求整理的清单
 
@@ -75,7 +75,7 @@
 **Inline CSS：style attribute，直接写在指定元素上。**
 
 ```html
-<p style="color: blue; font-size: 50px;">Maya Lee</p>
+<p style="color: blue; font-size: 50px;">Demo Student</p>
 ```
 
 **Document CSS：head 内的 style element。**
@@ -155,11 +155,11 @@ link / visited / hover / active 顺序可避免相同 specificity 下 hover 等�
 | 内容 | 最小写法 |
 | --- | --- |
 | 标题、段落 | `<h1>Title</h1>`、`<h2>Details</h2>`、`<p>Text</p>` |
-| 粗体、斜体、上下标 | `<b>Alex</b>`、`<i>leader</i>`、`x<sub>1</sub><sup>2</sup>` |
+| 粗体、斜体、上下标 | `<b>SampleA</b>`、`<i>leader</i>`、`x<sub>1</sub><sup>2</sup>` |
 | 本课 HTML-only 的字号/颜色 | `<font size="5" color="blue">Text</font>`；有 CSS 要求时按题目改用 CSS |
-| 无序列表 | `<ul><li>Alex</li><li>Bo</li></ul>` |
+| 无序列表 | `<ul><li>SampleA</li><li>SampleB</li></ul>` |
 | 有序列表 | `<ol><li>Register</li><li>Practise</li></ol>` |
-| 表格 | `<table border="1"><tr><th>Name</th></tr><tr><td>Alex</td></tr></table>` |
+| 表格 | `<table border="1"><tr><th>Name</th></tr><tr><td>SampleA</td></tr></table>` |
 | 合并单元格 | `<td colspan="2">Heading</td>`、`<td rowspan="2">Monday</td>` |
 | 本课 HTML-only 的单元格对齐 | `<td align="right" valign="top">Text</td>`；CSS 题使用 text-align/vertical-align |
 | 图片 | `<img src="cat.png" width="100" height="100" alt="cat">` |
@@ -427,8 +427,8 @@ function stopCounter() {
   "cp": 6,
   "coreFlag": true,
   "teachers": [
-    {"firstName": "Maya"},
-    {"firstName": "Alex"}
+    {"firstName": "Demo"},
+    {"firstName": "SampleA"}
   ]
 }
 ```
@@ -472,12 +472,12 @@ document.getElementById("jsonText").value = JSON.stringify(subject, null, 2);
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <studentList>
-  <student number="2026001">
-    <firstName>Maya</firstName>
+  <student number="101">
+    <firstName>Demo</firstName>
     <mark>84</mark>
   </student>
-  <student number="2026002">
-    <firstName>Alex</firstName>
+  <student number="102">
+    <firstName>SampleA</firstName>
     <mark>72</mark>
   </student>
 </studentList>
@@ -508,8 +508,8 @@ document.getElementById("jsonText").value = JSON.stringify(subject, null, 2);
   <!ELEMENT mark (#PCDATA)>
 ]>
 <studentList>
-  <student number="2026001">
-    <firstName>Maya</firstName>
+  <student number="101">
+    <firstName>Demo</firstName>
     <mark>84</mark>
   </student>
 </studentList>
@@ -591,7 +591,7 @@ document.getElementById("jsonText").value = JSON.stringify(subject, null, 2);
 </xsd:element>
 ```
 
-Inclusive 包含边界。编号如 `00025142` 按题目用 string，不能因为全是数字就擅自改为 integer。
+Inclusive 包含边界。编号如 `00000001` 按题目用 string，不能因为全是数字就擅自改为 integer。
 
 常见 type：`xsd:string`、`xsd:integer`、`xsd:decimal`、`xsd:boolean`、`xsd:date`、`xsd:dateTime`、`xsd:anyURI`。选择取决于题目说明。
 
@@ -614,7 +614,7 @@ Inclusive 包含边界。编号如 `00025142` 按题目用 string，不能因为
 ```xml
 <student xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="student.xsd">
-  <firstName>Maya</firstName>
+  <firstName>Demo</firstName>
 </student>
 ```
 

@@ -1,11 +1,576 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CSIT884 · Reference answers</title><link rel="stylesheet" href="study.css?v=20261106-2"></head><body><a class="skip" href="#main">Skip to content</a><div class="topbar"><a class="brand" href="../index.html">Lecture Review<span> / CSIT884</span></a><div class="tabs" role="navigation" aria-label="Course pages"><a href="index.html">Overview</a><a href="questions.html">Practice</a><a href="notes.html">Memory notes</a><a href="quick-notes.html">Quick sheet</a><a href="audit.html">Coverage</a></div></div><main id="main" class="answer-list"><section class="paper"><h1>Reference answers</h1><p>完整代码需主动展开。分级提示与解析在练习页中分别打开。</p><div class="index"><a href="#A1-1">A1-1</a><a href="#A1-2">A1-2</a><a href="#A2-1">A2-1</a><a href="#A2-2">A2-2</a><a href="#A2-3">A2-3</a><a href="#A3-1">A3-1</a><a href="#A3-2">A3-2</a><a href="#A4-1">A4-1</a><a href="#Q01">Q01</a><a href="#Q02">Q02</a><a href="#Q03">Q03</a><a href="#Q04">Q04</a><a href="#Q05">Q05</a><a href="#Q06">Q06</a><a href="#Q07">Q07</a><a href="#Q08">Q08</a><a href="#Q09">Q09</a><a href="#Q10">Q10</a><a href="#Q11">Q11</a><a href="#Q12">Q12</a><a href="#Q13">Q13</a><a href="#Q14">Q14</a><a href="#Q15">Q15</a><a href="#Q16">Q16</a><a href="#Q17">Q17</a><a href="#Q18">Q18</a><a href="#Q19">Q19</a><a href="#Q20">Q20</a><a href="#Q21">Q21</a><a href="#Q22">Q22</a><a href="#Q23">Q23</a><a href="#Q24">Q24</a><a href="#Q25">Q25</a><a href="#Q26">Q26</a><a href="#Q27">Q27</a><a href="#Q28">Q28</a><a href="#Q29">Q29</a></div></section><section class="card answers" id="A1-1"><a class="back-question button" href="questions.html#A1-1">Back to A1-1</a><h2>A1-1 · HTML instructions page</h2><p>A1 Q1 · adapted instructions-page task</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>a1-1.html</h3><div class="code-actions"><a class="button" href="answers/a1-1.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/a1-1.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!doctype html&gt;
-&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;title&gt;Study workshop registration&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;How do I register for a study workshop?&lt;/h1&gt;&lt;h2&gt;2026001, mayal@uowmail.edu.au&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;Choose a suitable workshop from the list and note when it will run.&lt;/li&gt;&lt;li&gt;Fill in the form with your student number and university email address.&lt;/li&gt;&lt;li&gt;Check that you chose the right workshop and entered the correct contact details.&lt;/li&gt;&lt;li&gt;Send the request before registration closes.&lt;/li&gt;&lt;li&gt;Look in your university email for the confirmation.&lt;/li&gt;&lt;/ul&gt;&lt;a href=&quot;https://workshops.example/&quot; target=&quot;_blank&quot;&gt;Click here to read more about study workshops&lt;/a&gt;&lt;/body&gt;&lt;/html&gt;
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CSIT884 · Reference answers</title><link rel="stylesheet" href="study.css?v=20261106-2"></head><body><a class="skip" href="#main">Skip to content</a><div class="topbar"><a class="brand" href="../index.html">Lecture Review<span> / CSIT884</span></a><div class="tabs" role="navigation" aria-label="Course pages"><a href="index.html">Overview</a><a href="questions.html">Practice</a><a href="notes.html">Memory notes</a><a href="quick-notes.html">Quick sheet</a><a href="audit.html">Coverage</a></div></div><main id="main" class="answer-list"><section class="paper"><h1>Reference answers</h1><p>完整代码需主动展开。分级提示与解析在练习页中分别打开。</p><div class="index"><a href="#E1">E1</a><a href="#E1-A">E1-A</a><a href="#E1-B">E1-B</a><a href="#E2">E2</a><a href="#E2-A">E2-A</a><a href="#E2-B">E2-B</a><a href="#E3">E3</a><a href="#E3-A">E3-A</a><a href="#E3-B">E3-B</a><a href="#E4">E4</a><a href="#E4-A">E4-A</a><a href="#E4-B">E4-B</a><a href="#E5">E5</a><a href="#E5-A">E5-A</a><a href="#E5-B">E5-B</a><a href="#M1">M1</a><a href="#A1-1">A1-1</a><a href="#A1-2">A1-2</a><a href="#A2-1">A2-1</a><a href="#A2-2">A2-2</a><a href="#A2-3">A2-3</a><a href="#A3-1">A3-1</a><a href="#A3-2">A3-2</a><a href="#A4-1">A4-1</a><a href="#Q01">Q01</a><a href="#Q02">Q02</a><a href="#Q03">Q03</a><a href="#Q04">Q04</a><a href="#Q05">Q05</a><a href="#Q06">Q06</a><a href="#Q07">Q07</a><a href="#Q08">Q08</a><a href="#Q09">Q09</a><a href="#Q10">Q10</a><a href="#Q11">Q11</a><a href="#Q12">Q12</a><a href="#Q13">Q13</a><a href="#Q14">Q14</a><a href="#Q15">Q15</a><a href="#Q16">Q16</a><a href="#Q17">Q17</a><a href="#Q18">Q18</a><a href="#Q19">Q19</a><a href="#Q20">Q20</a><a href="#Q21">Q21</a><a href="#Q22">Q22</a><a href="#Q23">Q23</a><a href="#Q24">Q24</a><a href="#Q25">Q25</a><a href="#Q26">Q26</a><a href="#Q27">Q27</a><a href="#Q28">Q28</a><a href="#Q29">Q29</a></div></section><section class="card answers" id="E1"><a class="back-question button" href="questions.html#E1">Back to E1</a><h2>E1 · 课程表与两段说明</h2><div class="file"><h3>e1.html</h3><div class="code-actions"><a class="button" href="answers/e1.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/e1.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>查看源码</summary><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;课程表与两段说明&lt;/title&gt;
+&lt;style&gt;
+table { border-collapse: collapse; }
+th, td { border: 1px solid black; padding: 4px; }
+.note { color: navy; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;table&gt;
+  &lt;tr&gt;&lt;th&gt;Unit&lt;/th&gt;&lt;th&gt;Room&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Web&lt;/td&gt;&lt;td&gt;B12&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;p class=&quot;note&quot;&gt;Spring timetable&lt;/p&gt;
+&lt;p style=&quot;color: red&quot;&gt;Check your room&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>Unit、Room 是两个表头；Web、B12 在下一行。</li><li>每格边框为 1px solid black，内边距 4px；边框合并。</li><li>表后恰有两个 p，第一段内部规则为 navy，第二段行内 red。</li></ul></section><section class="card answers" id="E1-A"><a class="back-question button" href="questions.html#E1-A">Back to E1-A</a><h2>E1-A · 基础变式 · 单列成绩</h2><div class="file"><h3>e1-a.html</h3><div class="code-actions"><a class="button" href="answers/e1-a.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/e1-a.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>查看源码</summary><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;基础变式 · 单列成绩&lt;/title&gt;
+&lt;style&gt;
+th, td { border: 1px solid black; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;table&gt;
+  &lt;tr&gt;&lt;th&gt;Mark&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;85&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;p style=&quot;color: green&quot;&gt;Result&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>两行各一个格子。</li><li>边框来自内部 CSS，绿色来自行内 CSS。</li></ul></section><section class="card answers" id="E1-B"><a class="back-question button" href="questions.html#E1-B">Back to E1-B</a><h2>E1-B · 进阶变式 · 合并表头</h2><div class="file"><h3>e1-b.html</h3><div class="code-actions"><a class="button" href="answers/e1-b.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/e1-b.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>查看源码</summary><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;进阶变式 · 合并表头&lt;/title&gt;
+&lt;style&gt;
+table { border-collapse: collapse; }
+th, td { border: 1px solid black; padding: 4px; }
+p { color: navy; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;table&gt;
+  &lt;tr&gt;&lt;th colspan=&quot;2&quot;&gt;Timetable&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;th&gt;Unit&lt;/th&gt;&lt;th&gt;Room&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Web&lt;/td&gt;&lt;td&gt;B12&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;Week 1&lt;/p&gt;
+&lt;p style=&quot;color: red&quot;&gt;Revised&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>第一行只有一个 th，横跨两列。</li><li>后续每行两个格子且共享边框规则。</li><li>普通段落 navy，Revised 行内覆盖为 red。</li></ul></section><section class="card answers" id="E2"><a class="back-question button" href="questions.html#E2">Back to E2</a><h2>E2 · 三个标签共用一个结果框</h2><div class="file"><h3>e2.html</h3><div class="code-actions"><a class="button" href="answers/e2.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/e2.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>查看源码</summary><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;Unit rooms&lt;/title&gt;
+&lt;script&gt;
+var jsonText = &#x27;[{&quot;code&quot;:&quot;WEB&quot;,&quot;room&quot;:&quot;B12&quot;,&quot;color&quot;:&quot;navy&quot;},{&quot;code&quot;:&quot;DB&quot;,&quot;room&quot;:&quot;C20&quot;,&quot;color&quot;:&quot;green&quot;},{&quot;code&quot;:&quot;AI&quot;,&quot;room&quot;:&quot;A08&quot;,&quot;color&quot;:&quot;purple&quot;}]&#x27;;
+var units = JSON.parse(jsonText);
+
+function showUnit(index) {
+  // Each label selects one record in the same array.
+  var unit = units[index];
+  var result = document.getElementById(&quot;result&quot;);
+  result.textContent = unit.code + &quot;: &quot; + unit.room;
+  result.style.color = unit.color;
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;span onmouseover=&quot;showUnit(0)&quot;&gt;WEB&lt;/span&gt;
+&lt;span onmouseover=&quot;showUnit(1)&quot;&gt;DB&lt;/span&gt;
+&lt;span onmouseover=&quot;showUnit(2)&quot;&gt;AI&lt;/span&gt;
+&lt;div id=&quot;result&quot;&gt;Choose a unit&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>初始显示 Choose a unit。</li><li>逐个移入，输出与对应记录一致，只有一个结果框。</li><li>结果框颜色来自所选数据。</li></ul></section><section class="card answers" id="E2-A"><a class="back-question button" href="questions.html#E2-A">Back to E2-A</a><h2>E2-A · 基础变式 · 两个标签</h2><div class="file"><h3>e2-a.html</h3><div class="code-actions"><a class="button" href="answers/e2-a.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/e2-a.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>查看源码</summary><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;Unit rooms&lt;/title&gt;
+&lt;script&gt;
+var jsonText = &#x27;[{&quot;code&quot;:&quot;WEB&quot;,&quot;room&quot;:&quot;B12&quot;,&quot;color&quot;:&quot;navy&quot;},{&quot;code&quot;:&quot;DB&quot;,&quot;room&quot;:&quot;C20&quot;,&quot;color&quot;:&quot;green&quot;}]&#x27;;
+var units = JSON.parse(jsonText);
+
+function showUnit(index) {
+  // Each label selects one record in the same array.
+  var unit = units[index];
+  var result = document.getElementById(&quot;result&quot;);
+  result.textContent = unit.code + &quot;: &quot; + unit.room;
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;span onmouseover=&quot;showUnit(0)&quot;&gt;WEB&lt;/span&gt;
+&lt;span onmouseover=&quot;showUnit(1)&quot;&gt;DB&lt;/span&gt;
+&lt;div id=&quot;result&quot;&gt;Choose a unit&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>初始显示 Choose a unit。</li><li>逐个移入，输出与对应记录一致，只有一个结果框。</li></ul></section><section class="card answers" id="E2-B"><a class="back-question button" href="questions.html#E2-B">Back to E2-B</a><h2>E2-B · 进阶变式 · 移出时复原</h2><div class="file"><h3>e2-b.html</h3><div class="code-actions"><a class="button" href="answers/e2-b.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/e2-b.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>查看源码</summary><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;Unit rooms&lt;/title&gt;
+&lt;script&gt;
+var jsonText = &#x27;[{&quot;code&quot;:&quot;WEB&quot;,&quot;room&quot;:&quot;B12&quot;,&quot;color&quot;:&quot;navy&quot;},{&quot;code&quot;:&quot;DB&quot;,&quot;room&quot;:&quot;C20&quot;,&quot;color&quot;:&quot;green&quot;},{&quot;code&quot;:&quot;AI&quot;,&quot;room&quot;:&quot;A08&quot;,&quot;color&quot;:&quot;purple&quot;}]&#x27;;
+var units = JSON.parse(jsonText);
+
+function showUnit(index) {
+  // Each label selects one record in the same array.
+  var unit = units[index];
+  var result = document.getElementById(&quot;result&quot;);
+  result.textContent = unit.code + &quot;: &quot; + unit.room;
+  result.style.color = unit.color;
+}
+function clearUnit() {
+  var result = document.getElementById(&quot;result&quot;);
+  result.textContent = &quot;Choose a unit&quot;;
+  result.style.color = &quot;black&quot;;
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;span onmouseover=&quot;showUnit(0)&quot; onmouseout=&quot;clearUnit()&quot;&gt;WEB&lt;/span&gt;
+&lt;span onmouseover=&quot;showUnit(1)&quot; onmouseout=&quot;clearUnit()&quot;&gt;DB&lt;/span&gt;
+&lt;span onmouseover=&quot;showUnit(2)&quot; onmouseout=&quot;clearUnit()&quot;&gt;AI&lt;/span&gt;
+&lt;div id=&quot;result&quot;&gt;Choose a unit&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>初始显示 Choose a unit。</li><li>逐个移入，输出与对应记录一致，只有一个结果框。</li><li>结果框颜色来自所选数据。</li><li>移出恢复黑色提示。</li></ul></section><section class="card answers" id="E3"><a class="back-question button" href="questions.html#E3">Back to E3</a><h2>E3 · 报名表的五种控件</h2><div class="file"><h3>e3.html</h3><div class="code-actions"><a class="button" href="answers/e3.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/e3.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>查看源码</summary><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;Registration&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form action=&quot;receipt.html&quot; method=&quot;get&quot;&gt;
+  &lt;p&gt;&lt;label&gt;User: &lt;input type=&quot;text&quot; name=&quot;user&quot;&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;Mode:
+    &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;mode&quot; value=&quot;campus&quot; checked&gt;Campus&lt;/label&gt;
+    &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;mode&quot; value=&quot;online&quot;&gt;Online&lt;/label&gt;
+  &lt;/p&gt;
+  &lt;label&gt;Day:
+    &lt;select name=&quot;day&quot;&gt;
+      &lt;option value=&quot;mon&quot; selected&gt;Monday&lt;/option&gt;
+      &lt;option value=&quot;fri&quot;&gt;Friday&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/label&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+  &lt;input type=&quot;reset&quot; value=&quot;Reset&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>文本初始值为 空；日期默认 mon。</li><li>两项同时只能选一项，默认 campus。</li><li>修改后 Reset 可恢复；改选 Friday 后提交，地址含 day=fri 和 user 字段。</li></ul></section><section class="card answers" id="E3-A"><a class="back-question button" href="questions.html#E3-A">Back to E3-A</a><h2>E3-A · 基础变式 · 两个提交字段</h2><div class="file"><h3>e3-a.html</h3><div class="code-actions"><a class="button" href="answers/e3-a.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/e3-a.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>查看源码</summary><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;Registration&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form action=&quot;receipt.html&quot; method=&quot;get&quot;&gt;
+  &lt;p&gt;&lt;label&gt;User: &lt;input type=&quot;text&quot; name=&quot;user&quot;&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;label&gt;Day:
+    &lt;select name=&quot;day&quot;&gt;
+      &lt;option value=&quot;mon&quot; selected&gt;Monday&lt;/option&gt;
+      &lt;option value=&quot;fri&quot;&gt;Friday&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/label&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+  &lt;input type=&quot;reset&quot; value=&quot;Reset&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>文本初始值为 空；日期默认 mon。</li><li>修改后 Reset 可恢复；改选 Friday 后提交，地址含 day=fri 和 user 字段。</li></ul></section><section class="card answers" id="E3-B"><a class="back-question button" href="questions.html#E3-B">Back to E3-B</a><h2>E3-B · 进阶变式 · 带默认值的登记表</h2><div class="file"><h3>e3-b.html</h3><div class="code-actions"><a class="button" href="answers/e3-b.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/e3-b.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>查看源码</summary><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;Registration&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form action=&quot;receipt.html&quot; method=&quot;get&quot;&gt;
+  &lt;p&gt;&lt;label&gt;User: &lt;input type=&quot;text&quot; name=&quot;user&quot; value=&quot;Demo&quot;&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;Mode:
+    &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;mode&quot; value=&quot;campus&quot;&gt;Campus&lt;/label&gt;
+    &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;mode&quot; value=&quot;online&quot; checked&gt;Online&lt;/label&gt;
+  &lt;/p&gt;
+  &lt;label&gt;Day:
+    &lt;select name=&quot;day&quot;&gt;
+      &lt;option value=&quot;mon&quot;&gt;Monday&lt;/option&gt;
+      &lt;option value=&quot;fri&quot; selected&gt;Friday&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/label&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+  &lt;input type=&quot;reset&quot; value=&quot;Reset&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>文本初始值为 Demo；日期默认 fri。</li><li>两项同时只能选一项，默认 online。</li><li>修改后 Reset 可恢复；改选 Friday 后提交，地址含 day=fri 和 user 字段。</li></ul></section><section class="card answers" id="E4"><a class="back-question button" href="questions.html#E4">Back to E4</a><h2>E4 · 每秒增加一个用户名</h2><div class="file"><h3>e4.html</h3><div class="code-actions"><a class="button" href="answers/e4.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/e4.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>查看源码</summary><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;Name animation&lt;/title&gt;
+&lt;script&gt;
+var count = 1;
+var timer = null;
+
+function drawNames() {
+  // Rebuild the current line from the count.
+  var line = &quot;demo&quot;;
+  for (var i = 1; i &lt; count; i++) {
+    line += &quot; demo&quot;;
+  }
+  document.getElementById(&quot;result&quot;).textContent = line;
+}
+
+function tick() {
+  count++;
+  if (count &gt; 10) {
+    count = 1;
+  }
+  drawNames();
+}
+
+function start() {
+  if (timer !== null) { return; }
+  count = 1;
+  drawNames();
+  timer = setInterval(tick, 1000);
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;button onclick=&quot;start()&quot;&gt;Start&lt;/button&gt;
+&lt;div id=&quot;result&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>点击立即 1 个；1 秒后 2 个。</li><li>第 9 秒恰有 10 个；第 10 秒回到 1 个。</li><li>重复 Start 仍只运行一个时钟。</li></ul></section><section class="card answers" id="E4-A"><a class="back-question button" href="questions.html#E4-A">Back to E4-A</a><h2>E4-A · 基础变式 · 三步循环</h2><div class="file"><h3>e4-a.html</h3><div class="code-actions"><a class="button" href="answers/e4-a.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/e4-a.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>查看源码</summary><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;Name animation&lt;/title&gt;
+&lt;script&gt;
+var count = 1;
+var timer = null;
+
+function drawNames() {
+  // Rebuild the current line from the count.
+  var line = &quot;demo&quot;;
+  for (var i = 1; i &lt; count; i++) {
+    line += &quot; demo&quot;;
+  }
+  document.getElementById(&quot;result&quot;).textContent = line;
+}
+
+function tick() {
+  count++;
+  if (count &gt; 3) {
+    count = 1;
+  }
+  drawNames();
+}
+
+function start() {
+  if (timer !== null) { return; }
+  count = 1;
+  drawNames();
+  timer = setInterval(tick, 1000);
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;button onclick=&quot;start()&quot;&gt;Start&lt;/button&gt;
+&lt;div id=&quot;result&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>点击立即 1 个；1 秒后 2 个。</li><li>第 2 秒恰有 3 个；第 3 秒回到 1 个。</li><li>重复 Start 仍只运行一个时钟。</li></ul></section><section class="card answers" id="E4-B"><a class="back-question button" href="questions.html#E4-B">Back to E4-B</a><h2>E4-B · 进阶变式 · 停止与重启</h2><div class="file"><h3>e4-b.html</h3><div class="code-actions"><a class="button" href="answers/e4-b.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/e4-b.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>查看源码</summary><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;Name animation&lt;/title&gt;
+&lt;script&gt;
+var count = 1;
+var timer = null;
+
+function drawNames() {
+  // Rebuild the current line from the count.
+  var line = &quot;demo&quot;;
+  for (var i = 1; i &lt; count; i++) {
+    line += &quot; demo&quot;;
+  }
+  document.getElementById(&quot;result&quot;).textContent = line;
+}
+
+function tick() {
+  count++;
+  if (count &gt; 10) {
+    count = 1;
+  }
+  drawNames();
+}
+
+function start() {
+  if (timer !== null) { return; }
+  count = 1;
+  drawNames();
+  timer = setInterval(tick, 1000);
+}
+function stopTimer() {
+  clearInterval(timer);
+  timer = null;
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;button onclick=&quot;start()&quot;&gt;Start&lt;/button&gt;
+&lt;button onclick=&quot;stopTimer()&quot;&gt;Stop&lt;/button&gt;
+&lt;div id=&quot;result&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>点击立即 1 个；1 秒后 2 个。</li><li>第 9 秒恰有 10 个；第 10 秒回到 1 个。</li><li>重复 Start 仍只运行一个时钟。</li><li>停止后时间流逝不改变画面，再开始立即显示 1 个。</li></ul></section><section class="card answers" id="E5"><a class="back-question button" href="questions.html#E5">Back to E5</a><h2>E5 · 从目标输出写 JSON，再补全 XHR</h2><div class="file"><h3>e5.html</h3><div class="code-actions"><a class="button" href="answers/e5.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/e5.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>查看源码</summary><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;Lab report&lt;/title&gt;
+&lt;script&gt;
+function loadData() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (xhttp.readyState == 4) {
+      if (xhttp.status == 200) {
+        handleStatusSuccess(xhttp);
+      } else {
+        handleStatusFailure(xhttp);
+      }
+    }
+  };
+  xhttp.open(&quot;GET&quot;, &quot;e5.json&quot;, true);
+  xhttp.send();
+}
+
+function handleStatusFailure(xhttp) {
+  document.getElementById(&quot;result&quot;).textContent = &quot;Request failed: &quot; + xhttp.status;
+}
+
+function handleStatusSuccess(xhttp) {
+  // Parse the response before passing it to the display function.
+  var data = JSON.parse(xhttp.responseText);
+  displayReport(data);
+}
+
+function displayReport(data) {
+  var html = &quot;&lt;h2&gt;&quot; + data.title + &quot;&lt;/h2&gt;&quot;;
+  html += &quot;&lt;p&gt;Date: &quot; + data.date + &quot;&lt;/p&gt;&quot;;
+  html += &quot;&lt;ul&gt;&quot;;
+  for (var i = 0; i &lt; data.rooms.length; i++) {
+    html += &quot;&lt;li&gt;&quot; + data.rooms[i] + &quot;&lt;/li&gt;&quot;;
+  }
+  html += &quot;&lt;/ul&gt;&quot;;
+  document.getElementById(&quot;result&quot;).innerHTML = html;
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;button onclick=&quot;loadData()&quot;&gt;Load&lt;/button&gt;
+&lt;div id=&quot;result&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></details></div><div class="file"><h3>e5.json</h3><div class="code-actions"><a class="button" href="answers/e5.json" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/e5.json" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>查看源码</summary><pre><code>{
+  &quot;date&quot;: &quot;2026-11-26&quot;,
+  &quot;title&quot;: &quot;Web lab&quot;,
+  &quot;rooms&quot;: [
+    &quot;B12&quot;,
+    &quot;C20&quot;
+  ]
+}
+</code></pre></details></div><h3>对照检查</h3><ul><li>JSON 合法，日期是字符串。</li><li>成功后标题、日期和顺序符合目标。</li><li>列表随响应长度改变。</li><li>请求失败显示状态码，覆盖旧结果。</li></ul></section><section class="card answers" id="E5-A"><a class="back-question button" href="questions.html#E5-A">Back to E5-A</a><h2>E5-A · 基础变式 · 标题与日期</h2><div class="file"><h3>e5-a.html</h3><div class="code-actions"><a class="button" href="answers/e5-a.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/e5-a.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>查看源码</summary><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;Lab report&lt;/title&gt;
+&lt;script&gt;
+function loadData() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (xhttp.readyState == 4) {
+      if (xhttp.status == 200) {
+        handleStatusSuccess(xhttp);
+      } else {
+        handleStatusFailure(xhttp);
+      }
+    }
+  };
+  xhttp.open(&quot;GET&quot;, &quot;e5-a.json&quot;, true);
+  xhttp.send();
+}
+
+function handleStatusFailure(xhttp) {
+  document.getElementById(&quot;result&quot;).textContent = &quot;Request failed: &quot; + xhttp.status;
+}
+
+function handleStatusSuccess(xhttp) {
+  // Parse the response before passing it to the display function.
+  var data = JSON.parse(xhttp.responseText);
+  displayReport(data);
+}
+
+function displayReport(data) {
+  var html = &quot;&lt;h2&gt;&quot; + data.title + &quot;&lt;/h2&gt;&quot;;
+  html += &quot;&lt;p&gt;Date: &quot; + data.date + &quot;&lt;/p&gt;&quot;;
+  document.getElementById(&quot;result&quot;).innerHTML = html;
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;button onclick=&quot;loadData()&quot;&gt;Load&lt;/button&gt;
+&lt;div id=&quot;result&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></details></div><div class="file"><h3>e5-a.json</h3><div class="code-actions"><a class="button" href="answers/e5-a.json" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/e5-a.json" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>查看源码</summary><pre><code>{
+  &quot;date&quot;: &quot;2026-11-26&quot;,
+  &quot;title&quot;: &quot;Web lab&quot;
+}
+</code></pre></details></div><h3>对照检查</h3><ul><li>JSON 合法，日期是字符串。</li><li>成功后标题、日期和顺序符合目标。</li><li>请求失败显示状态码，覆盖旧结果。</li></ul></section><section class="card answers" id="E5-B"><a class="back-question button" href="questions.html#E5-B">Back to E5-B</a><h2>E5-B · 进阶变式 · 动态条目与总数</h2><div class="file"><h3>e5-b.html</h3><div class="code-actions"><a class="button" href="answers/e5-b.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/e5-b.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>查看源码</summary><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;Lab report&lt;/title&gt;
+&lt;script&gt;
+function loadData() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (xhttp.readyState == 4) {
+      if (xhttp.status == 200) {
+        handleStatusSuccess(xhttp);
+      } else {
+        handleStatusFailure(xhttp);
+      }
+    }
+  };
+  xhttp.open(&quot;GET&quot;, &quot;e5-b.json&quot;, true);
+  xhttp.send();
+}
+
+function handleStatusFailure(xhttp) {
+  document.getElementById(&quot;result&quot;).textContent = &quot;Request failed: &quot; + xhttp.status;
+}
+
+function handleStatusSuccess(xhttp) {
+  // Parse the response before passing it to the display function.
+  var data = JSON.parse(xhttp.responseText);
+  displayReport(data);
+}
+
+function displayReport(data) {
+  var html = &quot;&lt;h2&gt;&quot; + data.title + &quot;&lt;/h2&gt;&quot;;
+  html += &quot;&lt;p&gt;Date: &quot; + data.date + &quot;&lt;/p&gt;&quot;;
+  html += &quot;&lt;ul&gt;&quot;;
+  for (var i = 0; i &lt; data.rooms.length; i++) {
+    html += &quot;&lt;li&gt;&quot; + data.rooms[i] + &quot;&lt;/li&gt;&quot;;
+  }
+  html += &quot;&lt;/ul&gt;&quot;;
+  html += &quot;&lt;p&gt;Total: &quot; + data.rooms.length + &quot;&lt;/p&gt;&quot;;
+  document.getElementById(&quot;result&quot;).innerHTML = html;
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;button onclick=&quot;loadData()&quot;&gt;Load&lt;/button&gt;
+&lt;div id=&quot;result&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></details></div><div class="file"><h3>e5-b.json</h3><div class="code-actions"><a class="button" href="answers/e5-b.json" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/e5-b.json" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>查看源码</summary><pre><code>{
+  &quot;date&quot;: &quot;2026-11-26&quot;,
+  &quot;title&quot;: &quot;Web lab&quot;,
+  &quot;rooms&quot;: [
+    &quot;B12&quot;,
+    &quot;C20&quot;
+  ]
+}
+</code></pre></details></div><h3>对照检查</h3><ul><li>JSON 合法，日期是字符串。</li><li>成功后标题、日期和顺序符合目标。</li><li>列表随响应长度改变。</li><li>空数组输出 Total: 0。</li><li>请求失败显示状态码，覆盖旧结果。</li></ul></section><section class="card answers" id="M1"><a class="back-question button" href="questions.html#M1">Back to M1</a><h2>M1 · 综合模拟 · 教室查询页</h2><div class="file"><h3>m1.html</h3><div class="code-actions"><a class="button" href="answers/m1.html" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/m1.html" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>查看源码</summary><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;Room finder&lt;/title&gt;
+&lt;style&gt;
+table { border-collapse: collapse; }
+th, td { border: 1px solid black; padding: 4px; }
+&lt;/style&gt;
+&lt;script&gt;
+var units = [];
+
+function loadRooms() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (xhttp.readyState == 4) {
+      if (xhttp.status == 200) {
+        var data = JSON.parse(xhttp.responseText);
+        displayRows(data);
+      } else {
+        units = [];
+        document.getElementById(&quot;rows&quot;).innerHTML = &quot;&quot;;
+        document.getElementById(&quot;result&quot;).textContent = &quot;Request failed: &quot; + xhttp.status;
+        document.getElementById(&quot;result&quot;).style.color = &quot;black&quot;;
+      }
+    }
+  };
+  xhttp.open(&quot;GET&quot;, &quot;rooms.json&quot;, true);
+  xhttp.send();
+}
+
+function displayRows(data) {
+  units = data;
+  var html = &quot;&quot;;
+  // The index links the rendered row to its JSON record.
+  for (var i = 0; i &lt; units.length; i++) {
+    html += &#x27;&lt;tr onmouseover=&quot;showRoom(&#x27; + i + &#x27;)&quot;&gt;&lt;td&gt;&#x27; + units[i].code;
+    html += &quot;&lt;/td&gt;&lt;td&gt;&quot; + units[i].room + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
+  }
+  document.getElementById(&quot;rows&quot;).innerHTML = html;
+  document.getElementById(&quot;result&quot;).textContent = &quot;Choose a unit&quot;;
+  document.getElementById(&quot;result&quot;).style.color = &quot;black&quot;;
+}
+
+function showRoom(index) {
+  var item = units[index];
+  var result = document.getElementById(&quot;result&quot;);
+  result.textContent = item.code + &quot;: &quot; + item.room;
+  result.style.color = item.color;
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;button onclick=&quot;loadRooms()&quot;&gt;Load rooms&lt;/button&gt;
+&lt;table&gt;
+  &lt;tr&gt;&lt;th&gt;Unit&lt;/th&gt;&lt;th&gt;Room&lt;/th&gt;&lt;/tr&gt;
+  &lt;tbody id=&quot;rows&quot;&gt;&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p id=&quot;result&quot;&gt;Choose a unit&lt;/p&gt;
+&lt;p style=&quot;color: gray&quot;&gt;Rooms may change&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></details></div><div class="file"><h3>rooms.json</h3><div class="code-actions"><a class="button" href="answers/rooms.json" target="_blank" rel="noopener">Open example</a><a class="button" href="answers/rooms.json" download>Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>查看源码</summary><pre><code>[
+  {
+    &quot;code&quot;: &quot;WEB&quot;,
+    &quot;room&quot;: &quot;B12&quot;,
+    &quot;color&quot;: &quot;navy&quot;
+  },
+  {
+    &quot;code&quot;: &quot;DB&quot;,
+    &quot;room&quot;: &quot;C20&quot;,
+    &quot;color&quot;: &quot;green&quot;
+  },
+  {
+    &quot;code&quot;: &quot;AI&quot;,
+    &quot;room&quot;: &quot;A08&quot;,
+    &quot;color&quot;: &quot;purple&quot;
+  }
+]
+</code></pre></details></div><h3>对照检查</h3><ul><li>加载后表头和三行内容正确，再次加载仍三行。</li><li>内部 CSS 设格线与间距，第二段为行内灰色。</li><li>三行 hover 各显示自己的文字和颜色。</li><li>失败后没有旧行，第一段有状态码。</li></ul></section><section class="card answers" id="A1-1"><a class="back-question button" href="questions.html#A1-1">Back to A1-1</a><h2>A1-1 · HTML instructions page</h2><p>A1 Q1 · adapted instructions-page task</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>a1-1.html</h3><div class="code-actions"><a class="button" href="answers/a1-1.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/a1-1.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;title&gt;Study workshop registration&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;How do I register for a study workshop?&lt;/h1&gt;&lt;h2&gt;101, demo@example.invalid&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;Choose a suitable workshop from the list and note when it will run.&lt;/li&gt;&lt;li&gt;Fill in the form with your student number and university email address.&lt;/li&gt;&lt;li&gt;Check that you chose the right workshop and entered the correct contact details.&lt;/li&gt;&lt;li&gt;Send the request before registration closes.&lt;/li&gt;&lt;li&gt;Look in your university email for the confirmation.&lt;/li&gt;&lt;/ul&gt;&lt;a href=&quot;https://workshops.example/&quot; target=&quot;_blank&quot;&gt;Click here to read more about study workshops&lt;/a&gt;&lt;/body&gt;&lt;/html&gt;
 </code></pre></details></div><h3>对照检查</h3><ul><li>The main heading is followed by the smaller identity heading, all five steps, and the final link.</li><li>The list has bullets. The final link opens a separate tab. The page uses no CSS.</li></ul></section><section class="card answers" id="A1-2"><a class="back-question button" href="questions.html#A1-2">Back to A1-2</a><h2>A1-2 · HTML coordinator table</h2><p>A1 Q2 · adapted coordinator-table task</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>a1-2.html</h3><div class="code-actions"><a class="button" href="answers/a1-2.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/a1-2.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!doctype html&gt;
-&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;title&gt;Subject coordinators&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;CSIT884, 2026001, Maya Lee&lt;/h1&gt;&lt;table border=&quot;1&quot;&gt;&lt;tr&gt;&lt;th&gt;Coordinator name&lt;/th&gt;&lt;th&gt;Subject code&lt;/th&gt;&lt;th&gt;Consultation hours&lt;/th&gt;&lt;th&gt;Picture&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Alex Green&lt;/td&gt;&lt;td&gt;CSIT884&lt;/td&gt;&lt;td&gt;&lt;ol&gt;&lt;li&gt;Tuesday 10:00–11:00&lt;/li&gt;&lt;li&gt;Thursday 14:00–15:00&lt;/li&gt;&lt;/ol&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&quot;https://cp0330.github.io/Lecture--Review/CSIT884/assets/team1.svg&quot; width=&quot;100&quot; height=&quot;100&quot; alt=&quot;Alex Green&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Sam Brown&lt;/td&gt;&lt;td&gt;CSIT882&lt;/td&gt;&lt;td&gt;&lt;ol&gt;&lt;li&gt;Monday 09:00–10:00&lt;/li&gt;&lt;li&gt;Friday 11:00–12:00&lt;/li&gt;&lt;/ol&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&quot;https://cp0330.github.io/Lecture--Review/CSIT884/assets/team2.svg&quot; width=&quot;100&quot; height=&quot;100&quot; alt=&quot;Sam Brown&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Robin White&lt;/td&gt;&lt;td&gt;CSIT985&lt;/td&gt;&lt;td&gt;&lt;ol&gt;&lt;li&gt;Wednesday 13:00–14:00&lt;/li&gt;&lt;/ol&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&quot;https://cp0330.github.io/Lecture--Review/CSIT884/assets/team3.svg&quot; width=&quot;100&quot; height=&quot;100&quot; alt=&quot;Robin White&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;title&gt;Subject coordinators&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;CSIT884, 101, Demo Student&lt;/h1&gt;&lt;table border=&quot;1&quot;&gt;&lt;tr&gt;&lt;th&gt;Coordinator name&lt;/th&gt;&lt;th&gt;Subject code&lt;/th&gt;&lt;th&gt;Consultation hours&lt;/th&gt;&lt;th&gt;Picture&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Tutor A&lt;/td&gt;&lt;td&gt;CSIT884&lt;/td&gt;&lt;td&gt;&lt;ol&gt;&lt;li&gt;Tuesday 10:00–11:00&lt;/li&gt;&lt;li&gt;Thursday 14:00–15:00&lt;/li&gt;&lt;/ol&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&quot;https://cp0330.github.io/Lecture--Review/CSIT884/assets/team1.svg&quot; width=&quot;100&quot; height=&quot;100&quot; alt=&quot;Tutor A&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Tutor B&lt;/td&gt;&lt;td&gt;CSIT882&lt;/td&gt;&lt;td&gt;&lt;ol&gt;&lt;li&gt;Monday 09:00–10:00&lt;/li&gt;&lt;li&gt;Friday 11:00–12:00&lt;/li&gt;&lt;/ol&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&quot;https://cp0330.github.io/Lecture--Review/CSIT884/assets/team2.svg&quot; width=&quot;100&quot; height=&quot;100&quot; alt=&quot;Tutor B&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Tutor C&lt;/td&gt;&lt;td&gt;CSIT985&lt;/td&gt;&lt;td&gt;&lt;ol&gt;&lt;li&gt;Wednesday 13:00–14:00&lt;/li&gt;&lt;/ol&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&quot;https://cp0330.github.io/Lecture--Review/CSIT884/assets/team3.svg&quot; width=&quot;100&quot; height=&quot;100&quot; alt=&quot;Tutor C&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;
 </code></pre></details></div><h3>对照检查</h3><ul><li>The table contains one header row and three coordinator rows, with four columns.</li><li>Consultation hours are numbered. The three pictures are different and each is 100 by 100 pixels.</li></ul></section><section class="card answers" id="A2-1"><a class="back-question button" href="questions.html#A2-1">Back to A2-1</a><h2>A2-1 · HTML page elements</h2><p>A2 Q1 · clarified HTML task</p><p class="small">Source assignment total: 5. These are source assignment marks, not an exam marking prediction.</p><div class="file"><h3>a2-1.html</h3><div class="code-actions"><a class="button" href="answers/a2-1.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/a2-1.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!doctype html&gt;
-&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;title&gt;HTML elements&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;table border=&quot;1&quot;&gt;&lt;tr&gt;&lt;td&gt;2026001&lt;/td&gt;&lt;td&gt;2026001&lt;/td&gt;&lt;td&gt;2026001&lt;/td&gt;&lt;td&gt;2026001&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Maya Lee&lt;/td&gt;&lt;td&gt;Maya Lee&lt;/td&gt;&lt;td&gt;Maya Lee&lt;/td&gt;&lt;td&gt;Maya Lee&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;ul&gt;&lt;li&gt;Cat&lt;/li&gt;&lt;li&gt;Dog&lt;/li&gt;&lt;li&gt;Frog&lt;/li&gt;&lt;li&gt;Emu&lt;/li&gt;&lt;/ul&gt;&lt;a href=&quot;https://spider.example/&quot; target=&quot;_blank&quot;&gt;Click here&lt;/a&gt;&lt;p&gt;FROG&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;EMU&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;title&gt;HTML elements&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;table border=&quot;1&quot;&gt;&lt;tr&gt;&lt;td&gt;101&lt;/td&gt;&lt;td&gt;101&lt;/td&gt;&lt;td&gt;101&lt;/td&gt;&lt;td&gt;101&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Demo Student&lt;/td&gt;&lt;td&gt;Demo Student&lt;/td&gt;&lt;td&gt;Demo Student&lt;/td&gt;&lt;td&gt;Demo Student&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;ul&gt;&lt;li&gt;Cat&lt;/li&gt;&lt;li&gt;Dog&lt;/li&gt;&lt;li&gt;Frog&lt;/li&gt;&lt;li&gt;Emu&lt;/li&gt;&lt;/ul&gt;&lt;a href=&quot;https://spider.example/&quot; target=&quot;_blank&quot;&gt;Click here&lt;/a&gt;&lt;p&gt;FROG&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;EMU&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
 </code></pre></details></div><h3>对照检查</h3><ul><li>The table has exactly eight cells. Student numbers occupy the first row and names occupy the second.</li><li>There are four bullet items. The link opens a new tab, and all five spaces are visible.</li></ul></section><section class="card answers" id="A2-2"><a class="back-question button" href="questions.html#A2-2">Back to A2-2</a><h2>A2-2 · A page with required CSS methods</h2><p>A2 Q2 · CSS task</p><p class="small">Source assignment total: 5. These are source assignment marks, not an exam marking prediction.</p><div class="file"><h3>a2-2.html</h3><div class="code-actions"><a class="button" href="answers/a2-2.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/a2-2.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!doctype html&gt;
-&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;title&gt;Required CSS methods&lt;/title&gt;&lt;style&gt;.info {border-style:dashed;border-color:orange} #city {color:purple;background-color:gray}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;p style=&quot;font-size:50px&quot;&gt;Maya Lee&lt;/p&gt;&lt;p style=&quot;color:blue&quot;&gt;2026001&lt;/p&gt;&lt;p class=&quot;info&quot;&gt;Australia&lt;/p&gt;&lt;p class=&quot;info&quot;&gt;mayal@uowmail.edu.au&lt;/p&gt;&lt;h1 id=&quot;city&quot;&gt;City of Wollongong&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;title&gt;Required CSS methods&lt;/title&gt;&lt;style&gt;.info {border-style:dashed;border-color:orange} #city {color:purple;background-color:gray}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;p style=&quot;font-size:50px&quot;&gt;Demo Student&lt;/p&gt;&lt;p style=&quot;color:blue&quot;&gt;101&lt;/p&gt;&lt;p class=&quot;info&quot;&gt;Australia&lt;/p&gt;&lt;p class=&quot;info&quot;&gt;demo@example.invalid&lt;/p&gt;&lt;h1 id=&quot;city&quot;&gt;City of Wollongong&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;
 </code></pre></details></div><h3>对照检查</h3><ul><li>The name is 50px and the student number is blue. Each uses the specified CSS method.</li><li>Both paragraphs have dashed orange borders. The heading is purple on gray. The required class and ID selectors are used.</li></ul></section><section class="card answers" id="A2-3"><a class="back-question button" href="questions.html#A2-3">Back to A2-3</a><h2>A2-3 · Click events on a page</h2><p>A2 Q3 · JavaScript task</p><p class="small">Source assignment total: 5. These are source assignment marks, not an exam marking prediction.</p><div class="file"><h3>a2-3.html</h3><div class="code-actions"><a class="button" href="answers/a2-3.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/a2-3.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
@@ -16,7 +581,7 @@ var clickCount = 0;
 function sayHi() {
   // Send the two required messages.
   alert(&quot;Hi&quot;);
-  console.log(&quot;Maya Lee&quot;);
+  console.log(&quot;Demo Student&quot;);
 }
 function increase() {
   // Save the count outside this function.
@@ -31,9 +596,9 @@ function addButton() {
 &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;p onclick=&quot;sayHi()&quot;&gt;Maya Lee&lt;/p&gt;
-&lt;button onclick=&quot;increase()&quot;&gt;2026001&lt;/button&gt;&lt;p id=&quot;count&quot;&gt;0&lt;/p&gt;
-&lt;p onclick=&quot;addButton()&quot;&gt;mayal@uowmail.edu.au&lt;/p&gt;&lt;div id=&quot;buttons&quot;&gt;&lt;/div&gt;
+&lt;p onclick=&quot;sayHi()&quot;&gt;Demo Student&lt;/p&gt;
+&lt;button onclick=&quot;increase()&quot;&gt;101&lt;/button&gt;&lt;p id=&quot;count&quot;&gt;0&lt;/p&gt;
+&lt;p onclick=&quot;addButton()&quot;&gt;demo@example.invalid&lt;/p&gt;&lt;div id=&quot;buttons&quot;&gt;&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre></details></div><h3>对照检查</h3><ul><li>After three clicks on the student-number button, its count is 3.</li><li>After two email clicks, two CSIT884 buttons are displayed. Clicking the name produces both required messages.</li></ul></section><section class="card answers" id="A3-1"><a class="back-question button" href="questions.html#A3-1">Back to A3-1</a><h2>A3-1 · Start, stop and restart an animation</h2><p>A3 Q1 · animation task</p><p class="small">Source assignment total: 10. These are source assignment marks, not an exam marking prediction.</p><div class="file"><h3>a3-1.html</h3><div class="code-actions"><a class="button" href="answers/a3-1.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/a3-1.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
@@ -42,7 +607,7 @@ function addButton() {
 &lt;meta charset=&quot;UTF-8&quot;&gt;
 &lt;title&gt;Equation animation&lt;/title&gt;
 &lt;script&gt;
-var studentNumber = 2026001;
+var studentNumber = 101;
 var firstNumber = 1;
 var timer = null;
 function showEquation() {
@@ -66,7 +631,7 @@ function stopAnimation() {
 &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;p id=&quot;equation&quot; style=&quot;color:red;font-size:60px;&quot;&gt;1 + 2026001 = 2026002&lt;/p&gt;
+&lt;p id=&quot;equation&quot; style=&quot;color:red;font-size:60px;&quot;&gt;1 + 101 = 102&lt;/p&gt;
 &lt;span style=&quot;color:orange;cursor:pointer;&quot; onclick=&quot;startAnimation()&quot;&gt;Start Animation&lt;/span&gt;
 &lt;span style=&quot;color:purple;cursor:pointer;&quot; onclick=&quot;stopAnimation()&quot;&gt;Stop Animation&lt;/span&gt;
 &lt;/body&gt;
@@ -78,8 +643,8 @@ function stopAnimation() {
 &lt;p&gt;&lt;label&gt;Activation date: &lt;input type=&quot;text&quot; name=&quot;adate&quot;&gt;&lt;/label&gt;&lt;/p&gt;
 &lt;p&gt;Payment method:&lt;br&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;pmethod&quot; value=&quot;100&quot;&gt;Apple Pay&lt;/label&gt;&lt;br&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;pmethod&quot; value=&quot;200&quot;&gt;PayPal&lt;/label&gt;&lt;br&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;pmethod&quot; value=&quot;300&quot;&gt;AliPay&lt;/label&gt;&lt;br&gt;&lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;pmethod&quot; value=&quot;400&quot;&gt;WeChat Pay&lt;/label&gt;&lt;/p&gt;
 &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;&lt;input type=&quot;reset&quot; value=&quot;Reset&quot;&gt;&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>Selecting PayPal submits pmethod=200. Only one payment method can be selected.</li><li>For email maya@example.com, URL https://example.com/book and date 2026-11-11, submission contains user, longurl, adate and the chosen pmethod. Reset restores the initial form.</li></ul></section><section class="card answers" id="A4-1"><a class="back-question button" href="questions.html#A4-1">Back to A4-1</a><h2>A4-1 · A weather information page</h2><p>A4 · complete AJAX and CSS task</p><p class="small">Source assignment total: 10. These are source assignment marks, not an exam marking prediction.</p><div class="file"><h3>a4-1.html</h3><div class="code-actions"><a class="button" href="answers/a4-1.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/a4-1.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!doctype html&gt;
-&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;title&gt;Weather information&lt;/title&gt;&lt;style&gt;.lee {color:orange;font-size:50px} #mayal {color:purple;font-size:50px}&lt;/style&gt;&lt;script&gt;
+</code></pre></details></div><h3>对照检查</h3><ul><li>Selecting PayPal submits pmethod=200. Only one payment method can be selected.</li><li>For email demo@example.invalid, URL https://example.com/book and date 2026-11-11, submission contains user, longurl, adate and the chosen pmethod. Reset restores the initial form.</li></ul></section><section class="card answers" id="A4-1"><a class="back-question button" href="questions.html#A4-1">Back to A4-1</a><h2>A4-1 · A weather information page</h2><p>A4 · complete AJAX and CSS task</p><p class="small">Source assignment total: 10. These are source assignment marks, not an exam marking prediction.</p><div class="file"><h3>a4-1.html</h3><div class="code-actions"><a class="button" href="answers/a4-1.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/a4-1.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;&lt;title&gt;Weather information&lt;/title&gt;&lt;style&gt;.student {color:orange;font-size:50px} #demo {color:purple;font-size:50px}&lt;/style&gt;&lt;script&gt;
 function getWeather() {
   // Build the query from the values entered for this request.
   var latitude = document.getElementById(&quot;latitude&quot;).value;
@@ -98,15 +663,15 @@ function getWeather() {
 function displayWeather(weather, latitude, longitude) {
   // Response values, rather than copied sample numbers, supply the result.
   var output = &quot;&lt;table border=&#x27;1&#x27;&gt;&lt;tr&gt;&lt;th colspan=&#x27;2&#x27;&gt;User Query&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Latitude&lt;/td&gt;&lt;td&gt;&quot; + latitude + &quot;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Longitude&lt;/td&gt;&lt;td&gt;&quot; + longitude + &quot;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&quot;;
-  output += &quot;&lt;table border=&#x27;1&#x27;&gt;&lt;tr&gt;&lt;th colspan=&#x27;2&#x27; id=&#x27;mayal&#x27;&gt;Weather information&lt;/th&gt;&lt;/tr&gt;&quot;;
+  output += &quot;&lt;table border=&#x27;1&#x27;&gt;&lt;tr&gt;&lt;th colspan=&#x27;2&#x27; id=&#x27;demo&#x27;&gt;Weather information&lt;/th&gt;&lt;/tr&gt;&quot;;
   output += &quot;&lt;tr&gt;&lt;td&gt;Elevation&lt;/td&gt;&lt;td&gt;&quot; + weather.elevation + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
   output += &quot;&lt;tr&gt;&lt;td&gt;Time&lt;/td&gt;&lt;td&gt;&quot; + weather.current.time + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
   output += &quot;&lt;tr&gt;&lt;td&gt;Interval&lt;/td&gt;&lt;td&gt;&quot; + weather.current.interval + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
-  output += &quot;&lt;tr&gt;&lt;td&gt;Temperature&lt;/td&gt;&lt;td class=&#x27;lee&#x27;&gt;&quot; + weather.current.temperature_2m + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
+  output += &quot;&lt;tr&gt;&lt;td&gt;Temperature&lt;/td&gt;&lt;td class=&#x27;student&#x27;&gt;&quot; + weather.current.temperature_2m + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
   output += &quot;&lt;tr&gt;&lt;td&gt;Generationtime (ms)&lt;/td&gt;&lt;td&gt;&quot; + weather.generationtime_ms + &quot;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&quot;;
   document.getElementById(&quot;weatherDisplay&quot;).innerHTML = output;
 }
-&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;2026001, Maya Lee&lt;/h1&gt;&lt;table border=&quot;1&quot;&gt;&lt;tr&gt;&lt;th&gt;City&lt;/th&gt;&lt;th&gt;Country&lt;/th&gt;&lt;th&gt;Latitude&lt;/th&gt;&lt;th&gt;Longitude&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Wollongong&lt;/td&gt;&lt;td&gt;Australia&lt;/td&gt;&lt;td&gt;-34.4278&lt;/td&gt;&lt;td&gt;150.8931&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;New York&lt;/td&gt;&lt;td&gt;USA&lt;/td&gt;&lt;td&gt;40.7128&lt;/td&gt;&lt;td&gt;-74.006&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Paris&lt;/td&gt;&lt;td&gt;France&lt;/td&gt;&lt;td&gt;48.8566&lt;/td&gt;&lt;td&gt;2.3522&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Tokyo&lt;/td&gt;&lt;td&gt;Japan&lt;/td&gt;&lt;td&gt;35.6762&lt;/td&gt;&lt;td&gt;139.6503&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Auckland&lt;/td&gt;&lt;td&gt;New Zealand&lt;/td&gt;&lt;td&gt;-36.8509&lt;/td&gt;&lt;td&gt;174.7645&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;label&gt;Latitude: &lt;input id=&quot;latitude&quot;&gt;&lt;/label&gt;&lt;/p&gt;&lt;p&gt;&lt;label&gt;Longitude: &lt;input id=&quot;longitude&quot;&gt;&lt;/label&gt;&lt;/p&gt;&lt;button onclick=&quot;getWeather()&quot;&gt;Get Weather JSON&lt;/button&gt;&lt;div id=&quot;weatherDisplay&quot;&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;101, Demo Student&lt;/h1&gt;&lt;table border=&quot;1&quot;&gt;&lt;tr&gt;&lt;th&gt;City&lt;/th&gt;&lt;th&gt;Country&lt;/th&gt;&lt;th&gt;Latitude&lt;/th&gt;&lt;th&gt;Longitude&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Wollongong&lt;/td&gt;&lt;td&gt;Australia&lt;/td&gt;&lt;td&gt;-34.4278&lt;/td&gt;&lt;td&gt;150.8931&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;New York&lt;/td&gt;&lt;td&gt;USA&lt;/td&gt;&lt;td&gt;40.7128&lt;/td&gt;&lt;td&gt;-74.006&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Paris&lt;/td&gt;&lt;td&gt;France&lt;/td&gt;&lt;td&gt;48.8566&lt;/td&gt;&lt;td&gt;2.3522&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Tokyo&lt;/td&gt;&lt;td&gt;Japan&lt;/td&gt;&lt;td&gt;35.6762&lt;/td&gt;&lt;td&gt;139.6503&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Auckland&lt;/td&gt;&lt;td&gt;New Zealand&lt;/td&gt;&lt;td&gt;-36.8509&lt;/td&gt;&lt;td&gt;174.7645&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;label&gt;Latitude: &lt;input id=&quot;latitude&quot;&gt;&lt;/label&gt;&lt;/p&gt;&lt;p&gt;&lt;label&gt;Longitude: &lt;input id=&quot;longitude&quot;&gt;&lt;/label&gt;&lt;/p&gt;&lt;button onclick=&quot;getWeather()&quot;&gt;Get Weather JSON&lt;/button&gt;&lt;div id=&quot;weatherDisplay&quot;&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;
 </code></pre></details></div><h3>对照检查</h3><ul><li>Before a request, the city table has six rows and four columns. Both coordinate fields and the button appear below it.</li><li>Wollongong and New York requests display different supplied temperatures. All displayed weather values come from the corresponding response.</li><li>The required class/ID names and document CSS methods are used. The input coordinates appear under User Query.</li></ul></section><section class="card answers" id="Q01"><a class="back-question button" href="questions.html#Q01">Back to Q01</a><h2>Q01 · A competition information page</h2><p>Final review: HTML; A1 Q1/Q2; A2 Q1; L01</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q01.html</h3><div class="code-actions"><a class="button" href="answers/q01.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q01.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
@@ -115,13 +680,13 @@ function displayWeather(weather, latitude, longitude) {
 &lt;/head&gt;
 &lt;body&gt;
 &lt;h1&gt;Coding Competition&lt;/h1&gt;
-&lt;h2&gt;Maya Lee, 2026001, mayal@uowmail.edu.au&lt;/h2&gt;
+&lt;h2&gt;Demo Student, 101, demo@example.invalid&lt;/h2&gt;
 &lt;table border=&quot;1&quot;&gt;
   &lt;tr&gt;&lt;th&gt;Rank&lt;/th&gt;&lt;th&gt;Team&lt;/th&gt;&lt;th&gt;Members&lt;/th&gt;&lt;/tr&gt;
   &lt;tr&gt;&lt;td&gt;1st&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://river.example/&quot; target=&quot;_blank&quot;&gt;River Team&lt;/a&gt;&lt;br&gt;&lt;img src=&quot;../assets/team1.svg&quot; width=&quot;120&quot; height=&quot;80&quot; alt=&quot;River flag&quot;&gt;&lt;/td&gt;
-    &lt;td&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Alex&lt;/b&gt; &lt;i&gt;(team leader)&lt;/i&gt;&lt;/li&gt;&lt;li&gt;Bo&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;td&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;SampleA&lt;/b&gt; &lt;i&gt;(team leader)&lt;/i&gt;&lt;/li&gt;&lt;li&gt;SampleB&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;
   &lt;tr&gt;&lt;td&gt;2nd&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;https://mountain.example/&quot; target=&quot;_blank&quot;&gt;Mountain Team&lt;/a&gt;&lt;br&gt;&lt;img src=&quot;../assets/team2.svg&quot; width=&quot;120&quot; height=&quot;80&quot; alt=&quot;Mountain flag&quot;&gt;&lt;/td&gt;
-    &lt;td&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Chen&lt;/b&gt; &lt;i&gt;(team leader)&lt;/i&gt;&lt;/li&gt;&lt;li&gt;Dee&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;td&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;SampleC&lt;/b&gt; &lt;i&gt;(team leader)&lt;/i&gt;&lt;/li&gt;&lt;li&gt;SampleD&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;
 &lt;ol&gt;&lt;li&gt;Register&lt;/li&gt;&lt;li&gt;Practice&lt;/li&gt;&lt;li&gt;Compete&lt;/li&gt;&lt;/ol&gt;
 &lt;p&gt;FROG&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;EMU &amp;#128516;&lt;/p&gt;
@@ -143,12 +708,12 @@ function displayWeather(weather, latitude, longitude) {
 &lt;/head&gt;
 &lt;body&gt;
 &lt;h1 id=&quot;heading&quot;&gt;City Coding Teams&lt;/h1&gt;
-&lt;p style=&quot;font-size:50px;&quot;&gt;Maya Lee&lt;/p&gt;
-&lt;p style=&quot;color:blue;&quot;&gt;2026001&lt;/p&gt;
-&lt;p class=&quot;info&quot;&gt;Australia&lt;/p&gt;&lt;p class=&quot;info&quot;&gt;mayal@uowmail.edu.au&lt;/p&gt;
+&lt;p style=&quot;font-size:50px;&quot;&gt;Demo Student&lt;/p&gt;
+&lt;p style=&quot;color:blue;&quot;&gt;101&lt;/p&gt;
+&lt;p class=&quot;info&quot;&gt;Australia&lt;/p&gt;&lt;p class=&quot;info&quot;&gt;demo@example.invalid&lt;/p&gt;
 &lt;table id=&quot;teamTable&quot;&gt;
  &lt;tr&gt;&lt;th class=&quot;rank&quot;&gt;Rank&lt;/th&gt;&lt;th&gt;Members&lt;/th&gt;&lt;/tr&gt;
- &lt;tr&gt;&lt;td class=&quot;rank&quot;&gt;1&lt;/td&gt;&lt;td&gt;&lt;ul class=&quot;members&quot;&gt;&lt;li&gt;Alex&lt;/li&gt;&lt;li&gt;Bo&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td class=&quot;rank&quot;&gt;1&lt;/td&gt;&lt;td&gt;&lt;ul class=&quot;members&quot;&gt;&lt;li&gt;SampleA&lt;/li&gt;&lt;li&gt;SampleB&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;
 &lt;/body&gt;
 &lt;/html&gt;
@@ -161,12 +726,12 @@ function displayWeather(weather, latitude, longitude) {
 &lt;/head&gt;
 &lt;body&gt;
 &lt;h1 id=&quot;heading&quot;&gt;City Coding Teams&lt;/h1&gt;
-&lt;p style=&quot;font-size:50px;&quot;&gt;Maya Lee&lt;/p&gt;
-&lt;p style=&quot;color:blue;&quot;&gt;2026001&lt;/p&gt;
-&lt;p class=&quot;info&quot;&gt;Australia&lt;/p&gt;&lt;p class=&quot;info&quot;&gt;mayal@uowmail.edu.au&lt;/p&gt;
+&lt;p style=&quot;font-size:50px;&quot;&gt;Demo Student&lt;/p&gt;
+&lt;p style=&quot;color:blue;&quot;&gt;101&lt;/p&gt;
+&lt;p class=&quot;info&quot;&gt;Australia&lt;/p&gt;&lt;p class=&quot;info&quot;&gt;demo@example.invalid&lt;/p&gt;
 &lt;table id=&quot;teamTable&quot;&gt;
  &lt;tr&gt;&lt;th class=&quot;rank&quot;&gt;Rank&lt;/th&gt;&lt;th&gt;Members&lt;/th&gt;&lt;/tr&gt;
- &lt;tr&gt;&lt;td class=&quot;rank&quot;&gt;1&lt;/td&gt;&lt;td&gt;&lt;ul class=&quot;members&quot;&gt;&lt;li&gt;Alex&lt;/li&gt;&lt;li&gt;Bo&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;
+ &lt;tr&gt;&lt;td class=&quot;rank&quot;&gt;1&lt;/td&gt;&lt;td&gt;&lt;ul class=&quot;members&quot;&gt;&lt;li&gt;SampleA&lt;/li&gt;&lt;li&gt;SampleB&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;
 &lt;/body&gt;
 &lt;/html&gt;
@@ -186,7 +751,7 @@ var clickCount = 0;
 function sayHi() {
   // Send the two required messages.
   alert(&quot;Hi&quot;);
-  console.log(&quot;Maya Lee&quot;);
+  console.log(&quot;Demo Student&quot;);
 }
 function increase() {
   // Save the count outside this function.
@@ -201,9 +766,9 @@ function addButton() {
 &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;p onclick=&quot;sayHi()&quot;&gt;Maya Lee&lt;/p&gt;
-&lt;button onclick=&quot;increase()&quot;&gt;2026001&lt;/button&gt;&lt;p id=&quot;count&quot;&gt;0&lt;/p&gt;
-&lt;p onclick=&quot;addButton()&quot;&gt;mayal@uowmail.edu.au&lt;/p&gt;&lt;div id=&quot;buttons&quot;&gt;&lt;/div&gt;
+&lt;p onclick=&quot;sayHi()&quot;&gt;Demo Student&lt;/p&gt;
+&lt;button onclick=&quot;increase()&quot;&gt;101&lt;/button&gt;&lt;p id=&quot;count&quot;&gt;0&lt;/p&gt;
+&lt;p onclick=&quot;addButton()&quot;&gt;demo@example.invalid&lt;/p&gt;&lt;div id=&quot;buttons&quot;&gt;&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre></details></div><h3>对照检查</h3><ul><li>After three counter-button clicks, the counter shows 3.</li><li>After two email clicks, there are two new buttons. The counter does not change.</li></ul></section><section class="card answers" id="Q04"><a class="back-question button" href="questions.html#Q04">Back to Q04</a><h2>Q04 · Animal buttons and text commands</h2><p>Final review: value, src and events; L03 Q2/Q3/Q7</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q04.html</h3><div class="code-actions"><a class="button" href="answers/q04.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q04.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
@@ -239,7 +804,7 @@ Enter command: &lt;input id=&quot;command&quot; onkeydown=&quot;runCommand(event
 &lt;meta charset=&quot;UTF-8&quot;&gt;
 &lt;title&gt;Equation animation&lt;/title&gt;
 &lt;script&gt;
-var studentNumber = 2026001;
+var studentNumber = 101;
 var firstNumber = 1;
 var timer = null;
 function showEquation() {
@@ -263,7 +828,7 @@ function stopAnimation() {
 &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;p id=&quot;equation&quot; style=&quot;color:red;font-size:60px;&quot;&gt;1 + 2026001 = 2026002&lt;/p&gt;
+&lt;p id=&quot;equation&quot; style=&quot;color:red;font-size:60px;&quot;&gt;1 + 101 = 102&lt;/p&gt;
 &lt;span style=&quot;color:orange;cursor:pointer;&quot; onclick=&quot;startAnimation()&quot;&gt;Start Animation&lt;/span&gt;
 &lt;span style=&quot;color:purple;cursor:pointer;&quot; onclick=&quot;stopAnimation()&quot;&gt;Stop Animation&lt;/span&gt;
 &lt;/body&gt;
@@ -367,8 +932,8 @@ function resetQuestion() {
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre></details></div><h3>对照检查</h3><ul><li>A wrong answer keeps the current page open and displays Wrong!.</li><li>After correcting the answer, the submitted parameters have only the four names defined in Q07.</li><li>After Clear, the answer field and error message are empty. Both new numbers are within 1 to 10.</li></ul></section><section class="card answers" id="Q09"><a class="back-question button" href="questions.html#Q09">Back to Q09</a><h2>Q09 · Correct an invalid JSON document</h2><p>Final review: JSON syntax; L09 Q1/Q2</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q09.json</h3><div class="code-actions"><a class="button" href="answers/q09.json" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q09.json">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>{
-  &quot;firstName&quot;: &quot;Maya&quot;,
-  &quot;lastName&quot;: &quot;Lee&quot;,
+  &quot;firstName&quot;: &quot;Demo&quot;,
+  &quot;lastName&quot;: &quot;Student&quot;,
   &quot;subjectList&quot;: [
     {
       &quot;code&quot;: &quot;CSIT884&quot;,
@@ -415,9 +980,9 @@ Core subject: &lt;input type=&quot;checkbox&quot; id=&quot;core&quot;&gt;&lt;br&
 &lt;/body&gt;
 &lt;/html&gt;
 </code></pre></details></div><h3>对照检查</h3><ul><li>In the JSON, 6 has no quotes and coreFlag is true or false.</li><li>Change the textarea data to cp=4 and coreFlag=false. Read JSON must update both controls.</li></ul></section><section class="card answers" id="Q11"><a class="back-question button" href="questions.html#Q11">Back to Q11</a><h2>Q11 · Write a student record in XML</h2><p>Final review: XML data and root element; L07 Q1/Q3</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q11.xml</h3><div class="code-actions"><a class="button" href="answers/q11.xml" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q11.xml">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;student number=&quot;2026001&quot;&gt;
-  &lt;firstName&gt;Maya&lt;/firstName&gt;
-  &lt;lastName&gt;Lee&lt;/lastName&gt;
+&lt;student number=&quot;101&quot;&gt;
+  &lt;firstName&gt;Demo&lt;/firstName&gt;
+  &lt;lastName&gt;Student&lt;/lastName&gt;
   &lt;subjects&gt;
     &lt;subject code=&quot;CSIT884&quot;&gt;&lt;creditPoint&gt;6&lt;/creditPoint&gt;&lt;mark&gt;84&lt;/mark&gt;&lt;grade&gt;A&lt;/grade&gt;&lt;/subject&gt;
     &lt;subject code=&quot;CSIT882&quot;&gt;&lt;creditPoint&gt;6&lt;/creditPoint&gt;&lt;mark&gt;72&lt;/mark&gt;&lt;grade&gt;B&lt;/grade&gt;&lt;/subject&gt;
@@ -436,9 +1001,9 @@ Core subject: &lt;input type=&quot;checkbox&quot; id=&quot;core&quot;&gt;&lt;br&
   &lt;!ELEMENT mark (#PCDATA)&gt;
   &lt;!ELEMENT grade (#PCDATA)&gt;
 ]&gt;
-&lt;student number=&quot;2026001&quot;&gt;
-  &lt;firstName&gt;Maya&lt;/firstName&gt;
-  &lt;lastName&gt;Lee&lt;/lastName&gt;
+&lt;student number=&quot;101&quot;&gt;
+  &lt;firstName&gt;Demo&lt;/firstName&gt;
+  &lt;lastName&gt;Student&lt;/lastName&gt;
   &lt;subjects&gt;
     &lt;subject code=&quot;CSIT884&quot;&gt;&lt;creditPoint&gt;6&lt;/creditPoint&gt;&lt;mark&gt;84&lt;/mark&gt;&lt;grade&gt;A&lt;/grade&gt;&lt;/subject&gt;
     &lt;subject code=&quot;CSIT882&quot;&gt;&lt;creditPoint&gt;6&lt;/creditPoint&gt;&lt;mark&gt;72&lt;/mark&gt;&lt;grade&gt;B&lt;/grade&gt;&lt;/subject&gt;
@@ -476,8 +1041,8 @@ Core subject: &lt;input type=&quot;checkbox&quot; id=&quot;core&quot;&gt;&lt;br&
 &lt;/xsd:schema&gt;
 </code></pre></details></div><div class="file"><h3>q13-sample.xml</h3><div class="code-actions"><a class="button" href="answers/q13-sample.xml" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q13-sample.xml">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;?xml version=&quot;1.0&quot;?&gt;
 &lt;resultBatch campus=&quot;Sydney&quot;&gt;
-  &lt;result ref=&quot;R001&quot;&gt;&lt;contestantId&gt;00025142&lt;/contestantId&gt;&lt;examId&gt;WEB01&lt;/examId&gt;&lt;score&gt;156&lt;/score&gt;&lt;band&gt;C&lt;/band&gt;&lt;/result&gt;
-  &lt;result ref=&quot;R002&quot;&gt;&lt;contestantId&gt;00025143&lt;/contestantId&gt;&lt;examId&gt;WEB01&lt;/examId&gt;&lt;score&gt;280&lt;/score&gt;&lt;band&gt;A&lt;/band&gt;&lt;/result&gt;
+  &lt;result ref=&quot;R001&quot;&gt;&lt;contestantId&gt;00000001&lt;/contestantId&gt;&lt;examId&gt;WEB01&lt;/examId&gt;&lt;score&gt;156&lt;/score&gt;&lt;band&gt;C&lt;/band&gt;&lt;/result&gt;
+  &lt;result ref=&quot;R002&quot;&gt;&lt;contestantId&gt;00000002&lt;/contestantId&gt;&lt;examId&gt;WEB01&lt;/examId&gt;&lt;score&gt;280&lt;/score&gt;&lt;band&gt;A&lt;/band&gt;&lt;/result&gt;
 &lt;/resultBatch&gt;
 </code></pre></details></div><h3>对照检查</h3><ul><li>The given XML is valid. Scores 0 and 300 are valid.</li><li>Reject scores 301 and 1.5, band E, a missing ref, or a resultBatch with no result.</li></ul></section><section class="card answers" id="Q14"><a class="back-question button" href="questions.html#Q14">Back to Q14</a><h2>Q14 · Load faculty and airport details</h2><p>Final review: XHR, parse and display; L11 Q1/Q2; A4 request/display workflow</p><p class="small">Outcome checklist; no invented assignment score.</p><div class="file"><h3>q14.html</h3><div class="code-actions"><a class="button" href="answers/q14.html" target="_blank" rel="noopener">Open example</a><a class="button" download href="answers/q14.html">Download</a><button onclick="copyCode(this)">Copy code</button></div><details class="codewrap"><summary>Reference code</summary><pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
@@ -532,8 +1097,8 @@ function displayAirports(obj) {
 &lt;meta charset=&quot;UTF-8&quot;&gt;
 &lt;title&gt;Weather AJAX&lt;/title&gt;
 &lt;style&gt;
-.lee { color: orange; font-size: 50px; }
-#mayal { color: purple; font-size: 50px; }
+.student { color: orange; font-size: 50px; }
+#demo { color: purple; font-size: 50px; }
 &lt;/style&gt;
 &lt;script&gt;
 function getWeather() {
@@ -558,18 +1123,18 @@ function getWeather() {
 function displayWeather(obj, latitude, longitude) {
   // Keep the query input separate from the server response data.
   var html = &quot;&lt;p&gt;User Query: Latitude &quot; + latitude + &quot;, Longitude &quot; + longitude + &quot;&lt;/p&gt;&quot;;
-  html += &quot;&lt;h2 id=&#x27;mayal&#x27;&gt;Weather information&lt;/h2&gt;&lt;table border=&#x27;1&#x27;&gt;&quot;;
+  html += &quot;&lt;h2 id=&#x27;demo&#x27;&gt;Weather information&lt;/h2&gt;&lt;table border=&#x27;1&#x27;&gt;&quot;;
   html += &quot;&lt;tr&gt;&lt;td&gt;Elevation&lt;/td&gt;&lt;td&gt;&quot; + obj.elevation + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
   html += &quot;&lt;tr&gt;&lt;td&gt;Time&lt;/td&gt;&lt;td&gt;&quot; + obj.current.time + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
   html += &quot;&lt;tr&gt;&lt;td&gt;Interval&lt;/td&gt;&lt;td&gt;&quot; + obj.current.interval + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
-  html += &quot;&lt;tr&gt;&lt;td&gt;Temperature&lt;/td&gt;&lt;td class=&#x27;lee&#x27;&gt;&quot; + obj.current.temperature_2m + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
+  html += &quot;&lt;tr&gt;&lt;td&gt;Temperature&lt;/td&gt;&lt;td class=&#x27;student&#x27;&gt;&quot; + obj.current.temperature_2m + &quot;&lt;/td&gt;&lt;/tr&gt;&quot;;
   html += &quot;&lt;tr&gt;&lt;td&gt;Generationtime(ms)&lt;/td&gt;&lt;td&gt;&quot; + obj.generationtime_ms + &quot;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&quot;;
   document.getElementById(&quot;weatherDisplay&quot;).innerHTML = html;
 }
 &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;h1&gt;Maya Lee, 2026001&lt;/h1&gt;
+&lt;h1&gt;Demo Student, 101&lt;/h1&gt;
 Latitude: &lt;input id=&quot;latitude&quot;&gt;&lt;br&gt;Longitude: &lt;input id=&quot;longitude&quot;&gt;&lt;br&gt;
 &lt;button onclick=&quot;getWeather()&quot;&gt;Get Weather JSON&lt;/button&gt;&lt;div id=&quot;weatherDisplay&quot;&gt;&lt;/div&gt;
 &lt;/body&gt;
@@ -1080,4 +1645,4 @@ function checkAnswer() {
 &lt;button onclick=&quot;checkAnswer()&quot;&gt;Check&lt;/button&gt;&lt;span id=&quot;result&quot;&gt;&lt;/span&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></details></div><h3>对照检查</h3><ul><li>10 x 5 = 50 shows Correct!; 14 - 5 = 11 shows Incorrect, please try again.</li><li>10 + 5 = 15 must be correct. A previous incorrect message must disappear after a correct answer.</li></ul></section></main><footer>CSIT884 · Updated 6 November 2026 · Assignment-led practice and source-labelled supplements.</footer><script>async function copyCode(button){const code=button.closest('.file').querySelector('code');try{await navigator.clipboard.writeText(code.textContent);button.textContent='Copied';setTimeout(()=>button.textContent='Copy code',1500);}catch(e){const range=document.createRange();range.selectNodeContents(code);getSelection().removeAllRanges();getSelection().addRange(range);button.textContent='Selected: use Copy';}}</script></body></html>
+</code></pre></details></div><h3>对照检查</h3><ul><li>10 x 5 = 50 shows Correct!; 14 - 5 = 11 shows Incorrect, please try again.</li><li>10 + 5 = 15 must be correct. A previous incorrect message must disappear after a correct answer.</li></ul></section></main><footer>CSIT884 · 26 November 2026</footer><script>async function copyCode(button){const code=button.closest('.file').querySelector('code');try{await navigator.clipboard.writeText(code.textContent);button.textContent='Copied';setTimeout(()=>button.textContent='Copy code',1500);}catch(e){const range=document.createRange();range.selectNodeContents(code);getSelection().removeAllRanges();getSelection().addRange(range);button.textContent='Selected: use Copy';}}</script></body></html>

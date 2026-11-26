@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lab report</title>
+<script>
+function loadData() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (xhttp.readyState == 4) {
+      if (xhttp.status == 200) {
+        handleStatusSuccess(xhttp);
+      } else {
+        handleStatusFailure(xhttp);
+      }
+    }
+  };
+  xhttp.open("GET", "e5-a.json", true);
+  xhttp.send();
+}
+
+function handleStatusFailure(xhttp) {
+  document.getElementById("result").textContent = "Request failed: " + xhttp.status;
+}
+
+function handleStatusSuccess(xhttp) {
+  // Parse the response before passing it to the display function.
+  var data = JSON.parse(xhttp.responseText);
+  displayReport(data);
+}
+
+function displayReport(data) {
+  var html = "<h2>" + data.title + "</h2>";
+  html += "<p>Date: " + data.date + "</p>";
+  document.getElementById("result").innerHTML = html;
+}
+</script>
+</head>
+<body>
+<button onclick="loadData()">Load</button>
+<div id="result"></div>
+</body>
+</html>

@@ -1,4 +1,231 @@
-# CSIT884 · Assignment-led practice
+# CSIT884 补考编程练习
+
+五道母题、每模块两道变式及一套综合题。
+
+## E1 · 课程表与两段说明
+
+Build a two-column table. Header: Unit | Room. Data: Web | B12. In a style block collapse borders, give all cells a 1px solid black border and 4px padding. Below the table put two paragraphs: Spring timetable (navy, document CSS) and Check your room (red, inline CSS).
+按给定文字写一行表头、一行数据，表格下写两个段落。内部样式设置合并边框、单元格黑色实线边框和内边距，第一段深蓝；第二段用行内样式标红。
+
+
+## E1-A · 基础变式 · 单列成绩
+
+Create a one-column table with header Mark and value 85. Use document CSS for a 1px solid black cell border. Add one paragraph Result in inline green.
+建单列表格，表头 Mark，下一行 85；内部 CSS 为所有格子加 1px 黑实线；表后一个段落 Result，用行内样式设绿色。
+
+
+## E1-B · 进阶变式 · 合并表头
+
+Extend the Unit/Room table (Web | B12) with a top header Timetable spanning both columns. Collapse borders; use 1px solid black and 4px padding on all cells. Follow it with two paragraphs, Week 1 and Revised. Set paragraphs navy in document CSS and override Revised to red inline.
+在 Unit、Room 和 Web、B12 两行上面加一行 Timetable，横跨两列。内部 CSS 合并边框，所有格子 1px 黑实线、4px 内边距，两段统一深蓝；第二段 Revised 行内设红色，第一段 Week 1。
+
+
+## E2 · 三个标签共用一个结果框
+
+Use the supplied JSON string. Show 3 text labels in array order, using their codes. On mouseover replace the same result div with CODE: ROOM. Set its text colour from that record using JavaScript. Initially show Choose a unit.
+按数组顺序显示 3 个代码标签，初始结果为 Choose a unit。移入任一标签，在同一个 div 中替换为“代码: 教室”。用 JS 把结果字色改成该记录的 color。
+
+Supplied JSON string content
+
+```
+[{"code":"WEB","room":"B12","color":"navy"},{"code":"DB","room":"C20","color":"green"},{"code":"AI","room":"A08","color":"purple"}]
+```
+
+## E2-A · 基础变式 · 两个标签
+
+Use the supplied JSON string. Show 2 text labels in array order, using their codes. On mouseover replace the same result div with CODE: ROOM. Initially show Choose a unit.
+按数组顺序显示 2 个代码标签，初始结果为 Choose a unit。移入任一标签，在同一个 div 中替换为“代码: 教室”。
+
+Supplied JSON string content
+
+```
+[{"code":"WEB","room":"B12","color":"navy"},{"code":"DB","room":"C20","color":"green"}]
+```
+
+## E2-B · 进阶变式 · 移出时复原
+
+Use the supplied JSON string. Show 3 text labels in array order, using their codes. On mouseover replace the same result div with CODE: ROOM. Set its text colour from that record using JavaScript. Initially show Choose a unit. On leaving a label, restore Choose a unit in black.
+按数组顺序显示 3 个代码标签，初始结果为 Choose a unit。移入任一标签，在同一个 div 中替换为“代码: 教室”。用 JS 把结果字色改成该记录的 color。移出时恢复提示并变回黑色。
+
+Supplied JSON string content
+
+```
+[{"code":"WEB","room":"B12","color":"navy"},{"code":"DB","room":"C20","color":"green"},{"code":"AI","room":"A08","color":"purple"}]
+```
+
+## E3 · 报名表的五种控件
+
+Create a GET form that submits to receipt.html. Use a text field named user, a radio group named mode (Campus=campus, Online=online), and a select named day (Monday=mon, Friday=fri). Include Submit and Reset. Defaults: empty user, campus, mon.
+表单用 GET 提交到 receipt.html。用户名是 text（name 为 user），学习方式为同组的 Campus/Online 单选（mode），日期是 Monday/Friday 下拉框（day）。提交值与默认项按英文题，修改后 Reset 应恢复初始值。
+
+
+## E3-A · 基础变式 · 两个提交字段
+
+Create a GET form that submits to receipt.html. Use a text field named user, and a select named day (Monday=mon, Friday=fri). Include Submit and Reset. Defaults: empty user, mon.
+表单用 GET 提交到 receipt.html。用户名是 text（name 为 user），日期是 Monday/Friday 下拉框（day）。提交值与默认项按英文题，修改后 Reset 应恢复初始值。
+
+
+## E3-B · 进阶变式 · 带默认值的登记表
+
+Create a GET form that submits to receipt.html. Use a text field named user, a radio group named mode (Campus=campus, Online=online), and a select named day (Monday=mon, Friday=fri). Include Submit and Reset. Defaults: Demo, online, fri.
+表单用 GET 提交到 receipt.html。用户名是 text（name 为 user），学习方式为同组的 Campus/Online 单选（mode），日期是 Monday/Friday 下拉框（day）。提交值与默认项按英文题，修改后 Reset 应恢复初始值。
+
+
+## E4 · 每秒增加一个用户名
+
+Click Start to show one copy of the sample username demo immediately. Add one copy every second, separated by single spaces, up to 10. On the following tick return to one. Initially leave the output empty. Repeated Start must not speed it up.
+初始留空。点击 Start 立即显示一个 demo，每秒多显示一个，各名字之间一个空格。显示 10 个后，再过一秒变回一个。重复点击不能加速。
+
+
+## E4-A · 基础变式 · 三步循环
+
+Click Start to show one copy of the sample username demo immediately. Add one copy every second, separated by single spaces, up to 3. On the following tick return to one. Initially leave the output empty. Repeated Start must not speed it up.
+初始留空。点击 Start 立即显示一个 demo，每秒多显示一个，各名字之间一个空格。显示 3 个后，再过一秒变回一个。重复点击不能加速。
+
+
+## E4-B · 进阶变式 · 停止与重启
+
+Click Start to show one copy of the sample username demo immediately. Add one copy every second, separated by single spaces, up to 10. On the following tick return to one. Initially leave the output empty. Repeated Start must not speed it up. Add Stop: freeze the current output. The next Start begins again at one.
+初始留空。点击 Start 立即显示一个 demo，每秒多显示一个，各名字之间一个空格。显示 10 个后，再过一秒变回一个。重复点击不能加速。Stop 冻结当前画面，再点 Start 从一个重新开始。
+
+
+## E5 · 从目标输出写 JSON，再补全 XHR
+
+Part A. Write e5.json to produce the target below. Use title and date (both strings), plus rooms (an array of strings). Part B. Keep the supplied XHR code. Fill (1)–(3). Use an h2 for the title and a paragraph for the date. Render one li per room inside a ul. For a failed request show Request failed: followed by a space and the status number.
+A：根据下面的目标输出反推 JSON，字段和类型见英文题。B：保留题给请求框架，在 (1) 写错误提示、(2) 调用自己的函数、(3) 根据响应生成标题和日期段落。把每间教室写成一个无序列表项。作答框内分开写 JSON 和 JS。
+
+Target output · 目标效果
+
+```
+Web lab
+Date: 2026-11-26
+• B12
+• C20
+```
+Given · 页面已有 Load 按钮和 id="result" 的 div；补全以下 JS
+
+```
+function loadData() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (xhttp.readyState == 4) {
+      if (xhttp.status == 200) {
+        handleStatusSuccess(xhttp);
+      } else {
+        handleStatusFailure(xhttp);
+      }
+    }
+  };
+  xhttp.open("GET", "e5.json", true);
+  xhttp.send();
+}
+
+function handleStatusFailure(xhttp) {
+  // (1) Show the error in the result div.
+}
+function handleStatusSuccess(xhttp) {
+  var data = JSON.parse(xhttp.responseText);
+  // (2) Pass the object to your display function.
+}
+// (3) Write displayReport here.
+```
+
+## E5-A · 基础变式 · 标题与日期
+
+Part A. Write e5-a.json to produce the target below. Use title and date (both strings). Part B. Keep the supplied XHR code. Fill (1)–(3). Use an h2 for the title and a paragraph for the date. For a failed request show Request failed: followed by a space and the status number.
+A：根据下面的目标输出反推 JSON，字段和类型见英文题。B：保留题给请求框架，在 (1) 写错误提示、(2) 调用自己的函数、(3) 根据响应生成标题和日期段落。作答框内分开写 JSON 和 JS。
+
+Target output · 目标效果
+
+```
+Web lab
+Date: 2026-11-26
+```
+Given · 页面已有 Load 按钮和 id="result" 的 div；补全以下 JS
+
+```
+function loadData() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (xhttp.readyState == 4) {
+      if (xhttp.status == 200) {
+        handleStatusSuccess(xhttp);
+      } else {
+        handleStatusFailure(xhttp);
+      }
+    }
+  };
+  xhttp.open("GET", "e5-a.json", true);
+  xhttp.send();
+}
+
+function handleStatusFailure(xhttp) {
+  // (1) Show the error in the result div.
+}
+function handleStatusSuccess(xhttp) {
+  var data = JSON.parse(xhttp.responseText);
+  // (2) Pass the object to your display function.
+}
+// (3) Write displayReport here.
+```
+
+## E5-B · 进阶变式 · 动态条目与总数
+
+Part A. Write e5-b.json to produce the target below. Use title and date (both strings), plus rooms (an array of strings). Part B. Keep the supplied XHR code. Fill (1)–(3). Use an h2 for the title and a paragraph for the date. Render one li per room inside a ul. End with a paragraph giving Total from the array length. An empty list must show Total: 0. For a failed request show Request failed: followed by a space and the status number.
+A：根据下面的目标输出反推 JSON，字段和类型见英文题。B：保留题给请求框架，在 (1) 写错误提示、(2) 调用自己的函数、(3) 根据响应生成标题和日期段落。把每间教室写成一个无序列表项。末段显示实际总数，空数组也要正确。作答框内分开写 JSON 和 JS。
+
+Target output · 目标效果
+
+```
+Web lab
+Date: 2026-11-26
+• B12
+• C20
+Total: 2
+```
+Given · 页面已有 Load 按钮和 id="result" 的 div；补全以下 JS
+
+```
+function loadData() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (xhttp.readyState == 4) {
+      if (xhttp.status == 200) {
+        handleStatusSuccess(xhttp);
+      } else {
+        handleStatusFailure(xhttp);
+      }
+    }
+  };
+  xhttp.open("GET", "e5-b.json", true);
+  xhttp.send();
+}
+
+function handleStatusFailure(xhttp) {
+  // (1) Show the error in the result div.
+}
+function handleStatusSuccess(xhttp) {
+  var data = JSON.parse(xhttp.responseText);
+  // (2) Pass the object to your display function.
+}
+// (3) Write displayReport here.
+```
+
+## M1 · 综合模拟 · 教室查询页
+
+Write rooms.json as an array of records with code, room and color from the supplied rows. On Load rooms, use XHR to load it. Call your display function to build a Unit | Room table. Use document CSS for collapsed borders, 1px solid black cell borders and 4px padding. Below it show two paragraphs: Choose a unit and Rooms may change (inline gray). Hover any data row to replace the first paragraph with CODE: ROOM in its colour. On failure clear the data rows and show Request failed: STATUS. Repeated loads must replace the old rows.
+闭卷完成 JSON 和 HTML 两个文件。加载后用响应建表；移入数据行时更新表下第一段的文字和颜色，第二段用行内灰色。重复加载不能堆积行；失败要清掉旧行并显示状态码。
+
+Target rows · 给定数据
+
+```
+Unit | Room | Text colour
+WEB  | B12  | navy
+DB   | C20  | green
+AI   | A08  | purple
+```
+
+## 原有 37 题 · 作业和 Lab/课堂补练
 
 8 assignment-style tasks; 29 lab/classroom supplements. Questions are English. Hints, explanations and references are separate in the web workspace.
 
@@ -8,7 +235,7 @@ Original assignment points appear only where supplied. They are not final-exam t
 
 Assignment practice · A1 Q1 · adapted instructions-page task
 
-1. Use HTML only, with no CSS, to create a web page called workshop.html. Use the practice identity Maya Lee / 2026001 / mayal@uowmail.edu.au.
+1. Use HTML only, with no CSS, to create a web page called workshop.html. Use the practice identity Demo Student / 101 / demo@example.invalid.
 2. On the top of the page, display the main large heading "How do I register for a study workshop?". Below it, display a smaller heading containing the student number and email.
 3. Use the information in the supplied table to write the registration steps in your own words. Display the steps in an unordered list.
 4. Below the list, display a link with the text "Click here to read more about study workshops" and the address https://workshops.example/. When the user clicks the link, it must open in a new tab.
@@ -29,7 +256,7 @@ Source/adaptation: A1 Q1 uses Academic Consideration and an external reading tas
 
 Assignment practice · A1 Q2 · adapted coordinator-table task
 
-1. Use HTML only, with no CSS, to create coordinators.html. On the top of the page, display a large heading containing CSIT884, the practice student number and full name: 2026001, Maya Lee.
+1. Use HTML only, with no CSS, to create coordinators.html. On the top of the page, display a large heading containing CSIT884, the practice student number and full name: 101, Demo Student.
 2. Below the heading, use a table with a visible border to display the three supplied coordinator records. The table headers must be Coordinator name, Subject code, Consultation hours and Picture. Each coordinator must appear in a separate row.
 3. In the Consultation hours column, display the hours using an ordered list.
 4. In the Picture column, display the supplied picture for that coordinator at 100 by 100 pixels. Use the full image address. Each row must use a different picture.
@@ -38,9 +265,9 @@ Assignment practice · A1 Q2 · adapted coordinator-table task
 
 | Coordinator | Subject | Consultation hours | Full image address |
 | --- | --- | --- | --- |
-| Alex Green | CSIT884 | Tuesday 10:00–11:00; Thursday 14:00–15:00 | https://cp0330.github.io/Lecture--Review/CSIT884/assets/team1.svg |
-| Sam Brown | CSIT882 | Monday 09:00–10:00; Friday 11:00–12:00 | https://cp0330.github.io/Lecture--Review/CSIT884/assets/team2.svg |
-| Robin White | CSIT985 | Wednesday 13:00–14:00 | https://cp0330.github.io/Lecture--Review/CSIT884/assets/team3.svg |
+| Tutor A | CSIT884 | Tuesday 10:00–11:00; Thursday 14:00–15:00 | https://cp0330.github.io/Lecture--Review/CSIT884/assets/team1.svg |
+| Tutor B | CSIT882 | Monday 09:00–10:00; Friday 11:00–12:00 | https://cp0330.github.io/Lecture--Review/CSIT884/assets/team2.svg |
+| Tutor C | CSIT985 | Wednesday 13:00–14:00 | https://cp0330.github.io/Lecture--Review/CSIT884/assets/team3.svg |
 
 Source/adaptation: A1 Q2 uses the learner’s actual subject coordinators and pictures from uow.edu.au. These names, hours and supplied image addresses are fictional practice data; the original domain requirement is adapted explicitly.
 
@@ -48,8 +275,8 @@ Source/adaptation: A1 Q2 uses the learner’s actual subject coordinators and pi
 
 Assignment practice · A2 Q1 · clarified HTML task
 
-1. Use HTML only to create a web page. Use the practice identity Maya Lee / 2026001.
-2. Display a table with a visible border, two rows and four columns. In every cell of the first row, display 2026001. In every cell of the second row, display Maya Lee.
+1. Use HTML only to create a web page. Use the practice identity Demo Student / 101.
+2. Display a table with a visible border, two rows and four columns. In every cell of the first row, display 101. In every cell of the second row, display Demo Student.
 3. Display an unordered list containing four animal names of your choice.
 4. Display a link with the text "Click here" and the address https://spider.example/. When the user clicks the link, it must open in a new tab.
 5. Display FROG, then exactly five non-breaking spaces, then EMU.
@@ -60,7 +287,7 @@ Source/adaptation: The original A2 Q1 says both four columns and three columns. 
 
 Assignment practice · A2 Q2 · CSS task
 
-1. Use HTML and CSS to create a web page. Use the practice identity Maya Lee / 2026001 / mayal@uowmail.edu.au, and the country Australia.
+1. Use HTML and CSS to create a web page. Use the practice identity Demo Student / 101 / demo@example.invalid, and the country Australia.
 2. Display the full name at a font size of 50px using inline CSS.
 3. Display the student number in blue using inline CSS.
 4. Display two paragraphs: one containing the country and one containing the email. Use document CSS with a class selector to give both paragraphs a dashed orange border.
@@ -72,9 +299,9 @@ Source/adaptation:
 
 Assignment practice · A2 Q3 · JavaScript task
 
-1. Use HTML and JavaScript to create a web page. Display the practice full name Maya Lee. Whenever the user clicks the name, display an alert message "Hi" and write Maya Lee to the console.
-2. Display a button labelled 2026001. The first click displays 1 below the button. Further clicks display 2, 3, and so on. You may display 0 before the first click.
-3. Display the email mayal@uowmail.edu.au. The first click on the email adds one button labelled CSIT884 below it. The second click gives two buttons, the third gives three, and so on. Keep the buttons already added.
+1. Use HTML and JavaScript to create a web page. Display the practice full name Demo Student. Whenever the user clicks the name, display an alert message "Hi" and write Demo Student to the console.
+2. Display a button labelled 101. The first click displays 1 below the button. Further clicks display 2, 3, and so on. You may display 0 before the first click.
+3. Display the email demo@example.invalid. The first click on the email adds one button labelled CSIT884 below it. The second click gives two buttons, the third gives three, and so on. Keep the buttons already added.
 
 Source/adaptation: 
 
@@ -82,10 +309,10 @@ Source/adaptation:
 
 Assignment practice · A3 Q1 · animation task
 
-1. Use the practice student number 2026001. Create a web page that initially displays 1 + 2026001 = 2026002. Use inline CSS to make the equation red and 60px.
+1. Use the practice student number 101. Create a web page that initially displays 1 + 101 = 102. Use inline CSS to make the equation red and 60px.
 2. Display two clickable texts: "Start Animation" in orange and "Stop Animation" in purple.
-3. When the user clicks Start Animation, update the equation every second. After one second, display 3 + 2026001 = 2026004. After another second, display 5 + 2026001 = 2026006. Continue with 7, 9, and so on.
-4. When the user clicks Stop Animation, stop the updates and display the original equation: 1 + 2026001 = 2026002.
+3. When the user clicks Start Animation, update the equation every second. After one second, display 3 + 101 = 104. After another second, display 5 + 101 = 106. Continue with 7, 9, and so on.
+4. When the user clicks Stop Animation, stop the updates and display the original equation: 1 + 101 = 102.
 5. If the user clicks Start Animation again, start the sequence again with 3 after one second, then 5, 7, and so on.
 
 Source/adaptation: The assignment requires the learner’s own student number. This public practice uses a fixed sample identity. The reference also prevents duplicate timers; that lab robustness detail is not a new assignment marking item.
@@ -116,13 +343,13 @@ Source/adaptation: The original fictional service is http://urlservice.org/form.
 
 Assignment practice · A4 · complete AJAX and CSS task
 
-1. Create a web page. On the top, display a heading containing the practice student number and name: 2026001, Maya Lee.
+1. Create a web page. On the top, display a heading containing the practice student number and name: 101, Demo Student.
 2. Below the heading, display a table with a visible border, four columns and six rows. The headers are City, Country, Latitude and Longitude. Display the five supplied city records in the remaining rows.
 3. Below the table, display two text fields for the user to enter latitude and longitude. Display a button labelled "Get Weather JSON".
 4. When the user enters coordinates and clicks the button, construct the request URL from those inputs and obtain the corresponding JSON. You must use the XMLHttpRequest AJAX method taught in this subject.
 5. Display User Query with the entered coordinates. Then display a bordered Weather information table containing Elevation, Time, Interval, Temperature and Generationtime (ms), using the response data. Follow the supplied target layout.
-6. Use document CSS and a class selector to make the temperature orange and 50px. The class name must equal the practice family name, lee.
-7. Use document CSS and an ID selector to make "Weather information" purple and 50px. The ID must equal the practice email username, mayal.
+6. Use document CSS and a class selector to make the temperature orange and 50px. The class name must equal the practice family name, student.
+7. Use document CSS and an ID selector to make "Weather information" purple and 50px. The ID must equal the practice email username, demo.
 8. You may assume valid numeric input. Test several coordinate pairs, including Wollongong and New York. Each new request must display the result for the current input.
 
 ### City records
@@ -157,10 +384,10 @@ Source/adaptation: A4 uses Open-Meteo. This practice substitutes a documented lo
 
 Lab supplement · Final review: HTML; A1 Q1/Q2; A2 Q1; L01
 
-1. Create q01.html using HTML only, with no CSS. Set the page title to Coding Competition. Display a large heading Coding Competition, then a smaller heading with Maya Lee / 2026001 / mayal@uowmail.edu.au.
+1. Create q01.html using HTML only, with no CSS. Set the page title to Coding Competition. Display a large heading Coding Competition, then a smaller heading with Demo Student / 101 / demo@example.invalid.
 2. Display a bordered table with the headings Rank, Team and Members. The two data rows are 1st / River and 2nd / Mountain.
 3. For River, display a River Team link to https://river.example/ and, on the next line, ../assets/team1.svg at 120 by 80 pixels. For Mountain, use https://mountain.example/ and ../assets/team2.svg with the same size. Both links must open in a new tab.
-4. Display each team’s members in an unordered list. River: Alex and Bo; Mountain: Chen and Dee. Make Alex and Chen bold and add (team leader) in italic after each name.
+4. Display each team’s members in an unordered list. River: SampleA and SampleB; Mountain: SampleC and SampleD. Make SampleA and SampleC bold and add (team leader) in italic after each name.
 5. Below the table, display an ordered list containing Register, Practice and Compete. Then display FROG, five non-breaking spaces and EMU. Add a smiley face using the supplied decimal character entity number 128516.
 
 Source/adaptation: Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.
@@ -169,10 +396,10 @@ Source/adaptation: Supplementary practice based on the listed lab/lecture materi
 
 Lab supplement · Final review: CSS; A2 Q2; A4 selector requirements; L02
 
-1. Create q02.html with a heading City Coding Teams, name Maya Lee, student number 2026001, and paragraphs Australia and mayal@uowmail.edu.au.
+1. Create q02.html with a heading City Coding Teams, name Demo Student, student number 101, and paragraphs Australia and demo@example.invalid.
 2. Use document CSS and an ID selector for the heading: purple text and lightgray background. Use inline CSS for the name at 50px and the student number in blue.
 3. Give both paragraphs class info. Use document CSS with that class to give them a 2px dashed orange border and 10px padding.
-4. Add a table with ID teamTable, column headings Rank and Members, and a row containing 1 and a list of Alex and Bo. Give the list class members and the Rank cells class rank.
+4. Add a table with ID teamTable, column headings Rank and Members, and a row containing 1 and a list of SampleA and SampleB. Give the list class members and the Rank cells class rank.
 5. Use descendant selectors for the table cells: a 1px solid black border, 12px padding and top vertical alignment. Collapse the table borders and right-align the Rank cells. Use a child selector to make the direct list items green.
 6. Create q02-external.html and q02.css. Move the document CSS into the CSS file, keep the inline CSS, and link the stylesheet. Both versions must have the same appearance.
 
@@ -182,9 +409,9 @@ Source/adaptation: Supplementary practice based on the listed lab/lecture materi
 
 Lab supplement · Final review: JavaScript and onclick; A2 Q3; L03 Q1/Q5/Q6
 
-1. Create a web page displaying Maya Lee. Clicking the name must show the alert Hi and write Maya Lee to the console.
-2. Display a button labelled 2026001 and a counter initially showing 0. Each click increases that counter by one.
-3. Display mayal@uowmail.edu.au. Each click on the email adds one CSIT884 button below it. Keep all earlier buttons.
+1. Create a web page displaying Demo Student. Clicking the name must show the alert Hi and write Demo Student to the console.
+2. Display a button labelled 101 and a counter initially showing 0. Each click increases that counter by one.
+3. Display demo@example.invalid. Each click on the email adds one CSIT884 button below it. Keep all earlier buttons.
 
 Source/adaptation: Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.
 
@@ -203,7 +430,7 @@ Source/adaptation: Supplementary practice based on the listed lab/lecture materi
 
 Lab supplement · Final review: setInterval/clearInterval; A3 Q1; L06 Q4
 
-1. Create a page initially displaying 1 + 2026001 = 2026002 in red at 60px using inline CSS. Display clickable Start Animation in orange and Stop Animation in purple.
+1. Create a page initially displaying 1 + 101 = 102 in red at 60px using inline CSS. Display clickable Start Animation in orange and Stop Animation in purple.
 2. Start increases the first number by two every second and updates the sum. The first change is to 3 after one second, followed by 5, 7, and so on.
 3. Clicking Start several times while running must still produce only one update per second and must not reset the sequence.
 4. Stop stops the updates and restores the original equation. A later Start begins again at 3 after one second.
@@ -265,8 +492,8 @@ Lab supplement · Final review: JSON syntax; L09 Q1/Q2
 
 ```json
 {
- "firstName":"Maya",
- "lastName":"Lee",
+ "firstName":"Demo",
+ "lastName":"Student",
  [ {"code":"CSIT884","title":"Web Development"},
    {"code":"CSIT882","title":"Systems"} ],
  age:22,
@@ -293,7 +520,7 @@ Lab supplement · Final review: XML data and root element; L07 Q1/Q3
 
 1. Write q11.xml to represent the supplied complete student record. Write XML only, without a DTD. Put the XML declaration at the start of the first line.
 2. Use a student root with a number attribute. Use firstName, lastName and subjects in that order. Each subject has a code attribute and creditPoint, mark and grade children in that order.
-3. The student is Maya Lee, number 2026001. The subjects are CSIT884 / 6 / 84 / A and CSIT882 / 6 / 72 / B. Keep all records and values.
+3. The student is Demo Student, number 101. The subjects are CSIT884 / 6 / 84 / A and CSIT882 / 6 / 72 / B. Keep all records and values.
 
 Source/adaptation: Supplementary practice based on the listed lab/lecture material. It is not an assignment marking scheme.
 
@@ -309,9 +536,9 @@ Lab supplement · Final review: XML/DTD; L07 Q4; XMLDTD lecture
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<student number="2026001">
-  <firstName>Maya</firstName>
-  <lastName>Lee</lastName>
+<student number="101">
+  <firstName>Demo</firstName>
+  <lastName>Student</lastName>
   <subjects>
     <subject code="CSIT884"><creditPoint>6</creditPoint><mark>84</mark><grade>A</grade></subject>
     <subject code="CSIT882"><creditPoint>6</creditPoint><mark>72</mark><grade>B</grade></subject>
@@ -335,8 +562,8 @@ Lab supplement · Final review: simple/complex types; L08 Q1/Q2/Q3
 ```xml
 <?xml version="1.0"?>
 <resultBatch campus="Sydney">
-  <result ref="R001"><contestantId>00025142</contestantId><examId>WEB01</examId><score>156</score><band>C</band></result>
-  <result ref="R002"><contestantId>00025143</contestantId><examId>WEB01</examId><score>280</score><band>A</band></result>
+  <result ref="R001"><contestantId>00000001</contestantId><examId>WEB01</examId><score>156</score><band>C</band></result>
+  <result ref="R002"><contestantId>00000002</contestantId><examId>WEB01</examId><score>280</score><band>A</band></result>
 </resultBatch>
 ```
 
@@ -357,7 +584,7 @@ Lab supplement · Final review: XHR, parse and display; L11 Q1/Q2; A4 request/di
 {
   "name": "Faculty of Engineering and Information Sciences",
   "abbreviation": "EIS",
-  "email": "eis@uow.edu.au",
+  "email": "faculty@example.invalid",
   "web": "www.uow.edu.au/engineering-information-sciences"
 }
 ```
@@ -399,10 +626,10 @@ Source/adaptation: Supplementary practice based on the listed lab/lecture materi
 
 Lab supplement · Final review: AJAX/CSS; A4; L11
 
-1. Create a page headed Maya Lee, 2026001. Display latitude and longitude text fields and a Get Weather JSON button.
+1. Create a page headed Demo Student, 101. Display latitude and longitude text fields and a Get Weather JSON button.
 2. Use the supplied local weather-service documentation. On click, request the coordinates entered by the user using the classroom XMLHttpRequest method. Display request failures with the status number.
 3. Display the entered coordinates under User Query. Display Weather information and a bordered table containing Elevation, Time, Interval, Temperature and Generationtime(ms), from the response.
-4. Use document CSS: a class selector named lee makes the temperature orange and 50px; an ID selector named mayal makes Weather information purple and 50px.
+4. Use document CSS: a class selector named student makes the temperature orange and 50px; an ID selector named demo makes Weather information purple and 50px.
 5. You may assume valid numeric input. Test both supplied coordinate pairs.
 
 ### Service documentation

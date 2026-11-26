@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Unit rooms</title>
+<script>
+var jsonText = '[{"code":"WEB","room":"B12","color":"navy"},{"code":"DB","room":"C20","color":"green"}]';
+var units = JSON.parse(jsonText);
+
+function showUnit(index) {
+  // Each label selects one record in the same array.
+  var unit = units[index];
+  var result = document.getElementById("result");
+  result.textContent = unit.code + ": " + unit.room;
+}
+</script>
+</head>
+<body>
+<span onmouseover="showUnit(0)">WEB</span>
+<span onmouseover="showUnit(1)">DB</span>
+<div id="result">Choose a unit</div>
+</body>
+</html>

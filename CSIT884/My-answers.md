@@ -2,6 +2,166 @@
 
 Save source files under my-work/. Use the practice server for HTTP, form and storage exercises.
 
+## E1 课程表与两段说明
+
+My code:
+
+```text
+
+```
+
+Test result / error to revisit:
+
+## E1-A 基础变式 · 单列成绩
+
+My code:
+
+```text
+
+```
+
+Test result / error to revisit:
+
+## E1-B 进阶变式 · 合并表头
+
+My code:
+
+```text
+
+```
+
+Test result / error to revisit:
+
+## E2 三个标签共用一个结果框
+
+My code:
+
+```text
+
+```
+
+Test result / error to revisit:
+
+## E2-A 基础变式 · 两个标签
+
+My code:
+
+```text
+
+```
+
+Test result / error to revisit:
+
+## E2-B 进阶变式 · 移出时复原
+
+My code:
+
+```text
+
+```
+
+Test result / error to revisit:
+
+## E3 报名表的五种控件
+
+My code:
+
+```text
+
+```
+
+Test result / error to revisit:
+
+## E3-A 基础变式 · 两个提交字段
+
+My code:
+
+```text
+
+```
+
+Test result / error to revisit:
+
+## E3-B 进阶变式 · 带默认值的登记表
+
+My code:
+
+```text
+
+```
+
+Test result / error to revisit:
+
+## E4 每秒增加一个用户名
+
+My code:
+
+```text
+
+```
+
+Test result / error to revisit:
+
+## E4-A 基础变式 · 三步循环
+
+My code:
+
+```text
+
+```
+
+Test result / error to revisit:
+
+## E4-B 进阶变式 · 停止与重启
+
+My code:
+
+```text
+
+```
+
+Test result / error to revisit:
+
+## E5 从目标输出写 JSON，再补全 XHR
+
+My code:
+
+```text
+
+```
+
+Test result / error to revisit:
+
+## E5-A 基础变式 · 标题与日期
+
+My code:
+
+```text
+
+```
+
+Test result / error to revisit:
+
+## E5-B 进阶变式 · 动态条目与总数
+
+My code:
+
+```text
+
+```
+
+Test result / error to revisit:
+
+## M1 综合模拟 · 教室查询页
+
+My code:
+
+```text
+
+```
+
+Test result / error to revisit:
+
 ## A1-1 HTML instructions page
 
 My code:

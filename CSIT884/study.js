@@ -24,30 +24,31 @@ function message(id,text){$('saved-'+id).textContent=text;}
 function report(text){$('backup-status').textContent=text;}
 function helpUsed(r){return r.hintsSeen.length>0||r.explanationSeen||r.referenceSeen;}
 function refresh(){
-  let completed=0, independent=0, completedMain=0;
+  let completed=0, independent=0, coreIndependent=0;
   cards.forEach(card=>{
     const id=card.id,r=record(id);
     links.find(a=>a.dataset.id===id).dataset.state=r.state;
     $('state-'+id).value=r.state;
-    if(r.state==='checked'||r.state==='supported'){completed++;if(card.dataset.track==='assignment')completedMain++;}
-    if(r.state==='checked')independent++;
+    $('error-'+id).value=r.errorType||'';
+    if(r.state==='checked'||r.state==='supported'){completed++;}
+    if(r.state==='checked'){independent++;if(card.dataset.track==='core')coreIndependent++;}
     card.querySelectorAll('[data-criterion]').forEach(c=>c.checked=!!r.checks[c.dataset.criterion]);
     const checked=Object.values(r.checks).filter(Boolean).length;
     $('score-'+id).textContent=checked+'/'+card.querySelectorAll('[data-criterion]').length+' checks · self-assessed';
     $('help-used-'+id).textContent=helpUsed(r)?'Help viewed in this attempt. Use the supported status or try a new attempt without help.':'No hints or solutions viewed in this attempt.';
     updateHistory(id);
   });
-  $('progress-text').textContent='Assignment '+completedMain+'/8 · Supplements '+(completed-completedMain)+'/29 · '+independent+' marked independent';
+  $('progress-text').textContent='母题独立完成 '+coreIndependent+'/5 · 全库已完成 '+completed+'/'+cards.length+' · 独立完成 '+independent;
   $('progress-bar').style.width=100*completed/cards.length+'%';
 }
 function matches(){
   const term=$('search').value.trim().toLowerCase();
-  return cards.filter(c=>(!term||c.dataset.search.includes(term))&&(!$('track-filter').value||c.dataset.track===$('track-filter').value)&&(!$('topic-filter').value||c.dataset.topic===$('topic-filter').value)&&(!$('state-filter').value||record(c.id).state===$('state-filter').value));
+  return cards.filter(c=>(!term||c.dataset.search.includes(term))&&(!$('track-filter').value||c.dataset.track===$('track-filter').value)&&(!$('topic-filter').value||c.dataset.topic===$('topic-filter').value)&&(!$('error-filter').value||record(c.id).errorType===$('error-filter').value)&&(!$('state-filter').value||record(c.id).state===$('state-filter').value));
 }
 function filter(){
   const list=matches(),ids=list.map(c=>c.id);
   links.forEach(a=>a.hidden=!ids.includes(a.dataset.id));
-  cards.forEach(c=>c.hidden=!list.length||c.id!==active);
+  cards.forEach(c=>c.hidden=!ids.includes(c.id)||c.id!==active);
   $('list-count').textContent=list.length+' tasks shown';$('workspace-empty').hidden=!!list.length;
   const i=ids.indexOf(active);$('previous').disabled=i<=0;$('next').disabled=i<0||i>=ids.length-1;
   $('position').textContent=i<0?'Choose a task from this list':(i+1)+' of '+ids.length;
@@ -57,25 +58,33 @@ function selectQuestion(id,move=false){
   if(!$(id)?.classList.contains('question-card'))id=cards[0].id;
   active=id;switchTab(id,'answer');
   if($('track-filter').value&&$('track-filter').value!==$(id).dataset.track)$('track-filter').value=$(id).dataset.track;
-  if(!matches().some(c=>c.id===id)){$('search').value='';$('topic-filter').value='';$('state-filter').value='';}
+  if(!matches().some(c=>c.id===id)){$('search').value='';$('topic-filter').value='';$('state-filter').value='';$('error-filter').value='';}
   links.forEach(a=>a.setAttribute('aria-current',String(a.dataset.id===id)));
   try{localStorage.setItem('884-last-question',id);}catch(e){}
   filter();document.title=id+' · CSIT884 Practice';
   if(move){if(matchMedia('(max-width:760px)').matches){$('question-menu').open=false;$('backup-menu').open=false;}$(id).scrollIntoView({block:'start'});$(id).querySelector('h2').focus({preventScroll:true});}
 }
 function loadSupport(){
-  if(!supportPromise)supportPromise=fetch('support.json?v=20261106-2').then(r=>{if(!r.ok)throw Error('Help file unavailable');return r.json();}).catch(e=>{supportPromise=null;throw e;});
+  if(!supportPromise)supportPromise=fetch('support.json?v=20261126').then(r=>{if(!r.ok)throw Error('Help file unavailable');return r.json();}).catch(e=>{supportPromise=null;throw e;});
   return supportPromise;
 }
 function line(tag,text){const e=document.createElement(tag);e.textContent=text;return e;}
 async function fillHelp(id,kind){
   const target=$('panel-'+id+'-'+kind).querySelector('.help-content');
-  if(target.dataset.loaded)return;
+  if(target.dataset.loaded){
+    if(kind==='reference')target.querySelector('.draft-comparison code').textContent=record(id).answer||'尚未作答';
+    return;
+  }
   target.setAttribute('aria-busy','true');target.textContent='Loading…';
   try{
     if(kind==='reference'){
-      if(!referencePromise)referencePromise=fetch('answers.html?v=20261106-2').then(r=>{if(!r.ok)throw Error('Reference unavailable');return r.text();}).then(t=>new DOMParser().parseFromString(t,'text/html')).catch(e=>{referencePromise=null;throw e;});
-      const doc=await referencePromise,copy=doc.getElementById(id).cloneNode(true);copy.removeAttribute('id');copy.className='reference-section';copy.querySelector('.back-question')?.remove();target.replaceChildren(copy);
+      if(!referencePromise)referencePromise=fetch('answers.html?v=20261126').then(r=>{if(!r.ok)throw Error('Reference unavailable');return r.text();}).then(t=>new DOMParser().parseFromString(t,'text/html')).catch(e=>{referencePromise=null;throw e;});
+      const doc=await referencePromise,copy=doc.getElementById(id).cloneNode(true);copy.removeAttribute('id');copy.className='reference-section';copy.querySelector('.back-question')?.remove();const comparison=document.createElement('details');
+      comparison.className='draft-comparison';
+      const draft=document.createElement('pre');
+      draft.append(line('code',record(id).answer||'尚未作答'));
+      comparison.append(line('summary','展开我的作答，对照参考代码'),draft);
+      target.replaceChildren(comparison,copy);
     }else{
       const data=(await loadSupport())[id];target.replaceChildren();
       if(kind==='hints'){
@@ -130,18 +139,18 @@ function showHistory(id){const old=previousRecord(id);$('previous-text-'+id).val
 function usePrevious(id){
   const old=previousRecord(id);if(!old)return;
   if(record(id).answer&&record(id).answer!==old.answer&&!confirm('Replace the current draft with this saved draft? The saved copy will remain available.'))return;
-  const current=record(id);if(current.answer&&current.answer!==old.answer){current.history.push({answer:current.answer,state:current.state,checks:{...current.checks},hintsSeen:[...current.hintsSeen],explanationSeen:current.explanationSeen,referenceSeen:current.referenceSeen,savedAt:new Date().toISOString(),version:2});}
+  const current=record(id);if(current.answer&&current.answer!==old.answer){current.history.push({errorType:current.errorType||'',answer:current.answer,state:current.state,checks:{...current.checks},hintsSeen:[...current.hintsSeen],explanationSeen:current.explanationSeen,referenceSeen:current.referenceSeen,savedAt:new Date().toISOString(),version:2});}
   current.answer=old.answer;current.state='working';current.checks={};$('answer-'+id).value=old.answer;
   if(!save(id))message(id,'Draft copied on screen. Export before leaving because storage is unavailable.');else message(id,'Previous draft copied. Old checks have not been applied to the current task.');refresh();
 }
 function newAttempt(id){
   const r=record(id);
   if((r.answer||helpUsed(r)||Object.keys(r.checks).length)&&!confirm('Save this attempt in history and start a blank attempt?'))return;
-  const snapshot={answer:r.answer,state:r.state,checks:{...r.checks},hintsSeen:[...r.hintsSeen],explanationSeen:r.explanationSeen,referenceSeen:r.referenceSeen,savedAt:new Date().toISOString(),version:2};
+  const snapshot={errorType:r.errorType||'',answer:r.answer,state:r.state,checks:{...r.checks},hintsSeen:[...r.hintsSeen],explanationSeen:r.explanationSeen,referenceSeen:r.referenceSeen,savedAt:new Date().toISOString(),version:2};
   const next={...empty(id),legacy:r.legacy,history:[...r.history,snapshot]};memory.set(id,next);$('answer-'+id).value='';
   $(id).querySelectorAll('.help-content').forEach(t=>{t.replaceChildren();delete t.dataset.loaded;});
   if(!save(id))message(id,'New attempt is in memory only. Export before leaving.');else message(id,'Previous attempt saved in history.');
-  refresh();switchTab(id,'answer');filter();
+  refresh();selectQuestion(id);
 }
 function download(text,name,type='text/plain;charset=utf-8'){
   const url=URL.createObjectURL(new Blob([text],{type})),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
@@ -179,7 +188,7 @@ async function importBackup(e){
       memory.set(id,r);$('answer-'+id).value=r.answer;ok=save(id)&&ok;
       $(id).querySelectorAll('.help-content').forEach(t=>{t.replaceChildren();delete t.dataset.loaded;});
     });
-    refresh();filter();
+    refresh();syncFilteredSelection();
     const visible=$(active).querySelector('[role=tab][aria-selected=true]').dataset.tab;if(visible!=='answer')fillHelp(active,visible);
     report(ok?'Backup imported and saved.':'Imported on screen. Storage is unavailable; export before leaving.');
   }catch(err){report('Import failed: '+err.message);}finally{e.target.value='';}
@@ -193,7 +202,12 @@ cards.forEach(card=>{
     if(e.key==='Tab'&&!e.shiftKey){e.preventDefault();if(!document.execCommand('insertText',false,'  ')){box.setRangeText('  ',box.selectionStart,box.selectionEnd,'end');box.dispatchEvent(new Event('input',{bubbles:true}));}}
   });
   card.querySelectorAll('[data-criterion]').forEach(c=>c.addEventListener('change',()=>{record(id).checks[c.dataset.criterion]=c.checked;if(!save(id))message(id,'Checklist could not be saved.');refresh();}));
-  $('state-'+id).addEventListener('change',e=>{record(id).state=e.target.value;if(!save(id))message(id,'Status could not be saved.');refresh();filter();});
+  $('error-'+id).addEventListener('change',e=>{
+    record(id).errorType=e.target.value;
+    if(!save(id))message(id,'Error tag could not be saved.');
+    syncFilteredSelection();
+  });
+  $('state-'+id).addEventListener('change',e=>{record(id).state=e.target.value;if(!save(id))message(id,'Status could not be saved.');refresh();syncFilteredSelection();});
   card.querySelectorAll('[role=tab]').forEach(b=>{
     b.addEventListener('click',()=>switchTab(id,b.dataset.tab));
     b.addEventListener('keydown',e=>{const tabs=[...card.querySelectorAll('[role=tab]')],i=tabs.indexOf(b);let j;if(e.key==='ArrowRight')j=(i+1)%tabs.length;else if(e.key==='ArrowLeft')j=(i+tabs.length-1)%tabs.length;else if(e.key==='Home')j=0;else if(e.key==='End')j=tabs.length-1;else return;e.preventDefault();switchTab(id,tabs[j].dataset.tab,true);});
@@ -202,11 +216,15 @@ cards.forEach(card=>{
 });
 links.forEach(a=>a.addEventListener('click',()=>selectQuestion(a.dataset.id,true)));
 window.addEventListener('hashchange',()=>selectQuestion(location.hash.slice(1),true));
-['search','track-filter','topic-filter','state-filter'].forEach(id=>$(id).addEventListener('input',()=>{const list=filter();if(list.length&&!list.some(c=>c.id===active)){location.hash=list[0].id;}}));
-$('clear-filters').addEventListener('click',()=>{['search','track-filter','topic-filter','state-filter'].forEach(id=>$(id).value='');filter();});
+['search','track-filter','topic-filter','state-filter','error-filter'].forEach(id=>$(id).addEventListener('input',syncFilteredSelection));
+$('clear-filters').addEventListener('click',()=>{['search','track-filter','topic-filter','state-filter','error-filter'].forEach(id=>$(id).value='');filter();});
+function syncFilteredSelection(){
+  const list=filter();
+  if(list.length&&!list.some(c=>c.id===active)) location.hash=list[0].id;
+}
 function step(d){const list=matches(),i=list.findIndex(c=>c.id===active);if(list[i+d])location.hash=list[i+d].id;}
 $('previous').onclick=()=>step(-1);$('next').onclick=()=>step(1);
 $('export-all').onclick=exportAll;$('import-file').addEventListener('change',importBackup);
 async function copyCode(button){const code=button.closest('.file').querySelector('code');try{await navigator.clipboard.writeText(code.textContent);button.textContent='Copied';setTimeout(()=>button.textContent='Copy code',1500);}catch(e){const range=document.createRange();range.selectNodeContents(code);getSelection().removeAllRanges();getSelection().addRange(range);button.textContent='Selected: use Copy';}}
 refresh();if(matchMedia('(max-width:760px)').matches){$('question-menu').open=false;$('backup-menu').open=false;}
-selectQuestion(location.hash.slice(1)||'A1-1',!!location.hash);
+selectQuestion(location.hash.slice(1)||'E1',!!location.hash);

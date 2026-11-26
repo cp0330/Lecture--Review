@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Room finder</title>
+<style>
+table { border-collapse: collapse; }
+th, td { border: 1px solid black; padding: 4px; }
+</style>
+<script>
+var units = [];
+
+function loadRooms() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (xhttp.readyState == 4) {
+      if (xhttp.status == 200) {
+        var data = JSON.parse(xhttp.responseText);
+        displayRows(data);
+      } else {
+        units = [];
+        document.getElementById("rows").innerHTML = "";
+        document.getElementById("result").textContent = "Request failed: " + xhttp.status;
+        document.getElementById("result").style.color = "black";
+      }
+    }
+  };
+  xhttp.open("GET", "rooms.json", true);
+  xhttp.send();
+}
+
+function displayRows(data) {
+  units = data;
+  var html = "";
+  // The index links the rendered row to its JSON record.
+  for (var i = 0; i < units.length; i++) {
+    html += '<tr onmouseover="showRoom(' + i + ')"><td>' + units[i].code;
+    html += "</td><td>" + units[i].room + "</td></tr>";
+  }
+  document.getElementById("rows").innerHTML = html;
+  document.getElementById("result").textContent = "Choose a unit";
+  document.getElementById("result").style.color = "black";
+}
+
+function showRoom(index) {
+  var item = units[index];
+  var result = document.getElementById("result");
+  result.textContent = item.code + ": " + item.room;
+  result.style.color = item.color;
+}
+</script>
+</head>
+<body>
+<button onclick="loadRooms()">Load rooms</button>
+<table>
+  <tr><th>Unit</th><th>Room</th></tr>
+  <tbody id="rows"></tbody>
+</table>
+<p id="result">Choose a unit</p>
+<p style="color: gray">Rooms may change</p>
+</body>
+</html>

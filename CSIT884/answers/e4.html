@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Name animation</title>
+<script>
+var count = 1;
+var timer = null;
+
+function drawNames() {
+  // Rebuild the current line from the count.
+  var line = "demo";
+  for (var i = 1; i < count; i++) {
+    line += " demo";
+  }
+  document.getElementById("result").textContent = line;
+}
+
+function tick() {
+  count++;
+  if (count > 10) {
+    count = 1;
+  }
+  drawNames();
+}
+
+function start() {
+  if (timer !== null) { return; }
+  count = 1;
+  drawNames();
+  timer = setInterval(tick, 1000);
+}
+</script>
+</head>
+<body>
+<button onclick="start()">Start</button>
+<div id="result"></div>
+</body>
+</html>
