@@ -29,6 +29,9 @@ for(const q of data.questions){
  const id=q.canonical||q.id;
  q.questionHTML=md(q.question,id);q.translationHTML=md(q.questionZh||'',id);
  if(q.imageGlossary)q.translationHTML+='<details><summary>图中文字逐项对照</summary>'+md(q.imageGlossary,id)+'</details>';
+ for(const item of [...q.parts.map(p=>p.reading),...Object.values(q.readingUnits||{})].filter(Boolean)){
+  item.englishHTML=md(item.english,id);item.chineseHTML=md(item.chinese,id);
+ }
  if(q.level==='C')q.answerHTML=md(q.answer,id);
  if(q.providedAnswer?.text){q.providedAnswer.html=md(q.providedAnswer.text,id);delete q.providedAnswer.text;}
  for(const p of q.parts){p.referenceHTML=md(p.referenceAnswerEn||q.referenceAnswerEn||q.answer,id);delete p.referenceAnswerEn;delete p.code;}
@@ -41,5 +44,5 @@ const style=fs.readFileSync(path.join(base,'study.css'),'utf8');
 const script=fs.readFileSync(path.join(base,'app.js'),'utf8');
 const core=fs.readFileSync(path.join(base,'core.js'),'utf8');
 const shell=fs.readFileSync(path.join(base,'tools/shell.html'),'utf8');
-fs.writeFileSync(path.join(base,'index.html'),shell.replace('/* INLINE_STYLE */',style).replace('/* INLINE_DATA */',`const BANK=${json};`).replace('/* INLINE_CORE */',core).replace('/* INLINE_APP */',script));
+fs.writeFileSync(path.join(base,'index.html'),shell.replace('/* INLINE_STYLE */',style).replace('/* INLINE_DATA */',()=>`const BANK=${json};`).replace('/* INLINE_CORE */',core).replace('/* INLINE_APP */',script));
 console.log(JSON.stringify({questions:data.questions.length,parts:data.questions.reduce((a,q)=>a+q.parts.length,0),diagrams,bytes:fs.statSync(path.join(base,'index.html')).size}));

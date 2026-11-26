@@ -273,6 +273,35 @@ ok('No remote runtime scripts or styles',not re.search(r'<script[^>]+src=|<link[
 embedded=json.loads(re.search(r'const BANK=(.*?);</script>',html,re.S)[1])
 ok('Shared runtime retains all questions and diagrams',len(embedded['questions'])==56 and sum(p['referenceHTML'].count('class="diagram"') for q in embedded['questions'] for p in q['parts'])>=8 and all(w in html for w in ['academic_degree_achieved','admission_date','learningObjectives','AuthorID','RoomNumber']))
 ok('Practice answers absent from static shell and hidden initially','id="panel-practice" class="content" role="tabpanel" aria-labelledby="tab-practice" hidden' in html)
+# Each reading prompt cites the actual English, including the duplicate source papers.
+normalize=lambda text:' '.join(text.casefold().split())
+for q in E.values():
+    if q['level']!='A':continue
+    for p in q['parts']:
+        r=p['reading'];rows=r['checks']
+        ok(f"{q['id']}({p['number']}) focused English, Chinese and 2–4 anchored reading checks",
+           bool(r['english'] and r['chinese']) and 2<=len(rows)<=4 and
+           all(len(row)==4 and all(row) and normalize(row[1]) in normalize(q['question']) for row in rows))
+for name,learn,test,reason,criterion in bank['readingRoutes']:
+    for target in (learn,test):
+        id,num,*unit=target.split(':')
+        ok(name+' reachable '+target,any(p['number']==num for p in E[id]['parts']) and (not unit or unit[0] in E[id]['readingUnits']) and bool(reason and criterion))
+def shown_sql(id,i):
+    return re.search(r'\x60\x60\x60sql\n(.*?)\x60\x60\x60',E[id]['parts'][i-1]['referenceAnswerEn'],re.S)[1]
+training=newdb('培训')
+out=training.execute(shown_sql('A3-T2',1))
+ok('Displayed A3-T2 columns and original qualifying rows', [c[0] for c in out.description]==['workshopNo','title','category','fee'] and sorted(row[0] for row in out.fetchall())==[1,2,3,5])
+probe=sqlite3.connect(':memory:')
+probe.executescript("CREATE TABLE TRUCK(REGNUM TEXT,CAPACITY INT);INSERT INTO TRUCK VALUES ('below',99),('lo',100),('mid',300),('hi',500),('above',501);")
+ok('Boundary-only fixture: 100 and 500 included and 99/501 excluded',set(probe.execute(shown_sql('M1-Q3',1)))=={('lo',),('mid',),('hi',)})
+alt=E['A4-T2']['readingUnits']['cte']['reference']
+expected=training.execute("SELECT w.workshopNo,w.title FROM Workshop w WHERE EXISTS(SELECT 1 FROM Enrolment e JOIN Participant p ON p.participantNo=e.participantNo WHERE UPPER(p.city)='SYDNEY' AND e.workshopNo=w.workshopNo)").fetchall()
+ok('Independent double-CTE transfer on workshop fixture',bool(expected) and sorted(training.execute(alt))==sorted(expected))
+for id,num in [('A3-T3',3),('A3-T3',4),('A4-T1',4),('A4-T2',1)]:
+    rows=training.execute(shown_sql(id,num)).fetchall()
+    ok(f'Displayed {id}({num}) result matches checked reference',sorted(rows)==sorted(query_results[f'{id}({num})']))
+
+
 report={'date':bank['version'],'status':'passed','checks':checks,'check_count':len(checks),'normalization_cases':len(nf_cases)+len(more_nf),'normalization_closure_rows':128,'query_results':query_results,'executed_engine':'SQLite in-memory with stated dialect adapters','limitations':['Not a MySQL execution certificate. MySQL 26.7 failed to initialize an isolated temporary instance with SIGSEGV; no existing database was accessed.','MySQL-only ALTER, authentication, GRANT/REVOKE, audit and concurrency statements were statically reviewed with version boundaries; not run against MySQL.','UI event tests and HTTPS visual inspection are reported separately; learner mastery is never inferred from content preparation.']}
 (ROOT/'tests/results.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
 print(json.dumps({'status':'passed','checks':len(checks),'normalization_cases':report['normalization_cases'],'closure_rows':128,'query_results_recorded':len(query_results)}))

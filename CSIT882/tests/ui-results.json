@@ -1,7 +1,7 @@
 {
-  "date": "2026-11-18",
+  "date": "2026-11-26",
   "status": "passed",
-  "checks": 53,
+  "checks": 73,
   "labels": [
     "Legacy drafts, duplicate IDs and unknown IDs preserved",
     "Legacy done never becomes mastery",
@@ -55,7 +55,27 @@
     "Corrupt stored data never overwritten",
     "Malformed hash does not crash",
     "All three generated inline scripts have valid syntax",
-    "Static shell IDs unique"
+    "Static shell IDs unique",
+    "Start opens A3-T2(1) English and prompts, no worked SQL",
+    "Partial reading survives checking without mastery change",
+    "Reload restores checked stage and partial reading text",
+    "Independent SQL starts empty and hides feedback",
+    "Transfer reaches blank M1-Q3(1) after reading its conditions",
+    "Home resume returns to independent practice",
+    "First relationship only shows one sentence, no full diagram",
+    "Reverse relationship checks the supplied qualified association after reveal",
+    "Back to full A1-T1 restores attributes and final requirement",
+    "Deep link to NF part 4 is a blind self-test",
+    "CTE variant has a separate independent draft",
+    "Transfer draft belongs only to variant",
+    "Backup round trip keeps reading, check status and saved learning stage",
+    "Reading conflicts archived and untouched prompt kept",
+    "Paper 1 Q2 original image and running timer",
+    "Paper 1 submit and review keeps answer",
+    "Paper 2 Q2 original image and running timer",
+    "Paper 2 submit and review keeps answer",
+    "Paper 3 Q2 original image and running timer",
+    "Paper 3 submit and review keeps answer"
   ],
   "scope": "Pure state, migration, timer and UI event regression checks in a deliberately small DOM model; real rendering verified separately on HTTPS."
 }

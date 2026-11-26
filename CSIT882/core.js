@@ -10,6 +10,11 @@
   x=safeObject(x);const drafts=safeObject(x.drafts),mastery=safeObject(x.partMastery);
   for(const d of Object.values(drafts))if(!object(d)||typeof d.text!=='string')throw Error('小题草稿格式不正确');
   for(const m of Object.values(mastery))if(!object(m)||!values.has(m.value)||typeof m.at!=='string')throw Error('掌握记录格式不正确');
+  for(const entry of Object.values(safeObject(x.readings))){
+   safeObject(entry);if(!object(entry))throw Error('读题草稿格式不正确');
+   safeObject(entry.times);
+   for(const [key,value] of Object.entries(entry))if(key!=='times'&&typeof value!=='string')throw Error('读题字段格式不正确');
+  }
   return {...clone(x),answer:typeof x.answer==='string'?x.answer:'',answerUpdatedAt:x.answerUpdatedAt||x.updatedAt||'',done:x.done===true,updatedAt:typeof x.updatedAt==='string'?x.updatedAt:'',drafts:clone(drafts),partMastery:clone(mastery),attempts:Array.isArray(x.attempts)?clone(x.attempts):[],draftHistory:Array.isArray(x.draftHistory)?clone(x.draftHistory):[]};
  }
  function migrate(x){
@@ -29,12 +34,29 @@
   if(a.answer&&b.answer&&a.answer!==b.answer){const old=answerNewer?a:b;r.draftHistory=union(r.draftHistory,[{id:'import:'+old.answerUpdatedAt+':'+old.answer,text:old.answer,updatedAt:old.answerUpdatedAt,source:'import-conflict'}],x=>x.id);}
   r.drafts={...a.drafts};for(const [part,d] of Object.entries(b.drafts)){const before=r.drafts[part];if(!before||(d.updatedAt&&d.updatedAt>before.updatedAt))r.drafts[part]=clone(d);if(before?.text&&d.text&&before.text!==d.text){const old=r.drafts[part]===before?d:before;r.draftHistory=union(r.draftHistory,[{id:'part:'+part+':'+(old.updatedAt||'')+':'+old.text,part,text:old.text,updatedAt:old.updatedAt,source:'import-conflict'}],x=>x.id);}}
   r.partMastery={...a.partMastery};for(const [part,m] of Object.entries(b.partMastery)){if(!r.partMastery[part]||m.at>r.partMastery[part].at)r.partMastery[part]=clone(m);}
+  r.readings={};
+  for(const part of new Set([...Object.keys(a.readings||{}),...Object.keys(b.readings||{})])){
+   const left=a.readings?.[part]||{},right=b.readings?.[part]||{};
+   const merged={times:{}};
+   for(const field of new Set([...Object.keys(left),...Object.keys(right)])){
+    if(field==='times')continue;
+    const lt=left.times?.[field]||left.updatedAt||'',rt=right.times?.[field]||right.updatedAt||'';
+    const useRight=field in right&&(!(field in left)||rt>lt);
+    merged[field]=(useRight?right:left)[field];merged.times[field]=useRight?rt:lt;
+    if((field.startsWith('text')||field==='solution')&&left[field]&&right[field]&&left[field]!==right[field]){
+     const text=(useRight?left:right)[field],updatedAt=useRight?lt:rt;
+     r.draftHistory=union(r.draftHistory,[{id:JSON.stringify(['reading',part,field,updatedAt,text]),part,text,updatedAt,source:'reading-conflict'}],x=>x.id);
+    }
+   }
+   r.readings[part]=merged;
+  }
   r.done=a.done||b.done;return r;
  }
  function merge(a,b){
   const out=migrate(a),input=migrate(b);for(const [id,r] of Object.entries(input.records))out.records[id]=out.records[id]?mergeRecord(out.records[id],r):r;
   out.mock.runs=union(out.mock.runs,input.mock.runs,x=>x.id||JSON.stringify(x));
   if(!out.mock.active&&input.mock.active)out.mock.active=input.mock.active;
+  if(!out.settings.bookmark&&input.settings.bookmark)out.settings.bookmark=input.settings.bookmark;
   // Device preferences and an already active exam remain on this device.
   return out;
  }

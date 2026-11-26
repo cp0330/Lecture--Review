@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-18-workbench-v2",
+  "version": "2026-11-26-reading",
   "title": "CSIT882 Review",
   "questions": [
     {
@@ -67,7 +67,31 @@
             "先找需要单独记录的对象类别，再把属性放回所属类别。",
             "圈出唯一性与局部号码；是否允许新增属性要看原题，不能自行发明标识。",
             "每条关联向两个方向读数量；检查泛化箭头是否指向父类。"
-          ]
+          ],
+          "reading": {
+            "english": "Read and analyse the following specification of a sample database domain.\n\nA University would like to create a database to record information about some of its activities. The university offers a number of degrees to students. A degree is described by a unique name, total number of credit points required to complete a degree, and several requirements that must be satisfied by the future students. The university offers three types of degrees: undergraduate degrees, postgraduate degrees, and graduate certificate. Postgraduate degrees are available only for the students who already got an undergraduate degree. A description of a postgraduate degree includes a list of acceptable undergraduate degrees. A description of a graduate certificate includes a requirement on the total number of years of professional experience.\n\nEach degree consists of a collection of subjects. A description of a subject consists of its unique code, unique title, total number of credits points a subject is worth, and a list of subject learning objectives.\n\nThe university employs academic staff members, tutors and support staff members. A description of a university employee consists of a unique employee number, first name last name and date of birth. First name, last name and date of birth uniquely identified each employee. Additionally, academic staff members and tutors are described by an academic degree achieved. Support staff members are described by a list of qualifications acquired in the past together with a date when each qualification has been acquired.\n\nThe university assigns the academic staff members and tutors to the subjects. A subject has one or two academic members assigned and a number of tutors. An academic staff member and tutor can be assigned to many subjects. Support staff members are assigned to the degrees. Each support staff member is assigned to one degree and a degree has one or more support staff members assigned.\n\nThe university is divided into faculties and faculties are divided into schools. Academic staff members and tutors belong to one school and each school consists of many academic staff members and tutors. The faculties and schools are described by the unique names.\n\nDraw a conceptual schema for the specification of a database domain listed above.",
+            "chinese": "阅读并分析以下数据库领域说明。\n\n一所大学希望建立数据库，记录它的部分活动。大学向学生开设多种Degree（学位课程）。每个Degree有唯一名称、完成该Degree所需的总学分，以及未来学生必须满足的若干入学要求。\n\n大学提供三类Degree：Undergraduate Degree（本科学位）、Postgraduate Degree（研究生学位）和Graduate Certificate（研究生证书）。只有已经取得本科学位的学生，才可以申请Postgraduate Degree。每个Postgraduate Degree的说明中列有可接受的本科学位。Graduate Certificate的说明中列有专业工作经验年数要求。\n\n每个Degree包含一组Subject（科目）。每个Subject有唯一code、唯一title、学分值，以及一组learning objectives（学习目标）。code与title分别唯一。\n\n大学雇用Academic Staff、Tutor和Support Staff。每位Employee记录唯一employee number、first name、last name和date of birth。first name、last name与date of birth的组合也能唯一识别Employee。Academic Staff与Tutor还记录已经取得的academic degree。Support Staff记录过去获得的每项qualification，以及该项qualification的取得日期。\n\n大学把Academic Staff和Tutor分配到Subject。每个Subject分配一至两位Academic Staff，以及若干Tutor。一位Academic Staff或Tutor可分配到多个Subject。Support Staff分配到Degree：每位Support Staff恰好对应一个Degree，每个Degree至少对应一位Support Staff。\n\n大学分为Faculty，Faculty再分为School。每位Academic Staff和Tutor属于一个School；每个School有多位Academic Staff和Tutor。Faculty与School都用各自唯一名称描述。\n\n为上述领域绘制conceptual schema（概念模式）。",
+            "checks": [
+              [
+                "哪些是独立标识，哪些字段要合起来才唯一？",
+                "unique code, unique title",
+                "科目代码、标题各自唯一",
+                "员工姓名与生日的组合另算一个标识，不能把三个字段分别标为唯一。"
+              ],
+              [
+                "一门科目要数哪类人？",
+                "one or two academic members",
+                "一至两名学术人员",
+                "数一门课对应的人，数量标在被数的人员端；反向再读员工可教多少科目。"
+              ],
+              [
+                "哪些事实应随每项资格或子类单独记录？",
+                "together with a date when each qualification has been acquired",
+                "每项资质附取得日期",
+                "资格和日期成对；另外区分不同学位类别的特有要求。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [
@@ -174,7 +198,25 @@
             "先写不依赖其他schema的父关系及其完整标识。",
             "分别处理多对多、多值、qualifier与关联属性；引用复合标识不能漏列。",
             "按题目要求使用superset，最后检查父表先于子表及全部键。"
-          ]
+          ],
+          "reading": {
+            "english": "Consider a conceptual schema given below.\n\n![Original conceptual schema](assets/mock-1-q2.jpg)\n\nYour task is to perform a step of logical database design, i.e. to transform a conceptual schema given above into a collection of relational schemas.\n\nFor each relational schema clearly list the names of attributes, primary key, candidate keys (if any), and foreign keys (if any). Assume, that a superset method must be used to implement a generalization.",
+            "chinese": "根据上面的conceptual schema进行logical database design：把图转换成一组relational schemas（关系模式）。\n\n对每个relational schema，清楚列出attributes、primary key、其他candidate keys（如有）以及foreign keys（如有）。generalization（泛化）必须使用superset method（超集法）实现。",
+            "checks": [
+              [
+                "交图还是一组关系模式？要逐表列什么？",
+                "collection of relational schemas",
+                "一组关系模式",
+                "看给定图，列属性、主键、其他候选键及外键。"
+              ],
+              [
+                "有哪些强制方法？",
+                "superset method must be used",
+                "泛化必须用超集法",
+                "父类和子类字段放进同一关系，检查子类字段的适用条件。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [
@@ -283,13 +325,37 @@
               "text": "WHERE条件包含两个边界；有空结果时先核对约束，不修改题目数值。"
             }
           ],
-          "referenceAnswerEn": "```sql\nSELECT REGNUM\nFROM TRUCK\nWHERE CAPACITY BETWEEN 100 AND 500;\n```",
+          "referenceAnswerEn": "```sql\nSELECT REGNUM\nFROM TRUCK\nWHERE CAPACITY BETWEEN 100 AND 500;\n```\n\nThe predicate includes both endpoints. With the supplied CHECK (CAPACITY > 0 AND CAPACITY < 100) enforced, the table cannot contain either endpoint or any other value in the requested interval. The query therefore returns no rows.",
           "validation": "已在隔离的SQLite内存数据中核对相关查询／数据变化；涉及MySQL方言时有明确适配，不等同MySQL执行验证。",
           "hints": [
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "Write SELECT statements that implement the following queries.\n\n(1) Find the registration numbers of trucks, that have capacity in a range between 100 inclusive and 500 inclusive.",
+            "chinese": "编写SELECT语句完成以下查询。所需CREATE TABLE语句在本题的共享schema中。\n\n(1) 找出capacity在100至500之间、包含两个边界的Truck，输出REGNUM。",
+            "checks": [
+              [
+                "返回哪个字段？一行是什么？",
+                "registration numbers of trucks",
+                "卡车注册号",
+                "从给定 TRUCK 的列中找 REGNUM，一辆符合条件的车一行。"
+              ],
+              [
+                "用哪个量筛选？",
+                "capacity in a range",
+                "以载重筛选",
+                "将条件写在 CAPACITY 上，载重无需出现在输出列。"
+              ],
+              [
+                "100 和 500 各自是否算？",
+                "100 inclusive and 500 inclusive",
+                "上下界都包含",
+                "筛选谓词两个端点都取等号。在写完后对照原表的 CAPACITY 约束，区分条件允许的数值和表中可能出现的行。"
+              ]
+            ]
+          }
         },
         {
           "number": "2",
@@ -347,7 +413,25 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "Write SELECT statements that implement the following queries.\n\n(2) Find the first and the last names of all drivers who are on leave.",
+            "chinese": "编写SELECT语句完成以下查询。所需CREATE TABLE语句在本题的共享schema中。\n\n(2) 找出所有状态为ON LEAVE的Driver，输出first name与last name。",
+            "checks": [
+              [
+                "输出谁的哪两项？",
+                "first and the last names of all drivers",
+                "司机的名和姓",
+                "根据员工和司机之间的键取得两列。"
+              ],
+              [
+                "哪些司机符合？",
+                "who are on leave",
+                "正在休假的司机",
+                "从 DRIVER 的状态筛选，按给定枚举值拼写。"
+              ]
+            ]
+          }
         },
         {
           "number": "3",
@@ -367,7 +451,7 @@
             "nested",
             "exists"
           ],
-          "taskBrief": "用内层查询的结果筛选外层；采用题目规定的嵌套形式。",
+          "taskBrief": "从车辆中筛出没有对应行程的注册号。题面允许选择合适的查询写法。",
           "input": "共享Transport schema与题面条件",
           "output": "返回从未执行行程的卡车",
           "examTips": [
@@ -407,7 +491,25 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "Write SELECT statements that implement the following queries.\n\n(3) Find the registration numbers of all trucks that have not been used for any trips.",
+            "chinese": "编写SELECT语句完成以下查询。所需CREATE TABLE语句在本题的共享schema中。\n\n(3) 找出从未用于任何Trip的Truck，输出REGNUM。",
+            "checks": [
+              [
+                "从什么集合开始找？",
+                "registration numbers of all trucks",
+                "全部卡车的注册号",
+                "候选对象来自车辆表，不能只遍历行程表。"
+              ],
+              [
+                "什么情况才保留？",
+                "not been used for any trips",
+                "从未执行过行程",
+                "检查没有对应行；题面未指定必须用子查询。"
+              ]
+            ]
+          }
         },
         {
           "number": "4",
@@ -464,7 +566,25 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "Write SELECT statements that implement the following queries.\n\n(4) Find the registration numbers of all trucks together with total number of trips the trucks have been used for. There is no need to include the truck that have not been used for any trips.",
+            "chinese": "编写SELECT语句完成以下查询。所需CREATE TABLE语句在本题的共享schema中。\n\n(4) 对每辆用于过Trip的Truck，输出REGNUM及Trip总数。无需包含从未用于Trip的Truck。",
+            "checks": [
+              [
+                "一行对应什么？",
+                "together with total number of trips",
+                "每辆车及其行程总数",
+                "按车分组后计数。"
+              ],
+              [
+                "没跑过的车要出现吗？",
+                "no need to include",
+                "无需包括零行程车辆",
+                "只用有行程的车辆即可，与含零计数题区分。"
+              ]
+            ]
+          }
         },
         {
           "number": "5",
@@ -521,7 +641,25 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "Write SELECT statements that implement the following queries.\n\n(5) Find the names of all departure cities together with the names of all destination cities.",
+            "chinese": "编写SELECT语句完成以下查询。所需CREATE TABLE语句在本题的共享schema中。\n\n(5) 找出所有departure city的名称，以及所有destination city的名称。",
+            "checks": [
+              [
+                "要从哪些地点列取值？",
+                "all departure cities",
+                "所有出发城市",
+                "另一个地点字段是 destination，二者均须覆盖。"
+              ],
+              [
+                "要一列城市还是两列路线？",
+                "together with the names of all destination cities",
+                "还要求目的地城市",
+                "原句未指明结果形状。可以说明假设后给去重城市列表，或给出发地与目的地配对。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [
@@ -650,7 +788,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "Write SQL statements that implement the following structural modifications of a database and data manipulations on the contents of a database. Note, that implementation of some of the tasks listed below may need more than one SQL statement.\n\n(1) We would like to add to a database information about the skills possessed by each driver. Assume, that a driver has many skills and a skill can be possessed by many drivers. It may happen that some skills are not possessed by any driver. The types of the new columns are up to you.",
+            "chinese": "编写SQL完成下列结构修改和数据操作。部分小题可能需要不止一条SQL语句。使用本题给出的Transport schema。\n\n(1) 增加Driver所拥有的Skill信息。一个Driver拥有多项Skill，一项Skill可由多个Driver拥有。某些Skill也可能尚未由任何Driver拥有。新增列的类型自行选择。",
+            "checks": [
+              [
+                "需要表达哪两个方向？",
+                "a skill can be possessed by many drivers",
+                "技能可属于多个司机",
+                "结合每位司机有多种技能，设计关联表。"
+              ],
+              [
+                "没有司机也能记录技能吗？",
+                "some skills are not possessed by any driver",
+                "有些技能可能无人拥有",
+                "技能本身须能独立存在，不能只存司机和技能的配对。"
+              ]
+            ]
+          }
         },
         {
           "number": "2",
@@ -707,7 +863,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "Write SQL statements that implement the following structural modifications of a database and data manipulations on the contents of a database. Note, that implementation of some of the tasks listed below may need more than one SQL statement.\n\n(2) Delete from a database information about the second and third leg of a trip 36.",
+            "chinese": "编写SQL完成下列结构修改和数据操作。部分小题可能需要不止一条SQL语句。使用本题给出的Transport schema。\n\n(2) 删除Trip 36中第2段与第3段的信息。",
+            "checks": [
+              [
+                "是删整个行程吗？",
+                "second and third leg",
+                "只删第 2、3 段",
+                "操作目标为 TRIPLEG 的特定行。"
+              ],
+              [
+                "如何避免影响其他行程同号的段？",
+                "of a trip 36",
+                "限行程 36",
+                "同时约束行程号和段号。"
+              ]
+            ]
+          }
         },
         {
           "number": "3",
@@ -762,7 +936,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "Write SQL statements that implement the following structural modifications of a database and data manipulations on the contents of a database. Note, that implementation of some of the tasks listed below may need more than one SQL statement.\n\n(3) Change a date of trip number 26 to the next day after the present date of trip 26.",
+            "chinese": "编写SQL完成下列结构修改和数据操作。部分小题可能需要不止一条SQL语句。使用本题给出的Transport schema。\n\n(3) 把Trip 26的日期改成它当前所存日期的后一天。",
+            "checks": [
+              [
+                "改哪一行？",
+                "trip number 26",
+                "行程 26",
+                "限定该趟行程的日期列。"
+              ],
+              [
+                "次日相对于哪天？",
+                "after the present date of trip 26",
+                "相对当前存储的行程日期",
+                "从该行旧日期加一天。"
+              ]
+            ]
+          }
         },
         {
           "number": "4",
@@ -815,7 +1007,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "Write SQL statements that implement the following structural modifications of a database and data manipulations on the contents of a database. Note, that implementation of some of the tasks listed below may need more than one SQL statement.\n\n(4) Assume that a trip number 25 has 3 legs. A trip number 25 started in Sydney and it ended in Perth. Add one more leg to a trip 25 such that after update the trip ends in the same city it started from.",
+            "chinese": "编写SQL完成下列结构修改和数据操作。部分小题可能需要不止一条SQL语句。使用本题给出的Transport schema。\n\n(4) 已知Trip 25有3段，从Sydney出发、在Perth结束。再增加一段，使更新后的Trip回到最初出发的城市。",
+            "checks": [
+              [
+                "已有几段，要新增还是覆盖？",
+                "Add one more leg",
+                "新增一段",
+                "原有三段保留，新增下一段。"
+              ],
+              [
+                "新段从哪里到哪里？",
+                "ends in the same city it started from",
+                "让整趟车回到起点",
+                "接续原终点，并返回原出发城市。"
+              ]
+            ]
+          }
         },
         {
           "number": "5",
@@ -864,13 +1074,31 @@
               "text": "明确区分最低题面要求与额外连续性假设；检查UNIQUE仍满足。"
             }
           ],
-          "referenceAnswerEn": "```sql\nUPDATE TRIPLEG\nSET DESTINATION = 'Perth'\nWHERE TNUM = 20\n  AND LEGNUM = 1;\n\nUPDATE TRIPLEG\nSET DEPARTURE = 'Perth'\nWHERE TNUM = 20\n  AND LEGNUM = 2;\n```",
+          "referenceAnswerEn": "The first UPDATE is explicitly required. Use the second only under the additional assumption that consecutive legs must join at the same city.\n\n```sql\nUPDATE TRIPLEG\nSET DESTINATION = 'Perth'\nWHERE TNUM = 20\n  AND LEGNUM = 1;\n\nUPDATE TRIPLEG\nSET DEPARTURE = 'Perth'\nWHERE TNUM = 20\n  AND LEGNUM = 2;\n```",
           "validation": "已在隔离的SQLite内存数据中核对相关查询／数据变化；涉及MySQL方言时有明确适配，不等同MySQL执行验证。",
           "hints": [
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "Write SQL statements that implement the following structural modifications of a database and data manipulations on the contents of a database. Note, that implementation of some of the tasks listed below may need more than one SQL statement.\n\n(5) Assume that a trip 20 has 2 legs and that a destination of the first leg is Sydney. Update information about a trip 20 such that after update a destination of the first leg is Perth.",
+            "chinese": "编写SQL完成下列结构修改和数据操作。部分小题可能需要不止一条SQL语句。使用本题给出的Transport schema。\n\n(5) 已知Trip 20有2段，第1段目的地为Sydney。更新Trip 20，使第1段目的地变成Perth。",
+            "checks": [
+              [
+                "必须改变哪个目的地？",
+                "destination of the first leg is Perth",
+                "第一段终点改为 Perth",
+                "定位行程 20 的第一段。"
+              ],
+              [
+                "题面给出的第二段是否有额外明示要求？",
+                "a trip 20 has 2 legs",
+                "行程共两段",
+                "若维护相邻段首尾连续，说明假设并相应调整第二段出发地。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [
@@ -966,7 +1194,25 @@
             "列出用户、操作、对象范围、能否转授四项。",
             "区分database.*、单张table与指定columns。",
             "只开放汇总／部分行时考虑View；检查已有权限来源是否叠加。"
-          ]
+          ],
+          "reading": {
+            "english": "Assume that a user root with a password '[ROOT_OR_USER_PASSWORD]' created a database called transport and the user executed CREATE TABLE statements given on page 2 of the examination paper to create the relational tables in the database transport.\n\nWrite the implementations of the operations listed below as a user root. Assume that a user root has already connected to the database. Note, that implementation of some operations may need more than one SQL statement.\n\n(1) A user root nominates a database transport as a default database and then the user creates two new users USER_A and USER_B.",
+            "chinese": "root用户已连接数据库，并已在transport数据库建立题面给出的表。root的密码按英文题面给定。以root身份实现以下操作；部分小题可能需要多条SQL。\n\n(1) 把transport设为默认数据库，然后创建英文题面指定的两个用户。",
+            "checks": [
+              [
+                "先选择哪个库？",
+                "as a default database",
+                "设为默认数据库",
+                "以已连接的 root 选择 transport。"
+              ],
+              [
+                "要创建几个账号？",
+                "two new users USER_A and USER_B",
+                "两个指定账号",
+                "保留两账号的身份区别供后续授权。"
+              ]
+            ]
+          }
         },
         {
           "number": "2",
@@ -1006,7 +1252,25 @@
             "列出用户、操作、对象范围、能否转授四项。",
             "区分database.*、单张table与指定columns。",
             "只开放汇总／部分行时考虑View；检查已有权限来源是否叠加。"
-          ]
+          ],
+          "reading": {
+            "english": "Assume that a user root with a password '[ROOT_OR_USER_PASSWORD]' created a database called transport and the user executed CREATE TABLE statements given on page 2 of the examination paper to create the relational tables in the database transport.\n\nWrite the implementations of the operations listed below as a user root. Assume that a user root has already connected to the database. Note, that implementation of some operations may need more than one SQL statement.\n\n(2) A user root grants the read access rights to the relational tables EMPLOYEE and DRIVER to a user USER_A. The read access rights cannot be propagated to other roles or users.",
+            "chinese": "root用户已连接数据库，并已在transport数据库建立题面给出的表。root的密码按英文题面给定。以root身份实现以下操作；部分小题可能需要多条SQL。\n\n(2) 向第一个用户授予EMPLOYEE和DRIVER表的读取权限。这些权限不能再授予其他用户或role。",
+            "checks": [
+              [
+                "谁读哪些表？",
+                "EMPLOYEE and DRIVER",
+                "两张指定表",
+                "向 USER_A 分别授读权。"
+              ],
+              [
+                "能否传播权限？",
+                "cannot be propagated",
+                "不能再授予他人",
+                "不附加转授权。"
+              ]
+            ]
+          }
         },
         {
           "number": "3",
@@ -1048,7 +1312,25 @@
             "列出用户、操作、对象范围、能否转授四项。",
             "区分database.*、单张table与指定columns。",
             "只开放汇总／部分行时考虑View；检查已有权限来源是否叠加。"
-          ]
+          ],
+          "reading": {
+            "english": "Assume that a user root with a password '[ROOT_OR_USER_PASSWORD]' created a database called transport and the user executed CREATE TABLE statements given on page 2 of the examination paper to create the relational tables in the database transport.\n\nWrite the implementations of the operations listed below as a user root. Assume that a user root has already connected to the database. Note, that implementation of some operations may need more than one SQL statement.\n\n(3) A user root grants the rights to insert the rows into a relational tables TRIP and TRIPLEG to a user USER_B. The access rights can be propagated to other roles or users.",
+            "chinese": "root用户已连接数据库，并已在transport数据库建立题面给出的表。root的密码按英文题面给定。以root身份实现以下操作；部分小题可能需要多条SQL。\n\n(3) 向第二个用户授予向TRIP和TRIPLEG插入行的权限，并允许它把这些权限再授予其他用户或role。",
+            "checks": [
+              [
+                "给 USER_B 哪种操作？",
+                "insert the rows",
+                "插入新行",
+                "限定 TRIP 和 TRIPLEG，不能扩大为所有写权。"
+              ],
+              [
+                "能再授权吗？",
+                "can be propagated",
+                "可以转授",
+                "对这两次授权附 WITH GRANT OPTION。"
+              ]
+            ]
+          }
         },
         {
           "number": "4",
@@ -1092,7 +1374,25 @@
             "列出用户、操作、对象范围、能否转授四项。",
             "区分database.*、单张table与指定columns。",
             "只开放汇总／部分行时考虑View；检查已有权限来源是否叠加。"
-          ]
+          ],
+          "reading": {
+            "english": "Assume that a user root with a password '[ROOT_OR_USER_PASSWORD]' created a database called transport and the user executed CREATE TABLE statements given on page 2 of the examination paper to create the relational tables in the database transport.\n\nWrite the implementations of the operations listed below as a user root. Assume that a user root has already connected to the database. Note, that implementation of some operations may need more than one SQL statement.\n\n(4) A user root grants the update privilege on all relational tables in csit115 database to a user USER_A. The privilege cannot be propagated to other roles or users.",
+            "chinese": "root用户已连接数据库，并已在transport数据库建立题面给出的表。root的密码按英文题面给定。以root身份实现以下操作；部分小题可能需要多条SQL。\n\n(4) 向第一个用户授予csit115数据库中所有表的UPDATE权限，不允许转授。",
+            "checks": [
+              [
+                "在哪个库、哪些表？",
+                "all relational tables in csit115 database",
+                "csit115 的全部表",
+                "尽管之前默认 transport，此处要显式写题面库名；库存在是执行前提。"
+              ],
+              [
+                "谁能做什么，能否转授？",
+                "update privilege",
+                "更新权",
+                "给 USER_A，不可转授。"
+              ]
+            ]
+          }
         },
         {
           "number": "5",
@@ -1149,7 +1449,25 @@
             "列出用户、操作、对象范围、能否转授四项。",
             "区分database.*、单张table与指定columns。",
             "只开放汇总／部分行时考虑View；检查已有权限来源是否叠加。"
-          ]
+          ],
+          "reading": {
+            "english": "Assume that a user root with a password '[ROOT_OR_USER_PASSWORD]' created a database called transport and the user executed CREATE TABLE statements given on page 2 of the examination paper to create the relational tables in the database transport.\n\nWrite the implementations of the operations listed below as a user root. Assume that a user root has already connected to the database. Note, that implementation of some operations may need more than one SQL statement.\n\n(5) A user root grants the rights to information about the total number trips performed by each driver to a user USER_B.",
+            "chinese": "root用户已连接数据库，并已在transport数据库建立题面给出的表。root的密码按英文题面给定。以root身份实现以下操作；部分小题可能需要多条SQL。\n\n(5) 向第二个用户开放“每位Driver完成的Trip总数”信息。",
+            "checks": [
+              [
+                "要暴露明细还是统计？",
+                "total number trips performed by each driver",
+                "每位司机的行程总数",
+                "用汇总视图提供该粒度；按 each 保留零行程司机。"
+              ],
+              [
+                "最终权利给谁？",
+                "to a user USER_B",
+                "第二位用户",
+                "授权对象限于所需信息；本小题没有要求再授权。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [
@@ -1284,7 +1602,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "Assume, that we would like to verify the following logical consistency constraint imposed on the contents of a sample database.\n\n\"A truck cannot be used for more that 100 trips\"\n\nWrite SQL statements that perform the following actions.\n\n(1) First, create a relational table MESSAGE with information about the contents of a sample database that violate the following consistency constraint listed above. A relational table MESSAGE must consist of two columns. The first column contains truck registration numbers and the second column contains the total number of trips for all trucks that have been used for more than 100 trips.",
+            "chinese": "希望检查以下数据库逻辑一致性限制：“一辆Truck不能用于超过100次Trip。”\n\n(1) 首先创建MESSAGE表，保存违反该限制的信息。表必须只有两列：Truck的REGNUM，以及该Truck的Trip总数。只保存Trip总数大于100的Truck。",
+            "checks": [
+              [
+                "MESSAGE 有哪些列？",
+                "must consist of two columns",
+                "必须恰好两列",
+                "车牌和该车的行程总数，每辆违规车一行。"
+              ],
+              [
+                "100 是否违规？",
+                "more than 100 trips",
+                "超过 100 次",
+                "先按车计数，再用分组条件筛违规车。"
+              ]
+            ]
+          }
         },
         {
           "number": "2",
@@ -1339,7 +1675,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "Assume, that we would like to verify the following logical consistency constraint imposed on the contents of a sample database.\n\n\"A truck cannot be used for more that 100 trips\"\n\nWrite SQL statements that perform the following actions.\n\n(2) Next, list the contents of a relational table MESSAGE in the following way.\n\nTruck <insert ruck registration number here> has been used for <insert total number of trips here> trips.\n\nFor example, if a truck with registration number PKR856 has been used 120 times then the following line must be listed.\n\nTruck PKR856 has been used for 120 trips.",
+            "chinese": "希望检查以下数据库逻辑一致性限制：“一辆Truck不能用于超过100次Trip。”\n\n(2) 按指定句式显示MESSAGE内容：Truck后接注册号，再接has been used for、次数及trips.。例如Truck PKR856 has been used for 120 trips.。尖括号中的文字是待填值说明，不是要原样输出的内容。",
+            "checks": [
+              [
+                "从哪里读，输出什么形状？",
+                "list the contents of a relational table MESSAGE",
+                "列出已生成的 MESSAGE",
+                "每条违规记录输出一句话。"
+              ],
+              [
+                "例句中哪些是变量？",
+                "Truck PKR856 has been used for 120 trips.",
+                "车号和次数是示例值",
+                "按下一行给出的输出模板拼接，保留 has been used for、trips 和句点。"
+              ]
+            ]
+          }
         },
         {
           "number": "3",
@@ -1377,7 +1731,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "Assume, that we would like to verify the following logical consistency constraint imposed on the contents of a sample database.\n\n\"A truck cannot be used for more that 100 trips\"\n\nWrite SQL statements that perform the following actions.\n\n(3) Next, make the contents of a relational table MESSAGE permanent.",
+            "chinese": "希望检查以下数据库逻辑一致性限制：“一辆Truck不能用于超过100次Trip。”\n\n(3) 使MESSAGE中的数据成为永久保存的内容，即提交当前事务。",
+            "checks": [
+              [
+                "要使什么持久化？",
+                "contents of a relational table MESSAGE permanent",
+                "让 MESSAGE 的内容持久保存",
+                "对应事务提交操作，表中行应保留。"
+              ],
+              [
+                "与下一步的顺序？",
+                "make the contents of a relational table MESSAGE permanent",
+                "接上一步",
+                "提交在展示后、最后删表前；MySQL DDL 的隐式提交另见解析。"
+              ]
+            ]
+          }
         },
         {
           "number": "4",
@@ -1423,7 +1795,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "Assume, that we would like to verify the following logical consistency constraint imposed on the contents of a sample database.\n\n\"A truck cannot be used for more that 100 trips\"\n\nWrite SQL statements that perform the following actions.\n\n(4) Finally, drop a relational table MESSAGE.",
+            "chinese": "希望检查以下数据库逻辑一致性限制：“一辆Truck不能用于超过100次Trip。”\n\n(4) 最后删除MESSAGE表。",
+            "checks": [
+              [
+                "删除行还是删除表？",
+                "drop a relational table MESSAGE",
+                "移除 MESSAGE 表",
+                "目标是表对象本身。"
+              ],
+              [
+                "何时执行？",
+                "Finally",
+                "最后一步",
+                "在创建、展示、持久化之后。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [
@@ -1542,7 +1932,31 @@
             "先找需要单独记录的对象类别，再把属性放回所属类别。",
             "圈出唯一性与局部号码；是否允许新增属性要看原题，不能自行发明标识。",
             "每条关联向两个方向读数量；检查泛化箭头是否指向父类。"
-          ]
+          ],
+          "reading": {
+            "english": "Read and analyse the following specification of a sample database domain.\n\nA description of a hospital consists of a unique hospital name, address of a main building including city, street, and building number, phone and fax numbers, and email address. The phone number, fax number, and email address can also be used for the identification purposes. A hospital consists of a number of buildings. A building number is a local identifier of a building. Some of the buildings have the names, which are unique within a hospital.\n\nA hospital consists of wards and wards consist of decks. Each ward has a unique name and is located in one building. A ward may occupy several levels of a building. A deck is identified by a number unique within a ward and it is located at one level of a building. The database should contain the complete information about the locations of buildings and decks.\n\nA hospital employs the doctors, nurses, administration and maintenance staff members. The employees are described by an employee number unique within a hospital, first name, last name, date of birth and salary. The doctors are additional described by a status and specialization. The nurses are also described by a category. Administration and maintenance staff members are described by a position occupied. The doctors are assigned to the wards and the nurses are assigned to the decks. Additionally, a hospital contracts a number of consultants. The consultants are not assigned to the wards and are employed by a hospital for a limited time only. The consultants are described by first and last name, specialization, phone number, and amount of charge per hour, start and end of contract with a hospital. The consultants can be employed by more than one hospital at a time.\n\nA hospital admits the patients for the treatments. A patient is described by medical insurance company name and insurance policy number. Date and time are recorded on admittance to a hospital. A patient may be admitted to and discharged from a hospital many times. On arrival to a hospital a patient passes through entry physical examinations, which consists of a number of tests. The database should contain information about the names of tests applied and the results of the tests conducted just after arrival to a hospital. When, an illness a patient suffers from is identified he/she is located at a ward and at a deck of a ward.\n\nDesign a conceptual schema for the database domain described above. Use a notation of simplified UML object class diagrams explained during the lecture classes and applied for conceptual modelling in the assignments and class test. Remember to determine the multiplicities of associations, identifiers of classes of objects, multivalued, optional and derived attributes (if any).\n\nThere is NO NEED to provide a detailed analysis how a conceptual schema has been created. The final conceptual schema expressed in a notation of UML simplified classes is completely sufficient.\n\nIt is not allowed to use any artificial identifiers and any attributes that are not mentioned in a specification above.",
+            "chinese": "阅读并分析以下医院数据库领域说明，并设计conceptual schema。\n\nHospital记录唯一hospital name、主楼地址（city、street和building number）、phone、fax和email。phone、fax和email也分别可用于识别Hospital。一个Hospital有多座Building。building number只在所属Hospital内唯一。部分Building有名称；名称只在该Hospital内唯一。\n\nHospital分为Ward，Ward再分为Deck。每个Ward有唯一名称，并位于一座Building中。一个Ward可以占据该Building的多个楼层。Deck使用在所属Ward内唯一的号码识别，并位于Building的某一层。数据库必须完整记录Building与Deck的位置。\n\nHospital雇用Doctor、Nurse、Administration Staff和Maintenance Staff。Employee记录在该Hospital内唯一的employee number、first name、last name、date of birth和salary。Doctor另外记录status与specialization；Nurse另外记录category；行政及维护人员另外记录position。Doctor分配到Ward，Nurse分配到Deck。\n\nHospital还会按有限期限聘用Consultant。Consultant不分配到Ward。Consultant记录first name、last name、specialization、phone、每小时收费，以及与某Hospital的合同开始／结束时间。同一Consultant可同时被多家Hospital聘用。\n\nHospital接收Patient进行治疗。Patient记录medical insurance company name和insurance policy number。每次入院记录date与time。Patient可以多次入院和出院。每次到院时进行entry physical examination，检查包含若干Test。数据库必须记录该次入院所做Test的名称及结果。确定Patient患有的illness后，将其安置到某Ward及该Ward的某Deck。\n\n使用课堂、作业和测验采用的simplified UML class diagram记法。确定association multiplicities、identifiers，以及multivalued、optional、derived attributes（如有）。只需最终图，不需要详细描述建模过程。\n\n禁止使用artificial identifiers（人工编号），也禁止加入说明中没有提到的attributes。",
+            "checks": [
+              [
+                "编号在哪个范围才唯一？",
+                "unique within a ward",
+                "仅在病区内唯一",
+                "识别 deck 要带所属 ward；building 和 employee 也各有自己的编号范围。"
+              ],
+              [
+                "哪些信息随一次事件改变？",
+                "admitted to and discharged from a hospital many times",
+                "同一患者可多次出入院",
+                "测试结果依附一次入院；合同起止时间依附医院与顾问的聘用。"
+              ],
+              [
+                "最终交什么，哪些内容不能添加？",
+                "not allowed to use any artificial identifiers",
+                "禁止添加人工标识",
+                "提交简化 UML 图、双向数量与题给属性；不擅自造 ID，未明唯一性写成假设。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [
@@ -1652,7 +2066,25 @@
             "先写不依赖其他schema的父关系及其完整标识。",
             "分别处理多对多、多值、qualifier与关联属性；引用复合标识不能漏列。",
             "按题目要求使用superset，最后检查父表先于子表及全部键。"
-          ]
+          ],
+          "reading": {
+            "english": "Consider a conceptual schema given below.\n\n![Original conceptual schema](assets/mock-2-q2.jpg)\n\nYour task is to perform a step of logical database design, i.e. to transform a conceptual schema given above into a collection of relational schemas. For each relational schema clearly list the names of attributes, primary key, candidate keys (if any), and foreign keys (if any). Assume, that a superset method must be used to implement a generalization.",
+            "chinese": "根据给定的航班conceptual schema，进行logical database design，转换成一组relational schemas。\n\n每个schema需列出attributes、primary key、candidate keys（如有）与foreign keys（如有）。generalization必须使用superset method。",
+            "checks": [
+              [
+                "输入图中哪些规则要落在键或额外约束上？",
+                "foreign keys (if any)",
+                "列出适用的外键",
+                "从航班图逐端读数量和限定符；复合标识引用要完整，外键未表达的最低数量单列。"
+              ],
+              [
+                "泛化可以自由选映射吗？",
+                "superset method must be used",
+                "必须使用超集法",
+                "按图合并类层次，逐表列属性、主键和其他候选键。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [
@@ -1774,7 +2206,25 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "This question is related to a sample database created through processing of the common CREATE TABLE statements above.\n\nWrite SELECT statements that implement the following queries. You can use any implementation technique for your SELECT statements.\n\n(1) For each bank find the total number of branches owned by a bank. List a bank name and the total number of branches owned by a bank. Assume that some banks do not have any branches yet. In all such cases the total number of branches must be listed as zero (0).",
+            "chinese": "根据共享Bank schema完成以下操作。SELECT小题可使用任意实现方法。\n\n(1) 对每家Bank输出bank name及Branch总数。没有Branch的Bank也必须输出，数量为0。",
+            "checks": [
+              [
+                "谁必须全部出现？",
+                "For each bank",
+                "每家银行一行",
+                "列银行名和分行数。"
+              ],
+              [
+                "没有分行要列什么？",
+                "listed as zero (0)",
+                "必须列 0",
+                "保留未匹配银行，计数时跳过右侧补出的 NULL。"
+              ]
+            ]
+          }
         },
         {
           "number": "2",
@@ -1834,7 +2284,25 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "This question is related to a sample database created through processing of the common CREATE TABLE statements above.\n\nWrite SELECT statements that implement the following queries. You can use any implementation technique for your SELECT statements.\n\n(2) For all accounts that have no bank transactions in 2021, find the account numbers and balance on each account. List an account number and balance on each account.",
+            "chinese": "根据共享Bank schema完成以下操作。SELECT小题可使用任意实现方法。\n\n(2) 找出2021年没有任何Transaction的Account，输出account number和balance。",
+            "checks": [
+              [
+                "无交易是全时期还是特定年？",
+                "no bank transactions in 2021",
+                "2021 年没有交易",
+                "有其他年份交易也可能入选。"
+              ],
+              [
+                "一行输出什么，如何识别账户？",
+                "account numbers and balance on each account",
+                "账号与余额",
+                "输出两列，按 schema 的银行名及账号共同判断是否存在该账户交易。"
+              ]
+            ]
+          }
         },
         {
           "number": "3",
@@ -1896,7 +2364,25 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "This question is related to a sample database created through processing of the common CREATE TABLE statements above.\n\nWrite SELECT statements that implement the following queries. You can use any implementation technique for your SELECT statements.\n\n(3) Find the names and emails of all banks, that have at least one branch with unknow total number of employees at a branch.",
+            "chinese": "根据共享Bank schema完成以下操作。SELECT小题可使用任意实现方法。\n\n(3) 找出至少有一个Branch的total_emps未知的Bank，输出bank name和email。未知对应NULL。",
+            "checks": [
+              [
+                "未知如何表达？",
+                "unknow total number of employees",
+                "原句指人数未知",
+                "检查 NULL，不等同于零。"
+              ],
+              [
+                "结果粒度是什么？",
+                "at least one branch",
+                "至少有一家分行符合",
+                "每家符合银行输出名和邮箱，避免因多家分行重复。"
+              ]
+            ]
+          }
         },
         {
           "number": "4",
@@ -1962,7 +2448,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "Write SQL statements that implement the following structural modifications of a database and data manipulations on the contents of a database. Note, that implementation of some of the tasks listed below may need more than one SQL statement. You are not allowed to drop and/or suspend any referential integrity constraints in your implementations\n\n(4) We would like to add to a database information about the total number of bank transactions performed on each bank account. Modify the structures of a sample database in the best possible way. Insert appropriate information into the new structures of a sample database.",
+            "chinese": "以下结构修改和数据操作可能需要多条语句，不得删除或停用外键约束。\n\n(4) 在数据库中增加“每个Account已进行的Transaction总数”信息。以合适方式修改结构，并根据现有数据填入正确计数。",
+            "checks": [
+              [
+                "改结构后还要做什么？",
+                "Insert appropriate information into the new structures",
+                "还须填入正确数据",
+                "根据当前交易算每个账户的总数，不能只声明计数字段。"
+              ],
+              [
+                "给谁算？",
+                "on each bank account",
+                "每个银行账户",
+                "复合键要完整，无交易账户总数为零。"
+              ]
+            ]
+          }
         },
         {
           "number": "5",
@@ -2019,7 +2523,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "Write SQL statements that implement the following structural modifications of a database and data manipulations on the contents of a database. Note, that implementation of some of the tasks listed below may need more than one SQL statement. You are not allowed to drop and/or suspend any referential integrity constraints in your implementations\n\n(5) Delete from a database information about all bank transactions submitted in a year 2019. Note, that you are not allowed to drop and/or suspend any referential integrity constraints in your implementation.",
+            "chinese": "以下结构修改和数据操作可能需要多条语句，不得删除或停用外键约束。\n\n(5) 删除2019年提交的所有Transaction。禁止删除或停用referential integrity constraints。",
+            "checks": [
+              [
+                "删什么时段的哪类行？",
+                "all bank transactions submitted in a year 2019",
+                "所有 2019 年提交的交易",
+                "用交易日期定位，保留相邻年份。"
+              ],
+              [
+                "实现有哪些限制？",
+                "not allowed to drop and/or suspend any referential integrity constraints",
+                "不得删除或暂停外键",
+                "查给定引用方向，保持完整性。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [
@@ -2151,7 +2673,25 @@
             "明确审计用户、表和时间范围。",
             "语句被日志记录不等于执行成功或已经提交。",
             "逐条注释说明保存设置、启动日志、筛选报告与恢复设置的作用。"
-          ]
+          ],
+          "reading": {
+            "english": "This question is related to a sample database created through processing of the common CREATE TABLE statements above.\n\nAn objective of this question is to explain how to implement a simple method of auditing the database activities.\n\nAssume, that a database administrator would like to audit the data manipulation statements (INSERT, UPDATE, DELETE) processed by a selected group of users on a selected group of relational tables. Write SQL statements and in the comments provide the comprehensive explanation of a role of SQL statement plays in the implementation of a simple database auditing system.",
+            "chinese": "本题使用共享Bank schema。目标是说明如何实现一种简单的database auditing（数据库活动审计）方法。\n\nDBA希望审计选定一组用户在选定一组表上执行的INSERT、UPDATE、DELETE。编写SQL，并在注释中充分解释每条SQL在这个简单审计系统中的作用。\n\n",
+            "checks": [
+              [
+                "要记录谁在什么对象上的哪些动作？",
+                "a selected group of users on a selected group of relational tables",
+                "指定用户和指定表的交集",
+                "再限 INSERT、UPDATE、DELETE，不能把全部日志直接当报告。"
+              ],
+              [
+                "提交物除 SQL 还有什么？",
+                "in the comments provide the comprehensive explanation",
+                "用注释充分解释",
+                "逐句说明配置、采集、筛选、报告和恢复设置的作用；日志记录收到语句不等于事务提交。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [
@@ -2193,7 +2733,28 @@
         "Primary / candidate / foreign key / 主键、候选键与外键",
         "ORDER BY / 结果排序",
         "CHECK / UNIQUE / NOT NULL / 值限制、唯一与必填"
-      ]
+      ],
+      "readingUnits": {
+        "audit": {
+          "label": "局部带学 · 审计范围",
+          "english": "audit the data manipulation statements (INSERT, UPDATE, DELETE) processed by a selected group of users on a selected group of relational tables",
+          "chinese": "记录指定用户在指定表上执行的三类数据修改语句。",
+          "checks": [
+            [
+              "要同时限定哪些维度？",
+              "a selected group of users",
+              "一组指定用户",
+              "选择用户和表，并筛 DML 动作。"
+            ],
+            [
+              "一条日志能够证明什么？",
+              "statements",
+              "被记录的语句",
+              "区分收到语句、成功执行和已提交；报告中说明口径。"
+            ]
+          ]
+        }
+      }
     },
     {
       "id": "M2-Q5",
@@ -2248,7 +2809,25 @@
             "列出用户、操作、对象范围、能否转授四项。",
             "区分database.*、单张table与指定columns。",
             "只开放汇总／部分行时考虑View；检查已有权限来源是否叠加。"
-          ]
+          ],
+          "reading": {
+            "english": "This question is related to a sample database created through processing of the common CREATE TABLE statements above.\n\nAssume that CREATE TABLE statements listed above are included in SQL script dbcreate.sql. The script is located at a folder $HOME/bank/sql. Write the implementations of the operations listed below as a user root. Assume that a user root has already connected to the database. Assume, that user root has access to SQL script dbcreate.sql. Note, that implementation of some operations may need more than one SQL statement.\n\n(1) A user root with a password '[ROOT_OR_USER_PASSWORD]' would like to create a database called banks and nominate the database as its default database.",
+            "chinese": "假设共享schema中的CREATE TABLE语句保存在dbcreate.sql，脚本位于操作系统用户的$HOME/bank/sql目录。root已连接数据库并能访问脚本。以root身份实现下列操作；部分小题可能需要多条SQL。\n\n(1) root按题面给出的密码创建banks数据库，并把它设为默认数据库。",
+            "checks": [
+              [
+                "root 的连接状态如何？",
+                "root has already connected",
+                "管理员已经连接",
+                "无需把登录命令当建库 SQL。"
+              ],
+              [
+                "新库和当前库都要处理吗？",
+                "nominate the database as its default database",
+                "将新库设为默认",
+                "创建 banks 后选择它。"
+              ]
+            ]
+          }
         },
         {
           "number": "2",
@@ -2286,7 +2865,25 @@
             "列出用户、操作、对象范围、能否转授四项。",
             "区分database.*、单张table与指定columns。",
             "只开放汇总／部分行时考虑View；检查已有权限来源是否叠加。"
-          ]
+          ],
+          "reading": {
+            "english": "This question is related to a sample database created through processing of the common CREATE TABLE statements above.\n\nAssume that CREATE TABLE statements listed above are included in SQL script dbcreate.sql. The script is located at a folder $HOME/bank/sql. Write the implementations of the operations listed below as a user root. Assume that a user root has already connected to the database. Assume, that user root has access to SQL script dbcreate.sql. Note, that implementation of some operations may need more than one SQL statement.\n\n(2) A user root would like to create within a database banks, the relational tables given on page 3 of the examination paper.",
+            "chinese": "假设共享schema中的CREATE TABLE语句保存在dbcreate.sql，脚本位于操作系统用户的$HOME/bank/sql目录。root已连接数据库并能访问脚本。以root身份实现下列操作；部分小题可能需要多条SQL。\n\n(2) 在banks中创建题面给出的表，即处理dbcreate.sql脚本。",
+            "checks": [
+              [
+                "从哪里获得建表定义？",
+                "included in SQL script dbcreate.sql",
+                "定义已在脚本中",
+                "按共同题面的目录定位文件，使用客户端 source。"
+              ],
+              [
+                "目标库是什么？",
+                "within a database banks",
+                "在 banks 内创建",
+                "确认默认库，不另行发明表结构。"
+              ]
+            ]
+          }
         },
         {
           "number": "3",
@@ -2324,7 +2921,25 @@
             "列出用户、操作、对象范围、能否转授四项。",
             "区分database.*、单张table与指定columns。",
             "只开放汇总／部分行时考虑View；检查已有权限来源是否叠加。"
-          ]
+          ],
+          "reading": {
+            "english": "This question is related to a sample database created through processing of the common CREATE TABLE statements above.\n\nAssume that CREATE TABLE statements listed above are included in SQL script dbcreate.sql. The script is located at a folder $HOME/bank/sql. Write the implementations of the operations listed below as a user root. Assume that a user root has already connected to the database. Assume, that user root has access to SQL script dbcreate.sql. Note, that implementation of some operations may need more than one SQL statement.\n\n(3) Then, a user root would like to create a new user account called admin with a password '[ROOT_OR_USER_PASSWORD]'.",
+            "chinese": "假设共享schema中的CREATE TABLE语句保存在dbcreate.sql，脚本位于操作系统用户的$HOME/bank/sql目录。root已连接数据库并能访问脚本。以root身份实现下列操作；部分小题可能需要多条SQL。\n\n(3) 创建名为admin的新用户，密码按英文题面给定。",
+            "checks": [
+              [
+                "账号叫什么？",
+                "new user account called admin",
+                "新用户为 admin",
+                "操作对象是账户。"
+              ],
+              [
+                "密码是自拟的吗？",
+                "with a password",
+                "题面给定密码",
+                "按原题给定值；公开版使用占位符。"
+              ]
+            ]
+          }
         },
         {
           "number": "4",
@@ -2368,7 +2983,25 @@
             "列出用户、操作、对象范围、能否转授四项。",
             "区分database.*、单张table与指定columns。",
             "只开放汇总／部分行时考虑View；检查已有权限来源是否叠加。"
-          ]
+          ],
+          "reading": {
+            "english": "This question is related to a sample database created through processing of the common CREATE TABLE statements above.\n\nAssume that CREATE TABLE statements listed above are included in SQL script dbcreate.sql. The script is located at a folder $HOME/bank/sql. Write the implementations of the operations listed below as a user root. Assume that a user root has already connected to the database. Assume, that user root has access to SQL script dbcreate.sql. Note, that implementation of some operations may need more than one SQL statement.\n\n(4) A user admin must have the rights to execute CREATE TABLE and CREATE VIEW statements with the rights to propagate the privilege to the other users.",
+            "chinese": "假设共享schema中的CREATE TABLE语句保存在dbcreate.sql，脚本位于操作系统用户的$HOME/bank/sql目录。root已连接数据库并能访问脚本。以root身份实现下列操作；部分小题可能需要多条SQL。\n\n(4) admin必须能执行CREATE TABLE和CREATE VIEW，并能把相应权限转授其他用户。",
+            "checks": [
+              [
+                "是哪两种建对象权限？",
+                "CREATE TABLE and CREATE VIEW",
+                "建表和建视图",
+                "在目标库向 admin 授相应权限。"
+              ],
+              [
+                "允许将权限给谁？",
+                "rights to propagate the privilege to the other users",
+                "允许转授给其他用户",
+                "需 WITH GRANT OPTION。"
+              ]
+            ]
+          }
         },
         {
           "number": "5",
@@ -2418,7 +3051,25 @@
             "列出用户、操作、对象范围、能否转授四项。",
             "区分database.*、单张table与指定columns。",
             "只开放汇总／部分行时考虑View；检查已有权限来源是否叠加。"
-          ]
+          ],
+          "reading": {
+            "english": "This question is related to a sample database created through processing of the common CREATE TABLE statements above.\n\nAssume that CREATE TABLE statements listed above are included in SQL script dbcreate.sql. The script is located at a folder $HOME/bank/sql. Write the implementations of the operations listed below as a user root. Assume that a user root has already connected to the database. Assume, that user root has access to SQL script dbcreate.sql. Note, that implementation of some operations may need more than one SQL statement.\n\n(5) A user admin must have the rights to read information about all bank transactions submitted in 2021 with no rights to propagate the privilege to the other users.",
+            "chinese": "假设共享schema中的CREATE TABLE语句保存在dbcreate.sql，脚本位于操作系统用户的$HOME/bank/sql目录。root已连接数据库并能访问脚本。以root身份实现下列操作；部分小题可能需要多条SQL。\n\n(5) admin必须能读取2021年提交的Transaction信息，但不能转授这项读取权限。",
+            "checks": [
+              [
+                "可读哪些交易？",
+                "all bank transactions submitted in 2021",
+                "2021 年提交的所有交易",
+                "用限定年份的视图控制行范围。"
+              ],
+              [
+                "能否向他人开放？",
+                "no rights to propagate",
+                "不能转授",
+                "仅授权读该视图，不能给整表读权。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [
@@ -2526,7 +3177,25 @@
             "先列两个账户的初始值，并标出每条UPDATE属于哪个事务。",
             "标记COMMIT及未提交值，检查是否修改同一行。",
             "区分在原余额上累加与从另一个账户赋值；明确数据库和事务开始假设。"
-          ]
+          ],
+          "reading": {
+            "english": "This question is related to a sample database created through processing of the common CREATE TABLE statements above.\n\n(1) Consider a bank that has a name NAB. Assume, that at the moment, the balance on account number 1 is equal to 100. Assume, that at the moment, the balance on account number 2 is equal to 200.\n\nAssume, that concurrently processed database transactions T1 and T2 interleaved their operations in a way listed below.\n\n```text\nT1                                           T2\nSET TRANSACTION ISOLATION LEVEL SERIALIZABLE;\n                                             SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;\nUPDATE ACCOUNT\nSET balance = balance + 10\nWHERE account_num = 1 AND\n      bank_name = 'NAB';\n                                             UPDATE ACCOUNT\n                                             SET balance = balance + 20\n                                             WHERE account_num = 1 AND\n                                                   bank_name = 'NAB';\n\nUPDATE ACCOUNT\nSET balance = (SELECT balance + 10\n               FROM ACCOUNT\n               WHERE account_num = 1 AND\n                     bank_name = 'NAB')\nWHERE account_num = 1 AND\n      bank_name = 'NAB';\n\nCOMMIT;\n                                             COMMIT;\n```\n\n(1) Explain how the values of an attribute balance in the rows where account_num = 1 and account_num = 2 in NAB bank change after each UPDATE statement.",
+            "chinese": "两组情景均重新从NAB的Account 1余额100、Account 2余额200开始。T1与T2按英文题面给出的交错顺序处理。必须逐条UPDATE说明余额变化。\n\n(1) 两个事务都采用SERIALIZABLE。T1先把Account 1增加10；T2尝试把同一Account 1增加20；随后T1把Account 1读取到的余额再增加10并赋回Account 1；最后按题面顺序COMMIT。需要解释T2在冲突期间是等待、成功还是失败。Account 2没有被更新。",
+            "checks": [
+              [
+                "哪两次写在争同一行？初值来自哪？",
+                "account_num = 1",
+                "两事务先后尝试写 1 号账户",
+                "按题给 NAB 两行初值列事件；区别发出 UPDATE 与实际获得锁。"
+              ],
+              [
+                "何时记录两行？",
+                "after each UPDATE statement",
+                "每条 UPDATE 后",
+                "标出等待、实际执行及两次 COMMIT，说明使用的事务模型，别只写最终余额。"
+              ]
+            ]
+          }
         },
         {
           "number": "2",
@@ -2575,7 +3244,25 @@
             "先列两个账户的初始值，并标出每条UPDATE属于哪个事务。",
             "标记COMMIT及未提交值，检查是否修改同一行。",
             "区分在原余额上累加与从另一个账户赋值；明确数据库和事务开始假设。"
-          ]
+          ],
+          "reading": {
+            "english": "This question is related to a sample database created through processing of the common CREATE TABLE statements above.\n\n(2) Consider a bank that has a name NAB. Assume, that at the moment, the balance on account number 1 is equal to 100. Assume, that at the moment, the balance on account number 2 is equal to 200.\n\nAssume, that concurrently processed database transactions T1 and T2 interleaved their operations in a way listed below.\n\n```text\nT1                                              T2\nSET TRANSACTION ISOLATION LEVEL READ COMMITTED;\n                                                SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;\nUPDATE ACCOUNT\nSET balance = balance + 10\nWHERE account_num = 1 AND\n      bank_name = 'NAB';\n                                                UPDATE ACCOUNT\n                                                SET balance = balance + 20\n                                                WHERE account_num = 2 AND\n                                                      bank_name = 'NAB';\n                                                COMMIT;\nUPDATE ACCOUNT\nSET balance = (SELECT balance + 10\n               FROM ACCOUNT\n               WHERE account_num = 2 AND\n                     bank_name = 'NAB')\nWHERE account_num = 1 AND\n      bank_name = 'NAB';\nCOMMIT;\n```\n\nExplain how the values of an attribute balance in the rows where account_num = 1 and account_num = 2 change after processing of each UPDATE statement.",
+            "chinese": "两组情景均重新从NAB的Account 1余额100、Account 2余额200开始。T1与T2按英文题面给出的交错顺序处理。必须逐条UPDATE说明余额变化。\n\n(2) T1采用READ COMMITTED，T2采用READ UNCOMMITTED。T1先把Account 1增加10。T2把Account 2增加20并COMMIT。T1再读取Account 2的余额，把“该值加10”的结果赋给Account 1，最后COMMIT。\n\n原题要求说明每条UPDATE处理后，这两个Account的balance分别如何变化。",
+            "checks": [
+              [
+                "两事务的隔离级别分别是什么？",
+                "READ UNCOMMITTED",
+                "T2 采用读未提交",
+                "T1 是 READ COMMITTED。看实际提交顺序，不能只凭隔离级别断定发生脏读。"
+              ],
+              [
+                "末条 UPDATE 读哪行、写哪行？",
+                "WHERE account_num = 2",
+                "子查询读 2 号账户",
+                "外层目标为 1 号；逐步列两行余额及 T2 的提交点。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [
@@ -2678,7 +3365,31 @@
             "先找需要单独记录的对象类别，再把属性放回所属类别。",
             "圈出唯一性与局部号码；是否允许新增属性要看原题，不能自行发明标识。",
             "每条关联向两个方向读数量；检查泛化箭头是否指向父类。"
-          ]
+          ],
+          "reading": {
+            "english": "Read and analyse the following specification of a sample database domain.\n\nA University would like to create a database to record information about some of its activities. The university offers a number of degrees to students. A degree is described by a unique name, total number of credit points required to complete a degree, and several requirements that must be satisfied by the future students. The university offers three types of degrees: undergraduate degrees, postgraduate degrees, and graduate certificate. Postgraduate degrees are available only for the students who already got an undergraduate degree. A description of a postgraduate degree includes a list of acceptable undergraduate degrees. A description of a graduate certificate includes a requirement on the total number of years of professional experience.\n\nEach degree consists of a collection of subjects. A description of a subject consists of its unique code, unique title, total number of credits points a subject is worth, and a list of subject learning objectives.\n\nThe university employs academic staff members, tutors and support staff members. A description of a university employee consists of a unique employee number, first name last name and date of birth. First name, last name and date of birth uniquely identified each employee. Additionally, academic staff members and tutors are described by an academic degree achieved. Support staff members are described by a list of qualifications acquired in the past together with a date when each qualification has been acquired.\n\nThe university assigns the academic staff members and tutors to the subjects. A subject has one or two academic members assigned and a number of tutors. An academic staff member and tutor can be assigned to many subjects. Support staff members are assigned to the degrees. Each support staff member is assigned to one degree and a degree has one or more support staff members assigned.\n\nThe university is divided into faculties and faculties are divided into schools. Academic staff members and tutors belong to one school and each school consists of many academic staff members and tutors. The faculties and schools are described by the unique names.\n\nDraw a conceptual schema for the specification of a database domain listed above.",
+            "chinese": "阅读并分析以下数据库领域说明。\n\n一所大学希望建立数据库，记录它的部分活动。大学向学生开设多种Degree（学位课程）。每个Degree有唯一名称、完成该Degree所需的总学分，以及未来学生必须满足的若干入学要求。\n\n大学提供三类Degree：Undergraduate Degree（本科学位）、Postgraduate Degree（研究生学位）和Graduate Certificate（研究生证书）。只有已经取得本科学位的学生，才可以申请Postgraduate Degree。每个Postgraduate Degree的说明中列有可接受的本科学位。Graduate Certificate的说明中列有专业工作经验年数要求。\n\n每个Degree包含一组Subject（科目）。每个Subject有唯一code、唯一title、学分值，以及一组learning objectives（学习目标）。code与title分别唯一。\n\n大学雇用Academic Staff、Tutor和Support Staff。每位Employee记录唯一employee number、first name、last name和date of birth。first name、last name与date of birth的组合也能唯一识别Employee。Academic Staff与Tutor还记录已经取得的academic degree。Support Staff记录过去获得的每项qualification，以及该项qualification的取得日期。\n\n大学把Academic Staff和Tutor分配到Subject。每个Subject分配一至两位Academic Staff，以及若干Tutor。一位Academic Staff或Tutor可分配到多个Subject。Support Staff分配到Degree：每位Support Staff恰好对应一个Degree，每个Degree至少对应一位Support Staff。\n\n大学分为Faculty，Faculty再分为School。每位Academic Staff和Tutor属于一个School；每个School有多位Academic Staff和Tutor。Faculty与School都用各自唯一名称描述。\n\n为上述领域绘制conceptual schema（概念模式）。",
+            "checks": [
+              [
+                "哪些是独立标识，哪些字段要合起来才唯一？",
+                "unique code, unique title",
+                "科目代码、标题各自唯一",
+                "员工姓名与生日的组合另算一个标识，不能把三个字段分别标为唯一。"
+              ],
+              [
+                "一门科目要数哪类人？",
+                "one or two academic members",
+                "一至两名学术人员",
+                "数一门课对应的人，数量标在被数的人员端；反向再读员工可教多少科目。"
+              ],
+              [
+                "哪些事实应随每项资格或子类单独记录？",
+                "together with a date when each qualification has been acquired",
+                "每项资质附取得日期",
+                "资格和日期成对；另外区分不同学位类别的特有要求。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [],
@@ -2780,7 +3491,25 @@
             "先写不依赖其他schema的父关系及其完整标识。",
             "分别处理多对多、多值、qualifier与关联属性；引用复合标识不能漏列。",
             "按题目要求使用superset，最后检查父表先于子表及全部键。"
-          ]
+          ],
+          "reading": {
+            "english": "Consider a conceptual schema given below.\n\n![Original conceptual schema](assets/mock-3-q2.jpg)\n\nYour task is to perform a step of logical database design, i.e. to transform a conceptual schema given above into a collection of relational schemas.\n\nFor each relational schema clearly list the names of attributes, primary key, candidate keys (if any), and foreign keys (if any). Assume, that a superset method must be used to implement a generalization.",
+            "chinese": "根据上面的conceptual schema进行logical database design：把图转换成一组relational schemas（关系模式）。\n\n对每个relational schema，清楚列出attributes、primary key、其他candidate keys（如有）以及foreign keys（如有）。generalization（泛化）必须使用superset method（超集法）实现。",
+            "checks": [
+              [
+                "交图还是一组关系模式？要逐表列什么？",
+                "collection of relational schemas",
+                "一组关系模式",
+                "看给定图，列属性、主键、其他候选键及外键。"
+              ],
+              [
+                "有哪些强制方法？",
+                "superset method must be used",
+                "泛化必须用超集法",
+                "父类和子类字段放进同一关系，检查子类字段的适用条件。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [],
@@ -2883,13 +3612,37 @@
               "text": "WHERE条件包含两个边界；有空结果时先核对约束，不修改题目数值。"
             }
           ],
-          "referenceAnswerEn": "```sql\nSELECT REGNUM\nFROM TRUCK\nWHERE CAPACITY BETWEEN 100 AND 500;\n```",
+          "referenceAnswerEn": "```sql\nSELECT REGNUM\nFROM TRUCK\nWHERE CAPACITY BETWEEN 100 AND 500;\n```\n\nThe predicate includes both endpoints. With the supplied CHECK (CAPACITY > 0 AND CAPACITY < 100) enforced, the table cannot contain either endpoint or any other value in the requested interval. The query therefore returns no rows.",
           "validation": "已在隔离的SQLite内存数据中核对相关查询／数据变化；涉及MySQL方言时有明确适配，不等同MySQL执行验证。",
           "hints": [
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "Write SELECT statements that implement the following queries.\n\n(1) Find the registration numbers of trucks, that have capacity in a range between 100 inclusive and 500 inclusive.",
+            "chinese": "编写SELECT语句完成以下查询。所需CREATE TABLE语句在本题的共享schema中。\n\n(1) 找出capacity在100至500之间、包含两个边界的Truck，输出REGNUM。",
+            "checks": [
+              [
+                "返回哪个字段？一行是什么？",
+                "registration numbers of trucks",
+                "卡车注册号",
+                "从给定 TRUCK 的列中找 REGNUM，一辆符合条件的车一行。"
+              ],
+              [
+                "用哪个量筛选？",
+                "capacity in a range",
+                "以载重筛选",
+                "将条件写在 CAPACITY 上，载重无需出现在输出列。"
+              ],
+              [
+                "100 和 500 各自是否算？",
+                "100 inclusive and 500 inclusive",
+                "上下界都包含",
+                "筛选谓词两个端点都取等号。在写完后对照原表的 CAPACITY 约束，区分条件允许的数值和表中可能出现的行。"
+              ]
+            ]
+          }
         },
         {
           "number": "2",
@@ -2947,7 +3700,25 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "Write SELECT statements that implement the following queries.\n\n(2) Find the first and the last names of all drivers who are on leave.",
+            "chinese": "编写SELECT语句完成以下查询。所需CREATE TABLE语句在本题的共享schema中。\n\n(2) 找出所有状态为ON LEAVE的Driver，输出first name与last name。",
+            "checks": [
+              [
+                "输出谁的哪两项？",
+                "first and the last names of all drivers",
+                "司机的名和姓",
+                "根据员工和司机之间的键取得两列。"
+              ],
+              [
+                "哪些司机符合？",
+                "who are on leave",
+                "正在休假的司机",
+                "从 DRIVER 的状态筛选，按给定枚举值拼写。"
+              ]
+            ]
+          }
         },
         {
           "number": "3",
@@ -2967,7 +3738,7 @@
             "nested",
             "exists"
           ],
-          "taskBrief": "用内层查询的结果筛选外层；采用题目规定的嵌套形式。",
+          "taskBrief": "从车辆中筛出没有对应行程的注册号。题面允许选择合适的查询写法。",
           "input": "共享Transport schema与题面条件",
           "output": "返回从未执行行程的卡车",
           "examTips": [
@@ -3007,7 +3778,25 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "Write SELECT statements that implement the following queries.\n\n(3) Find the registration numbers of all trucks that have not been used for any trips.",
+            "chinese": "编写SELECT语句完成以下查询。所需CREATE TABLE语句在本题的共享schema中。\n\n(3) 找出从未用于任何Trip的Truck，输出REGNUM。",
+            "checks": [
+              [
+                "从什么集合开始找？",
+                "registration numbers of all trucks",
+                "全部卡车的注册号",
+                "候选对象来自车辆表，不能只遍历行程表。"
+              ],
+              [
+                "什么情况才保留？",
+                "not been used for any trips",
+                "从未执行过行程",
+                "检查没有对应行；题面未指定必须用子查询。"
+              ]
+            ]
+          }
         },
         {
           "number": "4",
@@ -3064,7 +3853,25 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "Write SELECT statements that implement the following queries.\n\n(4) Find the registration numbers of all trucks together with total number of trips the trucks have been used for. There is no need to include the truck that have not been used for any trips.",
+            "chinese": "编写SELECT语句完成以下查询。所需CREATE TABLE语句在本题的共享schema中。\n\n(4) 对每辆用于过Trip的Truck，输出REGNUM及Trip总数。无需包含从未用于Trip的Truck。",
+            "checks": [
+              [
+                "一行对应什么？",
+                "together with total number of trips",
+                "每辆车及其行程总数",
+                "按车分组后计数。"
+              ],
+              [
+                "没跑过的车要出现吗？",
+                "no need to include",
+                "无需包括零行程车辆",
+                "只用有行程的车辆即可，与含零计数题区分。"
+              ]
+            ]
+          }
         },
         {
           "number": "5",
@@ -3121,7 +3928,25 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "Write SELECT statements that implement the following queries.\n\n(5) Find the names of all departure cities together with the names of all destination cities.",
+            "chinese": "编写SELECT语句完成以下查询。所需CREATE TABLE语句在本题的共享schema中。\n\n(5) 找出所有departure city的名称，以及所有destination city的名称。",
+            "checks": [
+              [
+                "要从哪些地点列取值？",
+                "all departure cities",
+                "所有出发城市",
+                "另一个地点字段是 destination，二者均须覆盖。"
+              ],
+              [
+                "要一列城市还是两列路线？",
+                "together with the names of all destination cities",
+                "还要求目的地城市",
+                "原句未指明结果形状。可以说明假设后给去重城市列表，或给出发地与目的地配对。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [],
@@ -3245,7 +4070,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "Write SQL statements that implement the following structural modifications of a database and data manipulations on the contents of a database. Note, that implementation of some of the tasks listed below may need more than one SQL statement.\n\n(1) We would like to add to a database information about the skills possessed by each driver. Assume, that a driver has many skills and a skill can be possessed by many drivers. It may happen that some skills are not possessed by any driver. The types of the new columns are up to you.",
+            "chinese": "编写SQL完成下列结构修改和数据操作。部分小题可能需要不止一条SQL语句。使用本题给出的Transport schema。\n\n(1) 增加Driver所拥有的Skill信息。一个Driver拥有多项Skill，一项Skill可由多个Driver拥有。某些Skill也可能尚未由任何Driver拥有。新增列的类型自行选择。",
+            "checks": [
+              [
+                "需要表达哪两个方向？",
+                "a skill can be possessed by many drivers",
+                "技能可属于多个司机",
+                "结合每位司机有多种技能，设计关联表。"
+              ],
+              [
+                "没有司机也能记录技能吗？",
+                "some skills are not possessed by any driver",
+                "有些技能可能无人拥有",
+                "技能本身须能独立存在，不能只存司机和技能的配对。"
+              ]
+            ]
+          }
         },
         {
           "number": "2",
@@ -3302,7 +4145,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "Write SQL statements that implement the following structural modifications of a database and data manipulations on the contents of a database. Note, that implementation of some of the tasks listed below may need more than one SQL statement.\n\n(2) Delete from a database information about the second and third leg of a trip 36.",
+            "chinese": "编写SQL完成下列结构修改和数据操作。部分小题可能需要不止一条SQL语句。使用本题给出的Transport schema。\n\n(2) 删除Trip 36中第2段与第3段的信息。",
+            "checks": [
+              [
+                "是删整个行程吗？",
+                "second and third leg",
+                "只删第 2、3 段",
+                "操作目标为 TRIPLEG 的特定行。"
+              ],
+              [
+                "如何避免影响其他行程同号的段？",
+                "of a trip 36",
+                "限行程 36",
+                "同时约束行程号和段号。"
+              ]
+            ]
+          }
         },
         {
           "number": "3",
@@ -3357,7 +4218,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "Write SQL statements that implement the following structural modifications of a database and data manipulations on the contents of a database. Note, that implementation of some of the tasks listed below may need more than one SQL statement.\n\n(3) Change a date of trip number 26 to the next day after the present date of trip 26.",
+            "chinese": "编写SQL完成下列结构修改和数据操作。部分小题可能需要不止一条SQL语句。使用本题给出的Transport schema。\n\n(3) 把Trip 26的日期改成它当前所存日期的后一天。",
+            "checks": [
+              [
+                "改哪一行？",
+                "trip number 26",
+                "行程 26",
+                "限定该趟行程的日期列。"
+              ],
+              [
+                "次日相对于哪天？",
+                "after the present date of trip 26",
+                "相对当前存储的行程日期",
+                "从该行旧日期加一天。"
+              ]
+            ]
+          }
         },
         {
           "number": "4",
@@ -3410,7 +4289,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "Write SQL statements that implement the following structural modifications of a database and data manipulations on the contents of a database. Note, that implementation of some of the tasks listed below may need more than one SQL statement.\n\n(4) Assume that a trip number 25 has 3 legs. A trip number 25 started in Sydney and it ended in Perth. Add one more leg to a trip 25 such that after update the trip ends in the same city it started from.",
+            "chinese": "编写SQL完成下列结构修改和数据操作。部分小题可能需要不止一条SQL语句。使用本题给出的Transport schema。\n\n(4) 已知Trip 25有3段，从Sydney出发、在Perth结束。再增加一段，使更新后的Trip回到最初出发的城市。",
+            "checks": [
+              [
+                "已有几段，要新增还是覆盖？",
+                "Add one more leg",
+                "新增一段",
+                "原有三段保留，新增下一段。"
+              ],
+              [
+                "新段从哪里到哪里？",
+                "ends in the same city it started from",
+                "让整趟车回到起点",
+                "接续原终点，并返回原出发城市。"
+              ]
+            ]
+          }
         },
         {
           "number": "5",
@@ -3459,13 +4356,31 @@
               "text": "明确区分最低题面要求与额外连续性假设；检查UNIQUE仍满足。"
             }
           ],
-          "referenceAnswerEn": "```sql\nUPDATE TRIPLEG\nSET DESTINATION = 'Perth'\nWHERE TNUM = 20\n  AND LEGNUM = 1;\n\nUPDATE TRIPLEG\nSET DEPARTURE = 'Perth'\nWHERE TNUM = 20\n  AND LEGNUM = 2;\n```",
+          "referenceAnswerEn": "The first UPDATE is explicitly required. Use the second only under the additional assumption that consecutive legs must join at the same city.\n\n```sql\nUPDATE TRIPLEG\nSET DESTINATION = 'Perth'\nWHERE TNUM = 20\n  AND LEGNUM = 1;\n\nUPDATE TRIPLEG\nSET DEPARTURE = 'Perth'\nWHERE TNUM = 20\n  AND LEGNUM = 2;\n```",
           "validation": "已在隔离的SQLite内存数据中核对相关查询／数据变化；涉及MySQL方言时有明确适配，不等同MySQL执行验证。",
           "hints": [
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "Write SQL statements that implement the following structural modifications of a database and data manipulations on the contents of a database. Note, that implementation of some of the tasks listed below may need more than one SQL statement.\n\n(5) Assume that a trip 20 has 2 legs and that a destination of the first leg is Sydney. Update information about a trip 20 such that after update a destination of the first leg is Perth.",
+            "chinese": "编写SQL完成下列结构修改和数据操作。部分小题可能需要不止一条SQL语句。使用本题给出的Transport schema。\n\n(5) 已知Trip 20有2段，第1段目的地为Sydney。更新Trip 20，使第1段目的地变成Perth。",
+            "checks": [
+              [
+                "必须改变哪个目的地？",
+                "destination of the first leg is Perth",
+                "第一段终点改为 Perth",
+                "定位行程 20 的第一段。"
+              ],
+              [
+                "题面给出的第二段是否有额外明示要求？",
+                "a trip 20 has 2 legs",
+                "行程共两段",
+                "若维护相邻段首尾连续，说明假设并相应调整第二段出发地。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [],
@@ -3558,7 +4473,25 @@
             "列出用户、操作、对象范围、能否转授四项。",
             "区分database.*、单张table与指定columns。",
             "只开放汇总／部分行时考虑View；检查已有权限来源是否叠加。"
-          ]
+          ],
+          "reading": {
+            "english": "Assume that a user root with a password '[ROOT_OR_USER_PASSWORD]' created a database called transport and the user executed CREATE TABLE statements given on page 2 of the examination paper to create the relational tables in the database transport.\n\nWrite the implementations of the operations listed below as a user root. Assume that a user root has already connected to the database. Note, that implementation of some operations may need more than one SQL statement.\n\n(1) A user root nominates a database transport as a default database and then the user creates two new users USER_A and USER_B.",
+            "chinese": "root用户已连接数据库，并已在transport数据库建立题面给出的表。root的密码按英文题面给定。以root身份实现以下操作；部分小题可能需要多条SQL。\n\n(1) 把transport设为默认数据库，然后创建英文题面指定的两个用户。",
+            "checks": [
+              [
+                "先选择哪个库？",
+                "as a default database",
+                "设为默认数据库",
+                "以已连接的 root 选择 transport。"
+              ],
+              [
+                "要创建几个账号？",
+                "two new users USER_A and USER_B",
+                "两个指定账号",
+                "保留两账号的身份区别供后续授权。"
+              ]
+            ]
+          }
         },
         {
           "number": "2",
@@ -3598,7 +4531,25 @@
             "列出用户、操作、对象范围、能否转授四项。",
             "区分database.*、单张table与指定columns。",
             "只开放汇总／部分行时考虑View；检查已有权限来源是否叠加。"
-          ]
+          ],
+          "reading": {
+            "english": "Assume that a user root with a password '[ROOT_OR_USER_PASSWORD]' created a database called transport and the user executed CREATE TABLE statements given on page 2 of the examination paper to create the relational tables in the database transport.\n\nWrite the implementations of the operations listed below as a user root. Assume that a user root has already connected to the database. Note, that implementation of some operations may need more than one SQL statement.\n\n(2) A user root grants the read access rights to the relational tables EMPLOYEE and DRIVER to a user USER_A. The read access rights cannot be propagated to other roles or users.",
+            "chinese": "root用户已连接数据库，并已在transport数据库建立题面给出的表。root的密码按英文题面给定。以root身份实现以下操作；部分小题可能需要多条SQL。\n\n(2) 向第一个用户授予EMPLOYEE和DRIVER表的读取权限。这些权限不能再授予其他用户或role。",
+            "checks": [
+              [
+                "谁读哪些表？",
+                "EMPLOYEE and DRIVER",
+                "两张指定表",
+                "向 USER_A 分别授读权。"
+              ],
+              [
+                "能否传播权限？",
+                "cannot be propagated",
+                "不能再授予他人",
+                "不附加转授权。"
+              ]
+            ]
+          }
         },
         {
           "number": "3",
@@ -3640,7 +4591,25 @@
             "列出用户、操作、对象范围、能否转授四项。",
             "区分database.*、单张table与指定columns。",
             "只开放汇总／部分行时考虑View；检查已有权限来源是否叠加。"
-          ]
+          ],
+          "reading": {
+            "english": "Assume that a user root with a password '[ROOT_OR_USER_PASSWORD]' created a database called transport and the user executed CREATE TABLE statements given on page 2 of the examination paper to create the relational tables in the database transport.\n\nWrite the implementations of the operations listed below as a user root. Assume that a user root has already connected to the database. Note, that implementation of some operations may need more than one SQL statement.\n\n(3) A user root grants the rights to insert the rows into a relational tables TRIP and TRIPLEG to a user USER_B. The access rights can be propagated to other roles or users.",
+            "chinese": "root用户已连接数据库，并已在transport数据库建立题面给出的表。root的密码按英文题面给定。以root身份实现以下操作；部分小题可能需要多条SQL。\n\n(3) 向第二个用户授予向TRIP和TRIPLEG插入行的权限，并允许它把这些权限再授予其他用户或role。",
+            "checks": [
+              [
+                "给 USER_B 哪种操作？",
+                "insert the rows",
+                "插入新行",
+                "限定 TRIP 和 TRIPLEG，不能扩大为所有写权。"
+              ],
+              [
+                "能再授权吗？",
+                "can be propagated",
+                "可以转授",
+                "对这两次授权附 WITH GRANT OPTION。"
+              ]
+            ]
+          }
         },
         {
           "number": "4",
@@ -3684,7 +4653,25 @@
             "列出用户、操作、对象范围、能否转授四项。",
             "区分database.*、单张table与指定columns。",
             "只开放汇总／部分行时考虑View；检查已有权限来源是否叠加。"
-          ]
+          ],
+          "reading": {
+            "english": "Assume that a user root with a password '[ROOT_OR_USER_PASSWORD]' created a database called transport and the user executed CREATE TABLE statements given on page 2 of the examination paper to create the relational tables in the database transport.\n\nWrite the implementations of the operations listed below as a user root. Assume that a user root has already connected to the database. Note, that implementation of some operations may need more than one SQL statement.\n\n(4) A user root grants the update privilege on all relational tables in csit115 database to a user USER_A. The privilege cannot be propagated to other roles or users.",
+            "chinese": "root用户已连接数据库，并已在transport数据库建立题面给出的表。root的密码按英文题面给定。以root身份实现以下操作；部分小题可能需要多条SQL。\n\n(4) 向第一个用户授予csit115数据库中所有表的UPDATE权限，不允许转授。",
+            "checks": [
+              [
+                "在哪个库、哪些表？",
+                "all relational tables in csit115 database",
+                "csit115 的全部表",
+                "尽管之前默认 transport，此处要显式写题面库名；库存在是执行前提。"
+              ],
+              [
+                "谁能做什么，能否转授？",
+                "update privilege",
+                "更新权",
+                "给 USER_A，不可转授。"
+              ]
+            ]
+          }
         },
         {
           "number": "5",
@@ -3741,7 +4728,25 @@
             "列出用户、操作、对象范围、能否转授四项。",
             "区分database.*、单张table与指定columns。",
             "只开放汇总／部分行时考虑View；检查已有权限来源是否叠加。"
-          ]
+          ],
+          "reading": {
+            "english": "Assume that a user root with a password '[ROOT_OR_USER_PASSWORD]' created a database called transport and the user executed CREATE TABLE statements given on page 2 of the examination paper to create the relational tables in the database transport.\n\nWrite the implementations of the operations listed below as a user root. Assume that a user root has already connected to the database. Note, that implementation of some operations may need more than one SQL statement.\n\n(5) A user root grants the rights to information about the total number trips performed by each driver to a user USER_B.",
+            "chinese": "root用户已连接数据库，并已在transport数据库建立题面给出的表。root的密码按英文题面给定。以root身份实现以下操作；部分小题可能需要多条SQL。\n\n(5) 向第二个用户开放“每位Driver完成的Trip总数”信息。",
+            "checks": [
+              [
+                "要暴露明细还是统计？",
+                "total number trips performed by each driver",
+                "每位司机的行程总数",
+                "用汇总视图提供该粒度；按 each 保留零行程司机。"
+              ],
+              [
+                "最终权利给谁？",
+                "to a user USER_B",
+                "第二位用户",
+                "授权对象限于所需信息；本小题没有要求再授权。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [],
@@ -3872,7 +4877,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "Assume, that we would like to verify the following logical consistency constraint imposed on the contents of a sample database.\n\n\"A truck cannot be used for more that 100 trips\"\n\nWrite SQL statements that perform the following actions.\n\n(1) First, create a relational table MESSAGE with information about the contents of a sample database that violate the following consistency constraint listed above. A relational table MESSAGE must consist of two columns. The first column contains truck registration numbers and the second column contains the total number of trips for all trucks that have been used for more than 100 trips.",
+            "chinese": "希望检查以下数据库逻辑一致性限制：“一辆Truck不能用于超过100次Trip。”\n\n(1) 首先创建MESSAGE表，保存违反该限制的信息。表必须只有两列：Truck的REGNUM，以及该Truck的Trip总数。只保存Trip总数大于100的Truck。",
+            "checks": [
+              [
+                "MESSAGE 有哪些列？",
+                "must consist of two columns",
+                "必须恰好两列",
+                "车牌和该车的行程总数，每辆违规车一行。"
+              ],
+              [
+                "100 是否违规？",
+                "more than 100 trips",
+                "超过 100 次",
+                "先按车计数，再用分组条件筛违规车。"
+              ]
+            ]
+          }
         },
         {
           "number": "2",
@@ -3927,7 +4950,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "Assume, that we would like to verify the following logical consistency constraint imposed on the contents of a sample database.\n\n\"A truck cannot be used for more that 100 trips\"\n\nWrite SQL statements that perform the following actions.\n\n(2) Next, list the contents of a relational table MESSAGE in the following way.\n\nTruck <insert ruck registration number here> has been used for <insert total number of trips here> trips.\n\nFor example, if a truck with registration number PKR856 has been used 120 times then the following line must be listed.\n\nTruck PKR856 has been used for 120 trips.",
+            "chinese": "希望检查以下数据库逻辑一致性限制：“一辆Truck不能用于超过100次Trip。”\n\n(2) 按指定句式显示MESSAGE内容：Truck后接注册号，再接has been used for、次数及trips.。例如Truck PKR856 has been used for 120 trips.。尖括号中的文字是待填值说明，不是要原样输出的内容。",
+            "checks": [
+              [
+                "从哪里读，输出什么形状？",
+                "list the contents of a relational table MESSAGE",
+                "列出已生成的 MESSAGE",
+                "每条违规记录输出一句话。"
+              ],
+              [
+                "例句中哪些是变量？",
+                "Truck PKR856 has been used for 120 trips.",
+                "车号和次数是示例值",
+                "按下一行给出的输出模板拼接，保留 has been used for、trips 和句点。"
+              ]
+            ]
+          }
         },
         {
           "number": "3",
@@ -3965,7 +5006,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "Assume, that we would like to verify the following logical consistency constraint imposed on the contents of a sample database.\n\n\"A truck cannot be used for more that 100 trips\"\n\nWrite SQL statements that perform the following actions.\n\n(3) Next, make the contents of a relational table MESSAGE permanent.",
+            "chinese": "希望检查以下数据库逻辑一致性限制：“一辆Truck不能用于超过100次Trip。”\n\n(3) 使MESSAGE中的数据成为永久保存的内容，即提交当前事务。",
+            "checks": [
+              [
+                "要使什么持久化？",
+                "contents of a relational table MESSAGE permanent",
+                "让 MESSAGE 的内容持久保存",
+                "对应事务提交操作，表中行应保留。"
+              ],
+              [
+                "与下一步的顺序？",
+                "make the contents of a relational table MESSAGE permanent",
+                "接上一步",
+                "提交在展示后、最后删表前；MySQL DDL 的隐式提交另见解析。"
+              ]
+            ]
+          }
         },
         {
           "number": "4",
@@ -4011,7 +5070,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "Assume, that we would like to verify the following logical consistency constraint imposed on the contents of a sample database.\n\n\"A truck cannot be used for more that 100 trips\"\n\nWrite SQL statements that perform the following actions.\n\n(4) Finally, drop a relational table MESSAGE.",
+            "chinese": "希望检查以下数据库逻辑一致性限制：“一辆Truck不能用于超过100次Trip。”\n\n(4) 最后删除MESSAGE表。",
+            "checks": [
+              [
+                "删除行还是删除表？",
+                "drop a relational table MESSAGE",
+                "移除 MESSAGE 表",
+                "目标是表对象本身。"
+              ],
+              [
+                "何时执行？",
+                "Finally",
+                "最后一步",
+                "在创建、展示、持久化之后。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [],
@@ -4120,7 +5197,31 @@
             "先找需要单独记录的对象类别，再把属性放回所属类别。",
             "圈出唯一性与局部号码；是否允许新增属性要看原题，不能自行发明标识。",
             "每条关联向两个方向读数量；检查泛化箭头是否指向父类。"
-          ]
+          ],
+          "reading": {
+            "english": "Consider a local library that wants to maintain information about its books and authors. The  following business rules apply: \n• Each Book has ISBN, Title, Edition, and Publication Year. ISBN uniquely identifies a  book. \n• Each Author has AuthorID, FirstName, and LastName. AuthorID uniquely identifies an  author. \n• A book is written by one or more authors. \n• An author may write zero or more books. \n• The library may own multiple copies of the same book. \n• Each Copy has CopyID, and Status (e.g., Available or On Loan). CopyID uniquely  identifies a copy.  \n• Each Copy represents exactly one Book. \n• Each Member has MemberID, FirstName, LastName, and Email. MemberID uniquely  identifies a member. \n• A Member may borrow zero or more Copies. A Copy may be borrowed by at most one  Member at a time.  Using the CSIT115 Palette in UMLet, create a conceptual schema that satisfies the requirements  above. Your diagram must include all required entities with their specified attributes and correct  multiplicity (cardinality).  Finally, add one meaningful attribute to one of the classes that is not listed above. The attribute  should be appropriate for the scenario and the custom attribute you create must end with your  Student ID (e.g., `Genre_1234567`).",
+            "chinese": "为本地图书馆设计conceptual schema。以下业务规则均需保留。\n\n每个Book有ISBN、Title、Edition和Publication Year；ISBN唯一识别Book。每个Author有AuthorID、FirstName和LastName；AuthorID唯一识别Author。一本Book由至少一位Author撰写；一位Author可撰写零本或多本Book。\n\n图书馆可持有同一Book的多份Copy。每份Copy有CopyID和Status（例如Available或On Loan）；CopyID唯一识别Copy。每份Copy恰好代表一本Book。\n\n每位Member有MemberID、FirstName、LastName和Email；MemberID唯一识别Member。一位Member可借零份或多份Copy；一份Copy在同一时刻至多由一位Member借阅。\n\n使用UMLet的CSIT115 Palette绘图。图中必须包含全部指定对象、attributes及正确multiplicities。最后给某个类增加一个题面未列出的、有实际意义的attribute；其名称必须以自己的Student ID结尾，例如Genre_1234567。这个自选要求属于原作业，不能漏掉。",
+            "checks": [
+              [
+                "哪些词用来找标识？",
+                "ISBN uniquely identifies",
+                "ISBN 唯一识别一本书",
+                "分别检查 Book、Copy、Author、Member 的题给属性和全局标识。"
+              ],
+              [
+                "同一时刻的限制落在哪一端？",
+                "at most one Member at a time",
+                "同时至多一位会员",
+                "从固定的一份 Copy 数 Member；反向另读会员能借多少份。"
+              ],
+              [
+                "除现有属性外还要交什么？",
+                "must end with your Student ID",
+                "自选属性名以学号结尾",
+                "使用指定 UMLet palette，补一个符合场景的新属性并检查后缀。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [
@@ -4160,7 +5261,91 @@
         "Identifier / 唯一标识",
         "Multiplicity / 关联两端的数量范围",
         "Many-to-many / association attribute / 多对多与关联属性"
-      ]
+      ],
+      "readingUnits": {
+        "copy": {
+          "label": "Copy → Book",
+          "english": "Each Copy represents exactly one Book.",
+          "chinese": "每份副本恰好对应一本书。",
+          "checks": [
+            [
+              "从哪个对象出发？",
+              "Each Copy",
+              "每一份副本",
+              "先固定一份 Copy。"
+            ],
+            [
+              "在数什么对象？",
+              "represents exactly one Book",
+              "它所对应的书",
+              "看 Book 端的数量。"
+            ],
+            [
+              "最少和最多各是多少？",
+              "exactly one",
+              "恰好一个",
+              "少于一或多于一都不符合；在 Book 端标 1。"
+            ]
+          ]
+        },
+        "book": {
+          "label": "Book → Copy",
+          "english": "The library may own multiple copies of the same book.",
+          "chinese": "图书馆可以拥有同一本书的多份副本。",
+          "checks": [
+            [
+              "固定谁，数谁？",
+              "of the same book",
+              "同一本书",
+              "固定 Book，数 Copy，数量标在 Copy 端。"
+            ],
+            [
+              "能否仅凭这句话断定至少一份？",
+              "may own multiple copies",
+              "允许有多份",
+              "说明上限可为多，未明确保证每本至少一份。题库按书目可以先登记的假设取 0..*；若题另规定必须有馆藏，则下限改为 1。"
+            ]
+          ]
+        },
+        "author": {
+          "label": "Book ↔ Author",
+          "english": "A book is written by one or more authors.\n\nAn author may write zero or more books.",
+          "chinese": "一本书由一位或多位作者撰写。一位作者可以写零本或多本书。",
+          "checks": [
+            [
+              "固定一本书，作者最少／最多多少？",
+              "one or more authors",
+              "至少一位作者",
+              "在 Author 端写 1..*。"
+            ],
+            [
+              "反过来，哪些作者也允许登记？",
+              "zero or more books",
+              "书的数量可为零或多本",
+              "Book 端写 0..*，两端下限不同。"
+            ]
+          ]
+        },
+        "member": {
+          "label": "Member ↔ Copy",
+          "english": "A Member may borrow zero or more Copies. A Copy may be borrowed by at most one Member at a time.",
+          "chinese": "一位会员可借零份或多份副本。一份副本在同一时刻至多由一位会员借阅。",
+          "checks": [
+            [
+              "从一名会员出发数什么？",
+              "zero or more Copies",
+              "零份或多份副本",
+              "在 Copy 端标 0..*。"
+            ],
+            [
+              "固定一份副本，哪个词限制上界？是在数历史累计吗？",
+              "at most one Member at a time",
+              "同一时刻最多一位会员",
+              "Member 端标 0..1，表达当前借阅。"
+            ]
+          ]
+        }
+      }
     },
     {
       "id": "A1-T2",
@@ -4225,7 +5410,31 @@
             "先找需要单独记录的对象类别，再把属性放回所属类别。",
             "圈出唯一性与局部号码；是否允许新增属性要看原题，不能自行发明标识。",
             "每条关联向两个方向读数量；检查泛化箭头是否指向父类。"
-          ]
+          ],
+          "reading": {
+            "english": "The university has the following business rules. \n \n1. Each lecturer has a Staff ID, First Name, Last Name and Email.  \n2. Each student has a Student ID, First Name, Last Name and Email and every student is either  an Undergraduate student or a Postgraduate student. An undergraduate student has an  additional attribute GPA and a postgraduate student has an additional attribute Thesis Title. \n3. Each subject has a Code, Title and Credits.  \n4. Each subject is offered by one department with an attribute Name. \n5. Each classroom has a Room Number, Building and Capacity.  \n6. A lecturer may teach up to four subjects in a semester.  \n7. Each subject must be taught by at most two lecturers and is held in one classroom. \n8. A student may enrol in zero or more subjects.  \n9. A classroom may be used for zero or more subjects.    Correct the conceptual schema by fixing all errors in entity representation, inheritance notation,  and multiplicities so that it accurately represents the business rules above.\n\n![Original conceptual schema](assets/assignment-1-task-2.png)",
+            "chinese": "根据以下大学业务规则纠正给定conceptual schema。\n\n1. Lecturer有Staff ID、First Name、Last Name和Email。\n2. Student有Student ID、First Name、Last Name和Email；每位Student属于Undergraduate或Postgraduate。Undergraduate另外有GPA；Postgraduate另外有Thesis Title。\n3. Subject有Code、Title和Credits。\n4. 每个Subject由一个Department开设；Department有Name。\n5. Classroom有Room Number、Building和Capacity。\n6. 每位Lecturer在一个学期最多教4门Subject。\n7. 每个Subject最多由2位Lecturer教授，并在一间Classroom上课。\n8. Student可选修零门或多门Subject。\n9. Classroom可用于零门或多门Subject。\n\n纠正对象表示、generalization记法与multiplicities的全部错误，使图符合这些业务规则。",
+            "checks": [
+              [
+                "哪些学生属性属于子类？",
+                "either an Undergraduate student or a Postgraduate student",
+                "每位学生属于两类之一",
+                "共享身份在 Student，分别检查 GPA 和 Thesis Title 的归属。"
+              ],
+              [
+                "一学期教课上限数谁？另一方向怎么查？",
+                "up to four subjects in a semester",
+                "每位讲师每学期至多教四门",
+                "数 Subject，标在 Subject 端；再按每门课有多少讲师核 Lecturer 端。"
+              ],
+              [
+                "题目要新画还是纠错？",
+                "fixing all errors",
+                "找全并修正给定图的错误",
+                "逐项比对类、继承及两端数量，不能只修一条线。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [
@@ -4269,7 +5478,28 @@
         "Multiplicity / 关联两端的数量范围",
         "Many-to-many / association attribute / 多对多与关联属性",
         "Generalization / inheritance / 泛化与继承"
-      ]
+      ],
+      "readingUnits": {
+        "lecturer": {
+          "label": "局部自测 · Lecturer 与 Subject",
+          "english": "A lecturer may teach up to four subjects in a semester.",
+          "chinese": "一名讲师每学期可以教授至多四门课。",
+          "checks": [
+            [
+              "固定谁，数谁？",
+              "A lecturer may teach",
+              "一名讲师可以教授",
+              "固定 Lecturer，数 Subject。"
+            ],
+            [
+              "下限和上限怎样读？标在哪一端？",
+              "up to four subjects in a semester",
+              "每学期至多四门",
+              "原句允许不教，Subject 端为 0..4；反向数量需读下一条规则。"
+            ]
+          ]
+        }
+      }
     },
     {
       "id": "A2-T1",
@@ -4332,7 +5562,25 @@
             "先写不依赖其他schema的父关系及其完整标识。",
             "分别处理多对多、多值、qualifier与关联属性；引用复合标识不能漏列。",
             "按题目要求使用superset，最后检查父表先于子表及全部键。"
-          ]
+          ],
+          "reading": {
+            "english": "Given the conceptual schema below, perform logical database design by transforming it  into a collection of relational schemas.\n\n(1) Identify each feature of the conceptual schema that requires a transformation and state  the transformation applied to that feature.\n\n![Original conceptual schema](assets/assignment-2-task-1.png)",
+            "chinese": "把给定酒店conceptual schema转换成一组relational schemas。\n\n(1) 识别每一种需要转换的特征，逐项说明采用了哪一种转换。",
+            "checks": [
+              [
+                "本小题针对特征还是最终表？",
+                "Identify each feature",
+                "识别每个要转换的特征",
+                "逐项从给定酒店图找泛化、限定关联、多值与关系属性。"
+              ],
+              [
+                "除了点出特征还交什么？",
+                "state the transformation applied",
+                "说明所用转换",
+                "每项写出怎样落实到关系、外键或其他约束。"
+              ]
+            ]
+          }
         },
         {
           "number": "2",
@@ -4379,7 +5627,25 @@
             "先写不依赖其他schema的父关系及其完整标识。",
             "分别处理多对多、多值、qualifier与关联属性；引用复合标识不能漏列。",
             "按题目要求使用superset，最后检查父表先于子表及全部键。"
-          ]
+          ],
+          "reading": {
+            "english": "Given the conceptual schema below, perform logical database design by transforming it  into a collection of relational schemas.\n\n(2) For each relational schema created , clearly list the names of attributes, primary keys ,  candidate keys (if any), and foreign keys (if any). Assume that the superset  method must be used to implement a generalization (if any). A way how a conceptual  schema can be transformed into a collection of relational schemas is explained in a  presentation 06 Logical Design.      The relational schemas must be listed in a format presented in slides 42 and 43 in  presentation 06 Logical Design. Listing of the relational schemas in the other format scores  no marks.   \n\nNote that the order of the definitions on the relation schemas is important. You must  define a parent relation schema (referenced) before its  child relational schema  (references to the parent relational schema).\n\n![Original conceptual schema](assets/assignment-2-task-1.png)",
+            "chinese": "把给定酒店conceptual schema转换成一组relational schemas。\n\n(2) 每个schema清楚列出attributes、primary key、其他candidate keys及foreign keys。generalization必须使用superset method。必须使用Logical Design课件第42–43页规定的格式；使用其他格式不计分。\n\nschema定义顺序也有要求：先定义被引用的parent schema，再定义引用它的child schema。",
+            "checks": [
+              [
+                "哪些键必须逐表交代？",
+                "candidate keys (if any), and foreign keys (if any)",
+                "列候选键与外键（如有）",
+                "同时列属性和主键，按课件 42–43 页的格式。"
+              ],
+              [
+                "定义次序和泛化方法可任选吗？",
+                "parent relation schema (referenced) before its child",
+                "被引用的父关系先写",
+                "先父后子；图中泛化指定用 superset。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [
@@ -4507,7 +5773,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "This question builds upon the relational schemas you designed in Task 1.  Write SQL  statements to answer the following queries. Since the parts  are interconnected, you must  complete them in sequential order from (1) to (5).\n\n(1) Create empty relational tables to implement the relational schemas you designed in  Task 1 for the hotel reservation database. The names of the relational tables and  columns must be consistent with your logical design. Use reasonable column types  and sizes (lengths). Enforce all appropriate primary key and referential integrity  constraints.  Note that the order of CREATE TABLE statements is important. Create the  parent table (referenced) before its child table (references to the parent table).\n\n![Task 1 conceptual schema](assets/assignment-2-task-1.png)",
+            "chinese": "在Task 1设计的酒店relational schemas基础上编写SQL。(1)至(5)互相关联，必须顺序完成。\n\n(1) 建立空表实现Task 1的设计。表名与列名必须一致。选择合理类型和长度，设置所有适当的primary keys及referential integrity constraints。先建parent tables，再建child tables。",
+            "checks": [
+              [
+                "用哪份设计？",
+                "consistent with your logical design",
+                "名字要与 Task 1 一致",
+                "建立空表，选合理类型并落实主键和引用约束。"
+              ],
+              [
+                "哪个表先建？",
+                "parent table (referenced) before its child table",
+                "先被引用的父表",
+                "被引用键须先存在；本任务五步连续执行。"
+              ]
+            ]
+          }
         },
         {
           "number": "2",
@@ -4564,7 +5848,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "This question builds upon the relational schemas you designed in Task 1.  Write SQL  statements to answer the following queries. Since the parts  are interconnected, you must  complete them in sequential order from (1) to (5).\n\n(2) Next, assume that a new business rule is introduced requiring that no two guests  have the same email address. Add an appropriate constraint after the table has  already been created.",
+            "chinese": "在Task 1设计的酒店relational schemas基础上编写SQL。(1)至(5)互相关联，必须顺序完成。\n\n(2) 表创建完成后，新增业务规则：两个Guest不能有相同email。用适当constraint实现。",
+            "checks": [
+              [
+                "何时增加业务规则？",
+                "after the table has already been created",
+                "在表已建好之后",
+                "修改既有 Guest 表。"
+              ],
+              [
+                "哪种重复被禁止？",
+                "no two guests have the same email address",
+                "不同住客不可共用邮箱",
+                "为 email 加唯一性约束，不能只检查现有数据。"
+              ]
+            ]
+          }
         },
         {
           "number": "3",
@@ -4623,7 +5925,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "This question builds upon the relational schemas you designed in Task 1.  Write SQL  statements to answer the following queries. Since the parts  are interconnected, you must  complete them in sequential order from (1) to (5).\n\n(3) Next, insert sufficient sample data into the tables to represent at least two hotels,  two rooms for each hotel, two guests, and two reservations. Insert appropriate data  into the other tables resulting from your logical design where required.  The data values are up to you, but they must satisfy all primary key and referential  integrity constraints defined in part (1) and (2).    Note that the order of INSERT statements is important. Insert data into the  parent table (referenced) before inserting data into its child table (references to  the parent table).",
+            "chinese": "在Task 1设计的酒店relational schemas基础上编写SQL。(1)至(5)互相关联，必须顺序完成。\n\n(3) 插入足够数据：至少2家Hotel、每家至少2间Room、2位Guest和2个Reservation。其他关系表也要在需要时插入合适记录。数据值自行选择，但必须满足(1)(2)的keys及foreign keys。先插parent rows，再插child rows。",
+            "checks": [
+              [
+                "数量要求按总数还是按酒店？",
+                "two rooms for each hotel",
+                "每家酒店各两间",
+                "至少两家酒店、每家两间房，并有两位住客和两项预订。"
+              ],
+              [
+                "有外键时先插谁？",
+                "before inserting data into its child table",
+                "先父后子",
+                "其余关联表按需填入；子行必须引用已经存在的键。"
+              ]
+            ]
+          }
         },
         {
           "number": "4",
@@ -4678,7 +5998,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "This question builds upon the relational schemas you designed in Task 1.  Write SQL  statements to answer the following queries. Since the parts  are interconnected, you must  complete them in sequential order from (1) to (5).\n\n(4) Increase the pricePerNight of all rooms belonging to one of the hotels inserted  in part (3) by 10%. The choice of hotel is up to you.",
+            "chinese": "在Task 1设计的酒店relational schemas基础上编写SQL。(1)至(5)互相关联，必须顺序完成。\n\n(4) 任选(3)中的一家Hotel，把它全部Room的pricePerNight增加10%。",
+            "checks": [
+              [
+                "哪些房间要涨价？",
+                "all rooms belonging to one of the hotels",
+                "所选一家酒店的全部房间",
+                "用酒店键限制行，另一家保留原价。"
+              ],
+              [
+                "涨幅是固定数还是比例？",
+                "by 10%",
+                "在现价基础上涨一成",
+                "每间房用自身原价计算。"
+              ]
+            ]
+          }
         },
         {
           "number": "5",
@@ -4741,7 +6079,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "This question builds upon the relational schemas you designed in Task 1.  Write SQL  statements to answer the following queries. Since the parts  are interconnected, you must  complete them in sequential order from (1) to (5).\n\n(5) Finally, delete one of the hotels inserted in part ( 3) and all records that must be  removed beforehand to satisfy the referential integrity constraints. Do not delete the  other hotel or its related information, and do not drop any table.    Note that the order of delete statements is important. Delete data from the child table  (references to the parent table) before deleting data from its parent table (referenced).",
+            "chinese": "在Task 1设计的酒店relational schemas基础上编写SQL。(1)至(5)互相关联，必须顺序完成。\n\n(5) 删除(3)中的一家Hotel，以及为满足foreign keys必须事先删除的依赖记录。保留另一家Hotel及其相关信息；不得DROP任何表。先删child rows，再删parent rows。",
+            "checks": [
+              [
+                "能删几家？允许删表吗？",
+                "Do not delete the other hotel",
+                "保留另一家",
+                "只删除目标酒店相关记录，原文同时禁止 DROP TABLE。"
+              ],
+              [
+                "依赖数据按什么顺序处理？",
+                "before deleting data from its parent table",
+                "先处理子记录",
+                "从引用预订、房间等记录的子表着手，最后删目标酒店。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [
@@ -4857,7 +6213,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "Note that you may need more than one SQL statement to implement a single subtask  listed below.    Your implementation must directly follow a comment with the specifications of a  subtask.  Implement SQL DDL (Data Definition Language) statements for questions (1) and (2)  below.\n\n(1)  Modify the structure and consistency constraint of the sample database such that the  fee of each workshop must be a positive value not larger than 9999.99.",
+            "chinese": "部分小题可能需要多条SQL。每项实现应紧接相应题目注释。(1)(2)使用DDL。\n\n(1) 修改结构和一致性约束，使Workshop.fee大于0且不超过9999.99。",
+            "checks": [
+              [
+                "这是改表还是改现有数据？",
+                "Modify the structure and consistency constraint",
+                "改变结构与一致性约束",
+                "以后插入或更新的 fee 也必须受限，选 DDL。"
+              ],
+              [
+                "哪些边界有效？",
+                "positive value not larger than 9999.99",
+                "大于零且不超过 9999.99",
+                "类型须容得下上界，约束排除零并允许上界。"
+              ]
+            ]
+          }
         },
         {
           "number": "2",
@@ -4915,7 +6289,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "Note that you may need more than one SQL statement to implement a single subtask  listed below.    Your implementation must directly follow a comment with the specifications of a  subtask.  Implement SQL DDL (Data Definition Language) statements for questions (1) and (2)  below.\n\n(2)  Modify the structure and consistency constraints of the sample database such that a  qualification level possessed by a participant and a qualification level required by a  workshop must be positive values no more than 10.",
+            "chinese": "部分小题可能需要多条SQL。每项实现应紧接相应题目注释。(1)(2)使用DDL。\n\n(2) 修改结构和约束，使Participant拥有的Qualification.qlevel以及Workshop要求的Requirement.requiredLevel都大于0且不超过10。",
+            "checks": [
+              [
+                "哪两个角色的等级受限？",
+                "possessed by a participant and a qualification level required by a workshop",
+                "已有资格和报名要求的等级",
+                "查 Qualification、Requirement 两张表，分别改相应列。"
+              ],
+              [
+                "0、10 哪些合法？",
+                "positive values no more than 10",
+                "正数且至多 10",
+                "先保证列能表示 10，再加范围约束。"
+              ]
+            ]
+          }
         },
         {
           "number": "3",
@@ -4969,7 +6361,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "Note that you may need more than one SQL statement to implement a single subtask  listed below.    Your implementation must directly follow a comment with the specifications of a  subtask.  Implement SQL DML (Data Manipulation Language) statements for questions (3), (4)  and (5) below.  Note that you are not allowed to modify and/or drop any consistency constraints. We  assume that safe update has been disabled so that SQL can execute DML statements  anywhere. \n\n(3)  Add a new workshop (workshopNo=9) to the sample database. The values of the  new Workshop columns are up to you. Add two qualification requirements for the new  workshop. The qualification names, required levels and mandatory values are up to you.",
+            "chinese": "各项实现紧接题目注释。(3)(4)(5)使用DML，禁止为完成这些数据操作而修改或删除约束。题目假设safe update已经停用。\n\n(3)(4)(5)使用DML，禁止为完成这些数据操作而修改或删除约束。题目假设safe update已经停用。\n\n(3) 增加workshopNo=9的Workshop，其他属性自行选择。再给它增加2项qualification requirements；名称、等级及mandatory值自行选择。",
+            "checks": [
+              [
+                "新增哪个实体？",
+                "workshopNo=9",
+                "指定工作坊编号为 9",
+                "先插入父行，其他值仍须合法。"
+              ],
+              [
+                "还须添加多少条子记录？",
+                "two qualification requirements",
+                "两项资格要求",
+                "两条均引用新 workshop，保持复合键唯一。"
+              ]
+            ]
+          }
         },
         {
           "number": "4",
@@ -5024,7 +6434,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "Note that you may need more than one SQL statement to implement a single subtask  listed below.    Your implementation must directly follow a comment with the specifications of a  subtask.  Implement SQL DML (Data Manipulation Language) statements for questions (3), (4)  and (5) below.  Note that you are not allowed to modify and/or drop any consistency constraints. We  assume that safe update has been disabled so that SQL can execute DML statements  anywhere. \n\n(4)  Modify the qualification levels possessed by participant (participantNo=3) such  that all qualification levels possessed by the participant increase by 1.",
+            "chinese": "各项实现紧接题目注释。(3)(4)(5)使用DML，禁止为完成这些数据操作而修改或删除约束。题目假设safe update已经停用。\n\n(4) 把participantNo=3拥有的每一项Qualification.qlevel都增加1。",
+            "checks": [
+              [
+                "谁的哪些记录要改？",
+                "participantNo=3",
+                "编号为 3 的参与者",
+                "定位该人的资格记录，其他人的数据保留。"
+              ],
+              [
+                "新等级来自哪里？",
+                "all qualification levels possessed by the participant increase by 1",
+                "每项现有等级加一",
+                "基于各行旧值计算，遵守已有约束。"
+              ]
+            ]
+          }
         },
         {
           "number": "5",
@@ -5083,7 +6511,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "Note that you may need more than one SQL statement to implement a single subtask  listed below.    Your implementation must directly follow a comment with the specifications of a  subtask.  Implement SQL DML (Data Manipulation Language) statements for questions (3), (4)  and (5) below.  Note that you are not allowed to modify and/or drop any consistency constraints. We  assume that safe update has been disabled so that SQL can execute DML statements  anywhere. \n\n(5)  Remove participant (participantNo=10) and all information related to this  participant from the sample database.",
+            "chinese": "各项实现紧接题目注释。(3)(4)(5)使用DML，禁止为完成这些数据操作而修改或删除约束。题目假设safe update已经停用。\n\n(5) 删除participantNo=10的Participant及与此人有关的全部信息。",
+            "checks": [
+              [
+                "删除谁？",
+                "participantNo=10",
+                "指定编号的参与者",
+                "保留其他参与者。"
+              ],
+              [
+                "只删本人够吗？",
+                "all information related to this participant",
+                "还包括相关信息",
+                "查外键，先删依赖行再删父行；不移除约束。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [
@@ -5147,9 +6593,9 @@
           "number": "1",
           "goal": "筛选150到220费用并取四列",
           "steps": [
-            "四列来自Workshop，无需JOIN。",
-            "WHERE fee BETWEEN 150.00 AND 220.00包含两端。",
-            "SELECT按题目列workshopNo,title,category,fee。"
+            "在 Workshop 的建表语句里把 workshop number 对上 workshopNo，再找到 title、category、fee。把四个列名按原题顺序写进 SELECT。",
+            "这些信息都在同一张表，FROM 后填 Workshop。一行代表一场符合条件的工作坊。",
+            "WHERE 后检查 fee 的上下限。本题采用 BETWEEN 的包含端点解释；也可以分别写两个包含等号的比较。"
           ],
           "check": "原数据编号1、2、3、5符合。",
           "pitfall": "筛选费用不要用capacity，且不要把220排除。",
@@ -5198,7 +6644,31 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "(1)  Find the workshop number, title, category and fee of all workshops whose fees are  between 150.00 and 220.00.",
+            "chinese": "在原始Workshop样例数据上编写SELECT。\n\n(1) 找出fee在150.00与220.00之间的Workshop，输出workshopNo、title、category和fee。",
+            "checks": [
+              [
+                "要返回什么？到 schema 中找实际列名。",
+                "workshop number, title, category and fee",
+                "编号、标题、类别、费用",
+                "SELECT 对应 workshopNo、title、category、fee，结果一行是一场 workshop。"
+              ],
+              [
+                "数据从哪里查？",
+                "of all workshops",
+                "查所有符合条件的工作坊",
+                "在给定结构中找到 Workshop，FROM 指向它。"
+              ],
+              [
+                "按哪一列筛选？两端怎样处理？",
+                "between 150.00 and 220.00",
+                "费用在两个数之间",
+                "WHERE 限制 fee。本题按 SQL BETWEEN 的包含端点解释，原句没有另写 inclusive。"
+              ]
+            ]
+          }
         },
         {
           "number": "2",
@@ -5255,7 +6725,25 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "(2)  Find the participant number and full name of all participants who live in Sydney.",
+            "chinese": "在原始Workshop样例数据上编写SELECT。\n\n(2) 找出住在Sydney的Participant，输出participantNo和full name。",
+            "checks": [
+              [
+                "输出编号和哪种姓名？",
+                "participant number and full name",
+                "参与者编号和全名",
+                "一人一行，查 schema 中的 fname 和 lname。"
+              ],
+              [
+                "哪个词说明筛选的是居住地？",
+                "who live in Sydney",
+                "住在悉尼",
+                "比较 city，而非州或 workshop 地点。"
+              ]
+            ]
+          }
         },
         {
           "number": "3",
@@ -5314,7 +6802,25 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "(3)  Find the participant number for all participants who possess more than 3  qualifications.",
+            "chinese": "在原始Workshop样例数据上编写SELECT。\n\n(3) 找出拥有超过3项Qualification的Participant，输出participantNo。",
+            "checks": [
+              [
+                "结果是一人一行还是一项资格一行？",
+                "participant number for all participants",
+                "列出符合条件者的编号",
+                "先按人归组，输出编号。"
+              ],
+              [
+                "恰有三项算吗？",
+                "more than 3",
+                "严格超过三项",
+                "对每组的数量使用 HAVING；WHERE 筛选的是计数之前的行。"
+              ]
+            ]
+          }
         },
         {
           "number": "4",
@@ -5369,7 +6875,25 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "(4)  Display the workshop number, title, fee and category of all workshops in ascending  order of category, then in descending order of fee.",
+            "chinese": "在原始Workshop样例数据上编写SELECT。\n\n(4) 输出Workshop的workshopNo、title、fee和category；先按category升序，再按fee降序排列。",
+            "checks": [
+              [
+                "四列按什么顺序输出？",
+                "workshop number, title, fee and category",
+                "编号、标题、费用、类别",
+                "fee 在 category 之前，输出次序和排序次序分开写。"
+              ],
+              [
+                "先比较什么？相同时怎么排？",
+                "ascending order of category, then in descending order of fee",
+                "类别升序，再按费用降序",
+                "两个排序键的方向不同。"
+              ]
+            ]
+          }
         },
         {
           "number": "5",
@@ -5426,7 +6950,25 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "(5)  Find the average fee of workshops in the TECHNOLOGY category.",
+            "chinese": "在原始Workshop样例数据上编写SELECT。\n\n(5) 求category为TECHNOLOGY的Workshop的平均fee。",
+            "checks": [
+              [
+                "最后应有几种统计值？",
+                "the average fee",
+                "一个平均费用",
+                "对符合条件的一组行求 AVG。"
+              ],
+              [
+                "哪些行进入计算？",
+                "in the TECHNOLOGY category",
+                "限科技类别",
+                "在计算平均值前按 category 筛选。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [
@@ -5556,7 +7098,25 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "You must implement SQL statements for the questions below by using JOIN / OUTER  JOIN.    Your implementation must directly follow a comment with a specification of a subtask.\n\n(1)  Find the full name and phone number of all participants who possess more than 2  qualifications and display the results in ascending order of last name and first name.",
+            "chinese": "以下查询必须使用JOIN／OUTER JOIN。每项实现紧接相应题目注释。\n\n(1) 找出拥有超过2项Qualification的Participant，输出full name和phone；先按last name升序，再按first name升序。",
+            "checks": [
+              [
+                "一行代表谁？数量门槛是什么？",
+                "more than 2 qualifications",
+                "拥有超过两项资格的人",
+                "按人计数，恰好两项不入选；输出全名、电话。"
+              ],
+              [
+                "先后按哪些列排？指定方法是什么？",
+                "ascending order of last name and first name",
+                "姓升序，再名升序",
+                "原任务指定 JOIN / OUTER JOIN；按姓、名字段排序，不按拼好的姓名排。"
+              ]
+            ]
+          }
         },
         {
           "number": "2",
@@ -5620,7 +7180,25 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "You must implement SQL statements for the questions below by using JOIN / OUTER  JOIN.    Your implementation must directly follow a comment with a specification of a subtask.\n\n(2)  Find the workshop number, title and category of all workshops that have no  qualification requirements.",
+            "chinese": "以下查询必须使用JOIN／OUTER JOIN。每项实现紧接相应题目注释。\n\n(2) 找出没有任何qualification requirement的Workshop，输出workshopNo、title和category。",
+            "checks": [
+              [
+                "要输出哪类 workshop 的哪些信息？",
+                "workshop number, title and category",
+                "工作坊编号、标题、类别",
+                "一场工作坊一行。"
+              ],
+              [
+                "如何识别缺少匹配？",
+                "no qualification requirements",
+                "没有任何资格要求",
+                "按题目指定的连接法保留未匹配行，检查右侧非空键是否为 NULL。"
+              ]
+            ]
+          }
         },
         {
           "number": "3",
@@ -5686,7 +7264,25 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "You must implement SQL statements for the questions below by using JOIN / OUTER  JOIN.    Your implementation must directly follow a comment with a specification of a subtask.\n\n(3)  Find the participant number, full name and total number of workshop enrolments for  each participant and display the results in ascending order of the total number of  enrolments. Participants who have not enrolled in a workshop must also be included.",
+            "chinese": "以下查询必须使用JOIN／OUTER JOIN。每项实现紧接相应题目注释。\n\n(3) 每位Participant输出participantNo、full name及Workshop enrolment总数，按报名总数升序。没有报名的Participant也必须包含。",
+            "checks": [
+              [
+                "谁即使没有记录也要保留？",
+                "Participants who have not enrolled in a workshop must also be included",
+                "未报名的人也要列出",
+                "以所有参与者为基准，零匹配时计数应为 0。"
+              ],
+              [
+                "每行输出什么，按什么排序？",
+                "ascending order of the total number of enrolments",
+                "按报名总数升序",
+                "每人输出编号、全名和总数。COUNT(右表非空键)跳过补出的 NULL；COUNT(*) 会数入占位行。"
+              ]
+            ]
+          }
         },
         {
           "number": "4",
@@ -5750,7 +7346,25 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "You must implement SQL statements for the questions below by using JOIN / OUTER  JOIN.    Your implementation must directly follow a comment with a specification of a subtask.\n\n(4)  Find the workshop number, title and total number of trainers assigned to each  workshop and display the results in ascending order of the total number of trainers.  Workshops that have no trainer assigned must also be included.",
+            "chinese": "以下查询必须使用JOIN／OUTER JOIN。每项实现紧接相应题目注释。\n\n(4) 每个Workshop输出workshopNo、title及已分配Trainer总数，按Trainer总数升序。没有Trainer的Workshop也必须包含。",
+            "checks": [
+              [
+                "这次数的是谁与谁的分配？",
+                "total number of trainers assigned to each workshop",
+                "每个工作坊的 trainer 数",
+                "按 workshop 分组，输出编号、标题及数量，数量升序。"
+              ],
+              [
+                "没有 trainer 的要如何显示？",
+                "no trainer assigned must also be included",
+                "也要包括尚无培训师的工作坊",
+                "保留 workshop，计右侧实际匹配键，不能让 WHERE 排除未匹配行。"
+              ]
+            ]
+          }
         },
         {
           "number": "5",
@@ -5816,7 +7430,25 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "You must implement SQL statements for the questions below by using JOIN / OUTER  JOIN.    Your implementation must directly follow a comment with a specification of a subtask.\n\n(5)  Find the trainer number and full name of all trainers who have not been assigned to  any workshop.",
+            "chinese": "以下查询必须使用JOIN／OUTER JOIN。每项实现紧接相应题目注释。\n\n(5) 找出没有分配到任何Workshop的Trainer，输出trainerNo和full name。",
+            "checks": [
+              [
+                "要返回哪两项？",
+                "trainer number and full name",
+                "培训师编号和全名",
+                "以培训师为结果对象。"
+              ],
+              [
+                "保留哪种关联情况？",
+                "not been assigned to any workshop",
+                "没有任何 workshop 分配",
+                "用指定 OUTER JOIN 寻找无匹配记录的培训师。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [
@@ -5942,7 +7574,25 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "Implement SQL nested query statements for questions (1), (2) and (3).\n\n(1) Find the workshop number, title and fee of every workshop whose fee is higher than  the average fee of all workshops.",
+            "chinese": "(1)(2)(3)必须用nested queries（嵌套查询）；(4)(5)必须用correlated nested queries（相关子查询）。\n\n(1) 找出fee高于所有Workshop平均fee的Workshop，输出workshopNo、title和fee。",
+            "checks": [
+              [
+                "返回谁的哪几项？",
+                "workshop number, title and fee",
+                "工作坊编号、标题、费用",
+                "每个符合条件的 workshop 一行。"
+              ],
+              [
+                "比较基准来自哪些行？",
+                "higher than the average fee of all workshops",
+                "严格高于全体平均费用",
+                "用指定嵌套查询算全体平均，相等者排除。"
+              ]
+            ]
+          }
         },
         {
           "number": "2",
@@ -6003,7 +7653,25 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "Implement SQL nested query statements for questions (1), (2) and (3).\n\n(2) Find the participant number and full name of participants who have completed at least  one TECHNOLOGY workshop and at least one BUSINESS workshop. Cancelled  enrolments must not contribute to either condition.",
+            "chinese": "(1)(2)(3)必须用nested queries（嵌套查询）；(4)(5)必须用correlated nested queries（相关子查询）。\n\n(2) 找出至少完成过一门TECHNOLOGY Workshop、并且至少完成过一门BUSINESS Workshop的Participant，输出participantNo和full name。Cancelled报名不能计入任一条件。",
+            "checks": [
+              [
+                "两个类别是任选一个吗？",
+                "and at least one BUSINESS workshop",
+                "还需至少一门商务课",
+                "同一参与者分别满足两种类别，各至少一门。"
+              ],
+              [
+                "哪种记录不能证明完成？",
+                "Cancelled enrolments must not contribute to either condition",
+                "取消记录不能计入任何一侧",
+                "两项嵌套条件均采用完成状态。"
+              ]
+            ]
+          }
         },
         {
           "number": "3",
@@ -6069,7 +7737,25 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "Implement SQL nested query statements for questions (1), (2) and (3).\n\n(3) Find the trainer number and full name of trainers assigned to at least two workshops.  Count workshop assignments, not enrolments.",
+            "chinese": "(1)(2)(3)必须用nested queries（嵌套查询）；(4)(5)必须用correlated nested queries（相关子查询）。\n\n(3) 找出分配到至少2个Workshop的Trainer，输出trainerNo和full name。数的是Workshop assignments，不是Participant报名记录。",
+            "checks": [
+              [
+                "数工作分配还是报名？",
+                "Count workshop assignments, not enrolments",
+                "统计工作坊分配",
+                "按培训师的工作分配计数。"
+              ],
+              [
+                "门槛和交付物是什么？",
+                "assigned to at least two workshops",
+                "分配到至少两场",
+                "恰好两场也保留，用嵌套查询输出培训师编号与全名。"
+              ]
+            ]
+          }
         },
         {
           "number": "4",
@@ -6138,7 +7824,25 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "Implement SQL correlated nested query statements for questions (4) and (5).\n\n(4) Find the participant number, full name, qualification name and qualification level of  participants whose level is the highest recorded for that qualification name. Order by  qualification name, then participant number.",
+            "chinese": "(1)(2)(3)必须用nested queries（嵌套查询）；(4)(5)必须用correlated nested queries（相关子查询）。\n\n(4) 对每个qualification name，找出达到该资格已记录最高qlevel的Participant。输出participantNo、full name、qname和qlevel；先按qname，再按participantNo排列。并列最高者都符合。",
+            "checks": [
+              [
+                "相对于哪个范围比最高值？",
+                "highest recorded for that qualification name",
+                "在同名资格内比较",
+                "内层引用外层资格名；并列最高的记录均符合。"
+              ],
+              [
+                "输出如何排序？",
+                "Order by qualification name, then participant number",
+                "先资格名，再参与者编号",
+                "输出编号、全名、资格名、等级，保留排序次序。"
+              ]
+            ]
+          }
         },
         {
           "number": "5",
@@ -6203,7 +7907,25 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "Implement SQL correlated nested query statements for questions (4) and (5).\n\n(5) Find the participant number and full name of participants who have completed at least  one workshop with a current fee of 200.00 or more. Ignore cancelled enrolments.",
+            "chinese": "(1)(2)(3)必须用nested queries（嵌套查询）；(4)(5)必须用correlated nested queries（相关子查询）。\n\n(5) 找出至少完成过一门当前fee不低于200.00的Workshop的Participant，输出participantNo与full name。忽略Cancelled报名。",
+            "checks": [
+              [
+                "价格是历史还是现价？200 算吗？",
+                "current fee of 200.00 or more",
+                "当前费用至少为 200",
+                "用 workshop 的当前 fee，包含 200。"
+              ],
+              [
+                "完成条件由谁满足？",
+                "participants who have completed at least one workshop",
+                "每人至少完成一场合格的课",
+                "按外层参与者关联内层课程和报名，取消记录排除。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [
@@ -6344,7 +8066,31 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "(1) Implement SELECT statements in a WITH clause for the query below.    Find the participant number, full name and email of all  participants who have enrolled in a workshop taught by at  least one trainer whose organisation is 'UOW'. Include  enrolments regardless of their status. Use at least two named  common table expressions.    You must implement at least 2 subqueries in the WITH clause for this question.",
+            "chinese": "使用原始schema和数据处理以下任务，各子题的实现方式有明确要求。\n\n(1) 使用WITH中的SELECT实现查询：找出报名过至少由一位organisation为UOW的Trainer教授的Workshop的Participant，输出participantNo、full name和email。所有报名状态都计入。WITH中至少要有2个有名称的CTE，不能只写一个。",
+            "checks": [
+              [
+                "人数、课程还是报名行？哪些状态可用？",
+                "regardless of their status",
+                "所有报名状态均计入",
+                "列出参加过合格工作坊的人及其编号、全名、邮箱，避免重复。"
+              ],
+              [
+                "怎样的师资才合格？",
+                "at least one trainer whose organisation is 'UOW'",
+                "至少一位 UOW 培训师",
+                "在培训师分配中判断工作坊资格。"
+              ],
+              [
+                "指定几层具名查询？",
+                "at least two named common table expressions",
+                "至少两个命名 CTE",
+                "用 WITH 先表达工作坊集合，再表达报名参与者集合。"
+              ]
+            ]
+          }
         },
         {
           "number": "2",
@@ -6411,7 +8157,25 @@
             "先确定输入对象、输出列及每一行代表什么。",
             "检查题面中的数量、边界、状态、是否包含零匹配，以及指定的SQL形式。",
             "按“选表→关联→筛选→分组／嵌套→输出”完成；再对照条件逐项自查。"
-          ]
+          ],
+          "reading": {
+            "english": "(2) Use relational views to implement the questions below.    Find the workshop number, title and category of all workshops  in which PARTICIPANT_02 SAMPLE has enrolled. Display the result, then  drop the views in dependency order.    You must create at least 2 views to implement the query above.",
+            "chinese": "使用原始schema和数据处理以下任务，各子题的实现方式有明确要求。\n\n(2) 使用至少2个View，找出PARTICIPANT_02 SAMPLE报名的全部Workshop，输出workshopNo、title、category。先显示结果，再按依赖顺序删除Views。",
+            "checks": [
+              [
+                "查谁，输出什么？",
+                "PARTICIPANT_02 SAMPLE has enrolled",
+                "指定姓名的参与者报过名",
+                "返回 workshop 编号、标题和类别。"
+              ],
+              [
+                "几个视图，按什么顺序收尾？",
+                "drop the views in dependency order",
+                "按依赖顺序删除视图",
+                "至少建两视图，显示结果后先删依赖其他视图的那个。"
+              ]
+            ]
+          }
         },
         {
           "number": "3",
@@ -6485,7 +8249,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "(3) Implement the questions below by using the advanced DDL and other required  statements.    Use one CREATE TABLE ... AS SELECT statement to create and  populate ParticipantQualifications with the participant  number, full name, email and total number of qualifications  possessed by each participant, including participants with no  qualifications. Name the columns participantNo, fullName,  email and totalQualifications. Then define participantNo as  both the primary key and a foreign key referencing  Participant(participantNo). Display all rows and finally drop \n\nParticipantQualifications.",
+            "chinese": "使用原始schema和数据处理以下任务，各子题的实现方式有明确要求。\n\n(3) 用一条CREATE TABLE ... AS SELECT创建并填充ParticipantQualifications，包含每位Participant的participantNo、fullName、email和totalQualifications。没有Qualification的人也要包含。随后把participantNo设为primary key及引用Participant(participantNo)的foreign key。显示所有行，最后DROP这个新表。",
+            "checks": [
+              [
+                "建表与填充可拆成几条？",
+                "one CREATE TABLE ... AS SELECT",
+                "一条语句同时建表和填入结果",
+                "须按指定四个列名输出，每位参与者一行，含零资格者。"
+              ],
+              [
+                "哪个列承担两种约束？",
+                "both the primary key and a foreign key",
+                "同时是主键和外键",
+                "随后令 participantNo 引用 Participant；显示内容后删新表。"
+              ]
+            ]
+          }
         },
         {
           "number": "4",
@@ -6549,7 +8331,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "(4) Implement the questions below by using the advanced DML statements.    Increase capacity by 10 places for each workshop assigned to  at least two trainers. Use WorkshopTrainer to identify the  workshops rather than hard-coded numbers. Display the workshop  number, title and new capacity of the affected workshops.",
+            "chinese": "使用原始schema和数据处理以下任务，各子题的实现方式有明确要求。\n\n(4) 给分配了至少2位Trainer的Workshop增加10个capacity名额。必须从WorkshopTrainer识别目标，不能硬编码Workshop号码。显示受影响Workshop的workshopNo、title和新capacity。",
+            "checks": [
+              [
+                "变动是绝对数还是百分比？",
+                "by 10 places",
+                "增加十个名额",
+                "只改目标工作坊的 capacity，显示编号、标题和新容量。"
+              ],
+              [
+                "怎样确定目标？",
+                "at least two trainers",
+                "至少两名培训师",
+                "从 WorkshopTrainer 计算集合，禁止硬编码 workshopNo。"
+              ]
+            ]
+          }
         },
         {
           "number": "5",
@@ -6611,7 +8411,25 @@
             "先判断每小题是在改结构还是改数据行。",
             "核对类型容量、值范围、键与外键依赖。",
             "建表／插入先父后子，删除先子后父；UPDATE检查WHERE范围和计算起点。"
-          ]
+          ],
+          "reading": {
+            "english": "(5) Implement the questions below by using the advanced DML statements.  Remove BUSINESS workshops whose current fee is less than \n150.00.   Note that you must remove the information from the child tables (which contain  foreign key references to the parent table), then remove the information from the  parent table (which is referenced by the child tables).",
+            "chinese": "使用原始schema和数据处理以下任务，各子题的实现方式有明确要求。\n\n(5) 删除当前fee小于150.00的BUSINESS Workshop。必须先删除引用它们的child rows，再删被引用的Workshop rows。",
+            "checks": [
+              [
+                "哪些条件同时为真？",
+                "BUSINESS workshops whose current fee is less than",
+                "商务类且现价严格小于上限",
+                "150.00 本身保留；其他类别不删。"
+              ],
+              [
+                "先删谁，为什么？",
+                "then remove the information from the parent table",
+                "父表最后删",
+                "依赖表只删除目标 workshop 的相关行。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [
@@ -6628,7 +8446,7 @@
       "related": [],
       "examRelevance": "教师作业／模拟原题：完整保留",
       "coverageStatus": "covered",
-      "questionZh": "使用原始schema和数据处理以下任务，各子题的实现方式有明确要求。\n\n(1) 使用WITH中的SELECT实现查询：找出报名过至少由一位organisation为UOW的Trainer教授的Workshop的Participant，输出participantNo、full name和email。所有报名状态都计入。WITH中至少要有2个有名称的CTE，不能只写一个。\n\n(2) 使用至少2个View，找出英文题面指定Participant报名的全部Workshop，输出workshopNo、title、category。先显示结果，再按依赖顺序删除Views。\n\n(3) 用一条CREATE TABLE ... AS SELECT创建并填充ParticipantQualifications，包含每位Participant的participantNo、fullName、email和totalQualifications。没有Qualification的人也要包含。随后把participantNo设为primary key及引用Participant(participantNo)的foreign key。显示所有行，最后DROP这个新表。\n\n(4) 给分配了至少2位Trainer的Workshop增加10个capacity名额。必须从WorkshopTrainer识别目标，不能硬编码Workshop号码。显示受影响Workshop的workshopNo、title和新capacity。\n\n(5) 删除当前fee小于150.00的BUSINESS Workshop。必须先删除引用它们的child rows，再删被引用的Workshop rows。",
+      "questionZh": "使用原始schema和数据处理以下任务，各子题的实现方式有明确要求。\n\n(1) 使用WITH中的SELECT实现查询：找出报名过至少由一位organisation为UOW的Trainer教授的Workshop的Participant，输出participantNo、full name和email。所有报名状态都计入。WITH中至少要有2个有名称的CTE，不能只写一个。\n\n(2) 使用至少2个View，找出PARTICIPANT_02 SAMPLE报名的全部Workshop，输出workshopNo、title、category。先显示结果，再按依赖顺序删除Views。\n\n(3) 用一条CREATE TABLE ... AS SELECT创建并填充ParticipantQualifications，包含每位Participant的participantNo、fullName、email和totalQualifications。没有Qualification的人也要包含。随后把participantNo设为primary key及引用Participant(participantNo)的foreign key。显示所有行，最后DROP这个新表。\n\n(4) 给分配了至少2位Trainer的Workshop增加10个capacity名额。必须从WorkshopTrainer识别目标，不能硬编码Workshop号码。显示受影响Workshop的workshopNo、title和新capacity。\n\n(5) 删除当前fee小于150.00的BUSINESS Workshop。必须先删除引用它们的child rows，再删被引用的Workshop rows。",
       "answerOrigin": {
         "kind": "independently-derived",
         "label": "独立推导参考答案；不是教师官方评分表"
@@ -6676,7 +8494,29 @@
         "DECIMAL(p,s) / 精确数值的位数",
         "INSERT / UPDATE / DELETE / 增加、修改和删除行",
         "HAVING / 聚合后的筛选"
-      ]
+      ],
+      "readingUnits": {
+        "cte": {
+          "label": "短变式 · 两个 CTE（题库自拟）",
+          "english": "Using at least two named CTEs, list the number and title of workshops with at least one participant living in Sydney. Count all enrolment statuses.",
+          "chinese": "使用至少两个具名 CTE，列出至少有一名悉尼参与者报名的工作坊编号和标题。所有报名状态都计入。",
+          "checks": [
+            [
+              "结果一行代表什么？",
+              "number and title of workshops",
+              "工作坊编号和标题",
+              "同一场有多名符合者也只列一次。"
+            ],
+            [
+              "哪两个条件容易漏？",
+              "at least two named CTEs",
+              "至少两个具名 CTE",
+              "找悉尼参与者，再找其工作坊；不按报名状态筛选。"
+            ]
+          ],
+          "reference": "WITH SydneyParticipants AS (SELECT participantNo FROM Participant WHERE UPPER(city) = 'SYDNEY'),\nBooked AS (SELECT DISTINCT e.workshopNo FROM Enrolment e JOIN SydneyParticipants p ON p.participantNo = e.participantNo)\nSELECT w.workshopNo, w.title FROM Workshop w JOIN Booked b ON b.workshopNo = w.workshopNo;"
+        }
+      }
     },
     {
       "id": "A4-T3",
@@ -6731,7 +8571,25 @@
             "列出用户、操作、对象范围、能否转授四项。",
             "区分database.*、单张table与指定columns。",
             "只开放汇总／部分行时考虑View；检查已有权限来源是否叠加。"
-          ]
+          ],
+          "reading": {
+            "english": "Note that a user csit882 does not have the privileges required to process the steps listed  below. You must connect as the user root with the password [ROOT_PASSWORD].    Assume that the user root with a password '[ROOT_OR_USER_PASSWORD]' created a database called csit882.  The user root has created the sample database by executing dbcreate.sql and dbload.sql in  the database csit882. The user root nominates the database csit882 as the default  database.    Implement the SQL statements for the questions below.\n\n(1) Create two new users named <email-prefix>_1 and <email-prefix>_2. Use the part  of your UOW email address before @ as <email-prefix>.   For example, the anonymized prefix STUDENT_CODE gives STUDENT_CODE_1 and STUDENT_CODE_2. The passwords are  up to you",
+            "chinese": "csit882普通用户没有完成以下操作的权限，必须以root身份执行。root密码按英文题面给定。root已通过dbcreate.sql和dbload.sql在csit882中建立样例数据库，并已将它设为默认数据库。\n\n(1) 创建两个用户，名称为<email-prefix>_1与<email-prefix>_2；<email-prefix>取自己的UOW邮箱在@前的部分。公开版使用STUDENT_CODE作为匿名示例。密码自行选择。",
+            "checks": [
+              [
+                "用户名怎样生成？",
+                "before @",
+                "取邮箱 @ 之前的部分",
+                "按原文加 _1、_2，创建两个不同账户。"
+              ],
+              [
+                "哪些信息自定，谁执行？",
+                "passwords are up to you",
+                "密码自行选择",
+                "按共同题面由 root 执行，两账户都需创建。"
+              ]
+            ]
+          }
         },
         {
           "number": "2",
@@ -6771,7 +8629,25 @@
             "列出用户、操作、对象范围、能否转授四项。",
             "区分database.*、单张table与指定columns。",
             "只开放汇总／部分行时考虑View；检查已有权限来源是否叠加。"
-          ]
+          ],
+          "reading": {
+            "english": "Note that a user csit882 does not have the privileges required to process the steps listed  below. You must connect as the user root with the password [ROOT_PASSWORD].    Assume that the user root with a password '[ROOT_OR_USER_PASSWORD]' created a database called csit882.  The user root has created the sample database by executing dbcreate.sql and dbload.sql in  the database csit882. The user root nominates the database csit882 as the default  database.    Implement the SQL statements for the questions below.\n\n(2) Grant read privileges on all relational tables in the database csit882 to the first user  created in subtask 1. The first user must not be allowed to propagate these privileges to  other users or roles.",
+            "chinese": "csit882普通用户没有完成以下操作的权限，必须以root身份执行。root密码按英文题面给定。root已通过dbcreate.sql和dbload.sql在csit882中建立样例数据库，并已将它设为默认数据库。\n\n(2) 向第一个用户授予csit882所有表的读取权，不允许转授其他用户或role。",
+            "checks": [
+              [
+                "授给谁、对象多大？",
+                "all relational tables in the database csit882",
+                "csit882 所有表",
+                "给第一位用户读取库内全部表的权限。"
+              ],
+              [
+                "能转授吗？",
+                "must not be allowed to propagate",
+                "不许传播权限",
+                "不授予 GRANT OPTION。"
+              ]
+            ]
+          }
         },
         {
           "number": "3",
@@ -6815,7 +8691,25 @@
             "列出用户、操作、对象范围、能否转授四项。",
             "区分database.*、单张table与指定columns。",
             "只开放汇总／部分行时考虑View；检查已有权限来源是否叠加。"
-          ]
+          ],
+          "reading": {
+            "english": "Note that a user csit882 does not have the privileges required to process the steps listed  below. You must connect as the user root with the password [ROOT_PASSWORD].    Assume that the user root with a password '[ROOT_OR_USER_PASSWORD]' created a database called csit882.  The user root has created the sample database by executing dbcreate.sql and dbload.sql in  the database csit882. The user root nominates the database csit882 as the default  database.    Implement the SQL statements for the questions below.\n\n(3) Grant write privileges (INSERT, UPDATE and DELETE) on the relational table  Enrolment in the database csit882 to the first user created in subtask 1. The first user  must not be allowed to propagate these privileges to other users or roles.",
+            "chinese": "csit882普通用户没有完成以下操作的权限，必须以root身份执行。root密码按英文题面给定。root已通过dbcreate.sql和dbload.sql在csit882中建立样例数据库，并已将它设为默认数据库。\n\n(3) 向第一个用户授予Enrolment的INSERT、UPDATE、DELETE权限，不允许转授。",
+            "checks": [
+              [
+                "写入具体包括哪些动作？",
+                "INSERT, UPDATE and DELETE",
+                "三种修改操作",
+                "全部授给第一位用户，限定 Enrolment 表。"
+              ],
+              [
+                "可否将这些权利给别人？",
+                "must not be allowed to propagate",
+                "不能转授",
+                "不能附加转授权。"
+              ]
+            ]
+          }
         },
         {
           "number": "4",
@@ -6855,7 +8749,25 @@
             "列出用户、操作、对象范围、能否转授四项。",
             "区分database.*、单张table与指定columns。",
             "只开放汇总／部分行时考虑View；检查已有权限来源是否叠加。"
-          ]
+          ],
+          "reading": {
+            "english": "Note that a user csit882 does not have the privileges required to process the steps listed  below. You must connect as the user root with the password [ROOT_PASSWORD].    Assume that the user root with a password '[ROOT_OR_USER_PASSWORD]' created a database called csit882.  The user root has created the sample database by executing dbcreate.sql and dbload.sql in  the database csit882. The user root nominates the database csit882 as the default  database.    Implement the SQL statements for the questions below.\n\n(4) Grant read privileges on only the workshop number, title, category and fee in the  relational table Workshop in the database csit882 to the second user created in  subtask 1. The second user must be allowed to grant the same privileges to other  users or roles.",
+            "chinese": "csit882普通用户没有完成以下操作的权限，必须以root身份执行。root密码按英文题面给定。root已通过dbcreate.sql和dbload.sql在csit882中建立样例数据库，并已将它设为默认数据库。\n\n(4) 向第二个用户只授予Workshop的workshopNo、title、category、fee这4列的读取权，并允许转授这些读取权限。",
+            "checks": [
+              [
+                "只允许读哪些列？",
+                "only the workshop number, title, category and fee",
+                "只有四个指定字段",
+                "查列名并授予第二位用户列级 SELECT。"
+              ],
+              [
+                "同样的权限能否再给别人？",
+                "allowed to grant the same privileges",
+                "必须允许转授",
+                "附 WITH GRANT OPTION，转授范围仍限所给列。"
+              ]
+            ]
+          }
         },
         {
           "number": "5",
@@ -6914,7 +8826,25 @@
             "列出用户、操作、对象范围、能否转授四项。",
             "区分database.*、单张table与指定columns。",
             "只开放汇总／部分行时考虑View；检查已有权限来源是否叠加。"
-          ]
+          ],
+          "reading": {
+            "english": "Note that a user csit882 does not have the privileges required to process the steps listed  below. You must connect as the user root with the password [ROOT_PASSWORD].    Assume that the user root with a password '[ROOT_OR_USER_PASSWORD]' created a database called csit882.  The user root has created the sample database by executing dbcreate.sql and dbload.sql in  the database csit882. The user root nominates the database csit882 as the default  database.    Implement the SQL statements for the questions below.\n\n(5) Grant read privileges on the participant number, full name and total number of  qualifications possessed by each participant, including participants with no  qualifications, to the second user created in subtask 1. Create a view named  ParticipantQualificationSummary to provide this information. The second user must  not be allowed to propagate the privileges on this view to other users or roles.",
+            "chinese": "csit882普通用户没有完成以下操作的权限，必须以root身份执行。root密码按英文题面给定。root已通过dbcreate.sql和dbload.sql在csit882中建立样例数据库，并已将它设为默认数据库。\n\n(5) 建立名为ParticipantQualificationSummary的View，提供participantNo、full name及该人Qualification总数，包含没有Qualification的人。向第二个用户授予该View的读取权，不允许转授这项View权限。",
+            "checks": [
+              [
+                "视图一行对应谁？",
+                "including participants with no qualifications",
+                "含没有资格的人",
+                "每人编号、全名及资格数；零匹配也算一行。"
+              ],
+              [
+                "授权对象与前一小题有何不同？",
+                "privileges on this view",
+                "针对该汇总视图的权利",
+                "按指定名称建视图，只向第二位用户授 SELECT，本项不能转授。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [
@@ -6988,7 +8918,7 @@
       "parts": [
         {
           "number": "1",
-          "goal": "唯一key是{A}，最高2NF",
+          "goal": "推导当前关系的全部最小键，证明最高范式",
           "steps": [
             "A不在给定FD右侧，所以key必须含A；A→B、A→C、C→D逐步得到A⁺=ABCD。",
             "A单独足够且不能再删；prime attribute只有A，B/C/D都是non-prime。",
@@ -7034,11 +8964,35 @@
             "先找不在FD右侧的属性；它们必须包含在每个key中。",
             "计算候选组合的closure，并逐项删除检查最小性。不要只找一个key就停止。",
             "先列全部prime attributes，再检查2NF、3NF和BCNF。3NF右侧为prime的例外不能用于BCNF。"
-          ]
+          ],
+          "reading": {
+            "english": "Consider the relational schemas given below and the respective sets of functional  dependencies valid in the schemas. Assume that each schema is in 1NF.    For each one of the relational schemas, determine the highest normal form that is valid  for a schema. Justify your answer. Justification must include the derivations of minimal  keys from the functional dependencies and testing the validity of all normal forms (2NF,  3NF, BCNF) against the relational schemas, minimal keys, and functional dependencies.    A correct guess without the comprehensive justifications scores no marks!  Do not change the attributes of relational schemas in the questions.\n\n(1) $R=(A,B,C,D)$      $F=\\{A \\to B, A \\to C, C \\to D\\}$",
+            "chinese": "考虑给定的relational schemas以及其中成立的Functional Dependencies。已知每个schema都满足1NF。\n\n对每个schema，确定成立的最高Normal Form，并证明理由。证明必须包括：从FD推导全部minimal keys；根据schema、keys与FD，逐一检查2NF、3NF及BCNF。\n\n只猜对最高范式、却不给完整证明，不满足原题要求。不得修改题目的attributes。\n\n(1) R=(A,B,C,D)，F={A→B, A→C, C→D}。",
+            "checks": [
+              [
+                "本小题给了哪些属性和 FD？复合决定因素要怎样读？",
+                "A \\to B, A \\to C, C \\to D",
+                "本题给定 A → B, A → C, C → D。",
+                "只用当前小题的 R 和 F 求闭包。"
+              ],
+              [
+                "需要证明一个键还是全部最小键？",
+                "derivations of minimal keys",
+                "从依赖推导最小键。",
+                "证明决定全部属性、去掉任一属性后不再成立，并说明没有遗漏。"
+              ],
+              [
+                "最高范式要怎样证明？题面要分解吗？",
+                "testing the validity of all normal forms",
+                "逐项检查 2NF、3NF、BCNF。",
+                "题设已在 1NF，写出成立依据或违反条件的依赖。原题要求判断和证明，不要求分解。"
+              ]
+            ]
+          }
         },
         {
           "number": "2",
-          "goal": "唯一key是{A,B}，最高1NF",
+          "goal": "推导当前关系的全部最小键，证明最高范式",
           "steps": [
             "A、B都无法从其他属性推出，每个key必须同时含A和B。",
             "A⁺=AC、B⁺=BD，AB⁺=ABCD，因此AB是唯一minimal key。",
@@ -7084,11 +9038,35 @@
             "先找不在FD右侧的属性；它们必须包含在每个key中。",
             "计算候选组合的closure，并逐项删除检查最小性。不要只找一个key就停止。",
             "先列全部prime attributes，再检查2NF、3NF和BCNF。3NF右侧为prime的例外不能用于BCNF。"
-          ]
+          ],
+          "reading": {
+            "english": "Consider the relational schemas given below and the respective sets of functional  dependencies valid in the schemas. Assume that each schema is in 1NF.    For each one of the relational schemas, determine the highest normal form that is valid  for a schema. Justify your answer. Justification must include the derivations of minimal  keys from the functional dependencies and testing the validity of all normal forms (2NF,  3NF, BCNF) against the relational schemas, minimal keys, and functional dependencies.    A correct guess without the comprehensive justifications scores no marks!  Do not change the attributes of relational schemas in the questions.\n\n(2) $R=(A,B,C,D)$      $F=\\{A \\to C, B \\to D\\}$",
+            "chinese": "考虑给定的relational schemas以及其中成立的Functional Dependencies。已知每个schema都满足1NF。\n\n对每个schema，确定成立的最高Normal Form，并证明理由。证明必须包括：从FD推导全部minimal keys；根据schema、keys与FD，逐一检查2NF、3NF及BCNF。\n\n只猜对最高范式、却不给完整证明，不满足原题要求。不得修改题目的attributes。\n\n(2) R=(A,B,C,D)，F={A→C, B→D}。",
+            "checks": [
+              [
+                "本小题给了哪些属性和 FD？复合决定因素要怎样读？",
+                "A \\to C, B \\to D",
+                "本题给定 A → C, B → D。",
+                "只用当前小题的 R 和 F 求闭包。"
+              ],
+              [
+                "需要证明一个键还是全部最小键？",
+                "derivations of minimal keys",
+                "从依赖推导最小键。",
+                "证明决定全部属性、去掉任一属性后不再成立，并说明没有遗漏。"
+              ],
+              [
+                "最高范式要怎样证明？题面要分解吗？",
+                "testing the validity of all normal forms",
+                "逐项检查 2NF、3NF、BCNF。",
+                "题设已在 1NF，写出成立依据或违反条件的依赖。原题要求判断和证明，不要求分解。"
+              ]
+            ]
+          }
         },
         {
           "number": "3",
-          "goal": "keys为{A}、{B}、{C}，最高BCNF",
+          "goal": "推导当前关系的全部最小键，证明最高范式",
           "steps": [
             "A→B→C→D，B→C→A并到D，C→A→B且到D，所以A/B/C单独都决定全体。",
             "D⁺只有D，单独D不是key；包含A/B/C的更大集合不minimal，所以keys已列全。",
@@ -7134,11 +9112,35 @@
             "先找不在FD右侧的属性；它们必须包含在每个key中。",
             "计算候选组合的closure，并逐项删除检查最小性。不要只找一个key就停止。",
             "先列全部prime attributes，再检查2NF、3NF和BCNF。3NF右侧为prime的例外不能用于BCNF。"
-          ]
+          ],
+          "reading": {
+            "english": "Consider the relational schemas given below and the respective sets of functional  dependencies valid in the schemas. Assume that each schema is in 1NF.    For each one of the relational schemas, determine the highest normal form that is valid  for a schema. Justify your answer. Justification must include the derivations of minimal  keys from the functional dependencies and testing the validity of all normal forms (2NF,  3NF, BCNF) against the relational schemas, minimal keys, and functional dependencies.    A correct guess without the comprehensive justifications scores no marks!  Do not change the attributes of relational schemas in the questions.\n\n(3) $R=(A,B,C,D)$      $F=\\{A \\to B, B \\to C, C \\to A, C \\to D\\}$",
+            "chinese": "考虑给定的relational schemas以及其中成立的Functional Dependencies。已知每个schema都满足1NF。\n\n对每个schema，确定成立的最高Normal Form，并证明理由。证明必须包括：从FD推导全部minimal keys；根据schema、keys与FD，逐一检查2NF、3NF及BCNF。\n\n只猜对最高范式、却不给完整证明，不满足原题要求。不得修改题目的attributes。\n\n(3) R=(A,B,C,D)，F={A→B, B→C, C→A, C→D}。",
+            "checks": [
+              [
+                "本小题给了哪些属性和 FD？复合决定因素要怎样读？",
+                "A \\to B, B \\to C, C \\to A, C \\to D",
+                "本题给定 A → B, B → C, C → A, C → D。",
+                "只用当前小题的 R 和 F 求闭包。"
+              ],
+              [
+                "需要证明一个键还是全部最小键？",
+                "derivations of minimal keys",
+                "从依赖推导最小键。",
+                "证明决定全部属性、去掉任一属性后不再成立，并说明没有遗漏。"
+              ],
+              [
+                "最高范式要怎样证明？题面要分解吗？",
+                "testing the validity of all normal forms",
+                "逐项检查 2NF、3NF、BCNF。",
+                "题设已在 1NF，写出成立依据或违反条件的依赖。原题要求判断和证明，不要求分解。"
+              ]
+            ]
+          }
         },
         {
           "number": "4",
-          "goal": "keys为{A,B}、{A,C}，最高3NF",
+          "goal": "推导当前关系的全部最小键，证明最高范式",
           "steps": [
             "A不能由右侧推出，因此每个key必须含A。AB由给定FD得到CD；AC由C→B再取得D。",
             "A、B、C单独不能决定D，故non-prime D没有partial dependency，满足2NF。",
@@ -7184,7 +9186,31 @@
             "先找不在FD右侧的属性；它们必须包含在每个key中。",
             "计算候选组合的closure，并逐项删除检查最小性。不要只找一个key就停止。",
             "先列全部prime attributes，再检查2NF、3NF和BCNF。3NF右侧为prime的例外不能用于BCNF。"
-          ]
+          ],
+          "reading": {
+            "english": "Consider the relational schemas given below and the respective sets of functional  dependencies valid in the schemas. Assume that each schema is in 1NF.    For each one of the relational schemas, determine the highest normal form that is valid  for a schema. Justify your answer. Justification must include the derivations of minimal  keys from the functional dependencies and testing the validity of all normal forms (2NF,  3NF, BCNF) against the relational schemas, minimal keys, and functional dependencies.    A correct guess without the comprehensive justifications scores no marks!  Do not change the attributes of relational schemas in the questions.\n\n(4) $R=(A,B,C,D)$      $F=\\{AB \\to C, AB \\to D, C \\to B\\}$",
+            "chinese": "考虑给定的relational schemas以及其中成立的Functional Dependencies。已知每个schema都满足1NF。\n\n对每个schema，确定成立的最高Normal Form，并证明理由。证明必须包括：从FD推导全部minimal keys；根据schema、keys与FD，逐一检查2NF、3NF及BCNF。\n\n只猜对最高范式、却不给完整证明，不满足原题要求。不得修改题目的attributes。\n\n(4) R=(A,B,C,D)，F={AB→C, AB→D, C→B}。",
+            "checks": [
+              [
+                "本小题给了哪些属性和 FD？复合决定因素要怎样读？",
+                "AB \\to C, AB \\to D, C \\to B",
+                "本题给定 AB → C, AB → D, C → B。",
+                "只用当前小题的 R 和 F 求闭包。"
+              ],
+              [
+                "需要证明一个键还是全部最小键？",
+                "derivations of minimal keys",
+                "从依赖推导最小键。",
+                "证明决定全部属性、去掉任一属性后不再成立，并说明没有遗漏。"
+              ],
+              [
+                "最高范式要怎样证明？题面要分解吗？",
+                "testing the validity of all normal forms",
+                "逐项检查 2NF、3NF、BCNF。",
+                "题设已在 1NF，写出成立依据或违反条件的依赖。原题要求判断和证明，不要求分解。"
+              ]
+            ]
+          }
         }
       ],
       "tags": [
@@ -9473,7 +11499,7 @@
       "parts": [
         {
           "number": "1",
-          "goal": "唯一key是{P}，最高2NF",
+          "goal": "推导当前关系的全部最小键，证明最高范式",
           "steps": [
             "P不在给定FD右侧，所以key必须含P；P→Q、P→R、R→S逐步得到P⁺=PQRS。",
             "P单独足够且不能再删；prime attribute只有P，Q/R/S都是non-prime。",
@@ -9523,7 +11549,7 @@
         },
         {
           "number": "2",
-          "goal": "唯一key是{P,Q}，最高1NF",
+          "goal": "推导当前关系的全部最小键，证明最高范式",
           "steps": [
             "P、Q都无法从其他属性推出，每个key必须同时含P和Q。",
             "P⁺=PR、Q⁺=QS，PQ⁺=PQRS，因此PQ是唯一minimal key。",
@@ -9573,7 +11599,7 @@
         },
         {
           "number": "3",
-          "goal": "keys为{P}、{Q}、{R}，最高BCNF",
+          "goal": "推导当前关系的全部最小键，证明最高范式",
           "steps": [
             "P→Q→R→S，Q→R→P并到S，R→P→Q且到S，所以P/Q/R单独都决定全体。",
             "S⁺只有S，单独S不是key；包含P/Q/R的更大集合不minimal，所以keys已列全。",
@@ -9623,7 +11649,7 @@
         },
         {
           "number": "4",
-          "goal": "keys为{P,Q}、{P,R}，最高3NF",
+          "goal": "推导当前关系的全部最小键，证明最高范式",
           "steps": [
             "P不能由右侧推出，因此每个key必须含P。PQ由给定FD得到RS；PR由R→Q再取得S。",
             "P、Q、R单独不能决定S，故non-prime S没有partial dependency，满足2NF。",
@@ -17573,8 +19599,8 @@
   },
   "learningOrder": [
     "A3-T2",
-    "A3-T3",
     "M1-Q3",
+    "A3-T3",
     "A3-T1",
     "A1-T1",
     "A2-T1",
@@ -17631,5 +19657,133 @@
       "M2-Q6 depends on transaction/engine assumptions and literal MySQL restrictions.",
       "A1 supplied CopyID diagram and the text's global uniqueness need to be read together."
     ]
-  }
+  },
+  "readingRoutes": [
+    [
+      "短 SQL",
+      "A3-T2:1",
+      "M1-Q3:1",
+      "先对上英文名和列名，再换到运输库读边界。",
+      "查 schema 独立写查询，能解释两个端点和原表约束的区别。"
+    ],
+    [
+      "连接与分组",
+      "A3-T3:1",
+      "A3-T3:3",
+      "先练连接后按人计数，再引入零报名者。",
+      "能区分 WHERE 和 HAVING，解释零匹配时应计哪一列。"
+    ],
+    [
+      "零匹配",
+      "A3-T3:3",
+      "M2-Q3:1",
+      "把每位参与者换成每家银行。",
+      "没有子行的父对象也输出一行且计数为零。"
+    ],
+    [
+      "NULL 与存在性",
+      "A3-T3:2",
+      "M2-Q3:3",
+      "分清没有子行和已有子行的某列未知。",
+      "能处理 NULL，多家符合的分行也只输出一次银行。"
+    ],
+    [
+      "概念图",
+      "A1-T1:1:copy",
+      "A1-T2:1:lecturer",
+      "先读一个方向，再用讲师规则自测。",
+      "能说清固定谁、数谁、两端上下限及标注位置。"
+    ],
+    [
+      "长概念图",
+      "M1-Q1:1",
+      "M2-Q1:1",
+      "从大学规则迁移到医院的局部编号和重复事件。",
+      "标识有作用域、关联属性有归属、子类继承正确，并遵守禁止新增标识的要求。"
+    ],
+    [
+      "逻辑设计",
+      "A2-T1:2",
+      "M1-Q2:1",
+      "先按课件格式写酒店，再转换给定图。",
+      "逐表写属性和完整 PK、CK、FK，用指定超集法。接着做 M2-Q2 航班图。"
+    ],
+    [
+      "限定关联与子类",
+      "A2-T1:1",
+      "M2-Q2:1",
+      "先解释图中特征的转换，再识别航班图中的限制。",
+      "复合外键不漏列，能写明额外唯一性、适用条件和外键不能保证的规则。"
+    ],
+    [
+      "DDL",
+      "A3-T1:1",
+      "A3-T1:2",
+      "从一列费用约束迁移到两列等级约束。",
+      "类型能容纳上限，约束同时检查严格下限和包含上限。"
+    ],
+    [
+      "DML 与外键",
+      "A2-T2:4",
+      "A2-T2:5",
+      "在同一组已插入酒店记录上先改价，再删依赖。",
+      "只处理目标酒店，按外键顺序删行；再做 M1-Q4(2) 核对复合定位。"
+    ],
+    [
+      "嵌套查询",
+      "A4-T1:1",
+      "A4-T1:2",
+      "从一次总体平均迁移到两个同时成立的存在条件。",
+      "用嵌套写法，两个类别都满足且都排除取消。"
+    ],
+    [
+      "相关子查询",
+      "A4-T1:5",
+      "A4-T1:4",
+      "从按人关联迁移到按资格名关联。",
+      "内层确实引用外层，最高并列不遗漏，顺序正确。"
+    ],
+    [
+      "WITH / CTE",
+      "A4-T2:1",
+      "A4-T2:1:cte",
+      "原卷只要求一次双 CTE，短变式换输出粒度。",
+      "空白写出两个具名 CTE，保留所有报名状态并避免重复。"
+    ],
+    [
+      "视图",
+      "A4-T2:2",
+      "A4-T3:5",
+      "先练视图依赖和删除，再用汇总视图提供有限信息。",
+      "解释依赖次序，按人汇总含零，权限只给目标视图。"
+    ],
+    [
+      "用户与权限",
+      "A4-T3:4",
+      "M1-Q5:3",
+      "先辨认列级转授，再跨两张表授予写入权。",
+      "逐项说明用户、操作、对象、转授权，按范围写 GRANT。"
+    ],
+    [
+      "审计",
+      "M2-Q4:1:audit",
+      "M2-Q4:1",
+      "只有一道审计原题，先划出范围，再独立完成整题。",
+      "逐句注释采集、筛选、报告和恢复，并说明日志语义。"
+    ],
+    [
+      "事务",
+      "M2-Q6:1",
+      "M2-Q6:2",
+      "从同一行上等待，换成读写不同账户。",
+      "逐条列两行余额、等待与提交时点，写明引擎和事务假设。"
+    ],
+    [
+      "Normalization",
+      "A4-T4:1",
+      "A4-T4:4",
+      "先在第 1 题独立诊断，再用第 4 题迁移。",
+      "找全候选键并证明最小性，逐项检查 2NF、3NF、BCNF；第 2、3 题查漏。"
+    ]
+  ]
 }

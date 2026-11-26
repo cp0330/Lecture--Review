@@ -888,7 +888,7 @@ ParticipantQualifications.
 
 (1) 使用WITH中的SELECT实现查询：找出报名过至少由一位organisation为UOW的Trainer教授的Workshop的Participant，输出participantNo、full name和email。所有报名状态都计入。WITH中至少要有2个有名称的CTE，不能只写一个。
 
-(2) 使用至少2个View，找出英文题面指定Participant报名的全部Workshop，输出workshopNo、title、category。先显示结果，再按依赖顺序删除Views。
+(2) 使用至少2个View，找出PARTICIPANT_02 SAMPLE报名的全部Workshop，输出workshopNo、title、category。先显示结果，再按依赖顺序删除Views。
 
 (3) 用一条CREATE TABLE ... AS SELECT创建并填充ParticipantQualifications，包含每位Participant的participantNo、fullName、email和totalQualifications。没有Qualification的人也要包含。随后把participantNo设为primary key及引用Participant(participantNo)的foreign key。显示所有行，最后DROP这个新表。
 

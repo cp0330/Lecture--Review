@@ -83,4 +83,45 @@ const corrupt=setup({saved:'bad json'});ok('Corrupt stored data never overwritte
 ok('Malformed hash does not crash',setup({hash:'#%zz'}).api.current==='A3-T2');
 const scripts=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)];for(const m of scripts)new vm.Script(m[1]);ok('All three generated inline scripts have valid syntax',scripts.length===3);
 const ids=[...fs.readFileSync(path.join(base,'tools/shell.html'),'utf8').matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);ok('Static shell IDs unique',new Set(ids).size===ids.length);
-const result={date:'2026-11-18',status:'passed',checks,labels,scope:'Pure state, migration, timer and UI event regression checks in a deliberately small DOM model; real rendering verified separately on HTTPS.'};fs.writeFileSync(path.join(base,'tests/ui-results.json'),JSON.stringify(result,null,2));console.log(JSON.stringify({status:result.status,checks}));
+// Reading routes are exercised through the same controls as the learner.
+const learner=setup({initial:null});
+const clickStudy=async (app,panel,target,stage='reading')=>{
+ const button=app.get(panel).querySelectorAll('[data-study]').find(el=>el.dataset.study===target&&el.dataset.stage===stage);
+ assert.ok(button,target+' in '+panel);await button.dispatch('click');
+};
+await learner.get('start-basics').dispatch('click');
+ok('Start opens A3-T2(1) English and prompts, no worked SQL',learner.state().settings.tab==='reading'&&learner.api.current==='A3-T2'&&!learner.get('panel-reading').innerHTML.includes('SELECT workshopNo, title, category, fee'));
+const field=learner.get('panel-reading').querySelectorAll('[data-read-input]')[0];
+field.value='我先找要显示的列';await field.dispatch('input');
+await learner.get('check-reading').dispatch('click');
+ok('Partial reading survives checking without mastery change',learner.state().records['A3-T2'].readings[1].text0===field.value&&learner.state().records['A3-T2'].readings[1].checkedAt&&!Object.keys(learner.state().records['A3-T2'].partMastery).length);
+const back=setup({initial:null,saved:learner.state(),hash:'#a3-t2'});
+ok('Reload restores checked stage and partial reading text',back.get('panel-reading').innerHTML.includes('read-check')&&back.get('panel-reading').querySelectorAll('[data-read-input]')[0].value===field.value);
+await back.get('read-independent').dispatch('click');
+ok('Independent SQL starts empty and hides feedback',back.state().settings.tab==='practice'&&!back.get('draft').value&&back.get('practice-answer').hidden);
+await clickStudy(back,'panel-practice','M1-Q3:1');
+await back.get('check-reading').dispatch('click');await back.get('read-independent').dispatch('click');
+ok('Transfer reaches blank M1-Q3(1) after reading its conditions',back.api.current==='M1-Q3'&&back.state().settings.part===0&&back.state().settings.tab==='practice'&&!back.get('draft').value);
+back.api.setModule('exam');await back.get('continue').dispatch('click');
+ok('Home resume returns to independent practice',back.api.current==='M1-Q3'&&back.state().settings.tab==='practice');
+back.api.setModule('exam');await clickStudy(back,'dashboard','A1-T1:1:copy');
+ok('First relationship only shows one sentence, no full diagram',back.get('panel-reading').innerHTML.includes('Each Copy represents exactly one Book.')&&!back.get('panel-reading').innerHTML.includes('ISBN uniquely identifies')&&!back.get('panel-reading').innerHTML.includes('provided-a1-task1.png'));
+await back.get('check-reading').dispatch('click');await clickStudy(back,'panel-reading','A1-T1:1:book');await back.get('check-reading').dispatch('click');
+ok('Reverse relationship checks the supplied qualified association after reveal',back.get('panel-reading').innerHTML.includes('book-copy-detail.png'));
+await clickStudy(back,'panel-reading','A1-T1:1');ok('Back to full A1-T1 restores attributes and final requirement',back.get('panel-reading').innerHTML.includes('must end with your')&&back.get('panel-reading').innerHTML.includes('ISBN'));
+const nf=setup({initial:null,hash:'#self/A4-T4/4'});
+ok('Deep link to NF part 4 is a blind self-test',nf.api.current==='A4-T4'&&nf.state().settings.part===3&&nf.state().settings.tab==='practice'&&!nf.get('panel-practice').innerHTML.includes('The highest normal form is')&&nf.get('practice-answer').hidden);
+const ck=setup({initial:null,hash:'#learn/A4-T2/1/cte'});ok('CTE variant has a separate independent draft',!!ck.get('transfer-draft'));ck.get('transfer-draft').value='WITH first_step AS';await ck.get('transfer-draft').dispatch('input');ok('Transfer draft belongs only to variant',ck.state().records['A4-T2'].readings['1@cte'].solution==='WITH first_step AS'&&!ck.state().records['A4-T2'].drafts['1']);
+const data=back.state();const copy=C.merge(C.fresh(),JSON.parse(JSON.stringify(data)));
+ok('Backup round trip keeps reading, check status and saved learning stage',copy.settings.bookmark.target===data.settings.bookmark.target&&copy.records['A3-T2'].readings['1'].text0===field.value);
+const conflict=C.mergeRecord({readings:{1:{text0:'left',text1:'keep',updatedAt:'1'}}},{readings:{1:{text0:'right',updatedAt:'2'}}});
+ok('Reading conflicts archived and untouched prompt kept',conflict.readings[1].text0==='right'&&conflict.readings[1].text1==='keep'&&conflict.draftHistory.some(x=>x.text==='left'));
+for(const paper of [1,2,3]){
+ const mock=setup({initial:null});mock.api.setModule('mock');mock.get('paper').value='mock-'+paper;await mock.get('start-exam').dispatch('click');
+ await mock.get('mock-view').querySelectorAll('[data-exam-index]')[1].dispatch('click');
+ ok('Paper '+paper+' Q2 original image and running timer',mock.get('mock-view').innerHTML.includes('mock-'+paper+'-q2.jpg')&&mock.state().mock.active.status==='running');
+ mock.get('exam-answer').value='PK and FK';await mock.get('exam-answer').dispatch('input');await mock.get('finish-exam').dispatch('click');
+ ok('Paper '+paper+' submit and review keeps answer',mock.state().mock.runs.length===1&&mock.get('mock-view').innerHTML.includes('PK and FK'));
+}
+
+const result={date:'2026-11-26',status:'passed',checks,labels,scope:'Pure state, migration, timer and UI event regression checks in a deliberately small DOM model; real rendering verified separately on HTTPS.'};fs.writeFileSync(path.join(base,'tests/ui-results.json'),JSON.stringify(result,null,2));console.log(JSON.stringify({status:result.status,checks}));
