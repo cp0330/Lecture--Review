@@ -92,103 +92,103 @@ Original Question链接指向[questions.md](./questions.md)中的完整英文题
 
 | 入口 | 对应重复来源 | 读题问题数 | 核对的英文证据 | 小题类型 |
 |---|---|---:|---|---|
-| [M1-Q1(1)](./index.html#learn/M1-Q1/1) | 独立题号 | 3 | unique code, unique title / one or two academic members / together with a date when each qualification has been acquired | conceptual |
-| [M1-Q2(1)](./index.html#learn/M1-Q2/1) | 独立题号 | 2 | collection of relational schemas / superset method must be used | logical |
-| [M1-Q3(1)](./index.html#learn/M1-Q3/1) | 独立题号 | 3 | registration numbers of trucks / capacity in a range / 100 inclusive and 500 inclusive | fundamentals |
-| [M1-Q3(2)](./index.html#learn/M1-Q3/2) | 独立题号 | 2 | first and the last names of all drivers / who are on leave | joins |
-| [M1-Q3(3)](./index.html#learn/M1-Q3/3) | 独立题号 | 2 | registration numbers of all trucks / not been used for any trips | nested |
-| [M1-Q3(4)](./index.html#learn/M1-Q3/4) | 独立题号 | 2 | together with total number of trips / no need to include | aggregate |
-| [M1-Q3(5)](./index.html#learn/M1-Q3/5) | 独立题号 | 2 | all departure cities / together with the names of all destination cities | fundamentals |
-| [M1-Q4(1)](./index.html#learn/M1-Q4/1) | 独立题号 | 2 | a skill can be possessed by many drivers / some skills are not possessed by any driver | ddl-dml |
-| [M1-Q4(2)](./index.html#learn/M1-Q4/2) | 独立题号 | 2 | second and third leg / of a trip 36 | ddl-dml |
-| [M1-Q4(3)](./index.html#learn/M1-Q4/3) | 独立题号 | 2 | trip number 26 / after the present date of trip 26 | ddl-dml |
-| [M1-Q4(4)](./index.html#learn/M1-Q4/4) | 独立题号 | 2 | Add one more leg / ends in the same city it started from | ddl-dml |
-| [M1-Q4(5)](./index.html#learn/M1-Q4/5) | 独立题号 | 2 | destination of the first leg is Perth / a trip 20 has 2 legs | ddl-dml |
-| [M1-Q5(1)](./index.html#learn/M1-Q5/1) | 独立题号 | 2 | as a default database / two new users USER_A and USER_B | access |
-| [M1-Q5(2)](./index.html#learn/M1-Q5/2) | 独立题号 | 2 | EMPLOYEE and DRIVER / cannot be propagated | access |
-| [M1-Q5(3)](./index.html#learn/M1-Q5/3) | 独立题号 | 2 | insert the rows / can be propagated | access |
-| [M1-Q5(4)](./index.html#learn/M1-Q5/4) | 独立题号 | 2 | all relational tables in csit115 database / update privilege | access |
-| [M1-Q5(5)](./index.html#learn/M1-Q5/5) | 独立题号 | 2 | total number trips performed by each driver / to a user USER_B | access |
-| [M1-Q6(1)](./index.html#learn/M1-Q6/1) | 独立题号 | 2 | must consist of two columns / more than 100 trips | ddl-dml |
-| [M1-Q6(2)](./index.html#learn/M1-Q6/2) | 独立题号 | 2 | list the contents of a relational table MESSAGE / Truck PKR856 has been used for 120 trips. | ddl-dml |
-| [M1-Q6(3)](./index.html#learn/M1-Q6/3) | 独立题号 | 2 | contents of a relational table MESSAGE permanent / make the contents of a relational table MESSAGE permanent | ddl-dml |
-| [M1-Q6(4)](./index.html#learn/M1-Q6/4) | 独立题号 | 2 | drop a relational table MESSAGE / Finally | ddl-dml |
-| [M2-Q1(1)](./index.html#learn/M2-Q1/1) | 独立题号 | 3 | unique within a ward / admitted to and discharged from a hospital many times / not allowed to use any artificial identifiers | conceptual |
-| [M2-Q2(1)](./index.html#learn/M2-Q2/1) | 独立题号 | 2 | foreign keys (if any) / superset method must be used | logical |
-| [M2-Q3(1)](./index.html#learn/M2-Q3/1) | 独立题号 | 2 | For each bank / listed as zero (0) | joins |
-| [M2-Q3(2)](./index.html#learn/M2-Q3/2) | 独立题号 | 2 | no bank transactions in 2021 / account numbers and balance on each account | nested |
-| [M2-Q3(3)](./index.html#learn/M2-Q3/3) | 独立题号 | 2 | unknow total number of employees / at least one branch | nested |
-| [M2-Q3(4)](./index.html#learn/M2-Q3/4) | 独立题号 | 2 | Insert appropriate information into the new structures / on each bank account | ddl-dml |
-| [M2-Q3(5)](./index.html#learn/M2-Q3/5) | 独立题号 | 2 | all bank transactions submitted in a year 2019 / not allowed to drop and/or suspend any referential integrity constraints | ddl-dml |
-| [M2-Q4(1)](./index.html#learn/M2-Q4/1) | 独立题号 | 2 | a selected group of users on a selected group of relational tables / in the comments provide the comprehensive explanation | auditing |
-| [M2-Q5(1)](./index.html#learn/M2-Q5/1) | 独立题号 | 2 | root has already connected / nominate the database as its default database | access |
-| [M2-Q5(2)](./index.html#learn/M2-Q5/2) | 独立题号 | 2 | included in SQL script dbcreate.sql / within a database banks | access |
-| [M2-Q5(3)](./index.html#learn/M2-Q5/3) | 独立题号 | 2 | new user account called admin / with a password | access |
-| [M2-Q5(4)](./index.html#learn/M2-Q5/4) | 独立题号 | 2 | CREATE TABLE and CREATE VIEW / rights to propagate the privilege to the other users | access |
-| [M2-Q5(5)](./index.html#learn/M2-Q5/5) | 独立题号 | 2 | all bank transactions submitted in 2021 / no rights to propagate | access |
-| [M2-Q6(1)](./index.html#learn/M2-Q6/1) | 独立题号 | 2 | account_num = 1 / after each UPDATE statement | transactions |
-| [M2-Q6(2)](./index.html#learn/M2-Q6/2) | 独立题号 | 2 | READ UNCOMMITTED / WHERE account_num = 2 | transactions |
-| [M3-Q1(1)](./index.html#learn/M3-Q1/1) | M1-Q1 | 3 | unique code, unique title / one or two academic members / together with a date when each qualification has been acquired | conceptual |
-| [M3-Q2(1)](./index.html#learn/M3-Q2/1) | M1-Q2 | 2 | collection of relational schemas / superset method must be used | logical |
-| [M3-Q3(1)](./index.html#learn/M3-Q3/1) | M1-Q3 | 3 | registration numbers of trucks / capacity in a range / 100 inclusive and 500 inclusive | fundamentals |
-| [M3-Q3(2)](./index.html#learn/M3-Q3/2) | M1-Q3 | 2 | first and the last names of all drivers / who are on leave | joins |
-| [M3-Q3(3)](./index.html#learn/M3-Q3/3) | M1-Q3 | 2 | registration numbers of all trucks / not been used for any trips | nested |
-| [M3-Q3(4)](./index.html#learn/M3-Q3/4) | M1-Q3 | 2 | together with total number of trips / no need to include | aggregate |
-| [M3-Q3(5)](./index.html#learn/M3-Q3/5) | M1-Q3 | 2 | all departure cities / together with the names of all destination cities | fundamentals |
-| [M3-Q4(1)](./index.html#learn/M3-Q4/1) | M1-Q4 | 2 | a skill can be possessed by many drivers / some skills are not possessed by any driver | ddl-dml |
-| [M3-Q4(2)](./index.html#learn/M3-Q4/2) | M1-Q4 | 2 | second and third leg / of a trip 36 | ddl-dml |
-| [M3-Q4(3)](./index.html#learn/M3-Q4/3) | M1-Q4 | 2 | trip number 26 / after the present date of trip 26 | ddl-dml |
-| [M3-Q4(4)](./index.html#learn/M3-Q4/4) | M1-Q4 | 2 | Add one more leg / ends in the same city it started from | ddl-dml |
-| [M3-Q4(5)](./index.html#learn/M3-Q4/5) | M1-Q4 | 2 | destination of the first leg is Perth / a trip 20 has 2 legs | ddl-dml |
-| [M3-Q5(1)](./index.html#learn/M3-Q5/1) | M1-Q5 | 2 | as a default database / two new users USER_A and USER_B | access |
-| [M3-Q5(2)](./index.html#learn/M3-Q5/2) | M1-Q5 | 2 | EMPLOYEE and DRIVER / cannot be propagated | access |
-| [M3-Q5(3)](./index.html#learn/M3-Q5/3) | M1-Q5 | 2 | insert the rows / can be propagated | access |
-| [M3-Q5(4)](./index.html#learn/M3-Q5/4) | M1-Q5 | 2 | all relational tables in csit115 database / update privilege | access |
-| [M3-Q5(5)](./index.html#learn/M3-Q5/5) | M1-Q5 | 2 | total number trips performed by each driver / to a user USER_B | access |
-| [M3-Q6(1)](./index.html#learn/M3-Q6/1) | M1-Q6 | 2 | must consist of two columns / more than 100 trips | ddl-dml |
-| [M3-Q6(2)](./index.html#learn/M3-Q6/2) | M1-Q6 | 2 | list the contents of a relational table MESSAGE / Truck PKR856 has been used for 120 trips. | ddl-dml |
-| [M3-Q6(3)](./index.html#learn/M3-Q6/3) | M1-Q6 | 2 | contents of a relational table MESSAGE permanent / make the contents of a relational table MESSAGE permanent | ddl-dml |
-| [M3-Q6(4)](./index.html#learn/M3-Q6/4) | M1-Q6 | 2 | drop a relational table MESSAGE / Finally | ddl-dml |
-| [A1-T1(1)](./index.html#learn/A1-T1/1) | 独立题号 | 3 | ISBN uniquely identifies / at most one Member at a time / must end with your Student ID | conceptual |
-| [A1-T2(1)](./index.html#learn/A1-T2/1) | 独立题号 | 3 | either an Undergraduate student or a Postgraduate student / up to four subjects in a semester / fixing all errors | conceptual |
-| [A2-T1(1)](./index.html#learn/A2-T1/1) | 独立题号 | 2 | Identify each feature / state the transformation applied | logical |
-| [A2-T1(2)](./index.html#learn/A2-T1/2) | 独立题号 | 2 | candidate keys (if any), and foreign keys (if any) / parent relation schema (referenced) before its child | logical |
-| [A2-T2(1)](./index.html#learn/A2-T2/1) | 独立题号 | 2 | consistent with your logical design / parent table (referenced) before its child table | ddl-dml |
-| [A2-T2(2)](./index.html#learn/A2-T2/2) | 独立题号 | 2 | after the table has already been created / no two guests have the same email address | ddl-dml |
-| [A2-T2(3)](./index.html#learn/A2-T2/3) | 独立题号 | 2 | two rooms for each hotel / before inserting data into its child table | ddl-dml |
-| [A2-T2(4)](./index.html#learn/A2-T2/4) | 独立题号 | 2 | all rooms belonging to one of the hotels / by 10% | ddl-dml |
-| [A2-T2(5)](./index.html#learn/A2-T2/5) | 独立题号 | 2 | Do not delete the other hotel / before deleting data from its parent table | ddl-dml |
-| [A3-T1(1)](./index.html#learn/A3-T1/1) | 独立题号 | 2 | Modify the structure and consistency constraint / positive value not larger than 9999.99 | ddl-dml |
-| [A3-T1(2)](./index.html#learn/A3-T1/2) | 独立题号 | 2 | possessed by a participant and a qualification level required by a workshop / positive values no more than 10 | ddl-dml |
-| [A3-T1(3)](./index.html#learn/A3-T1/3) | 独立题号 | 2 | workshopNo=9 / two qualification requirements | ddl-dml |
-| [A3-T1(4)](./index.html#learn/A3-T1/4) | 独立题号 | 2 | participantNo=3 / all qualification levels possessed by the participant increase by 1 | ddl-dml |
-| [A3-T1(5)](./index.html#learn/A3-T1/5) | 独立题号 | 2 | participantNo=10 / all information related to this participant | ddl-dml |
-| [A3-T2(1)](./index.html#learn/A3-T2/1) | 独立题号 | 3 | workshop number, title, category and fee / of all workshops / between 150.00 and 220.00 | fundamentals |
-| [A3-T2(2)](./index.html#learn/A3-T2/2) | 独立题号 | 2 | participant number and full name / who live in Sydney | fundamentals |
-| [A3-T2(3)](./index.html#learn/A3-T2/3) | 独立题号 | 2 | participant number for all participants / more than 3 | aggregate |
-| [A3-T2(4)](./index.html#learn/A3-T2/4) | 独立题号 | 2 | workshop number, title, fee and category / ascending order of category, then in descending order of fee | fundamentals |
-| [A3-T2(5)](./index.html#learn/A3-T2/5) | 独立题号 | 2 | the average fee / in the TECHNOLOGY category | aggregate |
-| [A3-T3(1)](./index.html#learn/A3-T3/1) | 独立题号 | 2 | more than 2 qualifications / ascending order of last name and first name | aggregate |
-| [A3-T3(2)](./index.html#learn/A3-T3/2) | 独立题号 | 2 | workshop number, title and category / no qualification requirements | joins |
-| [A3-T3(3)](./index.html#learn/A3-T3/3) | 独立题号 | 2 | Participants who have not enrolled in a workshop must also be included / ascending order of the total number of enrolments | joins |
-| [A3-T3(4)](./index.html#learn/A3-T3/4) | 独立题号 | 2 | total number of trainers assigned to each workshop / no trainer assigned must also be included | joins |
-| [A3-T3(5)](./index.html#learn/A3-T3/5) | 独立题号 | 2 | trainer number and full name / not been assigned to any workshop | joins |
-| [A4-T1(1)](./index.html#learn/A4-T1/1) | 独立题号 | 2 | workshop number, title and fee / higher than the average fee of all workshops | nested |
-| [A4-T1(2)](./index.html#learn/A4-T1/2) | 独立题号 | 2 | and at least one BUSINESS workshop / Cancelled enrolments must not contribute to either condition | nested |
-| [A4-T1(3)](./index.html#learn/A4-T1/3) | 独立题号 | 2 | Count workshop assignments, not enrolments / assigned to at least two workshops | nested |
-| [A4-T1(4)](./index.html#learn/A4-T1/4) | 独立题号 | 2 | highest recorded for that qualification name / Order by qualification name, then participant number | correlated |
-| [A4-T1(5)](./index.html#learn/A4-T1/5) | 独立题号 | 2 | current fee of 200.00 or more / participants who have completed at least one workshop | correlated |
-| [A4-T2(1)](./index.html#learn/A4-T2/1) | 独立题号 | 3 | regardless of their status / at least one trainer whose organisation is 'UOW' / at least two named common table expressions | cte |
-| [A4-T2(2)](./index.html#learn/A4-T2/2) | 独立题号 | 2 | PARTICIPANT_02 SAMPLE has enrolled / drop the views in dependency order | views |
-| [A4-T2(3)](./index.html#learn/A4-T2/3) | 独立题号 | 2 | one CREATE TABLE ... AS SELECT / both the primary key and a foreign key | ddl-dml |
-| [A4-T2(4)](./index.html#learn/A4-T2/4) | 独立题号 | 2 | by 10 places / at least two trainers | ddl-dml |
-| [A4-T2(5)](./index.html#learn/A4-T2/5) | 独立题号 | 2 | BUSINESS workshops whose current fee is less than / then remove the information from the parent table | ddl-dml |
-| [A4-T3(1)](./index.html#learn/A4-T3/1) | 独立题号 | 2 | before @ / passwords are up to you | access |
-| [A4-T3(2)](./index.html#learn/A4-T3/2) | 独立题号 | 2 | all relational tables in the database csit882 / must not be allowed to propagate | access |
-| [A4-T3(3)](./index.html#learn/A4-T3/3) | 独立题号 | 2 | INSERT, UPDATE and DELETE / must not be allowed to propagate | access |
-| [A4-T3(4)](./index.html#learn/A4-T3/4) | 独立题号 | 2 | only the workshop number, title, category and fee / allowed to grant the same privileges | access |
-| [A4-T3(5)](./index.html#learn/A4-T3/5) | 独立题号 | 2 | including participants with no qualifications / privileges on this view | access |
-| [A4-T4(1)](./index.html#learn/A4-T4/1) | 独立题号 | 3 | A \to B, A \to C, C \to D / derivations of minimal keys / testing the validity of all normal forms | normalization |
-| [A4-T4(2)](./index.html#learn/A4-T4/2) | 独立题号 | 3 | A \to C, B \to D / derivations of minimal keys / testing the validity of all normal forms | normalization |
-| [A4-T4(3)](./index.html#learn/A4-T4/3) | 独立题号 | 3 | A \to B, B \to C, C \to A, C \to D / derivations of minimal keys / testing the validity of all normal forms | normalization |
-| [A4-T4(4)](./index.html#learn/A4-T4/4) | 独立题号 | 3 | AB \to C, AB \to D, C \to B / derivations of minimal keys / testing the validity of all normal forms | normalization |
+| [M1-Q1(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M1-Q1/1) | 独立题号 | 3 | unique code, unique title / one or two academic members / together with a date when each qualification has been acquired | conceptual |
+| [M1-Q2(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M1-Q2/1) | 独立题号 | 2 | collection of relational schemas / superset method must be used | logical |
+| [M1-Q3(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M1-Q3/1) | 独立题号 | 3 | registration numbers of trucks / capacity in a range / 100 inclusive and 500 inclusive | fundamentals |
+| [M1-Q3(2)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M1-Q3/2) | 独立题号 | 2 | first and the last names of all drivers / who are on leave | joins |
+| [M1-Q3(3)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M1-Q3/3) | 独立题号 | 2 | registration numbers of all trucks / not been used for any trips | nested |
+| [M1-Q3(4)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M1-Q3/4) | 独立题号 | 2 | together with total number of trips / no need to include | aggregate |
+| [M1-Q3(5)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M1-Q3/5) | 独立题号 | 2 | all departure cities / together with the names of all destination cities | fundamentals |
+| [M1-Q4(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M1-Q4/1) | 独立题号 | 2 | a skill can be possessed by many drivers / some skills are not possessed by any driver | ddl-dml |
+| [M1-Q4(2)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M1-Q4/2) | 独立题号 | 2 | second and third leg / of a trip 36 | ddl-dml |
+| [M1-Q4(3)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M1-Q4/3) | 独立题号 | 2 | trip number 26 / after the present date of trip 26 | ddl-dml |
+| [M1-Q4(4)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M1-Q4/4) | 独立题号 | 2 | Add one more leg / ends in the same city it started from | ddl-dml |
+| [M1-Q4(5)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M1-Q4/5) | 独立题号 | 2 | destination of the first leg is Perth / a trip 20 has 2 legs | ddl-dml |
+| [M1-Q5(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M1-Q5/1) | 独立题号 | 2 | as a default database / two new users USER_A and USER_B | access |
+| [M1-Q5(2)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M1-Q5/2) | 独立题号 | 2 | EMPLOYEE and DRIVER / cannot be propagated | access |
+| [M1-Q5(3)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M1-Q5/3) | 独立题号 | 2 | insert the rows / can be propagated | access |
+| [M1-Q5(4)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M1-Q5/4) | 独立题号 | 2 | all relational tables in csit115 database / update privilege | access |
+| [M1-Q5(5)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M1-Q5/5) | 独立题号 | 2 | total number trips performed by each driver / to a user USER_B | access |
+| [M1-Q6(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M1-Q6/1) | 独立题号 | 2 | must consist of two columns / more than 100 trips | ddl-dml |
+| [M1-Q6(2)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M1-Q6/2) | 独立题号 | 2 | list the contents of a relational table MESSAGE / Truck PKR856 has been used for 120 trips. | ddl-dml |
+| [M1-Q6(3)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M1-Q6/3) | 独立题号 | 2 | contents of a relational table MESSAGE permanent / make the contents of a relational table MESSAGE permanent | ddl-dml |
+| [M1-Q6(4)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M1-Q6/4) | 独立题号 | 2 | drop a relational table MESSAGE / Finally | ddl-dml |
+| [M2-Q1(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M2-Q1/1) | 独立题号 | 3 | unique within a ward / admitted to and discharged from a hospital many times / not allowed to use any artificial identifiers | conceptual |
+| [M2-Q2(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M2-Q2/1) | 独立题号 | 2 | foreign keys (if any) / superset method must be used | logical |
+| [M2-Q3(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M2-Q3/1) | 独立题号 | 2 | For each bank / listed as zero (0) | joins |
+| [M2-Q3(2)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M2-Q3/2) | 独立题号 | 2 | no bank transactions in 2021 / account numbers and balance on each account | nested |
+| [M2-Q3(3)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M2-Q3/3) | 独立题号 | 2 | unknow total number of employees / at least one branch | nested |
+| [M2-Q3(4)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M2-Q3/4) | 独立题号 | 2 | Insert appropriate information into the new structures / on each bank account | ddl-dml |
+| [M2-Q3(5)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M2-Q3/5) | 独立题号 | 2 | all bank transactions submitted in a year 2019 / not allowed to drop and/or suspend any referential integrity constraints | ddl-dml |
+| [M2-Q4(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M2-Q4/1) | 独立题号 | 2 | a selected group of users on a selected group of relational tables / in the comments provide the comprehensive explanation | auditing |
+| [M2-Q5(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M2-Q5/1) | 独立题号 | 2 | root has already connected / nominate the database as its default database | access |
+| [M2-Q5(2)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M2-Q5/2) | 独立题号 | 2 | included in SQL script dbcreate.sql / within a database banks | access |
+| [M2-Q5(3)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M2-Q5/3) | 独立题号 | 2 | new user account called admin / with a password | access |
+| [M2-Q5(4)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M2-Q5/4) | 独立题号 | 2 | CREATE TABLE and CREATE VIEW / rights to propagate the privilege to the other users | access |
+| [M2-Q5(5)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M2-Q5/5) | 独立题号 | 2 | all bank transactions submitted in 2021 / no rights to propagate | access |
+| [M2-Q6(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M2-Q6/1) | 独立题号 | 2 | account_num = 1 / after each UPDATE statement | transactions |
+| [M2-Q6(2)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M2-Q6/2) | 独立题号 | 2 | READ UNCOMMITTED / WHERE account_num = 2 | transactions |
+| [M3-Q1(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M3-Q1/1) | M1-Q1 | 3 | unique code, unique title / one or two academic members / together with a date when each qualification has been acquired | conceptual |
+| [M3-Q2(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M3-Q2/1) | M1-Q2 | 2 | collection of relational schemas / superset method must be used | logical |
+| [M3-Q3(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M3-Q3/1) | M1-Q3 | 3 | registration numbers of trucks / capacity in a range / 100 inclusive and 500 inclusive | fundamentals |
+| [M3-Q3(2)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M3-Q3/2) | M1-Q3 | 2 | first and the last names of all drivers / who are on leave | joins |
+| [M3-Q3(3)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M3-Q3/3) | M1-Q3 | 2 | registration numbers of all trucks / not been used for any trips | nested |
+| [M3-Q3(4)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M3-Q3/4) | M1-Q3 | 2 | together with total number of trips / no need to include | aggregate |
+| [M3-Q3(5)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M3-Q3/5) | M1-Q3 | 2 | all departure cities / together with the names of all destination cities | fundamentals |
+| [M3-Q4(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M3-Q4/1) | M1-Q4 | 2 | a skill can be possessed by many drivers / some skills are not possessed by any driver | ddl-dml |
+| [M3-Q4(2)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M3-Q4/2) | M1-Q4 | 2 | second and third leg / of a trip 36 | ddl-dml |
+| [M3-Q4(3)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M3-Q4/3) | M1-Q4 | 2 | trip number 26 / after the present date of trip 26 | ddl-dml |
+| [M3-Q4(4)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M3-Q4/4) | M1-Q4 | 2 | Add one more leg / ends in the same city it started from | ddl-dml |
+| [M3-Q4(5)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M3-Q4/5) | M1-Q4 | 2 | destination of the first leg is Perth / a trip 20 has 2 legs | ddl-dml |
+| [M3-Q5(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M3-Q5/1) | M1-Q5 | 2 | as a default database / two new users USER_A and USER_B | access |
+| [M3-Q5(2)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M3-Q5/2) | M1-Q5 | 2 | EMPLOYEE and DRIVER / cannot be propagated | access |
+| [M3-Q5(3)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M3-Q5/3) | M1-Q5 | 2 | insert the rows / can be propagated | access |
+| [M3-Q5(4)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M3-Q5/4) | M1-Q5 | 2 | all relational tables in csit115 database / update privilege | access |
+| [M3-Q5(5)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M3-Q5/5) | M1-Q5 | 2 | total number trips performed by each driver / to a user USER_B | access |
+| [M3-Q6(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M3-Q6/1) | M1-Q6 | 2 | must consist of two columns / more than 100 trips | ddl-dml |
+| [M3-Q6(2)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M3-Q6/2) | M1-Q6 | 2 | list the contents of a relational table MESSAGE / Truck PKR856 has been used for 120 trips. | ddl-dml |
+| [M3-Q6(3)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M3-Q6/3) | M1-Q6 | 2 | contents of a relational table MESSAGE permanent / make the contents of a relational table MESSAGE permanent | ddl-dml |
+| [M3-Q6(4)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/M3-Q6/4) | M1-Q6 | 2 | drop a relational table MESSAGE / Finally | ddl-dml |
+| [A1-T1(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A1-T1/1) | 独立题号 | 3 | ISBN uniquely identifies / at most one Member at a time / must end with your Student ID | conceptual |
+| [A1-T2(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A1-T2/1) | 独立题号 | 3 | either an Undergraduate student or a Postgraduate student / up to four subjects in a semester / fixing all errors | conceptual |
+| [A2-T1(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A2-T1/1) | 独立题号 | 2 | Identify each feature / state the transformation applied | logical |
+| [A2-T1(2)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A2-T1/2) | 独立题号 | 2 | candidate keys (if any), and foreign keys (if any) / parent relation schema (referenced) before its child | logical |
+| [A2-T2(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A2-T2/1) | 独立题号 | 2 | consistent with your logical design / parent table (referenced) before its child table | ddl-dml |
+| [A2-T2(2)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A2-T2/2) | 独立题号 | 2 | after the table has already been created / no two guests have the same email address | ddl-dml |
+| [A2-T2(3)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A2-T2/3) | 独立题号 | 2 | two rooms for each hotel / before inserting data into its child table | ddl-dml |
+| [A2-T2(4)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A2-T2/4) | 独立题号 | 2 | all rooms belonging to one of the hotels / by 10% | ddl-dml |
+| [A2-T2(5)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A2-T2/5) | 独立题号 | 2 | Do not delete the other hotel / before deleting data from its parent table | ddl-dml |
+| [A3-T1(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A3-T1/1) | 独立题号 | 2 | Modify the structure and consistency constraint / positive value not larger than 9999.99 | ddl-dml |
+| [A3-T1(2)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A3-T1/2) | 独立题号 | 2 | possessed by a participant and a qualification level required by a workshop / positive values no more than 10 | ddl-dml |
+| [A3-T1(3)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A3-T1/3) | 独立题号 | 2 | workshopNo=9 / two qualification requirements | ddl-dml |
+| [A3-T1(4)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A3-T1/4) | 独立题号 | 2 | participantNo=3 / all qualification levels possessed by the participant increase by 1 | ddl-dml |
+| [A3-T1(5)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A3-T1/5) | 独立题号 | 2 | participantNo=10 / all information related to this participant | ddl-dml |
+| [A3-T2(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A3-T2/1) | 独立题号 | 3 | workshop number, title, category and fee / of all workshops / between 150.00 and 220.00 | fundamentals |
+| [A3-T2(2)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A3-T2/2) | 独立题号 | 2 | participant number and full name / who live in Sydney | fundamentals |
+| [A3-T2(3)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A3-T2/3) | 独立题号 | 2 | participant number for all participants / more than 3 | aggregate |
+| [A3-T2(4)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A3-T2/4) | 独立题号 | 2 | workshop number, title, fee and category / ascending order of category, then in descending order of fee | fundamentals |
+| [A3-T2(5)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A3-T2/5) | 独立题号 | 2 | the average fee / in the TECHNOLOGY category | aggregate |
+| [A3-T3(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A3-T3/1) | 独立题号 | 2 | more than 2 qualifications / ascending order of last name and first name | aggregate |
+| [A3-T3(2)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A3-T3/2) | 独立题号 | 2 | workshop number, title and category / no qualification requirements | joins |
+| [A3-T3(3)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A3-T3/3) | 独立题号 | 2 | Participants who have not enrolled in a workshop must also be included / ascending order of the total number of enrolments | joins |
+| [A3-T3(4)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A3-T3/4) | 独立题号 | 2 | total number of trainers assigned to each workshop / no trainer assigned must also be included | joins |
+| [A3-T3(5)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A3-T3/5) | 独立题号 | 2 | trainer number and full name / not been assigned to any workshop | joins |
+| [A4-T1(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A4-T1/1) | 独立题号 | 2 | workshop number, title and fee / higher than the average fee of all workshops | nested |
+| [A4-T1(2)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A4-T1/2) | 独立题号 | 2 | and at least one BUSINESS workshop / Cancelled enrolments must not contribute to either condition | nested |
+| [A4-T1(3)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A4-T1/3) | 独立题号 | 2 | Count workshop assignments, not enrolments / assigned to at least two workshops | nested |
+| [A4-T1(4)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A4-T1/4) | 独立题号 | 2 | highest recorded for that qualification name / Order by qualification name, then participant number | correlated |
+| [A4-T1(5)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A4-T1/5) | 独立题号 | 2 | current fee of 200.00 or more / participants who have completed at least one workshop | correlated |
+| [A4-T2(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A4-T2/1) | 独立题号 | 3 | regardless of their status / at least one trainer whose organisation is 'UOW' / at least two named common table expressions | cte |
+| [A4-T2(2)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A4-T2/2) | 独立题号 | 2 | PARTICIPANT_02 SAMPLE has enrolled / drop the views in dependency order | views |
+| [A4-T2(3)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A4-T2/3) | 独立题号 | 2 | one CREATE TABLE ... AS SELECT / both the primary key and a foreign key | ddl-dml |
+| [A4-T2(4)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A4-T2/4) | 独立题号 | 2 | by 10 places / at least two trainers | ddl-dml |
+| [A4-T2(5)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A4-T2/5) | 独立题号 | 2 | BUSINESS workshops whose current fee is less than / then remove the information from the parent table | ddl-dml |
+| [A4-T3(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A4-T3/1) | 独立题号 | 2 | before @ / passwords are up to you | access |
+| [A4-T3(2)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A4-T3/2) | 独立题号 | 2 | all relational tables in the database csit882 / must not be allowed to propagate | access |
+| [A4-T3(3)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A4-T3/3) | 独立题号 | 2 | INSERT, UPDATE and DELETE / must not be allowed to propagate | access |
+| [A4-T3(4)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A4-T3/4) | 独立题号 | 2 | only the workshop number, title, category and fee / allowed to grant the same privileges | access |
+| [A4-T3(5)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A4-T3/5) | 独立题号 | 2 | including participants with no qualifications / privileges on this view | access |
+| [A4-T4(1)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A4-T4/1) | 独立题号 | 3 | A \to B, A \to C, C \to D / derivations of minimal keys / testing the validity of all normal forms | normalization |
+| [A4-T4(2)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A4-T4/2) | 独立题号 | 3 | A \to C, B \to D / derivations of minimal keys / testing the validity of all normal forms | normalization |
+| [A4-T4(3)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A4-T4/3) | 独立题号 | 3 | A \to B, B \to C, C \to A, C \to D / derivations of minimal keys / testing the validity of all normal forms | normalization |
+| [A4-T4(4)](https://cp0330.github.io/Lecture--Review/CSIT882/#learn/A4-T4/4) | 独立题号 | 3 | AB \to C, AB \to D, C \to B / derivations of minimal keys / testing the validity of all normal forms | normalization |

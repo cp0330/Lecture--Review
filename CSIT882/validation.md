@@ -2,7 +2,7 @@
 
 ## 2026-11-26 · 英文读题与独立作答
 
-运行仓库 package.json 中 build、test 的实际命令：`node tools/build.mjs`、`node tests/app.test.mjs`、`python3 tests/validate.py`。环境为 macOS、Node 24、Python 3、内存 SQLite 与仓库指定的构建依赖。此环境没有 npm 命令，直接执行相同脚本。
+运行仓库 package.json 中 build、test 的实际命令：`node tools/build.mjs`、`node tests/app.test.mjs`、`python3 tests/validate.py`。环境为 macOS、Node 24.22.3、Python 3.14.6、SQLite 3.50.4 内存数据库 与仓库指定的构建依赖。此环境没有 npm 命令，直接执行相同脚本。
 
 | 缺口 | 对应小题 | 修复与验证 |
 |---|---|---|
@@ -16,7 +16,9 @@
 | 混合任务与独有题容易漏练 | M2-Q1/Q2/Q4/Q6、A4-T3(4) | 首页分题型直达；审计先练范围再独立完成原题，两套交错执行分别作答。权限明确列级范围与转授。 |
 | 原卷需与教学内容隔离 | Mock 1–3、Custom Mock | 三卷各 6 题的顺序、Q2 原图、计时、导航、提交与复盘通过检查，自组卷单列并含 A4-T4。 |
 
-本轮 73 项状态／页面事件回归与 816 项内容／数据库检查通过。SQL 样例测试核对输出列与粒度、边界、零匹配、空值、分组、CTE 和受影响记录。项目既有验证在 SQLite 中适配了 CONCAT、日期及部分 MySQL 写法。账号、GRANT、SOURCE、general_log、同表子查询和并发时序没有在 MySQL 服务上执行。事务推演假设显式事务、InnoDB、等价可执行更新；详见 M2-Q6 的逐步解析。
+本轮 74 项状态／页面事件回归与 817 项内容／数据库检查通过。SQL 样例测试核对输出列与粒度、边界、零匹配、空值、分组、CTE 和受影响记录。项目既有验证在 SQLite 中适配了 CONCAT、日期及部分 MySQL 写法。账号、GRANT、SOURCE、general_log、同表子查询和并发时序没有在 MySQL 服务上执行。事务推演假设显式事务、InnoDB、等价可执行更新；详见 M2-Q6 的逐步解析。
+
+线上 390 × 844 浏览器验收另外检出一个兼容性问题。只有读题内容的较新备份曾覆盖无时间戳的旧整题答案，现已修复。可[重跑隔离浏览器验收](https://cp0330.github.io/Lecture--Review/CSIT882/tests/reading-browser.html)，产生的测试记录与实际学习记录分开。
 
 仍缺三份 Mock 的原始 PDF、独立评分表、补考新卷及其数据库版本／执行规则。题库按收到的 Mock 题面与配图核对。Assignment 的随附解答与独立推导在答案处分别标明；A1 的随附图作者未独立核实。
 

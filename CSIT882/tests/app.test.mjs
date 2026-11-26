@@ -114,6 +114,8 @@ ok('Deep link to NF part 4 is a blind self-test',nf.api.current==='A4-T4'&&nf.st
 const ck=setup({initial:null,hash:'#learn/A4-T2/1/cte'});ok('CTE variant has a separate independent draft',!!ck.get('transfer-draft'));ck.get('transfer-draft').value='WITH first_step AS';await ck.get('transfer-draft').dispatch('input');ok('Transfer draft belongs only to variant',ck.state().records['A4-T2'].readings['1@cte'].solution==='WITH first_step AS'&&!ck.state().records['A4-T2'].drafts['1']);
 const data=back.state();const copy=C.merge(C.fresh(),JSON.parse(JSON.stringify(data)));
 ok('Backup round trip keeps reading, check status and saved learning stage',copy.settings.bookmark.target===data.settings.bookmark.target&&copy.records['A3-T2'].readings['1'].text0===field.value);
+const oldWhole=C.mergeRecord({answer:'legacy diagram',done:true},{answer:'',updatedAt:'2026-11-26',readings:{1:{text0:'reading only',updatedAt:'2026-11-26'}}});
+ok('Newer reading-only import preserves undated whole-question legacy answer',oldWhole.answer==='legacy diagram'&&oldWhole.done&&oldWhole.readings['1'].text0==='reading only');
 const conflict=C.mergeRecord({readings:{1:{text0:'left',text1:'keep',updatedAt:'1'}}},{readings:{1:{text0:'right',updatedAt:'2'}}});
 ok('Reading conflicts archived and untouched prompt kept',conflict.readings[1].text0==='right'&&conflict.readings[1].text1==='keep'&&conflict.draftHistory.some(x=>x.text==='left'));
 for(const paper of [1,2,3]){

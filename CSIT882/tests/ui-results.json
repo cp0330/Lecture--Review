@@ -1,7 +1,7 @@
 {
   "date": "2026-11-26",
   "status": "passed",
-  "checks": 73,
+  "checks": 74,
   "labels": [
     "Legacy drafts, duplicate IDs and unknown IDs preserved",
     "Legacy done never becomes mastery",
@@ -69,6 +69,7 @@
     "CTE variant has a separate independent draft",
     "Transfer draft belongs only to variant",
     "Backup round trip keeps reading, check status and saved learning stage",
+    "Newer reading-only import preserves undated whole-question legacy answer",
     "Reading conflicts archived and untouched prompt kept",
     "Paper 1 Q2 original image and running timer",
     "Paper 1 submit and review keeps answer",

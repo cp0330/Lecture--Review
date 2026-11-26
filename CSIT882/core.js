@@ -28,7 +28,8 @@
  function union(a,b,key){const result=new Map();for(const x of [...a,...b])if(object(x)){const id=key(x),old=result.get(id),time=v=>v?.reviewUpdatedAt||v?.updatedAt||v?.at||v?.finishedAt||'';if(!old||String(time(x))>=String(time(old)))result.set(id,clone(x));}return [...result.values()];}
  function mergeRecord(a,b){
   a=record(a);b=record(b);const newer=b.updatedAt&&(!a.updatedAt||b.updatedAt>a.updatedAt);const r={...(newer?a:b),...(newer?b:a)};
-  const answerNewer=b.answerUpdatedAt&&(!a.answerUpdatedAt||b.answerUpdatedAt>a.answerUpdatedAt);r.answer=(answerNewer?b:a).answer;r.answerUpdatedAt=(answerNewer?b:a).answerUpdatedAt;
+  // Reading activity can be newer while its legacy whole-question answer is empty.
+  const answerNewer=!!b.answer&&(!a.answer||b.answerUpdatedAt>a.answerUpdatedAt);r.answer=(answerNewer?b:a).answer;r.answerUpdatedAt=(answerNewer?b:a).answerUpdatedAt;
   r.attempts=union(a.attempts,b.attempts,x=>x.id||JSON.stringify(x));
   r.draftHistory=union(a.draftHistory,b.draftHistory,x=>x.id||JSON.stringify(x));
   if(a.answer&&b.answer&&a.answer!==b.answer){const old=answerNewer?a:b;r.draftHistory=union(r.draftHistory,[{id:'import:'+old.answerUpdatedAt+':'+old.answer,text:old.answer,updatedAt:old.answerUpdatedAt,source:'import-conflict'}],x=>x.id);}

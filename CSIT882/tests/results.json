@@ -594,6 +594,7 @@
     "Portable file tests/source-manifest.json",
     "Portable file tests/ui-results.json",
     "Portable file tests/results.json",
+    "Portable file tests/reading-browser.html",
     "Portable file tests/validate.py",
     "Portable file tests/workbench-manifest.json",
     "Portable file tests/browser-results.json",
@@ -819,7 +820,7 @@
     "Displayed A4-T1(4) result matches checked reference",
     "Displayed A4-T2(1) result matches checked reference"
   ],
-  "check_count": 816,
+  "check_count": 817,
   "normalization_cases": 14,
   "normalization_closure_rows": 128,
   "query_results": {
