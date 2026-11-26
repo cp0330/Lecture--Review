@@ -11,12 +11,15 @@ const byId = id => document.getElementById(id);
 const article = byId("question");
 const controls = {
   search: byId("search"),
-  section: byId("section"),
+  topic: byId("topic"),
+  kind: byId("kind"),
+  practice: byId("practice"),
   status: byId("status"),
   previous: byId("previous"),
   next: byId("next")
 };
 let questions = [];
+let topics = {};
 let selected = null;
 let answersPromise = null;
 let storageAvailable = true;
@@ -78,9 +81,12 @@ function badge(status, text) {
 function filtered() {
   const term = controls.search.value.trim().toLowerCase();
   return questions.filter(question => {
-    const searchable = [question.id, question.title, question.kind, ...question.sources].join(" ").toLowerCase();
+    const topic = topics[question.topic];
+    const searchable = [question.id, question.title, question.kind, topic.label, topic.name, ...question.sources].join(" ").toLowerCase();
     return (!term || searchable.includes(term))
-      && (!controls.section.value || question.section === controls.section.value)
+      && (!controls.topic.value || question.topic === controls.topic.value)
+      && (!controls.kind.value || question.kind === controls.kind.value)
+      && (!controls.practice.value || question.practice === controls.practice.value)
       && (!controls.status.value || statusOf(question) === controls.status.value);
   });
 }
@@ -89,18 +95,25 @@ function drawList() {
   const shown = filtered();
   byId("count").textContent = shown.length + " / " + questions.length + " 题";
   const list = byId("question-list");
-  const items = shown.map(question => {
+  let previousTopic;
+  const items = shown.flatMap(question => {
+    const itemsForTopic = [];
+    if (question.topic !== previousTopic) {
+      itemsForTopic.push(element("h3", topics[question.topic].label, "topic-heading"));
+      previousTopic = question.topic;
+    }
     const link = element("a", undefined, "question-link");
     link.href = "#" + question.id;
     if (question.id === selected?.id) link.setAttribute("aria-current", "true");
-    link.append(element("span", question.id, "number"), badge(statusOf(question)),
+    link.append(element("span", question.id + (question.practice === "variant" ? " · 变式" : ""), "number"), badge(statusOf(question)),
       element("span", question.title, "question-title"));
     link.addEventListener("click", event => {
       if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
       event.preventDefault();
       openQuestion(question, true);
     });
-    return link;
+    itemsForTopic.push(link);
+    return itemsForTopic;
   });
   const lastScroll = list.scrollTop;
   list.replaceChildren(...items);
@@ -235,7 +248,7 @@ function drawExamples(question) {
 
 function getAnswers() {
   if (!answersPromise) {
-    answersPromise = fetch("answers.json").then(response => {
+    answersPromise = fetch("answers.json?v=2").then(response => {
       if (!response.ok) throw Error("Unable to fetch answers");
       return response.json();
     }).catch(error => {
@@ -252,7 +265,11 @@ function renderQuestion(question) {
   const statusBadge = badge(statusOf(question));
   const ui = element("div");
   const metadata = element("div", undefined, "question-meta");
-  metadata.append(element("span", question.id, "number"), element("span", question.kind, "caption"), statusBadge);
+  metadata.append(element("span", question.id, "number"),
+    element("span", topics[question.topic].label, "caption"),
+    element("span", question.kind, "caption"));
+  if (question.practice === "variant") metadata.append(element("span", "变式", "caption"));
+  metadata.append(statusBadge);
   const title = element("h2", question.title);
   title.tabIndex = -1;
   title.lang = "en";
@@ -260,6 +277,18 @@ function renderQuestion(question) {
   const sourceList = element("ul");
   sourceList.append(...question.sources.map(item => element("li", item)));
   source.append(element("summary", "来源与页码"), sourceList);
+  if (question.basedOn?.length) {
+    const bases = element("p", "对应原题：", "base-questions");
+    for (const [index, id] of question.basedOn.entries()) {
+      const base = questions.find(item => item.id === id);
+      if (!base) continue;
+      if (index > 0) bases.append(document.createTextNode(" · "));
+      const link = element("a", id + " " + base.title);
+      link.href = "#" + id;
+      bases.append(link);
+    }
+    source.append(bases);
+  }
   const en = element("div");
   en.lang = "en";
   en.append(element("p", question.prompt, "prompt"), element("p", question.submission, "submission"));
@@ -494,7 +523,7 @@ function renderQuestion(question) {
   }
 }
 
-for (const control of [controls.search, controls.section, controls.status]) {
+for (const control of [controls.search, controls.topic, controls.kind, controls.practice, controls.status]) {
   control.addEventListener(control === controls.search ? "input" : "change", adjustSelection);
 }
 controls.previous.addEventListener("click", () => moveSelection(-1));
@@ -504,11 +533,17 @@ window.addEventListener("hashchange", () => {
   if (target) openQuestion(target);
 });
 
-fetch("questions.json").then(response => {
+fetch("questions.json?v=2").then(response => {
   if (!response.ok) throw Error("Unable to fetch question bank");
   return response.json();
 }).then(data => {
-  questions = data;
+  topics = data.topics;
+  questions = data.questions;
+  for (const [id, topic] of Object.entries(topics)) {
+    const option = element("option", topic.label);
+    option.value = id;
+    controls.topic.append(option);
+  }
   openQuestion(questions.find(question => "#" + question.id === location.hash) || questions[0]);
 }).catch(() => {
   article.replaceChildren(element("p", "题库加载失败。请刷新页面；本地访问请通过 HTTP 打开。"));

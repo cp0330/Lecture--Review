@@ -4,7 +4,7 @@
 
 ## CSIT881 · Programming and Data Structures
 
-58 道第二轮闭卷自测题，覆盖 Lecture A、Lecture B、专题 Lab 和两次闭卷 Assignment。
+84 道第二轮闭卷自测题，按 13 个考点组织，覆盖 Lecture A、Lecture B、专题 Lab、两次闭卷 Assignment 和迁移变式。
 
 - [打开 CSIT881 在线题库](https://cp0330.github.io/Lecture--Review/CSIT881/)
 - [覆盖范围与验证记录](CSIT881/README.md)

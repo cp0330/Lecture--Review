@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CSIT881 · 第二轮闭卷自测</title>
-  <meta name="description" content="CSIT881 Lecture A、Lecture B 和闭卷作业复习题。">
-  <link rel="stylesheet" href="style.css">
-  <script src="app.js" defer></script>
+  <meta name="description" content="CSIT881 考点自测、课程案例、变式和闭卷作业。">
+  <link rel="stylesheet" href="style.css?v=2">
+  <script src="app.js?v=2" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -19,33 +19,38 @@
     <section class="intro" aria-labelledby="page-title">
       <div>
         <h1 id="page-title">第二轮闭卷自测</h1>
-        <p>先读英文并提交，再揭示答案。作答和状态保存在当前浏览器。</p>
+        <p>按考点选题。独立提交后再看答案，作答记录保存在当前浏览器。</p>
       </div>
       <div id="totals" class="totals" aria-label="练习进度"></div>
     </section>
     <div class="workspace">
       <aside class="bank" aria-labelledby="bank-title">
-        <h2 id="bank-title">题目</h2>
+        <h2 id="bank-title">考点与练习</h2>
         <div class="filters">
           <label for="search">搜索</label>
-          <input id="search" type="search" placeholder="题名、编号或来源">
+          <input id="search" type="search" placeholder="考点、题名或编号">
+          <label>考点<select id="topic"><option value="">所有考点</option></select></label>
           <div class="filter-row">
-            <label>范围<select id="section">
+            <label>题型<select id="kind">
               <option value="">全部</option>
-              <option value="Diagnostics">Friend of n 诊断</option>
-              <option value="Lecture A">Lecture A</option>
-              <option value="Lecture B">Lecture B</option>
-              <option value="Lab">Lab</option>
-              <option value="Assignment">闭卷 Assignment</option>
+              <option value="Program">完整程序</option>
+              <option value="Function">函数或类</option>
+              <option value="Trace">过程推演</option>
+              <option value="Reorder">代码拖放</option>
             </select></label>
-            <label>状态<select id="status">
+            <label>练习<select id="practice">
               <option value="">全部</option>
-              <option value="unseen">待测</option>
-              <option value="independent">独立通过</option>
-              <option value="assisted">提示后通过</option>
-              <option value="review">待复测</option>
+              <option value="source">课程案例与原题</option>
+              <option value="variant">变式与短练习</option>
             </select></label>
           </div>
+          <label>状态<select id="status">
+            <option value="">全部</option>
+            <option value="unseen">待测</option>
+            <option value="independent">独立通过</option>
+            <option value="assisted">提示后通过</option>
+            <option value="review">待复测</option>
+          </select></label>
         </div>
         <p class="result-count" id="count" role="status"></p>
         <nav id="question-list" class="question-list" aria-label="筛选后的题目"></nav>

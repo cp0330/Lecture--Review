@@ -71,7 +71,8 @@ def verify_diagram(diagram):
     assert set(diagram["edges"]) <= seen
 
 def verify():
-    questions = json.loads((ROOT / "questions.json").read_text(encoding="utf-8"))
+    bank = json.loads((ROOT / "questions.json").read_text(encoding="utf-8"))
+    topics, questions = bank["topics"], bank["questions"]
     answers = json.loads((ROOT / "answers.json").read_text(encoding="utf-8"))
     ids = [question["id"] for question in questions]
     assert len(ids) == len(set(ids))
@@ -80,7 +81,17 @@ def verify():
     assert {int(m[1]) for key in ids if (m := re.fullmatch(r"B(\d\d)-\d+", key))} == {3, 5, 7, 9, 11}
     assert {key for key in ids if key.startswith("AS")} == {f"AS{a}-{q}" for a in (2,3) for q in (1,2,3)}
     assert set(ids) >= {"D01", "D02", "D03", "D04"}
-    sections = collections.Counter(q["section"] for q in questions)
+    assert {q["topic"] for q in questions} == set(topics)
+    assert all(q["practice"] in {"source", "variant"} for q in questions)
+    positions = {topic: i for i, topic in enumerate(topics)}
+    question_positions = [positions[q["topic"]] for q in questions]
+    assert question_positions == sorted(question_positions)
+    new_variants = [q for q in questions if q["id"].startswith("V-")]
+    for q in new_variants:
+        assert q["practice"] == "variant"
+        assert q["basedOn"] and set(q["basedOn"]) <= set(ids) and q["id"] not in q["basedOn"]
+    assert collections.Counter(q["topic"] for q in new_variants) == dict.fromkeys(topics, 2)
+    sections = collections.Counter(q["topic"] for q in questions)
     kinds = collections.Counter()
     runs = collections.Counter()
     failures = []
@@ -120,7 +131,7 @@ def verify():
             print(failure, file=sys.stderr)
         raise SystemExit(1)
     print(f"{len(questions)} questions: {dict(sections)}")
-    print(f"Question types: {dict(kinds)}")
+    print(f"{len(topics)} exam topics, {len(new_variants)} new variants. Question types: {dict(kinds)}")
     print(f"Passed {sum(runs.values())} reference runs: {dict(runs)}")
 
 if __name__ == "__main__":

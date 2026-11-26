@@ -1160,5 +1160,481 @@
     "hint": "Inserting the first node sets both end references to the same node.",
     "explanation": "After 7: front 7 and rear 7; 7.next is None. After 8: front 7 and rear 8; 7.next points to 8, 8.next is None. After dequeuing both, frontNode and endNode are None.",
     "traceTest": "class Node:\n    def __init__(self, datum, next_node=None):\n        self.datum = datum\n        self.next = next_node\n\nclass ListOwner:\n    def __init__(self, first_node=None):\n        self.firstNode = first_node\n\ndef enqueue(q, value):\n    node = Node(value)\n    if q.frontNode is None:\n        q.frontNode = node\n    else:\n        q.endNode.next = node\n    q.endNode = node\nq=ListOwner()\nq.frontNode=q.endNode=None\nenqueue(q,7)\nassert q.frontNode is q.endNode and q.endNode.datum == 7 and q.endNode.next is None\nenqueue(q,8)\nassert q.frontNode.datum == 7 and q.endNode.datum == 8 and q.frontNode.next is q.endNode\nassert q.endNode.next is None\n"
+  },
+  "V-OUT-1": {
+    "hint": "Count the characters between each pair of bars before deciding the width.",
+    "explanation": "The name field is 9 characters wide. The value field is 5 characters wide. The minus sign takes up one character.",
+    "code": "name = input(\"Name: \")\nvalue = int(input(\"Value: \"))\ntemplate = \"|{0:^9}|{1:>5}|\"\nprint(template.format(\"name\", \"value\"))\nprint(template.format(name, value))\n",
+    "tests": [
+      {
+        "input": [
+          "Kai",
+          "-7"
+        ],
+        "result": "Name: Kai\nValue: -7\n|  name   |value|\n|   Kai   |   -7|\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "XY",
+          "0"
+        ],
+        "result": "Name: XY\nValue: 0\n|  name   |value|\n|   XY    |    0|\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "LongLabel",
+          "-1234"
+        ],
+        "result": "Name: LongLabel\nValue: -1234\n|  name   |value|\n|LongLabel|-1234|\n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "V-OUT-2": {
+    "hint": "Derive the last first addend from the lower bound on the second addend. Remove the bars from the available width.",
+    "explanation": "The loop runs from L to T − L inclusive. Build the equation first, then right-align it to W − 2. A reversed interval makes range empty.",
+    "code": "width = int(input(\"Total width: \"))\ntarget = int(input(\"Target: \"))\nlower = int(input(\"Minimum addend: \"))\nprint(\"*\" * width)\nfor first in range(lower, target - lower + 1):\n    equation = \"{0} + {1} = {2}\".format(first, target - first, target)\n    print(\"|{0:>{1}}|\".format(equation, width - 2))\nprint(\"*\" * width)\n",
+    "tests": [
+      {
+        "input": [
+          "14",
+          "6",
+          "2"
+        ],
+        "result": "Total width: 14\nTarget: 6\nMinimum addend: 2\n**************\n|   2 + 4 = 6|\n|   3 + 3 = 6|\n|   4 + 2 = 6|\n**************\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "12",
+          "4",
+          "3"
+        ],
+        "result": "Total width: 12\nTarget: 4\nMinimum addend: 3\n************\n************\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "11",
+          "8",
+          "4"
+        ],
+        "result": "Total width: 11\nTarget: 8\nMinimum addend: 4\n***********\n|4 + 4 = 8|\n***********\n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "V-IF-1": {
+    "hint": "Track the original subtotal separately from the discounted subtotal.",
+    "explanation": "First decide whether the discount applies. Then use the discounted subtotal to decide delivery. A member at 35 pays a delivery charge even though the discount applies.",
+    "code": "subtotal = int(input(\"Subtotal: \"))\nmember = input(\"Member (Y/N): \")\ndiscount = 5 if member == \"Y\" and subtotal >= 35 else 0\nreduced = subtotal - discount\ndelivery = 0 if reduced >= 35 else 8\nprint(\"Discount: {0}\".format(discount))\nprint(\"Delivery: {0}\".format(delivery))\nprint(\"Pay: {0}\".format(reduced + delivery))\n",
+    "tests": [
+      {
+        "input": [
+          "35",
+          "Y"
+        ],
+        "result": "Subtotal: 35\nMember (Y/N): Y\nDiscount: 5\nDelivery: 8\nPay: 38\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "35",
+          "N"
+        ],
+        "result": "Subtotal: 35\nMember (Y/N): N\nDiscount: 0\nDelivery: 0\nPay: 35\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "40",
+          "Y"
+        ],
+        "result": "Subtotal: 40\nMember (Y/N): Y\nDiscount: 5\nDelivery: 0\nPay: 35\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "34",
+          "Y"
+        ],
+        "result": "Subtotal: 34\nMember (Y/N): Y\nDiscount: 0\nDelivery: 8\nPay: 42\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "0",
+          "N"
+        ],
+        "result": "Subtotal: 0\nMember (Y/N): N\nDiscount: 0\nDelivery: 8\nPay: 8\n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "V-IF-2": {
+    "hint": "A superior mark does not override the completion flag.",
+    "explanation": "Check completion before the score. Check the 75 boundary before the 50 boundary.",
+    "code": "def result_label(mark, completed):\n    if not completed:\n        return \"Incomplete\"\n    if mark >= 75:\n        return \"Distinction\"\n    if mark >= 50:\n        return \"Pass\"\n    return \"Fail\"\n",
+    "tests": [
+      {
+        "assertion": "assert result_label(100,False) == \"Incomplete\" and result_label(0,False) == \"Incomplete\""
+      },
+      {
+        "assertion": "assert [result_label(n, True) for n in [0,49,50,74,75,100]] == [\"Fail\",\"Fail\",\"Pass\",\"Pass\",\"Distinction\",\"Distinction\"]"
+      }
+    ]
+  },
+  "V-LOOP-1": {
+    "hint": "Check the sentinel on the raw string and classify zero explicitly.",
+    "explanation": "Break before conversion. After conversion, exactly one of the three counters changes and only the positive branch changes the positive total.",
+    "code": "positive = zeros = negative = positive_sum = 0\nwhile True:\n    entry = input(\"Integer or q: \")\n    if entry == \"q\":\n        break\n    value = int(entry)\n    if value > 0:\n        positive += 1\n        positive_sum += value\n    elif value == 0:\n        zeros += 1\n    else:\n        negative += 1\nprint(\"Positive: {0}\".format(positive))\nprint(\"Zero: {0}\".format(zeros))\nprint(\"Negative: {0}\".format(negative))\nprint(\"Positive sum: {0}\".format(positive_sum))\n",
+    "tests": [
+      {
+        "input": [
+          "-4",
+          "0",
+          "3",
+          "2",
+          "q"
+        ],
+        "result": "Integer or q: -4\nInteger or q: 0\nInteger or q: 3\nInteger or q: 2\nInteger or q: q\nPositive: 2\nZero: 1\nNegative: 1\nPositive sum: 5\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "q"
+        ],
+        "result": "Integer or q: q\nPositive: 0\nZero: 0\nNegative: 0\nPositive sum: 0\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "-1",
+          "-1",
+          "q"
+        ],
+        "result": "Integer or q: -1\nInteger or q: -1\nInteger or q: q\nPositive: 0\nZero: 0\nNegative: 2\nPositive sum: 0\n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "V-LOOP-2": {
+    "hint": "The first printed value may be smaller than the end. The start is included when it is even.",
+    "explanation": "Scan from the upper endpoint down to the lower endpoint, using a negative step. Track whether any value was printed.",
+    "code": "start = int(input(\"Start: \"))\nend = int(input(\"End: \"))\nfound = False\nfor value in range(end, start - 1, -1):\n    if value % 2 == 0:\n        print(value)\n        found = True\nif not found:\n    print(\"None\")\n",
+    "tests": [
+      {
+        "input": [
+          "-2",
+          "5"
+        ],
+        "result": "Start: -2\nEnd: 5\n4\n2\n0\n-2\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "3",
+          "3"
+        ],
+        "result": "Start: 3\nEnd: 3\nNone\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "4",
+          "4"
+        ],
+        "result": "Start: 4\nEnd: 4\n4\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "9",
+          "3"
+        ],
+        "result": "Start: 9\nEnd: 3\nNone\n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "V-FUN-1": {
+    "hint": "Remember the first match, then continue scanning for the count.",
+    "explanation": "Raise the count for every match. Fill the first index only while it is still −1. Return after the loop.",
+    "code": "def locate_letter(text, letter):\n    first = -1\n    count = 0\n    for i, character in enumerate(text):\n        if character == letter:\n            if first == -1:\n                first = i\n            count += 1\n    return first, count\n",
+    "tests": [
+      {
+        "assertion": "assert locate_letter(\"aBaBA\",\"B\") == (1,2) and locate_letter(\"aBaBA\",\"b\") == (-1,0)"
+      },
+      {
+        "assertion": "assert locate_letter(\"aaa\",\"a\") == (0,3) and locate_letter(\"\",\"a\") == (-1,0)"
+      },
+      {
+        "assertion": "assert locate_letter(\"abc\",\"c\") == (2,1)"
+      }
+    ]
+  },
+  "V-FUN-2": {
+    "hint": "n // 10 removes the last digit and n % 10 retrieves it.",
+    "explanation": "Return a one-digit input directly. For a larger integer, add its last digit to the recursive result for the prefix.",
+    "code": "def digit_sum(n):\n    if n < 10:\n        return n\n    return n % 10 + digit_sum(n // 10)\n",
+    "tests": [
+      {
+        "assertion": "assert digit_sum(3052) == 10 and digit_sum(0) == 0"
+      },
+      {
+        "assertion": "assert digit_sum(1000) == 1 and digit_sum(99999) == 45 and digit_sum(7) == 7"
+      }
+    ]
+  },
+  "V-CLS-1": {
+    "hint": "Initialise total through self in the constructor.",
+    "explanation": "Write to self.total. Each board then owns its own total and __str__ reflects its current state.",
+    "code": "class ScoreBoard:\n    def __init__(self, name):\n        self.name = name\n        self.total = 0\n\n    def add(self, points):\n        self.total += points\n        return self.total\n\n    def __str__(self):\n        return \"{0}: {1}\".format(self.name, self.total)\n",
+    "tests": [
+      {
+        "assertion": "a=ScoreBoard(\"A\"); b=ScoreBoard(\"B\")\nassert a.add(3)==3 and str(b)==\"B: 0\"\nassert a.add(-3)==0 and b.add(1)==1\nassert str(a)==\"A: 0\" and str(b)==\"B: 1\""
+      }
+    ]
+  },
+  "V-CLS-2": {
+    "hint": "Compare the absolute difference to the tolerance, including equality.",
+    "explanation": "matches owns the decision rule. feedback calls it and converts its Boolean result into a status string.",
+    "code": "class AnswerCheck:\n    def __init__(self, expected, tolerance):\n        self.expected = expected\n        self.tolerance = tolerance\n\n    def matches(self, value):\n        return abs(value - self.expected) <= self.tolerance\n\n    def feedback(self, value):\n        return \"Correct\" if self.matches(value) else \"Try again\"\n",
+    "tests": [
+      {
+        "assertion": "q=AnswerCheck(10,2)\nassert q.matches(8) is True and q.matches(12) is True\nassert q.matches(7) is False and q.feedback(13)==\"Try again\""
+      },
+      {
+        "assertion": "q=AnswerCheck(0,0)\nassert q.feedback(0)==\"Correct\" and q.feedback(-1)==\"Try again\"\nq.matches=lambda value: True\nassert q.feedback(999)==\"Correct\""
+      }
+    ]
+  },
+  "V-COL-1": {
+    "hint": "The order of first sightings can differ from the order of second sightings.",
+    "explanation": "Count each code in a dictionary. Iterating the dictionary follows insertion order and lets you filter counts without duplicates.",
+    "code": "def duplicate_codes(codes):\n    counts = {}\n    for code in codes:\n        counts[code] = counts.get(code, 0) + 1\n    return [code for code, count in counts.items() if count >= 2]\n",
+    "tests": [
+      {
+        "assertion": "a=[\"B\",\"A\",\"A\",\"C\",\"B\"]; assert duplicate_codes(a)==[\"B\",\"A\"] and a==[\"B\",\"A\",\"A\",\"C\",\"B\"]"
+      },
+      {
+        "assertion": "assert duplicate_codes([])==[] and duplicate_codes([\"a\",\"A\",\"A\"])==[\"A\"]"
+      },
+      {
+        "assertion": "assert duplicate_codes([\"X\",\"X\",\"X\"])==[\"X\"]"
+      }
+    ]
+  },
+  "V-COL-2": {
+    "hint": "Repeated departments update an existing total instead of replacing it.",
+    "explanation": "Read each record's two values and add cp to the total stored under the department, with a default total of zero.",
+    "code": "def credit_totals(records):\n    totals = {}\n    for item in records:\n        department = item[\"department\"]\n        totals[department] = totals.get(department, 0) + item[\"cp\"]\n    return totals\n",
+    "tests": [
+      {
+        "assertion": "rows=[dict(department=\"CS\",cp=3),dict(department=\"M\",cp=0),dict(department=\"CS\",cp=6)]\nassert credit_totals(rows)=={\"CS\":9,\"M\":0} and rows[0][\"cp\"]==3"
+      },
+      {
+        "assertion": "assert credit_totals([])=={}"
+      }
+    ]
+  },
+  "V-ERR-1": {
+    "hint": "Handle the sentinel outside the conversion try block.",
+    "explanation": "A failed conversion must not change the total or terminate the loop. Check q before conversion and print exactly one summary.",
+    "code": "total = 0\nwhile True:\n    entry = input(\"Integer or q: \")\n    if entry == \"q\":\n        break\n    try:\n        total += int(entry)\n    except ValueError:\n        print(\"Invalid integer\")\nprint(\"Total: {0}\".format(total))\n",
+    "tests": [
+      {
+        "input": [
+          "x",
+          "-2",
+          "0",
+          "7",
+          "q"
+        ],
+        "result": "Integer or q: x\nInvalid integer\nInteger or q: -2\nInteger or q: 0\nInteger or q: 7\nInteger or q: q\nTotal: 5\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "q"
+        ],
+        "result": "Integer or q: q\nTotal: 0\n",
+        "files": {},
+        "written": {}
+      },
+      {
+        "input": [
+          "3.0",
+          "q"
+        ],
+        "result": "Integer or q: 3.0\nInvalid integer\nInteger or q: q\nTotal: 0\n",
+        "files": {},
+        "written": {}
+      }
+    ]
+  },
+  "V-ERR-2": {
+    "hint": "Keep the range check outside the conversion handler.",
+    "explanation": "Catch only the int conversion and turn its error into the requested message. Then check the bounds, including 0 and 100.",
+    "code": "def parse_mark(text):\n    try:\n        mark = int(text)\n    except ValueError as error:\n        raise ValueError(\"Not an integer\") from error\n    if mark < 0 or mark > 100:\n        raise ValueError(\"Mark out of range\")\n    return mark\n",
+    "tests": [
+      {
+        "assertion": "assert parse_mark(\"0\")==0 and parse_mark(\"100\")==100 and parse_mark(\" 9 \")==9"
+      },
+      {
+        "assertion": "for text,msg in [(\"x\",\"Not an integer\"),(\"1.0\",\"Not an integer\"),(\"-1\",\"Mark out of range\"),(\"101\",\"Mark out of range\")]:\n    try: parse_mark(text)\n    except ValueError as e: assert str(e)==msg\n    else: raise AssertionError(text)"
+      }
+    ]
+  },
+  "V-FILE-1": {
+    "hint": "Convert the cp field before comparing it. Let the CSV library handle quoted names.",
+    "explanation": "Dictionary values read from a CSV are strings. int conversion ensures a two-digit credit value compares numerically. A count or flag lets you print the empty-result message.",
+    "code": "import csv\n\nfilename = input(\"CSV filename: \")\nminimum = int(input(\"Minimum cp: \"))\nfound = False\nwith open(filename, newline=\"\", encoding=\"utf-8\") as stream:\n    for row in csv.DictReader(stream):\n        credit = int(row[\"cp\"])\n        if credit >= minimum:\n            print(\"{0}: {1} ({2})\".format(row[\"code\"], row[\"name\"], credit))\n            found = True\nif not found:\n    print(\"No matching subjects\")\n",
+    "tests": [
+      {
+        "input": [
+          "courses.csv",
+          "6"
+        ],
+        "result": "CSV filename: courses.csv\nMinimum cp: 6\nA100: Data, I (6)\nC300: Systems (10)\n",
+        "files": {
+          "courses.csv": "code,name,cp\nA100,\"Data, I\",6\nB200,Algebra,3\nC300,Systems,10\n"
+        },
+        "written": {}
+      },
+      {
+        "input": [
+          "courses.csv",
+          "6"
+        ],
+        "result": "CSV filename: courses.csv\nMinimum cp: 6\nNo matching subjects\n",
+        "files": {
+          "courses.csv": "code,name,cp\n"
+        },
+        "written": {}
+      },
+      {
+        "input": [
+          "courses.csv",
+          "2"
+        ],
+        "result": "CSV filename: courses.csv\nMinimum cp: 2\nC: Systems (10)\n",
+        "files": {
+          "courses.csv": "code,name,cp\nC,Systems,10\nD,Algebra,1\n"
+        },
+        "written": {}
+      }
+    ]
+  },
+  "V-FILE-2": {
+    "hint": "Open in append mode. Count writes rather than counting original labels.",
+    "explanation": "After stripping, skip labels that are empty. Open once, write one newline per accepted label, and return the number written.",
+    "code": "def append_labels(filename, labels):\n    written = 0\n    with open(filename, \"a\", encoding=\"utf-8\") as stream:\n        for label in labels:\n            value = label.strip()\n            if value:\n                stream.write(value + \"\\n\")\n                written += 1\n    return written\n",
+    "tests": [
+      {
+        "assertion": "from pathlib import Path\np=Path(\"labels.txt\"); p.write_text(\"first\\n\")\nassert append_labels(p,[\" alpha \",\"\",\"beta\"])==2\nassert p.read_text()==\"first\\nalpha\\nbeta\\n\""
+      },
+      {
+        "assertion": "from pathlib import Path\np=Path(\"new.txt\")\nassert append_labels(p,[\"  \",\"\\t\"])==0 and p.read_text()==\"\""
+      }
+    ]
+  },
+  "V-ALG-1": {
+    "hint": "A matching comparison still counts. When there is no match, the early exit never fires.",
+    "explanation": "For [8, 9, 8, 0]: index 0, A = 4, B = 1.\nFor [0, 1, 0, 4]: index 1, A = 4, B = 2.\nFor [0, 0, 0, 4]: index 3, A = 4, B = 4.\nFor [0, 0, 0, 0]: index −1, A = 4, B = 4.",
+    "traceTest": "a = [8,1,8,4]\nright = [[8,9,8,0],[0,1,0,4],[0,0,0,4],[0,0,0,0]]\nexpected = [(0,4,1),(1,4,2),(3,4,4),(-1,4,4)]\nfor b, answer in zip(right, expected):\n    all_matches = [i for i,(x,y) in enumerate(zip(a,b)) if x == y]\n    earliest = next(iter(all_matches), -1)\n    reduced = earliest+1 if earliest >= 0 else len(a)\n    assert (earliest,len(a),reduced) == answer\n"
+  },
+  "V-ALG-2": {
+    "hint": "A smaller value leaves the search open; a larger value rules out the remaining suffix.",
+    "explanation": "Scan in index order. Return immediately on equality. Exit the loop on a larger value, then return −1 outside it.",
+    "traceTest": "assert first_sorted_index([1,2,2,4],2)==1\nassert first_sorted_index([],3)==-1\nassert first_sorted_index([1,2,4],3)==-1\nclass MustNotRead:\n    def __eq__(self, other): raise AssertionError(\"scanned too far\")\nassert first_sorted_index([1,4,MustNotRead()],3)==-1\n",
+    "order": [
+      "D",
+      "C",
+      "E",
+      "B",
+      "A"
+    ]
+  },
+  "V-SORT-1": {
+    "hint": "The tags are identities only. Compare the numeric key.",
+    "explanation": "Insertion: [2a, 2b, 1] then [1, 2a, 2b]. Selection: [1, 2b, 2a] then [1, 2b, 2a]. Selection's long swap reverses the equal items in this example.",
+    "traceTest": "values=[(2,\"a\"),(2,\"b\"),(1,\"\")]\ninsertion=[]; selection=[]\nfor n in [2,3]:\n    insertion.append(sorted(values[:n], key=lambda item:item[0])+values[n:])\na=values.copy()\nfor i in [0,1]:\n    m=min(range(i, len(a)),key=lambda j:a[j][0])\n    a[i],a[m]=a[m],a[i]\n    selection.append(a.copy())\nassert insertion == [values,[(1,\"\"),(2,\"a\"),(2,\"b\")]]\nassert selection == [[(1,\"\"),(2,\"b\"),(2,\"a\")]]*2\n"
+  },
+  "V-SORT-2": {
+    "hint": "A sorted list at the end of a pass does not prove that the pass had zero swaps.",
+    "explanation": "Pass 1: [1,2,3,4,5], 4 comparisons, 1 swap. Pass 2: the same list, 3 comparisons, 0 swaps, then stop. Total comparisons: 7.",
+    "traceTest": "values=[1,3,2,4,5]; rounds=[]\nfor end in range(len(values)-1,0,-1):\n    swaps=0\n    for i in range(end):\n        if values[i]>values[i+1]:\n            values[i],values[i+1]=values[i+1],values[i]\n            swaps+=1\n    rounds.append((values.copy(),end,swaps))\n    if not swaps:\n        break\nassert rounds == [([1,2,3,4,5],4,1),([1,2,3,4,5],3,0)]\nassert sum(count for _,count,_ in rounds)==7\n"
+  },
+  "V-LL-1": {
+    "hint": "The new node must keep the first match's old successor reachable.",
+    "explanation": "The list becomes 4 → 2 → 8 → 4. firstNode still points to the original first 4. Set new.next to the old successor (8) before the first 4's next is redirected to the new node. For an absent target, leave the list unchanged.",
+    "traceTest": "sequence=[4,8,4]\nfirst=sequence.index(4)\nsuccessor=sequence[first+1]\nsequence.insert(first+1,2)\nassert sequence==[4,2,8,4] and successor==8 and sequence[0]==4\nassert 7 not in sequence\n"
+  },
+  "V-LL-2": {
+    "hint": "A predecessor exists only if the traversal advanced at least once.",
+    "explanation": "Guard an empty list before traversing. After the scan, either clear the head or unlink its former tail through the predecessor, then return the captured node's datum.",
+    "traceTest": "from types import SimpleNamespace as N\nhead=N(datum=1,next=N(datum=2,next=N(datum=3,next=None)))\nowner=N(firstNode=head)\nassert pop_last(owner)==3 and head.next.next is None\nassert pop_last(owner)==2 and head.next is None\nassert pop_last(owner)==1 and owner.firstNode is None\nassert pop_last(owner) is None\n",
+    "order": [
+      "D",
+      "E",
+      "C",
+      "A",
+      "B"
+    ]
+  },
+  "V-SQ-1": {
+    "hint": "A scan can reach the end without any incorrect closing symbol and still be invalid.",
+    "explanation": "]: empty stack at ], stack [].\n([]: unclosed opener after the last character, stack ['('].\n([)]: mismatched closer at ), stack ['(', '['] before the attempted pop.",
+    "traceTest": "def problem(text):\n    stack=[]\n    pairs={\")\":\"(\",\"]\":\"[\",\"}\":\"{\"}\n    for value in text:\n        if value in \"([{\":\n            stack.append(value)\n        else:\n            if not stack: return (\"empty\",[])\n            if stack[-1]!=pairs[value]: return (\"mismatch\",stack)\n            stack.pop()\n    return (\"unclosed\",stack) if stack else (\"ok\",[])\nassert problem(\"]\")==(\"empty\",[])\nassert problem(\"([]\")==(\"unclosed\",[\"(\"])\nassert problem(\"([)]\")==(\"mismatch\",[\"(\",\"[\"])\n"
+  },
+  "V-SQ-2": {
+    "hint": "Appending to an empty queue requires setting the front reference as well.",
+    "explanation": "Create the node, either make it the front or attach it after the old rear, then set endNode to the new node for both cases.",
+    "traceTest": "from types import SimpleNamespace as N\ndef Node(datum,next_node): return N(datum=datum,next=next_node)\nq=N(firstNode=None,endNode=None)\nassert enqueue(q,7) is None\nassert q.firstNode is q.endNode and q.endNode.datum==7\nenqueue(q,8)\nassert q.firstNode.datum==7 and q.firstNode.next is q.endNode and q.endNode.datum==8 and q.endNode.next is None\n",
+    "order": [
+      "C",
+      "D",
+      "B",
+      "A"
+    ]
+  },
+  "V-TREE-1": {
+    "hint": "Skip missing children. Count edges, rather than visited nodes, for height and depth.",
+    "explanation": "Pre-order: K E H F Q M.\nIn-order: E F H K M Q.\nPost-order: F H E M Q K.\nHeight = 3 edges. F has depth 3.",
+    "traceTest": "children = {\"K\":(\"E\",\"Q\"),\"E\":(None,\"H\"),\"Q\":(\"M\",None),\"H\":(\"F\",None)}\norders=[[],[],[]]\ndepths={}\ndef visit(node,depth):\n    if not node: return\n    depths[node]=depth\n    left,right=children.get(node,(None,None))\n    orders[0].append(node)\n    visit(left,depth+1)\n    orders[1].append(node)\n    visit(right,depth+1)\n    orders[2].append(node)\nvisit(\"K\",0)\nassert [\"\".join(x) for x in orders]==[\"KEHFQM\",\"EFHKMQ\",\"FHEMQK\"]\nassert max(depths.values())==depths[\"F\"]==3\n"
+  },
+  "V-TREE-2": {
+    "hint": "A single comparison chooses which child to follow when the current key does not match.",
+    "explanation": "Continue only while a node exists. Test equality first. Otherwise move to the appropriate child. The search ends outside the loop when no child remains.",
+    "traceTest": "from types import SimpleNamespace as N\ntree=N(key=8,left=N(key=2,left=None,right=None),right=N(key=15,left=N(key=10,left=None,right=None),right=None))\nassert contains_key(tree,8) is True and contains_key(tree,10) is True\nassert contains_key(tree,3) is False and contains_key(tree,16) is False\nassert contains_key(None,8) is False\n",
+    "order": [
+      "E",
+      "B",
+      "C",
+      "D",
+      "A"
+    ]
   }
 }

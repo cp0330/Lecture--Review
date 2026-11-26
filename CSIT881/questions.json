@@ -1,1195 +1,1974 @@
-[
-  {
-    "id": "D01",
-    "section": "Diagnostics",
-    "title": "Loop endpoints",
-    "kind": "Trace",
-    "sources": [
-      "Lecture A04 · Python-04-For-Loop-26-881.pdf · pp. 6–11",
-      "Assignment 2, Q3 (unpaginated) · new diagnostic"
-    ],
-    "prompt": "A display must contain the positive pairs that add to 6, in increasing order of the first addend. Include both orders when the two addends differ. Give the first addend, the last addend, the row count and the Python range for the first addend.",
-    "submission": "Submit the requested values or steps in order.",
-    "examples": []
-  },
-  {
-    "id": "D02",
-    "section": "Diagnostics",
-    "title": "Right-align an entire equation",
-    "kind": "Function",
-    "sources": [
-      "Lecture A02 · Python-02-StringFormat-26-881.pdf · pp. 13–24",
-      "Assignment 2, Q3 (unpaginated) · new diagnostic"
-    ],
-    "prompt": "Define equation_field(equation, width). Return equation right-aligned in a field width characters wide with a | marker on each side. Leave internal spaces unchanged. Use str.format(). Test values below are shown using repr.",
-    "submission": "Submit only the requested Python definition(s).",
-    "examples": [
-      {
-        "given": "equation_field(\"2 + 8 = 10\", 12)",
-        "expected": "'|  2 + 8 = 10|'"
-      }
-    ]
-  },
-  {
-    "id": "D03",
-    "section": "Diagnostics",
-    "title": "Outer width and field width",
-    "kind": "Trace",
-    "sources": [
-      "Lecture A02 · Python-02-StringFormat-26-881.pdf · pp. 14–24",
-      "Assignment 2, Q3 (unpaginated) · new diagnostic"
-    ],
-    "prompt": "An output line is 20 characters wide in total. Its first and last characters are |. Inside, the text '3 + 8 = 11' is right-aligned. State the field width, the number of spaces before the 3 and the number of stars needed to draw a full-width border.",
-    "submission": "Submit the requested values or steps in order.",
-    "examples": []
-  },
-  {
-    "id": "D04",
-    "section": "Diagnostics",
-    "title": "Complement pairs in a frame",
-    "kind": "Program",
-    "sources": [
-      "Lecture A04 · Python-04-For-Loop-26-881.pdf · pp. 6–11",
-      "Assignment 2, Q3 (unpaginated) · new transfer exercise"
-    ],
-    "prompt": "Read an inner width followed by a target (target ≥ 2). Display every ordered pair of positive integers that sums to the target, in ascending order of the first addend. Use the ruler and frame in the examples. The width is large enough for every equation. Use str.format() for right alignment.",
-    "submission": "Submit a complete Python 3 program.",
-    "examples": [
-      {
-        "given": "11\n5",
-        "expected": "Enter a length value: 11\nEnter a number: 5\nFriend of 5 display\n 12345678901\n*************\n|  1 + 4 = 5|\n|  2 + 3 = 5|\n|  3 + 2 = 5|\n|  4 + 1 = 5|\n*************\n 12345678901"
-      }
-    ]
-  },
-  {
-    "id": "A01-1",
-    "section": "Lecture A",
-    "title": "Two integers",
-    "kind": "Program",
-    "sources": [
-      "Lecture A01 · Python-01-InputOutput-26-881.pdf · pp. 26–31"
-    ],
-    "prompt": "Read two integers and display their sum using the exact prompts and output shown.",
-    "submission": "Submit a complete Python 3 program.",
-    "examples": [
-      {
-        "given": "100\n50",
-        "expected": "Enter the 1st integer: 100\nEnter the 2nd integer: 50\nThe sum of 100 and 50 is 150"
-      }
-    ]
-  },
-  {
-    "id": "A02-1",
-    "section": "Lecture A",
-    "title": "Alkali metals table",
-    "kind": "Program",
-    "sources": [
-      "Lecture A02 · Python-02-StringFormat-26-881.pdf · pp. 14–22"
-    ],
-    "prompt": "Print the alkali metals table using str.format(). Use four adjacent fields: left-aligned widths 15 and 10, centered width 25, and right-aligned width 15. Preserve the heading, blank lines and position ruler shown.",
-    "submission": "Submit a complete Python 3 program.",
-    "examples": [
-      {
-        "given": "(no input)",
-        "expected": "Alkali metals:\n\nElement        Symbol          Atomic number        Atomic weight\nLithium        Li                    3                       6.94\nSodium         Na                   11                      22.99\nPotassium      K                    19                     39.098\nRubidium       Rb                   37                     85.468\nCaesium        Cs                   55                    132.905\nFrancium       Fr                   87                        223\n\n12345678901234567890123456789012345678901234567890123456789012345\n"
-      }
-    ]
-  },
-  {
-    "id": "A02-2",
-    "section": "Lecture A",
-    "title": "Bundle cost",
-    "kind": "Program",
-    "sources": [
-      "Lecture A02 · Python-02-StringFormat-26-881.pdf · pp. 27–33 · original pricing problem · practice I/O"
-    ],
-    "prompt": "Each item costs $10. Each complete bundle of 3 costs $20. Read a non-negative number of items and print the total. Apply the bundle price to as many complete bundles as possible.",
-    "submission": "Submit a complete Python 3 program.",
-    "examples": [
-      {
-        "given": "7",
-        "expected": "How many items? 7\nTotal cost: $50"
-      }
-    ]
-  },
-  {
-    "id": "A03-1",
-    "section": "Lecture A",
-    "title": "Pricing and postage",
-    "kind": "Program",
-    "sources": [
-      "Lecture A03 · Python-03-IfElse-26-881.pdf · pp. 22–32 · Example 2 · practice prompts"
-    ],
-    "prompt": "For 1–50 items, the unit price is $3 and standard postage is $10. For more than 50, the unit price is $2 and standard postage is free. Registered postage is $15 and express postage is $20 at any quantity. Read a positive quantity and one of s, r or e. Print an itemised receipt.",
-    "submission": "Submit a complete Python 3 program.",
-    "examples": [
-      {
-        "given": "10\nr",
-        "expected": "Enter the number of items: 10\nChoose shipping (s/r/e): r\nItem cost = $3 x 10 = $30\nPostage: $15\nTotal cost: $45\n"
-      }
-    ]
-  },
-  {
-    "id": "A04-1",
-    "section": "Lecture A",
-    "title": "Friend of 10",
-    "kind": "Program",
-    "sources": [
-      "Lecture A04 · Python-04-For-Loop-26-881.pdf · pp. 6–11"
-    ],
-    "prompt": "Use a for loop and str.format() to print the Friend of 10 table. Include zero as a possible addend. Align each addend and the total in a right-aligned field of width 2.",
-    "submission": "Submit a complete Python 3 program.",
-    "examples": [
-      {
-        "given": "(no input)",
-        "expected": " 0 + 10 = 10\n 1 +  9 = 10\n 2 +  8 = 10\n 3 +  7 = 10\n 4 +  6 = 10\n 5 +  5 = 10\n 6 +  4 = 10\n 7 +  3 = 10\n 8 +  2 = 10\n 9 +  1 = 10\n10 +  0 = 10\n"
-      }
-    ]
-  },
-  {
-    "id": "A04-2",
-    "section": "Lecture A",
-    "title": "Descending number pattern",
-    "kind": "Program",
-    "sources": [
-      "Lecture A04 · Python-04-For-Loop-26-881.pdf · pp. 19–21"
-    ],
-    "prompt": "Print the five lines shown using nested for loops. Separate numbers by one space. Do not print a space at the end of a line.",
-    "submission": "Submit a complete Python 3 program.",
-    "examples": [
-      {
-        "given": "(no input)",
-        "expected": "2 1\n4 3 2 1\n6 5 4 3 2 1\n8 7 6 5 4 3 2 1\n10 9 8 7 6 5 4 3 2 1\n"
-      }
-    ]
-  },
-  {
-    "id": "A04-3",
-    "section": "Lecture A",
-    "title": "Characters in order",
-    "kind": "Program",
-    "sources": [
-      "Lecture A04 · Python-04-For-Loop-26-881.pdf · pp. 24–28 · lecture case · input extension"
-    ],
-    "prompt": "Read a line of text and display one character per line in index order. Include its spaces. Empty input produces no character lines.",
-    "submission": "Submit a complete Python 3 program.",
-    "examples": [
-      {
-        "given": "Hi there!",
-        "expected": "Enter a string: Hi there!\nH\ni\n \nt\nh\ne\nr\ne\n!"
-      }
-    ]
-  },
-  {
-    "id": "A05-1",
-    "section": "Lecture A",
-    "title": "Equations between two bounds",
-    "kind": "Program",
-    "sources": [
-      "Lecture A05 · Python-05-While-Loop-26-881.pdf · pp. 12–13"
-    ],
-    "prompt": "Read a start and an end integer and print the doubling equation for each integer in the interval, including both endpoints. Use a while loop. Assume the start is no greater than the end.",
-    "submission": "Submit a complete Python 3 program.",
-    "examples": [
-      {
-        "given": "4\n7",
-        "expected": "Enter start number: 4\nEnter end number: 7\nEquations:\n4 + 4 = 8\n5 + 5 = 10\n6 + 6 = 12\n7 + 7 = 14\n"
-      }
-    ]
-  },
-  {
-    "id": "A05-2",
-    "section": "Lecture A",
-    "title": "Count even and odd numbers",
-    "kind": "Program",
-    "sources": [
-      "Lecture A05 · Python-05-While-Loop-26-881.pdf · pp. 14–19",
-      "Week 13 recording · 00:59–01:00 and 01:24–01:26"
-    ],
-    "prompt": "Read integers until the user enters q. Print the number of even and odd values entered, using the exact prompts and result lines shown.",
-    "submission": "Submit a complete Python 3 program.",
-    "examples": [
-      {
-        "given": "5\n7\n0\n13\n8\n15\nq",
-        "expected": "Enter an integer (or q to quit): 5\nEnter an integer (or q to quit): 7\nEnter an integer (or q to quit): 0\nEnter an integer (or q to quit): 13\nEnter an integer (or q to quit): 8\nEnter an integer (or q to quit): 15\nEnter an integer (or q to quit): q\nYou have entered 2 even numbers\nYou have entered 4 odd numbers\n"
-      }
-    ]
-  },
-  {
-    "id": "A06-1",
-    "section": "Lecture A",
-    "title": "Return a grade",
-    "kind": "Function",
-    "sources": [
-      "Lecture A06 · Python-06-Function-26-881.pdf · pp. 10–14"
-    ],
-    "prompt": "Write calculate_grade(mark), where mark is an integer from 0 to 100. Return A for 80–100, B for 60–79, C for 40–59 and D for 0–39.",
-    "submission": "Submit only the requested Python definition(s).",
-    "examples": [
-      {
-        "given": "calculate_grade(62)",
-        "expected": "'B'"
-      },
-      {
-        "given": "calculate_grade(5)",
-        "expected": "'D'"
-      }
-    ]
-  },
-  {
-    "id": "A06-2",
-    "section": "Lecture A",
-    "title": "Expanding word",
-    "kind": "Function",
-    "sources": [
-      "Lecture A06 · Python-06-Function-26-881.pdf · pp. 21–26"
-    ],
-    "prompt": "Write expand(word, multiplicity). Return a string in which each character of word is repeated multiplicity times before moving to the next character. The multiplicity is a non-negative integer.",
-    "submission": "Submit only the requested Python definition(s).",
-    "examples": [
-      {
-        "given": "expand(\"Meow\", 4)",
-        "expected": "'MMMMeeeeoooowwww'"
-      },
-      {
-        "given": "expand(\"Frog\", 0)",
-        "expected": "''"
-      }
-    ]
-  },
-  {
-    "id": "A06-3",
-    "section": "Lecture A",
-    "title": "Recursive factorial",
-    "kind": "Function",
-    "sources": [
-      "Lecture A06 · Python-06-Function-26-881.pdf · pp. 33–39"
-    ],
-    "prompt": "Write a recursive factorial(n) for positive integers. Return the product 1 × 2 × … × n. Include a base case.",
-    "submission": "Submit only the requested Python definition(s).",
-    "examples": [
-      {
-        "given": "factorial(5)",
-        "expected": "120"
-      }
-    ]
-  },
-  {
-    "id": "A07-1",
-    "section": "Lecture A",
-    "title": "Student display methods",
-    "kind": "Function",
-    "sources": [
-      "Lecture A07 · Python-07-Class-26-881.pdf · pp. 30–36, 47–49"
-    ],
-    "prompt": "Define Student with instance attributes id, first_name and last_name. Implement __str__ to return 'First Last (id)' and __repr__ to return the constructor representation shown. Treat IDs as strings, including their leading zeros. Sample names and IDs are practice data.",
-    "submission": "Submit only the requested Python definition(s).",
-    "examples": [
-      {
-        "given": "student = Student(\"0012345\", \"Ava\", \"Lee\")\nprint(str(student))\nprint(repr(student))",
-        "expected": "Ava Lee (0012345)\nStudent('0012345', 'Ava', 'Lee')"
-      }
-    ]
-  },
-  {
-    "id": "A08-1",
-    "section": "Lecture A",
-    "title": "MathQuestion",
-    "kind": "Function",
-    "sources": [
-      "Lecture A08 · Python-08-Class2-26-881.pdf · pp. 3–10"
-    ],
-    "prompt": "Define MathQuestion(number1, number2, operation, solution) and its three instance methods. __str__ returns the complete equation. question_text() returns the equation prompt ending in '= ' including its final space. check_answer(answer) returns a Boolean.",
-    "submission": "Submit only the requested Python definition(s).",
-    "examples": [
-      {
-        "given": "q = MathQuestion(4, 6, \"+\", 10)\nprint(str(q))\nprint(repr(q.question_text()))\nprint(q.check_answer(10))",
-        "expected": "4 + 6 = 10\n'4 + 6 = '\nTrue"
-      }
-    ]
-  },
-  {
-    "id": "A08-2",
-    "section": "Lecture A",
-    "title": "Arithmetic practice loop",
-    "kind": "Program",
-    "sources": [
-      "Lecture A08 · Python-08-Class2-26-881.pdf · pp. 9–10, 17–19 · case study main loop · deterministic question source"
-    ],
-    "prompt": "Use the supplied question sequence in order: 3 + 12 = 15, 14 / 2 = 7, 5 x 8 = 40, 10 - 4 = 6. For each prompt read the user's integer answer or q. Print Correct or Incorrect. On q, print Good bye! and stop. Also print Good bye! if all four questions were answered. Do not randomise this exercise.",
-    "submission": "Submit a complete Python 3 program.",
-    "examples": [
-      {
-        "given": "15\n8\n40\nq",
-        "expected": "Welcome to cool math:\n3 + 12 = 15\nCorrect\n14 / 2 = 8\nIncorrect\n5 x 8 = 40\nCorrect\n10 - 4 = q\nGood bye!"
-      }
-    ]
-  },
-  {
-    "id": "A09-1",
-    "section": "Lecture A",
-    "title": "Double every item",
-    "kind": "Function",
-    "sources": [
-      "Lecture A09 · Python-09-List-26-881.pdf · pp. 23–24"
-    ],
-    "prompt": "Write doubling(values). Return a new list in which each input item occurs twice in its original position. Leave the input list unchanged.",
-    "submission": "Submit only the requested Python definition(s).",
-    "examples": [
-      {
-        "given": "doubling([4, 5, 6])",
-        "expected": "[4, 4, 5, 5, 6, 6]"
-      }
-    ]
-  },
-  {
-    "id": "A09-2",
-    "section": "Lecture A",
-    "title": "Multiply elements by position",
-    "kind": "Function",
-    "sources": [
-      "Lecture A09 · Python-09-List-26-881.pdf · pp. 25–26"
-    ],
-    "prompt": "Write list_multiply(list1, list2). The two input lists of integers have the same length. Return a new list of pairwise products.",
-    "submission": "Submit only the requested Python definition(s).",
-    "examples": [
-      {
-        "given": "list_multiply([4, 5, 6], [10, 0, 1])",
-        "expected": "[40, 0, 6]"
-      }
-    ]
-  },
-  {
-    "id": "A10-1",
-    "section": "Lecture A",
-    "title": "State abbreviation lookup",
-    "kind": "Program",
-    "sources": [
-      "Lecture A10 · Python-10-Dictionary-26-881.pdf · pp. 8–10, 20 · lecture example with unknown-key extension",
-      "Lab 10 · state abbreviation lookup (unpaginated)"
-    ],
-    "prompt": "Read an uppercase state or territory abbreviation. Use a dictionary: NSW = New South Wales, ACT = Australian Capital Territory, NT = Northern Territory, QLD = Queensland, SA = South Australia, TAS = Tasmania, VIC = Victoria, WA = Western Australia. For any other abbreviation print Unknown state. Use the prompt in the examples.",
-    "submission": "Submit a complete Python 3 program.",
-    "examples": [
-      {
-        "given": "NT",
-        "expected": "Enter state NSW/ACT/NT/QLD/SA/TAS/VIC/WA: NT\nThe state you entered is Northern Territory"
-      },
-      {
-        "given": "XX",
-        "expected": "Enter state NSW/ACT/NT/QLD/SA/TAS/VIC/WA: XX\nUnknown state"
-      }
-    ]
-  },
-  {
-    "id": "A10-2",
-    "section": "Lecture A",
-    "title": "Subject enrolment records",
-    "kind": "Program",
-    "sources": [
-      "Lecture A10 · Python-10-Dictionary-26-881.pdf · pp. 21–25 · practice with specified columns"
-    ],
-    "prompt": "Read at least one subject code and integer credit point. Store each subject as a dictionary with keys code and cp in a list. After each entry read Y or N to continue or finish. Print the rows in entry order. Use a left-aligned field of width 13 for each code and print cp immediately after that field. Use the exact heading shown.",
-    "submission": "Submit a complete Python 3 program.",
-    "examples": [
-      {
-        "given": "MATH111\n10\nY\nCS222\n4\nY\nLOGIC333\n5\nN",
-        "expected": "Welcome to subject enrolment\nEnter subject code: MATH111\nEnter credit point: 10\nAdd more subjects? Y/N: Y\nEnter subject code: CS222\nEnter credit point: 4\nAdd more subjects? Y/N: Y\nEnter subject code: LOGIC333\nEnter credit point: 5\nAdd more subjects? Y/N: N\nSubject code CP\nMATH111      10\nCS222        4\nLOGIC333     5\n"
-      }
-    ]
-  },
-  {
-    "id": "A11-1",
-    "section": "Lecture A",
-    "title": "Handle two numeric exceptions",
-    "kind": "Program",
-    "sources": [
-      "Lecture A11 · Python-11-Exception-26-881.pdf · pp. 19–20"
-    ],
-    "prompt": "Read two integers and print their true division result. Use separate handlers for invalid integer input and division by zero. Follow the sample messages. On a ValueError while reading the first integer, stop immediately.",
-    "submission": "Submit a complete Python 3 program.",
-    "examples": [
-      {
-        "given": "13\n2",
-        "expected": "Enter the 1st integer: 13\nEnter the 2nd integer: 2\n13 / 2 = 6.5"
-      },
-      {
-        "given": "13\n0",
-        "expected": "Enter the 1st integer: 13\nEnter the 2nd integer: 0\nInvalid division - cannot divide by 0"
-      }
-    ]
-  },
-  {
-    "id": "A11-2",
-    "section": "Lecture A",
-    "title": "Retry until a positive integer",
-    "kind": "Program",
-    "sources": [
-      "Lecture A11 · Python-11-Exception-26-881.pdf · pp. 24–25"
-    ],
-    "prompt": "Keep asking until the user enters a positive integer. Distinguish invalid integer text from an integer that is zero or negative. Match the exact prompts and messages.",
-    "submission": "Submit a complete Python 3 program.",
-    "examples": [
-      {
-        "given": "abc\n-10\nxyz\n0\n5",
-        "expected": "Enter a positive integer: abc\nError: Invalid integer format\nEnter a positive integer: -10\nError: Input must be a positive number\nEnter a positive integer: xyz\nError: Invalid integer format\nEnter a positive integer: 0\nError: Input must be a positive number\nEnter a positive integer: 5\nYou have entered 5"
-      }
-    ]
-  },
-  {
-    "id": "A11-3",
-    "section": "Lecture A",
-    "title": "Raise an error for a non-positive integer",
-    "kind": "Function",
-    "sources": [
-      "Lecture A11 · Python-11-Exception-26-881.pdf · pp. 21–25 · adapted to a function signature"
-    ],
-    "prompt": "Write parse_positive(text). Convert text to an integer. Propagate ValueError from invalid integer text. If the conversion succeeds but the value is zero or below, raise ValueError('Input must be a positive number'). Return the integer on success.",
-    "submission": "Submit only the requested Python definition(s).",
-    "examples": [
-      {
-        "given": "parse_positive(\"5\")",
-        "expected": "5"
-      },
-      {
-        "given": "parse_positive(\"0\")",
-        "expected": "ValueError: Input must be a positive number"
-      }
-    ]
-  },
-  {
-    "id": "A12-1",
-    "section": "Lecture A",
-    "title": "Write a times table",
-    "kind": "Program",
-    "sources": [
-      "Lecture A12 · Python-12-File-26-881.pdf · pp. 9–10"
-    ],
-    "prompt": "Read an integer and an output filename. Replace that file with nine lines showing the multiplication table from 1 through 9. Terminate each line with a newline. The two prompts and file content are shown below.",
-    "submission": "Submit a complete Python 3 program.",
-    "examples": [
-      {
-        "given": "7\ntable.txt",
-        "expected": "Enter a number to generate times table: 7\nEnter output file path: table.txt\n\nContents of table.txt:\n7 x 1 = 7\n7 x 2 = 14\n7 x 3 = 21\n7 x 4 = 28\n7 x 5 = 35\n7 x 6 = 42\n7 x 7 = 49\n7 x 8 = 56\n7 x 9 = 63\n"
-      }
-    ]
-  },
-  {
-    "id": "A12-2",
-    "section": "Lecture A",
-    "title": "Read a subject CSV file",
-    "kind": "Program",
-    "sources": [
-      "Lecture A12 · Python-12-File-26-881.pdf · pp. 17–19 · original records · practice filename prompt",
-      "Lab 12 · Subject CSV (unpaginated)"
-    ],
-    "prompt": "Read the name of a CSV file with header code,name,cp. Use csv.DictReader to print one data row per subject. Left-align the three fields in widths 10, 30, and 10. Do not print the header.",
-    "submission": "Submit a complete Python 3 program.",
-    "examples": [
-      {
-        "given": "subject.csv\n\nFile content:\ncode,name,cp\nMATH100,Algebra,6\nCS200,C++,2\nIT300,Biotechnology,3\n",
-        "expected": "Enter subject filename: subject.csv\nMATH100   Algebra                       6         \nCS200     C++                           2         \nIT300     Biotechnology                 3         \n"
-      }
-    ]
-  },
-  {
-    "id": "A12-3",
-    "section": "Lecture A",
-    "title": "Write subject records to CSV",
-    "kind": "Function",
-    "sources": [
-      "Lecture A12 · Python-12-File-26-881.pdf · pp. 17–18 · adapted to a function signature"
-    ],
-    "prompt": "Define write_subjects(filename, records). records is a list of dictionaries with keys code, name and cp. Replace the file using the header code,name,cp and correctly quote any data field containing a comma. Include the header even for an empty list. Return None. Newline style is platform-dependent.",
-    "submission": "Submit only the requested Python definition(s).",
-    "examples": [
-      {
-        "given": "write_subjects(\"subject.csv\", [{\"code\":\"MATH100\",\"name\":\"Algebra\",\"cp\":6}])",
-        "expected": "File content:\ncode,name,cp\nMATH100,Algebra,6"
-      }
-    ]
-  },
-  {
-    "id": "B03-1",
-    "section": "Lecture B",
-    "title": "First equal position and Big O",
-    "kind": "Trace",
-    "sources": [
-      "Lecture L03B · CSIT881-L03B-Algorithm.pdf · pp. 19–25"
-    ],
-    "prompt": "Algorithm 1 scans every position and remembers the first equal position. Algorithm 2 returns immediately at the first equal position. Both return −1 when none exists. For the original lists below, give each return value and the number of positions each algorithm visits. Then give each best-case and worst-case time complexity for lists of length n.",
-    "submission": "Submit the requested values or steps in order.",
-    "examples": [
-      {
-        "given": "list1 = [4, 6, -3, 7, 1, 5]\nlist2 = [8, -6, 8, 7, 4, 5]",
-        "expected": ""
-      }
-    ]
-  },
-  {
-    "id": "B03-2",
-    "section": "Lecture B",
-    "title": "Early return",
-    "kind": "Reorder",
-    "sources": [
-      "Lecture L03B · CSIT881-L03B-Algorithm.pdf · pp. 20–24"
-    ],
-    "prompt": "Rebuild the early-return implementation. first_match returns the first index whose values are equal and −1 when no position matches. The two lists have equal length. Indentation is supplied.",
-    "submission": "Arrange the blocks from top to bottom. Use each block once.",
-    "examples": [],
-    "blocks": {
-      "A": "        if list1[i] == list2[i]:",
-      "B": "    return -1",
-      "C": "def first_match(list1, list2):",
-      "D": "            return i",
-      "E": "    for i in range(len(list1)):"
-    }
-  },
-  {
-    "id": "B03-3",
-    "section": "Lecture B",
-    "title": "Dominant terms",
-    "kind": "Trace",
-    "sources": [
-      "Lecture L03B · CSIT881-L03B-Algorithm.pdf · pp. 17–19"
-    ],
-    "prompt": "Give the tightest listed Big-O class for each expression: 10,000; 4n + 7; n + 3 log(n) + 100; 5 log(n) + 100; 3n² + 7n + 8; 4n log(n) + 3n² + n. Choose from O(1), O(log n), O(n), O(n log n), O(n²).",
-    "submission": "Submit the requested values or steps in order.",
-    "examples": []
-  },
-  {
-    "id": "B05-1",
-    "section": "Lecture B",
-    "title": "Insertion sort rounds",
-    "kind": "Trace",
-    "sources": [
-      "Lecture L05B · CSIT881-L05B-Sort.pdf · pp. 3–15"
-    ],
-    "prompt": "Trace ascending insertion sort on the original lecture list below. A round means one pass of the outer loop starting at index 1. Write the entire list at the end of the first three rounds.",
-    "submission": "Submit the requested values or steps in order.",
-    "examples": [
-      {
-        "given": "[60, 10, 90, 50, 100, 80, 70, 30, 40, 20]",
-        "expected": ""
-      }
-    ]
-  },
-  {
-    "id": "B05-2",
-    "section": "Lecture B",
-    "title": "Selection sort rounds",
-    "kind": "Trace",
-    "sources": [
-      "Lecture L05B · CSIT881-L05B-Sort.pdf · pp. 20–26"
-    ],
-    "prompt": "Trace ascending selection sort on the original lecture list below. Choose the minimum of the remaining suffix. The first round is round 0. Write the entire list at the end of the first three rounds.",
-    "submission": "Submit the requested values or steps in order.",
-    "examples": [
-      {
-        "given": "[60, 10, 90, 50, 100, 80, 70, 30, 40, 20]",
-        "expected": ""
-      }
-    ]
-  },
-  {
-    "id": "B05-3",
-    "section": "Lecture B",
-    "title": "Bubble sort rounds",
-    "kind": "Trace",
-    "sources": [
-      "Lecture L05B · CSIT881-L05B-Sort.pdf · pp. 27–35"
-    ],
-    "prompt": "Trace ascending bubble sort on the original lecture list below. Scan left to right; compare adjacent pairs and shrink the right end after each round. The first round is round 0. Write the entire list at the end of the first three rounds.",
-    "submission": "Submit the requested values or steps in order.",
-    "examples": [
-      {
-        "given": "[60, 10, 90, 50, 100, 80, 70, 30, 40, 20]",
-        "expected": ""
-      }
-    ]
-  },
-  {
-    "id": "B05-4",
-    "section": "Lecture B",
-    "title": "Insertion sort blocks",
-    "kind": "Reorder",
-    "sources": [
-      "Lecture L05B · CSIT881-L05B-Sort.pdf · pp. 12–15"
-    ],
-    "prompt": "Rebuild the lecture's ascending insertion sort using adjacent swaps. Modify values in place. The block indentation is supplied.",
-    "submission": "Arrange the blocks from top to bottom. Use each block once.",
-    "examples": [],
-    "blocks": {
-      "A": "        j = i",
-      "B": "            values[j - 1], values[j] = values[j], values[j - 1]",
-      "C": "def insertion_sort(values):",
-      "D": "            j -= 1",
-      "E": "        while j > 0 and values[j - 1] > values[j]:",
-      "F": "    for i in range(1, len(values)):"
-    }
-  },
-  {
-    "id": "B05-5",
-    "section": "Lecture B",
-    "title": "Selection sort blocks",
-    "kind": "Reorder",
-    "sources": [
-      "Lecture L05B · CSIT881-L05B-Sort.pdf · pp. 20–26"
-    ],
-    "prompt": "Rebuild ascending selection sort. Search the unsorted suffix for a minimum index, then swap once at the end of a round. Modify values in place.",
-    "submission": "Arrange the blocks from top to bottom. Use each block once.",
-    "examples": [],
-    "blocks": {
-      "A": "        values[i], values[minimum] = values[minimum], values[i]",
-      "B": "        minimum = i",
-      "C": "def selection_sort(values):",
-      "D": "            if values[j] < values[minimum]:\n                minimum = j",
-      "E": "        for j in range(i + 1, len(values)):",
-      "F": "    for i in range(len(values) - 1):"
-    }
-  },
-  {
-    "id": "B05-6",
-    "section": "Lecture B",
-    "title": "Bubble sort blocks",
-    "kind": "Reorder",
-    "sources": [
-      "Lecture L05B · CSIT881-L05B-Sort.pdf · pp. 34–39"
-    ],
-    "prompt": "Rebuild the early-stop ascending bubble sort. A pass ends the algorithm if the pass did not swap any items. Use the supplied indentation.",
-    "submission": "Arrange the blocks from top to bottom. Use each block once.",
-    "examples": [],
-    "blocks": {
-      "A": "        if not swapped:\n            break",
-      "B": "        swapped = False",
-      "C": "def bubble_sort(values):",
-      "D": "                values[j - 1], values[j] = values[j], values[j - 1]\n                swapped = True",
-      "E": "            if values[j - 1] > values[j]:",
-      "F": "        for j in range(1, len(values) - i):",
-      "G": "    for i in range(len(values) - 1):"
-    }
-  },
-  {
-    "id": "B07-1",
-    "section": "Lecture B",
-    "title": "Insert and remove at the head",
-    "kind": "Trace",
-    "sources": [
-      "Lecture L07B · CSIT881-L07B-LinearData-LinkedList.pdf · pp. 17–18, 25",
-      "Linked-list Lab · insertFirst and removeFirst (unpaginated)"
-    ],
-    "prompt": "Start from the lecture's list. Run insertFirst(9), then removeFirst(). After each operation, state firstNode.datum and the complete node order. Also give the value returned by removeFirst() and what removeFirst() returns for an empty list.",
-    "submission": "Submit the requested values or steps in order.",
-    "examples": [],
-    "diagrams": [
-      {
-        "type": "chain",
-        "label": "Original linked list",
-        "nodes": [
-          "7",
-          "8",
-          "3",
-          "5"
-        ],
-        "head": "firstNode"
-      }
-    ]
-  },
-  {
-    "id": "B07-2",
-    "section": "Lecture B",
-    "title": "Remove the first node",
-    "kind": "Reorder",
-    "sources": [
-      "Lecture L07B · CSIT881-L07B-LinearData-LinkedList.pdf · pp. 25, 37",
-      "Linked-list Lab · removeFirst (unpaginated)"
-    ],
-    "prompt": "Rebuild remove_first(self). Assume each node has datum and next, and self.firstNode points to the head. Return the original first datum and update firstNode. Return None on an empty list.",
-    "submission": "Arrange the blocks from top to bottom. Use each block once.",
-    "examples": [],
-    "blocks": {
-      "A": "    result = self.firstNode.datum",
-      "B": "    return result",
-      "C": "    self.firstNode = self.firstNode.next",
-      "D": "def remove_first(self):",
-      "E": "    if self.firstNode is None:\n        return None"
+{
+  "topics": {
+    "output": {
+      "label": "输入与精确输出",
+      "name": "Input and exact output"
     },
-    "diagrams": [
-      {
-        "type": "chain",
-        "label": "Original linked list",
-        "nodes": [
-          "7",
-          "8",
-          "3",
-          "5"
-        ],
-        "head": "firstNode"
-      }
-    ]
-  },
-  {
-    "id": "B07-3",
-    "section": "Lecture B",
-    "title": "Find a node by index",
-    "kind": "Reorder",
-    "sources": [
-      "Lecture L07B · CSIT881-L07B-LinearData-LinkedList.pdf · pp. 22–24, 36",
-      "Linked-list Lab · getNode (unpaginated)"
-    ],
-    "prompt": "Rebuild get_node(self, index) for a non-negative zero-based index. Return the node itself, or None if the list ends first.",
-    "submission": "Arrange the blocks from top to bottom. Use each block once.",
-    "examples": [],
-    "blocks": {
-      "A": "    return node",
-      "B": "    while node is not None and i < index:",
-      "C": "def get_node(self, index):",
-      "D": "        node = node.next\n        i += 1",
-      "E": "    node = self.firstNode\n    i = 0"
+    "branch": {
+      "label": "条件分支与边界",
+      "name": "Branching and boundaries"
     },
-    "diagrams": [
-      {
-        "type": "chain",
-        "label": "Original linked list",
-        "nodes": [
-          "7",
-          "8",
-          "3",
-          "5"
-        ],
-        "head": "firstNode"
-      }
-    ]
-  },
-  {
-    "id": "B07-4",
-    "section": "Lecture B",
-    "title": "Remove the last node",
-    "kind": "Trace",
-    "sources": [
-      "Lecture L07B · CSIT881-L07B-LinearData-LinkedList.pdf · pp. 26–27"
-    ],
-    "prompt": "Trace removeLast() on the linked list shown. Give the final previous-node datum, the returned datum and the new last node's next. Then state the new firstNode and return value when a one-node list containing 7 is processed.",
-    "submission": "Submit the requested values or steps in order.",
-    "examples": [],
-    "diagrams": [
-      {
-        "type": "chain",
-        "label": "Original linked list",
-        "nodes": [
-          "7",
-          "8",
-          "3",
-          "5"
-        ],
-        "head": "firstNode"
-      }
-    ]
-  },
-  {
-    "id": "B09-1",
-    "section": "Lecture B",
-    "title": "Bracket matching trace",
-    "kind": "Trace",
-    "sources": [
-      "Lecture L09B · CSIT881-L09B-LinearData-StackQueue.pdf · pp. 10–18",
-      "Stack Lab · math_expression_checking (unpaginated)"
-    ],
-    "prompt": "Scan y + {w * [(2+k)) - z]} using the stack algorithm. Write the stack (bottom to top) after each opening bracket and at the first closing bracket. Name the first mismatch and say whether the expression is accepted.",
-    "submission": "Submit the requested values or steps in order.",
-    "examples": []
-  },
-  {
-    "id": "B09-2",
-    "section": "Lecture B",
-    "title": "Bracket matching blocks",
-    "kind": "Reorder",
-    "sources": [
-      "Lecture L09B · CSIT881-L09B-LinearData-StackQueue.pdf · pp. 10–18",
-      "Stack Lab · math_expression_checking (unpaginated)"
-    ],
-    "prompt": "Rebuild balanced(text). Ignore characters that are not brackets. Accept only correctly nested pairs of (), [], and {}. Use list append and pop as stack operations.",
-    "submission": "Arrange the blocks from top to bottom. Use each block once.",
-    "examples": [],
-    "blocks": {
-      "A": "    return not stack",
-      "B": "        if char in \"([{\":\n            stack.append(char)",
-      "C": "    for char in text:",
-      "D": "def balanced(text):\n    closing = {\")\": \"(\", \"]\": \"[\", \"}\": \"{\"}\n    stack = []",
-      "E": "        elif char in closing:\n            if not stack or stack.pop() != closing[char]:\n                return False"
+    "loop": {
+      "label": "循环、遍历与统计",
+      "name": "Loops, traversal and counting"
+    },
+    "function": {
+      "label": "函数规格与返回值",
+      "name": "Function contracts and returns"
+    },
+    "class": {
+      "label": "类与实例方法",
+      "name": "Classes and methods"
+    },
+    "collection": {
+      "label": "列表与字典",
+      "name": "Lists and dictionaries"
+    },
+    "exception": {
+      "label": "异常与输入验证",
+      "name": "Exceptions and validation"
+    },
+    "file": {
+      "label": "文本与 CSV 文件",
+      "name": "Text and CSV files"
+    },
+    "analysis": {
+      "label": "算法分析与提前返回",
+      "name": "Algorithm analysis and early return"
+    },
+    "sort": {
+      "label": "排序与逐轮推演",
+      "name": "Sorting and round traces"
+    },
+    "list": {
+      "label": "链表与引用更新",
+      "name": "Linked lists and references"
+    },
+    "stack": {
+      "label": "栈与队列",
+      "name": "Stacks and queues"
+    },
+    "tree": {
+      "label": "树遍历与 BST",
+      "name": "Tree traversal and BSTs"
     }
   },
-  {
-    "id": "B09-3",
-    "section": "Lecture B",
-    "title": "Josephus queue trace",
-    "kind": "Trace",
-    "sources": [
-      "Lecture L09B · CSIT881-L09B-LinearData-StackQueue.pdf · pp. 24–29"
-    ],
-    "prompt": "Start with the lecture's queue [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]. Each round takes the front person, removes the next person, and puts the first person at the rear unless nobody else remains. Give the first three pairs (front person, removed person), the queue after each of those rounds, and the last remaining person.",
-    "submission": "Submit the requested values or steps in order.",
-    "examples": []
-  },
-  {
-    "id": "B09-4",
-    "section": "Lecture B",
-    "title": "Update queue references",
-    "kind": "Reorder",
-    "sources": [
-      "Lecture L09B · CSIT881-L09B-LinearData-StackQueue.pdf · pp. 43–49"
-    ],
-    "prompt": "Rebuild dequeue(self) for a linked queue. Return the previous front item's datum. For an empty queue return None. When the final item is removed, both frontNode and endNode must be None.",
-    "submission": "Arrange the blocks from top to bottom. Use each block once.",
-    "examples": [],
-    "blocks": {
-      "A": "    self.frontNode = self.frontNode.next",
-      "B": "    return result",
-      "C": "    if self.frontNode is None:\n        self.endNode = None",
-      "D": "def dequeue(self):",
-      "E": "    result = self.frontNode.datum",
-      "F": "    if self.frontNode is None:\n        return None"
-    }
-  },
-  {
-    "id": "B09-5",
-    "section": "Lecture B",
-    "title": "Enqueue into a linked queue",
-    "kind": "Trace",
-    "sources": [
-      "Lecture L09B · CSIT881-L09B-LinearData-StackQueue.pdf · pp. 41–48"
-    ],
-    "prompt": "Start with an empty linked queue. Enqueue 7, then enqueue 8. After each operation give the datum at frontNode and at endNode, and list each node's next reference. What final references would remain if both items were dequeued?",
-    "submission": "Submit the requested values or steps in order.",
-    "examples": []
-  },
-  {
-    "id": "B11-1",
-    "section": "Lecture B",
-    "title": "Tree traversal orders",
-    "kind": "Trace",
-    "sources": [
-      "Lecture L11B · CSIT881-L11B-NonlinearData-Tree.pdf · pp. 29–33",
-      "Tree Lab · traversal methods (unpaginated)"
-    ],
-    "prompt": "For the lecture tree shown, write the in-order, pre-order, post-order and level-order visit sequences. Treat a single right child as a right child during in-order traversal.",
-    "submission": "Submit the requested values or steps in order.",
-    "examples": [],
-    "diagrams": [
-      {
-        "type": "tree",
-        "label": "Original traversal tree",
-        "root": "A",
-        "edges": {
-          "A": [
-            "B",
-            "C"
-          ],
-          "B": [
-            "D",
-            "E"
-          ],
-          "E": [
-            "H",
-            "I"
-          ],
-          "C": [
-            "F",
-            "G"
-          ],
-          "F": [
-            "J",
-            "K"
-          ],
-          "G": [
-            null,
-            "L"
-          ]
+  "questions": [
+    {
+      "id": "A01-1",
+      "title": "Two integers",
+      "kind": "Program",
+      "sources": [
+        "Lecture A01 · Python-01-InputOutput-26-881.pdf · pp. 26–31"
+      ],
+      "prompt": "Read two integers and display their sum using the exact prompts and output shown.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "100\n50",
+          "expected": "Enter the 1st integer: 100\nEnter the 2nd integer: 50\nThe sum of 100 and 50 is 150"
         }
-      }
-    ]
-  },
-  {
-    "id": "B11-2",
-    "section": "Lecture B",
-    "title": "Recursive in-order blocks",
-    "kind": "Reorder",
-    "sources": [
-      "Lecture L11B · CSIT881-L11B-NonlinearData-Tree.pdf · pp. 29–32",
-      "Tree Lab · in_order_print (unpaginated)"
-    ],
-    "prompt": "Rebuild visit_in_order(node). Print one datum per line in in-order. A missing child is None; each other node has datum, left and right attributes.",
-    "submission": "Arrange the blocks from top to bottom. Use each block once.",
-    "examples": [],
-    "blocks": {
-      "A": "    print(node.datum)",
-      "B": "    if node is None:\n        return",
-      "C": "    visit_in_order(node.right)",
-      "D": "def visit_in_order(node):",
-      "E": "    visit_in_order(node.left)"
+      ],
+      "topic": "output",
+      "practice": "source"
     },
-    "diagrams": [
-      {
-        "type": "tree",
-        "label": "Original traversal tree",
-        "root": "A",
-        "edges": {
-          "A": [
-            "B",
-            "C"
-          ],
-          "B": [
-            "D",
-            "E"
-          ],
-          "E": [
-            "H",
-            "I"
-          ],
-          "C": [
-            "F",
-            "G"
-          ],
-          "F": [
-            "J",
-            "K"
-          ],
-          "G": [
-            null,
-            "L"
-          ]
+    {
+      "id": "A02-1",
+      "title": "Alkali metals table",
+      "kind": "Program",
+      "sources": [
+        "Lecture A02 · Python-02-StringFormat-26-881.pdf · pp. 14–22"
+      ],
+      "prompt": "Print the alkali metals table using str.format(). Use four adjacent fields: left-aligned widths 15 and 10, centered width 25, and right-aligned width 15. Preserve the heading, blank lines and position ruler shown.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "(no input)",
+          "expected": "Alkali metals:\n\nElement        Symbol          Atomic number        Atomic weight\nLithium        Li                    3                       6.94\nSodium         Na                   11                      22.99\nPotassium      K                    19                     39.098\nRubidium       Rb                   37                     85.468\nCaesium        Cs                   55                    132.905\nFrancium       Fr                   87                        223\n\n12345678901234567890123456789012345678901234567890123456789012345\n"
         }
-      }
-    ]
-  },
-  {
-    "id": "B11-3",
-    "section": "Lecture B",
-    "title": "Search and insert in a BST",
-    "kind": "Trace",
-    "sources": [
-      "Lecture L11B · CSIT881-L11B-NonlinearData-Tree.pdf · pp. 34–39"
-    ],
-    "prompt": "For the lecture's binary search tree, give the visited keys when searching for 67 and for 75. Say whether each search succeeds. If you then insert 75 into the unchanged tree, state the parent and whether the new node is a left or right child.",
-    "submission": "Submit the requested values or steps in order.",
-    "examples": [],
-    "diagrams": [
-      {
-        "type": "tree",
-        "label": "Original binary search tree",
-        "root": "76",
-        "edges": {
-          "76": [
-            "50",
-            "97"
-          ],
-          "50": [
-            null,
-            "68"
-          ],
-          "68": [
-            "62",
-            "73"
-          ],
-          "62": [
-            "60",
-            "67"
-          ],
-          "97": [
-            "86",
-            null
-          ],
-          "86": [
-            "77",
-            null
-          ]
+      ],
+      "topic": "output",
+      "practice": "source"
+    },
+    {
+      "id": "AS2-1",
+      "title": "Word, integer and neighbouring value",
+      "kind": "Program",
+      "sources": [
+        "Closed-book Assignment 2, Question 1 · Moodle screenshot (unpaginated)",
+        "Lecture A02 · Python-02-StringFormat-26-881.pdf · pp. 13–24",
+        "Lecture A03 · Python-03-IfElse-26-881.pdf · pp. 15–19"
+      ],
+      "prompt": "Please study the examples below and apply what you have learned in class to write a program that works like the examples. Use string format with appropriate alignment.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "Sydney\n12\nnext",
+          "expected": "Enter a word: Sydney\nEnter an integer: 12\nEnter display option (next/pre): next\n012345678901234567890123456789\n|     word      |  int| next|\n|    Sydney     |   12|   13|\n012345678901234567890123456789\n"
+        },
+        {
+          "given": "executing\n100\npre",
+          "expected": "Enter a word: executing\nEnter an integer: 100\nEnter display option (next/pre): pre\n012345678901234567890123456789\n|     word      |  int|  pre|\n|   executing   |  100|   99|\n012345678901234567890123456789\n"
         }
-      }
-    ]
-  },
-  {
-    "id": "LAB-1",
-    "section": "Lab",
-    "title": "Read, then insertion-sort descending",
-    "kind": "Program",
-    "sources": [
-      "CSIT881 Week 7 Lab · c881_week7_answer.txt, lines 1–56 (unpaginated)",
-      "Lecture L05B · CSIT881-L05B-Sort.pdf · pp. 3–15"
-    ],
-    "prompt": "Read integers until q. Display the input list and then display it sorted from largest to smallest. Implement insertion sort, and do not use sort() or sorted().",
-    "submission": "Submit a complete Python 3 program.",
-    "examples": [
-      {
-        "given": "4\n-7\n66\n12\n3\nq",
-        "expected": "Enter an integer or q to quit: 4\nEnter an integer or q to quit: -7\nEnter an integer or q to quit: 66\nEnter an integer or q to quit: 12\nEnter an integer or q to quit: 3\nEnter an integer or q to quit: q\nBefore insertion sort: [4, -7, 66, 12, 3]\nAfter insertion sort: [66, 12, 4, 3, -7]\n"
-      }
-    ]
-  },
-  {
-    "id": "LAB-2",
-    "section": "Lab",
-    "title": "Assessment mark validation",
-    "kind": "Program",
-    "sources": [
-      "Lab 11 · c110_lab11_exception_2021_student.txt, lines 2–69 (unpaginated) · simplified prompts",
-      "Lecture A11 · Python-11-Exception-26-881.pdf · pp. 16–17, 21–25"
-    ],
-    "prompt": "Read an integer mark for Quiz 1. Accept marks from 0 through 10. If the text cannot be converted, print Error: invalid integer. If the integer is outside the interval, print Error: out of range. Otherwise print the accepted mark as shown. Read exactly one input.",
-    "submission": "Submit a complete Python 3 program.",
-    "examples": [
-      {
-        "given": "8",
-        "expected": "Enter Quiz 1 mark: 8\nAccepted mark: 8\n"
+      ],
+      "topic": "output",
+      "practice": "source"
+    },
+    {
+      "id": "AS2-3",
+      "title": "Friend of n display",
+      "kind": "Program",
+      "sources": [
+        "Closed-book Assignment 2, Question 3 · Moodle screenshot (unpaginated)",
+        "Lecture A04 · Python-04-For-Loop-26-881.pdf · pp. 6–11",
+        "Lecture A02 · Python-02-StringFormat-26-881.pdf · pp. 14–24"
+      ],
+      "prompt": "Please study the examples below and apply what you have learned in class to write a program that works like the examples.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "16\n11",
+          "expected": "Enter a length value: 16\nEnter a number: 11\nFriend of 11 display\n 1234567890123456\n******************\n|     1 + 10 = 11|\n|      2 + 9 = 11|\n|      3 + 8 = 11|\n|      4 + 7 = 11|\n|      5 + 6 = 11|\n|      6 + 5 = 11|\n|      7 + 4 = 11|\n|      8 + 3 = 11|\n|      9 + 2 = 11|\n|     10 + 1 = 11|\n******************\n 1234567890123456\n"
+        },
+        {
+          "given": "15\n7",
+          "expected": "Enter a length value: 15\nEnter a number: 7\nFriend of 7 display\n 123456789012345\n*****************\n|      1 + 6 = 7|\n|      2 + 5 = 7|\n|      3 + 4 = 7|\n|      4 + 3 = 7|\n|      5 + 2 = 7|\n|      6 + 1 = 7|\n*****************\n 123456789012345\n"
+        }
+      ],
+      "topic": "output",
+      "practice": "source"
+    },
+    {
+      "id": "D02",
+      "title": "Right-align an entire equation",
+      "kind": "Function",
+      "sources": [
+        "Lecture A02 · Python-02-StringFormat-26-881.pdf · pp. 13–24",
+        "Assignment 2, Q3 (unpaginated) · new diagnostic"
+      ],
+      "prompt": "Define equation_field(equation, width). Return equation right-aligned in a field width characters wide with a | marker on each side. Leave internal spaces unchanged. Use str.format(). Test values below are shown using repr.",
+      "submission": "Submit only the requested Python definition(s).",
+      "examples": [
+        {
+          "given": "equation_field(\"2 + 8 = 10\", 12)",
+          "expected": "'|  2 + 8 = 10|'"
+        }
+      ],
+      "topic": "output",
+      "practice": "variant"
+    },
+    {
+      "id": "D03",
+      "title": "Outer width and field width",
+      "kind": "Trace",
+      "sources": [
+        "Lecture A02 · Python-02-StringFormat-26-881.pdf · pp. 14–24",
+        "Assignment 2, Q3 (unpaginated) · new diagnostic"
+      ],
+      "prompt": "An output line is 20 characters wide in total. Its first and last characters are |. Inside, the text '3 + 8 = 11' is right-aligned. State the field width, the number of spaces before the 3 and the number of stars needed to draw a full-width border.",
+      "submission": "Submit the requested values or steps in order.",
+      "examples": [],
+      "topic": "output",
+      "practice": "variant"
+    },
+    {
+      "id": "D04",
+      "title": "Complement pairs in a frame",
+      "kind": "Program",
+      "sources": [
+        "Lecture A04 · Python-04-For-Loop-26-881.pdf · pp. 6–11",
+        "Assignment 2, Q3 (unpaginated) · new transfer exercise"
+      ],
+      "prompt": "Read an inner width followed by a target (target ≥ 2). Display every ordered pair of positive integers that sums to the target, in ascending order of the first addend. Use the ruler and frame in the examples. The width is large enough for every equation. Use str.format() for right alignment.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "11\n5",
+          "expected": "Enter a length value: 11\nEnter a number: 5\nFriend of 5 display\n 12345678901\n*************\n|  1 + 4 = 5|\n|  2 + 3 = 5|\n|  3 + 2 = 5|\n|  4 + 1 = 5|\n*************\n 12345678901"
+        }
+      ],
+      "topic": "output",
+      "practice": "variant"
+    },
+    {
+      "id": "V-OUT-1",
+      "topic": "output",
+      "practice": "variant",
+      "title": "Measure columns from a sample",
+      "kind": "Program",
+      "sources": [
+        "Lecture A02 · Python-02-StringFormat-26-881.pdf · pp. 14–22",
+        "Closed-book Assignment 2, Question 1 · Moodle screenshot (unpaginated)",
+        "Lecture A02 · Python-02-StringFormat-26-881.pdf · pp. 13–24",
+        "Lecture A03 · Python-03-IfElse-26-881.pdf · pp. 15–19"
+      ],
+      "basedOn": [
+        "A02-1",
+        "AS2-1"
+      ],
+      "prompt": "Read a name and a signed integer. Use str.format() to print the header and one data row exactly as shown. Each | is a column boundary. The name column is centered and the value column is right-aligned. Names fit in their column.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "Kai\n-7",
+          "expected": "Name: Kai\nValue: -7\n|  name   |value|\n|   Kai   |   -7|\n"
+        },
+        {
+          "given": "XY\n0",
+          "expected": "Name: XY\nValue: 0\n|  name   |value|\n|   XY    |    0|\n"
+        }
+      ]
+    },
+    {
+      "id": "V-OUT-2",
+      "topic": "output",
+      "practice": "variant",
+      "title": "Frame with changing total width",
+      "kind": "Program",
+      "sources": [
+        "Closed-book Assignment 2, Question 3 · Moodle screenshot (unpaginated)",
+        "Lecture A04 · Python-04-For-Loop-26-881.pdf · pp. 6–11",
+        "Lecture A02 · Python-02-StringFormat-26-881.pdf · pp. 14–24",
+        "Assignment 2, Q3 (unpaginated)"
+      ],
+      "basedOn": [
+        "AS2-3",
+        "D03"
+      ],
+      "prompt": "Read a total frame width W, an integer target T, and a smallest allowed addend L. Print every ordered pair whose sum is T and whose two addends are at least L, ordered by increasing first addend. Right-align each complete equation between the bars. Use the star border shown. If no pair qualifies, print the two borders consecutively. W is at least 4 and large enough for the equations. Do not print a ruler.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "14\n6\n2",
+          "expected": "Total width: 14\nTarget: 6\nMinimum addend: 2\n**************\n|   2 + 4 = 6|\n|   3 + 3 = 6|\n|   4 + 2 = 6|\n**************\n"
+        },
+        {
+          "given": "12\n4\n3",
+          "expected": "Total width: 12\nTarget: 4\nMinimum addend: 3\n************\n************\n"
+        }
+      ]
+    },
+    {
+      "id": "A02-2",
+      "title": "Bundle cost",
+      "kind": "Program",
+      "sources": [
+        "Lecture A02 · Python-02-StringFormat-26-881.pdf · pp. 27–33 · original pricing problem · practice I/O"
+      ],
+      "prompt": "Each item costs $10. Each complete bundle of 3 costs $20. Read a non-negative number of items and print the total. Apply the bundle price to as many complete bundles as possible.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "7",
+          "expected": "How many items? 7\nTotal cost: $50"
+        }
+      ],
+      "topic": "branch",
+      "practice": "source"
+    },
+    {
+      "id": "A03-1",
+      "title": "Pricing and postage",
+      "kind": "Program",
+      "sources": [
+        "Lecture A03 · Python-03-IfElse-26-881.pdf · pp. 22–32 · Example 2 · practice prompts"
+      ],
+      "prompt": "For 1–50 items, the unit price is $3 and standard postage is $10. For more than 50, the unit price is $2 and standard postage is free. Registered postage is $15 and express postage is $20 at any quantity. Read a positive quantity and one of s, r or e. Print an itemised receipt.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "10\nr",
+          "expected": "Enter the number of items: 10\nChoose shipping (s/r/e): r\nItem cost = $3 x 10 = $30\nPostage: $15\nTotal cost: $45\n"
+        }
+      ],
+      "topic": "branch",
+      "practice": "source"
+    },
+    {
+      "id": "AS2-2",
+      "title": "Product receipt and discount",
+      "kind": "Program",
+      "sources": [
+        "Closed-book Assignment 2, Question 2 · Moodle screenshot (unpaginated)",
+        "Lecture A02 · Python-02-StringFormat-26-881.pdf · pp. 13–14, 33",
+        "Lecture A03 · Python-03-IfElse-26-881.pdf · pp. 7–14, 22–32"
+      ],
+      "prompt": "Please study the examples below and apply what you have learned in class to write a program that works like the examples. Use STRING FORMAT. Do not use string addition or f-strings.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "1\n2\n1",
+          "expected": "Product A: $5/per item\nProduct B: $10/per item\nProduct C: $30/per item\nDiscount $5 if buy >= $35\n\nHow many product A? 1\nHow many product B? 2\nHow many product C? 1\nProduct A cost: 1 x $5 = $5\nProduct B cost: 2 x $10 = $20\nProduct C cost: 1 x $30 = $30\nTotal cost: $5 + $20 + $30 = $55\nDiscount: $55 - $5 = $50\nPlease pay $50\n"
+        },
+        {
+          "given": "3\n1\n0",
+          "expected": "Product A: $5/per item\nProduct B: $10/per item\nProduct C: $30/per item\nDiscount $5 if buy >= $35\n\nHow many product A? 3\nHow many product B? 1\nHow many product C? 0\nProduct A cost: 3 x $5 = $15\nProduct B cost: 1 x $10 = $10\nProduct C cost: 0 x $30 = $0\nTotal cost: $15 + $10 + $0 = $25\nPlease pay $25\n"
+        }
+      ],
+      "topic": "branch",
+      "practice": "source"
+    },
+    {
+      "id": "V-IF-1",
+      "topic": "branch",
+      "practice": "variant",
+      "title": "Discount and delivery use different totals",
+      "kind": "Program",
+      "sources": [
+        "Lecture A03 · Python-03-IfElse-26-881.pdf · pp. 22–32 · Example 2 · practice prompts",
+        "Closed-book Assignment 2, Question 2 · Moodle screenshot (unpaginated)",
+        "Lecture A02 · Python-02-StringFormat-26-881.pdf · pp. 13–14, 33",
+        "Lecture A03 · Python-03-IfElse-26-881.pdf · pp. 7–14, 22–32"
+      ],
+      "basedOn": [
+        "A03-1",
+        "AS2-2"
+      ],
+      "prompt": "Read a non-negative integer subtotal and Y or N for membership. Members with a subtotal of at least 35 receive a 5 discount. Delivery costs 8 unless the subtotal after discount is at least 35. Print the discount, delivery and total to pay.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "35\nY",
+          "expected": "Subtotal: 35\nMember (Y/N): Y\nDiscount: 5\nDelivery: 8\nPay: 38\n"
+        },
+        {
+          "given": "35\nN",
+          "expected": "Subtotal: 35\nMember (Y/N): N\nDiscount: 0\nDelivery: 0\nPay: 35\n"
+        }
+      ]
+    },
+    {
+      "id": "V-IF-2",
+      "topic": "branch",
+      "practice": "variant",
+      "title": "Apply the higher-level rule first",
+      "kind": "Function",
+      "sources": [
+        "Lecture A03 · Python-03-IfElse-26-881.pdf · pp. 22–32 · Example 2 · practice prompts",
+        "Lecture A06 · Python-06-Function-26-881.pdf · pp. 10–14"
+      ],
+      "basedOn": [
+        "A03-1",
+        "A06-1"
+      ],
+      "prompt": "Write result_label(mark, completed). mark is an integer from 0 to 100 and completed is a Boolean. Return \"Incomplete\" when completed is False. Otherwise return \"Distinction\" for marks at least 75, \"Pass\" for 50–74, and \"Fail\" below 50.",
+      "submission": "Submit only the requested Python definition(s).",
+      "examples": [
+        {
+          "given": "result_label(90, False)",
+          "expected": "\"Incomplete\""
+        },
+        {
+          "given": "result_label(75, True)",
+          "expected": "\"Distinction\""
+        }
+      ]
+    },
+    {
+      "id": "A04-1",
+      "title": "Friend of 10",
+      "kind": "Program",
+      "sources": [
+        "Lecture A04 · Python-04-For-Loop-26-881.pdf · pp. 6–11"
+      ],
+      "prompt": "Use a for loop and str.format() to print the Friend of 10 table. Include zero as a possible addend. Align each addend and the total in a right-aligned field of width 2.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "(no input)",
+          "expected": " 0 + 10 = 10\n 1 +  9 = 10\n 2 +  8 = 10\n 3 +  7 = 10\n 4 +  6 = 10\n 5 +  5 = 10\n 6 +  4 = 10\n 7 +  3 = 10\n 8 +  2 = 10\n 9 +  1 = 10\n10 +  0 = 10\n"
+        }
+      ],
+      "topic": "loop",
+      "practice": "source"
+    },
+    {
+      "id": "A04-2",
+      "title": "Descending number pattern",
+      "kind": "Program",
+      "sources": [
+        "Lecture A04 · Python-04-For-Loop-26-881.pdf · pp. 19–21"
+      ],
+      "prompt": "Print the five lines shown using nested for loops. Separate numbers by one space. Do not print a space at the end of a line.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "(no input)",
+          "expected": "2 1\n4 3 2 1\n6 5 4 3 2 1\n8 7 6 5 4 3 2 1\n10 9 8 7 6 5 4 3 2 1\n"
+        }
+      ],
+      "topic": "loop",
+      "practice": "source"
+    },
+    {
+      "id": "A04-3",
+      "title": "Characters in order",
+      "kind": "Program",
+      "sources": [
+        "Lecture A04 · Python-04-For-Loop-26-881.pdf · pp. 24–28 · lecture case · input extension"
+      ],
+      "prompt": "Read a line of text and display one character per line in index order. Include its spaces. Empty input produces no character lines.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "Hi there!",
+          "expected": "Enter a string: Hi there!\nH\ni\n \nt\nh\ne\nr\ne\n!"
+        }
+      ],
+      "topic": "loop",
+      "practice": "source"
+    },
+    {
+      "id": "A05-1",
+      "title": "Equations between two bounds",
+      "kind": "Program",
+      "sources": [
+        "Lecture A05 · Python-05-While-Loop-26-881.pdf · pp. 12–13"
+      ],
+      "prompt": "Read a start and an end integer and print the doubling equation for each integer in the interval, including both endpoints. Use a while loop. Assume the start is no greater than the end.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "4\n7",
+          "expected": "Enter start number: 4\nEnter end number: 7\nEquations:\n4 + 4 = 8\n5 + 5 = 10\n6 + 6 = 12\n7 + 7 = 14\n"
+        }
+      ],
+      "topic": "loop",
+      "practice": "source"
+    },
+    {
+      "id": "A05-2",
+      "title": "Count even and odd numbers",
+      "kind": "Program",
+      "sources": [
+        "Lecture A05 · Python-05-While-Loop-26-881.pdf · pp. 14–19",
+        "Week 13 recording · 00:59–01:00 and 01:24–01:26"
+      ],
+      "prompt": "Read integers until the user enters q. Print the number of even and odd values entered, using the exact prompts and result lines shown.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "5\n7\n0\n13\n8\n15\nq",
+          "expected": "Enter an integer (or q to quit): 5\nEnter an integer (or q to quit): 7\nEnter an integer (or q to quit): 0\nEnter an integer (or q to quit): 13\nEnter an integer (or q to quit): 8\nEnter an integer (or q to quit): 15\nEnter an integer (or q to quit): q\nYou have entered 2 even numbers\nYou have entered 4 odd numbers\n"
+        }
+      ],
+      "topic": "loop",
+      "practice": "source"
+    },
+    {
+      "id": "AS3-1",
+      "title": "Equations between two integers",
+      "kind": "Program",
+      "sources": [
+        "Closed-book Assignment 3, Question 1 · Moodle screenshot (unpaginated)",
+        "Lecture A04 · Python-04-For-Loop-26-881.pdf · pp. 3–5",
+        "Lecture A05 · Python-05-While-Loop-26-881.pdf · pp. 12–13"
+      ],
+      "prompt": "Please study the examples below and apply what you have learned in class to write a program that works like the examples.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "9\n14",
+          "expected": "Enter an integer: 9\nEnter another integer: 14\nHere we go:\n(9 x 9) + 10 = 81 + 10 = 91\n(10 x 10) + 11 = 100 + 11 = 111\n(11 x 11) + 12 = 121 + 12 = 133\n(12 x 12) + 13 = 144 + 13 = 157\n(13 x 13) + 14 = 169 + 14 = 183\n(14 x 14) + 15 = 196 + 15 = 211\n"
+        },
+        {
+          "given": "10\n11",
+          "expected": "Enter an integer: 10\nEnter another integer: 11\nHere we go:\n(10 x 10) + 11 = 100 + 11 = 111\n(11 x 11) + 12 = 121 + 12 = 133\n"
+        }
+      ],
+      "topic": "loop",
+      "practice": "source"
+    },
+    {
+      "id": "AS3-2",
+      "title": "Find matching characters",
+      "kind": "Program",
+      "sources": [
+        "Closed-book Assignment 3, Question 2 · Moodle screenshot (unpaginated)",
+        "Lecture A04 · Python-04-For-Loop-26-881.pdf · pp. 24–31"
+      ],
+      "prompt": "Please study the examples below and apply what you have learned in class to write a program that works like the examples.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "Abcabcaa\na",
+          "expected": "Enter a string: Abcabcaa\nEnter a letter: a\nSearching a in Abcabcaa:\nIndex 0: A NOT match\nIndex 1: b NOT match\nIndex 2: c NOT match\nIndex 3: a match\nIndex 4: b NOT match\nIndex 5: c NOT match\nIndex 6: a match\nIndex 7: a match\nMatch count: 3\n"
+        },
+        {
+          "given": "Dog\nG",
+          "expected": "Enter a string: Dog\nEnter a letter: G\nSearching G in Dog:\nIndex 0: D NOT match\nIndex 1: o NOT match\nIndex 2: g NOT match\nMatch count: 0\n"
+        }
+      ],
+      "topic": "loop",
+      "practice": "source"
+    },
+    {
+      "id": "D01",
+      "title": "Loop endpoints",
+      "kind": "Trace",
+      "sources": [
+        "Lecture A04 · Python-04-For-Loop-26-881.pdf · pp. 6–11",
+        "Assignment 2, Q3 (unpaginated) · new diagnostic"
+      ],
+      "prompt": "A display must contain the positive pairs that add to 6, in increasing order of the first addend. Include both orders when the two addends differ. Give the first addend, the last addend, the row count and the Python range for the first addend.",
+      "submission": "Submit the requested values or steps in order.",
+      "examples": [],
+      "topic": "loop",
+      "practice": "variant"
+    },
+    {
+      "id": "V-LOOP-1",
+      "topic": "loop",
+      "practice": "variant",
+      "title": "Separate the sentinel from the values",
+      "kind": "Program",
+      "sources": [
+        "Lecture A05 · Python-05-While-Loop-26-881.pdf · pp. 14–19",
+        "Week 13 recording · 00:59–01:00 and 01:24–01:26",
+        "Closed-book Assignment 3, Question 2 · Moodle screenshot (unpaginated)",
+        "Lecture A04 · Python-04-For-Loop-26-881.pdf · pp. 24–31"
+      ],
+      "basedOn": [
+        "A05-2",
+        "AS3-2"
+      ],
+      "prompt": "Read integer strings or q until q appears. Count positive, zero and negative entries separately. Also print the sum of the positive entries. Report zero counts when q is the first input.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "-4\n0\n3\n2\nq",
+          "expected": "Integer or q: -4\nInteger or q: 0\nInteger or q: 3\nInteger or q: 2\nInteger or q: q\nPositive: 2\nZero: 1\nNegative: 1\nPositive sum: 5\n"
+        },
+        {
+          "given": "q",
+          "expected": "Integer or q: q\nPositive: 0\nZero: 0\nNegative: 0\nPositive sum: 0\n"
+        }
+      ]
+    },
+    {
+      "id": "V-LOOP-2",
+      "topic": "loop",
+      "practice": "variant",
+      "title": "Step backwards and report an empty result",
+      "kind": "Program",
+      "sources": [
+        "Lecture A04 · Python-04-For-Loop-26-881.pdf · pp. 19–21",
+        "Lecture A05 · Python-05-While-Loop-26-881.pdf · pp. 12–13"
+      ],
+      "basedOn": [
+        "A04-2",
+        "A05-1"
+      ],
+      "prompt": "Read a start and an end integer. Print the even integers in the inclusive interval, in descending order, one per line. If the interval is reversed or contains no even integer, print None. The input order is always start then end.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "-2\n5",
+          "expected": "Start: -2\nEnd: 5\n4\n2\n0\n-2\n"
+        },
+        {
+          "given": "3\n3",
+          "expected": "Start: 3\nEnd: 3\nNone\n"
+        }
+      ]
+    },
+    {
+      "id": "A06-1",
+      "title": "Return a grade",
+      "kind": "Function",
+      "sources": [
+        "Lecture A06 · Python-06-Function-26-881.pdf · pp. 10–14"
+      ],
+      "prompt": "Write calculate_grade(mark), where mark is an integer from 0 to 100. Return A for 80–100, B for 60–79, C for 40–59 and D for 0–39.",
+      "submission": "Submit only the requested Python definition(s).",
+      "examples": [
+        {
+          "given": "calculate_grade(62)",
+          "expected": "'B'"
+        },
+        {
+          "given": "calculate_grade(5)",
+          "expected": "'D'"
+        }
+      ],
+      "topic": "function",
+      "practice": "source"
+    },
+    {
+      "id": "A06-2",
+      "title": "Expanding word",
+      "kind": "Function",
+      "sources": [
+        "Lecture A06 · Python-06-Function-26-881.pdf · pp. 21–26"
+      ],
+      "prompt": "Write expand(word, multiplicity). Return a string in which each character of word is repeated multiplicity times before moving to the next character. The multiplicity is a non-negative integer.",
+      "submission": "Submit only the requested Python definition(s).",
+      "examples": [
+        {
+          "given": "expand(\"Meow\", 4)",
+          "expected": "'MMMMeeeeoooowwww'"
+        },
+        {
+          "given": "expand(\"Frog\", 0)",
+          "expected": "''"
+        }
+      ],
+      "topic": "function",
+      "practice": "source"
+    },
+    {
+      "id": "A06-3",
+      "title": "Recursive factorial",
+      "kind": "Function",
+      "sources": [
+        "Lecture A06 · Python-06-Function-26-881.pdf · pp. 33–39"
+      ],
+      "prompt": "Write a recursive factorial(n) for positive integers. Return the product 1 × 2 × … × n. Include a base case.",
+      "submission": "Submit only the requested Python definition(s).",
+      "examples": [
+        {
+          "given": "factorial(5)",
+          "expected": "120"
+        }
+      ],
+      "topic": "function",
+      "practice": "source"
+    },
+    {
+      "id": "AS3-3",
+      "title": "Operate on two numbers",
+      "kind": "Function",
+      "sources": [
+        "Closed-book Assignment 3, Question 3 · Moodle screenshot (unpaginated)",
+        "Lecture A06 · Python-06-Function-26-881.pdf · pp. 3–14",
+        "Lecture A02 · Python-02-StringFormat-26-881.pdf · pp. 27–32"
+      ],
+      "prompt": "Write operate_2_numbers(number1, number2, operator). The first two arguments are integers and operator is a string. Return the integer sum for \"+\", difference for \"-\", product for \"x\", or floor division for \"/\". The test calls use one of these operators and do not divide by zero.",
+      "submission": "Submit only the requested Python definition(s).",
+      "examples": [
+        {
+          "given": "print(operate_2_numbers(2,5,\"+\"))",
+          "expected": "7"
+        },
+        {
+          "given": "print(operate_2_numbers(5,3,\"-\"))",
+          "expected": "2"
+        },
+        {
+          "given": "print(operate_2_numbers(5,4,\"x\"))",
+          "expected": "20"
+        },
+        {
+          "given": "print(operate_2_numbers(5,3,\"/\"))",
+          "expected": "1"
+        }
+      ],
+      "topic": "function",
+      "practice": "source"
+    },
+    {
+      "id": "V-FUN-1",
+      "topic": "function",
+      "practice": "variant",
+      "title": "Return both a first index and a count",
+      "kind": "Function",
+      "sources": [
+        "Closed-book Assignment 3, Question 2 · Moodle screenshot (unpaginated)",
+        "Lecture A04 · Python-04-For-Loop-26-881.pdf · pp. 24–31",
+        "Lecture A06 · Python-06-Function-26-881.pdf · pp. 21–26",
+        "Lecture L03B · CSIT881-L03B-Algorithm.pdf · pp. 19–25"
+      ],
+      "basedOn": [
+        "AS3-2",
+        "A06-2",
+        "B03-1"
+      ],
+      "prompt": "Write locate_letter(text, letter). Return a two-item tuple containing the index of the first exact, case-sensitive match and the total number of matches. Return (-1, 0) if absent. Do not print anything.",
+      "submission": "Submit only the requested Python definition(s).",
+      "examples": [
+        {
+          "given": "locate_letter(\"aBaBA\", \"B\")",
+          "expected": "(1, 2)"
+        },
+        {
+          "given": "locate_letter(\"aBaBA\", \"b\")",
+          "expected": "(-1, 0)"
+        }
+      ]
+    },
+    {
+      "id": "V-FUN-2",
+      "topic": "function",
+      "practice": "variant",
+      "title": "Apply the recursive base case",
+      "kind": "Function",
+      "sources": [
+        "Lecture A06 · Python-06-Function-26-881.pdf · pp. 33–39"
+      ],
+      "basedOn": [
+        "A06-3"
+      ],
+      "prompt": "Implement recursive digit_sum(n) for n >= 0. Return the sum of its decimal digits. Use arithmetic to separate the last digit from the remaining digits. Do not convert n to text.",
+      "submission": "Submit only the requested Python definition(s).",
+      "examples": [
+        {
+          "given": "digit_sum(3052)",
+          "expected": "10"
+        },
+        {
+          "given": "digit_sum(0)",
+          "expected": "0"
+        }
+      ]
+    },
+    {
+      "id": "A07-1",
+      "title": "Student display methods",
+      "kind": "Function",
+      "sources": [
+        "Lecture A07 · Python-07-Class-26-881.pdf · pp. 30–36, 47–49"
+      ],
+      "prompt": "Define Student with instance attributes id, first_name and last_name. Implement __str__ to return 'First Last (id)' and __repr__ to return the constructor representation shown. Treat IDs as strings, including their leading zeros. Sample names and IDs are practice data.",
+      "submission": "Submit only the requested Python definition(s).",
+      "examples": [
+        {
+          "given": "student = Student(\"0012345\", \"Ava\", \"Lee\")\nprint(str(student))\nprint(repr(student))",
+          "expected": "Ava Lee (0012345)\nStudent('0012345', 'Ava', 'Lee')"
+        }
+      ],
+      "topic": "class",
+      "practice": "source"
+    },
+    {
+      "id": "A08-1",
+      "title": "MathQuestion",
+      "kind": "Function",
+      "sources": [
+        "Lecture A08 · Python-08-Class2-26-881.pdf · pp. 3–10"
+      ],
+      "prompt": "Define MathQuestion(number1, number2, operation, solution) and its three instance methods. __str__ returns the complete equation. question_text() returns the equation prompt ending in '= ' including its final space. check_answer(answer) returns a Boolean.",
+      "submission": "Submit only the requested Python definition(s).",
+      "examples": [
+        {
+          "given": "q = MathQuestion(4, 6, \"+\", 10)\nprint(str(q))\nprint(repr(q.question_text()))\nprint(q.check_answer(10))",
+          "expected": "4 + 6 = 10\n'4 + 6 = '\nTrue"
+        }
+      ],
+      "topic": "class",
+      "practice": "source"
+    },
+    {
+      "id": "A08-2",
+      "title": "Arithmetic practice loop",
+      "kind": "Program",
+      "sources": [
+        "Lecture A08 · Python-08-Class2-26-881.pdf · pp. 9–10, 17–19 · case study main loop · deterministic question source"
+      ],
+      "prompt": "Use the supplied question sequence in order: 3 + 12 = 15, 14 / 2 = 7, 5 x 8 = 40, 10 - 4 = 6. For each prompt read the user's integer answer or q. Print Correct or Incorrect. On q, print Good bye! and stop. Also print Good bye! if all four questions were answered. Do not randomise this exercise.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "15\n8\n40\nq",
+          "expected": "Welcome to cool math:\n3 + 12 = 15\nCorrect\n14 / 2 = 8\nIncorrect\n5 x 8 = 40\nCorrect\n10 - 4 = q\nGood bye!"
+        }
+      ],
+      "topic": "class",
+      "practice": "source"
+    },
+    {
+      "id": "V-CLS-1",
+      "topic": "class",
+      "practice": "variant",
+      "title": "Track two independent instances",
+      "kind": "Function",
+      "sources": [
+        "Lecture A07 · Python-07-Class-26-881.pdf · pp. 30–36, 47–49",
+        "Lecture A08 · Python-08-Class2-26-881.pdf · pp. 3–10"
+      ],
+      "basedOn": [
+        "A07-1",
+        "A08-1"
+      ],
+      "prompt": "Define ScoreBoard(name) with a name and initial total 0. add(points) must update this object's total and return the new total. str(board) must return 'name: total'. Different instances keep independent totals.",
+      "submission": "Submit only the requested Python definition(s).",
+      "examples": [
+        {
+          "given": "a = ScoreBoard(\"A\")\nb = ScoreBoard(\"B\")\nprint(a.add(3))\nprint(b)",
+          "expected": "3\nB: 0"
+        }
+      ]
+    },
+    {
+      "id": "V-CLS-2",
+      "topic": "class",
+      "practice": "variant",
+      "title": "Compose a check method and a display method",
+      "kind": "Function",
+      "sources": [
+        "Lecture A08 · Python-08-Class2-26-881.pdf · pp. 3–10"
+      ],
+      "basedOn": [
+        "A08-1"
+      ],
+      "prompt": "Define AnswerCheck(expected, tolerance). expected and tolerance are integers and tolerance is non-negative. matches(value) returns a Boolean for whether the absolute error is at most tolerance. feedback(value) must call matches and return 'Correct' or 'Try again'.",
+      "submission": "Submit only the requested Python definition(s).",
+      "examples": [
+        {
+          "given": "q = AnswerCheck(10, 2)\nprint(q.matches(8))\nprint(q.feedback(13))",
+          "expected": "True\nTry again"
+        }
+      ]
+    },
+    {
+      "id": "A09-1",
+      "title": "Double every item",
+      "kind": "Function",
+      "sources": [
+        "Lecture A09 · Python-09-List-26-881.pdf · pp. 23–24"
+      ],
+      "prompt": "Write doubling(values). Return a new list in which each input item occurs twice in its original position. Leave the input list unchanged.",
+      "submission": "Submit only the requested Python definition(s).",
+      "examples": [
+        {
+          "given": "doubling([4, 5, 6])",
+          "expected": "[4, 4, 5, 5, 6, 6]"
+        }
+      ],
+      "topic": "collection",
+      "practice": "source"
+    },
+    {
+      "id": "A09-2",
+      "title": "Multiply elements by position",
+      "kind": "Function",
+      "sources": [
+        "Lecture A09 · Python-09-List-26-881.pdf · pp. 25–26"
+      ],
+      "prompt": "Write list_multiply(list1, list2). The two input lists of integers have the same length. Return a new list of pairwise products.",
+      "submission": "Submit only the requested Python definition(s).",
+      "examples": [
+        {
+          "given": "list_multiply([4, 5, 6], [10, 0, 1])",
+          "expected": "[40, 0, 6]"
+        }
+      ],
+      "topic": "collection",
+      "practice": "source"
+    },
+    {
+      "id": "A10-1",
+      "title": "State abbreviation lookup",
+      "kind": "Program",
+      "sources": [
+        "Lecture A10 · Python-10-Dictionary-26-881.pdf · pp. 8–10, 20 · lecture example with unknown-key extension",
+        "Lab 10 · state abbreviation lookup (unpaginated)"
+      ],
+      "prompt": "Read an uppercase state or territory abbreviation. Use a dictionary: NSW = New South Wales, ACT = Australian Capital Territory, NT = Northern Territory, QLD = Queensland, SA = South Australia, TAS = Tasmania, VIC = Victoria, WA = Western Australia. For any other abbreviation print Unknown state. Use the prompt in the examples.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "NT",
+          "expected": "Enter state NSW/ACT/NT/QLD/SA/TAS/VIC/WA: NT\nThe state you entered is Northern Territory"
+        },
+        {
+          "given": "XX",
+          "expected": "Enter state NSW/ACT/NT/QLD/SA/TAS/VIC/WA: XX\nUnknown state"
+        }
+      ],
+      "topic": "collection",
+      "practice": "source"
+    },
+    {
+      "id": "A10-2",
+      "title": "Subject enrolment records",
+      "kind": "Program",
+      "sources": [
+        "Lecture A10 · Python-10-Dictionary-26-881.pdf · pp. 21–25 · practice with specified columns"
+      ],
+      "prompt": "Read at least one subject code and integer credit point. Store each subject as a dictionary with keys code and cp in a list. After each entry read Y or N to continue or finish. Print the rows in entry order. Use a left-aligned field of width 13 for each code and print cp immediately after that field. Use the exact heading shown.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "MATH111\n10\nY\nCS222\n4\nY\nLOGIC333\n5\nN",
+          "expected": "Welcome to subject enrolment\nEnter subject code: MATH111\nEnter credit point: 10\nAdd more subjects? Y/N: Y\nEnter subject code: CS222\nEnter credit point: 4\nAdd more subjects? Y/N: Y\nEnter subject code: LOGIC333\nEnter credit point: 5\nAdd more subjects? Y/N: N\nSubject code CP\nMATH111      10\nCS222        4\nLOGIC333     5\n"
+        }
+      ],
+      "topic": "collection",
+      "practice": "source"
+    },
+    {
+      "id": "V-COL-1",
+      "topic": "collection",
+      "practice": "variant",
+      "title": "Count repeated codes without losing their order",
+      "kind": "Function",
+      "sources": [
+        "Lecture A10 · Python-10-Dictionary-26-881.pdf · pp. 21–25 · practice with specified columns",
+        "Closed-book Assignment 3, Question 2 · Moodle screenshot (unpaginated)",
+        "Lecture A04 · Python-04-For-Loop-26-881.pdf · pp. 24–31"
+      ],
+      "basedOn": [
+        "A10-2",
+        "AS3-2"
+      ],
+      "prompt": "Write duplicate_codes(codes). codes is a list of case-sensitive strings. Return each code that occurs at least twice exactly once, in the order of its first occurrence. The input list must remain unchanged.",
+      "submission": "Submit only the requested Python definition(s).",
+      "examples": [
+        {
+          "given": "duplicate_codes([\"B\",\"A\",\"A\",\"C\",\"B\"])",
+          "expected": "['B', 'A']"
+        }
+      ]
+    },
+    {
+      "id": "V-COL-2",
+      "topic": "collection",
+      "practice": "variant",
+      "title": "Group records and preserve the input",
+      "kind": "Function",
+      "sources": [
+        "Lecture A09 · Python-09-List-26-881.pdf · pp. 25–26",
+        "Lecture A10 · Python-10-Dictionary-26-881.pdf · pp. 21–25 · practice with specified columns"
+      ],
+      "basedOn": [
+        "A09-2",
+        "A10-2"
+      ],
+      "prompt": "Write credit_totals(records). Each element is a dictionary with department and cp keys. Return a new dictionary mapping every seen department to the sum of its credit points, including totals of zero. Do not change records.",
+      "submission": "Submit only the requested Python definition(s).",
+      "examples": [
+        {
+          "given": "credit_totals([{\"department\":\"CS\",\"cp\":3},{\"department\":\"CS\",\"cp\":6}])",
+          "expected": "{'CS': 9}"
+        }
+      ]
+    },
+    {
+      "id": "A11-1",
+      "title": "Handle two numeric exceptions",
+      "kind": "Program",
+      "sources": [
+        "Lecture A11 · Python-11-Exception-26-881.pdf · pp. 19–20"
+      ],
+      "prompt": "Read two integers and print their true division result. Use separate handlers for invalid integer input and division by zero. Follow the sample messages. On a ValueError while reading the first integer, stop immediately.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "13\n2",
+          "expected": "Enter the 1st integer: 13\nEnter the 2nd integer: 2\n13 / 2 = 6.5"
+        },
+        {
+          "given": "13\n0",
+          "expected": "Enter the 1st integer: 13\nEnter the 2nd integer: 0\nInvalid division - cannot divide by 0"
+        }
+      ],
+      "topic": "exception",
+      "practice": "source"
+    },
+    {
+      "id": "A11-2",
+      "title": "Retry until a positive integer",
+      "kind": "Program",
+      "sources": [
+        "Lecture A11 · Python-11-Exception-26-881.pdf · pp. 24–25"
+      ],
+      "prompt": "Keep asking until the user enters a positive integer. Distinguish invalid integer text from an integer that is zero or negative. Match the exact prompts and messages.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "abc\n-10\nxyz\n0\n5",
+          "expected": "Enter a positive integer: abc\nError: Invalid integer format\nEnter a positive integer: -10\nError: Input must be a positive number\nEnter a positive integer: xyz\nError: Invalid integer format\nEnter a positive integer: 0\nError: Input must be a positive number\nEnter a positive integer: 5\nYou have entered 5"
+        }
+      ],
+      "topic": "exception",
+      "practice": "source"
+    },
+    {
+      "id": "A11-3",
+      "title": "Raise an error for a non-positive integer",
+      "kind": "Function",
+      "sources": [
+        "Lecture A11 · Python-11-Exception-26-881.pdf · pp. 21–25 · adapted to a function signature"
+      ],
+      "prompt": "Write parse_positive(text). Convert text to an integer. Propagate ValueError from invalid integer text. If the conversion succeeds but the value is zero or below, raise ValueError('Input must be a positive number'). Return the integer on success.",
+      "submission": "Submit only the requested Python definition(s).",
+      "examples": [
+        {
+          "given": "parse_positive(\"5\")",
+          "expected": "5"
+        },
+        {
+          "given": "parse_positive(\"0\")",
+          "expected": "ValueError: Input must be a positive number"
+        }
+      ],
+      "topic": "exception",
+      "practice": "source"
+    },
+    {
+      "id": "LAB-2",
+      "title": "Assessment mark validation",
+      "kind": "Program",
+      "sources": [
+        "Lab 11 · c110_lab11_exception_2021_student.txt, lines 2–69 (unpaginated) · simplified prompts",
+        "Lecture A11 · Python-11-Exception-26-881.pdf · pp. 16–17, 21–25"
+      ],
+      "prompt": "Read an integer mark for Quiz 1. Accept marks from 0 through 10. If the text cannot be converted, print Error: invalid integer. If the integer is outside the interval, print Error: out of range. Otherwise print the accepted mark as shown. Read exactly one input.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "8",
+          "expected": "Enter Quiz 1 mark: 8\nAccepted mark: 8\n"
+        },
+        {
+          "given": "x",
+          "expected": "Enter Quiz 1 mark: x\nError: invalid integer\n"
+        }
+      ],
+      "topic": "exception",
+      "practice": "source"
+    },
+    {
+      "id": "V-ERR-1",
+      "topic": "exception",
+      "practice": "variant",
+      "title": "Skip invalid entries and stop on q",
+      "kind": "Program",
+      "sources": [
+        "Lecture A11 · Python-11-Exception-26-881.pdf · pp. 24–25",
+        "Lecture A05 · Python-05-While-Loop-26-881.pdf · pp. 14–19",
+        "Week 13 recording · 00:59–01:00 and 01:24–01:26"
+      ],
+      "basedOn": [
+        "A11-2",
+        "A05-2"
+      ],
+      "prompt": "Read text entries one at a time until q. Convert successful entries to integers and add them to a total. For invalid integer text print Invalid integer and continue reading. After q, print the total. Negative and zero integers are valid.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "x\n-2\n0\n7\nq",
+          "expected": "Integer or q: x\nInvalid integer\nInteger or q: -2\nInteger or q: 0\nInteger or q: 7\nInteger or q: q\nTotal: 5\n"
+        },
+        {
+          "given": "q",
+          "expected": "Integer or q: q\nTotal: 0\n"
+        }
+      ]
+    },
+    {
+      "id": "V-ERR-2",
+      "topic": "exception",
+      "practice": "variant",
+      "title": "Distinguish conversion from range errors",
+      "kind": "Function",
+      "sources": [
+        "Lecture A11 · Python-11-Exception-26-881.pdf · pp. 19–20",
+        "Lecture A11 · Python-11-Exception-26-881.pdf · pp. 21–25 · adapted to a function signature"
+      ],
+      "basedOn": [
+        "A11-1",
+        "A11-3"
+      ],
+      "prompt": "Write parse_mark(text). Return an integer from 0 through 100. If int conversion fails, raise ValueError(\"Not an integer\"). If it succeeds but the mark is outside the range, raise ValueError(\"Mark out of range\"). Do not print or retry.",
+      "submission": "Submit only the requested Python definition(s).",
+      "examples": [
+        {
+          "given": "parse_mark(\"0\")",
+          "expected": "0"
+        },
+        {
+          "given": "parse_mark(\"null\")",
+          "expected": "ValueError: Not an integer"
+        }
+      ]
+    },
+    {
+      "id": "A12-1",
+      "title": "Write a times table",
+      "kind": "Program",
+      "sources": [
+        "Lecture A12 · Python-12-File-26-881.pdf · pp. 9–10"
+      ],
+      "prompt": "Read an integer and an output filename. Replace that file with nine lines showing the multiplication table from 1 through 9. Terminate each line with a newline. The two prompts and file content are shown below.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "7\ntable.txt",
+          "expected": "Enter a number to generate times table: 7\nEnter output file path: table.txt\n\nContents of table.txt:\n7 x 1 = 7\n7 x 2 = 14\n7 x 3 = 21\n7 x 4 = 28\n7 x 5 = 35\n7 x 6 = 42\n7 x 7 = 49\n7 x 8 = 56\n7 x 9 = 63\n"
+        }
+      ],
+      "topic": "file",
+      "practice": "source"
+    },
+    {
+      "id": "A12-2",
+      "title": "Read a subject CSV file",
+      "kind": "Program",
+      "sources": [
+        "Lecture A12 · Python-12-File-26-881.pdf · pp. 17–19 · original records · practice filename prompt",
+        "Lab 12 · Subject CSV (unpaginated)"
+      ],
+      "prompt": "Read the name of a CSV file with header code,name,cp. Use csv.DictReader to print one data row per subject. Left-align the three fields in widths 10, 30, and 10. Do not print the header.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "subject.csv\n\nFile content:\ncode,name,cp\nMATH100,Algebra,6\nCS200,C++,2\nIT300,Biotechnology,3\n",
+          "expected": "Enter subject filename: subject.csv\nMATH100   Algebra                       6         \nCS200     C++                           2         \nIT300     Biotechnology                 3         \n"
+        }
+      ],
+      "topic": "file",
+      "practice": "source"
+    },
+    {
+      "id": "A12-3",
+      "title": "Write subject records to CSV",
+      "kind": "Function",
+      "sources": [
+        "Lecture A12 · Python-12-File-26-881.pdf · pp. 17–18 · adapted to a function signature"
+      ],
+      "prompt": "Define write_subjects(filename, records). records is a list of dictionaries with keys code, name and cp. Replace the file using the header code,name,cp and correctly quote any data field containing a comma. Include the header even for an empty list. Return None. Newline style is platform-dependent.",
+      "submission": "Submit only the requested Python definition(s).",
+      "examples": [
+        {
+          "given": "write_subjects(\"subject.csv\", [{\"code\":\"MATH100\",\"name\":\"Algebra\",\"cp\":6}])",
+          "expected": "File content:\ncode,name,cp\nMATH100,Algebra,6"
+        }
+      ],
+      "topic": "file",
+      "practice": "source"
+    },
+    {
+      "id": "V-FILE-1",
+      "topic": "file",
+      "practice": "variant",
+      "title": "Filter a CSV by a numeric field",
+      "kind": "Program",
+      "sources": [
+        "Lecture A12 · Python-12-File-26-881.pdf · pp. 17–19 · original records · practice filename prompt",
+        "Lab 12 · Subject CSV (unpaginated)",
+        "Lecture A11 · Python-11-Exception-26-881.pdf · pp. 19–20"
+      ],
+      "basedOn": [
+        "A12-2",
+        "A11-1"
+      ],
+      "prompt": "Read a CSV filename, then an integer minimum. The file has columns code,name,cp, with integer cp values. Use csv.DictReader. Print each record with cp >= minimum as 'code: name (cp)'. Keep file order. Print No matching subjects if no row qualifies. Quoted names may contain commas.",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "courses.csv\n6\n\nContents of courses.csv:\ncode,name,cp\nA100,\"Data, I\",6\nB200,Algebra,3\nC300,Systems,10",
+          "expected": "CSV filename: courses.csv\nMinimum cp: 6\nA100: Data, I (6)\nC300: Systems (10)"
+        }
+      ]
+    },
+    {
+      "id": "V-FILE-2",
+      "topic": "file",
+      "practice": "variant",
+      "title": "Append records and ignore empty lines",
+      "kind": "Function",
+      "sources": [
+        "Lecture A12 · Python-12-File-26-881.pdf · pp. 9–10",
+        "Lecture A12 · Python-12-File-26-881.pdf · pp. 17–18 · adapted to a function signature"
+      ],
+      "basedOn": [
+        "A12-1",
+        "A12-3"
+      ],
+      "prompt": "Write append_labels(filename, labels). Open the text file in append mode, creating it if needed. Strip leading and trailing whitespace from each label. Write each non-empty label followed by one newline. Leave existing contents unchanged. Return the number of new lines written. Existing non-empty files already end in a newline.",
+      "submission": "Submit only the requested Python definition(s).",
+      "examples": [
+        {
+          "given": "Existing file: \"first\\n\"\nappend_labels(\"labels.txt\", [\" alpha \", \"\", \"beta\"])",
+          "expected": "Returns 2\nFile content: \"first\\nalpha\\nbeta\\n\""
+        }
+      ]
+    },
+    {
+      "id": "B03-1",
+      "title": "First equal position and Big O",
+      "kind": "Trace",
+      "sources": [
+        "Lecture L03B · CSIT881-L03B-Algorithm.pdf · pp. 19–25"
+      ],
+      "prompt": "Algorithm 1 scans every position and remembers the first equal position. Algorithm 2 returns immediately at the first equal position. Both return −1 when none exists. For the original lists below, give each return value and the number of positions each algorithm visits. Then give each best-case and worst-case time complexity for lists of length n.",
+      "submission": "Submit the requested values or steps in order.",
+      "examples": [
+        {
+          "given": "list1 = [4, 6, -3, 7, 1, 5]\nlist2 = [8, -6, 8, 7, 4, 5]",
+          "expected": ""
+        }
+      ],
+      "topic": "analysis",
+      "practice": "source"
+    },
+    {
+      "id": "B03-2",
+      "title": "Early return",
+      "kind": "Reorder",
+      "sources": [
+        "Lecture L03B · CSIT881-L03B-Algorithm.pdf · pp. 20–24"
+      ],
+      "prompt": "Rebuild the early-return implementation. first_match returns the first index whose values are equal and −1 when no position matches. The two lists have equal length. Indentation is supplied.",
+      "submission": "Arrange the blocks from top to bottom. Use each block once.",
+      "examples": [],
+      "blocks": {
+        "A": "        if list1[i] == list2[i]:",
+        "B": "    return -1",
+        "C": "def first_match(list1, list2):",
+        "D": "            return i",
+        "E": "    for i in range(len(list1)):"
       },
-      {
-        "given": "x",
-        "expected": "Enter Quiz 1 mark: x\nError: invalid integer\n"
+      "topic": "analysis",
+      "practice": "source"
+    },
+    {
+      "id": "B03-3",
+      "title": "Dominant terms",
+      "kind": "Trace",
+      "sources": [
+        "Lecture L03B · CSIT881-L03B-Algorithm.pdf · pp. 17–19"
+      ],
+      "prompt": "Give the tightest listed Big-O class for each expression: 10,000; 4n + 7; n + 3 log(n) + 100; 5 log(n) + 100; 3n² + 7n + 8; 4n log(n) + 3n² + n. Choose from O(1), O(log n), O(n), O(n log n), O(n²).",
+      "submission": "Submit the requested values or steps in order.",
+      "examples": [],
+      "topic": "analysis",
+      "practice": "source"
+    },
+    {
+      "id": "V-ALG-1",
+      "topic": "analysis",
+      "practice": "variant",
+      "title": "Count comparisons in edge cases",
+      "kind": "Trace",
+      "sources": [
+        "Lecture L03B · CSIT881-L03B-Algorithm.pdf · pp. 19–25",
+        "Lecture L03B · CSIT881-L03B-Algorithm.pdf · pp. 20–24"
+      ],
+      "basedOn": [
+        "B03-1",
+        "B03-2"
+      ],
+      "prompt": "Two algorithms compare values at the same index. Algorithm A always scans every index, preserving the first match. Algorithm B stops at the first match. Both return −1 when no index matches. For each right-hand list below, give the returned index and the number of value comparisons made by each algorithm. The left-hand list is always [8, 1, 8, 4].",
+      "submission": "Submit the requested values or steps in order.",
+      "examples": [
+        {
+          "given": "[8, 9, 8, 0]\n[0, 1, 0, 4]\n[0, 0, 0, 4]\n[0, 0, 0, 0]",
+          "expected": ""
+        }
+      ]
+    },
+    {
+      "id": "V-ALG-2",
+      "topic": "analysis",
+      "practice": "variant",
+      "title": "Stop a search when a larger value appears",
+      "kind": "Reorder",
+      "sources": [
+        "Lecture L03B · CSIT881-L03B-Algorithm.pdf · pp. 20–24"
+      ],
+      "basedOn": [
+        "B03-2"
+      ],
+      "prompt": "Rebuild first_sorted_index(values, target) for an ascending sorted list. Return the first equal index. Stop scanning once a larger value appears. Return −1 if the target is absent.",
+      "submission": "Arrange the blocks from top to bottom. Use each block once.",
+      "examples": [],
+      "blocks": {
+        "A": "    return -1",
+        "B": "        elif value > target:\n            break",
+        "C": "    for index, value in enumerate(values):",
+        "D": "def first_sorted_index(values, target):",
+        "E": "        if value == target:\n            return index"
       }
-    ]
-  },
-  {
-    "id": "AS2-1",
-    "section": "Assignment",
-    "title": "Word, integer and neighbouring value",
-    "kind": "Program",
-    "sources": [
-      "Closed-book Assignment 2, Question 1 · Moodle screenshot (unpaginated)",
-      "Lecture A02 · Python-02-StringFormat-26-881.pdf · pp. 13–24",
-      "Lecture A03 · Python-03-IfElse-26-881.pdf · pp. 15–19"
-    ],
-    "prompt": "Please study the examples below and apply what you have learned in class to write a program that works like the examples. Use string format with appropriate alignment.",
-    "submission": "Submit a complete Python 3 program.",
-    "examples": [
-      {
-        "given": "Sydney\n12\nnext",
-        "expected": "Enter a word: Sydney\nEnter an integer: 12\nEnter display option (next/pre): next\n012345678901234567890123456789\n|     word      |  int| next|\n|    Sydney     |   12|   13|\n012345678901234567890123456789\n"
+    },
+    {
+      "id": "B05-1",
+      "title": "Insertion sort rounds",
+      "kind": "Trace",
+      "sources": [
+        "Lecture L05B · CSIT881-L05B-Sort.pdf · pp. 3–15"
+      ],
+      "prompt": "Trace ascending insertion sort on the original lecture list below. A round means one pass of the outer loop starting at index 1. Write the entire list at the end of the first three rounds.",
+      "submission": "Submit the requested values or steps in order.",
+      "examples": [
+        {
+          "given": "[60, 10, 90, 50, 100, 80, 70, 30, 40, 20]",
+          "expected": ""
+        }
+      ],
+      "topic": "sort",
+      "practice": "source"
+    },
+    {
+      "id": "B05-2",
+      "title": "Selection sort rounds",
+      "kind": "Trace",
+      "sources": [
+        "Lecture L05B · CSIT881-L05B-Sort.pdf · pp. 20–26"
+      ],
+      "prompt": "Trace ascending selection sort on the original lecture list below. Choose the minimum of the remaining suffix. The first round is round 0. Write the entire list at the end of the first three rounds.",
+      "submission": "Submit the requested values or steps in order.",
+      "examples": [
+        {
+          "given": "[60, 10, 90, 50, 100, 80, 70, 30, 40, 20]",
+          "expected": ""
+        }
+      ],
+      "topic": "sort",
+      "practice": "source"
+    },
+    {
+      "id": "B05-3",
+      "title": "Bubble sort rounds",
+      "kind": "Trace",
+      "sources": [
+        "Lecture L05B · CSIT881-L05B-Sort.pdf · pp. 27–35"
+      ],
+      "prompt": "Trace ascending bubble sort on the original lecture list below. Scan left to right; compare adjacent pairs and shrink the right end after each round. The first round is round 0. Write the entire list at the end of the first three rounds.",
+      "submission": "Submit the requested values or steps in order.",
+      "examples": [
+        {
+          "given": "[60, 10, 90, 50, 100, 80, 70, 30, 40, 20]",
+          "expected": ""
+        }
+      ],
+      "topic": "sort",
+      "practice": "source"
+    },
+    {
+      "id": "B05-4",
+      "title": "Insertion sort blocks",
+      "kind": "Reorder",
+      "sources": [
+        "Lecture L05B · CSIT881-L05B-Sort.pdf · pp. 12–15"
+      ],
+      "prompt": "Rebuild the lecture's ascending insertion sort using adjacent swaps. Modify values in place. The block indentation is supplied.",
+      "submission": "Arrange the blocks from top to bottom. Use each block once.",
+      "examples": [],
+      "blocks": {
+        "A": "        j = i",
+        "B": "            values[j - 1], values[j] = values[j], values[j - 1]",
+        "C": "def insertion_sort(values):",
+        "D": "            j -= 1",
+        "E": "        while j > 0 and values[j - 1] > values[j]:",
+        "F": "    for i in range(1, len(values)):"
       },
-      {
-        "given": "executing\n100\npre",
-        "expected": "Enter a word: executing\nEnter an integer: 100\nEnter display option (next/pre): pre\n012345678901234567890123456789\n|     word      |  int|  pre|\n|   executing   |  100|   99|\n012345678901234567890123456789\n"
+      "topic": "sort",
+      "practice": "source"
+    },
+    {
+      "id": "B05-5",
+      "title": "Selection sort blocks",
+      "kind": "Reorder",
+      "sources": [
+        "Lecture L05B · CSIT881-L05B-Sort.pdf · pp. 20–26"
+      ],
+      "prompt": "Rebuild ascending selection sort. Search the unsorted suffix for a minimum index, then swap once at the end of a round. Modify values in place.",
+      "submission": "Arrange the blocks from top to bottom. Use each block once.",
+      "examples": [],
+      "blocks": {
+        "A": "        values[i], values[minimum] = values[minimum], values[i]",
+        "B": "        minimum = i",
+        "C": "def selection_sort(values):",
+        "D": "            if values[j] < values[minimum]:\n                minimum = j",
+        "E": "        for j in range(i + 1, len(values)):",
+        "F": "    for i in range(len(values) - 1):"
+      },
+      "topic": "sort",
+      "practice": "source"
+    },
+    {
+      "id": "B05-6",
+      "title": "Bubble sort blocks",
+      "kind": "Reorder",
+      "sources": [
+        "Lecture L05B · CSIT881-L05B-Sort.pdf · pp. 34–39"
+      ],
+      "prompt": "Rebuild the early-stop ascending bubble sort. A pass ends the algorithm if the pass did not swap any items. Use the supplied indentation.",
+      "submission": "Arrange the blocks from top to bottom. Use each block once.",
+      "examples": [],
+      "blocks": {
+        "A": "        if not swapped:\n            break",
+        "B": "        swapped = False",
+        "C": "def bubble_sort(values):",
+        "D": "                values[j - 1], values[j] = values[j], values[j - 1]\n                swapped = True",
+        "E": "            if values[j - 1] > values[j]:",
+        "F": "        for j in range(1, len(values) - i):",
+        "G": "    for i in range(len(values) - 1):"
+      },
+      "topic": "sort",
+      "practice": "source"
+    },
+    {
+      "id": "LAB-1",
+      "title": "Read, then insertion-sort descending",
+      "kind": "Program",
+      "sources": [
+        "CSIT881 Week 7 Lab · c881_week7_answer.txt, lines 1–56 (unpaginated)",
+        "Lecture L05B · CSIT881-L05B-Sort.pdf · pp. 3–15"
+      ],
+      "prompt": "Read integers until q. Display the input list and then display it sorted from largest to smallest. Implement insertion sort, and do not use sort() or sorted().",
+      "submission": "Submit a complete Python 3 program.",
+      "examples": [
+        {
+          "given": "4\n-7\n66\n12\n3\nq",
+          "expected": "Enter an integer or q to quit: 4\nEnter an integer or q to quit: -7\nEnter an integer or q to quit: 66\nEnter an integer or q to quit: 12\nEnter an integer or q to quit: 3\nEnter an integer or q to quit: q\nBefore insertion sort: [4, -7, 66, 12, 3]\nAfter insertion sort: [66, 12, 4, 3, -7]\n"
+        }
+      ],
+      "topic": "sort",
+      "practice": "source"
+    },
+    {
+      "id": "V-SORT-1",
+      "topic": "sort",
+      "practice": "variant",
+      "title": "Equal values and stability",
+      "kind": "Trace",
+      "sources": [
+        "Lecture L05B · CSIT881-L05B-Sort.pdf · pp. 3–15",
+        "Lecture L05B · CSIT881-L05B-Sort.pdf · pp. 20–26"
+      ],
+      "basedOn": [
+        "B05-1",
+        "B05-2"
+      ],
+      "prompt": "Sort [2a, 2b, 1] ascending by numeric key. The tags distinguish equal values. Trace all outer passes of (1) insertion sort that swaps adjacent items only for a strict inversion, and (2) selection sort that swaps the first minimum of the remaining suffix into the current slot. State the final order of 2a and 2b for each algorithm.",
+      "submission": "Submit the requested values or steps in order.",
+      "examples": []
+    },
+    {
+      "id": "V-SORT-2",
+      "topic": "sort",
+      "practice": "variant",
+      "title": "Find when bubble sort actually stops",
+      "kind": "Trace",
+      "sources": [
+        "Lecture L05B · CSIT881-L05B-Sort.pdf · pp. 27–35",
+        "Lecture L05B · CSIT881-L05B-Sort.pdf · pp. 34–39"
+      ],
+      "basedOn": [
+        "B05-3",
+        "B05-6"
+      ],
+      "prompt": "Use ascending bubble sort on [1, 3, 2, 4, 5]. Each pass scans adjacent pairs from the left, excluding one additional fixed position at the right after each completed pass. A pass that makes no swap stops the algorithm. Give the list, comparisons and swaps at the end of each executed pass, then give the total number of comparisons.",
+      "submission": "Submit the requested values or steps in order.",
+      "examples": []
+    },
+    {
+      "id": "B07-1",
+      "title": "Insert and remove at the head",
+      "kind": "Trace",
+      "sources": [
+        "Lecture L07B · CSIT881-L07B-LinearData-LinkedList.pdf · pp. 17–18, 25",
+        "Linked-list Lab · insertFirst and removeFirst (unpaginated)"
+      ],
+      "prompt": "Start from the lecture's list. Run insertFirst(9), then removeFirst(). After each operation, state firstNode.datum and the complete node order. Also give the value returned by removeFirst() and what removeFirst() returns for an empty list.",
+      "submission": "Submit the requested values or steps in order.",
+      "examples": [],
+      "diagrams": [
+        {
+          "type": "chain",
+          "label": "Original linked list",
+          "nodes": [
+            "7",
+            "8",
+            "3",
+            "5"
+          ],
+          "head": "firstNode"
+        }
+      ],
+      "topic": "list",
+      "practice": "source"
+    },
+    {
+      "id": "B07-2",
+      "title": "Remove the first node",
+      "kind": "Reorder",
+      "sources": [
+        "Lecture L07B · CSIT881-L07B-LinearData-LinkedList.pdf · pp. 25, 37",
+        "Linked-list Lab · removeFirst (unpaginated)"
+      ],
+      "prompt": "Rebuild remove_first(self). Assume each node has datum and next, and self.firstNode points to the head. Return the original first datum and update firstNode. Return None on an empty list.",
+      "submission": "Arrange the blocks from top to bottom. Use each block once.",
+      "examples": [],
+      "blocks": {
+        "A": "    result = self.firstNode.datum",
+        "B": "    return result",
+        "C": "    self.firstNode = self.firstNode.next",
+        "D": "def remove_first(self):",
+        "E": "    if self.firstNode is None:\n        return None"
+      },
+      "diagrams": [
+        {
+          "type": "chain",
+          "label": "Original linked list",
+          "nodes": [
+            "7",
+            "8",
+            "3",
+            "5"
+          ],
+          "head": "firstNode"
+        }
+      ],
+      "topic": "list",
+      "practice": "source"
+    },
+    {
+      "id": "B07-3",
+      "title": "Find a node by index",
+      "kind": "Reorder",
+      "sources": [
+        "Lecture L07B · CSIT881-L07B-LinearData-LinkedList.pdf · pp. 22–24, 36",
+        "Linked-list Lab · getNode (unpaginated)"
+      ],
+      "prompt": "Rebuild get_node(self, index) for a non-negative zero-based index. Return the node itself, or None if the list ends first.",
+      "submission": "Arrange the blocks from top to bottom. Use each block once.",
+      "examples": [],
+      "blocks": {
+        "A": "    return node",
+        "B": "    while node is not None and i < index:",
+        "C": "def get_node(self, index):",
+        "D": "        node = node.next\n        i += 1",
+        "E": "    node = self.firstNode\n    i = 0"
+      },
+      "diagrams": [
+        {
+          "type": "chain",
+          "label": "Original linked list",
+          "nodes": [
+            "7",
+            "8",
+            "3",
+            "5"
+          ],
+          "head": "firstNode"
+        }
+      ],
+      "topic": "list",
+      "practice": "source"
+    },
+    {
+      "id": "B07-4",
+      "title": "Remove the last node",
+      "kind": "Trace",
+      "sources": [
+        "Lecture L07B · CSIT881-L07B-LinearData-LinkedList.pdf · pp. 26–27"
+      ],
+      "prompt": "Trace removeLast() on the linked list shown. Give the final previous-node datum, the returned datum and the new last node's next. Then state the new firstNode and return value when a one-node list containing 7 is processed.",
+      "submission": "Submit the requested values or steps in order.",
+      "examples": [],
+      "diagrams": [
+        {
+          "type": "chain",
+          "label": "Original linked list",
+          "nodes": [
+            "7",
+            "8",
+            "3",
+            "5"
+          ],
+          "head": "firstNode"
+        }
+      ],
+      "topic": "list",
+      "practice": "source"
+    },
+    {
+      "id": "V-LL-1",
+      "topic": "list",
+      "practice": "variant",
+      "title": "Insert after the first match",
+      "kind": "Trace",
+      "sources": [
+        "Lecture L07B · CSIT881-L07B-LinearData-LinkedList.pdf · pp. 17–18, 25",
+        "Linked-list Lab · insertFirst and removeFirst (unpaginated)",
+        "Lecture L07B · CSIT881-L07B-LinearData-LinkedList.pdf · pp. 22–24, 36",
+        "Linked-list Lab · getNode (unpaginated)"
+      ],
+      "basedOn": [
+        "B07-1",
+        "B07-3"
+      ],
+      "prompt": "Using the linked list shown, find the first 4 and insert a new node containing 2 immediately after it. Give the node sequence, the datum at firstNode, and the two next references whose relationships must change. Then state what happens when the target datum is absent.",
+      "submission": "Submit the requested values or steps in order.",
+      "examples": [],
+      "diagrams": [
+        {
+          "type": "chain",
+          "label": "Practice linked list",
+          "nodes": [
+            "4",
+            "8",
+            "4"
+          ],
+          "head": "firstNode"
+        }
+      ]
+    },
+    {
+      "id": "V-LL-2",
+      "topic": "list",
+      "practice": "variant",
+      "title": "Remove the only node or the last node",
+      "kind": "Reorder",
+      "sources": [
+        "Lecture L07B · CSIT881-L07B-LinearData-LinkedList.pdf · pp. 26–27"
+      ],
+      "basedOn": [
+        "B07-4"
+      ],
+      "prompt": "Rebuild pop_last(self). Nodes have datum and next. Return None on an empty list. If there is one node, clear firstNode. Otherwise disconnect the last node from its predecessor. Return the removed datum.",
+      "submission": "Arrange the blocks from top to bottom. Use each block once.",
+      "examples": [],
+      "blocks": {
+        "A": "    if previous is None:\n        self.firstNode = None\n    else:\n        previous.next = None",
+        "B": "    return node.datum",
+        "C": "    while node.next is not None:\n        previous, node = node, node.next",
+        "D": "def pop_last(self):",
+        "E": "    node = self.firstNode\n    if node is None:\n        return None\n    previous = None"
       }
-    ]
-  },
-  {
-    "id": "AS2-2",
-    "section": "Assignment",
-    "title": "Product receipt and discount",
-    "kind": "Program",
-    "sources": [
-      "Closed-book Assignment 2, Question 2 · Moodle screenshot (unpaginated)",
-      "Lecture A02 · Python-02-StringFormat-26-881.pdf · pp. 13–14, 33",
-      "Lecture A03 · Python-03-IfElse-26-881.pdf · pp. 7–14, 22–32"
-    ],
-    "prompt": "Please study the examples below and apply what you have learned in class to write a program that works like the examples. Use STRING FORMAT. Do not use string addition or f-strings.",
-    "submission": "Submit a complete Python 3 program.",
-    "examples": [
-      {
-        "given": "1\n2\n1",
-        "expected": "Product A: $5/per item\nProduct B: $10/per item\nProduct C: $30/per item\nDiscount $5 if buy >= $35\n\nHow many product A? 1\nHow many product B? 2\nHow many product C? 1\nProduct A cost: 1 x $5 = $5\nProduct B cost: 2 x $10 = $20\nProduct C cost: 1 x $30 = $30\nTotal cost: $5 + $20 + $30 = $55\nDiscount: $55 - $5 = $50\nPlease pay $50\n"
+    },
+    {
+      "id": "B09-1",
+      "title": "Bracket matching trace",
+      "kind": "Trace",
+      "sources": [
+        "Lecture L09B · CSIT881-L09B-LinearData-StackQueue.pdf · pp. 10–18",
+        "Stack Lab · math_expression_checking (unpaginated)"
+      ],
+      "prompt": "Scan y + {w * [(2+k)) - z]} using the stack algorithm. Write the stack (bottom to top) after each opening bracket and at the first closing bracket. Name the first mismatch and say whether the expression is accepted.",
+      "submission": "Submit the requested values or steps in order.",
+      "examples": [],
+      "topic": "stack",
+      "practice": "source"
+    },
+    {
+      "id": "B09-2",
+      "title": "Bracket matching blocks",
+      "kind": "Reorder",
+      "sources": [
+        "Lecture L09B · CSIT881-L09B-LinearData-StackQueue.pdf · pp. 10–18",
+        "Stack Lab · math_expression_checking (unpaginated)"
+      ],
+      "prompt": "Rebuild balanced(text). Ignore characters that are not brackets. Accept only correctly nested pairs of (), [], and {}. Use list append and pop as stack operations.",
+      "submission": "Arrange the blocks from top to bottom. Use each block once.",
+      "examples": [],
+      "blocks": {
+        "A": "    return not stack",
+        "B": "        if char in \"([{\":\n            stack.append(char)",
+        "C": "    for char in text:",
+        "D": "def balanced(text):\n    closing = {\")\": \"(\", \"]\": \"[\", \"}\": \"{\"}\n    stack = []",
+        "E": "        elif char in closing:\n            if not stack or stack.pop() != closing[char]:\n                return False"
       },
-      {
-        "given": "3\n1\n0",
-        "expected": "Product A: $5/per item\nProduct B: $10/per item\nProduct C: $30/per item\nDiscount $5 if buy >= $35\n\nHow many product A? 3\nHow many product B? 1\nHow many product C? 0\nProduct A cost: 3 x $5 = $15\nProduct B cost: 1 x $10 = $10\nProduct C cost: 0 x $30 = $0\nTotal cost: $15 + $10 + $0 = $25\nPlease pay $25\n"
+      "topic": "stack",
+      "practice": "source"
+    },
+    {
+      "id": "B09-3",
+      "title": "Josephus queue trace",
+      "kind": "Trace",
+      "sources": [
+        "Lecture L09B · CSIT881-L09B-LinearData-StackQueue.pdf · pp. 24–29"
+      ],
+      "prompt": "Start with the lecture's queue [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]. Each round takes the front person, removes the next person, and puts the first person at the rear unless nobody else remains. Give the first three pairs (front person, removed person), the queue after each of those rounds, and the last remaining person.",
+      "submission": "Submit the requested values or steps in order.",
+      "examples": [],
+      "topic": "stack",
+      "practice": "source"
+    },
+    {
+      "id": "B09-4",
+      "title": "Update queue references",
+      "kind": "Reorder",
+      "sources": [
+        "Lecture L09B · CSIT881-L09B-LinearData-StackQueue.pdf · pp. 43–49"
+      ],
+      "prompt": "Rebuild dequeue(self) for a linked queue. Return the previous front item's datum. For an empty queue return None. When the final item is removed, both frontNode and endNode must be None.",
+      "submission": "Arrange the blocks from top to bottom. Use each block once.",
+      "examples": [],
+      "blocks": {
+        "A": "    self.frontNode = self.frontNode.next",
+        "B": "    return result",
+        "C": "    if self.frontNode is None:\n        self.endNode = None",
+        "D": "def dequeue(self):",
+        "E": "    result = self.frontNode.datum",
+        "F": "    if self.frontNode is None:\n        return None"
+      },
+      "topic": "stack",
+      "practice": "source"
+    },
+    {
+      "id": "B09-5",
+      "title": "Enqueue into a linked queue",
+      "kind": "Trace",
+      "sources": [
+        "Lecture L09B · CSIT881-L09B-LinearData-StackQueue.pdf · pp. 41–48"
+      ],
+      "prompt": "Start with an empty linked queue. Enqueue 7, then enqueue 8. After each operation give the datum at frontNode and at endNode, and list each node's next reference. What final references would remain if both items were dequeued?",
+      "submission": "Submit the requested values or steps in order.",
+      "examples": [],
+      "topic": "stack",
+      "practice": "source"
+    },
+    {
+      "id": "V-SQ-1",
+      "topic": "stack",
+      "practice": "variant",
+      "title": "Distinguish three bracket failures",
+      "kind": "Trace",
+      "sources": [
+        "Lecture L09B · CSIT881-L09B-LinearData-StackQueue.pdf · pp. 10–18",
+        "Stack Lab · math_expression_checking (unpaginated)"
+      ],
+      "basedOn": [
+        "B09-1",
+        "B09-2"
+      ],
+      "prompt": "For each input ], ([], and ([)], trace the first failure. Classify it as an empty stack on a closing symbol, a mismatched bracket type, or an unclosed opener at end of input. State the stack contents just before the failure.",
+      "submission": "Submit the requested values or steps in order.",
+      "examples": []
+    },
+    {
+      "id": "V-SQ-2",
+      "topic": "stack",
+      "practice": "variant",
+      "title": "Append a node to a linked queue",
+      "kind": "Reorder",
+      "sources": [
+        "Lecture L09B · CSIT881-L09B-LinearData-StackQueue.pdf · pp. 43–49",
+        "Lecture L09B · CSIT881-L09B-LinearData-StackQueue.pdf · pp. 41–48"
+      ],
+      "basedOn": [
+        "B09-4",
+        "B09-5"
+      ],
+      "prompt": "Rebuild enqueue(self, item). Node(item, None) creates a node with datum and next. firstNode points to the front and endNode points to the rear. When the queue is empty, both are None. Append the node to the rear without returning a value.",
+      "submission": "Arrange the blocks from top to bottom. Use each block once.",
+      "examples": [],
+      "blocks": {
+        "A": "    self.endNode = node",
+        "B": "    if self.firstNode is None:\n        self.firstNode = node\n    else:\n        self.endNode.next = node",
+        "C": "def enqueue(self, item):",
+        "D": "    node = Node(item, None)"
       }
-    ]
-  },
-  {
-    "id": "AS2-3",
-    "section": "Assignment",
-    "title": "Friend of n display",
-    "kind": "Program",
-    "sources": [
-      "Closed-book Assignment 2, Question 3 · Moodle screenshot (unpaginated)",
-      "Lecture A04 · Python-04-For-Loop-26-881.pdf · pp. 6–11",
-      "Lecture A02 · Python-02-StringFormat-26-881.pdf · pp. 14–24"
-    ],
-    "prompt": "Please study the examples below and apply what you have learned in class to write a program that works like the examples.",
-    "submission": "Submit a complete Python 3 program.",
-    "examples": [
-      {
-        "given": "16\n11",
-        "expected": "Enter a length value: 16\nEnter a number: 11\nFriend of 11 display\n 1234567890123456\n******************\n|     1 + 10 = 11|\n|      2 + 9 = 11|\n|      3 + 8 = 11|\n|      4 + 7 = 11|\n|      5 + 6 = 11|\n|      6 + 5 = 11|\n|      7 + 4 = 11|\n|      8 + 3 = 11|\n|      9 + 2 = 11|\n|     10 + 1 = 11|\n******************\n 1234567890123456\n"
+    },
+    {
+      "id": "B11-1",
+      "title": "Tree traversal orders",
+      "kind": "Trace",
+      "sources": [
+        "Lecture L11B · CSIT881-L11B-NonlinearData-Tree.pdf · pp. 29–33",
+        "Tree Lab · traversal methods (unpaginated)"
+      ],
+      "prompt": "For the lecture tree shown, write the in-order, pre-order, post-order and level-order visit sequences. Treat a single right child as a right child during in-order traversal.",
+      "submission": "Submit the requested values or steps in order.",
+      "examples": [],
+      "diagrams": [
+        {
+          "type": "tree",
+          "label": "Original traversal tree",
+          "root": "A",
+          "edges": {
+            "A": [
+              "B",
+              "C"
+            ],
+            "B": [
+              "D",
+              "E"
+            ],
+            "E": [
+              "H",
+              "I"
+            ],
+            "C": [
+              "F",
+              "G"
+            ],
+            "F": [
+              "J",
+              "K"
+            ],
+            "G": [
+              null,
+              "L"
+            ]
+          }
+        }
+      ],
+      "topic": "tree",
+      "practice": "source"
+    },
+    {
+      "id": "B11-2",
+      "title": "Recursive in-order blocks",
+      "kind": "Reorder",
+      "sources": [
+        "Lecture L11B · CSIT881-L11B-NonlinearData-Tree.pdf · pp. 29–32",
+        "Tree Lab · in_order_print (unpaginated)"
+      ],
+      "prompt": "Rebuild visit_in_order(node). Print one datum per line in in-order. A missing child is None; each other node has datum, left and right attributes.",
+      "submission": "Arrange the blocks from top to bottom. Use each block once.",
+      "examples": [],
+      "blocks": {
+        "A": "    print(node.datum)",
+        "B": "    if node is None:\n        return",
+        "C": "    visit_in_order(node.right)",
+        "D": "def visit_in_order(node):",
+        "E": "    visit_in_order(node.left)"
       },
-      {
-        "given": "15\n7",
-        "expected": "Enter a length value: 15\nEnter a number: 7\nFriend of 7 display\n 123456789012345\n*****************\n|      1 + 6 = 7|\n|      2 + 5 = 7|\n|      3 + 4 = 7|\n|      4 + 3 = 7|\n|      5 + 2 = 7|\n|      6 + 1 = 7|\n*****************\n 123456789012345\n"
+      "diagrams": [
+        {
+          "type": "tree",
+          "label": "Original traversal tree",
+          "root": "A",
+          "edges": {
+            "A": [
+              "B",
+              "C"
+            ],
+            "B": [
+              "D",
+              "E"
+            ],
+            "E": [
+              "H",
+              "I"
+            ],
+            "C": [
+              "F",
+              "G"
+            ],
+            "F": [
+              "J",
+              "K"
+            ],
+            "G": [
+              null,
+              "L"
+            ]
+          }
+        }
+      ],
+      "topic": "tree",
+      "practice": "source"
+    },
+    {
+      "id": "B11-3",
+      "title": "Search and insert in a BST",
+      "kind": "Trace",
+      "sources": [
+        "Lecture L11B · CSIT881-L11B-NonlinearData-Tree.pdf · pp. 34–39"
+      ],
+      "prompt": "For the lecture's binary search tree, give the visited keys when searching for 67 and for 75. Say whether each search succeeds. If you then insert 75 into the unchanged tree, state the parent and whether the new node is a left or right child.",
+      "submission": "Submit the requested values or steps in order.",
+      "examples": [],
+      "diagrams": [
+        {
+          "type": "tree",
+          "label": "Original binary search tree",
+          "root": "76",
+          "edges": {
+            "76": [
+              "50",
+              "97"
+            ],
+            "50": [
+              null,
+              "68"
+            ],
+            "68": [
+              "62",
+              "73"
+            ],
+            "62": [
+              "60",
+              "67"
+            ],
+            "97": [
+              "86",
+              null
+            ],
+            "86": [
+              "77",
+              null
+            ]
+          }
+        }
+      ],
+      "topic": "tree",
+      "practice": "source"
+    },
+    {
+      "id": "V-TREE-1",
+      "topic": "tree",
+      "practice": "variant",
+      "title": "Trace a tree with missing children",
+      "kind": "Trace",
+      "sources": [
+        "Lecture L11B · CSIT881-L11B-NonlinearData-Tree.pdf · pp. 29–33",
+        "Tree Lab · traversal methods (unpaginated)"
+      ],
+      "basedOn": [
+        "B11-1"
+      ],
+      "prompt": "Give the pre-order, in-order and post-order sequences for the practice tree. Then state the tree height in edges and the depth of F, taking the root depth as 0.",
+      "submission": "Submit the requested values or steps in order.",
+      "examples": [],
+      "diagrams": [
+        {
+          "type": "tree",
+          "label": "Practice traversal tree",
+          "root": "K",
+          "edges": {
+            "K": [
+              "E",
+              "Q"
+            ],
+            "E": [
+              null,
+              "H"
+            ],
+            "Q": [
+              "M",
+              null
+            ],
+            "H": [
+              "F",
+              null
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "V-TREE-2",
+      "topic": "tree",
+      "practice": "variant",
+      "title": "Find a key without traversing both subtrees",
+      "kind": "Reorder",
+      "sources": [
+        "Lecture L11B · CSIT881-L11B-NonlinearData-Tree.pdf · pp. 34–39",
+        "Lecture L11B · CSIT881-L11B-NonlinearData-Tree.pdf · pp. 29–32",
+        "Tree Lab · in_order_print (unpaginated)"
+      ],
+      "basedOn": [
+        "B11-3",
+        "B11-2"
+      ],
+      "prompt": "Rebuild contains_key(node, target) for a binary search tree with unique integer keys. Return True when a key matches and False when the search reaches a missing child. Nodes have key, left and right. Use iterative search.",
+      "submission": "Arrange the blocks from top to bottom. Use each block once.",
+      "examples": [],
+      "blocks": {
+        "A": "    return False",
+        "B": "    while node is not None:",
+        "C": "        if target == node.key:\n            return True",
+        "D": "        node = node.left if target < node.key else node.right",
+        "E": "def contains_key(node, target):"
       }
-    ]
-  },
-  {
-    "id": "AS3-1",
-    "section": "Assignment",
-    "title": "Equations between two integers",
-    "kind": "Program",
-    "sources": [
-      "Closed-book Assignment 3, Question 1 · Moodle screenshot (unpaginated)",
-      "Lecture A04 · Python-04-For-Loop-26-881.pdf · pp. 3–5",
-      "Lecture A05 · Python-05-While-Loop-26-881.pdf · pp. 12–13"
-    ],
-    "prompt": "Please study the examples below and apply what you have learned in class to write a program that works like the examples.",
-    "submission": "Submit a complete Python 3 program.",
-    "examples": [
-      {
-        "given": "9\n14",
-        "expected": "Enter an integer: 9\nEnter another integer: 14\nHere we go:\n(9 x 9) + 10 = 81 + 10 = 91\n(10 x 10) + 11 = 100 + 11 = 111\n(11 x 11) + 12 = 121 + 12 = 133\n(12 x 12) + 13 = 144 + 13 = 157\n(13 x 13) + 14 = 169 + 14 = 183\n(14 x 14) + 15 = 196 + 15 = 211\n"
-      },
-      {
-        "given": "10\n11",
-        "expected": "Enter an integer: 10\nEnter another integer: 11\nHere we go:\n(10 x 10) + 11 = 100 + 11 = 111\n(11 x 11) + 12 = 121 + 12 = 133\n"
-      }
-    ]
-  },
-  {
-    "id": "AS3-2",
-    "section": "Assignment",
-    "title": "Find matching characters",
-    "kind": "Program",
-    "sources": [
-      "Closed-book Assignment 3, Question 2 · Moodle screenshot (unpaginated)",
-      "Lecture A04 · Python-04-For-Loop-26-881.pdf · pp. 24–31"
-    ],
-    "prompt": "Please study the examples below and apply what you have learned in class to write a program that works like the examples.",
-    "submission": "Submit a complete Python 3 program.",
-    "examples": [
-      {
-        "given": "Abcabcaa\na",
-        "expected": "Enter a string: Abcabcaa\nEnter a letter: a\nSearching a in Abcabcaa:\nIndex 0: A NOT match\nIndex 1: b NOT match\nIndex 2: c NOT match\nIndex 3: a match\nIndex 4: b NOT match\nIndex 5: c NOT match\nIndex 6: a match\nIndex 7: a match\nMatch count: 3\n"
-      },
-      {
-        "given": "Dog\nG",
-        "expected": "Enter a string: Dog\nEnter a letter: G\nSearching G in Dog:\nIndex 0: D NOT match\nIndex 1: o NOT match\nIndex 2: g NOT match\nMatch count: 0\n"
-      }
-    ]
-  },
-  {
-    "id": "AS3-3",
-    "section": "Assignment",
-    "title": "Operate on two numbers",
-    "kind": "Function",
-    "sources": [
-      "Closed-book Assignment 3, Question 3 · Moodle screenshot (unpaginated)",
-      "Lecture A06 · Python-06-Function-26-881.pdf · pp. 3–14",
-      "Lecture A02 · Python-02-StringFormat-26-881.pdf · pp. 27–32"
-    ],
-    "prompt": "Write operate_2_numbers(number1, number2, operator). The first two arguments are integers and operator is a string. Return the integer sum for \"+\", difference for \"-\", product for \"x\", or floor division for \"/\". The test calls use one of these operators and do not divide by zero.",
-    "submission": "Submit only the requested Python definition(s).",
-    "examples": [
-      {
-        "given": "print(operate_2_numbers(2,5,\"+\"))",
-        "expected": "7"
-      },
-      {
-        "given": "print(operate_2_numbers(5,3,\"-\"))",
-        "expected": "2"
-      },
-      {
-        "given": "print(operate_2_numbers(5,4,\"x\"))",
-        "expected": "20"
-      },
-      {
-        "given": "print(operate_2_numbers(5,3,\"/\"))",
-        "expected": "1"
-      }
-    ]
-  }
-]
+    }
+  ]
+}

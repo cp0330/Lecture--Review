@@ -108,3 +108,13 @@ button.primary:hover:enabled { background: #182f70; }
   .example { grid-template-columns: 1fr; gap: 8px; }
   .block .moves { flex-direction: column; }
 }
+
+.topic-heading {
+  margin: 9px 5px 2px;
+  padding-top: 5px;
+  color: var(--muted);
+  font-size: .875rem;
+  line-height: 1.4;
+}
+.topic-heading:not(:first-child) { border-top: 1px solid var(--line); }
+.base-questions { margin-top: 6px; }
